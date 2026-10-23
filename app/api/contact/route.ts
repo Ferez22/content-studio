@@ -53,9 +53,17 @@ const verifyTurnstile = async (secret: string, token: string, ip: string | null)
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     { method: "POST", body: form }
   );
-  if (!response.ok) return false;
-  const result = (await response.json()) as { success?: boolean };
-  return result.success === true;
+  const result = (await response.json().catch(() => ({}))) as {
+    success?: boolean;
+    "error-codes"?: string[];
+    hostname?: string;
+  };
+  if (!response.ok || result.success !== true) {
+    // e.g. invalid-input-secret = wrong secret for this site key; see Cloudflare's error code list.
+    console.error("Contact form: Turnstile rejected the token", response.status, result["error-codes"], result.hostname);
+    return false;
+  }
+  return true;
 };
 
 export async function POST(request: Request) {
@@ -76,8 +84,9 @@ export async function POST(request: Request) {
     return Response.json({ ok: false }, { status: 400 });
   }
 
-  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-  const brevoApiKey = process.env.BREVO_API_KEY;
+  // Trimmed because pasted dashboard values often carry a trailing space or newline.
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY?.trim();
+  const brevoApiKey = process.env.BREVO_API_KEY?.trim();
   if (!turnstileSecret || !brevoApiKey) {
     console.error("Contact form: TURNSTILE_SECRET_KEY or BREVO_API_KEY is not set");
     return Response.json({ ok: false }, { status: 500 });

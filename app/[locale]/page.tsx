@@ -63,7 +63,7 @@ export default async function Home({ params }: Props) {
       <Features />
       <OpenAIPartner />
       <CostOfManualWork />
-      <WhyUs />
+      {/* <WhyUs /> */}
       <Team />
       <Testimonials />
       <FAQs />
