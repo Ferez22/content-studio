@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { Logo } from "./logo";
 import { Link } from "@/i18n/navigation";
 import { Button } from "./ui/button";
-import { IconChevronDown, IconLayoutSidebar, IconX } from "@tabler/icons-react";
+import { IconChevronDown, IconX } from "@tabler/icons-react";
 import {
   AnimatePresence,
   motion,
@@ -83,10 +83,10 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <div
       className={cn(
-        "flex lg:hidden mx-3 px-4 rounded-full justify-between items-center relative transition-[padding,background-color,border-color] duration-300 border",
+        "flex lg:hidden px-5 justify-between items-center relative transition-[padding,background-color,border-color] duration-300 border-b",
         scrolled
-          ? "py-1.5 border-neutral-200 dark:border-neutral-800 bg-background/80 backdrop-blur-md"
-          : "py-2 border-transparent",
+          ? "py-3 border-neutral-200 dark:border-neutral-800 bg-background/85 backdrop-blur-md"
+          : "py-4 border-transparent bg-background",
       )}
     >
       <Logo compact={scrolled} />
@@ -95,8 +95,12 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
         onClick={openMenu}
         aria-label={t("openMenu")}
         aria-expanded={open}
+        className="group flex size-10 -mr-2 flex-col items-end justify-center gap-1.5 px-2"
       >
-        <IconLayoutSidebar className="size-4" />
+        {/* Burger with a shorter top bar that stretches to full width on press/hover. */}
+        <span className="h-0.5 w-3.5 rounded-full bg-current transition-all duration-300 group-hover:w-6 group-active:w-6" />
+        <span className="h-0.5 w-6 rounded-full bg-current" />
+        <span className="h-0.5 w-6 rounded-full bg-current" />
       </button>
 
       {mounted &&
@@ -113,7 +117,7 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
                 className="fixed inset-0 z-[70] px-4 py-4 flex flex-col justify-between bg-background overflow-y-auto will-change-[clip-path] lg:hidden"
               >
                 <div>
-                  <div className="flex justify-between items-center px-4 py-2">
+                  <div className="flex justify-between items-center px-1 pt-0">
                     <Logo />
                     <button onClick={close} aria-label={t("closeMenu")}>
                       <IconX />

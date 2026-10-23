@@ -24,7 +24,7 @@ export const Figures = ({
           whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col-reverse gap-1"
+          className="flex flex-col-reverse justify-end gap-1"
         >
           <dt className="text-sm text-neutral-500 dark:text-neutral-400">
             {item.label}

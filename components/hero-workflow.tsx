@@ -128,7 +128,7 @@ export const HeroWorkflow = () => {
       <motion.div aria-hidden="true" className="absolute inset-0" style={{ background: glow }} />
 
       <div className="relative z-10 flex flex-col items-center pt-6 md:pt-8 px-4">
-        <div role="tablist" className="flex flex-wrap justify-center gap-2">
+        <div role="tablist" className="flex justify-center gap-1 md:gap-2">
           {scenes.map((s) => (
             <button
               key={s}
@@ -136,7 +136,7 @@ export const HeroWorkflow = () => {
               aria-selected={scene === s}
               onClick={() => setScene(s)}
               className={cn(
-                "relative overflow-hidden rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold uppercase tracking-wide border transition-colors duration-200",
+                "relative overflow-hidden rounded-full px-2.5 md:px-4 py-1.5 text-[11px] md:text-sm font-semibold uppercase md:tracking-wide border transition-colors duration-200",
                 scene === s
                   ? "bg-white dark:bg-neutral-950 border-[#1E40FF]/40 text-[#1E40FF] dark:text-blue-400 shadow-sm"
                   : "border-transparent text-neutral-500 hover:text-black dark:hover:text-white"
@@ -300,7 +300,8 @@ const Node = ({
           transition: { type: "spring", stiffness: 180, damping: 18, delay: index * 0.06 },
         },
       }}
-      className="absolute -translate-x-1/2 -translate-y-1/2 z-10"
+      // Never smaller than 36px, so icons stay legible on phones.
+      className="absolute -translate-x-1/2 -translate-y-1/2 z-10 min-w-9"
       style={{ width: `${(size / W) * 100}%` }}
     >
       <motion.div

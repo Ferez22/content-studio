@@ -60,39 +60,6 @@
       "title": "Ce que nous construisons",
       "intro": "Six façons de mettre l'IA et les données au travail. Chacune est cadrée sur un résultat mesurable."
     },
-    "cost": {
-      "title": "Le coût de travailler sans IA",
-      "text": "Des heures passent à rassembler des fichiers, ressaisir des chiffres et mettre en forme des rapports. Le projet sur lequel tout le monde est d'accord est sans cesse repoussé au trimestre suivant. Les données que vous possédez déjà restent inexploitées.",
-      "proofTitle": "Des preuves publiques, pas des promesses",
-      "proofs": [
-        {
-          "figure": "20%+",
-          "text": "de temps gagné chaque semaine par les collaborateurs de NBIM, gestionnaire du fonds souverain norvégien, sur les tâches assistées par l'IA avec Claude.",
-          "source": "Témoignage client Claude",
-          "url": "https://claude.com/customers/nbim"
-        },
-        {
-          "figure": "40 h → 2 min",
-          "text": "Moody's a réduit la préparation d'une note de crédit d'environ 40 heures de travail d'analyste à environ 2 minutes grâce à une équipe d'agents IA.",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Du temps retrouvé",
-          "text": "La collecte, la ressaisie et la mise en forme passent à l'agent. Votre équipe garde les décisions qui demandent du jugement."
-        },
-        {
-          "title": "Le projet repoussé, enfin réalisé",
-          "text": "Le travail qui ne trouve jamais sa place dans une semaine normale est enfin construit, testé et livré."
-        },
-        {
-          "title": "De nouveaux enseignements",
-          "text": "Les données qui dormaient dans des dossiers et des boîtes mail deviennent consultables, mesurables et exploitables."
-        }
-      ]
-    },
     "why": {
       "title": "Pourquoi travailler avec nous",
       "intro": "Nous sommes avant tout des ingénieurs. Nous construisons des logiciels qui fonctionnent, mesurons ce qu'ils changent et rendons votre équipe autonome pour les faire tourner.",

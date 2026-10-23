@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FAQs } from "@/components/faqs";
 import { Features } from "@/components/features";
-import { CostOfManualWork } from "@/components/features-secondary";
 import { WhyUs } from "@/components/features-tertiary";
 import { Hero } from "@/components/hero";
 import { LogoCloud } from "@/components/logo-cloud";
@@ -62,7 +61,6 @@ export default async function Home({ params }: Props) {
       <LogoCloud />
       <Features />
       <OpenAIPartner />
-      <CostOfManualWork />
       {/* <WhyUs /> */}
       <Team />
       <Testimonials />

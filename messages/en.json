@@ -60,39 +60,6 @@
       "title": "What we build",
       "intro": "Six ways we put AI and data to work. Each one is scoped to a result you can measure."
     },
-    "cost": {
-      "title": "The cost of working without AI",
-      "text": "Hours go into collecting files, retyping figures and formatting reports. The project everyone agrees on keeps moving to next quarter. The data you already own sits unread.",
-      "proofTitle": "Public proof, not promises",
-      "proofs": [
-        {
-          "figure": "20%+",
-          "text": "of their time saved each week by staff at NBIM, the manager of Norway's sovereign wealth fund, on AI-assisted tasks with Claude.",
-          "source": "Claude customer story",
-          "url": "https://claude.com/customers/nbim"
-        },
-        {
-          "figure": "40 h → 2 min",
-          "text": "Moody's cut the preparation of a credit memo from about 40 hours of analyst work to about 2 minutes with a team of AI agents.",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Time back",
-          "text": "Collecting, retyping and formatting move to the agent. Your team keeps the judgement calls."
-        },
-        {
-          "title": "The postponed project, done",
-          "text": "The work that never fits in a normal week finally gets built, tested and shipped."
-        },
-        {
-          "title": "New insights",
-          "text": "Data that sat in folders and inboxes becomes something you can search, count and act on."
-        }
-      ]
-    },
     "why": {
       "title": "Why work with us",
       "intro": "We are engineers first. We build working software, measure what it changes and leave your team able to run it.",

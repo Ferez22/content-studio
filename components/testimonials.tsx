@@ -33,7 +33,7 @@ export const Testimonials = () => {
           <Reveal key={item.name} className="mt-10 md:mt-16">
             <figure className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 p-6 md:p-12" lang="en">
               <blockquote>
-                <p className="text-2xl md:text-4xl font-display font-bold tracking-tight max-w-4xl">
+                <p className="text-xl md:text-4xl font-display font-bold tracking-tight max-w-4xl">
                   &ldquo;{item.headline}&rdquo;
                 </p>
                 <div className="mt-6 md:mt-8 md:columns-2 gap-10 text-neutral-600 dark:text-neutral-300">

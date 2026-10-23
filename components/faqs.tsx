@@ -50,7 +50,7 @@ const Question = ({
       className="w-full rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 p-4 md:p-8"
     >
       <div className="flex items-center justify-between gap-4 text-left">
-        <h3 className="text-lg md:text-2xl font-bold font-display">
+        <h3 className="text-base md:text-2xl font-bold font-display">
           {question}
         </h3>
         <div className="size-6 shrink-0 rounded-full relative bg-black dark:bg-white flex items-center justify-center">

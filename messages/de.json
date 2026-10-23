@@ -60,39 +60,6 @@
       "title": "Was wir bauen",
       "intro": "Sechs Wege, wie wir KI und Daten für Sie arbeiten lassen. Jeder ist auf ein messbares Ergebnis ausgerichtet."
     },
-    "cost": {
-      "title": "Was Arbeiten ohne KI kostet",
-      "text": "Stunden fließen in das Sammeln von Dateien, das Abtippen von Zahlen und das Formatieren von Berichten. Das Projekt, das alle wollen, rutscht ins nächste Quartal. Die Daten, die Sie bereits besitzen, bleiben ungenutzt.",
-      "proofTitle": "Öffentliche Belege statt Versprechen",
-      "proofs": [
-        {
-          "figure": "20%+",
-          "text": "ihrer Arbeitszeit sparen Mitarbeitende von NBIM, dem Verwalter des norwegischen Staatsfonds, pro Woche bei KI-gestützten Aufgaben mit Claude.",
-          "source": "Claude-Kundenbericht",
-          "url": "https://claude.com/customers/nbim"
-        },
-        {
-          "figure": "40 Std. → 2 Min.",
-          "text": "Moody's hat die Erstellung eines Kreditmemos mit einem Team aus KI-Agenten von rund 40 Stunden Analystenarbeit auf etwa 2 Minuten verkürzt.",
-          "source": "VentureBeat",
-          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
-        }
-      ],
-      "benefits": [
-        {
-          "title": "Zeit zurück",
-          "text": "Sammeln, Abtippen und Formatieren übernimmt der Agent. Ihr Team behält die Entscheidungen."
-        },
-        {
-          "title": "Das aufgeschobene Projekt, erledigt",
-          "text": "Die Arbeit, die in keiner normalen Woche Platz findet, wird endlich gebaut, getestet und eingeführt."
-        },
-        {
-          "title": "Neue Erkenntnisse",
-          "text": "Daten, die in Ordnern und Postfächern lagen, werden durchsuchbar, zählbar und nutzbar."
-        }
-      ]
-    },
     "why": {
       "title": "Warum mit uns arbeiten",
       "intro": "Wir sind in erster Linie Ingenieure. Wir bauen funktionierende Software, messen, was sie verändert, und befähigen Ihr Team, sie selbst zu betreiben.",
