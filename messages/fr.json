@@ -1,0 +1,848 @@
+{
+  "common": {
+    "bookCall": "Prendre rendez-vous",
+    "startProject": "Lancer votre projet",
+    "readyTitle": "Prêt à vous lancer ?",
+    "readyText": "Parlez-nous d'un processus qui prend trop de temps à votre équipe. Nous vous dirons franchement si un agent vaut la peine d'être construit.",
+    "learnMore": "En savoir plus",
+    "source": "Source",
+    "demo": "Démo",
+    "tagline": "Lancez ce projet."
+  },
+  "header": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Réalisations",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookCall": "Prendre rendez-vous",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue"
+  },
+  "footer": {
+    "positioning": "Stratégie, données et IA, conçues pour fonctionner au cœur de votre entreprise.",
+    "services": "Services",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "location": "Les Berges du Lac, Tunisie. À distance dans toute la région MENA et en Afrique.",
+    "rights": "© {year} Qartmina. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "legal": "Mentions légales",
+    "newsletterTitle": "Newsletter",
+    "newsletterText": "Des conseils concrets pour mettre l'IA et les données au service de vraies entreprises. Désinscription possible à tout moment."
+  },
+  "metadata": {
+    "siteTitle": "Qartmina | Agents IA et conseil en données",
+    "siteDescription": "Qartmina conçoit des agents IA, des automatisations et des plateformes de données qui libèrent vos équipes des tâches répétitives, avec une personne qui valide ce qui compte."
+  },
+  "home": {
+    "hero": {
+      "title": "Mettez des agents IA au travail dans votre entreprise",
+      "subtitle": "Des agents qui libèrent vos équipes des tâches répétitives, dans les outils que vous utilisez déjà, avec une personne qui valide ce qui compte.",
+      "primary": "Réserver un appel gratuit de 30 minutes",
+      "secondary": "Voir nos réalisations",
+      "titleTemplate": "Mettez des agents IA au travail dans votre {target}",
+      "targets": [
+        "entreprise",
+        "équipe finance",
+        "équipe commerciale",
+        "service client",
+        "logistique"
+      ]
+    },
+    "trusted": {
+      "title": "Ils nous font confiance"
+    },
+    "services": {
+      "title": "Ce que nous construisons",
+      "intro": "Six façons de mettre l'IA et les données au travail. Chacune est cadrée sur un résultat mesurable."
+    },
+    "cost": {
+      "title": "Le coût de travailler sans IA",
+      "text": "Des heures passent à rassembler des fichiers, ressaisir des chiffres et mettre en forme des rapports. Le projet sur lequel tout le monde est d'accord est sans cesse repoussé au trimestre suivant. Les données que vous possédez déjà restent inexploitées.",
+      "proofTitle": "Des preuves publiques, pas des promesses",
+      "proofs": [
+        {
+          "figure": "20%+",
+          "text": "de temps gagné chaque semaine par les collaborateurs de NBIM, gestionnaire du fonds souverain norvégien, sur les tâches assistées par l'IA avec Claude.",
+          "source": "Témoignage client Claude",
+          "url": "https://claude.com/customers/nbim"
+        },
+        {
+          "figure": "40 h → 2 min",
+          "text": "Moody's a réduit la préparation d'une note de crédit d'environ 40 heures de travail d'analyste à environ 2 minutes grâce à une équipe d'agents IA.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Du temps retrouvé",
+          "text": "La collecte, la ressaisie et la mise en forme passent à l'agent. Votre équipe garde les décisions qui demandent du jugement."
+        },
+        {
+          "title": "Le projet repoussé, enfin réalisé",
+          "text": "Le travail qui ne trouve jamais sa place dans une semaine normale est enfin construit, testé et livré."
+        },
+        {
+          "title": "De nouveaux enseignements",
+          "text": "Les données qui dormaient dans des dossiers et des boîtes mail deviennent consultables, mesurables et exploitables."
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi travailler avec nous",
+      "intro": "Nous sommes avant tout des ingénieurs. Nous construisons des logiciels qui fonctionnent, mesurons ce qu'ils changent et rendons votre équipe autonome pour les faire tourner.",
+      "points": [
+        {
+          "title": "L'ingénierie d'abord",
+          "text": "Des prototypes qui fonctionnent, pas des présentations. Chaque agent est construit, testé et surveillé comme tout logiciel en production."
+        },
+        {
+          "title": "L'humain garde la main",
+          "text": "Chaque chiffre est traçable jusqu'à sa source et rien ne quitte votre entreprise sans la validation d'une personne."
+        },
+        {
+          "title": "Vos données protégées",
+          "text": "Des offres d'IA entreprise qui ne s'entraînent pas sur vos données, un hébergement chez vous si nécessaire et un traitement conforme au RGPD."
+        },
+        {
+          "title": "Des résultats mesurés",
+          "text": "Nous mesurons le temps que prend une tâche avant de commencer et après le lancement. Le résultat est un chiffre, pas une impression."
+        }
+      ]
+    },
+    "team": {
+      "title": "L'équipe",
+      "intro": "Une petite équipe senior qui travaille avec la vôtre, pas à côté.",
+      "founder": {
+        "name": "Fares",
+        "role": "Fondateur et ingénieur principal",
+        "bio": "Fares pilote chaque mission, du premier audit de processus jusqu'à la mise en production. Il construit les agents, les flux de données et les intégrations, et reste responsable du résultat.",
+        "skills": [
+          "Agents IA",
+          "Ingénierie des données",
+          "Architecture logicielle",
+          "Digitalisation des processus"
+        ],
+        "cardLink": "Carte de visite numérique",
+        "photoAlt": "Portrait de Fares, fondateur de Qartmina"
+      },
+      "partnersTitle": "Partenaires",
+      "partners": [
+        {
+          "name": "ESGITECH",
+          "text": "Partenaire de formation pour le programme IA pour l'entreprise."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Combien de temps faut-il pour construire un agent ?",
+          "answer": "Une première version opérationnelle prend généralement moins d'un mois. La mise en production avec vos données, vos droits d'accès et vos circuits de validation prend environ trois mois. Ensuite, l'agent évolue avec vos besoins."
+        },
+        {
+          "question": "Quel retour sur investissement attendre, et comment le mesurez-vous ?",
+          "answer": "Avant de construire quoi que ce soit, nous mesurons le temps que prend la tâche aujourd'hui et sa fréquence. Après le lancement, nous mesurons à nouveau. Le retour correspond au temps gagné multiplié par le coût de ce temps, moins le coût de fonctionnement de l'agent. Si les chiffres ne justifient pas un agent, nous vous le disons."
+        },
+        {
+          "question": "Construisez-vous des agents sur mesure ou utilisez-vous des solutions existantes ?",
+          "answer": "Les deux. Quand un outil existant fait l'affaire, nous le configurons et le connectons. Quand votre processus est spécifique, nous construisons un agent sur mesure. Le choix dépend de ce qui vous mène au résultat le plus vite et au meilleur coût."
+        },
+        {
+          "question": "Où nos données sont-elles traitées, et servent-elles à entraîner des modèles ?",
+          "answer": "Nous utilisons des offres d'IA entreprise dont les conditions excluent l'entraînement sur vos données. Si vos règles l'exigent, nous hébergeons les modèles et les données sur une infrastructure que vous contrôlez. Le traitement respecte le RGPD et nous documentons la destination de chaque donnée."
+        },
+        {
+          "question": "Que se passe-t-il après le lancement ?",
+          "answer": "Nous surveillons l'agent, corrigeons ce qui ne fonctionne plus et l'améliorons à mesure que votre processus évolue. Vous pouvez conserver un contrat de support avec nous ou reprendre la main entièrement."
+        },
+        {
+          "question": "Notre équipe peut-elle maintenir les agents elle-même ?",
+          "answer": "Oui. Nous travaillons avec votre équipe, documentons tout et formons les personnes qui seront responsables de l'agent. Vous n'êtes jamais captif."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Trouvons votre premier agent",
+      "text": "Dites-nous quelle tâche prend trop de temps à votre équipe. Nous répondons sous deux jours ouvrés.",
+      "emailLabel": "E-mail",
+      "linkedinLabel": "LinkedIn",
+      "locationLabel": "Adresse",
+      "location": "Les Berges du Lac, Tunisie. À distance dans toute la région MENA et en Afrique."
+    },
+    "figures": [
+      {
+        "value": "< 1 mois",
+        "label": "pour une première version opérationnelle"
+      },
+      {
+        "value": "3 mois",
+        "label": "pour la mise en production"
+      },
+      {
+        "value": "6",
+        "label": "services, une seule équipe"
+      },
+      {
+        "value": "100%",
+        "label": "des résultats validés par une personne"
+      }
+    ],
+    "partner": {
+      "badgeAlt": "Badge OpenAI Select Partner",
+      "eyebrow": "OpenAI Partner Network",
+      "title": "OpenAI Select Partner",
+      "intro": "Qartmina est OpenAI Select Partner. L'OpenAI Partner Network est un programme mondial destiné aux partenaires qui conçoivent, vendent et déploient des solutions d'IA avec OpenAI.",
+      "whatTitle": "Ce que cela change pour vous",
+      "points": [
+        {
+          "title": "Le soutien d'OpenAI",
+          "text": "Nous recevons des formations, des ressources et un accompagnement d'OpenAI. Ce que nous construisons pour vous suit les modèles actuels et les pratiques recommandées."
+        },
+        {
+          "title": "Le bon produit, bien configuré",
+          "text": "Nous vous aidons à choisir entre ChatGPT pour vos équipes et l'API pour des agents sur mesure, avec des conditions professionnelles qui excluent vos données de l'entraînement des modèles."
+        },
+        {
+          "title": "Pensé pour un impact mesurable",
+          "text": "Le programme vise à transformer l'adoption de l'IA en résultats mesurables. C'est aussi notre méthode : nous mesurons avant et après."
+        }
+      ],
+      "link": "À propos de l'OpenAI Partner Network"
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "original": "Témoignage original en anglais"
+    },
+    "workflow": {
+      "robotAlt": "Le robot de Qartmina, l'agent au centre de vos flux de travail",
+      "tabs": {
+        "integration": "Intégration",
+        "agent": "Agent IA",
+        "automation": "Automatisation"
+      },
+      "captions": {
+        "integration": "Connecté aux outils que vous utilisez déjà.",
+        "agent": "Lit ce qui arrive, livre un travail terminé.",
+        "automation": "Tourne tout seul, à chaque fois, avec une personne qui valide l'essentiel."
+      },
+      "inputs": [
+        "PDF et Excel",
+        "ERP",
+        "E-mail"
+      ],
+      "outputs": [
+        "Rapport",
+        "Mise à jour CRM",
+        "Validation"
+      ],
+      "trigger": "Déclencheur",
+      "triggerText": "Nouvelle facture par e-mail",
+      "action": "Action",
+      "actionText": "Saisie dans l'ERP",
+      "loop": "Boucle continue"
+    }
+  },
+  "contactForm": {
+    "name": "Nom",
+    "email": "E-mail",
+    "company": "Entreprise",
+    "website": "Site web",
+    "message": "Message",
+    "messagePlaceholder": "Quelle tâche souhaitez-vous confier à un agent ?",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Merci. Votre message nous est bien parvenu et nous vous répondrons sous deux jours ouvrés.",
+    "error": "Votre message n'a pas pu être envoyé. Veuillez réessayer ou nous écrire à {email}.",
+    "verification": "Veuillez effectuer la vérification de sécurité avant l'envoi.",
+    "consent": "En envoyant ce formulaire, vous acceptez que nous utilisions vos coordonnées pour vous répondre, comme décrit dans notre <link>politique de confidentialité</link>.",
+    "honeypot": "Laissez ce champ vide"
+  },
+  "services": {
+    "back": "Nos services",
+    "featuresTitle": "Fonctionnalités clés",
+    "useCasesTitle": "Cas d'usage"
+  },
+  "servicePages": {
+    "ai-agents": {
+      "title": "Développement d'agents IA",
+      "summary": "Des agents sur mesure qui enchaînent plusieurs étapes dans vos outils et soumettent le résultat à la validation d'une personne.",
+      "intro": "Un agent est un logiciel capable de lire, vérifier et agir dans plusieurs systèmes, comme le ferait un assistant, mais en quelques minutes et sans fatigue. Nous concevons l'agent autour de l'un de vos processus réels, le connectons à vos outils et veillons à ce qu'une personne valide tout ce qui compte avant que cela ne sorte.",
+      "features": [
+        {
+          "title": "Fonctionne dans tous vos outils",
+          "text": "Lit les e-mails, les documents, les tableurs et vos logiciels métier en une seule exécution."
+        },
+        {
+          "title": "Demande avant tout envoi",
+          "text": "Une personne valide chaque message, paiement ou mise à jour destiné à l'extérieur."
+        },
+        {
+          "title": "Chaque chiffre relié à sa source",
+          "text": "Chaque nombre du résultat renvoie au fichier ou à l'enregistrement d'origine."
+        },
+        {
+          "title": "Planifié ou à la demande",
+          "text": "S'exécute chaque matin, à chaque clôture mensuelle, ou quand quelqu'un le sollicite."
+        }
+      ],
+      "useCases": [
+        "Analyse de data room et de documents pour une due diligence",
+        "Réception des factures et rapprochement avec les commandes",
+        "Reporting mensuel construit à partir de plusieurs sources",
+        "Qualification des prospects et mise à jour du CRM"
+      ],
+      "metaTitle": "Développement d'agents IA"
+    },
+    "automation": {
+      "title": "Automatisation des processus",
+      "summary": "Des flux de travail de bout en bout qui suppriment le copier-coller, la saisie manuelle et les transmissions à la main.",
+      "intro": "Beaucoup de processus dépendent encore d'une personne qui copie des données d'un écran à un autre. Nous cartographions le processus tel qu'il est, supprimons les étapes manuelles et connectons directement les systèmes, avec de l'IA uniquement là où elle apporte ce que des règles ne peuvent pas.",
+      "features": [
+        {
+          "title": "Cartographié avant d'être construit",
+          "text": "Nous documentons le processus tel qu'il se déroule vraiment, exceptions comprises."
+        },
+        {
+          "title": "Fini la ressaisie",
+          "text": "Les données circulent entre e-mails, tableurs et systèmes sans saisie manuelle."
+        },
+        {
+          "title": "Les exceptions vont à une personne",
+          "text": "Tout cas inhabituel est signalé et transmis au bon collègue."
+        },
+        {
+          "title": "Visible et mesuré",
+          "text": "Chaque exécution est journalisée : vous voyez ce qui s'est passé et combien de temps cela a pris."
+        }
+      ],
+      "useCases": [
+        "Saisie des commandes reçues par e-mail dans l'ERP",
+        "Référencement des fournisseurs et contrôle des documents",
+        "Rapports hebdomadaires de ventes et de stocks",
+        "Circuits de validation qui vivent aujourd'hui dans des fils d'e-mails"
+      ],
+      "metaTitle": "Automatisation des processus"
+    },
+    "integration": {
+      "title": "Intégration",
+      "summary": "L'IA connectée à Excel, au CRM, à l'ERP, aux e-mails et aux bases de données via des connecteurs et des API sécurisés.",
+      "intro": "L'IA n'est utile que si elle peut voir vos données et agir dans vos systèmes. Nous construisons des connecteurs sécurisés entre les outils d'IA et les logiciels que vous utilisez déjà, pour que l'information circule là où elle est utile et que l'accès reste limité à ce que vous autorisez.",
+      "features": [
+        {
+          "title": "Vos systèmes, pas de nouveaux",
+          "text": "Nous connectons ce que vous utilisez déjà : Excel, CRM, ERP, e-mail, bases de données."
+        },
+        {
+          "title": "Accès minimal par défaut",
+          "text": "Chaque connecteur ne peut lire ou modifier que ce que vous autorisez explicitement."
+        },
+        {
+          "title": "Connecteurs standards",
+          "text": "Nous utilisons des standards ouverts comme MCP, une méthode commune pour brancher les outils d'IA sur vos systèmes. Vous n'êtes donc pas captif."
+        },
+        {
+          "title": "Traçabilité de bout en bout",
+          "text": "Chaque requête passant par un connecteur est enregistrée pour l'audit."
+        }
+      ],
+      "useCases": [
+        "Permettre à l'assistant de votre entreprise de lire le CRM et l'ERP",
+        "Synchroniser des tableurs avec une base de données centrale",
+        "Relier les boîtes mail aux systèmes de tickets ou de commandes",
+        "Ouvrir les données internes aux outils d'IA via une API sécurisée"
+      ],
+      "metaTitle": "Intégration de l'IA"
+    },
+    "consulting": {
+      "title": "Conseil en IA",
+      "summary": "Un audit de vos processus et une feuille de route des agents à construire en priorité.",
+      "intro": "Avant d'investir dans l'IA, il faut savoir où elle est rentable. Nous auditons la façon dont le travail est fait aujourd'hui, vérifions si vos données sont prêtes et vous remettons un plan priorisé : quoi construire en premier, ce que cela fera gagner et ce que cela coûtera.",
+      "features": [
+        {
+          "title": "Audit des processus",
+          "text": "Nous identifions où passent les heures, avec votre équipe, dans vos outils réels."
+        },
+        {
+          "title": "Diagnostic des données",
+          "text": "Quelles données vous avez, où elles se trouvent et ce qu'il faut nettoyer d'abord."
+        },
+        {
+          "title": "Feuille de route priorisée",
+          "text": "Des étapes à court, moyen et long terme, chacune liée à un résultat mesurable."
+        },
+        {
+          "title": "Des réponses franches",
+          "text": "Si l'IA n'est pas le bon outil pour un problème, nous le disons."
+        }
+      ],
+      "useCases": [
+        "Choisir le premier agent à construire",
+        "Reprendre un pilote IA qui n'a jamais atteint la production",
+        "Planifier la modernisation d'un système existant",
+        "Préparer une stratégie IA pour le conseil d'administration"
+      ],
+      "metaTitle": "Conseil en IA"
+    },
+    "training": {
+      "title": "Formation des équipes",
+      "summary": "Le programme IA pour l'entreprise avec ESGITECH, des bases jusqu'à un premier flux de travail opérationnel.",
+      "intro": "Les outils ne transforment une entreprise que si les gens savent s'en servir. Avec ESGITECH, nous animons le programme IA pour l'entreprise : des sessions pratiques qui mènent votre équipe des bases jusqu'à un premier flux de travail appliqué à ses propres tâches.",
+      "features": [
+        {
+          "title": "Conçu pour des équipes non techniques",
+          "text": "Un langage simple, des exemples réels, aucun code nécessaire."
+        },
+        {
+          "title": "Vos tâches, pas des exercices fictifs",
+          "text": "Les participants travaillent sur les processus de leur propre métier."
+        },
+        {
+          "title": "Un résultat concret",
+          "text": "Chaque participant repart avec un premier flux de travail qui fonctionne."
+        },
+        {
+          "title": "Un usage sûr",
+          "text": "Ce que vous pouvez partager avec les outils d'IA, ce que vous ne pouvez pas, et pourquoi."
+        }
+      ],
+      "useCases": [
+        "Introduction à l'IA pour les équipes de direction",
+        "Ateliers pratiques pour la finance et les opérations",
+        "Rédaction de requêtes et usage des assistants pour les équipes administratives",
+        "Formation de formateurs pour les référents IA internes"
+      ],
+      "metaTitle": "Formation des équipes à l'IA"
+    },
+    "chatbots": {
+      "title": "Chatbots et assistants",
+      "summary": "Des assistants qui répondent à vos clients ou à vos collaborateurs à partir de vos propres documents, jour et nuit.",
+      "intro": "Votre équipe répond chaque jour aux mêmes questions à partir des mêmes documents. Nous construisons des assistants qui répondent à partir de vos politiques, manuels et données, indiquent la source de chaque réponse et passent la main à une personne quand il le faut.",
+      "features": [
+        {
+          "title": "Des réponses tirées de vos documents",
+          "text": "L'assistant ne répond qu'à partir des sources que vous approuvez."
+        },
+        {
+          "title": "Indique ses sources",
+          "text": "Chaque réponse renvoie au document d'origine."
+        },
+        {
+          "title": "Passe la main à une personne",
+          "text": "Les demandes sensibles ou ambiguës sont transmises à votre équipe."
+        },
+        {
+          "title": "Disponible jour et nuit",
+          "text": "Sur votre site, votre intranet ou vos outils de messagerie."
+        }
+      ],
+      "useCases": [
+        "Service client sur votre site web",
+        "Support interne pour les questions RH et informatiques",
+        "Recherche dans la documentation produit et technique",
+        "Assistant d'intégration pour les nouveaux collaborateurs"
+      ],
+      "metaTitle": "Chatbots et assistants IA"
+    }
+  },
+  "visuals": {
+    "tools": [
+      "E-mail",
+      "Excel",
+      "ERP"
+    ],
+    "agentRun": {
+      "title": "Agent de reporting mensuel",
+      "steps": [
+        "Collecte des fichiers",
+        "Rapprochement des chiffres",
+        "Rédaction du rapport",
+        "Liens vers les sources",
+        "En attente de validation"
+      ]
+    },
+    "automation": [
+      {
+        "title": "Réception des factures",
+        "description": "Lit les factures, les rapproche des commandes et signale les écarts.",
+        "badge": "2 min"
+      },
+      {
+        "title": "Saisie des commandes",
+        "description": "Reporte les commandes reçues par e-mail dans l'ERP, sans ressaisie.",
+        "badge": "30 s"
+      },
+      {
+        "title": "Rapport hebdomadaire",
+        "description": "Extrait les chiffres de trois tableurs et met en forme le rapport.",
+        "badge": "5 min"
+      }
+    ],
+    "integration": {
+      "cardTitle": "Connecteur sécurisé",
+      "cardText": "Lit et écrit uniquement ce que vous autorisez.",
+      "card2Title": "Vos outils actuels"
+    },
+    "consulting": {
+      "label": "Constat",
+      "tabs": [
+        {
+          "title": "Audit des processus",
+          "description": "Comment le travail se fait aujourd'hui et où passent les heures."
+        },
+        {
+          "title": "Gains rapides",
+          "description": "Les tâches qu'un agent peut reprendre en quelques semaines, classées par heures gagnées."
+        },
+        {
+          "title": "Données",
+          "description": "Quelles données vous avez, où elles sont et ce qu'il faut nettoyer d'abord."
+        },
+        {
+          "title": "Contrôles",
+          "description": "Où une personne doit valider, et ce qui ne doit jamais quitter vos systèmes."
+        },
+        {
+          "title": "Feuille de route",
+          "description": "Étapes à court, moyen et long terme, chacune liée à un résultat mesurable."
+        }
+      ]
+    },
+    "chatbot": [
+      {
+        "title": "Question client",
+        "description": "Puis-je modifier mon adresse de livraison après ma commande ?"
+      },
+      {
+        "title": "Réponse tirée de vos documents",
+        "description": "Oui, jusqu'à l'expédition. Source : politique de livraison, section 2."
+      },
+      {
+        "title": "Transmis à votre équipe",
+        "description": "Les remboursements au-delà du seuil sont validés par une personne."
+      }
+    ],
+    "activity": {
+      "title": "Activité récente",
+      "needsInput": "À COMPLÉTER",
+      "processing": "EN COURS",
+      "items": [
+        {
+          "title": "Réponse fournisseur",
+          "description": "Brouillon prêt pour relecture"
+        },
+        {
+          "title": "Analyse de crédit",
+          "description": "Bilan manquant, renvoyé à l'analyste"
+        },
+        {
+          "title": "Rapport mensuel",
+          "description": "Chaque chiffre relié à son fichier source"
+        },
+        {
+          "title": "Validation du responsable",
+          "description": "Rapport en attente de validation avant envoi"
+        },
+        {
+          "title": "Mise à jour CRM",
+          "description": "12 contacts mis à jour après validation"
+        },
+        {
+          "title": "Revue de contrat",
+          "description": "Clause signalée pour revue juridique"
+        }
+      ]
+    },
+    "flow": {
+      "build": "Construire",
+      "test": "Tester"
+    },
+    "measured": {
+      "title": "Heures passées sur la tâche",
+      "rows": [
+        "Point de départ",
+        "Semaine 4",
+        "Semaine 12"
+      ]
+    }
+  },
+  "portfolio": {
+    "metaTitle": "Réalisations",
+    "metaDescription": "Études de cas d'agents IA, d'automatisations et de plateformes de données conçus par Qartmina, avec le problème, l'approche et le résultat mesuré.",
+    "title": "Nos réalisations",
+    "intro": "Chaque étude de cas présente le problème, ce que nous avons construit et ce qui a changé. Les démos sont signalées comme telles.",
+    "sector": "Secteur",
+    "service": "Service",
+    "result": "Résultat",
+    "readCase": "Lire l'étude de cas",
+    "back": "Toutes les études de cas",
+    "context": "Contexte",
+    "approach": "Approche",
+    "outcome": "Résultat"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Des articles concrets pour mettre les agents IA, l'automatisation et les données au service de vraies entreprises.",
+    "title": "Blog",
+    "intro": "Des conseils concrets pour mettre l'IA et les données au travail. Pas d'effet de mode, des exemples réels.",
+    "empty": "Les premiers articles arrivent bientôt. Abonnez-vous à la newsletter pour les recevoir.",
+    "readingTime": "{minutes} min de lecture",
+    "back": "Tous les articles",
+    "related": "Articles similaires",
+    "authorName": "Fares",
+    "authorRole": "Fondateur et ingénieur principal, Qartmina"
+  },
+  "about": {
+    "metaTitle": "À propos",
+    "metaDescription": "Qartmina est une société de conseil en IA et en données active dans la région MENA et en Afrique. Découvrez notre nom, notre fondateur et notre façon de travailler.",
+    "title": "À propos de Qartmina",
+    "intro": "Nous aidons les entreprises à se digitaliser et à mettre l'IA au travail, de la stratégie à l'exécution, en appuyant chaque recommandation sur des preuves.",
+    "nameTitle": "Le nom",
+    "nameText": "Qartmina signifie « la nouvelle mine ». Les données sont la matière première de notre époque et, comme toute mine, elles ne valent quelque chose qu'une fois creusées, raffinées et mises à profit. C'est notre métier.",
+    "founderTitle": "Le fondateur",
+    "methodTitle": "Notre méthode",
+    "methodIntro": "Chaque mission construit trois couches, toujours dans cet ordre. Chaque couche s'accompagne d'un plan à court, moyen et long terme lié à un résultat précis.",
+    "layers": [
+      {
+        "title": "Fondations",
+        "text": "Des processus standardisés, conformes, bien testés et sécurisés."
+      },
+      {
+        "title": "Données",
+        "text": "Des données propres, structurées et fiables, qui deviennent un actif."
+      },
+      {
+        "title": "IA",
+        "text": "L'IA appliquée là où elle est rentable, et seulement là."
+      }
+    ],
+    "rhythm": [
+      {
+        "value": "< 1 mois",
+        "label": "pour une première version opérationnelle"
+      },
+      {
+        "value": "3 mois",
+        "label": "pour la mise en production"
+      },
+      {
+        "value": "6 mois",
+        "label": "pour un produit qui grandit"
+      }
+    ],
+    "partnersTitle": "Partenaires",
+    "locationsTitle": "Où nous travaillons",
+    "locationsText": "À distance dans toute la région MENA et en Afrique, selon des standards internationaux. Basés aux Berges du Lac, en Tunisie.",
+    "coreMarketsLabel": "Marchés principaux",
+    "coreMarkets": [
+      "Maroc",
+      "Tunisie",
+      "Égypte",
+      "Nigeria",
+      "Kenya",
+      "Afrique du Sud",
+      "Émirats arabes unis",
+      "Arabie saoudite"
+    ],
+    "reachLabel": "Également présents en",
+    "reach": [
+      "Algérie",
+      "Sénégal",
+      "Ghana",
+      "Côte d'Ivoire",
+      "Rwanda",
+      "Éthiopie",
+      "Qatar",
+      "Jordanie"
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Dites à Qartmina quelle tâche prend trop de temps à votre équipe. Nous répondons sous deux jours ouvrés."
+  },
+  "book": {
+    "metaTitle": "Prendre rendez-vous",
+    "metaDescription": "Réservez un appel gratuit de 30 minutes avec Qartmina pour examiner un processus et voir si un agent IA vaut la peine d'être construit.",
+    "title": "Réserver un appel gratuit de 30 minutes",
+    "intro": "Nous examinons ensemble un processus et voyons si un agent vaut la peine d'être construit. Aucune préparation nécessaire.",
+    "calendarTitle": "Calendrier de réservation",
+    "fallback": "La réservation en ligne ouvre bientôt. Envoyez-nous un message et nous vous proposerons quelques créneaux."
+  },
+  "legal": {
+    "updated": "Dernière mise à jour : {date}",
+    "privacy": {
+      "metaTitle": "Politique de confidentialité",
+      "title": "Politique de confidentialité",
+      "sections": [
+        {
+          "heading": "Responsable du traitement",
+          "body": [
+            "Qartmina, Les Berges du Lac, Tunis, Tunisie, est responsable du traitement des données personnelles collectées sur ce site. Vous pouvez nous contacter à fares@qartmina.com."
+          ]
+        },
+        {
+          "heading": "Données collectées et finalités",
+          "body": [
+            "Formulaire de contact : votre nom, votre adresse e-mail, votre entreprise, votre site web et votre message. Nous les utilisons uniquement pour répondre à votre demande et, si elle aboutit à un projet, pour le préparer. Base légale : mesures précontractuelles prises à votre demande (art. 6(1)(b) RGPD).",
+            "Newsletter : votre adresse e-mail, uniquement si vous vous abonnez. Base légale : votre consentement (art. 6(1)(a) RGPD), que vous pouvez retirer à tout moment via le lien présent dans chaque e-mail.",
+            "Vérification de sécurité : pour protéger nos formulaires contre le spam, Cloudflare Turnstile vérifie qu'une demande provient bien d'une personne. Base légale : notre intérêt légitime à protéger le site (art. 6(1)(f) RGPD).",
+            "Journaux du serveur : notre hébergeur enregistre des données techniques comme l'adresse IP, la date et la page consultée afin d'assurer le fonctionnement sécurisé du site. Base légale : intérêt légitime (art. 6(1)(f) RGPD)."
+          ]
+        },
+        {
+          "heading": "Sous-traitants",
+          "body": [
+            "Brevo (Sendinblue SAS, France) envoie les e-mails de notre formulaire de contact et notre newsletter.",
+            "Cloudflare, Inc. (États-Unis) fournit la vérification de sécurité Turnstile. Les transferts vers les États-Unis sont encadrés par le Data Privacy Framework UE-États-Unis ou par des clauses contractuelles types.",
+            "Nous ne vendons pas vos données et n'utilisons pas de cookies publicitaires ou de suivi."
+          ]
+        },
+        {
+          "heading": "Cookies et stockage local",
+          "body": [
+            "Ce site enregistre votre thème de couleur et votre préférence de langue dans votre navigateur. La vérification de sécurité et le formulaire de newsletter peuvent déposer des cookies strictement nécessaires. Nous n'utilisons pas de cookies de mesure d'audience ni de cookies publicitaires."
+          ]
+        },
+        {
+          "heading": "Durée de conservation",
+          "body": [
+            "Les demandes de contact sont supprimées lorsqu'elles ne sont plus nécessaires, au plus tard deux ans après notre dernier échange, sauf si un contrat nous oblige à les conserver plus longtemps. Les données de la newsletter sont conservées jusqu'à votre désinscription."
+          ]
+        },
+        {
+          "heading": "Vos droits",
+          "body": [
+            "Vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données, d'un droit à la portabilité et d'un droit d'opposition. Vous pouvez retirer votre consentement à tout moment. Écrivez à fares@qartmina.com. Vous avez également le droit d'introduire une réclamation auprès d'une autorité de protection des données."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "metaTitle": "Conditions d'utilisation",
+      "title": "Conditions d'utilisation",
+      "sections": [
+        {
+          "heading": "Champ d'application",
+          "body": [
+            "Les présentes conditions s'appliquent à l'utilisation du site qartmina.com. Les missions de conseil et de développement sont régies par un contrat écrit distinct."
+          ]
+        },
+        {
+          "heading": "Contenu",
+          "body": [
+            "Le contenu de ce site est fourni à titre d'information générale et ne constitue pas un conseil professionnel adapté à votre situation. Nous veillons à ce qu'il soit exact et à jour, sans pouvoir garantir qu'il soit complet en permanence."
+          ]
+        },
+        {
+          "heading": "Propriété intellectuelle",
+          "body": [
+            "Les textes, graphismes et le code de ce site appartiennent à Qartmina, sauf mention contraire. Vous pouvez partager des liens vers nos pages. Toute autre réutilisation nécessite notre autorisation écrite."
+          ]
+        },
+        {
+          "heading": "Liens externes",
+          "body": [
+            "Nous renvoyons vers des sources externes à titre de preuve. Nous ne sommes pas responsables du contenu des sites externes."
+          ]
+        },
+        {
+          "heading": "Responsabilité",
+          "body": [
+            "Notre responsabilité est engagée sans limitation en cas de faute intentionnelle ou de faute lourde. En cas de faute légère, elle n'est engagée qu'en cas de manquement à une obligation essentielle et se limite au dommage prévisible."
+          ]
+        },
+        {
+          "heading": "Droit applicable",
+          "body": [
+            "Les présentes conditions sont régies par le droit indiqué dans nos mentions légales, sans préjudice des règles impératives de protection des consommateurs de votre pays de résidence."
+          ]
+        }
+      ]
+    },
+    "notice": {
+      "metaTitle": "Mentions légales",
+      "title": "Mentions légales",
+      "sections": [
+        {
+          "heading": "Éditeur",
+          "body": [
+            "Qartmina",
+            "Forme juridique et raison sociale : [à compléter]",
+            "Les Berges du Lac, Tunis, Tunisie",
+            "Numéro d'immatriculation : [à compléter]",
+            "Numéro de TVA ou identifiant fiscal : [à compléter]"
+          ]
+        },
+        {
+          "heading": "Contact",
+          "body": [
+            "E-mail : fares@qartmina.com",
+            "Téléphone : +49 170 3754433"
+          ]
+        },
+        {
+          "heading": "Directeur de la publication",
+          "body": [
+            "Fares [nom de famille à compléter], adresse ci-dessus."
+          ]
+        },
+        {
+          "heading": "Hébergement",
+          "body": [
+            "[Nom et adresse de l'hébergeur à compléter]"
+          ]
+        }
+      ]
+    }
+  },
+  "chat": {
+    "open": "Ouvrir le chat",
+    "close": "Fermer le chat",
+    "title": "Assistant Qartmina",
+    "greeting": "Bonjour. Que souhaitez-vous savoir ?",
+    "quickReplies": [
+      {
+        "label": "Agents IA",
+        "answer": "Nous construisons des agents qui enchaînent plusieurs étapes dans vos outils, par exemple des rapports mensuels ou des contrôles de factures, et qui demandent l'accord d'une personne avant que quoi que ce soit ne quitte votre entreprise."
+      },
+      {
+        "label": "Automatisation",
+        "answer": "Nous supprimons le copier-coller, la saisie manuelle et les transmissions à la main en connectant directement vos systèmes, avec de l'IA uniquement là où les règles ne suffisent pas."
+      },
+      {
+        "label": "Tarifs",
+        "answer": "Chaque projet est cadré sur un résultat mesurable, le prix dépend donc du processus. Un court appel suffit pour vous donner une première estimation."
+      },
+      {
+        "label": "Contact",
+        "answer": "Écrivez à fares@qartmina.com ou réservez un appel gratuit de 30 minutes. Nous répondons sous deux jours ouvrés."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée.",
+    "home": "Retour à l'accueil"
+  },
+  "newsletterToast": {
+    "title": "Des notes pratiques sur l'IA, dans votre boîte mail",
+    "text": "Des exemples concrets d'IA et de données au travail. Sans battage, désinscription à tout moment.",
+    "close": "Fermer"
+  },
+  "newsletterForm": {
+    "label": "Adresse e-mail",
+    "placeholder": "Votre e-mail",
+    "submit": "S'inscrire",
+    "sending": "Inscription...",
+    "success": "Merci, vous êtes inscrit à la newsletter.",
+    "error": "L'inscription n'a pas fonctionné. Veuillez réessayer dans un instant.",
+    "invalid": "Veuillez saisir une adresse e-mail valide.",
+    "consent": "Un e-mail de temps en temps. Désinscription à tout moment. Voir notre <link>politique de confidentialité</link>."
+  }
+}

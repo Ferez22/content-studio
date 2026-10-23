@@ -1,0 +1,848 @@
+{
+  "common": {
+    "bookCall": "Gespräch buchen",
+    "startProject": "Projekt starten",
+    "readyTitle": "Bereit für den ersten Schritt?",
+    "readyText": "Nennen Sie uns einen Prozess, der Ihr Team viel Zeit kostet. Wir sagen Ihnen ehrlich, ob sich ein Agent dafür lohnt.",
+    "learnMore": "Mehr erfahren",
+    "source": "Quelle",
+    "demo": "Demo",
+    "tagline": "Starten Sie dieses Projekt."
+  },
+  "header": {
+    "home": "Start",
+    "services": "Leistungen",
+    "portfolio": "Referenzen",
+    "about": "Über uns",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "bookCall": "Gespräch buchen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache"
+  },
+  "footer": {
+    "positioning": "Strategie, Daten und KI, gebaut für den Einsatz in Ihrem Unternehmen.",
+    "services": "Leistungen",
+    "company": "Unternehmen",
+    "contact": "Kontakt",
+    "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika.",
+    "rights": "© {year} Qartmina. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "legal": "Impressum",
+    "newsletterTitle": "Newsletter",
+    "newsletterText": "Praxisnahe Hinweise, wie KI und Daten in echten Unternehmen Wirkung zeigen. Jederzeit abbestellbar."
+  },
+  "metadata": {
+    "siteTitle": "Qartmina | KI-Agenten und Datenberatung",
+    "siteDescription": "Qartmina entwickelt KI-Agenten, Automatisierungen und Datenplattformen, die Ihren Teams wiederkehrende Arbeit abnehmen. Was wichtig ist, gibt ein Mensch frei."
+  },
+  "home": {
+    "hero": {
+      "title": "Setzen Sie KI-Agenten in Ihrem Unternehmen ein",
+      "subtitle": "Agenten, die Ihren Teams wiederkehrende Arbeit abnehmen, direkt in den Tools, die Sie bereits nutzen. Was wichtig ist, gibt ein Mensch frei.",
+      "primary": "Kostenloses 30-Minuten-Gespräch buchen",
+      "secondary": "Unsere Arbeit ansehen",
+      "titleTemplate": "Setzen Sie KI-Agenten in Ihrem {target} ein",
+      "targets": [
+        "Unternehmen",
+        "Finanzteam",
+        "Vertrieb",
+        "Kundenservice",
+        "Einkauf"
+      ]
+    },
+    "trusted": {
+      "title": "Kunden und Partner, die uns vertrauen"
+    },
+    "services": {
+      "title": "Was wir bauen",
+      "intro": "Sechs Wege, wie wir KI und Daten für Sie arbeiten lassen. Jeder ist auf ein messbares Ergebnis ausgerichtet."
+    },
+    "cost": {
+      "title": "Was Arbeiten ohne KI kostet",
+      "text": "Stunden fließen in das Sammeln von Dateien, das Abtippen von Zahlen und das Formatieren von Berichten. Das Projekt, das alle wollen, rutscht ins nächste Quartal. Die Daten, die Sie bereits besitzen, bleiben ungenutzt.",
+      "proofTitle": "Öffentliche Belege statt Versprechen",
+      "proofs": [
+        {
+          "figure": "20%+",
+          "text": "ihrer Arbeitszeit sparen Mitarbeitende von NBIM, dem Verwalter des norwegischen Staatsfonds, pro Woche bei KI-gestützten Aufgaben mit Claude.",
+          "source": "Claude-Kundenbericht",
+          "url": "https://claude.com/customers/nbim"
+        },
+        {
+          "figure": "40 Std. → 2 Min.",
+          "text": "Moody's hat die Erstellung eines Kreditmemos mit einem Team aus KI-Agenten von rund 40 Stunden Analystenarbeit auf etwa 2 Minuten verkürzt.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Zeit zurück",
+          "text": "Sammeln, Abtippen und Formatieren übernimmt der Agent. Ihr Team behält die Entscheidungen."
+        },
+        {
+          "title": "Das aufgeschobene Projekt, erledigt",
+          "text": "Die Arbeit, die in keiner normalen Woche Platz findet, wird endlich gebaut, getestet und eingeführt."
+        },
+        {
+          "title": "Neue Erkenntnisse",
+          "text": "Daten, die in Ordnern und Postfächern lagen, werden durchsuchbar, zählbar und nutzbar."
+        }
+      ]
+    },
+    "why": {
+      "title": "Warum mit uns arbeiten",
+      "intro": "Wir sind in erster Linie Ingenieure. Wir bauen funktionierende Software, messen, was sie verändert, und befähigen Ihr Team, sie selbst zu betreiben.",
+      "points": [
+        {
+          "title": "Technik zuerst",
+          "text": "Funktionierende Prototypen statt Folien. Jeder Agent wird gebaut, getestet und überwacht wie jede andere produktive Software."
+        },
+        {
+          "title": "Der Mensch behält die Kontrolle",
+          "text": "Jede Zahl ist bis zu ihrer Quelle nachvollziehbar, und nichts verlässt Ihr Unternehmen ohne die Freigabe eines Menschen."
+        },
+        {
+          "title": "Ihre Daten geschützt",
+          "text": "KI-Unternehmenstarife, die nicht mit Ihren Daten trainieren, Self-Hosting wo nötig und DSGVO-konforme Verarbeitung."
+        },
+        {
+          "title": "Messbare Ergebnisse",
+          "text": "Wir messen den Zeitaufwand einer Aufgabe vor dem Start und nach der Einführung. So ist das Ergebnis eine Zahl, kein Eindruck."
+        }
+      ]
+    },
+    "team": {
+      "title": "Das Team",
+      "intro": "Ein kleines, erfahrenes Team, das mit Ihrem Team zusammenarbeitet, nicht an ihm vorbei.",
+      "founder": {
+        "name": "Fares",
+        "role": "Gründer und Principal Engineer",
+        "bio": "Fares leitet jedes Projekt vom ersten Prozess-Audit bis zum Produktivbetrieb, baut die Agenten, Datenpipelines und Integrationen und steht für das Ergebnis ein.",
+        "skills": [
+          "KI-Agenten",
+          "Data Engineering",
+          "Softwarearchitektur",
+          "Prozessdigitalisierung"
+        ],
+        "cardLink": "Digitale Visitenkarte",
+        "photoAlt": "Porträt von Fares, Gründer von Qartmina"
+      },
+      "partnersTitle": "Partner",
+      "partners": [
+        {
+          "name": "ESGITECH",
+          "text": "Schulungspartner für das Programm AI for Business."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "question": "Wie lange dauert die Entwicklung eines Agenten?",
+          "answer": "Eine erste funktionierende Version dauert in der Regel weniger als einen Monat. Bis zum Produktivbetrieb mit Ihren Daten, Berechtigungen und Freigaben vergehen etwa drei Monate. Danach wächst der Agent mit Ihren Anforderungen."
+        },
+        {
+          "question": "Welchen Nutzen können wir erwarten, und wie messen Sie ihn?",
+          "answer": "Bevor wir etwas bauen, messen wir, wie lange die Aufgabe heute dauert und wie oft sie anfällt. Nach der Einführung messen wir erneut. Der Nutzen ist die eingesparte Zeit mal die Kosten dieser Zeit, abzüglich der Betriebskosten des Agenten. Wenn sich ein Agent nicht rechnet, sagen wir es Ihnen."
+        },
+        {
+          "question": "Bauen Sie individuelle Agenten oder nutzen Sie fertige Lösungen?",
+          "answer": "Beides. Wo ein fertiges Tool die Aufgabe erfüllt, richten wir es ein und binden es an. Wo Ihr Prozess besonders ist, bauen wir einen eigenen Agenten darum herum. Entscheidend ist, was Sie am schnellsten und günstigsten zum Ergebnis bringt."
+        },
+        {
+          "question": "Wo werden unsere Daten verarbeitet, und werden sie für Training genutzt?",
+          "answer": "Wir nutzen KI-Unternehmenstarife, deren Bedingungen ein Training mit Ihren Daten ausschließen. Wo Ihre Vorgaben es verlangen, betreiben wir Modelle und Daten auf Infrastruktur, die Sie kontrollieren. Die Verarbeitung erfolgt nach der DSGVO, und wir dokumentieren, wohin jedes Datum fließt."
+        },
+        {
+          "question": "Was passiert nach der Einführung?",
+          "answer": "Wir überwachen den Agenten, beheben Fehler und verbessern ihn, wenn sich Ihr Prozess ändert. Sie können uns mit einem Supportvertrag weiter beauftragen oder den Betrieb vollständig übernehmen."
+        },
+        {
+          "question": "Kann unser Team die Agenten selbst warten?",
+          "answer": "Ja. Wir arbeiten mit Ihrem Team zusammen, dokumentieren alles und schulen die Personen, die den Agenten künftig verantworten. So sind Sie nie von uns abhängig."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Finden wir Ihren ersten Agenten",
+      "text": "Sagen Sie uns, welche Aufgabe Ihr Team zu viel Zeit kostet. Wir antworten innerhalb von zwei Werktagen.",
+      "emailLabel": "E-Mail",
+      "linkedinLabel": "LinkedIn",
+      "locationLabel": "Standort",
+      "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika."
+    },
+    "figures": [
+      {
+        "value": "< 1 Monat",
+        "label": "bis zur ersten funktionierenden Version"
+      },
+      {
+        "value": "3 Monate",
+        "label": "bis zum Produktivbetrieb"
+      },
+      {
+        "value": "6",
+        "label": "Leistungen, ein Team"
+      },
+      {
+        "value": "100%",
+        "label": "der Ergebnisse von einem Menschen freigegeben"
+      }
+    ],
+    "partner": {
+      "badgeAlt": "OpenAI Select Partner Abzeichen",
+      "eyebrow": "OpenAI Partner Network",
+      "title": "OpenAI Select Partner",
+      "intro": "Qartmina ist OpenAI Select Partner. Das OpenAI Partner Network ist ein weltweites Programm für Partner, die KI-Lösungen mit OpenAI entwickeln, vertreiben und umsetzen.",
+      "whatTitle": "Was das für Sie bedeutet",
+      "points": [
+        {
+          "title": "Unterstützung durch OpenAI",
+          "text": "Wir erhalten Schulungen, Ressourcen und Unterstützung von OpenAI. Was wir für Sie bauen, folgt aktuellen Modellen und empfohlenen Vorgehensweisen."
+        },
+        {
+          "title": "Das richtige Produkt, sauber eingerichtet",
+          "text": "Wir helfen Ihnen bei der Wahl zwischen ChatGPT für Ihre Teams und der API für eigene Agenten und richten alles zu Geschäftsbedingungen ein, die Ihre Daten vom Modelltraining ausschließen."
+        },
+        {
+          "title": "Auf messbare Wirkung ausgelegt",
+          "text": "Das Programm soll den Einsatz von KI in messbare Ergebnisse verwandeln. Genau so arbeiten wir auch: Wir messen vorher und nachher."
+        }
+      ],
+      "link": "Über das OpenAI Partner Network"
+    },
+    "testimonials": {
+      "title": "Was Kunden sagen",
+      "original": "Originalstimme auf Englisch"
+    },
+    "workflow": {
+      "robotAlt": "Der Roboter von Qartmina, der Agent im Zentrum Ihrer Abläufe",
+      "tabs": {
+        "integration": "Integration",
+        "agent": "KI-Agent",
+        "automation": "Automatisierung"
+      },
+      "captions": {
+        "integration": "Verbunden mit den Tools, die Sie schon nutzen.",
+        "agent": "Liest, was hereinkommt, und liefert fertige Arbeit.",
+        "automation": "Läuft von selbst, jedes Mal, und ein Mensch gibt das Wichtige frei."
+      },
+      "inputs": [
+        "PDF & Excel",
+        "ERP",
+        "E-Mail"
+      ],
+      "outputs": [
+        "Bericht",
+        "CRM-Update",
+        "Freigabe"
+      ],
+      "trigger": "Auslöser",
+      "triggerText": "Neue Rechnung per E-Mail",
+      "action": "Aktion",
+      "actionText": "Im ERP gebucht",
+      "loop": "Endlosschleife"
+    }
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "E-Mail",
+    "company": "Unternehmen",
+    "website": "Website",
+    "message": "Nachricht",
+    "messagePlaceholder": "Welche Aufgabe möchten Sie an einen Agenten übergeben?",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank. Ihre Nachricht ist bei uns eingegangen, wir antworten innerhalb von zwei Werktagen.",
+    "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns an {email}.",
+    "verification": "Bitte schließen Sie vor dem Senden die Sicherheitsprüfung ab.",
+    "consent": "Mit dem Absenden dieses Formulars stimmen Sie zu, dass wir Ihre Angaben zur Beantwortung Ihrer Anfrage verwenden, wie in unserer <link>Datenschutzerklärung</link> beschrieben.",
+    "honeypot": "Dieses Feld bitte leer lassen"
+  },
+  "services": {
+    "back": "Unsere Leistungen",
+    "featuresTitle": "Wichtigste Merkmale",
+    "useCasesTitle": "Anwendungsfälle"
+  },
+  "servicePages": {
+    "ai-agents": {
+      "title": "Entwicklung von KI-Agenten",
+      "summary": "Individuelle Agenten, die mehrstufige Arbeit über Ihre Tools hinweg erledigen und das Ergebnis einem Menschen zur Freigabe vorlegen.",
+      "intro": "Ein Agent ist Software, die über mehrere Systeme hinweg lesen, prüfen und handeln kann, ähnlich wie eine Assistenz, aber in Minuten und ohne zu ermüden. Wir gestalten den Agenten rund um einen Ihrer echten Prozesse, verbinden ihn mit Ihren Tools und sorgen dafür, dass ein Mensch alles Wichtige freigibt, bevor es das Haus verlässt.",
+      "features": [
+        {
+          "title": "Arbeitet über Ihre Tools hinweg",
+          "text": "Liest E-Mails, Dokumente, Tabellen und Ihre Geschäftssysteme in einem Durchgang."
+        },
+        {
+          "title": "Fragt, bevor etwas hinausgeht",
+          "text": "Ein Mensch gibt jede Nachricht, Zahlung oder Änderung frei, die nach außen geht."
+        },
+        {
+          "title": "Jede Zahl mit ihrer Quelle verknüpft",
+          "text": "Jede Zahl im Ergebnis verweist auf die Datei oder den Datensatz, aus dem sie stammt."
+        },
+        {
+          "title": "Nach Zeitplan oder auf Abruf",
+          "text": "Läuft jeden Morgen, zu jedem Monatsabschluss oder wenn jemand ihn anstößt."
+        }
+      ],
+      "useCases": [
+        "Datenraum- und Dokumentenanalyse für die Due Diligence",
+        "Rechnungseingang und Abgleich mit Bestellungen",
+        "Monatliche Berichtspakete aus mehreren Quellen",
+        "Lead-Qualifizierung und CRM-Pflege"
+      ],
+      "metaTitle": "Entwicklung von KI-Agenten"
+    },
+    "automation": {
+      "title": "Prozessautomatisierung",
+      "summary": "Durchgängige Abläufe ohne Copy-and-paste, manuelle Dateneingabe und händische Übergaben.",
+      "intro": "Viele Prozesse hängen noch davon ab, dass jemand Daten von einem Bildschirm in den nächsten kopiert. Wir erfassen den Prozess, wie er heute läuft, entfernen die manuellen Schritte und verbinden die Systeme direkt. KI setzen wir nur dort ein, wo sie mehr leistet als feste Regeln.",
+      "features": [
+        {
+          "title": "Erst erfasst, dann gebaut",
+          "text": "Wir dokumentieren den Prozess, wie er wirklich abläuft, einschließlich der Ausnahmen."
+        },
+        {
+          "title": "Kein Abtippen mehr",
+          "text": "Daten fließen ohne manuelle Eingabe zwischen E-Mail, Tabellen und Systemen."
+        },
+        {
+          "title": "Ausnahmen gehen an einen Menschen",
+          "text": "Alles Ungewöhnliche wird markiert und an die zuständige Person weitergeleitet."
+        },
+        {
+          "title": "Sichtbar und gemessen",
+          "text": "Jeder Durchlauf wird protokolliert. Sie sehen, was passiert ist und wie lange es gedauert hat."
+        }
+      ],
+      "useCases": [
+        "Auftragserfassung aus E-Mails direkt ins ERP",
+        "Lieferanten-Onboarding und Dokumentenprüfung",
+        "Wöchentliche Vertriebs- und Lagerberichte",
+        "Freigabeprozesse, die heute in E-Mail-Verläufen stecken"
+      ],
+      "metaTitle": "Prozessautomatisierung"
+    },
+    "integration": {
+      "title": "Integration",
+      "summary": "KI verbunden mit Excel, CRM, ERP, E-Mail und Datenbanken über sichere Schnittstellen.",
+      "intro": "KI nützt nur, wenn sie Ihre Daten sehen und in Ihren Systemen handeln kann. Wir bauen sichere Verbindungen zwischen KI-Tools und der Software, die Sie bereits einsetzen. So fließen Informationen dorthin, wo sie gebraucht werden, und der Zugriff bleibt auf das beschränkt, was Sie freigeben.",
+      "features": [
+        {
+          "title": "Ihre Systeme, keine neuen",
+          "text": "Wir verbinden, was Sie schon nutzen: Excel, CRM, ERP, E-Mail, Datenbanken."
+        },
+        {
+          "title": "Minimaler Zugriff als Standard",
+          "text": "Jede Verbindung darf nur lesen oder ändern, was Sie ausdrücklich erlauben."
+        },
+        {
+          "title": "Standardisierte Schnittstellen",
+          "text": "Wir nutzen offene Standards wie MCP, einen gemeinsamen Weg, KI-Tools an Systeme anzubinden. So bleiben Sie unabhängig."
+        },
+        {
+          "title": "Lückenlos protokolliert",
+          "text": "Jede Anfrage über eine Verbindung wird für Prüfzwecke aufgezeichnet."
+        }
+      ],
+      "useCases": [
+        "Ihrem Unternehmensassistenten Zugriff auf CRM und ERP geben",
+        "Tabellen mit einer zentralen Datenbank synchronisieren",
+        "E-Mail-Postfächer mit Ticket- oder Bestellsystemen verbinden",
+        "Interne Daten über eine sichere Schnittstelle für KI-Tools bereitstellen"
+      ],
+      "metaTitle": "KI-Integration"
+    },
+    "consulting": {
+      "title": "KI-Beratung",
+      "summary": "Eine Analyse Ihrer Prozesse und ein Fahrplan mit den Agenten, die sich zuerst lohnen.",
+      "intro": "Bevor Sie in KI investieren, sollten Sie wissen, wo sie sich auszahlt. Wir analysieren, wie heute gearbeitet wird, prüfen, ob Ihre Daten bereit sind, und liefern einen priorisierten Plan: was zuerst gebaut wird, was es einspart und was es kostet.",
+      "features": [
+        {
+          "title": "Prozess-Audit",
+          "text": "Gemeinsam mit Ihrem Team ermitteln wir in Ihren echten Tools, wohin die Stunden fließen."
+        },
+        {
+          "title": "Prüfung der Datenbasis",
+          "text": "Welche Daten Sie haben, wo sie liegen und was zuerst bereinigt werden muss."
+        },
+        {
+          "title": "Priorisierter Fahrplan",
+          "text": "Kurz-, mittel- und langfristige Schritte, jeweils mit einem messbaren Ziel."
+        },
+        {
+          "title": "Ehrliche Antworten",
+          "text": "Wenn KI nicht das richtige Werkzeug für ein Problem ist, sagen wir das."
+        }
+      ],
+      "useCases": [
+        "Den ersten Agenten auswählen",
+        "Ein KI-Pilotprojekt prüfen, das nie in Produktion ging",
+        "Die Modernisierung eines Altsystems planen",
+        "Eine KI-Strategie für die Geschäftsführung vorbereiten"
+      ],
+      "metaTitle": "KI-Beratung"
+    },
+    "training": {
+      "title": "Team-Schulungen",
+      "summary": "Das Programm AI for Business mit ESGITECH, von den Grundlagen bis zum ersten funktionierenden Ablauf.",
+      "intro": "Tools verändern ein Unternehmen erst, wenn die Menschen sie zu nutzen wissen. Gemeinsam mit ESGITECH bieten wir das Programm AI for Business an: praxisnahe Einheiten, die Ihr Team von den Grundlagen bis zu einem ersten Ablauf führen, der mit den eigenen Aufgaben läuft.",
+      "features": [
+        {
+          "title": "Für nicht-technische Teams",
+          "text": "Verständliche Sprache, echte Beispiele, keine Programmierkenntnisse nötig."
+        },
+        {
+          "title": "Ihre Aufgaben, keine Spielbeispiele",
+          "text": "Die Teilnehmenden arbeiten an Prozessen aus ihrem eigenen Arbeitsalltag."
+        },
+        {
+          "title": "Ein funktionierendes Ergebnis",
+          "text": "Alle Teilnehmenden gehen mit einem ersten Ablauf, der läuft."
+        },
+        {
+          "title": "Sicherer Umgang",
+          "text": "Was Sie mit KI-Tools teilen dürfen, was nicht, und warum."
+        }
+      ],
+      "useCases": [
+        "Einführung in KI für Führungsteams",
+        "Praxis-Workshops für Finanzen und Operations",
+        "Prompting und Assistenten für Büroteams",
+        "Train-the-Trainer für interne KI-Verantwortliche"
+      ],
+      "metaTitle": "KI-Schulungen für Teams"
+    },
+    "chatbots": {
+      "title": "Chatbots und Assistenten",
+      "summary": "Assistenten, die Kunden oder Mitarbeitenden rund um die Uhr auf Basis Ihrer eigenen Dokumente antworten.",
+      "intro": "Ihr Team beantwortet jeden Tag dieselben Fragen aus denselben Dokumenten. Wir bauen Assistenten, die auf Grundlage Ihrer Richtlinien, Handbücher und Daten antworten, zu jeder Antwort die Quelle zeigen und an einen Menschen übergeben, wenn es angebracht ist.",
+      "features": [
+        {
+          "title": "Antworten aus Ihren Dokumenten",
+          "text": "Der Assistent antwortet nur aus Quellen, die Sie freigeben."
+        },
+        {
+          "title": "Zeigt seine Quellen",
+          "text": "Jede Antwort verlinkt auf das Dokument, aus dem sie stammt."
+        },
+        {
+          "title": "Übergibt an einen Menschen",
+          "text": "Sensible oder unklare Anfragen gehen an Ihr Team."
+        },
+        {
+          "title": "Rund um die Uhr erreichbar",
+          "text": "Auf Ihrer Website, im Intranet oder in Ihren Messaging-Tools."
+        }
+      ],
+      "useCases": [
+        "Kundenservice auf Ihrer Website",
+        "Interner Helpdesk für Personal- und IT-Fragen",
+        "Suche in Produkt- und technischer Dokumentation",
+        "Onboarding-Assistent für neue Mitarbeitende"
+      ],
+      "metaTitle": "Chatbots und KI-Assistenten"
+    }
+  },
+  "visuals": {
+    "tools": [
+      "E-Mail",
+      "Excel",
+      "ERP"
+    ],
+    "agentRun": {
+      "title": "Agent für Monatsberichte",
+      "steps": [
+        "Dateien sammeln",
+        "Zahlen abgleichen",
+        "Bericht entwerfen",
+        "Zahlen mit Quellen verknüpfen",
+        "Wartet auf Ihre Freigabe"
+      ]
+    },
+    "automation": [
+      {
+        "title": "Rechnungseingang",
+        "description": "Liest eingehende Rechnungen, gleicht sie mit Bestellungen ab und markiert Lücken.",
+        "badge": "2 Min."
+      },
+      {
+        "title": "Auftragserfassung",
+        "description": "Überträgt Auftragsdaten aus E-Mails ins ERP, ohne Abtippen.",
+        "badge": "30 Sek."
+      },
+      {
+        "title": "Wochenbericht",
+        "description": "Holt Zahlen aus drei Tabellen und erstellt das Wochenpaket.",
+        "badge": "5 Min."
+      }
+    ],
+    "integration": {
+      "cardTitle": "Sichere Verbindung",
+      "cardText": "Liest und schreibt nur, was Sie freigeben.",
+      "card2Title": "Ihre bestehenden Tools"
+    },
+    "consulting": {
+      "label": "Befund",
+      "tabs": [
+        {
+          "title": "Prozess-Audit",
+          "description": "Wir erfassen, wie heute gearbeitet wird und wohin die Stunden fließen."
+        },
+        {
+          "title": "Schnelle Erfolge",
+          "description": "Aufgaben, die ein Agent in Wochen übernehmen kann, nach eingesparten Stunden sortiert."
+        },
+        {
+          "title": "Datenbasis",
+          "description": "Welche Daten Sie haben, wo sie liegen und was zuerst bereinigt werden muss."
+        },
+        {
+          "title": "Kontrollen",
+          "description": "Wo ein Mensch freigeben muss und was Ihre Systeme nie verlassen darf."
+        },
+        {
+          "title": "Fahrplan",
+          "description": "Kurz-, mittel- und langfristige Schritte, jeweils mit einem messbaren Ziel."
+        }
+      ]
+    },
+    "chatbot": [
+      {
+        "title": "Kundenfrage",
+        "description": "Kann ich meine Lieferadresse nach der Bestellung ändern?"
+      },
+      {
+        "title": "Antwort aus Ihren Dokumenten",
+        "description": "Ja, bis die Bestellung versandt ist. Quelle: Lieferbedingungen, Abschnitt 2."
+      },
+      {
+        "title": "An Ihr Team übergeben",
+        "description": "Erstattungen über dem Limit gibt ein Mensch frei."
+      }
+    ],
+    "activity": {
+      "title": "Letzte Aktivitäten",
+      "needsInput": "RÜCKFRAGE",
+      "processing": "LÄUFT",
+      "items": [
+        {
+          "title": "Lieferantenantwort",
+          "description": "Entwurf bereit zur Prüfung"
+        },
+        {
+          "title": "Bonitätsprüfung",
+          "description": "Bilanz fehlt, zurück an Analyst"
+        },
+        {
+          "title": "Monatsbericht",
+          "description": "Jede Zahl mit ihrer Quelldatei verknüpft"
+        },
+        {
+          "title": "Freigabe Leitung",
+          "description": "Bericht wartet vor Versand auf Freigabe"
+        },
+        {
+          "title": "CRM-Update",
+          "description": "12 Kontakte nach Freigabe aktualisiert"
+        },
+        {
+          "title": "Vertragsprüfung",
+          "description": "Klausel zur rechtlichen Prüfung markiert"
+        }
+      ]
+    },
+    "flow": {
+      "build": "Bauen",
+      "test": "Testen"
+    },
+    "measured": {
+      "title": "Stunden für die Aufgabe",
+      "rows": [
+        "Ausgangswert",
+        "Woche 4",
+        "Woche 12"
+      ]
+    }
+  },
+  "portfolio": {
+    "metaTitle": "Referenzen",
+    "metaDescription": "Fallstudien zu KI-Agenten, Automatisierungen und Datenplattformen von Qartmina, mit Problem, Vorgehen und gemessenem Ergebnis.",
+    "title": "Unsere Arbeit",
+    "intro": "Jede Fallstudie zeigt das Problem, was wir gebaut haben und was sich verändert hat. Demos sind als Demos gekennzeichnet.",
+    "sector": "Branche",
+    "service": "Leistung",
+    "result": "Ergebnis",
+    "readCase": "Fallstudie lesen",
+    "back": "Alle Fallstudien",
+    "context": "Ausgangslage",
+    "approach": "Vorgehen",
+    "outcome": "Ergebnis"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Praxisnahe Artikel darüber, wie KI-Agenten, Automatisierung und Daten in echten Unternehmen Wirkung zeigen.",
+    "title": "Blog",
+    "intro": "Praxisnahe Hinweise zum Einsatz von KI und Daten. Kein Hype, echte Beispiele.",
+    "empty": "Die ersten Artikel sind in Arbeit. Abonnieren Sie den Newsletter, um sie zu erhalten.",
+    "readingTime": "{minutes} Min. Lesezeit",
+    "back": "Alle Artikel",
+    "related": "Ähnliche Artikel",
+    "authorName": "Fares",
+    "authorRole": "Gründer und Principal Engineer, Qartmina"
+  },
+  "about": {
+    "metaTitle": "Über uns",
+    "metaDescription": "Qartmina ist ein Beratungsunternehmen für KI und Daten mit Schwerpunkt auf der MENA-Region und Afrika. Erfahren Sie mehr über unseren Namen, unseren Gründer und unsere Arbeitsweise.",
+    "title": "Über Qartmina",
+    "intro": "Wir helfen Unternehmen, sich zu digitalisieren und KI gewinnbringend einzusetzen, von der Strategie bis zur Umsetzung, und belegen jede Empfehlung mit Fakten.",
+    "nameTitle": "Der Name",
+    "nameText": "Qartmina bedeutet „die neue Mine“. Daten sind der Rohstoff unserer Zeit, und wie bei jeder Mine entsteht Wert erst, wenn man gräbt, veredelt und das Gefundene nutzt. Genau das ist unsere Arbeit.",
+    "founderTitle": "Der Gründer",
+    "methodTitle": "So arbeiten wir",
+    "methodIntro": "Jedes Projekt baut drei Ebenen auf, immer in dieser Reihenfolge. Zu jeder Ebene gehört ein kurz-, mittel- und langfristiger Plan mit einem klaren Ziel.",
+    "layers": [
+      {
+        "title": "Fundament",
+        "text": "Standardisierte, regelkonforme, gut getestete und sichere Prozesse."
+      },
+      {
+        "title": "Daten",
+        "text": "Saubere, strukturierte, verlässliche Daten, die zu einem Wert werden."
+      },
+      {
+        "title": "KI",
+        "text": "KI dort, wo sie sich wirklich auszahlt, und nur dort."
+      }
+    ],
+    "rhythm": [
+      {
+        "value": "< 1 Monat",
+        "label": "bis zur ersten funktionierenden Version"
+      },
+      {
+        "value": "3 Monate",
+        "label": "bis zum Produktivbetrieb"
+      },
+      {
+        "value": "6 Monate",
+        "label": "bis zum wachsenden Produkt"
+      }
+    ],
+    "partnersTitle": "Partner",
+    "locationsTitle": "Wo wir arbeiten",
+    "locationsText": "Remote-first in der MENA-Region und in Afrika, umgesetzt nach internationalen Standards. Sitz in Les Berges du Lac, Tunesien.",
+    "coreMarketsLabel": "Kernmärkte",
+    "coreMarkets": [
+      "Marokko",
+      "Tunesien",
+      "Ägypten",
+      "Nigeria",
+      "Kenia",
+      "Südafrika",
+      "VAE",
+      "Saudi-Arabien"
+    ],
+    "reachLabel": "Außerdem aktiv in",
+    "reach": [
+      "Algerien",
+      "Senegal",
+      "Ghana",
+      "Côte d'Ivoire",
+      "Ruanda",
+      "Äthiopien",
+      "Katar",
+      "Jordanien"
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Sagen Sie Qartmina, welche Aufgabe Ihr Team zu viel Zeit kostet. Wir antworten innerhalb von zwei Werktagen."
+  },
+  "book": {
+    "metaTitle": "Gespräch buchen",
+    "metaDescription": "Buchen Sie ein kostenloses 30-minütiges Gespräch mit Qartmina. Wir schauen uns einen Prozess an und prüfen, ob sich ein KI-Agent dafür lohnt.",
+    "title": "Kostenloses 30-Minuten-Gespräch buchen",
+    "intro": "Wir schauen uns gemeinsam einen Prozess an und prüfen, ob sich ein Agent dafür lohnt. Keine Vorbereitung nötig.",
+    "calendarTitle": "Buchungskalender",
+    "fallback": "Die Online-Buchung ist bald verfügbar. Schreiben Sie uns eine Nachricht, und wir schlagen Ihnen einige passende Termine vor."
+  },
+  "legal": {
+    "updated": "Stand: {date}",
+    "privacy": {
+      "metaTitle": "Datenschutzerklärung",
+      "title": "Datenschutzerklärung",
+      "sections": [
+        {
+          "heading": "Verantwortlicher",
+          "body": [
+            "Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist Qartmina, Les Berges du Lac, Tunis, Tunesien. Sie erreichen uns unter fares@qartmina.com."
+          ]
+        },
+        {
+          "heading": "Welche Daten wir erheben und warum",
+          "body": [
+            "Kontaktformular: Ihr Name, Ihre E-Mail-Adresse, Ihr Unternehmen, Ihre Website und Ihre Nachricht. Wir verwenden diese Angaben ausschließlich, um Ihre Anfrage zu beantworten und, falls daraus ein Projekt entsteht, dieses vorzubereiten. Rechtsgrundlage: Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).",
+            "Newsletter: Ihre E-Mail-Adresse, nur wenn Sie sich anmelden. Rechtsgrundlage: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit über den Link in jeder E-Mail widerrufen können.",
+            "Sicherheitsprüfung: Um unsere Formulare vor Spam zu schützen, prüft Cloudflare Turnstile, ob eine Anfrage von einem Menschen stammt. Rechtsgrundlage: unser berechtigtes Interesse am Schutz der Website (Art. 6 Abs. 1 lit. f DSGVO).",
+            "Server-Logfiles: Unser Hosting-Anbieter erfasst technische Daten wie IP-Adresse, Datum und aufgerufene Seite, um die Website sicher zu betreiben. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO)."
+          ]
+        },
+        {
+          "heading": "Dienstleister",
+          "body": [
+            "Brevo (Sendinblue SAS, Frankreich) versendet die E-Mails aus unserem Kontaktformular und unseren Newsletter.",
+            "Cloudflare, Inc. (Vereinigte Staaten) stellt die Sicherheitsprüfung Turnstile bereit. Übermittlungen in die Vereinigten Staaten erfolgen auf Grundlage des EU-US Data Privacy Framework oder von Standardvertragsklauseln.",
+            "Wir verkaufen Ihre Daten nicht und verwenden keine Werbe- oder Tracking-Cookies."
+          ]
+        },
+        {
+          "heading": "Cookies und lokale Speicherung",
+          "body": [
+            "Diese Website speichert Ihr Farbschema und Ihre Spracheinstellung in Ihrem Browser. Die Sicherheitsprüfung und das Newsletter-Formular können technisch notwendige Cookies setzen. Wir verwenden keine Analyse- oder Werbe-Cookies."
+          ]
+        },
+        {
+          "heading": "Speicherdauer",
+          "body": [
+            "Kontaktanfragen werden gelöscht, sobald sie nicht mehr benötigt werden, spätestens zwei Jahre nach unserem letzten Austausch, sofern ein Vertrag keine längere Aufbewahrung erfordert. Newsletter-Daten werden bis zu Ihrer Abmeldung gespeichert."
+          ]
+        },
+        {
+          "heading": "Ihre Rechte",
+          "body": [
+            "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten, auf Datenübertragbarkeit sowie auf Widerspruch gegen die Verarbeitung. Eine erteilte Einwilligung können Sie jederzeit widerrufen. Schreiben Sie dazu an fares@qartmina.com. Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "metaTitle": "Nutzungsbedingungen",
+      "title": "Nutzungsbedingungen",
+      "sections": [
+        {
+          "heading": "Geltungsbereich",
+          "body": [
+            "Diese Bedingungen gelten für die Nutzung der Website qartmina.com. Beratungs- und Entwicklungsprojekte werden in einem gesonderten schriftlichen Vertrag geregelt."
+          ]
+        },
+        {
+          "heading": "Inhalte",
+          "body": [
+            "Die Inhalte dieser Website dienen der allgemeinen Information und stellen keine fachliche Beratung für Ihre konkrete Situation dar. Wir halten sie korrekt und aktuell, können jedoch nicht garantieren, dass sie jederzeit vollständig sind."
+          ]
+        },
+        {
+          "heading": "Urheberrecht",
+          "body": [
+            "Texte, Grafiken und Code auf dieser Website gehören Qartmina, sofern nicht anders angegeben. Sie dürfen Links zu unseren Seiten teilen. Jede andere Verwendung bedarf unserer schriftlichen Zustimmung."
+          ]
+        },
+        {
+          "heading": "Externe Links",
+          "body": [
+            "Wir verlinken externe Quellen als Belege. Für die Inhalte externer Websites übernehmen wir keine Verantwortung."
+          ]
+        },
+        {
+          "heading": "Haftung",
+          "body": [
+            "Wir haften unbeschränkt für Vorsatz und grobe Fahrlässigkeit. Bei leichter Fahrlässigkeit haften wir nur für die Verletzung wesentlicher Vertragspflichten und begrenzt auf den vorhersehbaren Schaden."
+          ]
+        },
+        {
+          "heading": "Anwendbares Recht",
+          "body": [
+            "Für diese Bedingungen gilt das im Impressum angegebene Recht, unbeschadet zwingender Verbraucherschutzvorschriften Ihres Wohnsitzlandes."
+          ]
+        }
+      ]
+    },
+    "notice": {
+      "metaTitle": "Impressum",
+      "title": "Impressum",
+      "sections": [
+        {
+          "heading": "Anbieter",
+          "body": [
+            "Qartmina",
+            "Rechtsform und eingetragener Name: [noch zu ergänzen]",
+            "Les Berges du Lac, Tunis, Tunesien",
+            "Registernummer: [noch zu ergänzen]",
+            "Umsatzsteuer-Identifikationsnummer oder Steuernummer: [noch zu ergänzen]"
+          ]
+        },
+        {
+          "heading": "Kontakt",
+          "body": [
+            "E-Mail: fares@qartmina.com",
+            "Telefon: +49 170 3754433"
+          ]
+        },
+        {
+          "heading": "Inhaltlich verantwortlich",
+          "body": [
+            "Fares [Nachname noch zu ergänzen], Anschrift wie oben."
+          ]
+        },
+        {
+          "heading": "Hosting",
+          "body": [
+            "[Name und Anschrift des Hosting-Anbieters noch zu ergänzen]"
+          ]
+        }
+      ]
+    }
+  },
+  "chat": {
+    "open": "Chat öffnen",
+    "close": "Chat schließen",
+    "title": "Qartmina-Assistent",
+    "greeting": "Hallo. Was möchten Sie wissen?",
+    "quickReplies": [
+      {
+        "label": "KI-Agenten",
+        "answer": "Wir bauen Agenten, die mehrstufige Arbeit über Ihre Tools hinweg erledigen, zum Beispiel Monatsberichte oder Rechnungsprüfungen, und einen Menschen fragen, bevor etwas Ihr Unternehmen verlässt."
+      },
+      {
+        "label": "Automatisierung",
+        "answer": "Wir beseitigen Copy-and-paste, manuelle Dateneingabe und händische Übergaben, indem wir Ihre Systeme direkt verbinden. KI kommt nur dort zum Einsatz, wo Regeln nicht ausreichen."
+      },
+      {
+        "label": "Preise",
+        "answer": "Jedes Projekt ist auf ein messbares Ergebnis zugeschnitten, daher hängt der Preis vom Prozess ab. Ein kurzes Gespräch genügt für eine erste Einschätzung."
+      },
+      {
+        "label": "Kontakt",
+        "answer": "Schreiben Sie an fares@qartmina.com oder buchen Sie ein kostenloses 30-Minuten-Gespräch. Wir antworten innerhalb von zwei Werktagen."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite existiert nicht oder wurde verschoben.",
+    "home": "Zur Startseite"
+  },
+  "newsletterToast": {
+    "title": "Praxisnahe KI-Notizen, direkt ins Postfach",
+    "text": "Echte Beispiele für KI und Daten im Einsatz. Ohne Hype, jederzeit abbestellbar.",
+    "close": "Schließen"
+  },
+  "newsletterForm": {
+    "label": "E-Mail-Adresse",
+    "placeholder": "Ihre E-Mail",
+    "submit": "Abonnieren",
+    "sending": "Wird abonniert...",
+    "success": "Danke, Sie sind jetzt angemeldet.",
+    "error": "Das hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.",
+    "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "consent": "Ab und zu eine E-Mail. Jederzeit abbestellbar. Siehe unsere <link>Datenschutzerklärung</link>."
+  }
+}

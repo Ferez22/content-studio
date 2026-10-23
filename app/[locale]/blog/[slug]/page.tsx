@@ -1,0 +1,120 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getFormatter, getTranslations, setRequestLocale } from "next-intl/server";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { Container } from "@/components/container";
+import { Heading } from "@/components/heading";
+import { CtaSection } from "@/components/cta-section";
+import { JsonLd } from "@/components/json-ld";
+import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { getEntries, getEntry, getSlugs, type PostFrontmatter } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
+import { site } from "@/lib/site";
+
+type Props = { params: Promise<{ locale: string; slug: string }> };
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const params = await Promise.all(
+    routing.locales.map(async (locale) =>
+      (await getSlugs("blog", locale)).map((slug) => ({ locale, slug }))
+    )
+  );
+  return params.flat();
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const entry = await getEntry<PostFrontmatter>("blog", locale, slug);
+  if (!entry) return {};
+  return pageMetadata({
+    locale,
+    path: `/blog/${slug}`,
+    title: entry.frontmatter.title,
+    description: entry.frontmatter.summary,
+  });
+}
+
+export default async function PostPage({ params }: Props) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+  const entry = await getEntry<PostFrontmatter>("blog", locale, slug);
+  if (!entry) notFound();
+  const t = await getTranslations("blog");
+  const tFounder = await getTranslations("home.team.founder");
+  const format = await getFormatter();
+  const { frontmatter } = entry;
+  const related = (await getEntries<PostFrontmatter>("blog", locale))
+    .filter((post) => post.slug !== slug)
+    .slice(0, 2);
+
+  return (
+    <div className="min-h-screen">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: frontmatter.title,
+          description: frontmatter.summary,
+          datePublished: frontmatter.date,
+          inLanguage: locale,
+          url: `${site.url}/${locale}/blog/${slug}`,
+          author: { "@type": "Person", name: t("authorName") },
+          publisher: { "@type": "Organization", name: site.name, url: site.url },
+        }}
+      />
+      <section className="pt-10 md:pt-20 lg:pt-32">
+        <Container className="max-w-3xl">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black dark:hover:text-white transition duration-200"
+          >
+            <IconArrowLeft className="size-4" />
+            {t("back")}
+          </Link>
+          <Heading as="h1" className="mt-8">
+            {frontmatter.title}
+          </Heading>
+          <p className="text-sm text-neutral-400 mt-6">
+            {format.dateTime(new Date(frontmatter.date), { dateStyle: "long" })}
+            {" · "}
+            {t("readingTime", { minutes: entry.readingMinutes })}
+          </p>
+          <article className="py-6">{entry.content}</article>
+
+          <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-6 md:p-8 flex gap-4 items-start">
+            <div
+              aria-hidden="true"
+              className="size-12 shrink-0 rounded-xl bg-white dark:bg-neutral-900 ring-1 ring-black/10 dark:ring-white/10 flex items-center justify-center text-xl font-display font-bold"
+            >
+              {t("authorName").charAt(0)}
+            </div>
+            <div>
+              <p className="font-bold">{t("authorName")}</p>
+              <p className="text-sm text-neutral-500">{t("authorRole")}</p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2">{tFounder("bio")}</p>
+            </div>
+          </div>
+
+          {related.length > 0 && (
+            <div className="mt-16">
+              <h2 className="text-2xl font-display font-bold">{t("related")}</h2>
+              <ul className="mt-4 flex flex-col gap-2">
+                {related.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="underline underline-offset-4">
+                      {post.frontmatter.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </Container>
+      </section>
+      <CtaSection />
+    </div>
+  );
+}

@@ -1,0 +1,848 @@
+{
+  "common": {
+    "bookCall": "Book a call",
+    "startProject": "Start your project",
+    "readyTitle": "Ready to get started?",
+    "readyText": "Tell us about one process that eats your team's time. We will tell you honestly whether an agent is worth building for it.",
+    "learnMore": "Learn more",
+    "source": "Source",
+    "demo": "Demo",
+    "tagline": "Start that project."
+  },
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookCall": "Book a call",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "footer": {
+    "positioning": "Strategy, data and AI, built to run inside your business.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa.",
+    "rights": "© {year} Qartmina. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "legal": "Legal notice",
+    "newsletterTitle": "Newsletter",
+    "newsletterText": "Practical notes on putting AI and data to work in real businesses. Unsubscribe anytime."
+  },
+  "metadata": {
+    "siteTitle": "Qartmina | AI agents and data consulting",
+    "siteDescription": "Qartmina builds AI agents, automations and data platforms that take repetitive work off your teams, with a person approving what matters."
+  },
+  "home": {
+    "hero": {
+      "title": "Put AI agents to work in your company",
+      "subtitle": "Agents that take repetitive work off your teams, inside the tools you already use, with a person approving what matters.",
+      "primary": "Book a free 30-minute call",
+      "secondary": "See our work",
+      "titleTemplate": "Put AI agents to work in your {target}",
+      "targets": [
+        "company",
+        "finance team",
+        "sales team",
+        "customer service",
+        "operations"
+      ]
+    },
+    "trusted": {
+      "title": "Clients and partners who trust us"
+    },
+    "services": {
+      "title": "What we build",
+      "intro": "Six ways we put AI and data to work. Each one is scoped to a result you can measure."
+    },
+    "cost": {
+      "title": "The cost of working without AI",
+      "text": "Hours go into collecting files, retyping figures and formatting reports. The project everyone agrees on keeps moving to next quarter. The data you already own sits unread.",
+      "proofTitle": "Public proof, not promises",
+      "proofs": [
+        {
+          "figure": "20%+",
+          "text": "of their time saved each week by staff at NBIM, the manager of Norway's sovereign wealth fund, on AI-assisted tasks with Claude.",
+          "source": "Claude customer story",
+          "url": "https://claude.com/customers/nbim"
+        },
+        {
+          "figure": "40 h → 2 min",
+          "text": "Moody's cut the preparation of a credit memo from about 40 hours of analyst work to about 2 minutes with a team of AI agents.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/moodys-cut-credit-memo-prep-from-40-hours-to-2-minutes-with-modular-ai"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Time back",
+          "text": "Collecting, retyping and formatting move to the agent. Your team keeps the judgement calls."
+        },
+        {
+          "title": "The postponed project, done",
+          "text": "The work that never fits in a normal week finally gets built, tested and shipped."
+        },
+        {
+          "title": "New insights",
+          "text": "Data that sat in folders and inboxes becomes something you can search, count and act on."
+        }
+      ]
+    },
+    "why": {
+      "title": "Why work with us",
+      "intro": "We are engineers first. We build working software, measure what it changes and leave your team able to run it.",
+      "points": [
+        {
+          "title": "Engineering first",
+          "text": "Working prototypes, not slides. Every agent is built, tested and monitored like any other production software."
+        },
+        {
+          "title": "People stay in control",
+          "text": "Every figure is traceable to its source and nothing leaves your company without a person approving it."
+        },
+        {
+          "title": "Your data protected",
+          "text": "Enterprise AI plans that do not train on your data, self-hosting where needed, and GDPR-compliant processing."
+        },
+        {
+          "title": "Measured results",
+          "text": "We measure the time a task takes before we start and after launch, so the result is a number, not an impression."
+        }
+      ]
+    },
+    "team": {
+      "title": "The team",
+      "intro": "A small senior team that works alongside yours, not around it.",
+      "founder": {
+        "name": "Fares",
+        "role": "Founder and Principal Engineer",
+        "bio": "Fares leads every engagement from the first process audit to production, builds the agents, data pipelines and integrations, and stays accountable for the result.",
+        "skills": [
+          "AI agents",
+          "Data engineering",
+          "Software architecture",
+          "Process digitalisation"
+        ],
+        "cardLink": "Digital business card",
+        "photoAlt": "Portrait of Fares, founder of Qartmina"
+      },
+      "partnersTitle": "Partners",
+      "partners": [
+        {
+          "name": "ESGITECH",
+          "text": "Training partner for the AI for Business programme."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How long does it take to build an agent?",
+          "answer": "A working first version usually takes less than a month. Getting it into production with your data, permissions and approvals takes around three months. From there it grows with your needs."
+        },
+        {
+          "question": "What return can we expect, and how do you measure it?",
+          "answer": "Before we build anything, we measure how long the task takes today and how often it runs. After launch we measure again. The return is the time saved multiplied by the cost of that time, minus what the agent costs to run. If the numbers do not justify an agent, we tell you."
+        },
+        {
+          "question": "Do you build custom agents or use ready-made ones?",
+          "answer": "Both. Where a ready-made tool does the job, we set it up and connect it. Where your process is specific, we build a custom agent around it. The choice depends on what gets you the result fastest and cheapest."
+        },
+        {
+          "question": "Where is our data processed, and is it used for training?",
+          "answer": "We use enterprise AI plans whose terms exclude training on your data. Where your rules require it, we host models and data on infrastructure you control. Processing follows the GDPR, and we document where every piece of data goes."
+        },
+        {
+          "question": "What happens after launch?",
+          "answer": "We monitor the agent, fix what breaks and improve it as your process changes. You can keep us on a support plan or take it over fully."
+        },
+        {
+          "question": "Can our team maintain the agents ourselves?",
+          "answer": "Yes. We work alongside your team, document everything and train the people who will own the agent, so you are never locked in."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let's find your first agent",
+      "text": "Tell us which task takes too much of your team's time. We reply within two working days.",
+      "emailLabel": "Email",
+      "linkedinLabel": "LinkedIn",
+      "locationLabel": "Location",
+      "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa."
+    },
+    "figures": [
+      {
+        "value": "< 1 month",
+        "label": "to a working first version"
+      },
+      {
+        "value": "3 months",
+        "label": "to production"
+      },
+      {
+        "value": "6",
+        "label": "services, one team"
+      },
+      {
+        "value": "100%",
+        "label": "of outputs approved by a person"
+      }
+    ],
+    "partner": {
+      "badgeAlt": "OpenAI Select Partner badge",
+      "eyebrow": "OpenAI Partner Network",
+      "title": "OpenAI Select Partner",
+      "intro": "Qartmina is an OpenAI Select Partner. The OpenAI Partner Network is a global programme for partners that build, sell and deliver AI solutions with OpenAI.",
+      "whatTitle": "What this means for you",
+      "points": [
+        {
+          "title": "Support from OpenAI",
+          "text": "We receive training, resources and support from OpenAI, so what we build for you follows current models and recommended practices."
+        },
+        {
+          "title": "The right product, set up properly",
+          "text": "We help you choose between ChatGPT for your teams and the API for custom agents, and set it up on business terms that keep your data out of model training."
+        },
+        {
+          "title": "Built for measurable impact",
+          "text": "The programme exists to turn AI adoption into measurable results. That is how we work too: we measure before and after."
+        }
+      ],
+      "link": "About the OpenAI Partner Network"
+    },
+    "testimonials": {
+      "title": "What clients say",
+      "original": "Original testimonial in English"
+    },
+    "workflow": {
+      "robotAlt": "Qartmina's robot, the agent at the centre of your workflows",
+      "tabs": {
+        "integration": "Integration",
+        "agent": "AI agent",
+        "automation": "Automation"
+      },
+      "captions": {
+        "integration": "Connected to the tools you already use.",
+        "agent": "Reads what comes in, hands over finished work.",
+        "automation": "Runs on its own, every time, with a person approving what matters."
+      },
+      "inputs": [
+        "PDF & Excel",
+        "ERP",
+        "Email"
+      ],
+      "outputs": [
+        "Report",
+        "CRM update",
+        "Approval"
+      ],
+      "trigger": "Trigger",
+      "triggerText": "New invoice by email",
+      "action": "Action",
+      "actionText": "Booked in the ERP",
+      "loop": "Continuous loop"
+    }
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "website": "Website",
+    "message": "Message",
+    "messagePlaceholder": "Which task would you like to hand over to an agent?",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Thank you. Your message has arrived and we will reply within two working days.",
+    "error": "Your message could not be sent. Please try again or write to us at {email}.",
+    "verification": "Please complete the security check before sending.",
+    "consent": "By sending this form you agree that we use your details to reply to you, as described in our <link>privacy policy</link>.",
+    "honeypot": "Leave this field empty"
+  },
+  "services": {
+    "back": "Our services",
+    "featuresTitle": "Key features",
+    "useCasesTitle": "Use cases"
+  },
+  "servicePages": {
+    "ai-agents": {
+      "title": "AI agent development",
+      "summary": "Custom agents that run multi-step work across your tools and hand the result to a person to approve.",
+      "intro": "An agent is software that can read, check and act across several systems, the way an assistant would, but in minutes and without getting tired. We design the agent around one of your real processes, connect it to your tools and make sure a person approves anything that matters before it leaves.",
+      "features": [
+        {
+          "title": "Works across your tools",
+          "text": "Reads email, documents, spreadsheets and your business systems in one run."
+        },
+        {
+          "title": "Asks before anything leaves",
+          "text": "A person approves every message, payment or update that goes outside."
+        },
+        {
+          "title": "Every figure linked to its source",
+          "text": "Each number in the output points back to the file or record it came from."
+        },
+        {
+          "title": "On a schedule or on demand",
+          "text": "Runs every morning, every month end, or when someone asks it to."
+        }
+      ],
+      "useCases": [
+        "Data room and document analysis for due diligence",
+        "Invoice intake and reconciliation against orders",
+        "Monthly reporting packs built from several sources",
+        "Lead qualification and CRM updates"
+      ],
+      "metaTitle": "AI agent development"
+    },
+    "automation": {
+      "title": "Process automation",
+      "summary": "End-to-end workflows that remove copy-paste, data entry and manual hand-offs.",
+      "intro": "Many processes still depend on someone copying data from one screen to another. We map the process as it is, remove the manual steps and connect the systems directly, with AI only where it adds something rules cannot.",
+      "features": [
+        {
+          "title": "Mapped before it is built",
+          "text": "We document the process as it really runs, including the exceptions."
+        },
+        {
+          "title": "No more retyping",
+          "text": "Data moves between email, spreadsheets and systems without manual entry."
+        },
+        {
+          "title": "Exceptions go to a person",
+          "text": "Anything unusual is flagged and routed to the right colleague."
+        },
+        {
+          "title": "Visible and measured",
+          "text": "Every run is logged, so you can see what happened and how long it took."
+        }
+      ],
+      "useCases": [
+        "Order entry from email into the ERP",
+        "Supplier onboarding and document checks",
+        "Weekly sales and stock reports",
+        "Approval workflows that today live in email threads"
+      ],
+      "metaTitle": "Process automation"
+    },
+    "integration": {
+      "title": "Integration",
+      "summary": "AI connected to Excel, CRM, ERP, email and databases through secure connectors and APIs.",
+      "intro": "AI is only useful when it can see your data and act in your systems. We build secure connectors between AI tools and the software you already run, so information flows where it is needed and access stays limited to what you approve.",
+      "features": [
+        {
+          "title": "Your systems, not new ones",
+          "text": "We connect what you already use: Excel, CRM, ERP, email, databases."
+        },
+        {
+          "title": "Least access by default",
+          "text": "Each connector can only read or change what you explicitly allow."
+        },
+        {
+          "title": "Standard connectors",
+          "text": "We use open standards such as MCP, a common way for AI tools to plug into systems, so you are not locked in."
+        },
+        {
+          "title": "Logged end to end",
+          "text": "Every request through a connector is recorded for audit."
+        }
+      ],
+      "useCases": [
+        "Letting your company assistant read the CRM and ERP",
+        "Syncing spreadsheets with a central database",
+        "Connecting email inboxes to ticketing or order systems",
+        "Exposing internal data to AI tools through a secure API"
+      ],
+      "metaTitle": "AI integration"
+    },
+    "consulting": {
+      "title": "AI consulting",
+      "summary": "An audit of your processes and a roadmap of the agents worth building first.",
+      "intro": "Before spending on AI, you need to know where it pays off. We audit how work is done today, check whether your data is ready and give you a ranked plan: what to build first, what it will save and what it will cost.",
+      "features": [
+        {
+          "title": "Process audit",
+          "text": "We map where the hours go, with your team, in your real tools."
+        },
+        {
+          "title": "Data readiness check",
+          "text": "What data you have, where it lives and what needs cleaning first."
+        },
+        {
+          "title": "Ranked roadmap",
+          "text": "Short, mid and long term steps, each tied to a measurable outcome."
+        },
+        {
+          "title": "Honest answers",
+          "text": "If AI is not the right tool for a problem, we say so."
+        }
+      ],
+      "useCases": [
+        "Choosing the first agent to build",
+        "Reviewing an AI pilot that never reached production",
+        "Planning a legacy system modernisation",
+        "Preparing a board-level AI strategy"
+      ],
+      "metaTitle": "AI consulting"
+    },
+    "training": {
+      "title": "Team training",
+      "summary": "The AI for Business programme with ESGITECH, from the basics to a first working workflow.",
+      "intro": "Tools only change a company when people know how to use them. Together with ESGITECH we run the AI for Business programme: practical sessions that take your team from the basics to a first workflow running on their own tasks.",
+      "features": [
+        {
+          "title": "Built for non-technical teams",
+          "text": "Plain language, real examples, no coding required."
+        },
+        {
+          "title": "Your tasks, not toy examples",
+          "text": "Participants work on processes from their own job."
+        },
+        {
+          "title": "A working result",
+          "text": "Every participant leaves with a first workflow that runs."
+        },
+        {
+          "title": "Safe use",
+          "text": "What you can share with AI tools, what you cannot, and why."
+        }
+      ],
+      "useCases": [
+        "Introduction to AI for management teams",
+        "Hands-on workshops for finance and operations",
+        "Prompting and assistant use for office teams",
+        "Train-the-trainer for internal AI champions"
+      ],
+      "metaTitle": "AI team training"
+    },
+    "chatbots": {
+      "title": "Chatbots and assistants",
+      "summary": "Assistants that answer customers or staff from your own documents, around the clock.",
+      "intro": "Your team answers the same questions every day from the same documents. We build assistants that answer from your own policies, manuals and data, show where each answer comes from and hand over to a person when they should.",
+      "features": [
+        {
+          "title": "Answers from your documents",
+          "text": "The assistant only answers from sources you approve."
+        },
+        {
+          "title": "Shows its sources",
+          "text": "Every answer links to the document it came from."
+        },
+        {
+          "title": "Hands over to a person",
+          "text": "Sensitive or unclear requests go to your team."
+        },
+        {
+          "title": "Available around the clock",
+          "text": "On your website, in your intranet or in your messaging tools."
+        }
+      ],
+      "useCases": [
+        "Customer service on your website",
+        "Internal helpdesk for HR and IT questions",
+        "Product and technical documentation search",
+        "Onboarding assistant for new employees"
+      ],
+      "metaTitle": "Chatbots and AI assistants"
+    }
+  },
+  "visuals": {
+    "tools": [
+      "Email",
+      "Excel",
+      "ERP"
+    ],
+    "agentRun": {
+      "title": "Monthly reporting agent",
+      "steps": [
+        "Collecting files",
+        "Reconciling figures",
+        "Drafting the report",
+        "Linking figures to sources",
+        "Waiting for your approval"
+      ]
+    },
+    "automation": [
+      {
+        "title": "Invoice intake",
+        "description": "Reads incoming invoices, matches them to orders and flags the gaps.",
+        "badge": "2 min"
+      },
+      {
+        "title": "Order entry",
+        "description": "Copies order details from email into the ERP, no retyping.",
+        "badge": "30 s"
+      },
+      {
+        "title": "Weekly report",
+        "description": "Pulls figures from three spreadsheets and formats the weekly pack.",
+        "badge": "5 min"
+      }
+    ],
+    "integration": {
+      "cardTitle": "Secure connector",
+      "cardText": "Reads and writes only what you approve.",
+      "card2Title": "Your existing tools"
+    },
+    "consulting": {
+      "label": "Finding",
+      "tabs": [
+        {
+          "title": "Process audit",
+          "description": "We map how the work is done today and where the hours go."
+        },
+        {
+          "title": "Quick wins",
+          "description": "Tasks an agent can take over in weeks, ranked by hours saved."
+        },
+        {
+          "title": "Data readiness",
+          "description": "What data you have, where it lives and what needs cleaning first."
+        },
+        {
+          "title": "Controls",
+          "description": "Where a person must approve, and what must never leave your systems."
+        },
+        {
+          "title": "Roadmap",
+          "description": "Short, mid and long term steps, each tied to a measurable outcome."
+        }
+      ]
+    },
+    "chatbot": [
+      {
+        "title": "Customer question",
+        "description": "Can I change my delivery address after ordering?"
+      },
+      {
+        "title": "Answer from your documents",
+        "description": "Yes, until the order ships. Source: delivery policy, section 2."
+      },
+      {
+        "title": "Handed to your team",
+        "description": "Refunds above the limit go to a person to approve."
+      }
+    ],
+    "activity": {
+      "title": "Recent activity",
+      "needsInput": "NEEDS INPUT",
+      "processing": "PROCESSING",
+      "items": [
+        {
+          "title": "Supplier reply",
+          "description": "Draft ready for your review"
+        },
+        {
+          "title": "Credit check",
+          "description": "Balance sheet missing, sent back to analyst"
+        },
+        {
+          "title": "Monthly report",
+          "description": "Every figure linked to its source file"
+        },
+        {
+          "title": "Manager approval",
+          "description": "Report waiting for sign-off before sending"
+        },
+        {
+          "title": "CRM update",
+          "description": "12 contacts updated after approval"
+        },
+        {
+          "title": "Contract review",
+          "description": "Clause flagged for legal review"
+        }
+      ]
+    },
+    "flow": {
+      "build": "Build",
+      "test": "Test"
+    },
+    "measured": {
+      "title": "Hours spent on the task",
+      "rows": [
+        "Baseline",
+        "Week 4",
+        "Week 12"
+      ]
+    }
+  },
+  "portfolio": {
+    "metaTitle": "Portfolio",
+    "metaDescription": "Case studies of AI agents, automations and data platforms built by Qartmina, with the problem, the approach and the measured result.",
+    "title": "Our work",
+    "intro": "Each case study shows the problem, what we built and what changed. Demos are labelled as demos.",
+    "sector": "Sector",
+    "service": "Service",
+    "result": "Result",
+    "readCase": "Read the case study",
+    "back": "All case studies",
+    "context": "Context",
+    "approach": "Approach",
+    "outcome": "Result"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Practical articles on putting AI agents, automation and data to work in real businesses.",
+    "title": "Blog",
+    "intro": "Practical notes on putting AI and data to work. No hype, real examples.",
+    "empty": "The first articles are on their way. Subscribe to the newsletter to receive them.",
+    "readingTime": "{minutes} min read",
+    "back": "All articles",
+    "related": "Related articles",
+    "authorName": "Fares",
+    "authorRole": "Founder and Principal Engineer, Qartmina"
+  },
+  "about": {
+    "metaTitle": "About",
+    "metaDescription": "Qartmina is an AI and data consulting company working across MENA and Africa. Learn about our name, our founder and how we work.",
+    "title": "About Qartmina",
+    "intro": "We help businesses digitalise and put AI to work, from strategy to execution, and back every recommendation with evidence.",
+    "nameTitle": "The name",
+    "nameText": "Qartmina means \"the new mine\". Data is the raw material of this era, and like any mine, it is only worth something once you dig, refine and put what you find to use. That is the work we do.",
+    "founderTitle": "The founder",
+    "methodTitle": "How we work",
+    "methodIntro": "Every engagement builds three layers, always in this order. Each layer comes with a short, mid and long term plan tied to a specific outcome.",
+    "layers": [
+      {
+        "title": "Foundation",
+        "text": "Standardised, compliant, well-tested and secure processes."
+      },
+      {
+        "title": "Data",
+        "text": "Clean, structured, trustworthy data that becomes an asset."
+      },
+      {
+        "title": "AI",
+        "text": "AI applied where it earns its keep, and only there."
+      }
+    ],
+    "rhythm": [
+      {
+        "value": "< 1 month",
+        "label": "to a working first version"
+      },
+      {
+        "value": "3 months",
+        "label": "to production"
+      },
+      {
+        "value": "6 months",
+        "label": "to a growing product"
+      }
+    ],
+    "partnersTitle": "Partners",
+    "locationsTitle": "Where we work",
+    "locationsText": "Remote-first across MENA and Africa, delivered to international standards. Based in Les Berges du Lac, Tunisia.",
+    "coreMarketsLabel": "Core markets",
+    "coreMarkets": [
+      "Morocco",
+      "Tunisia",
+      "Egypt",
+      "Nigeria",
+      "Kenya",
+      "South Africa",
+      "UAE",
+      "Saudi Arabia"
+    ],
+    "reachLabel": "Also active in",
+    "reach": [
+      "Algeria",
+      "Senegal",
+      "Ghana",
+      "Côte d'Ivoire",
+      "Rwanda",
+      "Ethiopia",
+      "Qatar",
+      "Jordan"
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Tell Qartmina which task takes too much of your team's time. We reply within two working days."
+  },
+  "book": {
+    "metaTitle": "Book a call",
+    "metaDescription": "Book a free 30-minute call with Qartmina to look at one process and whether an AI agent is worth building for it.",
+    "title": "Book a free 30-minute call",
+    "intro": "We look at one process together and whether an agent is worth building for it. No preparation needed.",
+    "calendarTitle": "Booking calendar",
+    "fallback": "Online booking opens soon. Send us a message and we will reply with a few times that work."
+  },
+  "legal": {
+    "updated": "Last updated: {date}",
+    "privacy": {
+      "metaTitle": "Privacy policy",
+      "title": "Privacy policy",
+      "sections": [
+        {
+          "heading": "Who is responsible",
+          "body": [
+            "Qartmina, Les Berges du Lac, Tunis, Tunisia, is responsible for the processing of personal data on this website. You can reach us at fares@qartmina.com."
+          ]
+        },
+        {
+          "heading": "What we collect and why",
+          "body": [
+            "Contact form: your name, email address, company, website and message. We use them only to reply to your request and, if it leads to a project, to prepare it. Legal basis: steps taken at your request before a contract (Art. 6(1)(b) GDPR).",
+            "Newsletter: your email address, only if you subscribe. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time through the link in every email.",
+            "Security check: to protect our forms from spam, Cloudflare Turnstile checks that a request comes from a person. Legal basis: our legitimate interest in protecting the website (Art. 6(1)(f) GDPR).",
+            "Server logs: our hosting provider records technical data such as IP address, date and requested page to run the website securely. Legal basis: legitimate interest (Art. 6(1)(f) GDPR)."
+          ]
+        },
+        {
+          "heading": "Service providers",
+          "body": [
+            "Brevo (Sendinblue SAS, France) sends our contact form emails and our newsletter.",
+            "Cloudflare, Inc. (United States) provides the Turnstile security check. Transfers to the United States are covered by the EU-US Data Privacy Framework or standard contractual clauses.",
+            "We do not sell your data and we do not use advertising or tracking cookies."
+          ]
+        },
+        {
+          "heading": "Cookies and local storage",
+          "body": [
+            "This website stores your colour theme and language preference in your browser. The security check and the newsletter form may set technically necessary cookies. We do not use analytics or advertising cookies."
+          ]
+        },
+        {
+          "heading": "How long we keep data",
+          "body": [
+            "Contact requests are deleted when they are no longer needed, at the latest two years after our last exchange, unless a contract requires us to keep them longer. Newsletter data is kept until you unsubscribe."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You have the right to access, correct, delete and restrict the processing of your data, to data portability and to object to processing. You can withdraw consent at any time. Write to fares@qartmina.com. You also have the right to complain to a data protection authority."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "metaTitle": "Terms of service",
+      "title": "Terms of service",
+      "sections": [
+        {
+          "heading": "Scope",
+          "body": [
+            "These terms apply to the use of the website qartmina.com. Consulting and development projects are governed by a separate written agreement."
+          ]
+        },
+        {
+          "heading": "Content",
+          "body": [
+            "The content of this website is general information and not professional advice for your specific situation. We keep it accurate and up to date but cannot guarantee that it is complete at all times."
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "body": [
+            "Texts, graphics and code on this website belong to Qartmina unless stated otherwise. You may share links to our pages. Any other reuse requires our written permission."
+          ]
+        },
+        {
+          "heading": "External links",
+          "body": [
+            "We link to external sources as evidence. We are not responsible for the content of external websites."
+          ]
+        },
+        {
+          "heading": "Liability",
+          "body": [
+            "We are liable without limitation for intent and gross negligence. For slight negligence we are liable only for breach of essential obligations and limited to foreseeable damage."
+          ]
+        },
+        {
+          "heading": "Applicable law",
+          "body": [
+            "These terms are governed by the law stated in our legal notice, without prejudice to mandatory consumer protection rules in your country of residence."
+          ]
+        }
+      ]
+    },
+    "notice": {
+      "metaTitle": "Legal notice",
+      "title": "Legal notice",
+      "sections": [
+        {
+          "heading": "Publisher",
+          "body": [
+            "Qartmina",
+            "Legal form and registered name: [to be completed]",
+            "Les Berges du Lac, Tunis, Tunisia",
+            "Registration number: [to be completed]",
+            "VAT or tax identification number: [to be completed]"
+          ]
+        },
+        {
+          "heading": "Contact",
+          "body": [
+            "Email: fares@qartmina.com",
+            "Phone: +49 170 3754433"
+          ]
+        },
+        {
+          "heading": "Responsible for content",
+          "body": [
+            "Fares [surname to be completed], address as above."
+          ]
+        },
+        {
+          "heading": "Hosting",
+          "body": [
+            "[Hosting provider name and address to be completed]"
+          ]
+        }
+      ]
+    }
+  },
+  "chat": {
+    "open": "Open chat",
+    "close": "Close chat",
+    "title": "Qartmina assistant",
+    "greeting": "Hello. What would you like to know?",
+    "quickReplies": [
+      {
+        "label": "AI agents",
+        "answer": "We build agents that run multi-step work across your tools, for example monthly reports or invoice checks, and ask a person before anything leaves your company."
+      },
+      {
+        "label": "Automation",
+        "answer": "We remove copy-paste, data entry and manual hand-offs by connecting your systems directly, with AI only where rules are not enough."
+      },
+      {
+        "label": "Pricing",
+        "answer": "Every project is scoped to one measurable outcome, so the price depends on the process. A short call is enough to give you a first estimate."
+      },
+      {
+        "label": "Contact",
+        "answer": "Write to fares@qartmina.com or book a free 30-minute call. We reply within two working days."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist or has moved.",
+    "home": "Back to home"
+  },
+  "newsletterToast": {
+    "title": "Practical AI notes, in your inbox",
+    "text": "Real examples of AI and data at work. No hype, unsubscribe anytime.",
+    "close": "Close"
+  },
+  "newsletterForm": {
+    "label": "Email address",
+    "placeholder": "Your email",
+    "submit": "Subscribe",
+    "sending": "Subscribing...",
+    "success": "Thank you, you're on the list.",
+    "error": "That didn't work. Please try again in a moment.",
+    "invalid": "Please enter a valid email address.",
+    "consent": "One email now and then. Unsubscribe anytime. See our <link>privacy policy</link>."
+  }
+}
