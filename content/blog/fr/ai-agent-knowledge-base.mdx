@@ -1,0 +1,136 @@
+---
+title: "Base de connaissances d'un agent IA : comment le RAG exploite les documents de votre entreprise"
+summary: "Comment un agent IA trouve des réponses dans vos propres politiques, contrats et procédures, pourquoi des documents périmés le rendent sûr de lui et dans l'erreur, et comment garder la maîtrise des droits d'accès et des coûts."
+description: "La base de connaissances d'un agent IA expliquée : le RAG, les hallucinations causées par des documents périmés, les droits d'accès et le coût des tokens."
+slug: "ai-agent-knowledge-base"
+date: "2026-10-24"
+tags: ["Agents IA", "Données"]
+primaryKeyword: "base de connaissances d'un agent IA"
+secondaryKeywords: ["qu'est-ce que le RAG", "génération augmentée par récupération", "hallucinations de l'IA", "IA et documents d'entreprise"]
+author: "Fares"
+faq:
+  - question: "Qu'est-ce que le RAG, en termes simples ?"
+    answer: "RAG signifie retrieval-augmented generation, en français génération augmentée par récupération. Avant que le modèle d'IA réponde, une étape de recherche trouve dans vos propres documents les passages liés à la question et les transmet au modèle. Le modèle rédige alors sa réponse à partir de ces passages, au lieu de s'appuyer uniquement sur ce qu'il a appris pendant son entraînement."
+  - question: "Une base de connaissances empêche-t-elle les hallucinations d'un agent IA ?"
+    answer: "Elle les réduit, mais ne les supprime pas. Si l'étape de recherche trouve le mauvais passage, ou si vos documents sont périmés ou se contredisent, l'agent donnera quand même une mauvaise réponse avec assurance. Des documents propres, à jour et dotés d'un responsable comptent autant que la technologie."
+  - question: "L'agent peut-il montrer aux salariés des documents qu'ils n'ont pas le droit de voir ?"
+    answer: "Oui, s'il est construit sans précaution. L'étape de recherche doit vérifier les droits de la personne qui pose la question et ne renvoyer que les passages que cette personne pouvait déjà ouvrir. Les droits doivent être appliqués dans la recherche elle-même, et non laissés à la bonne volonté du modèle d'IA."
+  - question: "Comment garder la base de connaissances à jour ?"
+    answer: "Connectez-la aux systèmes où les documents se trouvent déjà pour que les modifications arrivent automatiquement, donnez à chaque document un responsable et une date de révision, supprimez les versions remplacées au lieu de les garder côte à côte, et testez régulièrement l'agent avec de vraies questions dont vous connaissez les réponses."
+  - question: "Le RAG coûte-t-il moins cher que de donner tous nos documents à l'IA ?"
+    answer: "En général, beaucoup moins cher. Les fournisseurs d'IA facturent chaque morceau de texte que le modèle lit. La recherche n'envoie que quelques passages pertinents par question au lieu de manuels entiers, donc chaque réponse coûte une fraction du prix, et la précision a tendance à être meilleure aussi."
+---
+
+**La base de connaissances d'un agent IA, c'est l'ensemble des documents de votre entreprise que l'agent consulte avant de répondre, pour qu'il travaille à partir de vos politiques plutôt qu'au jugé.** La méthode qui la fait fonctionner s'appelle le RAG, pour retrieval-augmented generation (génération augmentée par récupération). Elle marche bien quand vos documents sont à jour et cohérents, et elle échoue sans bruit quand ils ne le sont pas.
+
+Cet article explique son fonctionnement avec des mots simples, ce qui coince en pratique et ce qu'il faut vérifier avant de lui faire confiance. Il fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business).
+
+Nous utiliserons un seul exemple du début à la fin. Un agent financier traite les factures fournisseurs. Pour cela, il a besoin de vos conditions de paiement, de vos seuils d'approbation et de vos politiques fournisseurs. Vos équipes lui posent aussi des questions comme « quel est notre seuil d'approbation au-dessus de 10 000 € ? » ou « pouvons-nous payer ce fournisseur en avance pour obtenir un escompte ? »
+
+## Qu'est-ce que le RAG ?
+
+Un modèle d'IA comme ceux qui font tourner ChatGPT apprend à partir d'une énorme quantité de textes publics. Il n'a jamais vu votre politique d'approbation. Interrogez-le sur vos seuils et il vous dira qu'il ne sait pas ou, pire, il produira quelque chose de plausible.
+
+Le RAG corrige cela en ajoutant une étape de consultation. L'idée a été présentée dans un [article de recherche de 2020 signé Patrick Lewis et ses collègues de Facebook AI Research, de l'University College London et de l'université de New York](https://arxiv.org/abs/2005.11401). En pratique, cela se fait en trois temps :
+
+1. **Récupérer.** Quand une question arrive, une recherche trouve les quelques passages de vos documents qui s'y rapportent.
+2. **Augmenter.** Ces passages sont ajoutés à la question, comme on joint les pages utiles à un e-mail.
+3. **Générer.** Le modèle rédige sa réponse à partir de ce qu'il a sous les yeux et, idéalement, cite l'origine de chaque point.
+
+Imaginez une nouvelle recrue avec un bon classeur. Elle ne connaît pas vos politiques par cœur, mais elle sait où chercher, et elle cite la page.
+
+## Comment la base de connaissances d'un agent IA trouve le bon passage
+
+Avant que l'agent puisse chercher quoi que ce soit, vos documents sont préparés. Chacun est découpé en courtes sections de quelques paragraphes. Puis chaque section est transformée en **embedding** : une liste de nombres qui capture ce que le passage veut dire, pas seulement les mots qu'il emploie.
+
+C'est ce qui permet à la recherche de travailler sur le sens. Une question sur les « seuils de validation » peut trouver un passage intitulé « Limites d'approbation », alors qu'ils n'ont aucun mot en commun. La question est transformée en nombres de la même façon, et le système ramène les sections dont les nombres sont les plus proches.
+
+La plupart des bons montages lancent aussi une recherche classique par mots-clés en parallèle, car des termes exacts comme « BC 4471 » ou le numéro de TVA d'un fournisseur peuvent échapper à la recherche par le sens. Une dernière étape de tri, appelée reranking, place ensuite les passages les plus utiles en tête.
+
+C'est à cette étape que se gagne ou se perd l'essentiel de la qualité. Anthropic, l'entreprise derrière les modèles Claude, a publié une technique qu'elle appelle contextual retrieval (récupération contextuelle) : chaque section reçoit, avant d'être indexée, une courte note qui explique sa place dans le document. Sur les benchmarks d'Anthropic, [cela a réduit les recherches ratées de 49 %, et de 67 % en combinaison avec le reranking](https://www.anthropic.com/news/contextual-retrieval). Ce sont les résultats de tests d'un fournisseur, mais ils montrent à quel point la conception de la recherche compte.
+
+## Une IA fiable sur vos documents d'entreprise : pourquoi des fichiers périmés provoquent des hallucinations
+
+Une **hallucination de l'IA** est une réponse qui a l'air juste et qui ne l'est pas. On accuse généralement le modèle. Dans une base de connaissances, la cause vient souvent des documents.
+
+Voici comment cela se passe dans notre exemple de factures. Votre seuil d'approbation pour les factures de plus de 10 000 € a changé au printemps dernier : il faut désormais l'accord du directeur financier, et non plus du responsable financier. La nouvelle politique est sur l'intranet. L'ancien PDF se trouve toujours dans un dossier partagé nommé « Procédures finance FINAL ». Les deux sont indexés. Un comptable interroge l'agent, la recherche ramène l'ancien PDF, et l'agent répond clairement, citation à l'appui, que le responsable financier peut approuver. (Ces chiffres sont donnés à titre d'illustration.)
+
+L'agent n'a rien inventé. Il a lu la mauvaise page et l'a restituée fidèlement, ce qui est plus difficile à repérer parce que la réponse paraît bien sourcée.
+
+Les conséquences peuvent être réelles. Dans l'affaire [Moffatt v. Air Canada](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), jugée en février 2024, le chatbot du site de la compagnie a indiqué à un client qu'il était possible de demander un tarif deuil après le voyage. La politique réelle de la compagnie disait le contraire. Air Canada a soutenu ne pas être responsable de ce que disait son chatbot. Le Civil Resolution Tribunal de Colombie-Britannique a rejeté cet argument et l'a condamnée à payer environ 812 CA$. Il s'agit d'une décision d'un tribunal des petites créances, pas d'un précédent contraignant, mais le raisonnement est difficile à contester : votre agent parle au nom de votre entreprise.
+
+Deux autres habitudes aggravent le problème :
+
+- **Les contradictions.** Si deux documents se contredisent, l'agent peut retenir l'un ou l'autre, et il ne vous dira pas qu'il y avait un choix.
+- **La réponse noyée.** Des chercheurs ont constaté que les modèles d'IA [exploitent mieux les informations placées au début et à la fin d'un long texte que celles du milieu](https://arxiv.org/abs/2307.03172). Ajouter vingt passages « par sécurité » peut cacher celui qui compte.
+
+## Droits d'accès : l'agent ne voit que ce que l'utilisateur a le droit de voir
+
+Une base de connaissances construite sur tout le contenu de vos dossiers partagés contiendra des salaires, des procès-verbaux du conseil, des dossiers disciplinaires et des prix fournisseurs que seules quelques personnes devraient voir. Si la recherche ignore les droits, un salarié curieux n'a qu'à poser la bonne question.
+
+La règle est simple à énoncer : **l'agent ne récupère que ce que la personne qui pose la question pouvait déjà ouvrir elle-même.** L'OWASP Foundation, une organisation à but non lucratif qui publie des normes de sécurité largement utilisées, classe ce sujet parmi les [faiblesses liées aux vecteurs et aux embeddings](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/) et recommande une recherche qui tient compte des droits, avec une séparation stricte entre groupes d'utilisateurs.
+
+Deux points pratiques :
+
+- **Appliquez-la dans la recherche, pas dans les instructions.** Dire au modèle « ne révèle pas de données confidentielles » n'est pas un contrôle. Filtrez les passages selon les droits de l'utilisateur avant même que le modèle ne les voie.
+- **Gardez les droits synchronisés.** Quand quelqu'un change de poste ou quitte l'entreprise, la base de connaissances doit le savoir le jour même que votre système documentaire.
+
+La recherche est aussi une porte d'entrée pour les attaquants. En juin 2025, des chercheurs ont révélé une faille surnommée EchoLeak : un e-mail piégé pouvait être aspiré par la recherche de Microsoft 365 Copilot et [entraîner une fuite de données](https://thehackernews.com/2025/06/zero-click-ai-vulnerability-exposes.html). Microsoft l'a classée critique et l'a corrigée, et rien n'indiquait qu'elle avait été exploitée lors de vraies attaques. La leçon reste valable : tout ce que votre agent peut récupérer, quelqu'un d'extérieur peut peut-être l'y placer. Nous traitons cet aspect dans [les risques de sécurité des agents IA](/fr/blog/ai-agent-security).
+
+## Garder votre base de connaissances à jour
+
+Une base de connaissances n'est pas un projet qu'on termine. Voici ce que nous mettons en place quand nous en construisons une :
+
+1. **Connecter, pas copier.** Récupérez les documents directement là où ils se trouvent, votre intranet, votre système de gestion documentaire ou votre ERP (le logiciel qui fait tourner votre finance et vos opérations), pour que les mises à jour arrivent automatiquement. Notre [travail d'intégration](/fr/services/integration) consiste surtout en cette tuyauterie.
+2. **Un responsable par document.** Chaque politique a une personne nommée et une date de révision. Si personne n'en est responsable, elle n'a rien à faire dans l'index.
+3. **Retirer les anciennes versions.** Quand une politique change, l'ancienne sort de l'index. Archivez-la à un endroit que l'agent ne peut pas atteindre.
+4. **Montrer la source.** Chaque réponse renvoie au passage utilisé, pour que les équipes puissent vérifier en un clic et signaler les erreurs.
+5. **Tester avec des réponses connues.** Gardez une liste de 30 à 50 vraies questions avec leurs bonnes réponses, comme le seuil d'approbation au-dessus de 10 000 €, et relancez-la après chaque changement.
+
+L'essentiel relève de l'hygiène documentaire, pas de l'IA. C'est pourquoi, dans nos missions de [conseil en IA](/fr/services/consulting), nous commençons par les fondations et les données avant la couche IA.
+
+## Comment la recherche réduit le coût des tokens
+
+Les fournisseurs d'IA facturent au **token**, un petit morceau de texte d'environ trois quarts de mot. Chaque mot que le modèle lit coûte de l'argent, à chaque question.
+
+Sans recherche, la solution de facilité consiste à coller tout le manuel financier dans chaque requête. Avec la recherche, l'agent lit trois ou quatre courts passages. Disons que le manuel fait 80 000 tokens et que les passages récupérés en totalisent 2 000 (chiffres donnés à titre d'illustration) : cela fait 40 fois moins de texte à payer à chaque question, et la réponse est généralement meilleure, pas moins bonne, parce que le modèle ne se perd pas au milieu d'un énorme document.
+
+Nous détaillons le calcul complet dans [le coût des tokens d'un agent IA](/fr/blog/ai-agent-token-cost). Si l'agent a aussi besoin de chiffres en temps réel, comme un bon de commande ouvert, il doit interroger directement vos systèmes plutôt que chercher dans une copie, ce que nous expliquons dans [connecter un agent IA à votre ERP et à votre CRM](/fr/blog/connect-ai-agent-erp-crm). Pour les données personnelles contenues dans vos documents, voir [agents IA, RGPD et AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act).
+
+## Les questions à poser avant de lui faire confiance
+
+Si quelqu'un vous propose une base de connaissances pour votre [agent IA](/fr/services/ai-agents), demandez :
+
+- Quelles sources sont indexées, et qui est responsable de chacune ?
+- En combien de temps un changement de politique atteint-il l'agent ?
+- Chaque réponse montre-t-elle sa source ?
+- Les droits sont-ils vérifiés dans la recherche, utilisateur par utilisateur ?
+- Quel est le jeu de tests, et quel score l'agent y obtient-il aujourd'hui ?
+
+Si ces réponses sont floues, l'agent le sera aussi.
+
+## FAQ
+
+### Qu'est-ce que le RAG, en termes simples ?
+
+RAG signifie retrieval-augmented generation, en français génération augmentée par récupération. Avant que le modèle d'IA réponde, une étape de recherche trouve dans vos propres documents les passages liés à la question et les transmet au modèle. Le modèle rédige alors sa réponse à partir de ces passages, au lieu de s'appuyer uniquement sur ce qu'il a appris pendant son entraînement.
+
+### Une base de connaissances empêche-t-elle les hallucinations d'un agent IA ?
+
+Elle les réduit, mais ne les supprime pas. Si l'étape de recherche trouve le mauvais passage, ou si vos documents sont périmés ou se contredisent, l'agent donnera quand même une mauvaise réponse avec assurance. Des documents propres, à jour et dotés d'un responsable comptent autant que la technologie.
+
+### L'agent peut-il montrer aux salariés des documents qu'ils n'ont pas le droit de voir ?
+
+Oui, s'il est construit sans précaution. L'étape de recherche doit vérifier les droits de la personne qui pose la question et ne renvoyer que les passages que cette personne pouvait déjà ouvrir. Les droits doivent être appliqués dans la recherche elle-même, et non laissés à la bonne volonté du modèle d'IA.
+
+### Comment garder la base de connaissances à jour ?
+
+Connectez-la aux systèmes où les documents se trouvent déjà pour que les modifications arrivent automatiquement, donnez à chaque document un responsable et une date de révision, supprimez les versions remplacées au lieu de les garder côte à côte, et testez régulièrement l'agent avec de vraies questions dont vous connaissez les réponses.
+
+### Le RAG coûte-t-il moins cher que de donner tous nos documents à l'IA ?
+
+En général, beaucoup moins cher. Les fournisseurs d'IA facturent chaque morceau de texte que le modèle lit. La recherche n'envoie que quelques passages pertinents par question au lieu de manuels entiers, donc chaque réponse coûte une fraction du prix, et la précision a tendance à être meilleure aussi.
+
+---
+
+**Vous voulez un agent qui répond à partir de vos propres politiques, et seulement aux bonnes personnes ?** [Réservez un appel](/fr/book) et nous examinerons vos documents ensemble.

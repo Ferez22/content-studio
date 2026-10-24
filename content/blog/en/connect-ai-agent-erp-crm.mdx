@@ -113,7 +113,7 @@ Whatever the route, the same rules apply. OWASP, a non-profit that publishes wid
 6. **Set rate limits.** A rate limit caps requests per minute, so an agent stuck in a loop becomes an alert, not an outage.
 7. **Keep the system of record in charge.** Your ERP and CRM stay the source of truth. The agent reads and proposes; it never keeps its own copy of the numbers.
 
-One more caution. Security researcher Simon Willison warns about the [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): an agent with access to private data, exposure to untrusted content and a way to send information out. He points out that MCP makes it easy to mix tools from different sources, which can put all three in one agent by accident. Review every connector you add, not just the first. More on this in [AI agent security risks](/en/blog/ai-agent-security).
+One more caution. Security researcher Simon Willison warns about the [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): an agent with access to private data, exposure to untrusted content and a way to send information out. Willison points out that MCP makes it easy to mix tools from different sources, which can put all three in one agent by accident. Review every connector you add, not just the first. More on this in [AI agent security risks](/en/blog/ai-agent-security).
 
 ## Where to start
 

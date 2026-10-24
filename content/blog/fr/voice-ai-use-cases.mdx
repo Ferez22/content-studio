@@ -1,0 +1,179 @@
+---
+title: "Agents vocaux IA pour les entreprises : 8 cas d'usage qui fonctionnent vraiment"
+summary: "Là où les agents téléphoniques IA sont rentables, de la prise de rendez-vous et la qualification des prospects aux appels hors horaires pour les artisans et les cabinets, avec les vrais prix à la minute, la façon dont l'agent obtient un numéro de téléphone, et les règles de l'UE sur l'information des appelants et l'enregistrement des appels."
+description: "Agents vocaux IA pour les entreprises : 8 cas d'usage concrets, coûts réels à la minute, numéro de téléphone, règles de l'UE sur l'IA et l'enregistrement."
+slug: "voice-ai-use-cases"
+date: "2026-10-24"
+tags: ["Agents IA", "IA vocale"]
+primaryKeyword: "agents vocaux IA pour les entreprises"
+secondaryKeywords: ["cas d'usage de l'IA vocale", "agent téléphonique IA", "standard téléphonique IA", "IA vocale service client"]
+author: "Fares"
+faq:
+  - question: "Que sont les agents vocaux IA pour les entreprises ?"
+    answer: "Ce sont des assistants IA qui répondent au téléphone et passent des appels avec une voix naturelle. Connectés à votre agenda ou à votre CRM, ils peuvent prendre des rendez-vous, qualifier des prospects ou prendre un message, et transférer l'appel à une personne quand il le faut."
+  - question: "Combien coûte un agent vocal IA ?"
+    answer: "Sur les plateformes que nous avons vérifiées le 24 octobre 2026, une minute tout compris coûte environ 0,08 $ à 0,13 $, modèle d'IA et ligne téléphonique inclus. Dans notre exemple, à titre d'illustration, de 1 500 appels par mois d'une durée moyenne de trois minutes, cela représente environ 370 $ à 580 $ par mois, hors travail de mise en place et hors TVA."
+  - question: "Puis-je garder le numéro de téléphone actuel de mon entreprise ?"
+    answer: "Oui. Vous pouvez renvoyer les appels de votre numéro actuel vers celui de l'agent, par exemple seulement en dehors des horaires d'ouverture ou quand personne ne décroche, ou bien transférer (porter) votre numéro chez un opérateur téléphonique qui le relie à l'agent. Le renvoi d'appel est la façon la plus simple de lancer un pilote."
+  - question: "Dois-je dire aux appelants qu'ils parlent à une IA ?"
+    answer: "Dans l'UE, oui, sauf si c'est déjà évident. L'article 50 de l'AI Act impose aux systèmes qui dialoguent directement avec des personnes d'indiquer clairement qu'il s'agit d'une IA, et cette obligation s'applique à partir du 2 août 2026. Les voix actuelles peuvent paraître assez humaines pour que les appelants ne s'en doutent pas : dites-le dès la première phrase de l'appel."
+  - question: "Un agent vocal peut-il transférer un appel à une personne ?"
+    answer: "Oui, et il le doit. Les principales plateformes peuvent transférer un appel en cours vers un numéro de téléphone quand des conditions que vous définissez sont remplies, par exemple un appelant mécontent ou une question médicale, idéalement avec un court résumé."
+---
+
+**Les agents vocaux IA pour les entreprises sont des assistants IA qui décrochent le téléphone, mènent une conversation naturelle et en font quelque chose d'utile : prendre le rendez-vous, qualifier le prospect, répondre à la question ou transférer l'appel à la bonne personne.** Ils fonctionnent le mieux sur les appels fréquents qui suivent un schéma, et le moins bien sur ceux qui demandent du jugement.
+
+Au programme : huit cas d'usage qui tiennent la route, le coût d'une minute, les limites et les règles de l'UE. Cet article fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business).
+
+## Ce que sont vraiment les agents vocaux IA pour les entreprises
+
+Un agent vocal est une chaîne de quatre éléments :
+
+1. **La reconnaissance vocale** (speech-to-text) transforme ce que dit l'appelant en texte écrit.
+2. **Un modèle de langage**, le type d'IA qui fait tourner ChatGPT, décide de ce qu'il faut dire ou faire ensuite.
+3. **La synthèse vocale** (text-to-speech) transforme la réponse en voix parlée.
+4. **Des outils** permettent à l'agent d'agir : consulter l'agenda, créer une réservation, retrouver une commande ou transférer l'appel.
+
+L'appelant parle, l'agent répond en une seconde environ ([ElevenLabs indique](https://elevenlabs.io/blog/what-is-an-ai-voice-agent) un délai avant le premier son généralement inférieur à une seconde), et quelque chose se passe dans vos systèmes.
+
+Une configuration simplifiée (chaque plateforme nomme ces éléments différemment) :
+
+```yaml
+# Configuration simplifiée d'un agent vocal (à titre d'illustration)
+phone_number: "+49 30 0000000"     # un numéro fourni par un opérateur téléphonique
+speech_to_text: provider default
+language_model: a fast, mid-sized model
+text_to_speech: une voix choisie, en français et en anglais
+first_sentence: "Bonjour, vous êtes en ligne avec l'assistant IA du cabinet. Cet appel est enregistré. Que puis-je faire pour vous ?"
+tools:
+  - check_calendar                  # lire les créneaux libres
+  - book_appointment
+  - send_sms_confirmation
+transfer_rule:
+  to: "+49 30 0000001"              # accueil
+  when: l'appelant demande une personne, est contrarié ou pose une question médicale
+```
+
+Les voix sont devenues très convaincantes. ElevenLabs présente ses agents comme [naturels, avec une voix qui sonne humaine](https://elevenlabs.io/voice-agents), et la recherche indépendante le confirme : dans une [étude de 2025 de l'université Queen Mary de Londres](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332692), les auditeurs ont pris des clones vocaux créés avec les outils d'ElevenLabs pour des voix humaines presque aussi souvent que de vrais enregistrements humains (70 % contre 72 %). Les modèles open source réduisent l'écart. [Chatterbox](https://github.com/resemble-ai/chatterbox) de Resemble AI, publié sous licence MIT, propose un modèle Turbo conçu pour les agents vocaux. Dans le propre [test à l'aveugle de l'entreprise face à ElevenLabs Turbo v2.5](https://podonos.com/resembleai/chatterbox-turbo-vs-elevenlabs-turbo), les auditeurs ont préféré Chatterbox dans environ 65 % de 2 500 évaluations. C'est un test mené par l'éditeur contre un ancien modèle d'ElevenLabs, à prendre donc comme un signal. Reste qu'une bonne voix coûte de moins en moins cher à faire tourner soi-même.
+
+### Comment un agent vocal obtient un vrai numéro de téléphone
+
+Vous avez trois options.
+
+- **Un nouveau numéro chez un opérateur téléphonique.** Twilio et des fournisseurs similaires louent des numéros dans de nombreux pays ; un numéro local américain coûte [1,15 $ par mois](https://www.twilio.com/en-us/voice/pricing/us).
+- **Renvoyer votre numéro actuel.** Renvoyez les appels vers le numéro de l'agent après 18 h, ou quand personne ne répond dans les 20 secondes. C'est la façon la plus sûre de commencer.
+- **Porter votre numéro.** Transférez votre numéro actuel chez un nouvel opérateur, comme on garde son numéro de mobile en changeant d'opérateur ([la procédure de Twilio](https://www.twilio.com/docs/phone-numbers/port-in)). Faites-le une fois que le pilote a fait ses preuves.
+
+Le **SIP** (Session Initiation Protocol) est la norme qu'utilisent les systèmes de téléphonie par internet pour établir les appels : une connexion SIP permet à votre standard actuel d'envoyer des appels à l'agent et de les récupérer. ElevenLabs, par exemple, [le prend en charge](https://elevenlabs.io/docs/agents-platform/phone-numbers/sip-trunking).
+
+### Le connecter à votre agenda et à votre CRM
+
+Un agent vocal sans outils, c'est un répondeur bien élevé. La valeur se trouve dans ce qu'il fait pendant l'appel : vérifier les créneaux libres, créer la réservation, ajouter l'appelant à votre CRM (le logiciel de gestion de la relation client, où l'équipe commerciale suit ses contacts et ses affaires) ou enregistrer une demande d'intervention. Nous présentons les options dans [comment connecter un agent IA à votre ERP et à votre CRM](/fr/blog/connect-ai-agent-erp-crm). Donnez à l'agent l'accès le plus restreint qui lui permet de faire son travail.
+
+## Cas d'usage de l'IA vocale par fonction
+
+**1. Support entrant pour les questions répétitives.** Horaires d'ouverture, état d'une commande, « mon remboursement est-il passé ? ». L'agent répond à partir d'une [base de connaissances](/fr/blog/ai-agent-knowledge-base) et consulte les données de commande. Pour l'IA vocale au service client, l'indicateur est simple : combien d'appels se terminent avec la question résolue et sans transfert.
+
+**2. Prise et modification de rendez-vous.** L'appelant veut mardi après-midi ; l'agent propose deux créneaux, en réserve un et envoie une confirmation par SMS. N'oubliez pas les reports : ces appels interrompent les équipes toute la journée et nécessitent rarement une personne.
+
+**3. Qualification des prospects.** Un prospect appelle pour un devis. L'agent pose les questions que votre équipe commerciale pose toujours (ce dont il a besoin, où, dans quel délai, budget approximatif), inscrit les réponses dans le CRM et réserve un appel avec un commercial pour les prospects qui correspondent. L'[exemple de prompt d'agent](https://elevenlabs.io/voice-agents) d'ElevenLabs collecte exactement cela : nom, entreprise, problème, calendrier et tout indice de budget.
+
+**4. Rappels et confirmations.** Des appels sortants vers des personnes qui ont déjà une relation avec vous : « Votre rendez-vous est demain à 10 h, pouvez-vous toujours venir ? » Si ce n'est pas le cas, l'agent replanifie sur-le-champ. Vérifiez d'abord les règles de votre pays sur les appels sortants automatisés ; certaines exigent un consentement préalable.
+
+## Cas d'usage de l'IA vocale par secteur
+
+Les mêmes briques, appliquées là où les appels manqués coûtent vraiment de l'argent.
+
+**5. Artisans : plombiers, électriciens, chauffagistes.** La personne qui pourrait répondre au téléphone est généralement sous un évier. Un agent téléphonique IA décroche, distingue les urgences (« l'eau traverse le plafond ») des interventions courantes, prend l'adresse et les photos par SMS, puis planifie une visite ou transfère l'urgence à la personne d'astreinte.
+
+**6. Cabinets : dentaires, de kinésithérapie, vétérinaires.** Un standard téléphonique IA gère les prises de rendez-vous, les annulations et les appels du type « auriez-vous quelque chose plus tôt ? ». La règle absolue : aucun conseil médical. Toute question sur des symptômes, des médicaments ou des résultats part directement vers une personne.
+
+**7. Immobilier : agences et gestionnaires de biens.** Demandes de visite et signalements de maintenance des locataires. L'agent planifie les visites et transforme « la chaudière fait un drôle de bruit » en demande d'intervention structurée, avec l'adresse, le problème et un numéro de rappel.
+
+**8. Hôtellerie et restauration : restaurants et hôtels.** Réservations de tables, arrivées tardives, demandes alimentaires particulières. Les clients appellent dans leur propre langue : ElevenLabs annonce [plus de 90 langues](https://elevenlabs.io/pricing/api) pour ses modèles d'agents. Un hôtel à Tunis ou à Marrakech peut proposer l'arabe, le français et l'anglais sur un seul numéro, à condition de tester chaque langue (voir les limites plus bas).
+
+## Ce que cela coûte
+
+Les agents vocaux sont facturés à la minute. Nous avons consulté les pages tarifs officielles le 24 octobre 2026. Tous les prix sont en dollars américains, hors TVA, et changent souvent.
+
+| Fournisseur | Ce que vous payez | Source |
+| --- | --- | --- |
+| ElevenLabs Agents | Offres en libre-service, de la gratuité (15 minutes) à 990 $ par mois ; Pro coûte 99 $ par mois avec 1 238 minutes incluses, puis 0,08 $ la minute. Le modèle d'IA est facturé à part. Pas de frais de téléphonie, votre opérateur vous facture directement | [Tarifs ElevenLabs Agents](https://elevenlabs.io/pricing/agents) |
+| Retell AI | 0,07 $ à 0,31 $ la minute selon le modèle et la voix ; leur exemple par défaut est à 0,11 $ la minute. Les appels américains via la téléphonie de Retell ajoutent environ 0,015 $ la minute, les numéros coûtent 2 $ par mois | [Tarifs Retell](https://www.retellai.com/pricing) |
+| Vapi | 0,05 $ la minute de frais de plateforme, plus la reconnaissance vocale, le modèle et la voix à prix coûtant, soit environ 0,03 $ à 0,08 $ la minute au total dans leur simulateur. Un numéro de téléphone inclus | [Tarifs Vapi](https://vapi.ai/pricing) |
+| Twilio (ligne téléphonique) | Numéro local américain 1,15 $ par mois ; réception d'appels 0,0085 $ la minute, émission d'appels 0,014 $ la minute | [Tarifs voix Twilio États-Unis](https://www.twilio.com/en-us/voice/pricing/us) |
+
+Un exemple à titre d'illustration, avec des hypothèses inventées et non des données client : un cabinet reçoit **1 500 appels par mois**, d'une durée moyenne de **3 minutes**, soit 4 500 minutes. Pour ElevenLabs, nous retenons 0,04 $ la minute pour le modèle d'IA, le chiffre qu'utilise le simulateur de Retell pour son modèle par défaut.
+
+| Configuration (à titre d'illustration) | Par appel | Par mois |
+| --- | --- | --- |
+| Vapi, composants les moins chers de son simulateur | environ 0,25 $ | environ 370 $ |
+| Retell, exemple par défaut plus téléphonie américaine et un numéro | environ 0,38 $ | environ 565 $ |
+| ElevenLabs Pro, minutes supplémentaires, modèle à 0,04 $, numéro Twilio et minutes entrantes | environ 0,39 $ | environ 580 $ |
+| Vapi, composants les plus chers de son simulateur | environ 0,39 $ | environ 580 $ |
+
+Une minute tout compris revient donc à environ 0,08 $ à 0,13 $. Ce n'est que la facture d'usage ; la mise en place, les tests et la relecture des appels représentent l'essentiel de l'effort. C'est le modèle d'IA qui fait le plus varier la facture, pour les raisons expliquées dans [le coût en tokens d'un agent IA](/fr/blog/ai-agent-token-cost) : un modèle plus gros et des instructions plus longues coûtent plus cher à la minute.
+
+## Limites : accents, langues et transfert à un humain
+
+**Accents et dialectes.** La reconnaissance vocale ne vaut que ce sur quoi elle a été entraînée. Une [étude de 2020 menée par Stanford](https://pmc.ncbi.nlm.nih.gov/articles/PMC7149386/) sur cinq grands systèmes de reconnaissance vocale a relevé un taux d'erreur moyen de 35 % des mots pour les locuteurs afro-américains, contre 19 % pour les locuteurs blancs. Les systèmes ont progressé depuis, mais testez avec des enregistrements de vos vrais appelants. « Prend en charge l'arabe » ne vous dit pas comment l'outil gère le dialecte tunisien ou marocain mêlé de français.
+
+**Bruit et mauvaises lignes.** Les appelants sur un chantier ou avec un signal mobile faible sont plus difficiles à comprendre, et la prise de parole peut encore mal se passer : l'agent coupe la parole pendant une pause, ou parle en même temps que quelqu'un. Testez-le.
+
+**Transfert à un humain.** C'est ce qui décide si les appelants font confiance au système. [Retell](https://www.retellai.com/pricing) cite le transfert d'appel parmi ses fonctions, et ElevenLabs dispose d'un [outil de transfert](https://elevenlabs.io/docs/agents-platform/customization/tools/system-tools/transfer-to-human) qui bascule l'appel vers un numéro de téléphone quand des conditions que vous définissez sont remplies. Mettez ces conditions par écrit : l'appelant demande une personne, s'énerve, formule une réclamation, évoque la santé, l'argent ou des questions juridiques, ou l'agent ne comprend pas deux fois de suite. Transmettez un court résumé avec le transfert et, quand personne n'est disponible, proposez un rappel à une heure promise.
+
+Un agent téléphonique est aussi une porte d'entrée dans vos systèmes : quelqu'un peut essayer de le convaincre de révéler la réservation d'un autre client. Les règles de permissions de [la sécurité des agents IA](/fr/blog/ai-agent-security) s'appliquent à la voix autant qu'au texte.
+
+## Aspects juridiques : informer sur l'IA et consentement à l'enregistrement des appels dans l'UE
+
+Il s'agit d'informations générales, pas d'un conseil juridique. Faites vérifier votre configuration par un avocat dans chaque pays où vous recevez des appels.
+
+**Dites aux appelants qu'ils parlent à une IA.** L'[article 50 de l'AI Act](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-50) prévoit que les systèmes qui interagissent directement avec des personnes doivent être conçus de manière à ce que ces personnes soient informées qu'elles ont affaire à un système d'IA, sauf si c'est évident pour une personne raisonnablement bien informée. Cette obligation de transparence s'applique à partir du 2 août 2026 ; l'[Omnibus numérique](https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/) n'a accordé un délai supplémentaire, jusqu'au 2 décembre 2026, que pour le marquage des contenus générés par IA issus de systèmes déjà sur le marché. Et plus l'agent paraît humain, moins c'est évident : le réalisme ne supprime donc pas l'obligation. Annoncez-le dès la première phrase de chaque appel. Nous détaillons le cadre général dans [agents IA, RGPD et AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act).
+
+**L'enregistrement et les transcriptions relèvent du RGPD.** L'enregistrement de la voix d'une personne et la transcription de ce qu'elle a dit sont des données personnelles. Il vous faut une [base légale](https://gdpr-info.eu/art-6-gdpr/) pour les conserver, vous devez [informer les appelants](https://gdpr-info.eu/art-13-gdpr/) de ce que vous enregistrez, pourquoi et pour combien de temps, et vous ne pouvez garder les données [que le temps nécessaire](https://gdpr-info.eu/art-5-gdpr/). Par ailleurs, un agent vocal travaille par nature à partir d'une transcription de l'appel : désactiver l'enregistrement audio ne veut pas dire que vous ne traitez pas ce que disent les appelants.
+
+**Les règles nationales diffèrent.** Deux exemples :
+
+- **Allemagne.** L'[article 201 du Code pénal allemand (§201 StGB)](https://www.gesetze-im-internet.de/stgb/__201.html) fait de l'enregistrement non autorisé des propos tenus à titre privé par une personne une infraction pénale, passible d'une peine pouvant aller jusqu'à trois ans de prison ou d'une amende. En pratique, obtenez le consentement avant d'enregistrer.
+- **France.** Dans sa fiche sur l'écoute et l'enregistrement des appels sur le lieu de travail, la CNIL, l'autorité de protection des données, [indique que les interlocuteurs doivent être informés](https://www.cnil.fr/fr/lecoute-et-lenregistrement-des-appels-sur-le-lieu-de-travail) en début d'appel de l'enregistrement, de sa finalité et de leur droit de s'y opposer, l'information complète pouvant être mise à disposition sur un site web. Les enregistrements ne doivent en principe pas être conservés plus de six mois.
+
+Un réglage par défaut raisonnable : annoncez l'IA et l'enregistrement dès la première phrase, laissez les appelants s'y opposer ou demander une personne, ne gardez les transcriptions que le temps nécessaire, et supprimez l'audio plus tôt.
+
+## Comment mener un pilote
+
+Quatre à six semaines, une seule question : l'agent gère-t-il un type d'appel assez bien pour être conservé ?
+
+1. **Choisissez un type d'appel.** Les appels de prise de rendez-vous, ou ceux en dehors des horaires, pas « tous les appels ». Comptez combien vous en recevez et combien vous en manquez aujourd'hui. C'est votre point de référence.
+2. **Commencez par le renvoi d'appel.** Ne renvoyez que les appels sans réponse ou hors horaires. Votre ligne principale reste intacte.
+3. **Rédigez le script et la règle de transfert.** La première phrase (annonce de l'IA et de l'enregistrement), les questions à poser, ce que l'agent peut réserver, et le moment exact où il passe la main.
+4. **Testez d'abord en interne.** Votre équipe l'appelle 50 fois : appelants impolis, accents marqués, bruit de fond.
+5. **Passez en production et écoutez.** Lisez les transcriptions tous les jours la première semaine, puis chaque semaine. Suivez les appels traités sans transfert, les réservations finalisées, les transferts et les réclamations.
+6. **Décidez sur la base des chiffres.** Comparez la facture mensuelle aux appels que vous manquiez auparavant. Si cela fonctionne, élargissez les horaires ou ajoutez un deuxième type d'appel.
+
+Sous le capot, un agent vocal utilise les mêmes briques que les [chatbots et assistants](/fr/services/chatbots) que nous construisons : des réponses tirées de vos propres documents, et un passage de relais propre vers une personne.
+
+## FAQ
+
+### Que sont les agents vocaux IA pour les entreprises ?
+
+Ce sont des assistants IA qui répondent au téléphone et passent des appels avec une voix naturelle. Connectés à votre agenda ou à votre CRM, ils peuvent prendre des rendez-vous, qualifier des prospects ou prendre un message, et transférer l'appel à une personne quand il le faut.
+
+### Combien coûte un agent vocal IA ?
+
+Sur les plateformes que nous avons vérifiées le 24 octobre 2026, une minute tout compris coûte environ 0,08 $ à 0,13 $, modèle d'IA et ligne téléphonique inclus. Dans notre exemple, à titre d'illustration, de 1 500 appels par mois d'une durée moyenne de trois minutes, cela représente environ 370 $ à 580 $ par mois, hors travail de mise en place et hors TVA.
+
+### Puis-je garder le numéro de téléphone actuel de mon entreprise ?
+
+Oui. Vous pouvez renvoyer les appels de votre numéro actuel vers celui de l'agent, par exemple seulement en dehors des horaires d'ouverture ou quand personne ne décroche, ou bien transférer (porter) votre numéro chez un opérateur téléphonique qui le relie à l'agent. Le renvoi d'appel est la façon la plus simple de lancer un pilote.
+
+### Dois-je dire aux appelants qu'ils parlent à une IA ?
+
+Dans l'UE, oui, sauf si c'est déjà évident. L'article 50 de l'AI Act impose aux systèmes qui dialoguent directement avec des personnes d'indiquer clairement qu'il s'agit d'une IA, et cette obligation s'applique à partir du 2 août 2026. Les voix actuelles peuvent paraître assez humaines pour que les appelants ne s'en doutent pas : dites-le dès la première phrase de l'appel.
+
+### Un agent vocal peut-il transférer un appel à une personne ?
+
+Oui, et il le doit. Les principales plateformes peuvent transférer un appel en cours vers un numéro de téléphone quand des conditions que vous définissez sont remplies, par exemple un appelant mécontent ou une question médicale, idéalement avec un court résumé.
+
+---
+
+**Vous envisagez un agent téléphonique IA pour votre entreprise ?** [Réservez un appel](/fr/book) : nous vous aidons à choisir le premier type d'appel à automatiser et à estimer ce qu'il coûterait.

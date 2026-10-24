@@ -1,0 +1,129 @@
+---
+title: "Coût des tokens d'un agent IA : ce que les tokens et la fenêtre de contexte coûtent à votre entreprise"
+summary: "Ce qu'est un token, pourquoi la fenêtre de contexte compte, et comment la conception d'un agent IA peut faire coûter la même tâche quelques centimes ou des milliers. Avec un exemple chiffré sur le traitement des factures."
+description: "Coût des tokens d'un agent IA expliqué aux dirigeants : tokens, fenêtre de contexte, un exemple chiffré sur des factures et cinq leviers pour payer moins."
+slug: "ai-agent-token-cost"
+date: "2026-10-24"
+tags: ["Agents IA", "Coûts"]
+primaryKeyword: "coût des tokens d'un agent IA"
+secondaryKeywords: ["qu'est-ce qu'un token en IA", "fenêtre de contexte", "prix des LLM", "réduire les coûts de l'IA"]
+author: "Fares"
+faq:
+  - question: "Qu'est-ce qu'un token en IA ?"
+    answer: "Un token est l'unité que les modèles d'IA utilisent pour lire et écrire du texte. En anglais, un token représente environ quatre caractères, soit à peu près les trois quarts d'un mot. Les fournisseurs d'IA facturent au token, séparément pour le texte que le modèle lit (l'entrée) et celui qu'il écrit (la sortie)."
+  - question: "Combien coûte un agent IA par mois ?"
+    answer: "Cela dépend du volume, du modèle choisi et, surtout, de la conception. Dans notre exemple chiffré de 2 000 factures par mois, la facture de tokens va de moins de 10 $ à environ 12 000 $ pour la même tâche, selon le modèle utilisé et la quantité de texte que l'agent relit à chaque étape."
+  - question: "Qu'est-ce qu'une fenêtre de contexte ?"
+    answer: "La fenêtre de contexte est la quantité maximale de texte qu'un modèle d'IA peut prendre en compte en une fois, mesurée en tokens. Elle fonctionne comme un bureau : tout ce dont l'agent a besoin pour l'étape en cours doit y tenir. Un bureau plus grand coûte plus cher à remplir, et la recherche montre que les modèles deviennent moins fiables quand il est encombré."
+  - question: "Comment réduire le coût des tokens d'un agent IA ?"
+    answer: "N'envoyez à l'agent que le texte dont il a besoin à chaque étape, utilisez un modèle plus petit pour les étapes simples comme l'extraction, réutilisez les instructions fixes grâce à la mise en cache des prompts, faites passer le travail non urgent par les services de traitement par lots des fournisseurs à moitié prix, et limitez le nombre d'étapes qu'un agent peut faire par tâche."
+---
+
+**Le coût des tokens d'un agent IA, c'est la facture d'usage que votre fournisseur d'IA vous adresse chaque fois que l'agent lit ou écrit du texte, mesurée en petits morceaux appelés tokens.** Pour un agent bien conçu, c'est généralement la plus petite ligne du budget. Pour un agent mal conçu, la même tâche peut coûter mille fois plus, et personne ne s'en rend compte avant l'arrivée de la facture.
+
+Cet article explique les tokens et la fenêtre de contexte avec des mots simples, puis déroule un exemple chiffré pour que vous puissiez vérifier n'importe quelle estimation qu'on vous présente. Il fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business).
+
+## Qu'est-ce qu'un token en IA ?
+
+Les modèles d'IA ne lisent pas les mots comme vous et moi. Ils découpent le texte en **tokens** : des mots courts entiers, des morceaux de mots plus longs, de la ponctuation. Selon la règle empirique d'OpenAI, [un token représente environ quatre caractères d'anglais, soit à peu près les trois quarts d'un mot](https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens). Un contrat fournisseur de 750 mots fait donc environ 1 000 tokens.
+
+Deux choses sur les tokens comptent pour votre budget.
+
+**Vous payez la lecture et l'écriture séparément.** Les tokens d'entrée sont ce que l'agent lit : ses instructions, le document, les données extraites de vos systèmes. Les tokens de sortie sont ce qu'il écrit. Et c'est la sortie qui vous coûtera. Sur les grilles tarifaires publiées actuellement par [OpenAI](https://openai.com/api/pricing/) comme par [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), la sortie coûte environ cinq fois plus que l'entrée.
+
+**La langue change le décompte.** Les tokenizers, la partie du modèle qui fait le découpage, ont été construits surtout à partir de textes en anglais. Des chercheurs de l'université d'Oxford ont constaté qu'un même texte traduit dans différentes langues peut demander [jusqu'à 15 fois plus de tokens](https://proceedings.neurips.cc/paper_files/paper/2023/hash/74bb24dca8334adce292883b4b651eda-Abstract.html). Si vos documents sont en arabe, en français ou en allemand, mesurez le vrai nombre de tokens sur vos propres fichiers avant de vous fier à une estimation faite avec des exemples en anglais.
+
+## Prix des LLM : ce que coûte un million de tokens
+
+Les fournisseurs affichent leurs prix par million de tokens, il faut donc faire un peu de calcul. En octobre 2026, les tarifs publiés couvrent une large fourchette :
+
+- **Les petits modèles rapides**, conçus pour des tâches simples à gros volume comme l'extraction et le tri, commencent autour de **0,10 $ par million de tokens d'entrée** et **0,50 $ par million de tokens de sortie**, chez OpenAI comme chez Anthropic.
+- **Les modèles phares**, les plus performants, coûtent jusqu'à **10 $ par million de tokens d'entrée** et **50 $ par million de tokens de sortie** chez OpenAI.
+
+Cela fait un écart de 1 à 100 entre l'option la moins chère et la plus chère. Les prix changent souvent, considérez donc ces chiffres comme des ordres de grandeur, et vérifiez les pages des fournisseurs au moment de construire votre budget.
+
+Deux remises méritent d'être connues :
+
+- **La mise en cache des prompts.** Quand l'agent envoie le même texte encore et encore, comme ses instructions permanentes, les fournisseurs facturent beaucoup moins la partie répétée. Chez OpenAI, le tarif phare pour l'entrée en cache est de [1 $ au lieu de 10 $ par million de tokens](https://openai.com/api/pricing/).
+- **Le traitement par lots.** Le travail qui peut attendre quelques heures, comme un traitement de nuit, coûte [50 % de moins via la Batch API d'OpenAI](https://openai.com/api/pricing/), et Anthropic propose le même [tarif par lots à moitié prix](https://platform.claude.com/docs/en/about-claude/pricing).
+
+## La fenêtre de contexte : le bureau de votre agent
+
+La **fenêtre de contexte** est la quantité maximale de texte qu'un modèle peut prendre en compte en une fois, mesurée en tokens. Voyez-la comme un bureau. Tout ce dont l'agent a besoin pour l'étape en cours doit s'y trouver : les instructions, la facture, le bon de commande, les notes de l'étape précédente.
+
+Les bureaux actuels sont grands, souvent des centaines de milliers de tokens. On est tenté d'y poser tout. Ne le faites pas, pour deux raisons.
+
+**Chaque token posé sur le bureau est payé à chaque étape.** Un agent travaille en boucle : il lit, décide, agit, puis relit. S'il traîne un document de 100 000 tokens sur dix étapes, vous payez un million de tokens d'entrée, même s'il n'avait besoin que d'un paragraphe. Les prompts longs peuvent aussi coûter plus cher au token : les tarifs standard d'OpenAI [ne s'appliquent qu'en dessous de 272 000 tokens de contexte](https://openai.com/api/pricing/).
+
+**Un bureau encombré produit de moins bonnes décisions.** Des chercheurs de Stanford et de leurs partenaires ont montré que les modèles [exploitent mieux les informations placées au début et à la fin d'un long texte que celles du milieu](https://arxiv.org/abs/2307.03172). Une étude de Chroma publiée en 2025 a testé 18 modèles et constaté que leur [fiabilité baisse à mesure que le texte fourni s'allonge](https://www.trychroma.com/research/context-rot), même sur des tâches simples. Plus de contexte peut vouloir dire une facture plus élevée *et* une réponse moins bonne.
+
+## Un exemple chiffré du coût des tokens d'un agent IA : le traitement des factures
+
+Mettons des chiffres pour voir où part l'argent. Notre agent d'exemple traite les factures fournisseurs : il lit la facture, retrouve le bon de commande et la réception des marchandises, vérifie qu'ils concordent, puis prépare l'écriture ou signale l'écart.
+
+Nous avons inventé ces hypothèses à titre d'illustration. Ce ne sont pas des mesures faites chez un client :
+
+- 2 000 factures par mois.
+- 6 étapes par facture.
+- **Conception économe :** chaque étape lit environ 4 000 tokens (instructions, facture, lignes de commande concernées) et en écrit environ 300.
+- **Conception gaspilleuse :** chaque étape relit l'intégralité des 100 000 tokens de l'archive des contrats fournisseurs « au cas où ».
+
+Par facture, la conception économe lit 24 000 tokens et en écrit 1 800. La conception gaspilleuse en lit 600 000 et en écrit les mêmes 1 800.
+
+Voici ce que cela coûte :
+
+| Conception et modèle | Par facture | Par mois (2 000 factures) |
+| --- | --- | --- |
+| Conception économe, petit modèle (0,10 $ en entrée, 0,50 $ en sortie par million de tokens) | environ 0,003 $ | environ 7 $ |
+| Conception économe, modèle phare (10 $ en entrée, 50 $ en sortie) | environ 0,33 $ | environ 660 $ |
+| Conception gaspilleuse, modèle phare | environ 6,09 $ | environ 12 180 $ |
+
+Même tâche, mêmes factures. La facture mensuelle passe d'une somme dérisoire à plus que ce que beaucoup d'entreprises paient pour un salarié à temps plein, uniquement à cause de choix de conception. Et la version coûteuse risque d'être *moins* précise, à cause du bureau encombré.
+
+En pratique, les meilleurs montages combinent les modèles : un petit pour lire et extraire les champs, un plus puissant uniquement pour les exceptions délicates. Le résultat se situe généralement bien en dessous de la ligne « conception économe, modèle phare ».
+
+## Comment réduire les coûts de l'IA sans perdre en qualité
+
+Voici les leviers que nous actionnons quand nous construisons un [agent IA](/fr/services/ai-agents) pour un client.
+
+1. **N'envoyer que le nécessaire.** Au lieu de toute l'archive des contrats, l'agent cherche les deux clauses qui comptent et ne lit que celles-là. C'est exactement ce que fait une base de connaissances avec recherche, comme l'explique notre guide sur la [base de connaissances d'un agent IA](/fr/blog/ai-agent-knowledge-base).
+2. **Utiliser le plus petit modèle qui fait le travail.** L'extraction et le tri ont rarement besoin d'un modèle phare. Testez d'abord le petit, et ne montez en gamme que là où les résultats montrent que vous ne pouvez pas faire autrement.
+3. **Mettre en cache les parties fixes.** Les instructions permanentes et les tables de référence qui ne changent pas d'une facture à l'autre peuvent être mises en cache pour une fraction du prix.
+4. **Regrouper ce qui peut attendre.** Si les factures doivent seulement être prêtes pour 9 h le lendemain matin, un traitement par lots de nuit divise par deux la facture de tokens.
+5. **Limiter la boucle.** Fixez un nombre maximal d'étapes par tâche. Un agent bloqué à relancer la même recherche ratée peut brûler des tokens pour rien. Une limite transforme ce cas en alerte pour une personne.
+
+Il y a aussi un bénéfice côté sécurité. Un agent qui voit moins de données a moins de choses à laisser fuiter, ce qui rejoint les règles d'autorisation décrites dans [les risques de sécurité des agents IA](/fr/blog/ai-agent-security).
+
+## Ce qu'il faut exiger dans une estimation de coûts
+
+Si un prestataire ou votre propre équipe propose un agent, ne le validez pas avant d'avoir vu ces chiffres :
+
+- Le nombre de tâches attendu par mois, et le nombre d'étapes par tâche.
+- Les tokens lus et écrits par étape, mesurés sur vos vrais documents, dans vos langues.
+- Le modèle utilisé à chaque étape, et pourquoi.
+- L'utilisation ou non de la mise en cache et du traitement par lots.
+- Ce qui se passe quand une tâche dépasse sa limite d'étapes.
+
+Comparez ensuite la facture mensuelle de tokens avec le temps que l'agent fait gagner. Si l'estimation ne répond pas à ces questions, vous avez affaire à une supposition. Nos missions de [conseil en IA](/fr/services/consulting) comprennent exactement ce calcul pour chaque workflow candidat.
+
+## FAQ
+
+### Qu'est-ce qu'un token en IA ?
+
+Un token est l'unité que les modèles d'IA utilisent pour lire et écrire du texte. En anglais, un token représente environ quatre caractères, soit à peu près les trois quarts d'un mot. Les fournisseurs d'IA facturent au token, séparément pour le texte que le modèle lit (l'entrée) et celui qu'il écrit (la sortie).
+
+### Combien coûte un agent IA par mois ?
+
+Cela dépend du volume, du modèle choisi et, surtout, de la conception. Dans notre exemple chiffré de 2 000 factures par mois, la facture de tokens va de moins de 10 $ à environ 12 000 $ pour la même tâche, selon le modèle utilisé et la quantité de texte que l'agent relit à chaque étape.
+
+### Qu'est-ce qu'une fenêtre de contexte ?
+
+La fenêtre de contexte est la quantité maximale de texte qu'un modèle d'IA peut prendre en compte en une fois, mesurée en tokens. Elle fonctionne comme un bureau : tout ce dont l'agent a besoin pour l'étape en cours doit y tenir. Un bureau plus grand coûte plus cher à remplir, et la recherche montre que les modèles deviennent moins fiables quand il est encombré.
+
+### Comment réduire le coût des tokens d'un agent IA ?
+
+N'envoyez à l'agent que le texte dont il a besoin à chaque étape, utilisez un modèle plus petit pour les étapes simples comme l'extraction, réutilisez les instructions fixes grâce à la mise en cache des prompts, faites passer le travail non urgent par les services de traitement par lots des fournisseurs à moitié prix, et limitez le nombre d'étapes qu'un agent peut faire par tâche.
+
+---
+
+**Vous voulez une estimation de coûts réaliste pour votre workflow ?** [Réservez un appel](/fr/book) et nous ferons le calcul sur vos propres documents.

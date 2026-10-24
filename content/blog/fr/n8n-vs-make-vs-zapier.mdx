@@ -1,0 +1,174 @@
+---
+title: "n8n vs Make vs Zapier : quel outil pour votre premier agent IA ?"
+summary: "Une comparaison simple de n8n, Make et Zapier pour construire un premier agent IA : ce que chacun facture, où vivent vos données, cinq agents à construire en une semaine, et le moment où le no-code ne suffit plus."
+description: "n8n vs Make vs Zapier pour votre premier agent IA : tarifs d'octobre 2026, mode de facturation, hébergement des données dans l'UE et cinq agents à créer."
+slug: "n8n-vs-make-vs-zapier"
+date: "2026-10-24"
+updated: "2026-10-24"
+tags: ["Agents IA", "Automatisation"]
+primaryKeyword: "n8n vs Make vs Zapier"
+secondaryKeywords: ["outils d'automatisation des workflows", "zapier ou n8n", "tarifs n8n", "automatisation IA marketing"]
+author: "Fares"
+faq:
+  - question: "n8n est-il vraiment gratuit ?"
+    answer: "La Community Edition auto-hébergée est gratuite pour vos propres besoins internes, sous la Sustainable Use License de n8n, mais vous payez le serveur et la personne qui le fait tourner. Les offres cloud hébergées par n8n sont payantes, à partir de Starter à 20 € par mois en facturation annuelle."
+  - question: "Quel outil coûte le moins cher pour faire tourner un agent IA ?"
+    answer: "Cela dépend du nombre d'étapes de votre agent. n8n facture chaque exécution complète d'un workflow, Make facture des crédits par action et Zapier des tâches par action. Pour un agent à nombreuses étapes qui tourne souvent, la facturation par exécution revient généralement moins cher. Pour un flux simple de deux ou trois étapes, l'écart est faible."
+  - question: "Pouvons-nous garder nos données dans l'UE avec ces outils ?"
+    answer: "Les offres hébergées de n8n stockent les données à Francfort, et l'auto-hébergement vous laisse choisir l'emplacement. Make propose des zones de données dans l'UE, même si certaines fonctions IA passent encore par les États-Unis. Zapier indique héberger les données sur des serveurs AWS aux États-Unis."
+  - question: "Faut-il un développeur pour construire un premier agent IA ?"
+    answer: "Pas pour un petit agent bien cadré. Une personne des opérations ou du marketing à l'aise avec la technique peut en construire un dans Zapier ou Make. n8n récompense un certain niveau technique, surtout en auto-hébergement. Pour tout ce qui touche aux systèmes financiers ou aux données clients, faites relire les permissions par quelqu'un de technique avant la mise en service."
+  - question: "Quand passer du no-code au code sur mesure ?"
+    answer: "Quand la logique déborde du canevas, quand vous avez besoin de vrais tests et d'un contrôle de versions, quand la facturation par étape grimpe avec le volume, ou quand un audit de sécurité pose des questions auxquelles la plateforme ne sait pas répondre. Beaucoup d'entreprises gardent le no-code pour les flux simples et ne passent en code que les agents critiques."
+---
+
+**Pour la plupart des entreprises, le choix entre n8n vs Make vs Zapier se joue sur trois points : le niveau technique de votre équipe, le nombre d'étapes de votre agent et l'endroit où vos données doivent rester.** Zapier est le plus simple pour démarrer, Make offre le plus de marge avec un petit budget, et n8n donne le plus de contrôle, jusqu'à l'installer sur vos propres serveurs. Les trois permettent désormais de construire un agent IA qui fonctionne.
+
+Nous comparons ci-dessous le prix, la facturation, les fonctions d'agent et l'hébergement des données. Cet article fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business) : si vous vous demandez encore ce qu'est un agent, commencez par là.
+
+D'abord quelques définitions. Les **outils d'automatisation des workflows** relient vos applications : quand quelque chose se passe dans l'une (un formulaire est envoyé), quelque chose se passe dans une autre (une affaire est créée dans votre CRM, le logiciel où l'équipe commerciale suit ses contacts et ses affaires). Un **agent IA** est une étape de ce flux où un modèle d'IA lit la situation, choisit l'outil à utiliser et agit dans les limites que vous fixez. Un **LLM** (grand modèle de langage) est le modèle d'IA qui lit et rédige.
+
+## Le choix rapide : n8n vs Make vs Zapier selon votre profil
+
+| Votre situation | Notre choix habituel | Pourquoi |
+| --- | --- | --- |
+| Équipe non technique, flux simples, beaucoup d'applications différentes | Zapier | Le plus facile à prendre en main, et il se connecte à plus de 9 000 applications |
+| Petit budget, esprit visuel, flux moyennement complexes | Make | Offres d'entrée bon marché et canevas visuel clair |
+| Équipe technique, beaucoup d'étapes par exécution, données à garder chez vous | n8n | Facturé par exécution, auto-hébergeable, étapes de code incluses |
+| Exigences strictes sur les données dans l'UE | n8n (cloud ou auto-hébergé) ou Make sur une zone UE | Voir la partie sur les données plus bas pour les réserves |
+| Vous voulez revendre de l'automatisation à vos propres clients | Parlez d'abord à l'éditeur | La licence gratuite de n8n interdit de laisser des clients construire des workflows sur votre instance |
+
+L'outil doit convenir aux personnes qui vont le maintenir, pas à celles qui construisent la démo.
+
+## Comment chacun facture : tarifs n8n, crédits Make, tâches Zapier
+
+- **n8n facture à l'exécution.** Une exécution correspond à [un passage complet d'un workflow](https://n8n.io/pricing/), quel que soit son nombre d'étapes. Dix étapes ou cent, cela reste une exécution.
+- **Make facture au crédit.** [Chaque action de module](https://www.make.com/en/pricing), comme ajouter une ligne dans un tableur ou lire un e-mail, consomme un crédit. Les fonctions qui utilisent l'IA intégrée de Make peuvent en consommer davantage.
+- **Zapier facture à la tâche.** Chaque action réussie dans un Zap compte comme une tâche, et [le déclencheur qui lance le Zap ne compte pas](https://zapier.com/pricing). Les étapes d'IA, le code et les appels MCP (MCP est une norme qui permet aux outils d'IA de se connecter à d'autres logiciels) puisent tous dans la même réserve. Un appel d'outil Zapier MCP consomme deux tâches.
+
+Voici les offres le jour où nous avons écrit cet article :
+
+| | n8n | Make | Zapier |
+| --- | --- | --- | --- |
+| Ce que vous payez | Exécutions (passages complets) | Crédits (par action) | Tâches (par action) |
+| Option gratuite | Community Edition auto-hébergée ; essai cloud de 1 000 exécutions, sans carte | Offre Free, 1 000 crédits par mois, 2 scénarios actifs | Offre Free, 100 tâches par mois, Zaps à deux étapes uniquement |
+| Offre d'entrée | Starter : 20 €/mois en facturation annuelle (24 € au mois), 2 500 exécutions | Core : 9 $/mois en facturation annuelle, 10 000 crédits | Professional : à partir de 19,99 $/mois en facturation annuelle |
+| Offre suivante | Pro : 50 €/mois en facturation annuelle (60 € au mois), 10 000 exécutions | Pro : 16 $/mois ; Teams : 29 $/mois (10 000 crédits, facturation annuelle) | Team : à partir de 69 $/mois en facturation annuelle, 25 utilisateurs |
+| Grandes équipes | Business : 667 €/mois en facturation annuelle, 40 000 exécutions, auto-hébergé uniquement ; Enterprise sur demande | Enterprise sur demande | Enterprise sur demande |
+| Produit agent | Nœud AI Agent inclus dans toutes les offres | Make AI Agents (bêta) inclus dans toutes les offres | Zapier Agents : niveau gratuit avec 400 activités par mois ; Pro à 33,33 $/mois en facturation annuelle pour 1 500 |
+
+*Prix relevés le 24 octobre 2026 sur la page tarifs de chaque éditeur. n8n nous a affiché des euros (les visiteurs d'autres régions peuvent voir des dollars) ; Make et Zapier affichaient des dollars américains. Aucune des trois pages ne précise si la TVA est incluse, vérifiez donc au moment du paiement.*
+
+### Pourquoi le mode de facturation compte pour les agents
+
+Les agents font beaucoup d'étapes. Prenons, à titre d'illustration, un agent qui tourne 1 000 fois par mois et réalise huit actions à chaque fois : lire l'e-mail, retrouver le client, appeler le modèle d'IA, vérifier le CRM, et ainsi de suite. Ces chiffres sont inventés pour montrer le mécanisme, ils ne sont pas mesurés.
+
+- **n8n :** 1 000 exécutions. Cela tient dans l'offre Starter.
+- **Make :** environ 8 000 crédits, plus des crédits supplémentaires pour les tokens d'IA si vous utilisez le fournisseur d'IA de Make.
+- **Zapier :** environ 7 000 tâches (le déclencheur est gratuit), plus le coût des étapes d'IA aux tarifs de Zapier.
+
+Même agent, compteurs très différents. C'est pourquoi le choix entre Zapier ou n8n se résume souvent au nombre d'étapes : pour un flux à deux étapes, cela ne change presque rien ; pour un long agent qui tourne toute la journée, la facturation par exécution prend vite l'avantage.
+
+N'oubliez pas que le modèle d'IA a aussi sa propre facture, calculée en tokens. Nous l'expliquons dans [le coût en tokens d'un agent IA](/fr/blog/ai-agent-token-cost).
+
+## Les capacités d'agent IA
+
+Les trois permettent aujourd'hui de construire un vrai agent. Ils y arrivent de façons différentes.
+
+**n8n** propose un [nœud AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) : vous branchez un modèle de chat et un ou plusieurs outils, et l'agent décide quel outil appeler. Sa page tarifs mentionne aussi la prise en charge de MCP en client et en serveur, la validation humaine des appels d'outils, des évaluations pour tester la qualité de l'agent, et des étapes de code en JavaScript ou en Python dans toutes les offres cloud. C'est le plus souple, et c'est celui qui demande le plus à la personne qui construit.
+
+**Make** a publié une nouvelle version de son [application Make AI Agent le 2 février 2026](https://help.make.com/introduction-to-make-ai-agent-new), toujours en bêta ouverte, donc les fonctions et les prix peuvent changer. Les agents vivent dans les scénarios visuels de Make, peuvent s'appuyer sur des fichiers de connaissances comme des FAQ et des politiques internes, et peuvent appeler des modules, d'autres scénarios, des outils MCP et d'autres agents. Vous pouvez utiliser le fournisseur d'IA de Make sans compte chez OpenAI ou Anthropic, ou brancher le vôtre sur les offres payantes. Les conseils de Make sont d'une franchise appréciable : confiez aux agents les tâches que vous confieriez à un stagiaire, et évitez les données sensibles et les décisions financières lourdes de conséquences.
+
+**Zapier** propose [Zapier Agents](https://zapier.com/agents), un produit à part où vous décrivez un agent, lui donnez les connaissances de l'entreprise et le laissez agir dans son catalogue d'applications. Dans les Zaps classiques, vous avez aussi des étapes d'IA, et Zapier MCP permet à des assistants IA externes de déclencher des actions dans vos applications. C'est le moyen le plus rapide d'obtenir quelque chose qui marche, même si les agents sont facturés sur leur propre offre, en activités.
+
+Voici le schéma simplifié d'un agent de qualification des prospects dans n8n. Ce n'est pas un workflow complet, seulement sa forme :
+
+```text
+Workflow n8n simplifié : qualification des prospects entrants (à titre d'illustration)
+
+1. Déclencheur  Webhook : nouveau formulaire de contact envoyé
+2. AI Agent     Modèle de chat : le modèle de votre choix
+                Outils : « rechercher un contact » dans le CRM, requête HTTP pour lire le site de l'entreprise
+                Instructions : noter le prospect de 1 à 5 selon nos critères, donner une raison
+3. IF           note de 4 ou 5 -> créer l'affaire dans le CRM, publier un résumé dans le canal commercial
+                note de 1 à 3 -> ajouter à la liste de relance
+4. Validation   une personne valide avant tout e-mail envoyé au prospect
+```
+
+L'IA ne s'occupe que de la partie jugement. Tout le reste reste de l'automatisation simple et prévisible.
+
+## Données, RGPD et auto-hébergement
+
+Si vous traitez des données personnelles de personnes situées dans l'UE, le lieu de stockage et de traitement compte au regard du RGPD. Nous détaillons les règles dans [agents IA, RGPD et AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act). Voici comment les trois se comparent.
+
+**n8n.** Les offres hébergées [stockent les données à Francfort, en Allemagne](https://n8n.io/pricing/). Vous pouvez aussi l'auto-héberger, c'est-à-dire faire tourner n8n sur un serveur que vous contrôlez, dans le pays de votre choix. La version gratuite auto-hébergée relève de la [Sustainable Use License](https://docs.n8n.io/n8n-community-license) de n8n, une licence dite « fair-code » : vous pouvez l'utiliser et la modifier pour vos propres besoins internes, mais la [FAQ de la licence](https://docs.n8n.io/n8n-community-license/community-license/license-faq) exclut de l'héberger comme un service où vos clients construisent leurs propres workflows. Avis aux agences.
+
+**Make.** Make tourne sur AWS dans l'UE ou en Amérique du Nord, et vous choisissez une zone de données pour votre organisation. Mais lisez les petites lignes. La page de Make sur les [fournisseurs d'IA et les zones de données](https://help.make.com/ai-providers-and-data-zones-in-make) précise que choisir une zone UE ne garantit pas que chaque requête d'IA reste dans l'UE : certaines fonctions et certains modèles passent par les États-Unis ou le Royaume-Uni, et utiliser votre propre fournisseur d'IA supprime la garantie UE de Make. Consultez le tableau de cette page pour chaque fonction que vous utilisez. Toutes les offres Make tournent sur l'hébergement de Make, même si l'offre Enterprise inclut un agent sur site pour atteindre les systèmes de votre réseau interne.
+
+**Zapier.** Zapier indique [héberger les données sur des serveurs AWS aux États-Unis](https://zapier.com/legal/data-privacy) et être certifié dans le cadre du Data Privacy Framework UE-États-Unis, qui fournit une base juridique pour transférer des données personnelles de l'UE vers les États-Unis. Cela peut fonctionner, mais votre délégué à la protection des données doit donner son accord.
+
+Quel que soit votre choix, les permissions de l'agent comptent davantage que le logo de l'outil. Consultez [la sécurité des agents IA](/fr/blog/ai-agent-security) pour les règles que nous appliquons.
+
+## Le meilleur choix selon le métier
+
+| Équipe | Premier agent typique | Outil qui convient le plus souvent |
+| --- | --- | --- |
+| Marketing | Transformer un article publié en brouillons de posts pour les réseaux sociaux et en paragraphe de newsletter | Zapier ou Make, simple et riche en applications |
+| Commercial | Qualifier les prospects entrants et écrire un résumé dans le CRM | N'importe lequel des trois ; Zapier si c'est l'équipe CRM qui le maintient |
+| Finance | Lire les factures fournisseurs arrivées dans une boîte mail et préparer des brouillons d'écritures | n8n ou code sur mesure, à cause du volume, des données et des besoins de contrôle |
+| Opérations | Rapport hebdomadaire des anomalies à partir de tableurs et d'exports des systèmes | Make ou n8n, beaucoup d'étapes par exécution |
+| Service client | Trier les tickets et rédiger des réponses à partir de la base de connaissances | Make ou n8n ; gardez une personne sur le bouton d'envoi |
+
+L'automatisation IA du marketing est souvent le gain le plus facile : peu de risque, contenu public, une personne vérifie avant toute publication. La finance se situe à l'autre extrême. Les factures contiennent des coordonnées bancaires et déclenchent des mouvements d'argent : commencez en lecture seule et laissez la comptabilisation à une personne. Notre guide pour [connecter un agent IA à votre ERP et à votre CRM](/fr/blog/connect-ai-agent-erp-crm) détaille ces permissions.
+
+## Cinq agents à construire en une semaine
+
+Chacun est réaliste pour une petite équipe avec une personne à l'aise avec l'outil.
+
+1. **Qualification des prospects (commercial).** Relie votre formulaire web, votre CRM et la messagerie de votre équipe. Note chaque prospect, ajoute une raison en une ligne et ne crée une affaire que pour les meilleurs.
+2. **Réception des factures (finance).** Relie une boîte mail partagée dédiée aux factures et un tableur ou votre outil comptable en mode brouillon. Extrait le fournisseur, le montant, la date et le numéro de commande, et signale tout ce qu'il n'arrive pas à lire. Il ne comptabilise et ne paie jamais rien.
+3. **Tri des tickets (service client).** Relie votre outil de support et un dossier d'articles d'aide. Classe chaque ticket par sujet et par urgence, et rédige une réponse qu'un conseiller vérifie.
+4. **Recyclage de contenu (marketing).** Relie le flux de votre blog ou votre espace partagé et votre outil de planification. Rédige trois posts pour les réseaux sociaux par article, dans le style de la maison. Une personne relit et publie.
+5. **Synthèse hebdomadaire des opérations (opérations).** Relie les tableurs ou les exports des systèmes que vos managers utilisent déjà. Chaque lundi, il liste les commandes en retard, les stocks sous le seuil et tout ce qui sort de l'ordinaire, puis envoie un court résumé par e-mail.
+
+Leur point commun : une entrée claire, quelques connexions, et une personne qui valide tout ce qui sort de l'entreprise.
+
+## Quand le no-code ne suffit plus
+
+Les outils no-code sont excellents pour démarrer. Connaissez leurs limites avant d'en dépendre.
+
+- **Logique complexe.** Quand un flux compte des dizaines de branches, de boucles et d'exceptions, le canevas visuel devient plus difficile à lire que du code.
+- **Tests.** Vous voulez rejouer 200 cas connus après chaque modification et voir ce qui a cassé. n8n intègre des évaluations ; chez les autres, c'est surtout manuel.
+- **Gestion des versions.** Savoir qui a changé quoi, et pouvoir revenir en arrière, relève de l'hygiène de base pour tout ce qui est critique. Chez n8n, le contrôle de versions Git et les environnements séparés commencent avec l'offre Business.
+- **Coût à grande échelle.** Une facturation par action paraît bon marché à 1 000 exécutions et très différente à 100 000. Modélisez le coût à dix fois votre volume actuel avant de vous engager.
+- **Audits de sécurité.** L'authentification unique, les journaux d'audit et les contrôles d'administration fins se trouvent souvent dans les offres les plus élevées. Si votre service informatique ou l'équipe sécurité d'un client vous envoie un questionnaire, vérifiez que les réponses existent dans l'offre que vous payez.
+
+Notre règle empirique : gardez les flux simples et peu risqués en no-code. Passez un agent en code sur mesure quand il touche à l'argent ou à des données sensibles en volume, quand il a besoin de vrais tests, ou quand la facture de la plateforme commence à ressembler à un salaire. Les agents deviennent aussi bien plus utiles quand ils peuvent s'appuyer sur une base de connaissances partagée de l'entreprise, ce que nous décrivons dans [le « cerveau d'entreprise »](/fr/blog/company-brain-ai).
+
+Si vous voulez de l'aide pour choisir ou construire, c'est le rôle de notre [service d'automatisation](/fr/services/automation).
+
+## FAQ
+
+### n8n est-il vraiment gratuit ?
+
+La Community Edition auto-hébergée est gratuite pour vos propres besoins internes, sous la Sustainable Use License de n8n, mais vous payez le serveur et la personne qui le fait tourner. Les offres cloud hébergées par n8n sont payantes, à partir de Starter à 20 € par mois en facturation annuelle.
+
+### Quel outil coûte le moins cher pour faire tourner un agent IA ?
+
+Cela dépend du nombre d'étapes de votre agent. n8n facture chaque exécution complète d'un workflow, Make facture des crédits par action et Zapier des tâches par action. Pour un agent à nombreuses étapes qui tourne souvent, la facturation par exécution revient généralement moins cher. Pour un flux simple de deux ou trois étapes, l'écart est faible.
+
+### Pouvons-nous garder nos données dans l'UE avec ces outils ?
+
+Les offres hébergées de n8n stockent les données à Francfort, et l'auto-hébergement vous laisse choisir l'emplacement. Make propose des zones de données dans l'UE, même si certaines fonctions IA passent encore par les États-Unis. Zapier indique héberger les données sur des serveurs AWS aux États-Unis.
+
+### Faut-il un développeur pour construire un premier agent IA ?
+
+Pas pour un petit agent bien cadré. Une personne des opérations ou du marketing à l'aise avec la technique peut en construire un dans Zapier ou Make. n8n récompense un certain niveau technique, surtout en auto-hébergement. Pour tout ce qui touche aux systèmes financiers ou aux données clients, faites relire les permissions par quelqu'un de technique avant la mise en service.
+
+### Quand passer du no-code au code sur mesure ?
+
+Quand la logique déborde du canevas, quand vous avez besoin de vrais tests et d'un contrôle de versions, quand la facturation par étape grimpe avec le volume, ou quand un audit de sécurité pose des questions auxquelles la plateforme ne sait pas répondre. Beaucoup d'entreprises gardent le no-code pour les flux simples et ne passent en code que les agents critiques.
+
+---
+
+**Vous ne savez pas quel outil convient à votre premier agent ?** [Réservez un appel](/fr/book) : nous cartographions un workflow avec vous et choisissons le bon outil.

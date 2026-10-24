@@ -1,0 +1,129 @@
+---
+title: "Token-Kosten von KI-Agenten: Was Tokens und Kontextfenster Ihr Unternehmen kosten"
+summary: "Was ein Token ist, warum das Kontextfenster zählt und wie das Design eines KI-Agenten dieselbe Aufgabe Cents oder Tausende kosten lässt. Mit einem durchgerechneten Beispiel aus der Rechnungsverarbeitung."
+description: "Token-Kosten von KI-Agenten verständlich erklärt: was Tokens und Kontextfenster sind, ein Rechenbeispiel mit Rechnungen und fünf Wege, Kosten zu senken."
+slug: "ai-agent-token-cost"
+date: "2026-10-24"
+tags: ["KI-Agenten", "Kosten"]
+primaryKeyword: "Token-Kosten von KI-Agenten"
+secondaryKeywords: ["was ist ein Token bei KI", "Kontextfenster", "LLM-Preise", "KI-Kosten senken"]
+author: "Fares"
+faq:
+  - question: "Was ist ein Token bei KI?"
+    answer: "Ein Token ist die Einheit, mit der KI-Modelle Text lesen und schreiben. Im Englischen entspricht ein Token etwa vier Zeichen oder rund drei Vierteln eines Wortes. KI-Anbieter rechnen pro Token ab, getrennt nach dem Text, den das Modell liest (Input), und dem Text, den es schreibt (Output)."
+  - question: "Was kostet der Betrieb eines KI-Agenten pro Monat?"
+    answer: "Das hängt vom Volumen ab, vom gewählten Modell und vor allem vom Design. In unserem Rechenbeispiel mit 2.000 Rechnungen pro Monat liegt die Token-Rechnung für dieselbe Aufgabe zwischen unter 10 $ und rund 12.000 $, je nachdem, welches Modell zum Einsatz kommt und wie viel Text der Agent bei jedem Schritt erneut liest."
+  - question: "Was ist ein Kontextfenster?"
+    answer: "Das Kontextfenster ist die maximale Textmenge, die ein KI-Modell auf einmal berücksichtigen kann, gemessen in Tokens. Es funktioniert wie ein Schreibtisch: Alles, was der Agent für den aktuellen Schritt braucht, muss darauf Platz finden. Ein größerer Schreibtisch kostet mehr, wenn man ihn füllt, und Studien zeigen, dass Modelle unzuverlässiger werden, wenn er voll ist."
+  - question: "Wie lassen sich die Token-Kosten von KI-Agenten senken?"
+    answer: "Geben Sie dem Agenten pro Schritt nur den Text, den er braucht, nutzen Sie für einfache Schritte wie die Datenextraktion ein kleineres Modell, verwenden Sie unveränderte Anweisungen per Prompt-Caching wieder, lassen Sie nicht dringende Arbeit zum halben Preis über die Batch-Dienste der Anbieter laufen und begrenzen Sie die Zahl der Schritte, die ein Agent pro Aufgabe machen darf."
+---
+
+**Die Token-Kosten von KI-Agenten sind die Nutzungsgebühren, die Ihr KI-Anbieter jedes Mal berechnet, wenn der Agent Text liest oder schreibt, gemessen in kleinen Einheiten namens Tokens.** Bei einem gut gebauten Agenten ist das meist der kleinste Posten im Budget. Bei einem schlecht gebauten kann dieselbe Aufgabe tausendmal mehr kosten, und niemand merkt es, bis die Rechnung kommt.
+
+Dieser Artikel erklärt Tokens und Kontextfenster in einfachen Worten und rechnet dann ein Beispiel durch, damit Sie jede Schätzung, die man Ihnen vorlegt, selbst prüfen können. Er gehört zu unserem Leitfaden zu [KI-Agenten für Unternehmen](/de/blog/ai-agents-for-business).
+
+## Was ist ein Token bei KI?
+
+KI-Modelle lesen Wörter nicht so wie Sie und ich. Sie zerlegen Text in **Tokens**: ganze kurze Wörter, Teile längerer Wörter, Satzzeichen. Die Faustregel von OpenAI lautet: [Ein Token entspricht etwa vier Zeichen englischen Textes oder rund drei Vierteln eines Wortes](https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens). Ein Lieferantenvertrag mit 750 Wörtern hat also rund 1.000 Tokens.
+
+Zwei Eigenschaften von Tokens sind für Ihr Budget wichtig.
+
+**Lesen und Schreiben werden getrennt abgerechnet.** Input-Tokens sind das, was der Agent liest: seine Anweisungen, das Dokument, alle Daten aus Ihren Systemen. Output-Tokens sind das, was er schreibt. Und der Output ist der teure Teil. Laut den aktuell veröffentlichten Preislisten von [OpenAI](https://openai.com/api/pricing/) und [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing) kostet Output etwa fünfmal so viel wie Input.
+
+**Die Sprache verändert die Anzahl.** Tokenizer, also der Teil des Modells, der das Zerlegen übernimmt, wurden überwiegend mit englischem Text gebaut. Forschende der University of Oxford haben festgestellt, dass derselbe Text, in verschiedene Sprachen übersetzt, [bis zu 15-mal so viele Tokens](https://proceedings.neurips.cc/paper_files/paper/2023/hash/74bb24dca8334adce292883b4b651eda-Abstract.html) benötigen kann. Wenn Ihre Dokumente auf Arabisch, Französisch oder Deutsch sind, sollten Sie die tatsächliche Token-Zahl an Ihren eigenen Dateien messen, bevor Sie einer Schätzung mit englischen Beispielen vertrauen.
+
+## LLM-Preise: Was eine Million Tokens kostet
+
+Die Anbieter nennen ihre Preise pro Million Tokens, Sie müssen also ein wenig rechnen. Stand Oktober 2026 liegen die veröffentlichten Tarife weit auseinander:
+
+- **Kleine, schnelle Modelle**, gebaut für einfache Arbeit in großen Mengen wie Extraktion und Sortierung, beginnen bei OpenAI und Anthropic bei rund **0,10 $ pro Million Input-Tokens** und **0,50 $ pro Million Output-Tokens**.
+- **Flaggschiff-Modelle**, die leistungsfähigsten, kosten bei OpenAI bis zu **10 $ pro Million Input-Tokens** und **50 $ pro Million Output-Tokens**.
+
+Zwischen der günstigsten und der teuersten Option liegt also der Faktor 100. Die Preise ändern sich oft. Verstehen Sie diese Zahlen deshalb als Größenordnungen und prüfen Sie die Seiten der Anbieter, wenn Sie Ihr Budget aufstellen.
+
+Zwei Rabatte sollten Sie kennen:
+
+- **Prompt-Caching.** Wenn der Agent denselben Text immer wieder sendet, etwa seine festen Anweisungen, berechnen die Anbieter für den wiederholten Teil deutlich weniger. Beim Flaggschiff von OpenAI kostet zwischengespeicherter Input [1 $ statt 10 $ pro Million Tokens](https://openai.com/api/pricing/).
+- **Batch-Verarbeitung.** Arbeit, die ein paar Stunden warten kann, etwa ein Lauf über Nacht, kostet [über die Batch API von OpenAI 50 % weniger](https://openai.com/api/pricing/), und Anthropic bietet denselben [Batch-Tarif zum halben Preis](https://platform.claude.com/docs/en/about-claude/pricing).
+
+## Das Kontextfenster: der Schreibtisch Ihres Agenten
+
+Das **Kontextfenster** ist die maximale Textmenge, die ein Modell in einem Durchgang berücksichtigen kann, gemessen in Tokens. Stellen Sie es sich als Schreibtisch vor. Alles, was der Agent für den aktuellen Schritt braucht, muss darauf liegen: Anweisungen, die Rechnung, die Bestellung, die Notizen aus dem vorherigen Schritt.
+
+Moderne Schreibtische sind groß, oft Hunderttausende Tokens. Die Versuchung ist groß, alles daraufzulegen. Tun Sie es nicht, aus zwei Gründen.
+
+**Jedes Token auf dem Schreibtisch wird bei jedem Schritt bezahlt.** Ein Agent arbeitet in einer Schleife: lesen, entscheiden, handeln, wieder lesen. Trägt er ein Dokument mit 100.000 Tokens durch zehn Schritte, zahlen Sie für eine Million Input-Tokens, auch wenn er nur einen Absatz gebraucht hätte. Lange Prompts können zudem pro Token teurer sein: Die Standardtarife von OpenAI [gelten nur unterhalb von 272.000 Tokens Kontext](https://openai.com/api/pricing/).
+
+**Ein voller Schreibtisch führt zu schlechteren Entscheidungen.** Forschende aus Stanford und von Partnerinstituten haben gezeigt, dass Modelle [Informationen am Anfang und am Ende eines langen Inputs besser nutzen als das, was in der Mitte steht](https://arxiv.org/abs/2307.03172). Eine Studie von Chroma aus dem Jahr 2025 hat 18 Modelle getestet und festgestellt, dass ihre [Zuverlässigkeit mit zunehmender Länge des Inputs sinkt](https://www.trychroma.com/research/context-rot), selbst bei einfachen Aufgaben. Mehr Kontext kann eine höhere Rechnung *und* eine schlechtere Antwort bedeuten.
+
+## Ein Rechenbeispiel zu den Token-Kosten von KI-Agenten: Rechnungsverarbeitung
+
+Setzen wir Zahlen ein, damit Sie sehen, wohin das Geld fließt. Unser Beispiel-Agent verarbeitet Lieferantenrechnungen: Er liest die Rechnung, ruft die Bestellung und den Wareneingang auf, prüft, ob alles zusammenpasst, und erstellt einen Buchungsentwurf oder markiert die Abweichung.
+
+Die folgenden Annahmen haben wir zur Veranschaulichung festgelegt. Es sind keine Messwerte von einem Kunden:
+
+- 2.000 Rechnungen pro Monat.
+- 6 Schritte pro Rechnung.
+- **Schlankes Design:** Jeder Schritt liest rund 4.000 Tokens (Anweisungen, die Rechnung, die relevanten Bestellpositionen) und schreibt rund 300.
+- **Verschwenderisches Design:** Jeder Schritt liest das komplette Archiv der Lieferantenverträge mit 100.000 Tokens erneut, „für alle Fälle“.
+
+Pro Rechnung liest das schlanke Design 24.000 Tokens und schreibt 1.800. Das verschwenderische liest 600.000 und schreibt dieselben 1.800.
+
+Das kostet es:
+
+| Design und Modell | Pro Rechnung | Pro Monat (2.000 Rechnungen) |
+| --- | --- | --- |
+| Schlankes Design, kleines Modell (0,10 $ Input, 0,50 $ Output pro Million Tokens) | rund 0,003 $ | rund 7 $ |
+| Schlankes Design, Flaggschiff-Modell (10 $ Input, 50 $ Output) | rund 0,33 $ | rund 660 $ |
+| Verschwenderisches Design, Flaggschiff-Modell | rund 6,09 $ | rund 12.180 $ |
+
+Dieselbe Aufgabe, dieselben Rechnungen. Die monatliche Rechnung springt von einem Taschengeld auf mehr, als viele Unternehmen für eine Vollzeitkraft zahlen, allein wegen der Designentscheidungen. Und die teure Variante ist wahrscheinlich sogar *ungenauer*, wegen des vollen Schreibtischs.
+
+In der Praxis kombinieren die besten Lösungen mehrere Modelle: ein kleines zum Lesen und Extrahieren der Felder, ein stärkeres nur für die kniffligen Ausnahmen. Damit landet man meist deutlich unter der Zeile „schlankes Design, Flaggschiff-Modell“.
+
+## Wie Sie KI-Kosten senken, ohne an Qualität zu verlieren
+
+Das sind die Hebel, die wir nutzen, wenn wir für einen Kunden einen [KI-Agenten](/de/services/ai-agents) bauen.
+
+1. **Nur das Nötige senden.** Statt des ganzen Vertragsarchivs sucht der Agent die zwei Klauseln, auf die es ankommt, und liest nur diese. Genau das leistet eine Wissensdatenbank mit Suchfunktion (Retrieval), erklärt in unserem Leitfaden zur [Wissensdatenbank für KI-Agenten](/de/blog/ai-agent-knowledge-base).
+2. **Das kleinste Modell nehmen, das die Aufgabe schafft.** Extraktion und Sortierung brauchen selten ein Flaggschiff-Modell. Testen Sie zuerst das kleine und steigen Sie nur dort auf, wo die Ergebnisse zeigen, dass es nicht anders geht.
+3. **Die festen Teile cachen.** Feste Anweisungen und Referenztabellen, die sich von Rechnung zu Rechnung nicht ändern, lassen sich für einen Bruchteil des Preises zwischenspeichern.
+4. **Bündeln, was warten kann.** Wenn Rechnungen erst am nächsten Morgen um 9:00 Uhr fertig sein müssen, halbiert ein Batch-Lauf über Nacht die Token-Rechnung.
+5. **Die Schleife begrenzen.** Legen Sie eine maximale Zahl von Schritten pro Aufgabe fest. Ein Agent, der immer wieder dieselbe fehlgeschlagene Abfrage wiederholt, kann Tokens für nichts verbrennen. Eine Obergrenze macht daraus eine Meldung an einen Menschen.
+
+Dazu kommt ein Sicherheitsvorteil. Ein Agent, der weniger Daten sieht, kann auch weniger preisgeben. Das hängt mit den Berechtigungsregeln aus unserem Artikel über [Sicherheitsrisiken von KI-Agenten](/de/blog/ai-agent-security) zusammen.
+
+## Worauf Sie bei einer Kostenschätzung bestehen sollten
+
+Wenn ein Anbieter oder Ihr eigenes Team einen Agenten vorschlägt, genehmigen Sie ihn erst, wenn Sie diese Zahlen gesehen haben:
+
+- Erwartete Aufgaben pro Monat und Schritte pro Aufgabe.
+- Gelesene und geschriebene Tokens pro Schritt, gemessen an Ihren echten Dokumenten in Ihren Sprachen.
+- Welches Modell bei welchem Schritt eingesetzt wird, und warum.
+- Ob Caching und Batch-Verarbeitung genutzt werden.
+- Was passiert, wenn eine Aufgabe ihr Schrittlimit überschreitet.
+
+Vergleichen Sie dann die monatliche Token-Rechnung mit der Zeit, die der Agent spart. Wenn die Schätzung diese Fragen nicht beantworten kann, haben Sie es mit einer Vermutung zu tun. Unsere Reviews im Rahmen der [KI-Beratung](/de/services/consulting) enthalten genau diese Rechnung für jeden infrage kommenden Workflow.
+
+## FAQ
+
+### Was ist ein Token bei KI?
+
+Ein Token ist die Einheit, mit der KI-Modelle Text lesen und schreiben. Im Englischen entspricht ein Token etwa vier Zeichen oder rund drei Vierteln eines Wortes. KI-Anbieter rechnen pro Token ab, getrennt nach dem Text, den das Modell liest (Input), und dem Text, den es schreibt (Output).
+
+### Was kostet der Betrieb eines KI-Agenten pro Monat?
+
+Das hängt vom Volumen ab, vom gewählten Modell und vor allem vom Design. In unserem Rechenbeispiel mit 2.000 Rechnungen pro Monat liegt die Token-Rechnung für dieselbe Aufgabe zwischen unter 10 $ und rund 12.000 $, je nachdem, welches Modell zum Einsatz kommt und wie viel Text der Agent bei jedem Schritt erneut liest.
+
+### Was ist ein Kontextfenster?
+
+Das Kontextfenster ist die maximale Textmenge, die ein KI-Modell auf einmal berücksichtigen kann, gemessen in Tokens. Es funktioniert wie ein Schreibtisch: Alles, was der Agent für den aktuellen Schritt braucht, muss darauf Platz finden. Ein größerer Schreibtisch kostet mehr, wenn man ihn füllt, und Studien zeigen, dass Modelle unzuverlässiger werden, wenn er voll ist.
+
+### Wie lassen sich die Token-Kosten von KI-Agenten senken?
+
+Geben Sie dem Agenten pro Schritt nur den Text, den er braucht, nutzen Sie für einfache Schritte wie die Datenextraktion ein kleineres Modell, verwenden Sie unveränderte Anweisungen per Prompt-Caching wieder, lassen Sie nicht dringende Arbeit zum halben Preis über die Batch-Dienste der Anbieter laufen und begrenzen Sie die Zahl der Schritte, die ein Agent pro Aufgabe machen darf.
+
+---
+
+**Sie möchten eine realistische Kostenschätzung für Ihren Workflow?** [Buchen Sie ein Gespräch](/de/book), und wir rechnen die Zahlen an Ihren eigenen Dokumenten durch.

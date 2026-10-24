@@ -4,6 +4,8 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Fixed portfolio pages crashing on the server (Radix Slot could not unwrap nested lazy children from server-rendered `Link`s, which also caused the "script tag" console error); `Button` now resolves them. Navbar About link now scrolls to the home team section (`/#team`). Removed the legacy `allowTransparency` iframe prop (console error on the home page) and added `data-scroll-behavior` on `<html>`
+- Blog batches 1 and 2 translated to fr and de (22 articles, same slugs, localized keywords and tags, official FR/DE source pages where they exist); neutral wording for people in en/fr/de
 - Blog batches 1 and 2 published (merged `blog-batch-1` into `main`)
 - Blog batch 2 (EN): `ai-trends-2027`, `n8n-vs-make-vs-zapier`, `company-brain-ai`, `copilot-vs-chatgpt-claude-gemini`, `voice-ai-use-cases`; prices checked on official pages on 24 October 2026; December brief in `briefs/ai-2026-year-in-review.md`
 - Blog batch 1 (EN): pillar `ai-agents-for-business` plus `ai-agent-security`, `ai-agent-token-cost`, `ai-agent-knowledge-base`, `connect-ai-agent-erp-crm`, `ai-agents-gdpr-eu-ai-act`; every figure sourced, humanized with li-human

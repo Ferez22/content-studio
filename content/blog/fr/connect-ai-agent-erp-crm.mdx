@@ -1,0 +1,150 @@
+---
+title: "Comment connecter un agent IA à un ERP et à un CRM, même développés sur mesure"
+summary: "Les cinq façons de connecter un agent IA à vos systèmes de gestion, des API officielles et du MCP jusqu'à une base de données maison vieille de 15 ans, et les règles d'autorisation qui rendent chacune sûre."
+description: "Connecter un agent IA à un ERP ou un CRM, même sur mesure : API, MCP, vues de base de données, exports de fichiers et règles d'accès qui sécurisent tout."
+slug: "connect-ai-agent-erp-crm"
+date: "2026-10-24"
+tags: ["Agents IA", "Intégration"]
+primaryKeyword: "connecter un agent IA à un ERP"
+secondaryKeywords: ["MCP", "Model Context Protocol", "intégration IA CRM", "intégration ERP sur mesure"]
+author: "Fares"
+faq:
+  - question: "Un agent IA peut-il se connecter à un ERP sur mesure ou ancien ?"
+    answer: "En général, oui. Si le système n'a pas d'API, l'agent peut souvent lire une vue de base de données en lecture seule, travailler à partir d'exports de fichiers programmés, ou utiliser un petit connecteur écrit pour ce système. Automatiser l'écran lui-même est possible, mais fragile, c'est donc un dernier recours."
+  - question: "Qu'est-ce que le MCP, en termes simples ?"
+    answer: "Le MCP, ou Model Context Protocol, est un standard ouvert pour connecter des agents IA à d'autres logiciels. Voyez-le comme une prise universelle : vous construisez un connecteur MCP pour un système, et n'importe quel agent compatible peut l'utiliser, avec uniquement les droits que vous accordez. Il est aujourd'hui géré par l'Agentic AI Foundation, sous l'égide de la Linux Foundation."
+  - question: "Un agent IA doit-il avoir un accès en écriture à notre ERP ?"
+    answer: "Seulement pour le strict nécessaire, et généralement uniquement pour des brouillons. Notre agent de factures lit les bons de commande et les réceptions des marchandises et crée des écritures en brouillon. Une personne les comptabilise. Les paiements, les données de référence et les coordonnées bancaires restent hors de sa portée."
+  - question: "Faut-il un environnement de test avant de connecter un agent ?"
+    answer: "Oui. Faites tourner l'agent sur un sandbox, une copie de votre système avec des données de test ou anonymisées, jusqu'à ce qu'il se comporte bien sur des cas réalistes. Ce n'est qu'ensuite qu'il accède à la production, en commençant par des droits en lecture seule."
+  - question: "Quels systèmes ont des serveurs MCP officiels ?"
+    answer: "Plusieurs grands éditeurs publient désormais le leur, dont Microsoft pour les applications finance et opérations de Dynamics 365, Salesforce et HubSpot. Vérifiez ce que comprend votre abonnement."
+---
+
+**Oui, vous pouvez connecter un agent IA à un ERP et à un CRM, y compris à des systèmes développés en interne.** La méthode dépend de ce que propose votre système : une API officielle, un connecteur MCP, une vue de base de données en lecture seule, des exports de fichiers ou, pour les systèmes les plus anciens, une automatisation de l'écran soigneusement limitée. La vraie question, c'est ce que vous laissez faire à l'agent une fois qu'il est connecté.
+
+Voici ces méthodes expliquées simplement, puis les règles que nous appliquons avant qu'un agent ne touche un système en production. Cet article fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business).
+
+D'abord, deux définitions. Votre **ERP** (progiciel de gestion intégré) est le logiciel qui fait tourner la finance, les stocks et les achats : SAP, Microsoft Dynamics, Odoo ou un outil développé en interne. Votre **CRM** (logiciel de gestion de la relation client) est l'endroit où les commerciaux suivent leurs contacts et leurs affaires : Salesforce, HubSpot et consorts.
+
+## Ce que veut dire connecter un agent IA à un ERP
+
+Un agent IA avance dans une tâche étape par étape, avec les outils que vous lui donnez. Une connexion est l'un de ces outils : un moyen de consulter ou d'enregistrer quelque chose dans un autre système. Trois exemples :
+
+- **Finance.** Notre agent de factures lit une facture fournisseur, disons 8 960 € rattachés au bon de commande 4471, retrouve la commande et la réception des marchandises dans l'ERP, et vérifie qu'elles concordent avec une tolérance de 2 %. (Chiffres donnés à titre d'illustration.) Il a besoin d'un accès en lecture aux bons de commande et aux réceptions des marchandises, et du droit de créer des écritures en brouillon. Rien d'autre.
+- **Ventes.** Après chaque appel client, un agent rédige un résumé dans la fiche de l'affaire du CRM : ce qui a été discuté, la prochaine étape, la date de relance. Il doit lire l'affaire et ajouter des notes. Il n'a pas besoin de modifier les prix ni de supprimer des contacts.
+- **Système ancien.** Un distributeur utilise un système maison vieux de 15 ans, sans API ni documentation, avec seulement la base de données en dessous.
+
+## Méthode 1 : l'API officielle
+
+Une **API** (interface de programmation) est une porte documentée qui permet à un logiciel de dialoguer avec un autre. C'est la voie la plus propre, et la plupart des logiciels de gestion modernes en ont une. SAP publie ses API sur le [SAP Business Accelerator Hub](https://api.sap.com/). La documentation d'Odoo indique que [toutes ses données sont accessibles depuis l'extérieur](https://www.odoo.com/documentation/18.0/fr/developer/reference/external_api.html) via son API externe, avec prise en charge des clés d'API.
+
+Mais une API seule ne suffit pas à brancher un agent. Il faut encore que quelqu'un transforme « consulter le bon de commande 4471 » en un appel d'API correct. C'est là qu'intervient le MCP.
+
+## Le MCP (Model Context Protocol) expliqué
+
+Le **MCP**, ou Model Context Protocol, est une prise universelle pour l'IA. Sans lui, chaque outil d'IA a besoin de sa propre connexion à chaque système. Cinq outils et quatre systèmes ? Vingt connexions à construire et à maintenir. Avec le MCP, vous construisez un seul connecteur par système, appelé serveur MCP. N'importe quel agent qui parle MCP peut ensuite l'utiliser, avec les droits que vous accordez.
+
+Anthropic a [publié le MCP comme standard ouvert en novembre 2024](https://www.anthropic.com/news/model-context-protocol). En décembre 2025, il a été [confié à l'Agentic AI Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), une structure placée sous l'égide de la Linux Foundation et cofondée par Anthropic, Block et OpenAI. Aucun fournisseur d'IA ne le possède donc à lui seul. Si vous changez de modèle l'an prochain, vos connecteurs continuent de fonctionner.
+
+Il existe deux façons d'obtenir un serveur MCP.
+
+### Les serveurs MCP fournis par les éditeurs
+
+Certains grands éditeurs livrent désormais le leur :
+
+- **Microsoft Dynamics 365.** Microsoft documente un [serveur MCP pour l'ERP Dynamics 365](https://learn.microsoft.com/fr-fr/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp) destiné à ses applications finance et opérations. L'agent ne voit que ce que son rôle de sécurité autorise. L'exemple de Microsoft : un agent doté du rôle Purchasing Agent (agent d'achat) ne peut atteindre que les objets couverts par ce rôle.
+- **Salesforce.** Les [serveurs MCP hébergés de Salesforce sont disponibles pour tous depuis avril 2026](https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available). Selon Salesforce, vos droits existants, vos règles de partage et la sécurité au niveau des champs s'appliquent automatiquement, et chaque action s'exécute au nom de l'utilisateur connecté.
+- **HubSpot.** HubSpot propose un [serveur MCP qui donne aux agents IA un accès en lecture et en écriture aux données du CRM](https://developers.hubspot.com/ai-tools/mcp), comme les contacts, les affaires et les interactions.
+
+C'est une bonne nouvelle pour l'intégration IA dans le CRM. Notre agent commercial peut souvent utiliser le serveur de l'éditeur avec un utilisateur dédié aux droits restreints, et très peu de code spécifique.
+
+### Les serveurs MCP développés sur mesure
+
+Pour tout le reste, y compris votre ERP sur mesure, nous écrivons nous-mêmes le serveur MCP. C'est souvent le meilleur choix même quand un serveur éditeur existe, parce que vous décidez exactement quelles actions sont disponibles. Le serveur de notre agent de factures pourrait n'en proposer que trois : « consulter un bon de commande », « consulter une réception des marchandises » et « créer une écriture en brouillon ». Si « comptabiliser une écriture » ou « modifier des coordonnées bancaires » ne figure pas dans la liste, l'agent ne peut pas le faire, quelle que soit la manière dont on le lui demande.
+
+Pour les plus curieux sur le plan technique, voici à peu près à quoi ressemble l'une de ces actions dans un serveur MCP. C'est une courte description que l'agent lit, plus les données exactes qu'il doit fournir :
+
+```json
+{
+  "name": "get_purchase_order",
+  "description": "Consulter un bon de commande à partir de son numéro. Lecture seule.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "po_number": { "type": "string", "description": "Par exemple 4471" }
+    },
+    "required": ["po_number"]
+  }
+}
+```
+
+Derrière cette description se trouve du code ordinaire qui appelle votre ERP avec l'identifiant restreint propre à l'agent. L'agent ne voit jamais la base de données ni le mot de passe, seulement les actions que vous avez choisi d'exposer.
+
+## Intégration d'un ERP sur mesure : vues de base de données, fichiers et écrans
+
+Revenons au système vieux de 15 ans. Pas d'API, pas de serveur MCP. Il reste trois façons d'y accéder, par ordre de préférence.
+
+**Une vue de base de données en lecture seule.** Une vue est une requête enregistrée qui montre une sélection de vos données, comme une fenêtre ouverte sur quelques colonnes de quelques tables. Votre équipe informatique crée une vue des bons de commande ouverts, donne au compte de l'agent un accès en lecture seule à cette vue et à rien d'autre, et l'agent ne peut rien modifier. Nous enveloppons ensuite cette vue dans un petit serveur MCP sur mesure, pour qu'elle se présente comme n'importe quel autre connecteur.
+
+**Les exports et imports de fichiers.** Beaucoup de vieux systèmes savent exporter un fichier CSV (un simple fichier de type tableur) chaque nuit, ou en importer un. L'agent lit l'export, fait son travail et produit un fichier d'écritures proposées. Une personne ou une routine d'import existante le charge. Les données peuvent dater de la veille. Cela convient à la plupart des tâches administratives, et c'est simple et sûr.
+
+**L'automatisation de l'écran, en dernier recours.** Un logiciel peut cliquer et saisir dans les écrans du système comme une personne. Cela casse dès qu'un écran change, nous ne l'utilisons donc que pour des tâches étroites, surtout en lecture, le temps de prévoir une vraie connexion.
+
+Voici toutes les méthodes côte à côte :
+
+| Méthode | Idéale pour | Fraîcheur des données | Effort | Risque |
+| --- | --- | --- | --- | --- |
+| API officielle | ERP et CRM modernes | En temps réel | Faible à moyen | Faible, avec un compte aux droits limités |
+| Serveur MCP | Réutiliser un connecteur entre plusieurs agents | En temps réel | Faible si l'éditeur en fournit un | Faible, si les actions sont étroites |
+| Vue de base de données en lecture seule | Systèmes sur mesure et anciens | En temps réel | Moyen | Faible, elle ne peut pas écrire |
+| Export et import de fichiers | Systèmes sans autre option | Généralement de la veille | Faible | Faible |
+| Automatisation de l'écran | Dernier recours uniquement | En temps réel | Élevé à maintenir | Élevé, casse à chaque changement |
+
+## Les règles pour chaque connexion
+
+Quelle que soit la méthode, les mêmes règles s'appliquent. L'OWASP, une organisation à but non lucratif qui publie des normes de sécurité largement utilisées, appelle le principal risque l'[excessive agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) (autonomie excessive) : un agent qui a trop de fonctions, trop de droits ou trop d'autonomie. Elle recommande une étape d'approbation humaine pour les actions à fort impact.
+
+1. **Un compte de service avec le moindre privilège.** Un compte de service est un identifiant créé pour un logiciel, pas pour une personne. Donnez à l'agent le sien, avec les droits les plus restreints qui fonctionnent. Jamais l'identifiant d'un administrateur, et jamais le vôtre.
+2. **D'abord lire, écrire plus tard.** Démarrez chaque agent en lecture seule. Ajoutez les droits d'écriture une action à la fois, une fois qu'il les a mérités.
+3. **Brouillon, puis validation.** Là où l'agent écrit, il écrit des brouillons. L'agent de factures crée une écriture en brouillon et une personne la comptabilise. L'agent commercial peut ajouter des notes, mais une modification du montant de l'affaire part chez le responsable du compte.
+4. **D'abord le sandbox.** Un sandbox est une copie de votre système avec des données de test ou anonymisées. L'agent y reste jusqu'à ce qu'il traite bien des cas réalistes, y compris les plus délicats.
+5. **Tout journaliser.** Enregistrez chaque consultation, chaque brouillon et chaque refus.
+6. **Fixer des limites de débit.** Une limite de débit plafonne le nombre de requêtes par minute, pour qu'un agent bloqué dans une boucle déclenche une alerte et non une panne.
+7. **Laisser le système de référence aux commandes.** Votre ERP et votre CRM restent la source de vérité. L'agent lit et propose ; il ne garde jamais sa propre copie des chiffres.
+
+Une dernière mise en garde. Le chercheur en sécurité Simon Willison alerte sur ce que l'on appelle la [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) (le trio fatal) : un agent qui a accès à des données privées, qui est exposé à des contenus non fiables et qui dispose d'un moyen d'envoyer des informations vers l'extérieur. Simon Willison souligne que le MCP permet facilement de mélanger des outils de sources différentes, ce qui peut réunir les trois dans un même agent par accident. Examinez chaque connecteur que vous ajoutez, pas seulement le premier. Nous y revenons dans [les risques de sécurité des agents IA](/fr/blog/ai-agent-security).
+
+## Par où commencer
+
+Choisissez un workflow, listez exactement les consultations et les écritures dont il a besoin, et vérifiez quelle méthode chaque système prend en charge. Cette liste est généralement courte. Pour notre agent de factures, ce sont deux lectures et un brouillon.
+
+Les connexions pèsent aussi sur les coûts et la conformité. Un agent qui récupère des tables entières au lieu de la seule commande dont il a besoin lit beaucoup plus de texte, et cela se voit dans le [coût des tokens de votre agent IA](/fr/blog/ai-agent-token-cost). Et si les données comportent des informations personnelles, ce même accès restreint aide à respecter le [RGPD et l'AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act). Les contrats et les politiques sont mieux servis par un index de recherche que par une connexion en direct, comme l'explique notre guide sur la [base de connaissances d'un agent IA](/fr/blog/ai-agent-knowledge-base).
+
+C'est le cœur de notre [service d'intégration](/fr/services/integration) : nous cartographions vos systèmes, construisons les connecteurs et paramétrons les droits avant qu'un [agent IA](/fr/services/ai-agents) ne passe en production. Si vous ne savez pas encore par quel workflow commencer, nos missions de [conseil en IA](/fr/services/consulting) démarrent justement là.
+
+## FAQ
+
+### Un agent IA peut-il se connecter à un ERP sur mesure ou ancien ?
+
+En général, oui. Si le système n'a pas d'API, l'agent peut souvent lire une vue de base de données en lecture seule, travailler à partir d'exports de fichiers programmés, ou utiliser un petit connecteur écrit pour ce système. Automatiser l'écran lui-même est possible, mais fragile, c'est donc un dernier recours.
+
+### Qu'est-ce que le MCP, en termes simples ?
+
+Le MCP, ou Model Context Protocol, est un standard ouvert pour connecter des agents IA à d'autres logiciels. Voyez-le comme une prise universelle : vous construisez un connecteur MCP pour un système, et n'importe quel agent compatible peut l'utiliser, avec uniquement les droits que vous accordez. Il est aujourd'hui géré par l'Agentic AI Foundation, sous l'égide de la Linux Foundation.
+
+### Un agent IA doit-il avoir un accès en écriture à notre ERP ?
+
+Seulement pour le strict nécessaire, et généralement uniquement pour des brouillons. Notre agent de factures lit les bons de commande et les réceptions des marchandises et crée des écritures en brouillon. Une personne les comptabilise. Les paiements, les données de référence et les coordonnées bancaires restent hors de sa portée.
+
+### Faut-il un environnement de test avant de connecter un agent ?
+
+Oui. Faites tourner l'agent sur un sandbox, une copie de votre système avec des données de test ou anonymisées, jusqu'à ce qu'il se comporte bien sur des cas réalistes. Ce n'est qu'ensuite qu'il accède à la production, en commençant par des droits en lecture seule.
+
+### Quels systèmes ont des serveurs MCP officiels ?
+
+Plusieurs grands éditeurs publient désormais le leur, dont Microsoft pour les applications finance et opérations de Dynamics 365, Salesforce et HubSpot. Vérifiez ce que comprend votre abonnement.
+
+---
+
+**Vous ne savez pas comment vos systèmes pourraient se connecter ?** [Réservez un appel](/fr/book) et nous cartographierons les méthodes possibles pour votre ERP et votre CRM, y compris ceux développés sur mesure.

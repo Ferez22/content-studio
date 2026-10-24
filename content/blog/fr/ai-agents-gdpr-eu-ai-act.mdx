@@ -1,0 +1,147 @@
+---
+title: "Agent IA et RGPD : ce que le RGPD et l'AI Act exigent de vous"
+summary: "Quelles règles du RGPD et de l'AI Act s'appliquent quand un agent IA traite des données personnelles, expliquées pour les dirigeants, avec une liste de contrôle pour un agent de factures et un agent de recrutement."
+description: "Agent IA et RGPD en clair : quand le RGPD et l'AI Act s'appliquent hors UE, quels agents sont à haut risque, les échéances et une liste de contrôle."
+slug: "ai-agents-gdpr-eu-ai-act"
+date: "2026-10-24"
+tags: ["Agents IA", "Conformité"]
+primaryKeyword: "agent IA et RGPD"
+secondaryKeywords: ["AI Act européen", "AI Act haut risque", "conformité RGPD et IA", "contrat de sous-traitance RGPD"]
+author: "Fares"
+faq:
+  - question: "Le RGPD s'applique-t-il à un agent IA exploité par une entreprise située hors de l'UE ?"
+    answer: "C'est possible. Le RGPD couvre les entreprises situées hors de l'UE lorsqu'elles proposent des biens ou des services à des personnes dans l'UE ou suivent leur comportement dans l'UE. Une entreprise en Tunisie, en Égypte ou aux Émirats qui traite des données sur le personnel ou les clients de ses clients européens doit partir du principe que le RGPD s'applique, et vérifier les détails avec un avocat."
+  - question: "Faut-il un contrat de sous-traitance avec OpenAI ou un autre fournisseur d'IA ?"
+    answer: "Oui, si l'agent envoie des données personnelles à ce fournisseur. Selon l'article 28 du RGPD, un prestataire qui traite des données personnelles pour votre compte doit être lié par un contrat qui fixe ce qu'il peut faire de ces données. Les grands fournisseurs d'IA proposent des accords de traitement des données standard pour leurs offres professionnelles."
+  - question: "Notre agent IA est-il à haut risque au sens de l'AI Act ?"
+    answer: "La plupart des agents d'entreprise ne le sont pas. Un agent qui traite des factures, répond à des questions internes ou rédige des e-mails est généralement hors de la liste des systèmes à haut risque. Les agents utilisés pour trier des candidats, évaluer des salariés, apprécier la solvabilité ou décider de l'accès à des services essentiels sont à haut risque, et ces obligations s'appliquent à partir du 2 décembre 2027."
+  - question: "Que devons-nous faire dès maintenant au titre de l'AI Act ?"
+    answer: "Deux points concernent presque toutes les entreprises. Veillez à ce que les personnes sachent quand elles ont affaire à un système d'IA plutôt qu'à un humain, et prenez des mesures pour que votre personnel comprenne les outils d'IA qu'il utilise. Les pratiques interdites, comme les systèmes de manipulation ou de notation sociale, sont prohibées depuis le 2 février 2025."
+---
+
+**Agent IA et RGPD : les règles s'appliquent dès que votre agent touche des données personnelles concernant des personnes dans l'UE, même si votre entreprise est installée à Tunis, au Caire ou à Dubaï.** L'AI Act, le règlement européen sur l'IA, ajoute une seconde couche, mais pour la plupart des agents d'entreprise il demande peu : dire clairement aux gens qu'ils ont affaire à une IA, et vous assurer que votre personnel comprend les outils. Les obligations lourdes ne s'appliquent que si l'agent prend des décisions sur l'emploi, le crédit ou l'accès de personnes à des services essentiels.
+
+Cet article fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business). Il s'agit d'une information générale, pas d'un conseil juridique. Pour votre propre situation, impliquez votre délégué à la protection des données (DPO) ou un avocat.
+
+Notre exemple fil rouge : un agent financier qui lit les factures fournisseurs, par exemple une facture de 8 960 € pour le bon de commande 4471, et les prépare pour validation. (Chiffres à titre d'illustration, pas un cas client.)
+
+## Agent IA et RGPD : quand les règles s'appliquent à votre entreprise
+
+Le RGPD, le règlement général sur la protection des données de l'UE, protège les **données personnelles** : toute information concernant une personne identifiable. Les factures fournisseurs en contiennent généralement : le nom et l'e-mail d'un contact et, pour les entrepreneurs individuels, souvent un compte bancaire personnel.
+
+Être installé ailleurs ne vous en dispense pas. L'[article 3 du RGPD](https://gdpr-info.eu/art-3-gdpr/) couvre les entreprises situées hors de l'UE lorsqu'elles proposent des biens ou des services à des personnes dans l'UE, ou suivent le comportement de ces personnes dans l'UE. Si vous êtes une entreprise au Maroc ou au Kenya avec des clients européens, et que votre agent traite des données sur leurs équipes, partez du principe que le RGPD s'applique.
+
+Le **responsable du traitement** décide pourquoi et comment les données sont utilisées : vous, pour vos propres factures. Un **sous-traitant** traite les données pour votre compte : votre hébergeur cloud, votre logiciel comptable et, oui, l'entreprise qui fournit le modèle d'IA.
+
+## La liste de contrôle de conformité RGPD et IA
+
+### Une base légale pour chaque usage
+
+Il vous faut une raison licite de traiter les données, choisie dans la liste de l'[article 6 du RGPD](https://gdpr-info.eu/art-6-gdpr/). Pour les factures, c'est généralement l'exécution d'un contrat, une obligation légale comme la conservation des pièces comptables, ou votre intérêt légitime à payer vos fournisseurs efficacement. Mettez-le par écrit, vous en aurez besoin. « Nous avons ajouté de l'IA » n'est pas une nouvelle base légale, mais une nouvelle finalité peut en exiger une.
+
+### Un contrat de sous-traitance avec chaque fournisseur
+
+Un **contrat de sous-traitance**, aussi appelé accord de traitement des données (DPA, pour Data Processing Agreement), est le contrat qui indique à un sous-traitant ce qu'il peut faire et ne pas faire de vos données. L'[article 28 du RGPD](https://gdpr-info.eu/art-28-gdpr/) l'impose, et il doit préciser l'objet, la durée, la nature et la finalité du traitement ainsi que les catégories de données concernées.
+
+Le fournisseur du modèle d'IA est celui qu'on oublie. Si le texte des factures part vers un modèle d'IA, ce fournisseur est un sous-traitant et il faut un DPA. Les grands fournisseurs en proposent des standards pour leurs offres professionnelles, par exemple l'[avenant sur le traitement des données d'OpenAI](https://openai.com/policies/data-processing-addendum/). Signez-les, et vérifiez au passage si vos données peuvent servir à entraîner leurs modèles.
+
+### La minimisation des données
+
+L'[article 5 du RGPD](https://gdpr-info.eu/art-5-gdpr/) prévoit que les données doivent être limitées à ce qui est nécessaire à la finalité. Pour notre agent, cela veut dire qu'il voit la facture et le bon de commande 4471, pas tout le fichier fournisseurs ni le dossier RH. C'est aussi moins cher : moins de texte, c'est moins de tokens, comme nous l'avons montré dans [le coût en tokens d'un agent IA](/fr/blog/ai-agent-token-cost). Et c'est plus sûr, ce qui est tout l'objet de notre article sur [les risques de sécurité des agents IA](/fr/blog/ai-agent-security).
+
+### Les transferts internationaux
+
+Envoyer des données personnelles hors de l'Espace économique européen (EEE) est permis, mais seulement à certaines conditions. La plus simple est une **décision d'adéquation** : la Commission européenne a [reconnu une liste de pays](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en) comme offrant une protection adéquate, dont le Royaume-Uni, le Japon et les entreprises américaines adhérant au cadre de protection des données UE-États-Unis (Data Privacy Framework). Sinon, il vous faut des garanties comme les [clauses contractuelles types](https://gdpr-info.eu/art-46-gdpr/) de la Commission. Demandez à chaque fournisseur où les données sont traitées et laquelle de ces options s'applique.
+
+### Une AIPD quand le risque est élevé
+
+Une **analyse d'impact relative à la protection des données** (AIPD) est un examen écrit, réalisé avant de commencer, de ce qui pourrait mal tourner pour les personnes concernées. L'[article 35 du RGPD](https://gdpr-info.eu/art-35-gdpr/) l'exige lorsqu'un traitement est susceptible d'engendrer un risque élevé, par exemple l'évaluation systématique de personnes fondée sur un traitement automatisé. Un simple agent de factures n'en aura souvent pas besoin. Un agent qui trie des candidats à l'embauche en aura presque certainement besoin.
+
+### La prudence avec les décisions automatisées
+
+L'[article 22 du RGPD](https://gdpr-info.eu/art-22-gdpr/) donne aux personnes le droit de ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé lorsqu'elle produit des effets juridiques à leur égard ou les affecte de manière significative de façon similaire. Payer une facture n'entre pas dans ce cas. Rejeter un candidat, si. Gardez dans ces décisions une personne qui peut réellement changer le résultat.
+
+## L'AI Act en termes simples
+
+L'**AI Act** (règlement européen sur l'IA) classe les systèmes d'IA selon leur niveau de risque. Imaginez quatre niveaux :
+
+1. **Interdit.** Des pratiques comme les techniques de manipulation qui causent un préjudice, ou la notation sociale. Ces [interdictions s'appliquent depuis le 2 février 2025](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-113).
+2. **Haut risque.** Les systèmes utilisés dans des domaines sensibles, listés à l'[annexe III](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/annex-3). Ce sont eux qui portent les obligations lourdes.
+3. **Obligations de transparence.** Les systèmes qui dialoguent avec des personnes ou génèrent du contenu doivent le signaler clairement.
+4. **Tout le reste.** La plupart des outils d'entreprise. Aucune obligation spécifique en dehors de la maîtrise de l'IA.
+
+Il s'applique aussi au-delà de l'UE. L'[article 2](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-2) couvre les fournisseurs et les déployeurs établis dans d'autres pays lorsque les résultats du système sont utilisés dans l'Union. Un **fournisseur** développe le système d'IA, ou le fait développer, et le met sur le marché sous son propre nom. Un **déployeur** est l'entreprise qui l'utilise.
+
+## Quand un agent IA relève du haut risque selon l'AI Act
+
+L'annexe III inclut l'IA utilisée pour recruter ou sélectionner des personnes, notamment pour filtrer les candidatures et évaluer les candidats. Elle couvre aussi les décisions de promotion, de licenciement ou d'attribution des tâches au travail, l'évaluation de la solvabilité et la notation de crédit des particuliers, et l'accès aux services essentiels publics et privés. Notre agent de factures n'est pas sur cette liste, pas plus que la plupart des agents qui lisent des documents ou rédigent des e-mails.
+
+Si vous déployez un système à haut risque, vos obligations de déployeur incluent notamment de [confier le contrôle humain](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-26) à des personnes formées et dotées d'une réelle autorité, de conserver les journaux du système et d'informer les travailleurs avant de l'utiliser sur le lieu de travail. Le fournisseur porte l'essentiel du reste, comme la gestion des risques et les tests.
+
+## Deux obligations qui concernent presque tout le monde
+
+**Dire aux gens qu'ils ont affaire à une IA.** Selon l'[article 50](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-50), les systèmes qui interagissent directement avec des personnes doivent être conçus pour que ces personnes sachent qu'elles parlent à un système d'IA, sauf si c'est déjà évident. Si votre agent écrit aux fournisseurs pour réclamer un numéro de commande manquant, indiquez qu'il s'agit d'un assistant automatisé. Les contenus générés par l'IA et les hypertrucages (deepfakes) doivent aussi être signalés.
+
+**La maîtrise de l'IA.** L'[article 4](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-4), tel que modifié, demande aux fournisseurs et aux déployeurs de prendre des mesures pour favoriser la maîtrise de l'IA chez le personnel qui utilise l'IA pour leur compte. Pas de certificat, pas de niveau imposé. En pratique : une courte formation sur ce que fait l'agent, là où il se trompe et quand reprendre la main.
+
+## Le calendrier après l'omnibus numérique
+
+L'omnibus numérique sur l'IA (Digital Omnibus), le règlement (UE) 2026/1744, [est entré en vigueur le 27 juillet 2026](https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/) et a déplacé plusieurs échéances (la [synthèse d'Orrick](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes) en donne une vue d'ensemble lisible) :
+
+| Date | Ce qui s'applique |
+| --- | --- |
+| 2 février 2025 | Interdiction des pratiques prohibées |
+| Août 2025 | Règles pour les modèles d'IA à usage général, les grands modèles d'OpenAI et d'autres |
+| 2 août 2026 | Obligations de transparence de l'article 50. Les fournisseurs de systèmes générateurs de contenu déjà sur le marché avant cette date ont jusqu'au 2 décembre 2026 pour le marquage des contenus générés par l'IA |
+| 2 décembre 2027 | Obligations à haut risque pour les usages de l'annexe III, comme le recrutement et la notation de crédit (2 août 2026 avant l'omnibus) |
+| 2 août 2028 | IA à haut risque intégrée dans des produits réglementés, comme les machines ou les dispositifs médicaux |
+
+## À quoi ressemblent les amendes
+
+Selon l'[article 99 de l'AI Act](https://ai-act-service-desk.ec.europa.eu/fr/ai-act/article-99), les pratiques interdites peuvent coûter jusqu'à 35 millions d'euros ou 7 % du chiffre d'affaires annuel mondial. La violation d'autres obligations, y compris celles de l'article 50, peut coûter jusqu'à 15 millions d'euros ou 3 %, et la fourniture d'informations trompeuses aux autorités jusqu'à 7,5 millions d'euros ou 1 %. Pour les PME, c'est le plus faible des deux montants qui s'applique. Le RGPD va jusqu'à [20 millions d'euros ou 4 % du chiffre d'affaires](https://gdpr-info.eu/art-83-gdpr/).
+
+Ce sont des plafonds, pas des tarifs. Les autorités tiennent compte notamment de l'intention, du préjudice et de ce que vous avez fait pour l'éviter. C'est pour cela qu'une liste de contrôle documentée vaut la peine : c'est votre preuve.
+
+## Deux agents, deux listes de contrôle très différentes
+
+**L'agent de factures :**
+
+- Base légale consignée par écrit pour les données des factures.
+- Un contrat de sous-traitance avec le fournisseur d'IA, l'hébergeur et tout service de connexion.
+- Transferts hors de l'EEE couverts par une décision d'adéquation ou des clauses contractuelles types.
+- Accès limité aux factures, aux bons de commande et aux réceptions des marchandises.
+- Une personne valide chaque paiement.
+- Les messages adressés aux fournisseurs indiquent qu'ils viennent d'un assistant automatisé.
+- L'équipe finance est formée au fonctionnement de l'agent et sait quand reprendre la main.
+
+**Un agent de présélection des candidats :**
+
+- Tout ce qui précède, plus :
+- Une AIPD avant la mise en service.
+- Des candidats informés que l'IA intervient, et une personne qui examine et décide chaque rejet.
+- Un traitement en système à haut risque selon l'AI Act : un fournisseur capable de présenter sa documentation de conformité, des personnes formées pour le contrôle humain, des journaux conservés et des représentants du personnel informés, le tout prêt pour le 2 décembre 2027.
+- Des vérifications régulières que l'agent ne traite pas injustement certains groupes de candidats.
+
+Si vous cherchez par où commencer, choisissez le workflow dont la liste est la plus courte. Notre [conseil en IA](/fr/services/consulting) classe les workflows candidats de cette façon, notre [service d'agents IA](/fr/services/ai-agents) les construit avec ces contrôles en place, et notre [travail d'intégration](/fr/services/integration) réduit chaque connexion au strict nécessaire. Côté systèmes, lisez [connecter des agents IA à votre ERP et votre CRM](/fr/blog/connect-ai-agent-erp-crm) et notre guide sur [la base de connaissances d'un agent IA](/fr/blog/ai-agent-knowledge-base).
+
+## FAQ
+
+### Le RGPD s'applique-t-il à un agent IA exploité par une entreprise située hors de l'UE ?
+
+C'est possible. Le RGPD couvre les entreprises situées hors de l'UE lorsqu'elles proposent des biens ou des services à des personnes dans l'UE ou suivent leur comportement dans l'UE. Une entreprise en Tunisie, en Égypte ou aux Émirats qui traite des données sur le personnel ou les clients de ses clients européens doit partir du principe que le RGPD s'applique, et vérifier les détails avec un avocat.
+
+### Faut-il un contrat de sous-traitance avec OpenAI ou un autre fournisseur d'IA ?
+
+Oui, si l'agent envoie des données personnelles à ce fournisseur. Selon l'article 28 du RGPD, un prestataire qui traite des données personnelles pour votre compte doit être lié par un contrat qui fixe ce qu'il peut faire de ces données. Les grands fournisseurs d'IA proposent des accords de traitement des données standard pour leurs offres professionnelles.
+
+### Notre agent IA est-il à haut risque au sens de l'AI Act ?
+
+La plupart des agents d'entreprise ne le sont pas. Un agent qui traite des factures, répond à des questions internes ou rédige des e-mails est généralement hors de la liste des systèmes à haut risque. Les agents utilisés pour trier des candidats, évaluer des salariés, apprécier la solvabilité ou décider de l'accès à des services essentiels sont à haut risque, et ces obligations s'appliquent à partir du 2 décembre 2027.
+
+### Que devons-nous faire dès maintenant au titre de l'AI Act ?
+
+Deux points concernent presque toutes les entreprises. Veillez à ce que les personnes sachent quand elles ont affaire à un système d'IA plutôt qu'à un humain, et prenez des mesures pour que votre personnel comprenne les outils d'IA qu'il utilise. Les pratiques interdites, comme les systèmes de manipulation ou de notation sociale, sont prohibées depuis le 2 février 2025.
+
+---
+
+**Vous ne savez pas quelles règles s'appliquent à l'agent que vous envisagez ?** [Réservez un appel](/fr/book) et nous le confronterons avec vous au RGPD et à l'AI Act.

@@ -1,0 +1,182 @@
+---
+title: "Cerveau d'entreprise IA : un assistant qui sait comment fonctionne votre entreprise"
+summary: "Ce qu'est un cerveau d'entreprise, en quoi il diffère d'un moteur de recherche et d'un chatbot, comment la cartographie de vos processus lui apprend le vrai déroulement du travail, et un plan sur 90 jours pour en construire un, avec citations et droits d'accès intégrés."
+description: "Cerveau d'entreprise IA expliqué : un assistant qui apprend vos documents, processus et décisions, cite chaque réponse et respecte les droits d'accès."
+slug: "company-brain-ai"
+date: "2026-10-24"
+tags: ["Agents IA", "Données"]
+primaryKeyword: "cerveau d'entreprise IA"
+secondaryKeywords: ["base de connaissances IA pour entreprise", "assistant de connaissances interne", "IA qui connaît votre entreprise", "cartographie des processus avec l'IA"]
+author: "Fares"
+faq:
+  - question: "Qu'est-ce qu'un cerveau d'entreprise IA ?"
+    answer: "C'est un assistant de connaissances interne qui a appris vos documents, vos processus et les décisions qui les expliquent. Les collaborateurs lui posent des questions en langage courant, et il répond à partir de vos propres contenus, montre la source de chaque réponse et n'utilise que ce que la personne qui pose la question a le droit de voir."
+  - question: "En quoi un cerveau d'entreprise diffère-t-il d'un chatbot ?"
+    answer: "Un chatbot généraliste répond à partir de ce qu'il a appris sur l'internet public, il ne connaît donc ni vos seuils de validation ni vos exceptions. Un cerveau d'entreprise répond à partir de vos propres documents et de vos processus cartographiés, il les cite, et il sait dire « je ne sais pas » quand vos contenus ne couvrent pas la question."
+  - question: "Qu'est-ce que la cartographie des processus avec l'IA ?"
+    answer: "C'est décrire comment un travail se déroule réellement : les étapes, le responsable de chacune, les systèmes utilisés, les règles qui décident de la suite et les exceptions. Cette carte est stockée de façon structurée pour que l'IA réponde précisément aux questions sur les processus au lieu de deviner à partir de documents dispersés."
+  - question: "Combien de temps faut-il pour construire un cerveau d'entreprise ?"
+    answer: "À notre rythme, une première version fonctionnelle pour un service prend moins d'un mois, et une version de production avec droits d'accès et supervision prend environ trois mois. Elle continue ensuite de grandir à mesure que vous cartographiez plus de processus et connectez plus de sources."
+  - question: "D'autres agents IA peuvent-ils utiliser le cerveau d'entreprise ?"
+    answer: "Oui, s'il est exposé via MCP, un standard ouvert pour connecter les outils d'IA aux systèmes. Votre agent de factures, votre agent commercial ou votre agent de support peut alors demander au cerveau comment fonctionne un processus, avec les mêmes règles d'accès et les mêmes citations qu'une personne."
+---
+
+**Un cerveau d'entreprise IA (company brain) est un assistant interne qui connaît vos documents, vos processus et les raisons de vos décisions, et qui répond aux questions des collaborateurs à partir de ces contenus, source à l'appui.** C'est ce que devient une bonne base de connaissances quand vous lui apprenez aussi comment le travail circule entre les personnes et les systèmes. Bien construit, il évite à vos collaborateurs les plus expérimentés de répondre pour la centième fois à la même question.
+
+Cet article explique ce qu'est un « cerveau d'entreprise », comment il apprend vos processus et comment en construire un en 90 jours sans fuite de données. Il fait partie de notre guide sur les [agents IA pour les entreprises](/fr/blog/ai-agents-for-business), et il s'appuie sur [la façon dont la base de connaissances d'un agent IA utilise vos documents](/fr/blog/ai-agent-knowledge-base). Si vous ne l'avez pas lu, commencez par là : il couvre l'étape de recherche que cet article considère comme acquise.
+
+## Ce qu'est un cerveau d'entreprise IA, comparé à la recherche et à un chatbot
+
+Votre entreprise a déjà un cerveau, simplement vous ne pouvez pas l'interroger. Il est réparti entre quelques personnes présentes depuis longtemps, un lecteur partagé auquel personne ne se fie et des fils d'e-mails de 2019. Quand l'une de ces personnes part en vacances, les questions s'accumulent. Quand l'une d'elles quitte l'entreprise, une partie des réponses part avec elle.
+
+Un cerveau d'entreprise IA place ce savoir là où une machine peut le lire, et permet à chacun de l'interroger. Voyez-le comme votre collègue le plus expérimenté, les vacances en moins.
+
+Il est utile de le comparer aux deux outils avec lesquels on le confond souvent :
+
+| | Recherche sur votre intranet | Chatbot généraliste | Cerveau d'entreprise |
+| --- | --- | --- | --- |
+| Ce qu'il connaît | Les mots de vos fichiers | L'internet public, jusqu'à une certaine date | Vos documents, processus et décisions |
+| Ce que vous obtenez | Une liste de fichiers à lire | Une réponse fluide, souvent sans source | Une réponse directe avec sa source |
+| Connaît vos règles de validation ? | Seulement si vous trouvez le bon PDF | Non | Oui, grâce au processus cartographié |
+| Respecte les droits d'accès ? | Oui, fichier par fichier | Sans objet | Oui, par utilisateur, à chaque réponse |
+| Dit « je ne sais pas » ? | Ne renvoie rien | Rarement | Oui, quand vos contenus sont muets |
+| Utilisable par d'autres logiciels ? | De façon limitée | Pas avec vos données | Oui, via MCP |
+
+La recherche trouve des fichiers. Un chatbot écrit des phrases. Un cerveau d'entreprise répond à votre question, à partir de vos contenus, et vous dit d'où vient la réponse.
+
+## Ce qu'il apprend : documents, processus, décisions
+
+Un cerveau d'entreprise s'appuie sur trois types de connaissances. La plupart des projets ne traitent que le premier.
+
+**Les documents.** Politiques internes, contrats, procédures, listes de prix, fiches produits. C'est la base de connaissances classique dont vous avez sans doute entendu parler, interrogée avec le RAG (génération augmentée par récupération : l'IA va chercher les passages pertinents avant de répondre). L'[article sur la base de connaissances](/fr/blog/ai-agent-knowledge-base) la détaille.
+
+**Les processus.** Comment le travail passe d'une étape à la suivante. Les documents l'expliquent rarement, et c'est là que les équipes bloquent. Votre politique d'achat peut dire que les factures au-dessus d'un certain seuil exigent une validation supplémentaire, mais elle ne dira pas qu'en pratique le directeur d'usine signe en premier, ni que les pièces détachées urgentes sautent une étape. Ce savoir est dans la tête des gens, et c'est précisément ce que demandent les nouveaux arrivants.
+
+**Les décisions.** Pourquoi les choses sont comme elles sont. Pourquoi vous avez arrêté un fournisseur, pourquoi le plafond de remise pour les distributeurs est plus bas dans un pays, pourquoi le contrat d'un client comporte une clause particulière. Chaque décision fait l'objet d'une courte fiche : ce qui a été décidé et pourquoi. La fiche indique aussi qui a tranché, et à quelle date. Sans ces fiches, le cerveau peut vous donner la règle, mais pas vous dire si elle a encore du sens.
+
+## Cartographier vos processus
+
+La **cartographie des processus avec l'IA** consiste à décrire comment un travail se déroule réellement, pas comment le manuel dit qu'il se déroule. Pour chaque processus, vous notez cinq éléments :
+
+1. **Les étapes**, dans l'ordre.
+2. **Les responsables**, c'est-à-dire le rôle en charge de chaque étape.
+3. **Les systèmes**, là où chaque étape a lieu : votre ERP (le logiciel qui gère la finance et les achats), l'e-mail, un tableur.
+4. **Les règles de décision**, les conditions qui déterminent la suite.
+5. **Les exceptions**, les cas qui sortent du chemin normal et ce que les gens font dans ces cas.
+
+Nous le faisons au cours de courts entretiens avec les personnes qui font le travail, puis nous le comparons à ce qu'enregistrent vos systèmes. Les deux versions concordent rarement du premier coup, et l'écart vous apprendra beaucoup.
+
+Voici un processus cartographié pour la validation des factures fournisseurs. Tous les noms, rôles et montants sont donnés à titre d'illustration.
+
+| Étape | Responsable | Système | Règle ou exception |
+| --- | --- | --- | --- |
+| 1. Réception de la facture | Comptable fournisseurs | Boîte mail partagée | Les factures envoyées à des adresses personnelles sont transférées le jour même |
+| 2. Rapprochement avec le bon de commande et la livraison | Comptable fournisseurs | ERP | Écart de 2 % maximum par rapport à la commande : on continue. Plus de 2 % : retour à l'acheteur |
+| 3. Validation | Responsable financier | ERP | Jusqu'à 10 000 €. Au-delà, le directeur financier valide |
+| 4. Pièces détachées urgentes | Directeur d'usine | E-mail, puis ERP | Paiement possible avant l'étape 3, validation enregistrée sous 5 jours ouvrés |
+| 5. Programmation du paiement | Trésorerie | Portail bancaire | Payée au prochain cycle, deux fois par semaine |
+
+Désormais, quand un nouveau comptable demande « qui valide une facture de 14 000 € pour la réparation urgente d'une pompe ? », le cerveau peut répondre correctement : le directeur d'usine peut la débloquer, le directeur financier la valide ensuite parce qu'elle dépasse 10 000 €, et voici la page de procédure ainsi que la fiche de décision établie lors de l'accord sur l'exception pour pièces détachées.
+
+En coulisses, nous stockons la carte sous forme de données structurées plutôt que dans un long paragraphe, pour que l'IA lise les règles avec exactitude. Voici un exemple simplifié, à titre d'illustration :
+
+```yaml
+process: validation_factures_fournisseurs
+owner: Directeur financier
+last_reviewed: 2026-09-15
+steps:
+  match:
+    owner: Comptable fournisseurs
+    system: ERP
+    rule: "écart de prix <= 2 % -> valider, sinon -> retour_acheteur"
+  approve:
+    owner: Responsable financier
+    system: ERP
+    rule: "montant <= 10000 EUR -> responsable_financier, sinon -> directeur_financier"
+exceptions:
+  pieces_detachees_urgentes:
+    owner: Directeur d'usine
+    rule: "peut débloquer avant validation ; validation enregistrée sous 5 jours ouvrés"
+    source: decision-log/2025-03-urgent-parts.md
+```
+
+Pas besoin de lire du code pour en être responsable. Ce que vous remarquerez, c'est que chaque règle a un responsable, une date de révision et une source. Cela comptera dans les deux sections suivantes.
+
+## Droits d'accès et citations
+
+Deux fonctions distinguent un cerveau d'entreprise digne de confiance d'un outil qui vous mettra dans l'embarras.
+
+**Les citations.** Chaque réponse montre d'où elle vient : la page de politique interne, la carte du processus, la fiche de décision. Les collaborateurs peuvent vérifier en un clic, et quand la source est fausse, ils savent quel document corriger. Une réponse sans source doit être traitée comme une supposition.
+
+C'est important parce que votre assistant parle en votre nom. Dans l'affaire [Moffatt v. Air Canada](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), jugée en 2024, le chatbot du site de la compagnie aérienne avait donné à un client des informations erronées sur ses tarifs de deuil. Air Canada a soutenu ne pas être responsable de ce que disait le chatbot, et le Civil Resolution Tribunal de la Colombie-Britannique a rejeté cet argument. C'est une décision de petites créances, qui ne fait pas jurisprudence, mais la leçon est claire. Si l'assistant l'a dit, c'est vous qui l'avez dit.
+
+**Les droits d'accès.** Le cerveau ne répond qu'à partir de ce que la personne qui pose la question a le droit de voir. Un commercial qui pose une question sur un client obtient les conditions du contrat auxquelles il a déjà accès, pas les procès-verbaux du conseil d'administration concernant ce client. La fondation OWASP, une organisation à but non lucratif qui publie des recommandations de sécurité largement utilisées, classe ce risque parmi les [faiblesses des vecteurs et des embeddings](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/) et recommande une recherche qui tient compte des droits d'accès. Concrètement : filtrez les contenus selon les droits de l'utilisateur avant même que l'IA ne les lise. Ne comptez pas sur une consigne demandant à l'IA de garder des secrets.
+
+Les cartes de processus ont aussi besoin de droits d'accès. La carte de votre processus de paie est utile aux RH, et personne d'autre ne devrait la voir.
+
+## Comment il est construit : sources, structure, et MCP pour que les agents puissent l'utiliser
+
+Il y a trois couches, et elles suivent l'ordre dans lequel nous travaillons toujours : d'abord les fondations, ensuite les données, puis l'IA.
+
+**Les sources.** Nous nous connectons là où votre savoir se trouve déjà : l'intranet, les lecteurs partagés, l'ERP et le CRM (le système où les commerciaux suivent clients et affaires), l'outil de tickets. Connecter, pas copier, pour qu'une mise à jour de politique interne arrive dans le cerveau le jour même. C'est surtout du [travail d'intégration](/fr/services/integration), la partie la moins spectaculaire et la plus importante.
+
+**La structure.** Les documents sont indexés pour la recherche. Les processus sont cartographiés sous forme de fiches structurées comme celle ci-dessus. Les décisions sont consignées dans un registre simple. Chaque élément porte un responsable, une date de révision et ses règles d'accès.
+
+**L'accès pour les agents via MCP.** Les personnes posent leurs questions au cerveau dans une fenêtre de chat. Mais vous voudrez que vos autres agents IA puissent l'interroger aussi. **MCP**, le Model Context Protocol, est un standard ouvert qui permet aux outils d'IA de se connecter aux systèmes par une prise commune. Anthropic l'a [publié en novembre 2024](https://www.anthropic.com/news/model-context-protocol), et en décembre 2025 il a été [confié à l'Agentic AI Foundation, sous l'égide de la Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), si bien qu'aucun fournisseur d'IA ne le contrôle seul.
+
+Quand le cerveau est exposé comme serveur MCP, votre agent de factures peut demander « quelle est la règle de validation pour ce montant ? » avant d'orienter une facture, et obtenir la même réponse sourcée qu'une personne, dans la limite de ses propres droits restreints. C'est ainsi qu'une source de vérité unique et bien tenue sert tous les assistants que vous construirez ensuite. Nous expliquons la tuyauterie dans [connecter un agent IA à votre ERP et votre CRM](/fr/blog/connect-ai-agent-erp-crm).
+
+## Cas d'usage : intégration des nouveaux, questions clients, DDQ
+
+**L'intégration des nouveaux arrivants.** Une nouvelle recrue en finance passe ses premières semaines à demander où se trouvent les choses et qui signe quoi. Avec un cerveau d'entreprise, elle l'interroge d'abord, et son responsable examine les cas plus difficiles. Les questions qui reviennent sans cesse vous montrent aussi quels processus sont mal documentés.
+
+**Les questions des clients.** Vos responsables de compte reçoivent des questions comme « livrez-vous au Kenya ? » ou « quelle est notre garantie standard sur les appareils reconditionnés ? ». Le cerveau répond à partir de la fiche produit et des modèles de contrat en vigueur, avec une source, pour que la réponse envoyée au client soit cohérente avec ce que le service juridique a validé.
+
+**Les DDQ.** Un **questionnaire de due diligence (DDQ)** est la longue liste de questions qu'un grand client, un investisseur ou un partenaire vous envoie avant de signer. Comment stockez-vous les données ? Qui sont vos sous-traitants ? Quel est votre plan de continuité d'activité ? Certains comptent des centaines de questions, et beaucoup reviennent d'un DDQ à l'autre avec une formulation légèrement différente. Un cerveau d'entreprise rédige chaque réponse à partir de vos politiques validées et de vos réponses passées, cite la source et signale les questions auxquelles il ne peut pas répondre. Une personne relit et valide toujours. L'outil raccourcit le travail, il ne remplace pas le jugement.
+
+## Les pièges : savoir obsolète et droits d'accès
+
+**Le savoir obsolète.** Un cerveau qui se trompe avec assurance est pire que pas de cerveau du tout. La cause habituelle n'est pas l'IA, c'est une ancienne politique encore rangée à côté de la nouvelle, ou une carte de processus que personne n'a mise à jour après une réorganisation. La solution est ennuyeuse et elle fonctionne : un responsable par document et par processus, une date de révision sur tout, les anciennes versions retirées de l'index, et une série de 30 à 50 vraies questions aux réponses connues, que vous relancez après chaque changement.
+
+**Les droits d'accès.** Les lecteurs partagés sont pleins de fichiers partagés par erreur avec « tout le monde » il y a des années. Connectez-les à un cerveau et ces erreurs deviennent consultables. Avant la mise en service, vérifiez ce qui est partagé avec qui, et testez avec des comptes utilisateurs ordinaires, pas avec un compte administrateur qui voit tout. Notre article sur [les risques de sécurité des agents IA](/fr/blog/ai-agent-security) couvre le volet attaques, et [agents IA, RGPD et AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act) couvre les données personnelles présentes dans vos documents.
+
+**Vouloir tout cartographier.** N'essayez pas. Commencez par un service et ses dix questions les plus fréquentes. Un cerveau excellent en finance vaut mieux qu'un cerveau médiocre sur tout.
+
+## Une feuille de route sur 90 jours
+
+Notre rythme : une première version fonctionnelle en moins d'un mois, la production en trois. Pour un cerveau d'entreprise, cela donne ceci :
+
+| Semaines | Objectif | Ce que vous obtenez |
+| --- | --- | --- |
+| 1 à 2 | Choisir un service et ses questions les plus fréquentes | Liste de questions, inventaire des sources, audit des accès lancé |
+| 3 à 4 | Première version | Un cerveau qui répond avec citations pour un groupe pilote de 5 à 10 personnes, 3 processus cartographiés |
+| 5 à 8 | Consolidation | Droits d'accès par utilisateur appliqués, jeu de tests aux réponses connues, responsables et dates de révision sur chaque source |
+| 9 à 12 | Production | Déploiement à tout le service, registre des décisions en usage, accès MCP pour un premier agent, suivi des questions restées sans réponse |
+
+Après 90 jours, vous ajoutez un service à la fois. Chaque nouveau service va plus vite, parce que les sources, les droits d'accès et la structure sont déjà en place. Si vous voulez de l'aide pour cadrer le premier service, c'est par là que commence notre [travail de conseil](/fr/services/consulting).
+
+## FAQ
+
+### Qu'est-ce qu'un cerveau d'entreprise IA ?
+
+C'est un assistant de connaissances interne qui a appris vos documents, vos processus et les décisions qui les expliquent. Les collaborateurs lui posent des questions en langage courant, et il répond à partir de vos propres contenus, montre la source de chaque réponse et n'utilise que ce que la personne qui pose la question a le droit de voir.
+
+### En quoi un cerveau d'entreprise diffère-t-il d'un chatbot ?
+
+Un chatbot généraliste répond à partir de ce qu'il a appris sur l'internet public, il ne connaît donc ni vos seuils de validation ni vos exceptions. Un cerveau d'entreprise répond à partir de vos propres documents et de vos processus cartographiés, il les cite, et il sait dire « je ne sais pas » quand vos contenus ne couvrent pas la question.
+
+### Qu'est-ce que la cartographie des processus avec l'IA ?
+
+C'est décrire comment un travail se déroule réellement : les étapes, le responsable de chacune, les systèmes utilisés, les règles qui décident de la suite et les exceptions. Cette carte est stockée de façon structurée pour que l'IA réponde précisément aux questions sur les processus au lieu de deviner à partir de documents dispersés.
+
+### Combien de temps faut-il pour construire un cerveau d'entreprise ?
+
+À notre rythme, une première version fonctionnelle pour un service prend moins d'un mois, et une version de production avec droits d'accès et supervision prend environ trois mois. Elle continue ensuite de grandir à mesure que vous cartographiez plus de processus et connectez plus de sources.
+
+### D'autres agents IA peuvent-ils utiliser le cerveau d'entreprise ?
+
+Oui, s'il est exposé via MCP, un standard ouvert pour connecter les outils d'IA aux systèmes. Votre agent de factures, votre agent commercial ou votre agent de support peut alors demander au cerveau comment fonctionne un processus, avec les mêmes règles d'accès et les mêmes citations qu'une personne.
+
+---
+
+**Vous voulez un cerveau d'entreprise qui répond comme votre meilleur collègue, et seulement aux bonnes personnes ?** [Réservez un appel](/fr/book) et nous cartographierons ensemble votre premier processus.

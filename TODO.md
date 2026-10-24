@@ -15,7 +15,6 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 
 ## Content (later)
 
-- [ ] Blog: translate batches 1 and 2 to fr and de (same slugs)
 - [ ] Blog: write `ai-2026-year-in-review` in the first week of December (brief in `briefs/`)
 - [ ] Blog: refresh prices in the n8n and Copilot articles every few months (Copilot Business $18 promo ends 31 Dec 2026) and bump `updated`
 - [ ] Portfolio: real case studies (Additionality, Almajd, AMLD, Docutrad) with before/after results
