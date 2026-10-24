@@ -1,0 +1,174 @@
+---
+title: "n8n vs Make vs Zapier: Which Tool for Your First AI Agent?"
+summary: "A plain comparison of n8n, Make and Zapier for building a first AI agent: what each one charges for, where your data lives, five agents you can build in a week, and when no-code stops being enough."
+description: "n8n vs Make vs Zapier for your first AI agent: October 2026 prices, how each tool bills, EU data hosting, and five agents you can build in a single week."
+slug: "n8n-vs-make-vs-zapier"
+date: "2026-10-24"
+updated: "2026-10-24"
+tags: ["AI agents", "Automation"]
+primaryKeyword: "n8n vs Make vs Zapier"
+secondaryKeywords: ["workflow automation tools", "zapier vs n8n", "n8n pricing", "AI automation for marketing"]
+author: "Fares"
+faq:
+  - question: "Is n8n really free?"
+    answer: "The self-hosted Community Edition is free to use for your own internal business purposes under n8n's Sustainable Use License, but you pay for the server and for someone to run it. n8n's hosted cloud plans are paid, starting with Starter at €20 a month billed annually."
+  - question: "Which tool is cheapest for running an AI agent?"
+    answer: "It depends on how many steps your agent takes. n8n charges per full workflow run, Make charges credits per action, and Zapier charges tasks per action. For an agent with many steps that runs often, per-run billing usually costs less. For a simple two or three step flow, the difference is small."
+  - question: "Can we keep our data in the EU with these tools?"
+    answer: "n8n's hosted plans store data in Frankfurt, and self-hosting lets you choose the location yourself. Make offers EU data zones, though some AI features still route to the US. Zapier says it hosts data on AWS servers in the United States."
+  - question: "Do we need a developer to build a first AI agent?"
+    answer: "Not for a small, well-scoped agent. A technically comfortable ops or marketing person can build one in Zapier or Make. n8n rewards some technical skill, especially if you self-host. For anything that touches finance systems or customer data, have someone technical review permissions before it goes live."
+  - question: "When should we move from no-code to custom code?"
+    answer: "When the logic outgrows the canvas, when you need proper testing and version control, when per-step pricing climbs with volume, or when a security review asks questions the platform can't answer. Many companies keep no-code for simple flows and move only the critical agents to code."
+---
+
+**For most companies, the answer to n8n vs Make vs Zapier comes down to three things: how technical your team is, how many steps your agent will take, and where your data has to live.** Zapier is the easiest start, Make gives you the most room on a small budget, and n8n gives you the most control, including running it on your own servers. All three can now build a working AI agent.
+
+Below we compare price, billing, agent features and data hosting. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business), so if you're still asking what an agent is, start there.
+
+A few definitions first. **Workflow automation tools** connect your apps so that when something happens in one (a form is submitted), something happens in another (a deal is created in your CRM, the software where sales tracks contacts and deals). An **AI agent** is a step inside that flow where an AI model reads the situation, decides which tool to use, and acts within the limits you set. An **LLM** (large language model) is the AI model doing the reading and writing.
+
+## Quick pick: n8n vs Make vs Zapier by profile
+
+| Your situation | Our usual pick | Why |
+| --- | --- | --- |
+| Non-technical team, simple flows, many different apps | Zapier | Easiest to learn, and it connects to over 9,000 apps |
+| Small budget, visual thinker, moderately complex flows | Make | Cheap entry plans and a clear visual canvas |
+| Technical team, many steps per run, data must stay with you | n8n | Billed per run, can be self-hosted, code steps included |
+| Strict EU data requirements | n8n (cloud or self-hosted) or Make on an EU zone | See the data section below for the caveats |
+| You want to resell automation to your own clients | Talk to the vendor first | n8n's free licence forbids letting clients build workflows on your instance |
+
+The tool should fit the people who'll maintain it, not the people who build the demo.
+
+## How each one charges: n8n pricing, Make credits, Zapier tasks
+
+- **n8n bills per execution.** An execution is [one complete run of a workflow](https://n8n.io/pricing/), however many steps it has. Ten steps or a hundred, it's still one execution.
+- **Make bills per credit.** [Each module action](https://www.make.com/en/pricing), like adding a spreadsheet row or reading an email, uses one credit. Features that use Make's built-in AI can use more.
+- **Zapier bills per task.** Each successful action in a Zap counts as a task, and [the trigger that starts the Zap doesn't](https://zapier.com/pricing). AI steps, code and MCP calls (MCP is a standard way for AI tools to connect to other software) all draw from the same pool. One Zapier MCP tool call uses two tasks.
+
+Here's what the plans looked like on the day we wrote this:
+
+| | n8n | Make | Zapier |
+| --- | --- | --- | --- |
+| What you pay for | Executions (full runs) | Credits (per action) | Tasks (per action) |
+| Free option | Self-hosted Community Edition; cloud trial with 1,000 executions, no card | Free plan, 1,000 credits a month, 2 active scenarios | Free plan, 100 tasks a month, two-step Zaps only |
+| Entry plan | Starter: €20/month billed annually (€24 monthly), 2,500 executions | Core: $9/month billed annually, 10,000 credits | Professional: from $19.99/month billed yearly |
+| Next plan | Pro: €50/month billed annually (€60 monthly), 10,000 executions | Pro: $16/month; Teams: $29/month (10,000 credits, billed annually) | Team: from $69/month billed yearly, 25 users |
+| Larger teams | Business: €667/month billed annually, 40,000 executions, self-hosted only; Enterprise on request | Enterprise on request | Enterprise on request |
+| Agent product | AI Agent node included on all plans | Make AI Agents (beta) included on all plans | Zapier Agents: free tier with 400 activities a month; Pro at $33.33/month billed annually for 1,500 |
+
+*Prices as checked on 24 October 2026 on each vendor's pricing page. n8n showed us euros (visitors from other regions may see dollars); Make and Zapier showed US dollars. None of the three pages says whether VAT is included, so check at checkout.*
+
+### Why the billing model matters for agents
+
+Agents take many steps. Let's take an illustrative agent that runs 1,000 times a month and does eight actions each time: read the email, look up the customer, call the AI model, check the CRM, and so on. These figures are made up to show the mechanics, not measured.
+
+- **n8n:** 1,000 executions. That fits inside the Starter plan.
+- **Make:** roughly 8,000 credits, plus extra credits for any AI tokens if you use Make's own AI provider.
+- **Zapier:** roughly 7,000 tasks (the trigger is free), plus whatever the AI steps cost at Zapier's rates.
+
+Same agent, very different meters. That's why Zapier vs n8n often comes down to step count: for a two-step flow it barely matters, for a long agent running all day per-run billing pulls ahead fast.
+
+Remember the AI model has its own bill too, priced in tokens. We explain that in [AI agent token cost](/en/blog/ai-agent-token-cost).
+
+## AI agent capabilities
+
+All three can build a real agent today. They get there differently.
+
+**n8n** has an [AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): you connect a chat model and one or more tools, and the agent decides which tool to call. Its pricing page also lists MCP client and server support, human approval for tool calls, evaluations to test agent quality, and code steps in JavaScript or Python on every cloud plan. It's the most flexible, and it asks the most of the builder.
+
+**Make** released a new version of its [Make AI Agent app on 2 February 2026](https://help.make.com/introduction-to-make-ai-agent-new), still in open beta, so features and pricing may change. Agents live inside Make's visual scenarios, can use knowledge files such as FAQs and policies, and can call modules, other scenarios, MCP tools and other agents. You can use Make's own AI provider without an account at OpenAI or Anthropic, or connect your own on paid plans. Make's own guidance is refreshingly honest: give agents tasks you'd trust an intern with, and avoid sensitive data and high-stakes financial decisions.
+
+**Zapier** has [Zapier Agents](https://zapier.com/agents), a separate product where you describe an agent, give it company knowledge, and let it act across its app catalogue. Inside normal Zaps you also get AI steps, and Zapier MCP lets outside AI assistants trigger actions in your apps. It's the quickest way to get something working, though agents are billed on their own plan, in activities.
+
+Here's a simplified outline of a lead-qualifying agent in n8n. It's not a complete workflow, just the shape of one:
+
+```text
+Simplified n8n workflow: inbound lead qualifier (illustrative)
+
+1. Trigger      Webhook: new contact form submission
+2. AI Agent     Chat model: the model you choose
+                Tools: CRM "search contact", HTTP request to fetch the company website
+                Instructions: score the lead 1 to 5 against our criteria, give one reason
+3. IF           score is 4 or 5 -> create deal in CRM, post summary to sales channel
+                score is 1 to 3 -> add to nurture list
+4. Approval     a person approves before any email goes to the lead
+```
+
+The AI only does the judgement part. Everything around it stays plain, predictable automation.
+
+## Data, GDPR and self-hosting
+
+If you handle personal data of people in the EU, where it's stored and processed matters under GDPR. We cover the rules in [AI agents, GDPR and the EU AI Act](/en/blog/ai-agents-gdpr-eu-ai-act). Here's how the three compare.
+
+**n8n.** Hosted plans [store data in Frankfurt, Germany](https://n8n.io/pricing/). You can also self-host, which means running n8n on a server you control, in the country you choose. The free self-hosted version uses n8n's [Sustainable Use License](https://docs.n8n.io/n8n-community-license), a "fair-code" licence: you can use and modify it for your own internal business purposes, but n8n's [licence FAQ](https://docs.n8n.io/n8n-community-license/community-license/license-faq) rules out hosting it as a service where your clients build their own workflows. Agencies, take note.
+
+**Make.** Make runs on AWS in the EU or North America, and you pick a data zone for your organisation. But read the small print. Make's own page on [AI providers and data zones](https://help.make.com/ai-providers-and-data-zones-in-make) says that choosing an EU zone doesn't mean every AI request stays in the EU: some features and models route to the US or the UK, and bringing your own AI provider removes Make's EU guarantee. Check the table there for each feature you use. Every Make plan runs on Make's own hosting, though its Enterprise plan includes an on-prem agent for reaching systems inside your network.
+
+**Zapier.** Zapier says it [hosts data on AWS servers in the United States](https://zapier.com/legal/data-privacy), and that it's certified under the EU-US Data Privacy Framework, which is a legal basis for sending EU personal data to the US. That can work, but your data protection officer should sign off.
+
+Whatever you choose, the agent's permissions matter more than the logo on the tool. See [AI agent security](/en/blog/ai-agent-security) for the rules we apply.
+
+## Best fit by sector
+
+| Team | Typical first agent | Tool that usually fits |
+| --- | --- | --- |
+| Marketing | Turn a published article into draft social posts and a newsletter blurb | Zapier or Make, simple and app-heavy |
+| Sales | Qualify inbound leads and write a summary into the CRM | Any of the three; Zapier if the CRM team maintains it |
+| Finance | Read supplier invoices from a mailbox and prepare draft entries | n8n or custom code, because of volume, data and review needs |
+| Operations | Weekly exception report from spreadsheets and system exports | Make or n8n, many steps per run |
+| Customer service | Triage tickets and draft replies from the knowledge base | Make or n8n; keep a person on the send button |
+
+AI automation for marketing is usually the easiest win: low risk, public content, a human checks before anything goes out. Finance sits at the other end. Invoices carry bank details and money moves on them, so start read-only and keep posting with a person. Our guide on how to [connect an AI agent to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm) covers those permissions in detail.
+
+## Five agents you can build in a week
+
+Each is realistic for a small team with one person who's comfortable with the tool.
+
+1. **Lead qualifier (sales).** Connects your web form, your CRM and your team chat. Scores each lead, adds a one-line reason, and creates a deal only for strong ones.
+2. **Invoice intake (finance).** Connects a shared invoices mailbox and a spreadsheet or your accounting tool in draft mode. Pulls supplier, amount, date and order number, and flags anything it can't read. It never posts or pays.
+3. **Ticket triage (customer service).** Connects your helpdesk and a folder of help articles. Tags each ticket by topic and urgency and drafts a reply for an agent to check.
+4. **Content repurposing (marketing).** Connects your blog feed or shared drive and your scheduling tool. Drafts three social posts per article in your house style. A person edits and publishes.
+5. **Weekly operations digest (operations).** Connects the spreadsheets or system exports your managers already use. Every Monday it lists late orders, stock below threshold and anything unusual, and emails a short summary.
+
+What they share: one clear input, a handful of connections, a person approving anything that leaves the building.
+
+## When to outgrow no-code
+
+No-code tools are great for getting started. Know their limits before you depend on one.
+
+- **Complex logic.** When a flow has dozens of branches, loops and exceptions, the visual canvas becomes harder to read than code.
+- **Testing.** You want to rerun 200 known cases after every change and see what broke. n8n has evaluations built in; in the others it's mostly manual.
+- **Versioning.** Being able to see who changed what, and roll back, is basic hygiene for anything critical. On n8n, Git version control and separate environments start at the Business plan.
+- **Cost at volume.** Per-action pricing feels cheap at 1,000 runs and very different at 100,000. Model the cost at ten times today's volume before you commit.
+- **Security reviews.** Single sign-on, audit logs and fine-grained admin controls often sit on the top plans. If your IT or a client's security team sends a questionnaire, check the answers exist on the plan you're paying for.
+
+Our rule of thumb: keep simple, low-risk flows in no-code. Move an agent to custom code when it touches money or sensitive data at volume, when it needs proper tests, or when the platform bill starts to look like a salary. Agents also get far more useful once they can draw on a shared company knowledge base, which we describe in [the company brain](/en/blog/company-brain-ai).
+
+If you'd like help choosing or building, that's what our [automation service](/en/services/automation) is for.
+
+## FAQ
+
+### Is n8n really free?
+
+The self-hosted Community Edition is free to use for your own internal business purposes under n8n's Sustainable Use License, but you pay for the server and for someone to run it. n8n's hosted cloud plans are paid, starting with Starter at €20 a month billed annually.
+
+### Which tool is cheapest for running an AI agent?
+
+It depends on how many steps your agent takes. n8n charges per full workflow run, Make charges credits per action, and Zapier charges tasks per action. For an agent with many steps that runs often, per-run billing usually costs less. For a simple two or three step flow, the difference is small.
+
+### Can we keep our data in the EU with these tools?
+
+n8n's hosted plans store data in Frankfurt, and self-hosting lets you choose the location yourself. Make offers EU data zones, though some AI features still route to the US. Zapier says it hosts data on AWS servers in the United States.
+
+### Do we need a developer to build a first AI agent?
+
+Not for a small, well-scoped agent. A technically comfortable ops or marketing person can build one in Zapier or Make. n8n rewards some technical skill, especially if you self-host. For anything that touches finance systems or customer data, have someone technical review permissions before it goes live.
+
+### When should we move from no-code to custom code?
+
+When the logic outgrows the canvas, when you need proper testing and version control, when per-step pricing climbs with volume, or when a security review asks questions the platform can't answer. Many companies keep no-code for simple flows and move only the critical agents to code.
+
+---
+
+**Not sure which tool fits your first agent?** [Book a call](/en/book) and we'll map one workflow with you and pick the right tool for it.

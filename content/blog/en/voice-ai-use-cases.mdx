@@ -1,0 +1,179 @@
+---
+title: "AI Voice Agents for Business: 8 Use Cases That Actually Work"
+summary: "Where AI phone agents earn their keep, from booking and lead qualification to after-hours calls for trades and clinics, plus real per-minute prices, how the agent gets a phone number, and the EU rules on disclosure and call recording."
+description: "AI voice agents for business: 8 use cases that work, real per-minute costs, how to get a phone number, and EU rules on AI disclosure and call recording."
+slug: "voice-ai-use-cases"
+date: "2026-10-24"
+tags: ["AI agents", "Voice AI"]
+primaryKeyword: "AI voice agents for business"
+secondaryKeywords: ["voice AI use cases", "AI phone agent", "AI receptionist", "voice AI customer service"]
+author: "Fares"
+faq:
+  - question: "What are AI voice agents for business?"
+    answer: "They're AI assistants that answer and make phone calls in a natural voice. Connected to your calendar or CRM, they can book appointments, qualify leads or take a message, and pass the call to a person when they should."
+  - question: "How much does an AI voice agent cost?"
+    answer: "On the platforms we checked on 24 October 2026, a fully loaded minute costs roughly $0.08 to $0.13, including the AI model and the phone line. In our illustrative example of 1,500 calls a month averaging three minutes, that comes to about $370 to $580 a month, before setup work and VAT."
+  - question: "Can I keep my existing business phone number?"
+    answer: "Yes. You can forward calls from your current number to the agent's number, for example only after hours or when nobody picks up, or you can port your number to a telephony provider that connects it to the agent. Forwarding is the easier way to start a pilot."
+  - question: "Do I have to tell callers they're talking to an AI?"
+    answer: "In the EU, yes, unless it's already obvious. Article 50 of the AI Act requires systems that talk directly to people to make clear they're AI, and that duty applies from 2 August 2026. Today's voices can sound human enough that callers won't guess, so say it in the first sentence of the call."
+  - question: "Can a voice agent hand a call over to a person?"
+    answer: "Yes, and it should. The main platforms can transfer a live call to a phone number when conditions you define are met, such as an angry caller or a medical question, ideally with a short summary."
+---
+
+**AI voice agents for business are AI assistants that pick up the phone, hold a natural conversation, and do something useful with it: book the appointment, qualify the lead, answer the question, or pass the call to the right person.** They work best on frequent calls that follow a pattern, and worst on calls that need judgement.
+
+Below: eight use cases that hold up, what a minute costs, the limits, and the EU rules. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business).
+
+## What AI voice agents for business actually are
+
+A voice agent is a chain of four parts:
+
+1. **Speech-to-text** turns what the caller says into written text.
+2. **A language model**, the kind of AI behind ChatGPT, decides what to say or do next.
+3. **Text-to-speech** turns the reply into a spoken voice.
+4. **Tools** let the agent act: check the calendar, create a booking, look up an order, or transfer the call.
+
+The caller talks, the agent answers within about a second ([ElevenLabs quotes](https://elevenlabs.io/blog/what-is-an-ai-voice-agent) time to first audio typically under one second), and something happens in your systems.
+
+A simplified setup (every platform names these differently):
+
+```yaml
+# Simplified voice agent setup (illustrative)
+phone_number: "+49 30 0000000"     # a number from a telephony provider
+speech_to_text: provider default
+language_model: a fast, mid-sized model
+text_to_speech: a chosen voice, in English and French
+first_sentence: "Hello, you're speaking with the clinic's AI assistant. This call is recorded. How can I help?"
+tools:
+  - check_calendar                  # read free slots
+  - book_appointment
+  - send_sms_confirmation
+transfer_rule:
+  to: "+49 30 0000001"              # front desk
+  when: caller asks for a person, is upset, or asks a medical question
+```
+
+The voices have become very convincing. ElevenLabs describes its agents as [natural and human-sounding](https://elevenlabs.io/voice-agents), and independent research backs that up: in a [2025 study by Queen Mary University of London](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332692), listeners labelled voice clones made with ElevenLabs' tools as human about as often as real human recordings (70% against 72%). Open-source models are closing the gap. Resemble AI's [Chatterbox](https://github.com/resemble-ai/chatterbox), released under the MIT licence, has a Turbo model built for voice agents. In the company's own [blind test against ElevenLabs Turbo v2.5](https://podonos.com/resembleai/chatterbox-turbo-vs-elevenlabs-turbo), listeners favoured Chatterbox in about 65% of 2,500 ratings. It's a vendor-run test against an older ElevenLabs model, so treat it as a signal. Still, a good voice is getting cheaper to run yourself.
+
+### How a voice agent gets a real phone number
+
+You have three options.
+
+- **A new number from a telephony provider.** Twilio and similar providers rent numbers in many countries; a US local number costs [$1.15 a month](https://www.twilio.com/en-us/voice/pricing/us).
+- **Forward your existing number.** Forward calls to the agent's number after 18:00, or when nobody answers within 20 seconds. The safest way to start.
+- **Port your number.** Move your existing number to a new provider, like moving a mobile number between operators ([Twilio's process](https://www.twilio.com/docs/phone-numbers/port-in)). Do it once the pilot has proved itself.
+
+**SIP** (Session Initiation Protocol) is the standard way internet phone systems connect calls, so a SIP connection lets your existing switchboard send calls to the agent and receive them back. ElevenLabs, for example, [supports this](https://elevenlabs.io/docs/agents-platform/phone-numbers/sip-trunking).
+
+### Connecting it to your calendar and CRM
+
+A voice agent without tools is an answering machine with good manners. The value is in what it does during the call: check free slots, create the booking, add the caller to your CRM (customer relationship management system, where sales tracks contacts and deals), or log a repair request. We cover the routes in [how to connect an AI agent to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm). Give the agent the narrowest access that does the job.
+
+## Voice AI use cases by function
+
+**1. Inbound support for repeat questions.** Opening hours, order status, "has my refund gone through". The agent answers from a [knowledge base](/en/blog/ai-agent-knowledge-base) and looks up order data. For voice AI customer service, the measure is simple: how many calls end with the question answered and no transfer.
+
+**2. Booking and rescheduling.** The caller wants Tuesday afternoon; the agent offers two slots, books one, and texts a confirmation. Don't forget rescheduling: those calls interrupt staff all day and rarely need a person.
+
+**3. Lead qualification.** A prospect calls about a quote. The agent asks the questions your sales team always asks (what they need, where, how soon, rough budget), writes the answers into the CRM and books a call with a salesperson for the leads that fit. ElevenLabs' own [example agent prompt](https://elevenlabs.io/voice-agents) collects exactly this: name, company, the problem, timeline and any budget signal.
+
+**4. Reminders and confirmations.** Outbound calls to people who already have a relationship with you: "Your appointment is tomorrow at 10:00, can you still make it?" If they can't, the agent rebooks on the spot. Check your country's rules on automated outbound calls first; some require prior consent.
+
+## Voice AI use cases by industry
+
+The same building blocks, applied where missed calls cost real money.
+
+**5. Trades: plumbers, electricians, heating engineers.** The person who can answer the phone is usually under a sink. An AI phone agent picks up, separates emergencies ("water is coming through the ceiling") from routine jobs, takes the address and photos by text message, and either books a visit or transfers the emergency to whoever is on call.
+
+**6. Clinics: dental, physio, veterinary.** An AI receptionist handles bookings, cancellations and "do you have anything earlier?" calls. The hard rule: no medical advice. Any question about symptoms, medication or results goes straight to a person.
+
+**7. Property: agencies and property managers.** Viewing requests and tenant maintenance reports. The agent books viewings and turns "the boiler is making a noise" into a structured repair ticket with the address, the problem and a callback number.
+
+**8. Hospitality: restaurants and hotels.** Table bookings, late check-ins, dietary requests. Guests call in their own language: ElevenLabs lists [over 90 languages](https://elevenlabs.io/pricing/api) for its agent models. A hotel in Tunis or Marrakech can offer Arabic, French and English on one number, as long as each is tested (see the limits below).
+
+## What it costs
+
+Voice agents are priced per minute. We checked the official pricing pages on 24 October 2026. All prices are in US dollars, exclude VAT, and change often.
+
+| Provider | What you pay | Source |
+| --- | --- | --- |
+| ElevenLabs Agents | Self-serve plans from free (15 minutes) to $990 a month; Pro is $99 a month with 1,238 minutes included, then $0.08 a minute. The AI model is billed separately. No telephony fee, your phone provider bills you directly | [ElevenLabs Agents pricing](https://elevenlabs.io/pricing/agents) |
+| Retell AI | $0.07 to $0.31 a minute depending on the model and voice; their default example is $0.11 a minute. US calls over Retell's telephony add about $0.015 a minute, numbers are $2 a month | [Retell pricing](https://www.retellai.com/pricing) |
+| Vapi | $0.05 a minute platform fee, plus speech-to-text, model and voice at cost, about $0.03 to $0.08 a minute combined in their calculator. One phone number included | [Vapi pricing](https://vapi.ai/pricing) |
+| Twilio (phone line) | US local number $1.15 a month; receiving calls $0.0085 a minute, making calls $0.014 a minute | [Twilio US voice pricing](https://www.twilio.com/en-us/voice/pricing/us) |
+
+An illustrative example, with invented assumptions, not client data: a clinic receives **1,500 calls a month**, averaging **3 minutes**, so 4,500 minutes. For ElevenLabs we assume $0.04 a minute for the AI model, the figure Retell's own calculator uses for its default model.
+
+| Setup (illustrative) | Per call | Per month |
+| --- | --- | --- |
+| Vapi, cheapest components in its calculator | about $0.25 | about $370 |
+| Retell, default example plus US telephony and one number | about $0.38 | about $565 |
+| ElevenLabs Pro, extra minutes, model at $0.04, Twilio number and inbound minutes | about $0.39 | about $580 |
+| Vapi, most expensive components in its calculator | about $0.39 | about $580 |
+
+So a fully loaded minute lands around $0.08 to $0.13. That's the usage bill only; setup, testing and reviewing calls are where the real effort goes. The AI model swings most, for the reasons in [AI agent token cost](/en/blog/ai-agent-token-cost): a bigger model and longer instructions cost more per minute.
+
+## Limits: accents, languages and handover to a human
+
+**Accents and dialects.** Speech-to-text is only as good as what it was trained on. A [2020 Stanford-led study](https://pmc.ncbi.nlm.nih.gov/articles/PMC7149386/) of five major speech recognition systems found an average error rate of 35% of words for Black American speakers against 19% for white speakers. Systems have improved since, but test with recordings of your real callers. "Supports Arabic" doesn't tell you how it handles Tunisian or Moroccan dialect mixed with French.
+
+**Noise and bad lines.** Callers on a building site or a weak mobile signal are harder to understand, and turn-taking can still go wrong: the agent cuts in during a pause, or talks over someone. Test for it.
+
+**Handover to a human.** This decides whether callers trust the system. [Retell](https://www.retellai.com/pricing) lists call transfer as a feature, and ElevenLabs has a [transfer tool](https://elevenlabs.io/docs/agents-platform/customization/tools/system-tools/transfer-to-human) that moves the call to a phone number when conditions you define are met. Write those conditions down: the caller asks for a person, gets upset, raises a complaint, mentions health, money or legal matters, or the agent fails to understand twice. Pass a short summary with the transfer, and when nobody's free, offer a callback at a promised time.
+
+A phone agent is also a door into your systems: someone can try to talk it into revealing another customer's booking. The permission rules in [AI agent security risks](/en/blog/ai-agent-security) apply to voice just as much as to text.
+
+## Legal: disclosing AI and call recording consent in the EU
+
+This is general information, not legal advice. Check your setup with a lawyer in each country where you take calls.
+
+**Tell callers they're talking to an AI.** [Article 50 of the EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50) says systems that interact directly with people must be designed so those people are informed they're dealing with an AI system, unless that's obvious to a reasonably well-informed person. This transparency duty applies from 2 August 2026; the [Digital Omnibus](https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/) only gave extra time, until 2 December 2026, for marking AI-generated content from systems already on the market. And the more human the agent sounds, the less obvious it is, so realism doesn't remove the duty. Disclose it in the first sentence of every call. We cover the wider rules in [AI agents, GDPR and the EU AI Act](/en/blog/ai-agents-gdpr-eu-ai-act).
+
+**Recording and transcripts fall under GDPR.** A recording of someone's voice and the transcript of what they said are personal data. You need a [legal basis](https://gdpr-info.eu/art-6-gdpr/) for keeping them, you must [tell callers](https://gdpr-info.eu/art-13-gdpr/) what you record, why, and for how long, and you may only keep the data [as long as you need it](https://gdpr-info.eu/art-5-gdpr/). And a voice agent works from a transcript of the call by design, so switching off audio recording doesn't mean you aren't processing what callers say.
+
+**National rules differ.** Two examples:
+
+- **Germany.** [Section 201 of the Criminal Code](https://www.gesetze-im-internet.de/stgb/__201.html) makes it a criminal offence, punishable by up to three years in prison or a fine, to record someone's privately spoken words without authorisation. In practice, get consent before recording.
+- **France.** In its guidance on recording calls at work, the data protection authority CNIL [says callers must be told](https://www.cnil.fr/fr/lecoute-et-lenregistrement-des-appels-sur-le-lieu-de-travail) at the start of the call that it's recorded, why, and that they can object, with full details available on a website. Recordings should generally be kept for no more than six months.
+
+A sensible default: disclose AI and recording in the first sentence, let callers object or ask for a person, keep transcripts only as long as you need them, and delete the audio sooner.
+
+## How to run a pilot
+
+Four to six weeks, one question: does the agent handle one type of call well enough to keep?
+
+1. **Pick one call type.** Booking calls, or after-hours calls, not "all calls". Count how many you get and how many you miss today. That's your baseline.
+2. **Start with forwarding.** Forward only unanswered or out-of-hours calls. Your main line stays untouched.
+3. **Write the script and the transfer rule.** The first sentence (AI and recording disclosure), the questions it must ask, what it can book, and exactly when it hands over.
+4. **Test internally first.** Your team calls it 50 times: rude callers, strong accents, background noise.
+5. **Go live and listen.** Read transcripts every day in week one, then weekly. Track calls handled without transfer, bookings completed, transfers and complaints.
+6. **Decide on numbers.** Compare the monthly bill with the calls you used to miss. If it works, widen the hours or add a second call type.
+
+Under the hood, a voice agent uses the same building blocks as the [chatbots and assistants](/en/services/chatbots) we build: answers from your own documents, and a clean handover to a person.
+
+## FAQ
+
+### What are AI voice agents for business?
+
+They're AI assistants that answer and make phone calls in a natural voice. Connected to your calendar or CRM, they can book appointments, qualify leads or take a message, and pass the call to a person when they should.
+
+### How much does an AI voice agent cost?
+
+On the platforms we checked on 24 October 2026, a fully loaded minute costs roughly $0.08 to $0.13, including the AI model and the phone line. In our illustrative example of 1,500 calls a month averaging three minutes, that comes to about $370 to $580 a month, before setup work and VAT.
+
+### Can I keep my existing business phone number?
+
+Yes. You can forward calls from your current number to the agent's number, for example only after hours or when nobody picks up, or you can port your number to a telephony provider that connects it to the agent. Forwarding is the easier way to start a pilot.
+
+### Do I have to tell callers they're talking to an AI?
+
+In the EU, yes, unless it's already obvious. Article 50 of the AI Act requires systems that talk directly to people to make clear they're AI, and that duty applies from 2 August 2026. Today's voices can sound human enough that callers won't guess, so say it in the first sentence of the call.
+
+### Can a voice agent hand a call over to a person?
+
+Yes, and it should. The main platforms can transfer a live call to a phone number when conditions you define are met, such as an angry caller or a medical question, ideally with a short summary.
+
+---
+
+**Thinking about an AI phone agent for your business?** [Book a call](/en/book) and we'll help you pick the first call type to automate and work out what it would cost.

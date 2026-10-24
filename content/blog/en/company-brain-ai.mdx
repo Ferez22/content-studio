@@ -1,0 +1,182 @@
+---
+title: "Company Brain AI: An Assistant That Knows How Your Business Works"
+summary: "What a company brain is, how it differs from search and a chatbot, how mapping your processes teaches it how work really flows, and a 90-day plan to build one with citations and access rights built in."
+description: "Company brain AI explained: an assistant that learns your documents, processes and decisions, cites every answer and respects who may see what."
+slug: "company-brain-ai"
+date: "2026-10-24"
+tags: ["AI agents", "Data"]
+primaryKeyword: "company brain AI"
+secondaryKeywords: ["AI knowledge base for companies", "internal knowledge assistant", "AI that knows your company", "AI process mapping"]
+author: "Fares"
+faq:
+  - question: "What is a company brain AI?"
+    answer: "It's an internal knowledge assistant that has learned your documents, your processes and the decisions behind them. Staff ask it questions in plain language, and it answers from your own material, shows the source of every answer and only uses what the person asking is allowed to see."
+  - question: "How is a company brain different from a chatbot?"
+    answer: "A general chatbot answers from what it learned on the public internet, so it doesn't know your approval limits or your exceptions. A company brain answers from your own documents and mapped processes, cites them, and can say \"I don't know\" when your material doesn't cover the question."
+  - question: "What is AI process mapping?"
+    answer: "It's capturing how a piece of work actually flows: the steps, who owns each one, which systems are used, the rules that decide what happens next, and the exceptions. That map is stored in a structured way so the AI can answer process questions precisely instead of guessing from scattered documents."
+  - question: "How long does it take to build a company brain?"
+    answer: "With our rhythm, a working first version for one department takes under a month, and a production version with permissions and monitoring takes about three months. It then keeps growing as you map more processes and connect more sources."
+  - question: "Can other AI agents use the company brain?"
+    answer: "Yes, if it's exposed through MCP, an open standard for connecting AI tools to systems. Your invoice agent, sales agent or support agent can then ask the brain how a process works, with the same access rules and citations a person would get."
+---
+
+**Company brain AI is an internal assistant that knows your documents, your processes and the reasons behind your decisions, and answers staff questions from them with a source attached.** It's what a good knowledge base becomes once you also teach it how work flows between people and systems. Built well, it saves your senior people from answering the same question for the hundredth time.
+
+This article explains what a company brain is, how it learns your processes, and how to build one in 90 days without leaking data. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business), and it builds on [how an AI agent knowledge base uses your documents](/en/blog/ai-agent-knowledge-base). If you haven't read that one, start there: it covers the search step this article takes for granted.
+
+## What company brain AI is, compared with search and a chatbot
+
+Your company already has a brain, you just can't query it. It's spread across a few long-serving people, a shared drive nobody trusts, and email threads from 2019. When one of those people goes on holiday, questions pile up. When one of them leaves, some of the answers leave too.
+
+A company brain AI puts that knowledge where a machine can read it, and lets everyone ask it questions. Think of it as your most experienced colleague, minus the holidays.
+
+It helps to compare it with the two things people usually confuse it with:
+
+| | Search on your intranet | General chatbot | Company brain |
+| --- | --- | --- | --- |
+| What it knows | Words in your files | The public internet, up to a date | Your documents, processes and decisions |
+| What you get back | A list of files to read | A fluent answer, often unsourced | A direct answer with its source |
+| Knows your approval rules? | Only if you find the right PDF | No | Yes, from the mapped process |
+| Respects access rights? | Yes, file by file | Not applicable | Yes, per user, at every answer |
+| Says "I don't know"? | Returns nothing | Rarely | Yes, when your material is silent |
+| Can other software use it? | Limited | Not with your data | Yes, through MCP |
+
+Search finds files. A chatbot writes sentences. A company brain answers your question, from your material, and tells you where the answer came from.
+
+## What it learns: documents, processes, decisions
+
+A company brain draws on three kinds of knowledge. Most projects only do the first.
+
+**Documents.** Policies, contracts, procedures, price lists, product sheets. That's the classic knowledge base you've probably heard about, searched with RAG (retrieval-augmented generation: the AI looks up the relevant passages before it answers). The [knowledge base article](/en/blog/ai-agent-knowledge-base) covers it in detail.
+
+**Processes.** How work moves from one step to the next. Documents rarely spell it out, and that's where staff get stuck. Your procurement policy might say invoices above a threshold need extra approval, but it won't say that in practice the plant manager signs first, or that urgent spare parts skip a step. That knowledge lives in people's heads, and it's exactly what new staff ask about.
+
+**Decisions.** Why things are the way they are. Why you dropped a supplier, why the discount cap for distributors is lower in one country, why a client's contract has a special clause. Each decision gets a short record of what was decided and why. It also notes who made the call, with a date. Without these, the brain can tell you the rule but not whether it still makes sense.
+
+## Mapping your processes
+
+**AI process mapping** means capturing how a piece of work actually flows, not how the manual says it flows. For each process you write down five things:
+
+1. **Steps**, in order.
+2. **Owners**, the role responsible for each step.
+3. **Systems**, where each step happens: your ERP (the software that runs finance and purchasing), email, a spreadsheet.
+4. **Decision rules**, the conditions that decide what happens next.
+5. **Exceptions**, the cases that break the normal path and what people do about them.
+
+We do this in short interviews with the people who do the work, then check it against what your systems record. The two versions rarely match on the first try, and you'll learn a lot from the gap.
+
+Here's a mapped process for supplier invoice approval. All names, roles and amounts are illustrative.
+
+| Step | Owner | System | Rule or exception |
+| --- | --- | --- | --- |
+| 1. Receive invoice | Accounts payable clerk | Shared inbox | Invoices sent to personal emails get forwarded the same day |
+| 2. Match to purchase order and delivery | Accounts payable clerk | ERP | Within 2% of the order: continue. More than 2%: back to the buyer |
+| 3. Approve | Finance manager | ERP | Up to €10,000. Above that, the CFO approves |
+| 4. Urgent spare parts | Plant manager | Email, then ERP | Can be paid before step 3, approval recorded within 5 working days |
+| 5. Schedule payment | Treasury | Banking portal | Paid on the next run, twice a week |
+
+Now when a new clerk asks "who approves a €14,000 invoice for an urgent pump repair?", the brain can answer properly: the plant manager can release it, the CFO approves it afterwards because it's above €10,000, and here's the procedure page and the decision record from when the spare-parts exception was agreed.
+
+Behind the scenes, we store the map as structured data rather than a long paragraph, so the AI reads the rules exactly. Here's a simplified, illustrative example:
+
+```yaml
+process: supplier_invoice_approval
+owner: Head of Finance
+last_reviewed: 2026-09-15
+steps:
+  match:
+    owner: AP clerk
+    system: ERP
+    rule: "price difference <= 2% -> approve, else -> return_to_buyer"
+  approve:
+    owner: Finance manager
+    system: ERP
+    rule: "amount <= 10000 EUR -> finance_manager, else -> CFO"
+exceptions:
+  urgent_spare_parts:
+    owner: Plant manager
+    rule: "may release before approval; approval recorded within 5 working days"
+    source: decision-log/2025-03-urgent-parts.md
+```
+
+You don't need to read code to own this. What you'll notice is that every rule has an owner, a review date and a source. That'll matter in the next two sections.
+
+## Permissions and citations
+
+Two features separate a company brain you can trust from one that'll embarrass you.
+
+**Citations.** Every answer shows where it came from: the policy page, the process map, the decision record. Staff can check it in one click, and when the source is wrong, they know which document to fix. An answer without a source should be treated as a guess.
+
+This matters because your assistant speaks for you. In [Moffatt v. Air Canada](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), decided in 2024, the airline's website chatbot gave a customer wrong information about its bereavement fares. Air Canada argued it wasn't responsible for what the chatbot said, and British Columbia's Civil Resolution Tribunal rejected that. It's a small-claims decision, not binding precedent, but the lesson is plain. If the assistant says it, you said it.
+
+**Permissions.** The brain only answers from what the person asking is allowed to see. A sales rep asking about a client gets the contract terms they already have access to, not the board minutes about that client. The OWASP Foundation, a non-profit that publishes widely used security guidance, lists this risk under [vector and embedding weaknesses](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/) and recommends permission-aware retrieval. In plain terms: filter the material by the user's rights before the AI ever reads it. Don't rely on telling the AI to keep secrets.
+
+Process maps need permissions too. Your payroll process map is useful to HR, and nobody else should see it.
+
+## How it is built: sources, structure, and MCP so agents can use it
+
+There are three layers, and they follow the order we always work in: foundation first, then data, then AI.
+
+**Sources.** We connect to where your knowledge already lives: the intranet, shared drives, the ERP and CRM (the system where sales tracks clients and deals), the ticketing tool. Connect, don't copy, so a policy update reaches the brain the same day. This is mostly [integration work](/en/services/integration), and it's the least glamorous and most important part.
+
+**Structure.** Documents get indexed for search. Processes get mapped into structured records like the one above. Decisions get a simple log. Every item carries an owner, a review date and its access rules.
+
+**Access for agents through MCP.** People ask the brain questions in a chat window. But you'll want your other AI agents to ask it too. **MCP**, the Model Context Protocol, is an open standard that lets AI tools connect to systems through one common plug. Anthropic [released it in November 2024](https://www.anthropic.com/news/model-context-protocol), and in December 2025 it was [donated to the Agentic AI Foundation under the Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), so no single AI vendor controls it.
+
+When the brain is exposed as an MCP server, your invoice agent can ask "what's the approval rule for this amount?" before it routes an invoice, and get the same cited answer a person would, under the agent's own limited rights. That's how one well-kept source of truth serves every assistant you build later. We explain the plumbing in [connecting an AI agent to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm).
+
+## Use cases: onboarding, client questions, DDQs
+
+**Onboarding.** A new hire in finance spends the first weeks asking where things are and who signs what. With a company brain, they ask it first and their manager reviews the harder cases. The questions people keep asking also show you which processes are badly documented.
+
+**Client questions.** Your account managers field questions like "do we support delivery to Kenya?" or "what's our standard warranty on refurbished units?" The brain answers from the current product sheet and contract templates, with a source, so the reply sent to the client is consistent with what legal approved.
+
+**DDQs.** A **due diligence questionnaire (DDQ)** is the long list of questions a large client, investor or partner sends before signing with you. How do you store data? Who are your subcontractors? What's your business continuity plan? Some run to hundreds of questions, and many repeat from one DDQ to the next with slightly different wording. A company brain drafts each answer from your approved policies and past answers, cites the source, and flags the questions it can't answer. A person still reviews and signs off. It shortens the work; it doesn't replace the judgement.
+
+## Pitfalls: stale knowledge and access rights
+
+**Stale knowledge.** A brain that's wrong with confidence is worse than no brain. The usual cause isn't the AI, it's an old policy still sitting next to the new one, or a process map nobody updated after a reorganisation. The fix is boring and it works: one owner per document and per process, a review date on everything, old versions removed from the index, and a set of 30 to 50 real questions with known answers that you rerun after every change.
+
+**Access rights.** Shared drives are full of files shared with "everyone" years ago by accident. Connect them to a brain and those mistakes become searchable. Before you go live, audit what's shared with whom, and test with ordinary user accounts, not an admin account that sees everything. Our article on [AI agent security risks](/en/blog/ai-agent-security) covers the attack side, and [AI agents, GDPR and the EU AI Act](/en/blog/ai-agents-gdpr-eu-ai-act) covers personal data in your documents.
+
+**Trying to map everything.** Don't. Start with one department and its ten most-asked questions. A brain that's excellent on finance beats one that's mediocre on everything.
+
+## A 90-day roadmap
+
+Our rhythm is a working first version in under a month and production in three. For a company brain, it looks like this:
+
+| Weeks | Goal | What you get |
+| --- | --- | --- |
+| 1 to 2 | Pick one department and its most-asked questions | Question list, source inventory, access audit started |
+| 3 to 4 | First version | Brain answering with citations for a pilot group of 5 to 10 people, 3 processes mapped |
+| 5 to 8 | Harden | Per-user permissions enforced, test set of known answers, owners and review dates on every source |
+| 9 to 12 | Production | Rollout to the whole department, decision log in use, MCP access for a first agent, monitoring of unanswered questions |
+
+After 90 days, you add a department at a time. Each new one is faster, because the sources, permissions and structure are already there. If you want help scoping the first department, that's what our [consulting work](/en/services/consulting) starts with.
+
+## FAQ
+
+### What is a company brain AI?
+
+It's an internal knowledge assistant that has learned your documents, your processes and the decisions behind them. Staff ask it questions in plain language, and it answers from your own material, shows the source of every answer and only uses what the person asking is allowed to see.
+
+### How is a company brain different from a chatbot?
+
+A general chatbot answers from what it learned on the public internet, so it doesn't know your approval limits or your exceptions. A company brain answers from your own documents and mapped processes, cites them, and can say "I don't know" when your material doesn't cover the question.
+
+### What is AI process mapping?
+
+It's capturing how a piece of work actually flows: the steps, who owns each one, which systems are used, the rules that decide what happens next, and the exceptions. That map is stored in a structured way so the AI can answer process questions precisely instead of guessing from scattered documents.
+
+### How long does it take to build a company brain?
+
+With our rhythm, a working first version for one department takes under a month, and a production version with permissions and monitoring takes about three months. It then keeps growing as you map more processes and connect more sources.
+
+### Can other AI agents use the company brain?
+
+Yes, if it's exposed through MCP, an open standard for connecting AI tools to systems. Your invoice agent, sales agent or support agent can then ask the brain how a process works, with the same access rules and citations a person would get.
+
+---
+
+**Want a company brain that answers like your best colleague, and only to the right people?** [Book a call](/en/book) and we'll map your first process together.
