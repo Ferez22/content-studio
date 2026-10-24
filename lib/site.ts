@@ -4,6 +4,8 @@ export const site = {
   email: "fares@qartmina.com",
   linkedin: "https://www.linkedin.com/company/qartmina/",
   founderCard: "https://bcards.io/fares-aouanicherif",
+  founderLinkedin: "https://www.linkedin.com/in/fares-aouani-cherif/",
+  esgitech: "https://www.esgitech.tn/",
   // Cal.com booking page, embedded on /book and in the contact section.
   bookingUrl: "https://cal.com/fares-cherif-i1v6wa/discovery?embed=true&layout=month_view",
   // Brevo form endpoint; it accepts cross-origin posts and answers with JSON.

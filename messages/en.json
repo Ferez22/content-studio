@@ -824,5 +824,19 @@
     "error": "That didn't work. Please try again in a moment.",
     "invalid": "Please enter a valid email address.",
     "consent": "One email now and then. Unsubscribe anytime. See our <link>privacy policy</link>."
+  },
+  "newsletterThanks": {
+    "metaTitle": "Welcome to the newsletter",
+    "eyebrow": "Newsletter",
+    "title": "You're now part of the experience.",
+    "text": "Thank you for subscribing. From now on you'll stay up to date with AI and tech: new technologies, what is happening in the space, practical examples and more, straight to your inbox.",
+    "linksTitle": "In the meantime, stay connected",
+    "links": {
+      "company": "Qartmina on LinkedIn",
+      "founder": "Fares on LinkedIn",
+      "card": "Digital business card",
+      "esgitech": "ESGITECH, our training partner"
+    },
+    "home": "Back to the website"
   }
 }

@@ -824,5 +824,19 @@
     "error": "L'inscription n'a pas fonctionné. Veuillez réessayer dans un instant.",
     "invalid": "Veuillez saisir une adresse e-mail valide.",
     "consent": "Un e-mail de temps en temps. Désinscription à tout moment. Voir notre <link>politique de confidentialité</link>."
+  },
+  "newsletterThanks": {
+    "metaTitle": "Bienvenue dans la newsletter",
+    "eyebrow": "Newsletter",
+    "title": "Vous faites désormais partie de l'aventure.",
+    "text": "Merci pour votre inscription. Vous serez désormais à jour sur l'IA et la tech : les nouvelles technologies, ce qui se passe dans le domaine, des exemples concrets et bien plus, directement dans votre boîte mail.",
+    "linksTitle": "En attendant, restons connectés",
+    "links": {
+      "company": "Qartmina sur LinkedIn",
+      "founder": "Fares sur LinkedIn",
+      "card": "Carte de visite numérique",
+      "esgitech": "ESGITECH, notre partenaire formation"
+    },
+    "home": "Retour au site"
   }
 }

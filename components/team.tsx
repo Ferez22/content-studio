@@ -86,7 +86,7 @@ export const PartnersCard = ({ className }: { className?: string }) => {
             {partner.name === "ESGITECH" ? (
               // The logo is white, so it sits on a dark rounded tile in both themes.
               <a
-                href="https://www.esgitech.tn/"
+                href={site.esgitech}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-xl bg-neutral-950 px-4 py-3 ring-1 ring-black/5 dark:ring-white/10 transition-transform duration-200 hover:scale-[1.03]"

@@ -824,5 +824,19 @@
     "error": "Das hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.",
     "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "consent": "Ab und zu eine E-Mail. Jederzeit abbestellbar. Siehe unsere <link>Datenschutzerklärung</link>."
+  },
+  "newsletterThanks": {
+    "metaTitle": "Willkommen beim Newsletter",
+    "eyebrow": "Newsletter",
+    "title": "Sie sind jetzt Teil der Erfahrung.",
+    "text": "Danke für Ihre Anmeldung. Ab jetzt bleiben Sie bei KI und Tech auf dem Laufenden: neue Technologien, was in der Branche passiert, praktische Beispiele und mehr, direkt in Ihr Postfach.",
+    "linksTitle": "Bis dahin, bleiben wir in Verbindung",
+    "links": {
+      "company": "Qartmina auf LinkedIn",
+      "founder": "Fares auf LinkedIn",
+      "card": "Digitale Visitenkarte",
+      "esgitech": "ESGITECH, unser Schulungspartner"
+    },
+    "home": "Zurück zur Website"
   }
 }

@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import { IconCircleCheckFilled, IconExclamationCircle, IconSend } from "@tabler/icons-react";
 import { Button } from "./ui/button";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +25,7 @@ export const NewsletterForm = ({
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
   const inputId = useId();
+  const router = useRouter();
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -49,6 +50,8 @@ export const NewsletterForm = ({
       form.reset();
       setStatus("success");
       onSuccess?.();
+      // Let the inline confirmation show briefly, then open the welcome page.
+      setTimeout(() => router.push("/newsletter/thank-you"), 1200);
     } catch {
       setStatus("error");
     }
