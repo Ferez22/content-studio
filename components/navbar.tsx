@@ -20,7 +20,7 @@ import { serviceIcons } from "./service-icons";
 const navlinks = [
   { key: "services", href: "/#services" },
   { key: "portfolio", href: "/portfolio" },
-  { key: "about", href: "/#about" },
+  { key: "about", href: "/#team" },
   { key: "blog", href: "/blog" },
 ] as const;
 

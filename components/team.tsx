@@ -12,7 +12,7 @@ type Partner = { name: string; text: string };
 export const Team = () => {
   const t = useTranslations("home.team");
   return (
-    <section className="py-10 md:py-20 lg:py-32">
+    <section id="team" className="py-10 md:py-20 lg:py-32 scroll-mt-24">
       <Container>
         <Heading>{t("title")}</Heading>
         <Subheading className="py-8">{t("intro")}</Subheading>

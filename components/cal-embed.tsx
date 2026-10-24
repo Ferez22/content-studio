@@ -49,7 +49,6 @@ export const CalEmbed = ({ title, className }: { title: string; className?: stri
       title={title}
       src={`${site.bookingUrl}&theme=${theme}`}
       loading="lazy"
-      allowTransparency
       // Cal's page always declares a light colour scheme, so the frame must too (even in dark mode).
       style={{ height, colorScheme: "light", background: "transparent" }}
       className={cn("block w-full transition-[height] duration-300 ease-out", className)}

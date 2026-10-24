@@ -38,6 +38,18 @@ const buttonVariants = cva(
   }
 );
 
+// A server-rendered child (e.g. next-intl's Link from a server component) reaches this
+// client component as a lazy reference, sometimes nested. Radix Slot only unwraps one
+// level and then fails to find the element, so resolve every level first.
+const REACT_LAZY = Symbol.for("react.lazy");
+type Lazy = { $$typeof: symbol; _payload: PromiseLike<React.ReactNode> };
+const isLazy = (node: React.ReactNode): node is React.ReactNode & Lazy =>
+  typeof node === "object" && node !== null && (node as Partial<Lazy>).$$typeof === REACT_LAZY;
+const useResolvedChild = (node: React.ReactNode) => {
+  while (isLazy(node)) node = React.use(node._payload);
+  return node;
+};
+
 // Pulled toward the cursor while the pointer is inside the zone around the button.
 const MAGNET_STRENGTH = 0.35;
 
@@ -52,6 +64,7 @@ function Button({
     asChild?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
+  const children = useResolvedChild(props.children);
   const targetRef = React.useRef<HTMLElement>(null);
 
   const onMouseMove = (event: React.MouseEvent<HTMLSpanElement>) => {
@@ -82,7 +95,9 @@ function Button({
           className
         )}
         {...props}
-      />
+      >
+        {children}
+      </Comp>
     </span>
   );
 }
