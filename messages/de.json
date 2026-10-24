@@ -196,7 +196,9 @@
     },
     "testimonials": {
       "title": "Was Kunden sagen",
-      "original": "Originalstimme auf Englisch"
+      "original": "Originalstimme auf Englisch",
+      "expand": "Ganze Kundenstimme lesen",
+      "collapse": "Weniger anzeigen"
     },
     "workflow": {
       "robotAlt": "Der Roboter von Qartmina, der Agent im Zentrum Ihrer Abläufe",

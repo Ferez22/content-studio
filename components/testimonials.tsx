@@ -1,12 +1,12 @@
 import React from "react";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Container } from "./container";
 import { Heading } from "./heading";
 import { Reveal } from "./reveal";
+import { TestimonialCard, type Testimonial } from "./testimonial-card";
 
 // Quotes stay in the client's own words, so they are not translated.
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     name: "James Gifford",
     company: "Additionality",
@@ -31,31 +31,7 @@ export const Testimonials = () => {
         <Heading>{t("title")}</Heading>
         {testimonials.map((item) => (
           <Reveal key={item.name} className="mt-10 md:mt-16">
-            <figure className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 p-6 md:p-12" lang="en">
-              <blockquote>
-                <p className="text-xl md:text-4xl font-display font-bold tracking-tight max-w-4xl">
-                  &ldquo;{item.headline}&rdquo;
-                </p>
-                <div className="mt-6 md:mt-8 md:columns-2 gap-10 text-neutral-600 dark:text-neutral-300">
-                  {item.body.map((paragraph) => (
-                    <p key={paragraph} className="mb-4 break-inside-avoid">{paragraph}</p>
-                  ))}
-                </div>
-              </blockquote>
-              <figcaption className="mt-8 flex flex-wrap items-center gap-4 border-t border-neutral-200 dark:border-neutral-700 pt-6">
-                <Image
-                  src={item.logo}
-                  alt=""
-                  width={746}
-                  height={112}
-                  className="h-6 w-auto brightness-0 dark:invert"
-                />
-                <div>
-                  <p className="font-bold">{item.name}</p>
-                  <p className="text-sm text-neutral-500">{item.company}</p>
-                </div>
-              </figcaption>
-            </figure>
+            <TestimonialCard item={item} expandLabel={t("expand")} collapseLabel={t("collapse")} />
             {locale !== "en" && (
               <p className="text-xs text-neutral-400 mt-2">{t("original")}</p>
             )}

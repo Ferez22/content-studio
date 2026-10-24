@@ -13,7 +13,8 @@ export const Figures = ({
     <dl
       className={cn(
         "grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 border-y border-neutral-200 dark:border-neutral-800 py-6 md:py-8",
-        items.length === 3 && "md:grid-cols-3",
+        // Three figures always share one row, even on phones.
+        items.length === 3 && "grid-cols-3 md:grid-cols-3 gap-3",
         className
       )}
     >
@@ -26,10 +27,10 @@ export const Figures = ({
           viewport={{ once: true }}
           className="flex flex-col-reverse justify-end gap-1"
         >
-          <dt className="text-sm text-neutral-500 dark:text-neutral-400">
+          <dt className={cn("text-neutral-500 dark:text-neutral-400", items.length === 3 ? "text-xs sm:text-sm" : "text-sm")}>
             {item.label}
           </dt>
-          <dd className="text-2xl md:text-4xl font-display font-bold tracking-tight">
+          <dd className={cn("font-display font-bold tracking-tight md:text-4xl", items.length === 3 ? "text-xl sm:text-2xl" : "text-2xl")}>
             {item.value}
           </dd>
         </motion.div>

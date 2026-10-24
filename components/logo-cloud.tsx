@@ -18,6 +18,8 @@ const rightLogos = [
   { title: "Docutrad", src: "/logos/docutrad.png", width: 238, height: 39 },
 ];
 
+const allLogos = [...leftLogos, ...rightLogos];
+
 const reveal = (index: number) => ({
   initial: { y: -10, opacity: 0, filter: "blur(10px)" },
   whileInView: { y: 0, opacity: 1, filter: "blur(0px)" },
@@ -45,16 +47,45 @@ export const LogoCloud = () => {
       <h2 className="text-neutral-600 font-medium dark:text-neutral-400 text-lg text-center max-w-xl mx-auto">
         {t("trusted.title")}
       </h2>
-      <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-14 max-w-6xl mx-auto mt-10">
+      {/* Phones: badge, then the logos as one moving row. */}
+      <div className="md:hidden mt-8 flex flex-col items-center gap-8">
+        <Link href="/#openai" className="block">
+          <Image
+            src="/openai-select-partner-badge.svg"
+            alt={t("partner.badgeAlt")}
+            width={375}
+            height={177}
+            className="h-12 w-auto"
+          />
+        </Link>
+        <div className="w-full overflow-hidden mask-x-from-80%">
+          <div className="marquee-track flex w-max items-center">
+            {[...allLogos, ...allLogos].map((item, index) => (
+              <Image
+                key={`${item.title}-${index}`}
+                src={item.src}
+                width={item.width}
+                height={item.height}
+                alt={index < allLogos.length ? item.title : ""}
+                aria-hidden={index >= allLogos.length || undefined}
+                className="h-6 w-auto max-w-28 mx-6 object-contain brightness-0 opacity-70 dark:invert"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet and desktop: static row with the badge in the middle. */}
+      <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8 max-w-6xl mx-auto mt-10">
         {leftLogos.map((item, index) => logo(item, index + 1))}
-        <motion.div {...reveal(0)} className="order-first w-full flex justify-center md:order-none md:w-auto">
+        <motion.div {...reveal(0)}>
           <Link href="/#openai" className="block transition-transform duration-200 hover:scale-105">
             <Image
               src="/openai-select-partner-badge.svg"
               alt={t("partner.badgeAlt")}
               width={375}
               height={177}
-              className="h-14 md:h-16 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
         </motion.div>

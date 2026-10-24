@@ -39,7 +39,7 @@ export const Navbar = () => {
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 24));
 
   return (
-    <div className="sticky top-2 z-50">
+    <div className="sticky top-0 lg:top-2 z-50">
       <DesktopNavbar scrolled={scrolled} />
       <MobileNavbar scrolled={scrolled} />
     </div>

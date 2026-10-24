@@ -196,7 +196,9 @@
     },
     "testimonials": {
       "title": "What clients say",
-      "original": "Original testimonial in English"
+      "original": "Original testimonial in English",
+      "expand": "Read the full testimonial",
+      "collapse": "Show less"
     },
     "workflow": {
       "robotAlt": "Qartmina's robot, the agent at the centre of your workflows",

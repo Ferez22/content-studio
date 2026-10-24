@@ -196,7 +196,9 @@
     },
     "testimonials": {
       "title": "Ce que disent nos clients",
-      "original": "Témoignage original en anglais"
+      "original": "Témoignage original en anglais",
+      "expand": "Lire le témoignage complet",
+      "collapse": "Réduire"
     },
     "workflow": {
       "robotAlt": "Le robot de Qartmina, l'agent au centre de vos flux de travail",

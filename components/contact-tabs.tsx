@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { IconCalendarEvent, IconMail } from "@tabler/icons-react";
 import { ContactForm } from "./contact-form";
@@ -19,6 +19,21 @@ export const ContactTabs = ({
   const [tab, setTab] = useState<Tab>("call");
   const reduceMotion = useReducedMotion();
   const flipped = tab === "message";
+
+  // The card takes the height of the visible face, so a short form never sits on
+  // top of the (much taller) calendar's empty space.
+  const frontRef = useRef<HTMLDivElement>(null);
+  const backRef = useRef<HTMLDivElement>(null);
+  const [heights, setHeights] = useState<{ front?: number; back?: number }>({});
+  useEffect(() => {
+    const observer = new ResizeObserver(() =>
+      setHeights({ front: frontRef.current?.offsetHeight, back: backRef.current?.offsetHeight })
+    );
+    if (frontRef.current) observer.observe(frontRef.current);
+    if (backRef.current) observer.observe(backRef.current);
+    return () => observer.disconnect();
+  }, []);
+  const activeHeight = flipped ? heights.back : heights.front;
   const icons: Record<Tab, React.ReactNode> = {
     call: <IconCalendarEvent className="size-4 shrink-0" />,
     message: <IconMail className="size-4 shrink-0" />,
@@ -57,19 +72,25 @@ export const ContactTabs = ({
         </div>
       </div>
 
-      <div className="mt-8 md:mt-10 mx-auto max-w-4xl" style={{ perspective: 1800 }}>
+      <motion.div
+        className="mt-8 md:mt-10 mx-auto max-w-4xl [overflow-y:clip] [overflow-clip-margin:2rem]"
+        style={{ perspective: 1800 }}
+        initial={false}
+        animate={activeHeight ? { height: activeHeight } : undefined}
+        transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 90, damping: 18 }}
+      >
         <motion.div
           className="grid"
           style={{ transformStyle: "preserve-3d" }}
           animate={{ rotateY: flipped ? 180 : 0 }}
           transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 70, damping: 14 }}
         >
-          <Face visible={!flipped}>
+          <Face visible={!flipped} innerRef={frontRef}>
             <div>
               <CalEmbed title={calendarTitle} />
             </div>
           </Face>
-          <Face visible={flipped} back>
+          <Face visible={flipped} back innerRef={backRef}>
             <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-4 md:p-10">
               <div className="max-w-2xl mx-auto">
                 <ContactForm />
@@ -77,7 +98,7 @@ export const ContactTabs = ({
             </div>
           </Face>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -85,13 +106,16 @@ export const ContactTabs = ({
 const Face = ({
   visible,
   back = false,
+  innerRef,
   children,
 }: {
   visible: boolean;
   back?: boolean;
+  innerRef: React.Ref<HTMLDivElement>;
   children: React.ReactNode;
 }) => (
   <div
+    ref={innerRef}
     aria-hidden={!visible}
     inert={!visible}
     className="[grid-area:1/1] self-start"
