@@ -81,3 +81,11 @@ export const getEntries = async <T extends { date: string }>(
     .filter((entry) => entry !== null)
     .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
 };
+
+// Locales in which a given entry exists.
+export const getEntryLocales = async (collection: Collection, slug: string, locales: readonly string[]) => {
+  const found = await Promise.all(
+    locales.map(async (locale) => ((await getSlugs(collection, locale)).includes(slug) ? locale : null))
+  );
+  return found.filter((locale): locale is string => locale !== null);
+};

@@ -9,7 +9,7 @@ import { CtaSection } from "@/components/cta-section";
 import { DemoBadge } from "@/components/demo-badge";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getEntry, getSlugs, type CaseStudyFrontmatter } from "@/lib/content";
+import { getEntry, getSlugs, type CaseStudyFrontmatter, getEntryLocales } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 import { serviceSlugs } from "@/lib/site";
 
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/portfolio/${slug}`,
     title: entry.frontmatter.title,
     description: entry.frontmatter.summary,
+    locales: await getEntryLocales("portfolio", slug, routing.locales),
   });
 }
 

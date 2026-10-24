@@ -3,7 +3,7 @@ import { Container } from "./container";
 import { Heading } from "./heading";
 
 // Date the legal texts were last reviewed.
-const UPDATED = new Date("2026-10-23");
+const UPDATED = new Date("2026-10-24");
 
 export const LegalPage = async ({
   document,

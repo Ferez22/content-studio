@@ -1,6 +1,6 @@
 export const site = {
   name: "Qartmina",
-  url: "https://qartmina.com",
+  url: "https://www.qartmina.com",
   email: "fares@qartmina.com",
   linkedin: "https://www.linkedin.com/company/qartmina/",
   founderCard: "https://bcards.io/fares-aouanicherif",

@@ -576,7 +576,11 @@
     "back": "All articles",
     "related": "Related articles",
     "authorName": "Fares",
-    "authorRole": "Founder and Principal Engineer, Qartmina"
+    "authorRole": "Founder and Principal Engineer, Qartmina",
+    "authorCardLink": "Business card",
+    "authorLinkedin": "LinkedIn",
+    "qrNewsletter": "Newsletter",
+    "qrCard": "Business card"
   },
   "about": {
     "metaTitle": "About",
@@ -663,42 +667,61 @@
         {
           "heading": "Who is responsible",
           "body": [
-            "Qartmina, Les Berges du Lac, Tunis, Tunisia, is responsible for the processing of personal data on this website. You can reach us at fares@qartmina.com."
+            "Qartmina, Les Berges du Lac, Tunis, Tunisia (\"Qartmina\", \"we\") is responsible for the processing of personal data on this website. Contact: fares@qartmina.com."
           ]
         },
         {
-          "heading": "What we collect and why",
+          "heading": "Where the website runs",
           "body": [
-            "Contact form: your name, email address, company, website and message. We use them only to reply to your request and, if it leads to a project, to prepare it. Legal basis: steps taken at your request before a contract (Art. 6(1)(b) GDPR).",
-            "Newsletter: your email address, only if you subscribe. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time through the link in every email.",
-            "Security check: to protect our forms from spam, Cloudflare Turnstile checks that a request comes from a person. Legal basis: our legitimate interest in protecting the website (Art. 6(1)(f) GDPR).",
-            "Server logs: our hosting provider records technical data such as IP address, date and requested page to run the website securely. Legal basis: legitimate interest (Art. 6(1)(f) GDPR)."
+            "The website is deployed with Vercel Inc. (United States). Its server functions, including the contact form, run in Vercel's Frankfurt region in the European Union. Static pages are delivered through Vercel's global network, which serves each visitor from the nearest location. Vercel processes technical data such as IP address, date and requested page to deliver the website securely. Legal basis: our legitimate interest in operating a secure website (Art. 6(1)(f) GDPR)."
           ]
         },
         {
-          "heading": "Service providers",
+          "heading": "Contact form",
           "body": [
-            "Brevo (Sendinblue SAS, France) sends our contact form emails and our newsletter.",
-            "Cloudflare, Inc. (United States) provides the Turnstile security check. Transfers to the United States are covered by the EU-US Data Privacy Framework or standard contractual clauses.",
-            "We do not sell your data and we do not use advertising or tracking cookies."
+            "When you use the contact form we process your name, email address, company, website and message to answer your request. The message is sent through Brevo (Sendinblue SAS, France, servers in the European Union) and delivered to our mailbox hosted by Google Workspace (Google Ireland Ltd.). Legal basis: steps taken at your request before a contract (Art. 6(1)(b) GDPR)."
+          ]
+        },
+        {
+          "heading": "Newsletter",
+          "body": [
+            "If you subscribe, your email address is stored by Brevo (Sendinblue SAS, France, servers in the European Union) to send you our newsletter. Legal basis: your consent (Art. 6(1)(a) GDPR). You can unsubscribe at any time through the link in every email."
+          ]
+        },
+        {
+          "heading": "Booking a call",
+          "body": [
+            "The booking calendar is provided by Cal.com, Inc. (United States). The details you enter when booking (name, email, any notes) are processed by Cal.com to schedule the call and send invitations. Legal basis: steps taken at your request before a contract (Art. 6(1)(b) GDPR)."
+          ]
+        },
+        {
+          "heading": "Security check",
+          "body": [
+            "To protect our forms from spam, Cloudflare Turnstile (Cloudflare, Inc., United States) checks that a request comes from a person. Legal basis: our legitimate interest in protecting the website (Art. 6(1)(f) GDPR)."
+          ]
+        },
+        {
+          "heading": "Transfers outside the European Union",
+          "body": [
+            "Vercel, Cal.com and Cloudflare are US companies. Where personal data reaches them, transfers are covered by the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
           ]
         },
         {
           "heading": "Cookies and local storage",
           "body": [
-            "This website stores your colour theme and language preference in your browser. The security check and the newsletter form may set technically necessary cookies. We do not use analytics or advertising cookies."
+            "We do not use analytics, advertising or tracking cookies. Your browser stores your colour theme, your language and whether the newsletter invitation was already shown. The security check, the booking calendar and the newsletter service may set technically necessary cookies."
           ]
         },
         {
           "heading": "How long we keep data",
           "body": [
-            "Contact requests are deleted when they are no longer needed, at the latest two years after our last exchange, unless a contract requires us to keep them longer. Newsletter data is kept until you unsubscribe."
+            "Contact requests are deleted when no longer needed, at the latest two years after our last exchange, unless a contract or the law requires longer. Newsletter data is kept until you unsubscribe. Booking data is kept as long as needed to organise the call."
           ]
         },
         {
           "heading": "Your rights",
           "body": [
-            "You have the right to access, correct, delete and restrict the processing of your data, to data portability and to object to processing. You can withdraw consent at any time. Write to fares@qartmina.com. You also have the right to complain to a data protection authority."
+            "You can request access to, correction or deletion of your data, restrict or object to its processing and receive it in a portable format. You can withdraw your consent at any time with effect for the future. Write to fares@qartmina.com. You also have the right to lodge a complaint with a data protection authority."
           ]
         }
       ]
@@ -708,39 +731,58 @@
       "title": "Terms of service",
       "sections": [
         {
-          "heading": "Scope",
+          "heading": "Acceptance",
           "body": [
-            "These terms apply to the use of the website qartmina.com. Consulting and development projects are governed by a separate written agreement."
+            "These terms apply to qartmina.com and all its pages, forms, newsletter and booking tools (the \"website\"). By accessing or using the website you accept these terms in full. If you do not agree, do not use the website."
           ]
         },
         {
-          "heading": "Content",
+          "heading": "Information only",
           "body": [
-            "The content of this website is general information and not professional advice for your specific situation. We keep it accurate and up to date but cannot guarantee that it is complete at all times."
+            "Everything on the website is general information. It is not professional, legal, financial or technical advice and does not create a client relationship. Consulting and development services are provided only under a separate written agreement, which prevails over these terms."
+          ]
+        },
+        {
+          "heading": "No warranty",
+          "body": [
+            "The website and its content are provided \"as is\" and \"as available\", without any warranty of any kind, express or implied, including accuracy, completeness, availability, fitness for a particular purpose or absence of errors, viruses or interruptions. Figures, examples and results are illustrative and are no guarantee of any outcome."
+          ]
+        },
+        {
+          "heading": "Limitation of liability",
+          "body": [
+            "To the fullest extent permitted by applicable law, Qartmina, its founder, employees, partners and service providers are not liable for any damage or loss of any kind, whether direct, indirect, incidental, consequential, special or punitive, including loss of profit, revenue, data, business or goodwill, arising from or in connection with the website, its content, its availability, linked websites, the newsletter, the booking tools, the contact form or any communication with us, even if advised of the possibility of such damage.",
+            "Nothing in these terms excludes or limits liability that cannot be excluded or limited under mandatory applicable law, in particular liability for intent, gross negligence or injury to life, body or health. Where liability cannot be excluded, it is limited to the minimum permitted by law."
+          ]
+        },
+        {
+          "heading": "Third-party services and links",
+          "body": [
+            "The website relies on and links to services operated by third parties, including Vercel, Brevo, Cal.com, Cloudflare and LinkedIn. Qartmina has no control over them and is not responsible for their content, availability, security or data practices. Their own terms apply."
+          ]
+        },
+        {
+          "heading": "Your responsibility",
+          "body": [
+            "You agree to use the website lawfully and not to disrupt it, attempt unauthorised access or misuse its forms. You agree to indemnify Qartmina against any claims, damages and costs resulting from your breach of these terms or your misuse of the website."
           ]
         },
         {
           "heading": "Intellectual property",
           "body": [
-            "Texts, graphics and code on this website belong to Qartmina unless stated otherwise. You may share links to our pages. Any other reuse requires our written permission."
+            "Texts, graphics, illustrations, the robot character and code on the website belong to Qartmina or its licensors. Sharing links is welcome. Any other reuse requires our prior written permission."
           ]
         },
         {
-          "heading": "External links",
+          "heading": "Changes",
           "body": [
-            "We link to external sources as evidence. We are not responsible for the content of external websites."
+            "We may change the website and these terms at any time. The version published on this page applies from its publication."
           ]
         },
         {
-          "heading": "Liability",
+          "heading": "Applicable law and jurisdiction",
           "body": [
-            "We are liable without limitation for intent and gross negligence. For slight negligence we are liable only for breach of essential obligations and limited to foreseeable damage."
-          ]
-        },
-        {
-          "heading": "Applicable law",
-          "body": [
-            "These terms are governed by the law stated in our legal notice, without prejudice to mandatory consumer protection rules in your country of residence."
+            "These terms are governed by the laws of [to be completed]. The courts of [to be completed] have exclusive jurisdiction, without prejudice to mandatory consumer protection rules of your country of residence. If any provision is found invalid, the remaining provisions stay in full force."
           ]
         }
       ]
@@ -752,11 +794,11 @@
         {
           "heading": "Publisher",
           "body": [
-            "Qartmina",
-            "Legal form and registered name: [to be completed]",
-            "Les Berges du Lac, Tunis, Tunisia",
+            "Qartmina [legal form to be completed]",
+            "Les Berges du Lac, Tunis, Tunisia [full street address to be completed]",
             "Registration number: [to be completed]",
-            "VAT or tax identification number: [to be completed]"
+            "Tax or VAT identification number: [to be completed]",
+            "Represented by: Fares Aouani Cherif, founder"
           ]
         },
         {
@@ -769,13 +811,19 @@
         {
           "heading": "Responsible for content",
           "body": [
-            "Fares [surname to be completed], address as above."
+            "Fares Aouani Cherif, address as above."
           ]
         },
         {
           "heading": "Hosting",
           "body": [
-            "[Hosting provider name and address to be completed]"
+            "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States. Server functions run in the Frankfurt region (European Union)."
+          ]
+        },
+        {
+          "heading": "Disclaimer",
+          "body": [
+            "Qartmina accepts no liability for the content of this website, for external links or for the content of linked websites, to the fullest extent permitted by law. See our terms of service."
           ]
         }
       ]

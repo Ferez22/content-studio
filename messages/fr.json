@@ -576,7 +576,11 @@
     "back": "Tous les articles",
     "related": "Articles similaires",
     "authorName": "Fares",
-    "authorRole": "Fondateur et ingénieur principal, Qartmina"
+    "authorRole": "Fondateur et ingénieur principal, Qartmina",
+    "authorCardLink": "Carte de visite",
+    "authorLinkedin": "LinkedIn",
+    "qrNewsletter": "Newsletter",
+    "qrCard": "Carte de visite"
   },
   "about": {
     "metaTitle": "À propos",
@@ -663,42 +667,61 @@
         {
           "heading": "Responsable du traitement",
           "body": [
-            "Qartmina, Les Berges du Lac, Tunis, Tunisie, est responsable du traitement des données personnelles collectées sur ce site. Vous pouvez nous contacter à fares@qartmina.com."
+            "Qartmina, Les Berges du Lac, Tunis, Tunisie (« Qartmina », « nous ») est responsable du traitement des données personnelles sur ce site. Contact : fares@qartmina.com."
           ]
         },
         {
-          "heading": "Données collectées et finalités",
+          "heading": "Hébergement du site",
           "body": [
-            "Formulaire de contact : votre nom, votre adresse e-mail, votre entreprise, votre site web et votre message. Nous les utilisons uniquement pour répondre à votre demande et, si elle aboutit à un projet, pour le préparer. Base légale : mesures précontractuelles prises à votre demande (art. 6(1)(b) RGPD).",
-            "Newsletter : votre adresse e-mail, uniquement si vous vous abonnez. Base légale : votre consentement (art. 6(1)(a) RGPD), que vous pouvez retirer à tout moment via le lien présent dans chaque e-mail.",
-            "Vérification de sécurité : pour protéger nos formulaires contre le spam, Cloudflare Turnstile vérifie qu'une demande provient bien d'une personne. Base légale : notre intérêt légitime à protéger le site (art. 6(1)(f) RGPD).",
-            "Journaux du serveur : notre hébergeur enregistre des données techniques comme l'adresse IP, la date et la page consultée afin d'assurer le fonctionnement sécurisé du site. Base légale : intérêt légitime (art. 6(1)(f) RGPD)."
+            "Le site est déployé avec Vercel Inc. (États-Unis). Ses fonctions serveur, dont le formulaire de contact, s'exécutent dans la région Vercel de Francfort, dans l'Union européenne. Les pages statiques sont distribuées par le réseau mondial de Vercel, qui sert chaque visiteur depuis le point le plus proche. Vercel traite des données techniques comme l'adresse IP, la date et la page demandée pour fournir le site de manière sécurisée. Base légale : notre intérêt légitime à exploiter un site sécurisé (art. 6, par. 1, f RGPD)."
           ]
         },
         {
-          "heading": "Sous-traitants",
+          "heading": "Formulaire de contact",
           "body": [
-            "Brevo (Sendinblue SAS, France) envoie les e-mails de notre formulaire de contact et notre newsletter.",
-            "Cloudflare, Inc. (États-Unis) fournit la vérification de sécurité Turnstile. Les transferts vers les États-Unis sont encadrés par le Data Privacy Framework UE-États-Unis ou par des clauses contractuelles types.",
-            "Nous ne vendons pas vos données et n'utilisons pas de cookies publicitaires ou de suivi."
+            "Lorsque vous utilisez le formulaire de contact, nous traitons votre nom, votre adresse e-mail, votre entreprise, votre site web et votre message pour répondre à votre demande. Le message est envoyé via Brevo (Sendinblue SAS, France, serveurs dans l'Union européenne) et livré dans notre messagerie hébergée par Google Workspace (Google Ireland Ltd.). Base légale : mesures précontractuelles prises à votre demande (art. 6, par. 1, b RGPD)."
+          ]
+        },
+        {
+          "heading": "Newsletter",
+          "body": [
+            "Si vous vous inscrivez, votre adresse e-mail est conservée par Brevo (Sendinblue SAS, France, serveurs dans l'Union européenne) pour vous envoyer notre newsletter. Base légale : votre consentement (art. 6, par. 1, a RGPD). Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque e-mail."
+          ]
+        },
+        {
+          "heading": "Réservation d'un appel",
+          "body": [
+            "Le calendrier de réservation est fourni par Cal.com, Inc. (États-Unis). Les informations saisies lors de la réservation (nom, e-mail, notes éventuelles) sont traitées par Cal.com pour planifier l'appel et envoyer les invitations. Base légale : mesures précontractuelles prises à votre demande (art. 6, par. 1, b RGPD)."
+          ]
+        },
+        {
+          "heading": "Vérification de sécurité",
+          "body": [
+            "Pour protéger nos formulaires contre le spam, Cloudflare Turnstile (Cloudflare, Inc., États-Unis) vérifie qu'une demande provient d'une personne. Base légale : notre intérêt légitime à protéger le site (art. 6, par. 1, f RGPD)."
+          ]
+        },
+        {
+          "heading": "Transferts hors de l'Union européenne",
+          "body": [
+            "Vercel, Cal.com et Cloudflare sont des sociétés américaines. Lorsque des données personnelles leur parviennent, les transferts sont encadrés par le Data Privacy Framework UE-États-Unis ou par les clauses contractuelles types de la Commission européenne."
           ]
         },
         {
           "heading": "Cookies et stockage local",
           "body": [
-            "Ce site enregistre votre thème de couleur et votre préférence de langue dans votre navigateur. La vérification de sécurité et le formulaire de newsletter peuvent déposer des cookies strictement nécessaires. Nous n'utilisons pas de cookies de mesure d'audience ni de cookies publicitaires."
+            "Nous n'utilisons pas de cookies d'analyse, de publicité ou de suivi. Votre navigateur conserve votre thème, votre langue et le fait que l'invitation à la newsletter a déjà été affichée. La vérification de sécurité, le calendrier de réservation et le service de newsletter peuvent déposer des cookies strictement nécessaires."
           ]
         },
         {
           "heading": "Durée de conservation",
           "body": [
-            "Les demandes de contact sont supprimées lorsqu'elles ne sont plus nécessaires, au plus tard deux ans après notre dernier échange, sauf si un contrat nous oblige à les conserver plus longtemps. Les données de la newsletter sont conservées jusqu'à votre désinscription."
+            "Les demandes de contact sont supprimées lorsqu'elles ne sont plus nécessaires, au plus tard deux ans après notre dernier échange, sauf si un contrat ou la loi impose une durée plus longue. Les données de newsletter sont conservées jusqu'à votre désinscription. Les données de réservation sont conservées le temps nécessaire à l'organisation de l'appel."
           ]
         },
         {
           "heading": "Vos droits",
           "body": [
-            "Vous disposez d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données, d'un droit à la portabilité et d'un droit d'opposition. Vous pouvez retirer votre consentement à tout moment. Écrivez à fares@qartmina.com. Vous avez également le droit d'introduire une réclamation auprès d'une autorité de protection des données."
+            "Vous pouvez demander l'accès à vos données, leur rectification ou leur effacement, limiter leur traitement ou vous y opposer, et les recevoir dans un format portable. Vous pouvez retirer votre consentement à tout moment pour l'avenir. Écrivez à fares@qartmina.com. Vous avez également le droit d'introduire une réclamation auprès d'une autorité de protection des données."
           ]
         }
       ]
@@ -708,39 +731,58 @@
       "title": "Conditions d'utilisation",
       "sections": [
         {
-          "heading": "Champ d'application",
+          "heading": "Acceptation",
           "body": [
-            "Les présentes conditions s'appliquent à l'utilisation du site qartmina.com. Les missions de conseil et de développement sont régies par un contrat écrit distinct."
+            "Les présentes conditions s'appliquent à qartmina.com et à l'ensemble de ses pages, formulaires, newsletter et outils de réservation (le « site »). En accédant au site ou en l'utilisant, vous acceptez ces conditions dans leur intégralité. Si vous ne les acceptez pas, n'utilisez pas le site."
           ]
         },
         {
-          "heading": "Contenu",
+          "heading": "Information uniquement",
           "body": [
-            "Le contenu de ce site est fourni à titre d'information générale et ne constitue pas un conseil professionnel adapté à votre situation. Nous veillons à ce qu'il soit exact et à jour, sans pouvoir garantir qu'il soit complet en permanence."
+            "Tout le contenu du site constitue une information générale. Il ne s'agit pas d'un conseil professionnel, juridique, financier ou technique et cela ne crée aucune relation client. Les services de conseil et de développement sont fournis uniquement dans le cadre d'un contrat écrit distinct, qui prévaut sur les présentes conditions."
+          ]
+        },
+        {
+          "heading": "Absence de garantie",
+          "body": [
+            "Le site et son contenu sont fournis « en l'état » et « selon disponibilité », sans aucune garantie, expresse ou implicite, notamment d'exactitude, d'exhaustivité, de disponibilité, d'adéquation à un usage particulier ou d'absence d'erreurs, de virus ou d'interruptions. Les chiffres, exemples et résultats sont donnés à titre illustratif et ne garantissent aucun résultat."
+          ]
+        },
+        {
+          "heading": "Limitation de responsabilité",
+          "body": [
+            "Dans toute la mesure permise par la loi applicable, Qartmina, son fondateur, ses employés, ses partenaires et ses prestataires ne sauraient être tenus responsables d'aucun dommage ou perte de quelque nature que ce soit, direct, indirect, accessoire, consécutif, spécial ou punitif, y compris la perte de bénéfices, de chiffre d'affaires, de données, d'activité ou d'image, résultant du site ou en lien avec celui-ci, son contenu, sa disponibilité, les sites liés, la newsletter, les outils de réservation, le formulaire de contact ou toute communication avec nous, même si la possibilité de tels dommages a été signalée.",
+            "Rien dans les présentes conditions n'exclut ni ne limite une responsabilité qui ne peut être exclue ou limitée en vertu de la loi impérative applicable, notamment en cas de faute intentionnelle, de faute lourde ou d'atteinte à la vie, au corps ou à la santé. Lorsque la responsabilité ne peut être exclue, elle est limitée au minimum autorisé par la loi."
+          ]
+        },
+        {
+          "heading": "Services tiers et liens",
+          "body": [
+            "Le site s'appuie sur des services exploités par des tiers et renvoie vers eux, notamment Vercel, Brevo, Cal.com, Cloudflare et LinkedIn. Qartmina n'exerce aucun contrôle sur ces services et n'est pas responsable de leur contenu, de leur disponibilité, de leur sécurité ou de leurs pratiques en matière de données. Leurs propres conditions s'appliquent."
+          ]
+        },
+        {
+          "heading": "Votre responsabilité",
+          "body": [
+            "Vous vous engagez à utiliser le site de manière licite, à ne pas perturber son fonctionnement, à ne pas tenter d'y accéder sans autorisation et à ne pas utiliser ses formulaires de manière abusive. Vous vous engagez à garantir Qartmina contre toute réclamation, tout dommage et tous frais résultant d'une violation des présentes conditions ou d'une utilisation abusive du site."
           ]
         },
         {
           "heading": "Propriété intellectuelle",
           "body": [
-            "Les textes, graphismes et le code de ce site appartiennent à Qartmina, sauf mention contraire. Vous pouvez partager des liens vers nos pages. Toute autre réutilisation nécessite notre autorisation écrite."
+            "Les textes, graphismes, illustrations, le personnage du robot et le code du site appartiennent à Qartmina ou à ses concédants. Le partage de liens est bienvenu. Toute autre réutilisation nécessite notre autorisation écrite préalable."
           ]
         },
         {
-          "heading": "Liens externes",
+          "heading": "Modifications",
           "body": [
-            "Nous renvoyons vers des sources externes à titre de preuve. Nous ne sommes pas responsables du contenu des sites externes."
+            "Nous pouvons modifier le site et les présentes conditions à tout moment. La version publiée sur cette page s'applique dès sa publication."
           ]
         },
         {
-          "heading": "Responsabilité",
+          "heading": "Droit applicable et juridiction",
           "body": [
-            "Notre responsabilité est engagée sans limitation en cas de faute intentionnelle ou de faute lourde. En cas de faute légère, elle n'est engagée qu'en cas de manquement à une obligation essentielle et se limite au dommage prévisible."
-          ]
-        },
-        {
-          "heading": "Droit applicable",
-          "body": [
-            "Les présentes conditions sont régies par le droit indiqué dans nos mentions légales, sans préjudice des règles impératives de protection des consommateurs de votre pays de résidence."
+            "Les présentes conditions sont régies par le droit [à compléter]. Les tribunaux de [à compléter] sont seuls compétents, sous réserve des règles impératives de protection des consommateurs de votre pays de résidence. Si une disposition est jugée invalide, les autres dispositions restent pleinement en vigueur."
           ]
         }
       ]
@@ -752,11 +794,11 @@
         {
           "heading": "Éditeur",
           "body": [
-            "Qartmina",
-            "Forme juridique et raison sociale : [à compléter]",
-            "Les Berges du Lac, Tunis, Tunisie",
+            "Qartmina [forme juridique à compléter]",
+            "Les Berges du Lac, Tunis, Tunisie [adresse complète à compléter]",
             "Numéro d'immatriculation : [à compléter]",
-            "Numéro de TVA ou identifiant fiscal : [à compléter]"
+            "Numéro d'identification fiscale ou de TVA : [à compléter]",
+            "Représentée par : Fares Aouani Cherif, fondateur"
           ]
         },
         {
@@ -769,13 +811,19 @@
         {
           "heading": "Directeur de la publication",
           "body": [
-            "Fares [nom de famille à compléter], adresse ci-dessus."
+            "Fares Aouani Cherif, adresse ci-dessus."
           ]
         },
         {
           "heading": "Hébergement",
           "body": [
-            "[Nom et adresse de l'hébergeur à compléter]"
+            "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Les fonctions serveur s'exécutent dans la région de Francfort (Union européenne)."
+          ]
+        },
+        {
+          "heading": "Avertissement",
+          "body": [
+            "Dans toute la mesure permise par la loi, Qartmina décline toute responsabilité quant au contenu de ce site, aux liens externes et au contenu des sites liés. Voir nos conditions d'utilisation."
           ]
         }
       ]

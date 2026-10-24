@@ -6,9 +6,10 @@ import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { CtaSection } from "@/components/cta-section";
 import { JsonLd } from "@/components/json-ld";
+import { AuthorCard } from "@/components/author-card";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getEntries, getEntry, getSlugs, type PostFrontmatter } from "@/lib/content";
+import { getEntries, getEntry, getSlugs, type PostFrontmatter, getEntryLocales } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/blog/${slug}`,
     title: entry.frontmatter.title,
     description: entry.frontmatter.summary,
+    locales: await getEntryLocales("blog", slug, routing.locales),
   });
 }
 
@@ -43,7 +45,6 @@ export default async function PostPage({ params }: Props) {
   const entry = await getEntry<PostFrontmatter>("blog", locale, slug);
   if (!entry) notFound();
   const t = await getTranslations("blog");
-  const tFounder = await getTranslations("home.team.founder");
   const format = await getFormatter();
   const { frontmatter } = entry;
   const related = (await getEntries<PostFrontmatter>("blog", locale))
@@ -84,19 +85,7 @@ export default async function PostPage({ params }: Props) {
           </p>
           <article className="py-6">{entry.content}</article>
 
-          <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-6 md:p-8 flex gap-4 items-start">
-            <div
-              aria-hidden="true"
-              className="size-12 shrink-0 rounded-xl bg-white dark:bg-neutral-900 ring-1 ring-black/10 dark:ring-white/10 flex items-center justify-center text-xl font-display font-bold"
-            >
-              {t("authorName").charAt(0)}
-            </div>
-            <div>
-              <p className="font-bold">{t("authorName")}</p>
-              <p className="text-sm text-neutral-500">{t("authorRole")}</p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2">{tFounder("bio")}</p>
-            </div>
-          </div>
+          <AuthorCard />
 
           {related.length > 0 && (
             <div className="mt-16">

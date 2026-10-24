@@ -1,12 +1,18 @@
-# AGENTS.md: qartmina.com
+# CLAUDE.md: qartmina.com
 
 Guidelines for anyone (human or AI agent) working on the Qartmina website. Read this before changing code or copy.
+
+## Task lists
+
+- `TODO.md` holds open work. Read it at the start of a task and keep it current.
+- `DONE.md` is the history of finished work. When an item is finished, remove it from `TODO.md` and add it to `DONE.md` with the date.
+- **Do not read `DONE.md` unless asked, or when investigating a bug or regression** where past changes may explain it.
 
 ## What this is
 
 Marketing site for **Qartmina**, an AI and data consulting company (Strategy · Data · AI · Execution), positioned as an **OpenAI Select Partner**. Audience: business decision-makers, often non-technical, across MENA and Africa. The site has to be clear for the board and precise for engineers.
 
-Live at https://qartmina.com (redirects to `www`), deployed on Vercel from `main`. DNS is on Hostinger.
+Live at https://www.qartmina.com (the canonical address; the bare domain redirects to it), deployed on Vercel from `main` with server functions pinned to Frankfurt (`vercel.json`, region `fra1`). DNS is on Hostinger.
 
 ## Stack
 
@@ -61,6 +67,7 @@ Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI 
 - **Evidence first.** Only publish figures that can be backed up, and link the source for third-party proof. Never invent clients, logos, testimonials or results. Label demos as demos.
 - Preserve Fares's voice when editing; refine, don't replace. Strong, short openings.
 - Don't infer pronouns from a name; use the person's name or neutral wording.
+- **Legal pages** (`messages/*.json` under `legal`): liability is excluded "to the fullest extent permitted by applicable law" with the mandatory carve-out (intent, gross negligence, injury to life or health). Keep that structure: an absolute exclusion is void in the EU and can invalidate the whole clause. The privacy policy must name every provider that touches personal data (Vercel, Brevo, Google Workspace, Cal.com, Cloudflare) and stay accurate about where data is processed.
 - **OpenAI badge:** use the files exactly as provided (`public/openai-select-partner-badge*.svg`, no recolouring or silhouette) and write the status exactly as **OpenAI Select Partner**.
 
 ## Branding
@@ -78,9 +85,19 @@ Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI 
 - Cards: `bg-neutral-50 dark:bg-neutral-800`, generous radius (`rounded-3xl` on outer corners of grids), thin `border-neutral-200 dark:border-neutral-800`.
 - **Buttons:** always the shared `Button` (`components/ui/button.tsx`). Every CTA is magnetic (follows the cursor by 35%, 0.15s ease-out) and keeps the default square-ish radius. Primary CTAs use `shadow-brand`. Don't hand-roll buttons for CTAs.
 - **Animation:** entrance reveals use `Reveal` (fade + lift + blur, once). Respect `prefers-reduced-motion` in anything that loops (robot video falls back to the poster, magnetic effect and float stop). Prefer CSS for simple infinite loops (`float-bob`, `progress-fill` keyframes in `globals.css`).
-- **Mobile first-class:** test at 390px. Phones get a full-width navbar with a custom burger (short top bar) and a full-screen drop menu; desktop gets the floating pill navbar that shrinks on scroll. Service cards are 2 columns on phones (titles only). Carousels use `SnapCarousel` (native scroll snap + dots).
+- **Mobile first-class:** every UI change must also be checked on mobile (about 390px wide) and look good there with proper proportions: readable font sizes, nothing oversized, no cramped rows, no horizontal scroll. Test at 390px. Phones get a full-width navbar with a custom burger (short top bar) and a full-screen drop menu; desktop gets the floating pill navbar that shrinks on scroll. Service cards are 2 columns on phones (titles only). Carousels use `SnapCarousel` (native scroll snap + dots).
 - No horizontal page overflow at any width. Clip decorative overflow inside its own section.
 - Icons: Tabler, or the brand icons in `icons/`. Service icons map in `components/service-icons.tsx`.
+
+## Blog posts (MDX)
+
+1. Copy `content/blog/_template.mdx` to `content/blog/<locale>/<slug>.mdx`. The file name is the URL (`/en/blog/<slug>`); use the same slug in every language.
+2. Frontmatter: `title`, `summary` (list, search results and previews), `date` (`YYYY-MM-DD`, newest first), optional `tags`.
+3. Body: standard Markdown. Images go in `public/blog/<slug>/` and are referenced as `/blog/<slug>/image.png`. Styles for every element live in `components/mdx.tsx`.
+4. A post can exist in one language only: the sitemap and hreflang list just the languages that have the file, and other languages return 404 for that slug.
+5. Apply the writing rules (no dashes as punctuation, evidence first). Check the post on mobile and desktop before pushing.
+
+Nothing else is needed: the blog list, article page, reading time, related posts, BlogPosting JSON-LD and sitemap entry are generated automatically.
 
 ## Forms, integrations and secrets
 
@@ -103,5 +120,6 @@ Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI 
 
 1. `pnpm exec tsc --noEmit` and `pnpm build` pass.
 2. Copy updated in **en, fr and de**, no dashes as punctuation, no unverifiable claims.
-3. Checked at 390px and desktop, in light and dark mode, with no horizontal scroll and no console errors.
-4. Commit only intended files (leave stray assets in `public/` out), never `.env*`. End commit messages with the co-author line if an AI agent wrote the change.
+3. For any UI change: checked on mobile (390px) and desktop, in light and dark mode, with good proportions on mobile, no horizontal scroll and no console errors.
+4. `TODO.md` and `DONE.md` updated.
+5. Commit only intended files (leave stray assets in `public/` out), never `.env*`. End commit messages with the co-author line if an AI agent wrote the change.

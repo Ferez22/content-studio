@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { getSlugs } from "@/lib/content";
+import { getSlugs, type Collection } from "@/lib/content";
 import { serviceSlugs, site } from "@/lib/site";
 
 const staticPaths = [
@@ -15,27 +15,39 @@ const staticPaths = [
   "/legal",
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Slugs are identical across locales, so the English content lists them.
-  const [cases, posts] = await Promise.all([
-    getSlugs("portfolio", routing.defaultLocale),
-    getSlugs("blog", routing.defaultLocale),
-  ]);
-  const paths = [
-    ...staticPaths,
-    ...serviceSlugs.map((slug) => `/services/${slug}`),
-    ...cases.map((slug) => `/portfolio/${slug}`),
-    ...posts.map((slug) => `/blog/${slug}`),
-  ];
+const entry = (path: string, locales: readonly string[]) =>
+  locales.map((locale) => ({
+    url: `${site.url}/${locale}${path}`,
+    alternates: {
+      languages: Object.fromEntries(locales.map((l) => [l, `${site.url}/${l}${path}`])),
+    },
+  }));
 
-  return paths.flatMap((path) =>
-    routing.locales.map((locale) => ({
-      url: `${site.url}/${locale}${path}`,
-      alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${site.url}/${l}${path}`])
-        ),
-      },
-    }))
+// Posts and case studies may not exist in every language: list each slug only in
+// the locales that have it, with alternates limited to those locales.
+const collectionEntries = async (collection: Collection, base: string) => {
+  const perLocale = await Promise.all(
+    routing.locales.map(async (locale) => ({ locale, slugs: await getSlugs(collection, locale) }))
   );
+  const slugs = new Set(perLocale.flatMap((l) => l.slugs));
+  return [...slugs].flatMap((slug) =>
+    entry(
+      `${base}/${slug}`,
+      perLocale.filter((l) => l.slugs.includes(slug)).map((l) => l.locale)
+    )
+  );
+};
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [cases, posts] = await Promise.all([
+    collectionEntries("portfolio", "/portfolio"),
+    collectionEntries("blog", "/blog"),
+  ]);
+  return [
+    ...[...staticPaths, ...serviceSlugs.map((slug) => `/services/${slug}`)].flatMap((path) =>
+      entry(path, routing.locales)
+    ),
+    ...cases,
+    ...posts,
+  ];
 }

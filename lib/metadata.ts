@@ -8,16 +8,18 @@ export const pageMetadata = ({
   title,
   description,
   absoluteTitle = false,
+  locales = routing.locales,
 }: {
   locale: string;
   path: string;
   title: string;
   description: string;
   absoluteTitle?: boolean;
+  // Locales this page exists in (posts and case studies may not be translated).
+  locales?: readonly string[];
 }): Metadata => {
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `/${l}${path}`])
-  );
+  const languages = Object.fromEntries(locales.map((l) => [l, `/${l}${path}`]));
+  const fallback = locales.includes(routing.defaultLocale) ? routing.defaultLocale : locale;
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
@@ -25,7 +27,7 @@ export const pageMetadata = ({
       canonical: `/${locale}${path}`,
       languages: {
         ...languages,
-        "x-default": `/${routing.defaultLocale}${path}`,
+        "x-default": `/${fallback}${path}`,
       },
     },
     // Page-level openGraph replaces the file-based image, so point to it explicitly.
