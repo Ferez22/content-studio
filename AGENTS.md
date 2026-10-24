@@ -1,0 +1,107 @@
+# AGENTS.md: qartmina.com
+
+Guidelines for anyone (human or AI agent) working on the Qartmina website. Read this before changing code or copy.
+
+## What this is
+
+Marketing site for **Qartmina**, an AI and data consulting company (Strategy · Data · AI · Execution), positioned as an **OpenAI Select Partner**. Audience: business decision-makers, often non-technical, across MENA and Africa. The site has to be clear for the board and precise for engineers.
+
+Live at https://qartmina.com (redirects to `www`), deployed on Vercel from `main`. DNS is on Hostinger.
+
+## Stack
+
+- Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 4
+- `next-intl` 4 for i18n, `next-mdx-remote` 6 for MDX content
+- `motion` 12 for animation. Import from `motion/react` (it is Framer Motion under its current name); never add `framer-motion`
+- `next-themes` for light/dark, `@tabler/icons-react` for icons, `class-variance-authority` + `tailwind-merge` via `cn()`
+- Package manager: **pnpm**
+
+```bash
+pnpm dev          # http://localhost:3000
+pnpm build        # must pass before every push
+pnpm exec tsc --noEmit
+```
+
+## Structure
+
+```
+app/[locale]/            every page lives under a locale segment (en, fr, de)
+app/api/contact/         contact form handler (Turnstile check, then Brevo email)
+app/sitemap.ts, robots.ts
+app/[locale]/opengraph-image.tsx   social preview, generated per locale
+components/              sections and shared UI (one component per file)
+components/ui/           primitives: button (magnetic), dotted-glow-background
+components/features*/skeletons/    animated card mockups reused across sections
+components/services/visuals.tsx    service slug → its animated mockup
+i18n/                    routing (locales), request config, locale-aware navigation
+lib/site.ts              site constants: URL, email, LinkedIn, Cal.com, Brevo form URL, service slugs
+lib/metadata.ts          pageMetadata(): canonical, hreflang, Open Graph, Twitter
+lib/content.ts           MDX loader for content/
+messages/{en,fr,de}.json all UI copy
+content/portfolio/<locale>/<slug>.mdx   case studies (blog uses content/blog/<locale>/)
+public/                  served assets (logos/, team/, robot/, badges)
+assets/og/               images read at build time by the OG image route (not served)
+proxy.ts                 next-intl locale detection and redirects (Next 16 name for middleware)
+```
+
+Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI badge in the centre) → Features (services) → OpenAIPartner → Team → Testimonials → FAQs → Contact. `WhyUs` exists but is commented out.
+
+## i18n rules
+
+- Three locales, same slugs in every locale: `en` (default), `fr`, `de`. Routes are always prefixed (`/en/...`).
+- **No hard-coded user-facing text in components.** Add the key to all three `messages/*.json` files with identical structure. Use `t.raw()` for arrays.
+- Links use `Link` from `@/i18n/navigation`, never `next/link`.
+- Every page exports `generateMetadata` using `pageMetadata()` and calls `setRequestLocale(locale)`.
+- Testimonials stay in the client's original words (not translated); FR/DE show a small "original in English" note.
+
+## Writing rules (copy in any language)
+
+- **No em dashes or en dashes as punctuation.** Use commas, full stops or restructure.
+- Plain language for non-technical readers. Explain or avoid jargon (MCP, LLM, ERP...).
+- **Evidence first.** Only publish figures that can be backed up, and link the source for third-party proof. Never invent clients, logos, testimonials or results. Label demos as demos.
+- Preserve Fares's voice when editing; refine, don't replace. Strong, short openings.
+- Don't infer pronouns from a name; use the person's name or neutral wording.
+- **OpenAI badge:** use the files exactly as provided (`public/openai-select-partner-badge*.svg`, no recolouring or silhouette) and write the status exactly as **OpenAI Select Partner**.
+
+## Branding
+
+- **Palette:** monochrome (black, white, neutrals from the oklch tokens in `app/globals.css`) with one accent, **royal blue `#1E40FF`** (use `dark:blue-400` on dark backgrounds). The blue is for highlights: active states, travelling dots, caret, focus rings, glows. Don't introduce new accent colours.
+- **Fonts** (`app/[locale]/layout.tsx`): Manrope bold for headings (`font-display`), Inter for body (`font-inter`), EB Garamond bold only for the wordmark (`font-logo`).
+- **Logo:** the wordmark "Qartmina." rendered by `components/logo.tsx` (wavy letter animation). The "Q." mark is `LogoIcon` (SVG text, follows `currentColor`). Raster versions live in `public/logo.png` and `assets/og/logo-white.png`.
+- **Mascot:** the white robot with royal-blue eyes. Video loop in `public/robot/robot.{webm,mp4}` on a pure white background, so it always sits in a white disc with `mix-blend-multiply`. Poster: `robot-poster.webp`. Generated with Higgsfield; regenerate poses from the same reference image to keep the character consistent.
+- **Partner and client logos** in `public/logos/` are shown as one-tone silhouettes (`brightness-0 opacity-70 dark:invert`) so mixed colours stay consistent. Exception: the ESGITECH logo (`public/logoesgitech.svg`) is white, so it sits on a dark rounded tile in both themes.
+- Both themes must work. Check light and dark for every change.
+
+## UI conventions
+
+- Layout primitives: `Container` (max-w-7xl, px-4 md:px-8), `Heading` (h1/h2, text-3xl → 6xl), `Subheading`. Sections use `py-10 md:py-20 lg:py-32`.
+- Cards: `bg-neutral-50 dark:bg-neutral-800`, generous radius (`rounded-3xl` on outer corners of grids), thin `border-neutral-200 dark:border-neutral-800`.
+- **Buttons:** always the shared `Button` (`components/ui/button.tsx`). Every CTA is magnetic (follows the cursor by 35%, 0.15s ease-out) and keeps the default square-ish radius. Primary CTAs use `shadow-brand`. Don't hand-roll buttons for CTAs.
+- **Animation:** entrance reveals use `Reveal` (fade + lift + blur, once). Respect `prefers-reduced-motion` in anything that loops (robot video falls back to the poster, magnetic effect and float stop). Prefer CSS for simple infinite loops (`float-bob`, `progress-fill` keyframes in `globals.css`).
+- **Mobile first-class:** test at 390px. Phones get a full-width navbar with a custom burger (short top bar) and a full-screen drop menu; desktop gets the floating pill navbar that shrinks on scroll. Service cards are 2 columns on phones (titles only). Carousels use `SnapCarousel` (native scroll snap + dots).
+- No horizontal page overflow at any width. Clip decorative overflow inside its own section.
+- Icons: Tabler, or the brand icons in `icons/`. Service icons map in `components/service-icons.tsx`.
+
+## Forms, integrations and secrets
+
+- **Contact form** → `POST /api/contact`. Server order: honeypot (filled → fake success), validation, keys present (fail closed with 500), Cloudflare Turnstile verification, then Brevo transactional email from and to `fares@qartmina.com` with `replyTo` set to the visitor. Rejections are logged with Cloudflare's error codes.
+- **Newsletter form** posts directly from the browser to the Brevo form endpoint in `lib/site.ts` with `?isAjax=1` (required for a JSON answer). Brevo accepts any string as `EMAIL`, so validate client-side. Keep Brevo's own honeypot field `email_address_check`.
+- **Newsletter popover:** once per browser (`localStorage` key `qartmina-newsletter-popover`), random delay 8 to 20 s.
+- **Cal.com:** `CalEmbed` answers Cal's `__iframeReady` with `parentKnowsIframeReady` to receive `__dimensionChanged` heights, sends the transparent-body `ui` message, passes `theme=light|dark`, and pins the iframe `color-scheme` to `light` (Cal's document is always light; a mismatch paints an opaque backdrop). Render it after mount to avoid hydration errors.
+- **Env vars** (see `.env.example`): `BREVO_API_KEY`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`. Set them in Vercel for Production and redeploy after changes. Never commit `.env*` files or paste keys into code, messages or chat. Brevo "Authorized IPs" must stay off because Vercel has no fixed outbound IPs.
+- Never place secrets or personal data in URLs.
+
+## Known pitfalls (learned the hard way)
+
+- Hidden honeypot inputs must be hidden in place (clip/opacity), not parked at `-9999px`: inside the 3D-flipped contact card the offset gets mirrored and creates ~10,000px of horizontal scroll.
+- `backdrop-filter` on an ancestor makes `position: fixed` children relative to it. Full-screen overlays (mobile menu) render through a portal to `document.body`.
+- A `ChunkLoadError` after a rebuild usually means an old `next start` process still holds the port. Kill it before testing.
+- `opengraph-image.tsx` can't clip with `overflow: hidden`; round images themselves. Read images from `assets/og/` as data URLs.
+- Page-level `openGraph` metadata replaces the file-based OG image, so `pageMetadata()` sets the image URL explicitly.
+
+## Before you push
+
+1. `pnpm exec tsc --noEmit` and `pnpm build` pass.
+2. Copy updated in **en, fr and de**, no dashes as punctuation, no unverifiable claims.
+3. Checked at 390px and desktop, in light and dark mode, with no horizontal scroll and no console errors.
+4. Commit only intended files (leave stray assets in `public/` out), never `.env*`. End commit messages with the co-author line if an AI agent wrote the change.

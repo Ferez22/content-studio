@@ -88,17 +88,20 @@ export const PartnersCard = ({ className }: { className?: string }) => {
         {partners.map((partner) => (
           <li key={partner.name}>
             {partner.name === "ESGITECH" ? (
-              <Image
-                src="/logoesgitech.svg"
-                alt={partner.name}
-                width={690}
-                height={130}
-                className="h-10 md:h-12 w-auto dark:brightness-0 dark:invert"
-              />
+              // The logo is white, so it sits on a dark rounded tile in both themes.
+              <span className="inline-flex rounded-xl bg-neutral-950 px-4 py-3 ring-1 ring-black/5 dark:ring-white/10">
+                <Image
+                  src="/logoesgitech.svg"
+                  alt={partner.name}
+                  width={690}
+                  height={130}
+                  className="h-8 md:h-10 w-auto"
+                />
+              </span>
             ) : (
               <p className="text-lg md:text-2xl font-bold font-display">{partner.name}</p>
             )}
-            <p className="text-neutral-600 dark:text-neutral-300 mt-1">{partner.text}</p>
+            <p className="text-neutral-600 dark:text-neutral-300 mt-3">{partner.text}</p>
           </li>
         ))}
       </ul>

@@ -40,17 +40,23 @@
   },
   "home": {
     "hero": {
-      "title": "Mettez des agents IA au travail dans votre entreprise",
+      "title": "Mettez des agents IA au service de votre entreprise",
       "subtitle": "Des agents qui libèrent vos équipes des tâches répétitives, dans les outils que vous utilisez déjà, avec une personne qui valide ce qui compte.",
       "primary": "Réserver un appel gratuit de 30 minutes",
       "secondary": "Voir nos réalisations",
-      "titleTemplate": "Mettez des agents IA au travail dans votre {target}",
-      "targets": [
-        "entreprise",
-        "équipe finance",
-        "équipe commerciale",
-        "service client",
-        "logistique"
+      "kpis": [
+        {
+          "value": "3,2 M€",
+          "label": "ROI moyen"
+        },
+        {
+          "value": "80 %",
+          "label": "Temps gagné"
+        },
+        {
+          "value": "30 j",
+          "label": "Livraison"
+        }
       ]
     },
     "trusted": {
@@ -141,7 +147,12 @@
       "emailLabel": "E-mail",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Adresse",
-      "location": "Les Berges du Lac, Tunisie. À distance dans toute la région MENA et en Afrique."
+      "location": "Les Berges du Lac, Tunisie. À distance dans toute la région MENA et en Afrique.",
+      "tabs": {
+        "call": "Réserver un appel gratuit de 30 min",
+        "message": "Nous contacter"
+      },
+      "calendarTitle": "Calendrier de réservation"
     },
     "figures": [
       {

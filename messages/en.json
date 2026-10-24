@@ -40,17 +40,23 @@
   },
   "home": {
     "hero": {
-      "title": "Put AI agents to work in your company",
+      "title": "Put AI agents at the service of your company",
       "subtitle": "Agents that take repetitive work off your teams, inside the tools you already use, with a person approving what matters.",
       "primary": "Book a free 30-minute call",
       "secondary": "See our work",
-      "titleTemplate": "Put AI agents to work in your {target}",
-      "targets": [
-        "company",
-        "finance team",
-        "sales team",
-        "customer service",
-        "operations"
+      "kpis": [
+        {
+          "value": "3.2M€",
+          "label": "Avg. ROI"
+        },
+        {
+          "value": "80%",
+          "label": "Time saved"
+        },
+        {
+          "value": "30 days",
+          "label": "Delivery"
+        }
       ]
     },
     "trusted": {
@@ -141,7 +147,12 @@
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Location",
-      "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa."
+      "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa.",
+      "tabs": {
+        "call": "Schedule a free 30-min call",
+        "message": "Contact us"
+      },
+      "calendarTitle": "Booking calendar"
     },
     "figures": [
       {

@@ -151,15 +151,6 @@
   }
 }
 
-@keyframes caret-blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.typewriter-caret {
-  animation: caret-blink 1s steps(1) infinite;
-}
 
 @keyframes progress-fill {
   from {

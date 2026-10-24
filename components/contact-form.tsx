@@ -49,7 +49,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4">
+    <form onSubmit={onSubmit} className="relative flex flex-col gap-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label={t("name")} name="name" autoComplete="name" required maxLength={100} />
         <Field
@@ -76,7 +76,7 @@ export const ContactForm = () => {
       </label>
 
       {/* Honeypot: hidden from people and screen readers, bots tend to fill it. */}
-      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+      <div aria-hidden="true" className="absolute left-0 top-0 size-px overflow-hidden opacity-0 pointer-events-none [clip-path:inset(50%)]">
         <label>
           {t("honeypot")}
           <input type="text" name="fax" tabIndex={-1} autoComplete="off" defaultValue="" />

@@ -40,17 +40,23 @@
   },
   "home": {
     "hero": {
-      "title": "Setzen Sie KI-Agenten in Ihrem Unternehmen ein",
+      "title": "Stellen Sie KI-Agenten in den Dienst Ihres Unternehmens",
       "subtitle": "Agenten, die Ihren Teams wiederkehrende Arbeit abnehmen, direkt in den Tools, die Sie bereits nutzen. Was wichtig ist, gibt ein Mensch frei.",
       "primary": "Kostenloses 30-Minuten-Gespräch buchen",
       "secondary": "Unsere Arbeit ansehen",
-      "titleTemplate": "Setzen Sie KI-Agenten in Ihrem {target} ein",
-      "targets": [
-        "Unternehmen",
-        "Finanzteam",
-        "Vertrieb",
-        "Kundenservice",
-        "Einkauf"
+      "kpis": [
+        {
+          "value": "3,2 Mio. €",
+          "label": "Ø ROI"
+        },
+        {
+          "value": "80 %",
+          "label": "Zeitersparnis"
+        },
+        {
+          "value": "30 Tage",
+          "label": "Lieferung"
+        }
       ]
     },
     "trusted": {
@@ -141,7 +147,12 @@
       "emailLabel": "E-Mail",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Standort",
-      "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika."
+      "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika.",
+      "tabs": {
+        "call": "Kostenloses 30-Min.-Gespräch buchen",
+        "message": "Kontakt aufnehmen"
+      },
+      "calendarTitle": "Buchungskalender"
     },
     "figures": [
       {

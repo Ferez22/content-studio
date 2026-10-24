@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/container";
 import { PageIntro } from "@/components/page-intro";
 import { ContactForm } from "@/components/contact-form";
+import { CalEmbed } from "@/components/cal-embed";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
@@ -30,13 +31,8 @@ export default async function BookPage({ params }: Props) {
       <section className="py-10 md:py-20">
         <Container>
           {site.bookingUrl ? (
-            <div className="rounded-3xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white">
-              <iframe
-                title={t("calendarTitle")}
-                src={site.bookingUrl}
-                className="block w-full h-[720px]"
-                loading="lazy"
-              />
+            <div>
+              <CalEmbed title={t("calendarTitle")} />
             </div>
           ) : (
             <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
