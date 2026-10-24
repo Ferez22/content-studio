@@ -1,0 +1,147 @@
+---
+title: "AI Agent GDPR and EU AI Act Compliance: What Applies to You"
+summary: "Which GDPR and EU AI Act rules apply when an AI agent handles personal data, explained for business leaders, with a checklist for an invoice agent and a recruitment agent."
+description: "AI agent GDPR and EU AI Act rules in plain words: when they apply outside the EU, which agents are high-risk, the new deadlines, and a practical checklist."
+slug: "ai-agents-gdpr-eu-ai-act"
+date: "2026-10-24"
+tags: ["AI agents", "Compliance"]
+primaryKeyword: "AI agent GDPR"
+secondaryKeywords: ["EU AI Act", "AI Act high-risk", "GDPR AI compliance", "data processing agreement"]
+author: "Fares"
+faq:
+  - question: "Does GDPR apply to an AI agent run by a company outside the EU?"
+    answer: "It can. GDPR covers companies outside the EU when they offer goods or services to people in the EU or monitor their behaviour there. A company in Tunisia, Egypt or the UAE that processes data about its European clients' staff or customers should assume GDPR applies and check the details with a lawyer."
+  - question: "Do we need a data processing agreement with OpenAI or another AI provider?"
+    answer: "Yes, if the agent sends personal data to that provider. Under Article 28 GDPR, a provider that processes personal data on your behalf needs a contract that sets out what it may do with the data. The large AI providers offer standard data processing agreements for their business services."
+  - question: "Is our AI agent high-risk under the EU AI Act?"
+    answer: "Most business agents aren't. An agent that processes invoices, answers internal questions or drafts emails is usually outside the high-risk list. Agents used to screen job applicants, evaluate employees, assess creditworthiness or decide access to essential services are high-risk, and those obligations apply from 2 December 2027."
+  - question: "What do we have to do under the EU AI Act right now?"
+    answer: "Two things matter for almost every company. Make sure people know when they're dealing with an AI system rather than a person, and take measures so your staff understand the AI tools they use. Banned practices, like manipulative or social scoring systems, have been prohibited since 2 February 2025."
+---
+
+**AI agent GDPR rules apply the moment your agent touches personal data about people in the EU, even if your company is based in Tunis, Cairo or Dubai.** The EU AI Act adds a second layer, but for most business agents it asks for little: be open that people are dealing with AI, and make sure your staff understand the tools. The heavy obligations only bite if the agent makes decisions about people's jobs, credit or access to essential services.
+
+This article is part of our guide to [AI agents for business](/en/blog/ai-agents-for-business). It's general information, not legal advice. For your own case, involve your data protection officer (DPO) or a lawyer.
+
+Our running example: a finance agent that reads supplier invoices, like a €8,960 invoice for purchase order 4471, and prepares them for approval. (Illustrative figures, not a client case.)
+
+## When AI agent GDPR rules apply to your company
+
+GDPR, the EU's General Data Protection Regulation, protects **personal data**: any information about an identifiable person. Supplier invoices usually contain some: a contact's name and email, and for sole traders, often a personal bank account.
+
+Location doesn't get you out of it. [Article 3 GDPR](https://gdpr-info.eu/art-3-gdpr/) covers companies outside the EU when they offer goods or services to people in the EU, or monitor how those people behave there. If you're a company in Morocco or Kenya with European clients, and your agent handles data about their people, plan as if GDPR applies.
+
+The **controller** decides why and how data is used: you, for your own invoices. A **processor** handles the data on your behalf: your cloud host, your accounting software and, yes, the company behind the AI model.
+
+## The GDPR AI compliance checklist
+
+### A legal basis for every use
+
+You need a lawful reason to process the data, from the list in [Article 6 GDPR](https://gdpr-info.eu/art-6-gdpr/). For invoices it's usually performance of a contract, a legal obligation such as keeping accounting records, or your legitimate interest in paying suppliers efficiently. Write it down, you'll need it. "We added AI" isn't a new legal basis, but a new purpose might need one.
+
+### A data processing agreement with every provider
+
+A **data processing agreement** (DPA) is the contract that tells a processor what it may and may not do with your data. [Article 28 GDPR](https://gdpr-info.eu/art-28-gdpr/) requires one, covering the subject, duration, nature and purpose of the processing and the types of data involved.
+
+The AI model provider is the one people forget. If invoice text goes to an AI model, that provider is a processor and needs a DPA. The big providers offer standard ones for their business services, [OpenAI's data processing addendum](https://openai.com/policies/data-processing-addendum/) for example. Sign them, and don't forget to check whether your data can be used to train their models.
+
+### Data minimisation
+
+[Article 5 GDPR](https://gdpr-info.eu/art-5-gdpr/) says data must be limited to what's necessary for the purpose. For our agent, that means it sees the invoice and order 4471, not the whole supplier master file or the HR folder. It's also cheaper: less text means fewer tokens, as we showed in [AI agent token cost](/en/blog/ai-agent-token-cost). And it's safer, which is the point of [AI agent security risks](/en/blog/ai-agent-security).
+
+### International transfers
+
+Sending personal data outside the European Economic Area (EEA) is allowed, but only on certain terms. The simplest is an **adequacy decision**: the European Commission has [recognised a list of countries](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en) as offering adequate protection, including the UK, Japan and US companies in the EU-US Data Privacy Framework. Otherwise you need safeguards such as the Commission's [standard contractual clauses](https://gdpr-info.eu/art-46-gdpr/). Ask every provider where data is processed and which of these applies.
+
+### A DPIA when the risk is high
+
+A **data protection impact assessment** (DPIA) is a written review, done before you start, of what could go wrong for the people concerned. [Article 35 GDPR](https://gdpr-info.eu/art-35-gdpr/) requires one when processing is likely to result in a high risk, for example systematic evaluation of people based on automated processing. A simple invoice agent often won't need one. A screening agent for job applicants almost certainly will.
+
+### Care with automated decisions
+
+[Article 22 GDPR](https://gdpr-info.eu/art-22-gdpr/) gives people the right not to be subject to a decision based solely on automated processing when it has legal or similarly significant effects on them. Paying an invoice isn't that. Rejecting a job candidate is. Keep a person who can actually change the outcome in those decisions.
+
+## The EU AI Act in plain words
+
+The **EU AI Act** sorts AI systems by risk. Think of four tiers:
+
+1. **Banned.** Practices such as manipulative techniques that cause harm, or social scoring. These [prohibitions have applied since 2 February 2025](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113).
+2. **High-risk.** Systems used in sensitive areas, listed in [Annex III](https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3). They carry the heavy obligations.
+3. **Transparency duties.** Systems that talk to people or generate content must be open about it.
+4. **Everything else.** Most business tools. No specific duties beyond AI literacy.
+
+It also reaches beyond the EU. [Article 2](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-2) covers providers and deployers in other countries when the system's output is used in the Union. A **provider** builds the AI system or has it built and puts it out under its own name. A **deployer** is the company that uses it.
+
+## When an AI agent counts as AI Act high-risk
+
+Annex III includes AI used to recruit or select people, including to filter applications and evaluate candidates. It also covers decisions on promotion, termination or task allocation at work, creditworthiness checks and credit scores for individuals, and access to essential public and private services. Our invoice agent isn't on that list, and neither are most agents that read documents or draft emails.
+
+If you do deploy a high-risk system, your duties as a deployer include [assigning human oversight](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-26) to trained people with real authority, keeping the system's logs, and telling workers before you use it at the workplace. The provider carries most of the rest, like risk management and testing.
+
+## Two duties that apply to almost everyone
+
+**Telling people they're dealing with AI.** Under [Article 50](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50), systems that interact directly with people must be designed so those people know they're talking to an AI system, unless that's already obvious. If your agent emails suppliers to chase a missing order number, say it's an automated assistant. AI-generated content and deepfakes must also be labelled.
+
+**AI literacy.** [Article 4](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4), as amended, asks providers and deployers to take measures to support AI literacy among staff who use AI on their behalf. No certificate, no set level. In practice: short training on what the agent does, where it fails and when to override it.
+
+## The timeline after the Digital Omnibus
+
+The Digital Omnibus on AI, Regulation (EU) 2026/1744, [entered into force on 27 July 2026](https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/) and moved several deadlines ([Orrick's summary](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes) is a readable overview):
+
+| Date | What applies |
+| --- | --- |
+| 2 February 2025 | Banned practices prohibited |
+| August 2025 | Rules for general-purpose AI models, the large models from OpenAI and others |
+| 2 August 2026 | Article 50 transparency duties. Providers of content-generating systems already on the market before that date have until 2 December 2026 for marking AI-generated content |
+| 2 December 2027 | High-risk obligations for Annex III uses, such as hiring and credit scoring (was 2 August 2026 before the Omnibus) |
+| 2 August 2028 | High-risk AI built into regulated products, like machinery or medical devices |
+
+## What the fines look like
+
+Under [Article 99 of the AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99), banned practices can cost up to €35 million or 7% of worldwide annual turnover. Breaching other obligations, including Article 50, can cost up to €15 million or 3%, and giving misleading information to authorities up to €7.5 million or 1%. For SMEs, the lower of the two amounts applies. GDPR goes up to [€20 million or 4% of turnover](https://gdpr-info.eu/art-83-gdpr/).
+
+These are ceilings, not price tags. Regulators weigh things like intent, harm and what you did to prevent it. That's why a documented checklist is worth having: it's your evidence.
+
+## Two agents, two very different checklists
+
+**The invoice agent:**
+
+- Legal basis written down for invoice data.
+- A DPA with the AI provider, the hosting provider and any connector service.
+- Transfers outside the EEA covered by adequacy or standard contractual clauses.
+- Access limited to invoices, orders and goods receipts.
+- A person approves every payment.
+- Supplier-facing messages say they come from an automated assistant.
+- Finance staff trained on how the agent works and when to override it.
+
+**A recruitment-screening agent:**
+
+- Everything above, plus:
+- A DPIA before go-live.
+- Candidates told that AI is involved, and a person who reviews and decides on every rejection.
+- Treated as AI Act high-risk: a provider that can show its conformity documentation, trained human overseers, logs kept, and staff representatives informed, ready for 2 December 2027.
+- Regular checks that the agent doesn't treat groups of candidates unfairly.
+
+If you're choosing where to start, pick the workflow with the shorter list. Our [AI consulting](/en/services/consulting) ranks candidate workflows this way, our [AI agents service](/en/services/ai-agents) builds them with these controls in place, and our [integration work](/en/services/integration) keeps each connection to the minimum. For the systems side, see [connect AI agents to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm) and the [AI agent knowledge base](/en/blog/ai-agent-knowledge-base) guide.
+
+## FAQ
+
+### Does GDPR apply to an AI agent run by a company outside the EU?
+
+It can. GDPR covers companies outside the EU when they offer goods or services to people in the EU or monitor their behaviour there. A company in Tunisia, Egypt or the UAE that processes data about its European clients' staff or customers should assume GDPR applies and check the details with a lawyer.
+
+### Do we need a data processing agreement with OpenAI or another AI provider?
+
+Yes, if the agent sends personal data to that provider. Under Article 28 GDPR, a provider that processes personal data on your behalf needs a contract that sets out what it may do with the data. The large AI providers offer standard data processing agreements for their business services.
+
+### Is our AI agent high-risk under the EU AI Act?
+
+Most business agents aren't. An agent that processes invoices, answers internal questions or drafts emails is usually outside the high-risk list. Agents used to screen job applicants, evaluate employees, assess creditworthiness or decide access to essential services are high-risk, and those obligations apply from 2 December 2027.
+
+### What do we have to do under the EU AI Act right now?
+
+Two things matter for almost every company. Make sure people know when they're dealing with an AI system rather than a person, and take measures so your staff understand the AI tools they use. Banned practices, like manipulative or social scoring systems, have been prohibited since 2 February 2025.
+
+---
+
+**Not sure which rules apply to the agent you have in mind?** [Book a call](/en/book) and we'll map it against GDPR and the AI Act with you.

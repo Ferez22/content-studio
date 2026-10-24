@@ -4,6 +4,8 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Blog batch 1 (EN): pillar `ai-agents-for-business` plus `ai-agent-security`, `ai-agent-token-cost`, `ai-agent-knowledge-base`, `connect-ai-agent-erp-crm`, `ai-agents-gdpr-eu-ai-act`; every figure sourced, humanized with li-human
+- Blog features: "What's in this article" table of contents (sticky sidebar with active section on desktop, collapsible on phones), GFM tables via `remark-gfm` (scroll inside their box on phones), optional `description` (meta), `faq` (FAQPage JSON-LD) and `updated` ("Last updated", `dateModified`) frontmatter; reading time now ignores frontmatter; smooth scroll respects reduced motion
 - Legal pages completed with company details: Qartmina SUARL, Immeuble Mazars, Les Berges du Lac, RNE 1973016B, represented by Fares Mohamed Aouani Cherif (managing partner); Tunisian law, courts of Tunis
 - Vercel function region confirmed (Frankfurt); sitemap resubmitted and priority URLs requested in Google Search Console (by Fares)
 - Article author card: photo, bio, links to business card, LinkedIn and newsletter, and QR codes (newsletter form, bcards) on tablet and desktop; QR files in `public/qr/`

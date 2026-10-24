@@ -1,0 +1,129 @@
+---
+title: "AI Agent Token Cost: What Tokens and Context Windows Cost Your Business"
+summary: "What a token is, why the context window matters, and how the design of an AI agent can make the same task cost cents or thousands. With a worked example from invoice processing."
+description: "AI agent token cost explained for business leaders: what tokens and context windows are, a worked invoice example, and five ways to keep your bill down."
+slug: "ai-agent-token-cost"
+date: "2026-10-24"
+tags: ["AI agents", "Costs"]
+primaryKeyword: "AI agent token cost"
+secondaryKeywords: ["what is a token in AI", "context window", "LLM pricing", "reduce AI costs"]
+author: "Fares"
+faq:
+  - question: "What is a token in AI?"
+    answer: "A token is the unit AI models use to read and write text. In English, one token is roughly four characters, or about three quarters of a word. AI providers charge per token, separately for the text the model reads (input) and the text it writes (output)."
+  - question: "How much does an AI agent cost to run per month?"
+    answer: "It depends on volume, the model you choose and, above all, the design. In our worked example of 2,000 invoices a month, the token bill ranges from under $10 to around $12,000 for the same task, depending on which model is used and how much text the agent rereads at every step."
+  - question: "What is a context window?"
+    answer: "The context window is the maximum amount of text an AI model can consider at once, measured in tokens. It works like a desk: everything the agent needs for the current step has to fit on it. A bigger desk costs more to fill, and research shows models get less reliable when it's crowded."
+  - question: "How can we reduce AI agent token costs?"
+    answer: "Send the agent only the text it needs for each step, use a smaller model for simple steps like extraction, reuse unchanging instructions with prompt caching, run non-urgent work through the providers' batch services at half price, and cap how many steps an agent can take per task."
+---
+
+**AI agent token cost is the usage bill your AI provider charges every time the agent reads or writes text, measured in small chunks called tokens.** For a well-designed agent it's usually the smallest line in the budget. For a badly designed one, the same task can cost a thousand times more, and nobody notices until the invoice arrives.
+
+This article explains tokens and context windows in plain words, then walks through a worked example so you can sanity-check any estimate you're given. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business).
+
+## What is a token in AI?
+
+AI models don't read words the way you and I do. They split text into **tokens**: whole short words, pieces of longer words, punctuation. OpenAI's rule of thumb is that [one token is about four characters of English, or roughly three quarters of a word](https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens). So a 750-word supplier contract is around 1,000 tokens.
+
+Two things about tokens will matter for your budget.
+
+**You pay for reading and writing separately.** Input tokens are what the agent reads: its instructions, the document, any data pulled from your systems. Output tokens are what it writes. And output is the part that'll cost you. On the current published price lists of both [OpenAI](https://openai.com/api/pricing/) and [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), output costs about five times as much as input.
+
+**Language changes the count.** Tokenizers, the part of the model that does the splitting, were built mostly on English text. Researchers at the University of Oxford found that the same text translated into different languages can need [up to 15 times as many tokens](https://proceedings.neurips.cc/paper_files/paper/2023/hash/74bb24dca8334adce292883b4b651eda-Abstract.html). If your documents are in Arabic, French or German, you'll want to measure the real token count on your own files before you trust an estimate made with English examples.
+
+## LLM pricing: what a million tokens costs
+
+Providers quote their prices per million tokens, so you'll need to do a little arithmetic. As of October 2026, the published rates span a wide range:
+
+- **Small, fast models**, built for simple high-volume work like extraction and sorting, start around **$0.10 per million input tokens** and **$0.50 per million output tokens** at both OpenAI and Anthropic.
+- **Flagship models**, the most capable ones, cost up to **$10 per million input tokens** and **$50 per million output tokens** at OpenAI.
+
+That's a 100-fold difference between the cheapest and most expensive option. Prices change often, so treat these as orders of magnitude, and check the providers' pages when you're building your budget.
+
+Two discounts are worth knowing:
+
+- **Prompt caching.** When the agent sends the same text again and again, like its standing instructions, providers charge much less for the repeated part. OpenAI's flagship rate for cached input is [$1 instead of $10 per million tokens](https://openai.com/api/pricing/).
+- **Batch processing.** Work that can wait a few hours, like an overnight run, costs [50% less through OpenAI's Batch API](https://openai.com/api/pricing/), and Anthropic offers the same [half-price batch rate](https://platform.claude.com/docs/en/about-claude/pricing).
+
+## The context window: your agent's desk
+
+The **context window** is the maximum amount of text a model can consider in one go, measured in tokens. Think of it as a desk. Everything the agent needs for the current step has to be on it: instructions, the invoice, the purchase order, the notes from the previous step.
+
+Modern desks are large, often hundreds of thousands of tokens. It's tempting to put everything on them. Don't, for two reasons.
+
+**Every token on the desk is paid for at every step.** An agent works in a loop: read, decide, act, read again. If it carries a 100,000-token document through ten steps, you pay for a million input tokens, even if it only needed one paragraph. Long prompts can also cost more per token: OpenAI's standard rates [apply only below 272,000 tokens of context](https://openai.com/api/pricing/).
+
+**A crowded desk makes worse decisions.** Researchers at Stanford and partners showed that models [use information at the start and end of a long input better than what's in the middle](https://arxiv.org/abs/2307.03172). A 2025 study by Chroma tested 18 models and found their [reliability drops as the input gets longer](https://www.trychroma.com/research/context-rot), even on simple tasks. More context can mean a higher bill *and* a worse answer.
+
+## A worked example of AI agent token cost: invoice processing
+
+Let's put some numbers on it, so you can see where the money goes. Our example agent processes supplier invoices: it reads the invoice, pulls up the purchase order and goods receipt, checks they match, and drafts the entry or flags the difference.
+
+We've made up these assumptions for illustration. They aren't measurements from a client:
+
+- 2,000 invoices a month.
+- 6 steps per invoice.
+- **Lean design:** each step reads about 4,000 tokens (instructions, the invoice, the relevant order lines) and writes about 300.
+- **Wasteful design:** each step rereads the full 100,000-token supplier contract archive "just in case."
+
+Per invoice, the lean design reads 24,000 tokens and writes 1,800. The wasteful one reads 600,000 and writes the same 1,800.
+
+Here's what that costs:
+
+| Design and model | Per invoice | Per month (2,000 invoices) |
+| --- | --- | --- |
+| Lean design, small model ($0.10 in, $0.50 out per million tokens) | about $0.003 | about $7 |
+| Lean design, flagship model ($10 in, $50 out) | about $0.33 | about $660 |
+| Wasteful design, flagship model | about $6.09 | about $12,180 |
+
+Same task, same invoices. The monthly bill moves from pocket change to more than many companies pay a full-time employee, purely because of design choices. And the expensive version is likely to be *less* accurate, because of the crowded desk.
+
+In practice, the best setups mix models: a small one for reading and extracting fields, a stronger one only for the tricky exceptions. That usually lands well below the lean flagship row.
+
+## How to reduce AI costs without losing quality
+
+Here are the levers we pull when we build an [AI agent](/en/services/ai-agents) for a client.
+
+1. **Send only what's needed.** Instead of the whole contract archive, the agent searches for the two clauses that matter and reads just those. This is what a knowledge base with retrieval does, explained in our guide to the [AI agent knowledge base](/en/blog/ai-agent-knowledge-base).
+2. **Use the smallest model that does the job.** Extraction and sorting rarely need a flagship model. Test the small one first, and only move up where the results show you can't avoid it.
+3. **Cache the fixed parts.** Standing instructions and reference tables that don't change between invoices can be cached at a fraction of the price.
+4. **Batch what can wait.** If invoices only need to be ready by 9:00 the next morning, an overnight batch run halves the token bill.
+5. **Cap the loop.** Set a maximum number of steps per task. An agent stuck retrying the same failed lookup can burn tokens for nothing. A cap turns that into an alert for a person.
+
+There's also a security bonus. An agent that sees less data has less to leak, which ties into the permission rules in [AI agent security risks](/en/blog/ai-agent-security).
+
+## What to ask for in a cost estimate
+
+If a vendor or your own team proposes an agent, don't approve it until you've seen these numbers:
+
+- Expected tasks per month, and steps per task.
+- Tokens read and written per step, measured on your real documents in your languages.
+- Which model is used at each step, and why.
+- Whether caching and batching are used.
+- What happens when a task goes over its step limit.
+
+Then compare the monthly token bill with the time the agent saves. If the estimate can't answer these questions, you're looking at a guess. Our [AI consulting](/en/services/consulting) reviews include exactly this calculation for each candidate workflow.
+
+## FAQ
+
+### What is a token in AI?
+
+A token is the unit AI models use to read and write text. In English, one token is roughly four characters, or about three quarters of a word. AI providers charge per token, separately for the text the model reads (input) and the text it writes (output).
+
+### How much does an AI agent cost to run per month?
+
+It depends on volume, the model you choose and, above all, the design. In our worked example of 2,000 invoices a month, the token bill ranges from under $10 to around $12,000 for the same task, depending on which model is used and how much text the agent rereads at every step.
+
+### What is a context window?
+
+The context window is the maximum amount of text an AI model can consider at once, measured in tokens. It works like a desk: everything the agent needs for the current step has to fit on it. A bigger desk costs more to fill, and research shows models get less reliable when it's crowded.
+
+### How can we reduce AI agent token costs?
+
+Send the agent only the text it needs for each step, use a smaller model for simple steps like extraction, reuse unchanging instructions with prompt caching, run non-urgent work through the providers' batch services at half price, and cap how many steps an agent can take per task.
+
+---
+
+**Want a realistic cost estimate for your workflow?** [Book a call](/en/book) and we'll work out the numbers on your own documents.

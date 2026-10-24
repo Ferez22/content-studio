@@ -60,7 +60,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
+    <html lang={locale} suppressHydrationWarning className="motion-safe:scroll-smooth">
       <body className={`${manrope.variable} ${inter.variable} ${garamond.variable} antialiased  `}>
         <ThemeProvider
           attribute="class"

@@ -1,7 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { compileMDX } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { mdxComponents } from "@/components/mdx";
+import { headingId } from "@/lib/utils";
 
 export type Collection = "portfolio" | "blog";
 
@@ -19,8 +21,14 @@ export type CaseStudyFrontmatter = {
 export type PostFrontmatter = {
   title: string;
   summary: string;
+  // Meta description for search results; falls back to summary.
+  description?: string;
   date: string;
+  // Set when an article is revised (prices, product features); shown as "Last updated".
+  updated?: string;
   tags?: string[];
+  // Rendered as FAQPage structured data; mirror the FAQ section in the body.
+  faq?: { question: string; answer: string }[];
 };
 
 const dir = (collection: Collection, locale: string) =>
@@ -57,15 +65,33 @@ export const getEntry = async <T extends { date: string }>(
   const { content, frontmatter } = await compileMDX<T>({
     source,
     components: mdxComponents,
-    options: { parseFrontmatter: true },
+    // remark-gfm adds tables, strikethrough and autolinks to Markdown.
+    options: { parseFrontmatter: true, mdxOptions: { remarkPlugins: [remarkGfm] } },
   });
-  const words = source.split(/\s+/).length;
+  // Count only the article body: the frontmatter (title, FAQ copy...) isn't read on the page.
+  const words = source.replace(/^---\n[\s\S]*?\n---\n/, "").split(/\s+/).length;
   return {
     slug,
     frontmatter,
     content,
+    headings: getHeadings(source),
     readingMinutes: Math.max(1, Math.ceil(words / 200)),
   };
+};
+
+// The article's h2 headings, for the table of contents. Skips fenced code blocks.
+const getHeadings = (source: string) => {
+  let inCode = false;
+  return source.split("\n").flatMap((line) => {
+    if (line.startsWith("```")) inCode = !inCode;
+    if (inCode || !line.startsWith("## ")) return [];
+    const text = line
+      .slice(3)
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+      .replace(/[*_`]/g, "")
+      .trim();
+    return [{ id: headingId(text), text }];
+  });
 };
 
 // Newest first.

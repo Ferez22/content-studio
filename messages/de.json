@@ -573,6 +573,8 @@
     "intro": "Praxisnahe Hinweise zum Einsatz von KI und Daten. Kein Hype, echte Beispiele.",
     "empty": "Die ersten Artikel sind in Arbeit. Abonnieren Sie den Newsletter, um sie zu erhalten.",
     "readingTime": "{minutes} Min. Lesezeit",
+    "lastUpdated": "Zuletzt aktualisiert: {date}",
+    "toc": "In diesem Artikel",
     "back": "Alle Artikel",
     "related": "Ähnliche Artikel",
     "authorName": "Fares",

@@ -1,0 +1,136 @@
+---
+title: "AI Agent Knowledge Base: How RAG Uses Your Company Documents"
+summary: "How an AI agent finds answers in your own policies, contracts and procedures, why outdated documents make it confidently wrong, and how to keep access rights and costs under control."
+description: "An AI agent knowledge base explained: what RAG is, why stale documents cause AI hallucinations, and how to control access rights and token costs."
+slug: "ai-agent-knowledge-base"
+date: "2026-10-24"
+tags: ["AI agents", "Data"]
+primaryKeyword: "AI agent knowledge base"
+secondaryKeywords: ["what is RAG", "retrieval-augmented generation", "AI hallucinations", "company documents AI"]
+author: "Fares"
+faq:
+  - question: "What is RAG in simple terms?"
+    answer: "RAG stands for retrieval-augmented generation. Before the AI model answers, a search step finds the passages in your own documents that relate to the question and hands them to the model. The model then writes its answer from those passages instead of relying only on what it learned in training."
+  - question: "Does an AI agent knowledge base stop hallucinations?"
+    answer: "It reduces them, but it doesn't remove them. If the search step finds the wrong passage, or your documents are outdated or contradict each other, the agent will still give a confident wrong answer. Clean, current, well-owned documents matter as much as the technology."
+  - question: "Can the agent show employees documents they aren't allowed to see?"
+    answer: "It can if it's built carelessly. The search step must check the permissions of the person asking and only return passages that person could already open. Permissions should be enforced in the search itself, not left to the AI model to respect."
+  - question: "How do we keep the knowledge base up to date?"
+    answer: "Connect it to the systems where documents already live so changes flow in automatically, give every document an owner and a review date, remove superseded versions instead of keeping them side by side, and test the agent regularly with real questions whose answers you know."
+  - question: "Is RAG cheaper than giving the AI all our documents?"
+    answer: "Usually much cheaper. AI providers charge for every piece of text the model reads. Retrieval sends only a few relevant passages per question instead of whole manuals, so each answer costs a fraction as much, and accuracy tends to be better too."
+---
+
+**An AI agent knowledge base is the collection of your own company documents that an agent searches before it answers, so it works from your policies instead of guesswork.** The method behind it is called RAG, short for retrieval-augmented generation. It works well when your documents are current and consistent, and it fails quietly when they aren't.
+
+This article explains how it works in plain words, what goes wrong in practice, and what to check before you trust it. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business).
+
+We'll use one example throughout. A finance agent processes supplier invoices. To do that it needs your payment terms, your approval limits and your supplier policies. Your staff also ask it questions like "what's our approval limit above €10,000?" or "can we pay this supplier early for a discount?"
+
+## What is RAG?
+
+An AI model like the ones behind ChatGPT learns from a huge amount of public text. It has never seen your approval policy. Ask it about your limits and it'll either say it doesn't know or, worse, produce something that sounds plausible.
+
+RAG fixes that by adding a lookup step. The idea was set out in a [2020 research paper by Patrick Lewis and colleagues at Facebook AI Research, University College London and New York University](https://arxiv.org/abs/2005.11401). In practice it works in three moves:
+
+1. **Retrieve.** When a question comes in, a search finds the few passages in your documents that relate to it.
+2. **Augment.** Those passages get added to the question, like attaching the relevant pages to an email.
+3. **Generate.** The model writes its answer from what's in front of it, and ideally cites where each point came from.
+
+Think of a new hire with a good filing cabinet. They don't know your policies by heart, but they know where to look, and they quote the page.
+
+## How an AI agent knowledge base finds the right passage
+
+Before the agent can search anything, your documents get prepared. Each one is cut into short sections, a few paragraphs each. Then every section is turned into an **embedding**: a list of numbers that captures what the passage means, not just which words it uses.
+
+That's what lets the search match meaning. A question about "sign-off thresholds" can find a passage titled "Approval limits" even though they share no words. The question gets turned into numbers the same way, and the system pulls the sections whose numbers sit closest to it.
+
+Most good setups also run a plain keyword search in parallel, because exact terms like "PO 4471" or a supplier's VAT number are things meaning-based search can miss. A final sorting step, called reranking, then puts the most useful passages first.
+
+This step is where most of the quality is won or lost. Anthropic, the company behind the Claude models, published a technique it calls contextual retrieval: each section gets a short note explaining where it sits in the wider document before it's indexed. On Anthropic's own benchmarks, [that cut failed retrievals by 49%, and by 67% when combined with reranking](https://www.anthropic.com/news/contextual-retrieval). Those are a vendor's own test results, but they show how much search design matters.
+
+## Company documents AI can trust: why stale files cause AI hallucinations
+
+An **AI hallucination** is an answer that sounds right and isn't. People usually blame the model. In a knowledge base, the cause is often the documents.
+
+Here's how it happens in our invoice example. Your approval limit for invoices above €10,000 changed last spring: it now needs the CFO, not the finance manager. The new policy sits on the intranet. The old PDF is still in a shared drive folder called "Finance procedures FINAL". Both get indexed. A clerk asks the agent, the search pulls the old PDF, and the agent answers clearly, with a citation, that the finance manager can approve it. (These figures are illustrative.)
+
+The agent didn't make anything up. It read the wrong page and reported it faithfully, which is harder to catch because the answer looks well sourced.
+
+The costs can be real. In [Moffatt v. Air Canada](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), decided in February 2024, the airline's website chatbot told a customer he could claim a bereavement fare after travelling. The airline's actual policy said otherwise. Air Canada argued it wasn't responsible for what its chatbot said. British Columbia's Civil Resolution Tribunal rejected that and ordered it to pay about CA$812. It's a small-claims tribunal decision, not a binding precedent, but the reasoning is hard to argue with: your agent speaks for your company.
+
+Two other habits make this worse:
+
+- **Contradictions.** If two documents disagree, the agent can pick either one, and it won't tell you there was a choice.
+- **Burying the answer.** Researchers found that AI models [use information at the start and end of a long input better than information in the middle](https://arxiv.org/abs/2307.03172). Stuffing in twenty passages "to be safe" can hide the one that matters.
+
+## Access rights: the agent may only see what the user may see
+
+A knowledge base built on everything in your shared drives will contain salaries, board minutes, disciplinary files and supplier pricing that only a few people should see. If the search ignores permissions, a curious employee only needs to ask the right question.
+
+The rule is simple to state: **the agent retrieves only what the person asking could already open themselves.** The OWASP Foundation, a non-profit that publishes widely used security standards, lists this under [vector and embedding weaknesses](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/) and recommends permission-aware search with strict separation between groups of users.
+
+Two practical points:
+
+- **Enforce it in the search, not in the instructions.** Telling the model "don't reveal confidential data" isn't a control. Filter the passages by the user's permissions before the model ever sees them.
+- **Keep permissions in sync.** When someone changes role or leaves, the knowledge base should know the same day your document system does.
+
+Retrieval is also a way in for attackers. In June 2025, researchers disclosed a flaw nicknamed EchoLeak, where a crafted email could get pulled into Microsoft 365 Copilot's retrieval and [lead to data leaking out](https://thehackernews.com/2025/06/zero-click-ai-vulnerability-exposes.html). Microsoft rated it critical and fixed it, and there was no evidence it had been used in real attacks. The lesson still stands: anything your agent can retrieve, an outsider may be able to plant. We cover that side in [AI agent security risks](/en/blog/ai-agent-security).
+
+## Keeping your knowledge base current
+
+A knowledge base isn't a project you finish. Here's what we set up when we build one:
+
+1. **Connect, don't copy.** Pull documents straight from where they live, your intranet, document management system or ERP (the software that runs your finance and operations), so updates flow in automatically. Our [integration work](/en/services/integration) is mostly this plumbing.
+2. **One owner per document.** Every policy has a named person and a review date. If nobody owns it, it shouldn't be in the index.
+3. **Retire old versions.** When a policy changes, the old one leaves the index. Archive it somewhere the agent can't reach.
+4. **Show the source.** Every answer links to the passage it used, so staff can check it in a click and report errors.
+5. **Test with known answers.** Keep a list of 30 to 50 real questions with correct answers, like the approval limit above €10,000, and rerun it after every change.
+
+Most of this is document hygiene, not AI. That's why we start with the foundation and the data before the AI layer, in our [AI consulting](/en/services/consulting) work.
+
+## How retrieval cuts token cost
+
+AI providers bill by the **token**, a small chunk of text roughly three quarters of a word long. Every word the model reads costs money, on every question.
+
+Without retrieval, the lazy option is to paste the whole finance manual into every request. With retrieval, the agent reads three or four short passages. Say the manual is 80,000 tokens and the retrieved passages total 2,000 (illustrative figures): that's 40 times less text to pay for on every single question, and the answer usually gets better, not worse, because the model isn't wading through the middle of a huge document.
+
+We walk through the full arithmetic in [AI agent token cost](/en/blog/ai-agent-token-cost). If the agent also needs live figures, like an open purchase order, it should query your systems directly rather than search a copy, which we explain in [connecting an AI agent to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm). For personal data in your documents, see [AI agents, GDPR and the EU AI Act](/en/blog/ai-agents-gdpr-eu-ai-act).
+
+## What to ask before you trust it
+
+If someone proposes a knowledge base for your [AI agent](/en/services/ai-agents), ask:
+
+- Which sources are indexed, and who owns each one?
+- How fast does a policy change reach the agent?
+- Does every answer show its source?
+- Are permissions checked in the search, per user?
+- What's the test set, and what score does the agent get on it today?
+
+If those answers are vague, the agent will be too.
+
+## FAQ
+
+### What is RAG in simple terms?
+
+RAG stands for retrieval-augmented generation. Before the AI model answers, a search step finds the passages in your own documents that relate to the question and hands them to the model. The model then writes its answer from those passages instead of relying only on what it learned in training.
+
+### Does an AI agent knowledge base stop hallucinations?
+
+It reduces them, but it doesn't remove them. If the search step finds the wrong passage, or your documents are outdated or contradict each other, the agent will still give a confident wrong answer. Clean, current, well-owned documents matter as much as the technology.
+
+### Can the agent show employees documents they aren't allowed to see?
+
+It can if it's built carelessly. The search step must check the permissions of the person asking and only return passages that person could already open. Permissions should be enforced in the search itself, not left to the AI model to respect.
+
+### How do we keep the knowledge base up to date?
+
+Connect it to the systems where documents already live so changes flow in automatically, give every document an owner and a review date, remove superseded versions instead of keeping them side by side, and test the agent regularly with real questions whose answers you know.
+
+### Is RAG cheaper than giving the AI all our documents?
+
+Usually much cheaper. AI providers charge for every piece of text the model reads. Retrieval sends only a few relevant passages per question instead of whole manuals, so each answer costs a fraction as much, and accuracy tends to be better too.
+
+---
+
+**Want an agent that answers from your own policies, and only to the right people?** [Book a call](/en/book) and we'll look at your documents together.

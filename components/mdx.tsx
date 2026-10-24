@@ -1,9 +1,19 @@
 import React from "react";
+import { headingId } from "@/lib/utils";
+
+// Plain text of rendered children (bold, links...), so the id matches the table of contents.
+const textOf = (node: React.ReactNode): string => {
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(textOf).join("");
+  if (React.isValidElement<{ children?: React.ReactNode }>(node)) return textOf(node.props.children);
+  return "";
+};
 
 export const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => (
     <h2
-      className="text-2xl md:text-3xl font-display font-bold tracking-tight mt-12 mb-4"
+      id={headingId(textOf(props.children))}
+      className="text-2xl md:text-3xl font-display font-bold tracking-tight mt-12 mb-4 scroll-mt-28"
       {...props}
     />
   ),
@@ -43,6 +53,24 @@ export const mdxComponents = {
     <h4 className="text-lg font-display font-bold mt-6 mb-2" {...props} />
   ),
   em: (props: React.ComponentProps<"em">) => <em className="italic" {...props} />,
+  // Wide tables scroll inside their own box so the page never scrolls sideways on phones.
+  table: (props: React.ComponentProps<"table">) => (
+    <div className="my-8 overflow-x-auto rounded-2xl border border-neutral-200 dark:border-neutral-800">
+      <table className="w-full border-collapse text-left text-sm md:text-base" {...props} />
+    </div>
+  ),
+  thead: (props: React.ComponentProps<"thead">) => (
+    <thead className="bg-neutral-50 dark:bg-neutral-800" {...props} />
+  ),
+  th: (props: React.ComponentProps<"th">) => (
+    <th className="px-4 py-3 min-w-28 font-semibold text-black dark:text-white" {...props} />
+  ),
+  td: (props: React.ComponentProps<"td">) => (
+    <td
+      className="px-4 py-3 min-w-28 border-t border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300"
+      {...props}
+    />
+  ),
   hr: () => <hr className="my-10 border-neutral-200 dark:border-neutral-800" />,
   // Markdown images: ![Alt text](/blog/<slug>/image.png). Files go in public/blog/<slug>/.
   img: ({ alt, ...props }: React.ComponentProps<"img">) => (

@@ -573,6 +573,8 @@
     "intro": "Practical notes on putting AI and data to work. No hype, real examples.",
     "empty": "The first articles are on their way. Subscribe to the newsletter to receive them.",
     "readingTime": "{minutes} min read",
+    "lastUpdated": "Last updated: {date}",
+    "toc": "What's in this article",
     "back": "All articles",
     "related": "Related articles",
     "authorName": "Fares",

@@ -573,6 +573,8 @@
     "intro": "Des conseils concrets pour mettre l'IA et les données au travail. Pas d'effet de mode, des exemples réels.",
     "empty": "Les premiers articles arrivent bientôt. Abonnez-vous à la newsletter pour les recevoir.",
     "readingTime": "{minutes} min de lecture",
+    "lastUpdated": "Mis à jour : {date}",
+    "toc": "Dans cet article",
     "back": "Tous les articles",
     "related": "Articles similaires",
     "authorName": "Fares",

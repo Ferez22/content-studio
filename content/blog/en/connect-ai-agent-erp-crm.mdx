@@ -1,0 +1,150 @@
+---
+title: "How to Connect an AI Agent to Your ERP and CRM, Even Custom Ones"
+summary: "The five routes for connecting an AI agent to your business systems, from official APIs and MCP to a 15-year-old in-house database, and the permission rules that keep each one safe."
+description: "How to connect an AI agent to your ERP and CRM, even custom ones: APIs, MCP, database views and file exports, plus the permission rules that keep it safe."
+slug: "connect-ai-agent-erp-crm"
+date: "2026-10-24"
+tags: ["AI agents", "Integration"]
+primaryKeyword: "connect AI agent to ERP"
+secondaryKeywords: ["MCP", "Model Context Protocol", "AI CRM integration", "custom ERP integration"]
+author: "Fares"
+faq:
+  - question: "Can an AI agent connect to a custom or legacy ERP?"
+    answer: "Usually, yes. If the system has no API, the agent can often read from a read-only database view, work from scheduled file exports, or use a small connector written for that system. Automating the screen itself is possible, but it's fragile, so it's a last resort."
+  - question: "What is MCP in simple terms?"
+    answer: "MCP, the Model Context Protocol, is an open standard for connecting AI agents to other software. Think of it as a universal plug: you build one MCP connector for a system, and any compatible agent can use it, with only the permissions you grant. It's now looked after by the Agentic AI Foundation under the Linux Foundation."
+  - question: "Should an AI agent have write access to our ERP?"
+    answer: "Only to the narrowest thing it needs, and usually only to drafts. Our invoice agent reads purchase orders and goods receipts and creates draft entries. A person posts them. Payments, master data and bank details stay out of its reach."
+  - question: "Do we need a test environment before connecting an agent?"
+    answer: "Yes. Run the agent against a sandbox, a copy of your system with test or anonymised data, until it behaves well on real-looking cases. Only then give it access to production, starting with read-only rights."
+  - question: "Which systems have official MCP servers?"
+    answer: "Several large vendors now publish their own, including Microsoft for Dynamics 365 finance and operations apps, Salesforce and HubSpot. Check what your plan includes."
+---
+
+**Yes, you can connect an AI agent to your ERP and CRM, including custom systems built in-house.** The route depends on what your system offers: an official API, an MCP connector, a read-only database view, file exports, or for the oldest systems, carefully limited screen automation. The harder question is what you let the agent do once it's connected.
+
+Below are the routes in plain words, then the rules we apply before any agent touches a live system. It's part of our guide to [AI agents for business](/en/blog/ai-agents-for-business).
+
+First, two definitions. Your **ERP** (enterprise resource planning system) is the software that runs finance, stock and purchasing: SAP, Microsoft Dynamics, Odoo, or something built in-house. Your **CRM** (customer relationship management system) is where sales tracks contacts and deals: Salesforce, HubSpot and the like.
+
+## What it means to connect an AI agent to your ERP
+
+An AI agent works through a task step by step, using tools you give it. A connection is one of those tools: a way to look something up or write something down in another system. Three examples:
+
+- **Finance.** Our invoice agent reads a supplier invoice, say €8,960 against purchase order 4471, looks up the order and the goods receipt in the ERP, and checks they match within a 2% tolerance. (Figures are illustrative.) It needs read access to purchase orders and goods receipts, and permission to create draft entries. Nothing else.
+- **Sales.** After each customer call, an agent writes a summary into the CRM deal record: what was discussed, the next step, the date of the follow-up. It needs to read the deal and add notes. It doesn't need to change prices or delete contacts.
+- **Legacy.** A distributor runs a 15-year-old in-house system with no API and no documentation, only the database underneath.
+
+## Route 1: the official API
+
+An **API** (application programming interface) is a documented door that lets one piece of software talk to another. It's the cleanest route, and most modern business systems have one. SAP publishes its APIs on the [SAP Business Accelerator Hub](https://api.sap.com/). Odoo's documentation says [all of its data is available from the outside](https://www.odoo.com/documentation/18.0/developer/reference/external_api.html) through its external API, with support for API keys.
+
+But an API alone isn't a plug for an agent. Someone still has to turn "look up purchase order 4471" into the right API call. That's where MCP comes in.
+
+## MCP: the Model Context Protocol explained
+
+**MCP**, the Model Context Protocol, is a universal plug for AI. Without it, every AI tool needs its own connection to every system. Five tools and four systems? Twenty connections to build and maintain. With MCP, you build one connector, called an MCP server, for each system. Any agent that speaks MCP can then use it, with the permissions you grant.
+
+Anthropic [released MCP as an open standard in November 2024](https://www.anthropic.com/news/model-context-protocol). In December 2025 it was [donated to the Agentic AI Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), a fund under the Linux Foundation co-founded by Anthropic, Block and OpenAI. So no single AI vendor owns it. Switch models next year and your connectors keep working.
+
+There are two ways to get an MCP server.
+
+### Vendor-provided MCP servers
+
+Some large vendors now ship their own:
+
+- **Microsoft Dynamics 365.** Microsoft documents a [Dynamics 365 ERP MCP server](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp) for its finance and operations apps. The agent only sees what its security role allows. Microsoft's own example: an agent given the Purchasing Agent role can reach only the objects that role covers.
+- **Salesforce.** Salesforce's [hosted MCP servers became generally available in April 2026](https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available). Salesforce says your existing permissions, sharing rules and field-level security apply automatically, and each action runs as the signed-in user.
+- **HubSpot.** HubSpot offers an [MCP server that gives AI agents read and write access to CRM data](https://developers.hubspot.com/ai-tools/mcp) such as contacts, deals and engagements.
+
+That's good news for AI CRM integration. Our sales agent can often use the vendor's server plus a dedicated user with narrow rights, and very little custom code.
+
+### Custom-built MCP servers
+
+For everything else, including your custom ERP, we write the MCP server ourselves. It's often the better choice even when a vendor server exists, because you decide exactly which actions there are. Our invoice agent's server might offer just three: "get purchase order", "get goods receipt" and "create draft entry". If "post entry" or "change bank details" isn't on the list, the agent can't do it, however it's asked.
+
+For the technically curious, this is roughly what one of those actions looks like inside an MCP server. It's a short description the agent reads, plus the exact input it must provide:
+
+```json
+{
+  "name": "get_purchase_order",
+  "description": "Look up one purchase order by its number. Read-only.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "po_number": { "type": "string", "description": "For example 4471" }
+    },
+    "required": ["po_number"]
+  }
+}
+```
+
+Behind that description sits ordinary code that calls your ERP with the agent's own restricted login. The agent never sees the database or the password, only the actions you chose to expose.
+
+## Custom ERP integration: database views, files and screens
+
+Back to the 15-year-old system. No API, no MCP server. You've still got three ways in, in order of preference.
+
+**A read-only database view.** A database view is a saved query that shows a selected slice of your data, like a window onto a few columns of a few tables. Your IT team creates a view of open purchase orders, gives the agent's account read-only access to that view and nothing else, and the agent can't change a thing. We then wrap the view in a small custom MCP server so it looks like any other connector.
+
+**File exports and imports.** Many old systems can export a CSV file (a plain spreadsheet-style file) every night, or import one. The agent reads the export, does its work, and writes a file of proposed entries. A person or an existing import routine loads it. Data can be a day old. That's fine for most back-office work, and it's simple and safe.
+
+**Screen automation, as a last resort.** Software can click and type through the system's screens like a person. It breaks whenever a screen changes, so we only use it for narrow, read-mostly tasks while we plan a proper connection.
+
+Here are all the routes side by side:
+
+| Route | Best for | Data freshness | Effort | Risk |
+| --- | --- | --- | --- | --- |
+| Official API | Modern ERPs and CRMs | Live | Low to medium | Low, with a scoped account |
+| MCP server | Reusing one connector across agents | Live | Low if the vendor ships one | Low, if actions are narrow |
+| Read-only database view | Custom and older systems | Live | Medium | Low, it can't write |
+| File export and import | Systems with nothing else | Usually a day old | Low | Low |
+| Screen automation | Last resort only | Live | High to maintain | High, breaks on changes |
+
+## Rules for every connection
+
+Whatever the route, the same rules apply. OWASP, a non-profit that publishes widely used security standards, calls the main risk [excessive agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/): an agent with too many functions, too many permissions or too much autonomy. It recommends a human approval step for high-impact actions.
+
+1. **A service account with least privilege.** A service account is a login created for software, not for a person. Give the agent its own, with the narrowest rights that work. Never an administrator's login, and never yours.
+2. **Read first, write later.** Start every agent read-only. Add write rights one action at a time, once it has earned them.
+3. **Draft, then approve.** Where the agent writes, it writes drafts. The invoice agent creates a draft entry and a person posts it. The sales agent can add notes, but a change to the deal value goes to the account owner.
+4. **Sandbox first.** A sandbox is a copy of your system with test or anonymised data. The agent stays there until it handles real-looking cases well, tricky ones included.
+5. **Log everything.** Record every lookup, draft and refusal.
+6. **Set rate limits.** A rate limit caps requests per minute, so an agent stuck in a loop becomes an alert, not an outage.
+7. **Keep the system of record in charge.** Your ERP and CRM stay the source of truth. The agent reads and proposes; it never keeps its own copy of the numbers.
+
+One more caution. Security researcher Simon Willison warns about the [lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): an agent with access to private data, exposure to untrusted content and a way to send information out. He points out that MCP makes it easy to mix tools from different sources, which can put all three in one agent by accident. Review every connector you add, not just the first. More on this in [AI agent security risks](/en/blog/ai-agent-security).
+
+## Where to start
+
+Pick one workflow, list the exact lookups and writes it needs, and check which route each system supports. That list is usually short. For our invoice agent, it's two reads and one draft.
+
+Connections affect cost and compliance too. An agent that pulls whole tables instead of the one order it needs reads far more text, and that shows up in your [AI agent token cost](/en/blog/ai-agent-token-cost). And if the data includes personal details, the same narrow access helps with [GDPR and the EU AI Act](/en/blog/ai-agents-gdpr-eu-ai-act). Contracts and policies are better served by a search index than a live connection, as our guide to the [AI agent knowledge base](/en/blog/ai-agent-knowledge-base) explains.
+
+This is the core of our [integration service](/en/services/integration): we map your systems, build the connectors, and set the permissions before an [AI agent](/en/services/ai-agents) goes live. If you're not yet sure which workflow to start with, our [AI consulting](/en/services/consulting) work begins there.
+
+## FAQ
+
+### Can an AI agent connect to a custom or legacy ERP?
+
+Usually, yes. If the system has no API, the agent can often read from a read-only database view, work from scheduled file exports, or use a small connector written for that system. Automating the screen itself is possible, but it's fragile, so it's a last resort.
+
+### What is MCP in simple terms?
+
+MCP, the Model Context Protocol, is an open standard for connecting AI agents to other software. Think of it as a universal plug: you build one MCP connector for a system, and any compatible agent can use it, with only the permissions you grant. It's now looked after by the Agentic AI Foundation under the Linux Foundation.
+
+### Should an AI agent have write access to our ERP?
+
+Only to the narrowest thing it needs, and usually only to drafts. Our invoice agent reads purchase orders and goods receipts and creates draft entries. A person posts them. Payments, master data and bank details stay out of its reach.
+
+### Do we need a test environment before connecting an agent?
+
+Yes. Run the agent against a sandbox, a copy of your system with test or anonymised data, until it behaves well on real-looking cases. Only then give it access to production, starting with read-only rights.
+
+### Which systems have official MCP servers?
+
+Several large vendors now publish their own, including Microsoft for Dynamics 365 finance and operations apps, Salesforce and HubSpot. Check what your plan includes.
+
+---
+
+**Not sure how your systems would connect?** [Book a call](/en/book) and we'll map the routes for your ERP and CRM, custom ones included.
