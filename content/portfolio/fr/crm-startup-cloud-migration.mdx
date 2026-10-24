@@ -1,0 +1,91 @@
+---
+title: "D'un VPS fragile à un cloud prêt pour la production, pour un CRM construit avec l'IA"
+summary: "Une startup a construit un excellent CRM centré sur l'IA avec des agents de code, mais le faisait tourner sur des serveurs incapables de suivre sa croissance. Nous avons assaini son environnement de code IA, séparé le développement de la production, ajouté un pipeline de mise en production qui bloque les bugs et migré le tout vers le cloud sans arrêter le produit."
+sector: "Logiciel (startup CRM)"
+service: "consulting"
+problem: "Le développement travaillait sur les données réelles des clients, les serveurs manquaient sans cesse d'espace disque et, sans pipeline de mise en production, les bugs arrivaient régulièrement jusqu'aux clients."
+result: "Une production sur Railway, Cloudflare et AWS S3 avec plus de 99 % de disponibilité, et de bugs fréquents en production à presque aucun"
+date: "2026-10-24"
+---
+
+## L'objectif
+
+Une jeune entreprise de logiciels avait construit un CRM avec l'IA en son cœur. L'essentiel du code avait été écrit par des agents de code IA, pilotés par l'équipe. Le produit fonctionnait, et des clients l'utilisaient déjà tous les jours.
+
+Ils nous ont confié 3 missions. Auditer le CRM, remettre en état l'infrastructure qui le porte, et construire un système agentique qui lit des documents, en extrait des informations clés et en rédige de nouveaux avec l'IA. Cette page couvre les deux premières. Le système agentique est un produit à part entière, il aura donc sa propre étude de cas.
+
+## Les points de friction
+
+Le produit était bon. Ce qui le portait n'était pas prêt à grandir.
+
+- **Le développement et la production tournaient côte à côte.** Il n'y avait pas de frontière nette entre l'endroit où l'on construisait les fonctionnalités et celui où travaillaient les clients.
+- **Le développement utilisait les données réelles.** L'environnement de développement n'avait pas sa propre base de données, donc chaque test tournait sur de vraies fiches clients.
+- **Les serveurs se remplissaient.** Les versions de prévisualisation et les images téléversées saturaient le disque du VPS (un serveur virtuel loué). Quelqu'un supprimait à la main les anciennes versions et les fichiers périmés pour que tout continue de tourner.
+- **Les déploiements étaient compliqués.** Il fallait connaître les particularités de chaque serveur pour livrer une modification sans risque.
+- **Les bugs arrivaient jusqu'aux clients.** Il n'y avait pas de pipeline de mise en production. Les tests existaient, mais rien ne les lançait sur chaque modification avant sa mise en ligne.
+
+L'environnement de code IA, en revanche, a été une bonne surprise. Une documentation claire, des règles claires pour les agents et du développement piloté par les tests, où les tests sont écrits avant le code. Il ne fallait pas le reconstruire. Il fallait l'affiner.
+
+## Ce que nous avons fait
+
+### 1. Affiné l'environnement de code IA
+
+Les agents IA lisent les documents du projet avant d'écrire la moindre ligne de code. Chaque ligne lue coûte des tokens, l'unité que facturent les fournisseurs d'IA, et influence leurs décisions. Nous avons trouvé 2 problèmes.
+
+- **Les documents étaient devenus trop longs.** Certains guides dépassaient 1 000 lignes. Nous les avons ramenés à ce dont un agent a vraiment besoin pour une tâche donnée.
+- **Les anciens tickets restaient dans les listes de tâches.** Le travail terminé restait dans les fichiers TODO, si bien que les agents lisaient encore des bugs déjà corrigés, et ce contexte périmé se retrouvait dans chaque session. Nous avons sorti le travail terminé, et seules les tâches en cours parviennent désormais aux agents.
+
+Nous avons aussi ajouté des skills, des instructions réutilisables pour les tâches qui reviennent souvent, et connecté les agents aux outils qu'ils utilisent chaque jour, comme GitHub. Moins de lecture par tâche. Des factures de tokens plus basses.
+
+### 2. Séparé le développement de la production
+
+Nous avons tracé une frontière nette entre 3 environnements :
+
+| Environnement | Où il tourne | À quoi il sert |
+| --- | --- | --- |
+| Développement | Le VPS existant | Les agents écrivent le code et prévisualisent leur travail |
+| Staging (préproduction) | Le VPS existant, avec sa propre base de données | Chaque modification est entièrement testée avant sa mise en ligne |
+| Production | Railway, derrière Cloudflare | Uniquement les clients |
+
+Le développement et le staging ont désormais leurs propres données, donc plus personne ne teste sur de vraies fiches clients. Les modifications avancent dans un seul sens : développement, puis staging, puis production.
+
+### 3. Migré la production vers le cloud sans l'arrêter
+
+Environ 20 Go de fichiers se trouvaient sur un VPS isolé. Nous avons tout déplacé vers AWS S3, le stockage cloud d'Amazon, pendant que les clients continuaient d'utiliser le produit.
+
+Nous ne l'avons pas fait d'un seul coup. Les fichiers ont été déplacés par étapes, nous avons copié la base de données de production et fait des sauvegardes à chaque étape. Seule la bascule finale a demandé une courte fenêtre de maintenance planifiée. Depuis, la production ne tourne plus du tout sur un VPS. Elle tourne sur Railway, une plateforme d'hébergement cloud, avec Cloudflare qui gère le réseau en amont et S3 qui conserve les fichiers et les sauvegardes.
+
+L'espace disque n'est plus le travail de personne.
+
+### 4. Construit un pipeline de mise en production qui arrête les bugs, presque gratuitement
+
+Il n'y avait pas de CI/CD à notre arrivée, alors nous en avons construit un. Le CI/CD (intégration continue et livraison continue) est un pipeline automatisé : chaque modification passe par toute la suite de tests, et seules celles qui réussissent sont déployées. L'offre gratuite de GitHub inclut [2 000 minutes de GitHub Actions par mois](https://docs.github.com/fr/billing/concepts/product-billing/github-actions), et chaque minute au-delà est payante. Lancer tous les tests unitaires, d'intégration et de bout en bout sur chaque modification épuiserait vite ce quota.
+
+Pour une startup, l'argent qu'on ne dépense pas est de l'argent qu'on garde. Nous avons donc déplacé la partie lourde du pipeline sur le VPS que l'équipe payait déjà. Toute la suite de tests y tourne, sur le staging. GitHub Actions ne gère que les dernières étapes, environ 5 minutes par mise en production au lieu d'une série complète de tests à chaque fois.
+
+Avant, beaucoup de bugs arrivaient en production. Aujourd'hui, c'est à peine un ou deux, parce que le pipeline les attrape d'abord sur le staging.
+
+## Avant et après
+
+| | Avant | Après |
+| --- | --- | --- |
+| Hébergement | Développement et production sur des VPS, avec une seule base de données partagée | Railway pour la production, VPS pour le développement et le staging |
+| Données | Le développement connecté à la base de production | Chaque environnement a sa propre base de données |
+| Fichiers | Sur le disque du serveur, nettoyé à la main | AWS S3, avec sauvegardes |
+| Réseau | Directement sur les serveurs | Cloudflare en amont |
+| Mises en production | Pas de pipeline, bugs fréquents en production | CI/CD avec toute la suite de tests sur le staging, environ 5 minutes sur GitHub Actions, à peine un ou deux bugs en production |
+| Environnement de code IA | Bon, mais documents trop longs et tickets périmés | Documents courts, tâches en cours uniquement, nouveaux skills et outils |
+
+## Le résultat
+
+Le CRM tourne désormais sur Railway, Cloudflare et AWS S3, une infrastructure capable de grandir avec lui. La production est séparée du développement, les données clients restent à leur place, et la disponibilité dépasse 99 %. Le produit est sécurisé, stable et prêt à être mis à l'épreuve par beaucoup plus de clients.
+
+L'équipe livre aussi plus vite. Ses agents lisent moins et produisent plus, et chaque modification passe toute la suite de tests avant qu'un client ne la voie.
+
+## Ce que nous en avons appris
+
+Quand on construit quelque chose de zéro, il faut le faire, pas le planifier. D'abord le faire fonctionner. Cette équipe a fait exactement cela, et elle a eu raison.
+
+Réparer quelque chose qui fonctionne est bien plus facile que de planifier l'outil parfait dès le premier jour. On ne voit jamais la fin du chemin au départ. On voit le tronçon suivant en avançant, et cela suffit. Une fois que ça fonctionne, on automatise, on améliore, on ajuste. C'est ce que nous avons fait ici. Nous n'avons pas reconstruit leur produit. Nous avons rendu un bon produit capable de grandir sans risque.
+
+**Votre produit a grandi plus vite que ses fondations ?** [Réservez un appel de 30 minutes](/fr/book) et nous examinerons votre installation ensemble.

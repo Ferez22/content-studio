@@ -4,6 +4,7 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Portfolio: case study `crm-startup-cloud-migration` (CRM startup: AI coding setup cleanup, dev/staging/prod split, VPS to Railway, Cloudflare and S3 migration, CI/CD with tests on staging) in en, fr and de
 - Portfolio: internal case study `qartmina-ai-workforce` (seven agents for prospecting, outreach, content and SEO) in en, fr and de
 - Fixed portfolio pages crashing on the server (Radix Slot could not unwrap nested lazy children from server-rendered `Link`s, which also caused the "script tag" console error); `Button` now resolves them. Navbar About link now scrolls to the home team section (`/#team`). Removed the legacy `allowTransparency` iframe prop (console error on the home page) and added `data-scroll-behavior` on `<html>`
 - Blog batches 1 and 2 translated to fr and de (22 articles, same slugs, localized keywords and tags, official FR/DE source pages where they exist); neutral wording for people in en/fr/de

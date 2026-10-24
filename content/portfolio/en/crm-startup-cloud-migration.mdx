@@ -1,0 +1,91 @@
+---
+title: "From a Fragile VPS to a Production-Ready Cloud for an AI-Built CRM"
+summary: "A startup built a strong AI-first CRM with coding agents, but ran it on servers that could not grow with it. We cleaned up its AI coding setup, separated development from production, added a release pipeline that catches bugs and moved it to the cloud without stopping the product."
+sector: "Software (CRM startup)"
+service: "consulting"
+problem: "Development worked on live customer data, servers kept running out of disk space, and with no release pipeline, bugs regularly reached customers."
+result: "Production on Railway, Cloudflare and AWS S3 with over 99% uptime, and from frequent bugs in production to barely a couple"
+date: "2026-10-24"
+---
+
+## The goal
+
+A young software company had built a CRM with AI at its heart. Most of the code was written by AI coding agents, with the team steering them. It worked, and customers were already using it every day.
+
+They asked us for 3 things. Audit the CRM, repair the infrastructure underneath it, and build an agentic system that reads documents, pulls insights out of them and writes new ones with AI. This page covers the first two. The agentic system is a full product, so it gets its own write-up.
+
+## The pain points
+
+The product was good. What sat under it wasn't ready to grow.
+
+- **Development and production ran side by side.** There was no clean line between where features were built and where customers worked.
+- **Development worked on live data.** The development environment had no database of its own, so every test ran against real customer records.
+- **Servers kept filling up.** Preview builds and uploaded images ate the disk of the VPS (a rented virtual server). Someone deleted old builds and stale files by hand to keep it running.
+- **Deployments were hard.** You had to know each server's quirks to ship a change safely.
+- **Bugs reached customers.** There was no release pipeline. The tests existed, but nothing ran them on every change before it went live.
+
+The AI coding setup, on the other hand, was a pleasant surprise. Clear documentation, clear rules for the agents, and test-driven development, where the tests are written before the code. It didn't need rebuilding. It needed tuning.
+
+## What we did
+
+### 1. Tuned the AI coding setup
+
+AI agents read the project's documents before they write a single line of code. Every line they read costs tokens, the unit AI providers bill by, and shapes what they decide. We found 2 problems.
+
+- **Documents had grown too long.** Some guidance files ran past 1,000 lines. We cut them back to what an agent actually needs on a given task.
+- **Old tickets stayed in the task lists.** Finished work was still sitting in the TODO files, so agents kept reading about bugs that were already fixed, and that stale context landed in every session. We moved finished work out, and now only live tasks reach the agents.
+
+We also added skills, reusable instructions for jobs that come up again and again, and connected the agents to the tools they use daily, such as GitHub. Less reading per task. Lower token bills.
+
+### 2. Separated development from production
+
+We drew a clear line between 3 environments:
+
+| Environment | Where it runs | What it's for |
+| --- | --- | --- |
+| Development | The existing VPS | Agents write code and preview their work |
+| Staging | The existing VPS, with its own database | Every change is fully tested before release |
+| Production | Railway, behind Cloudflare | Customers only |
+
+Development and staging now have their own data, so nobody tests against real customer records anymore. Changes move one way: development, then staging, then production.
+
+### 3. Moved production to the cloud without stopping it
+
+About 20 GB of files lived on a standalone VPS. We moved all of it to AWS S3, Amazon's cloud storage, while customers kept using the product.
+
+We didn't do it in one go. Files moved in stages, we copied the production database, and we took backups at each step. Only the final switch needed a short, planned maintenance window. Since then, production hasn't run on a VPS at all. It runs on Railway, a cloud hosting platform, with Cloudflare handling the network in front and S3 holding the files and backups.
+
+Disk space isn't anyone's job now.
+
+### 4. Built a release pipeline that stops bugs, almost for free
+
+There was no CI/CD when we arrived, so we built one. CI/CD (continuous integration and continuous delivery) is an automated pipeline: every change runs through the full test suite, and only changes that pass get deployed. GitHub's free plan includes [2,000 minutes of GitHub Actions a month](https://docs.github.com/en/billing/concepts/product-billing/github-actions), and every minute beyond that is paid. A full run of unit, integration and end-to-end tests on every change would burn through that fast.
+
+For a startup, money you don't spend is money you keep. So we moved the heavy part of the pipeline onto the VPS the team was already paying for. The full test suite runs there, on staging. GitHub Actions only handles the final steps, about 5 minutes per release instead of a full test run every time.
+
+Before, a lot of bugs reached production. Now it's barely a couple, because the pipeline catches them on staging first.
+
+## Before and after
+
+| | Before | After |
+| --- | --- | --- |
+| Hosting | Development and production on VPS servers, sharing one database | Railway for production, VPS for development and staging |
+| Data | Development connected to the production database | Each environment has its own database |
+| Files | On the server disk, cleaned by hand | AWS S3, with backups |
+| Network | Directly on the servers | Cloudflare in front |
+| Releases | No pipeline, frequent bugs in production | CI/CD with the full suite on staging, about 5 minutes on GitHub Actions, barely a couple of bugs in production |
+| AI coding setup | Good, but long documents and stale tickets | Short documents, live tasks only, new skills and tools |
+
+## The result
+
+The CRM now runs on Railway, Cloudflare and AWS S3, infrastructure that can grow with it. Production is separate from development, customer data stays where it belongs, and uptime is over 99%. It's secure and stable, and ready to be battle tested by many more customers.
+
+The team ships faster, too. Their agents read less and do more, and every change passes the full test suite before a customer ever sees it.
+
+## What we learned
+
+When you build something from zero, you have to build it, not plan it. Make it work first. This team did exactly that, and they were right.
+
+Fixing something that works is far easier than planning the perfect tool from day one. You never see the end of the road from the start. You see the next stretch as you move, and that's enough. Once it works, you automate, improve and adjust. That's what we did here. We didn't rebuild their product. We made a good one safe to grow.
+
+**Running a product that grew faster than its foundations?** [Book a 30-minute call](/en/book) and we'll look at your setup together.
