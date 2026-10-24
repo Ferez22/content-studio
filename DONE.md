@@ -4,6 +4,7 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Blog batches 1 and 2 published (merged `blog-batch-1` into `main`)
 - Blog batch 2 (EN): `ai-trends-2027`, `n8n-vs-make-vs-zapier`, `company-brain-ai`, `copilot-vs-chatgpt-claude-gemini`, `voice-ai-use-cases`; prices checked on official pages on 24 October 2026; December brief in `briefs/ai-2026-year-in-review.md`
 - Blog batch 1 (EN): pillar `ai-agents-for-business` plus `ai-agent-security`, `ai-agent-token-cost`, `ai-agent-knowledge-base`, `connect-ai-agent-erp-crm`, `ai-agents-gdpr-eu-ai-act`; every figure sourced, humanized with li-human
 - Blog features: "What's in this article" table of contents (sticky sidebar with active section on desktop, collapsible on phones), GFM tables via `remark-gfm` (scroll inside their box on phones), optional `description` (meta), `faq` (FAQPage JSON-LD) and `updated` ("Last updated", `dateModified`) frontmatter; reading time now ignores frontmatter; smooth scroll respects reduced motion
