@@ -4,6 +4,8 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Legal pages completed with company details: Qartmina SUARL, Immeuble Mazars, Les Berges du Lac, RNE 1973016B, represented by Fares Mohamed Aouani Cherif (managing partner); Tunisian law, courts of Tunis
+- Vercel function region confirmed (Frankfurt); sitemap resubmitted and priority URLs requested in Google Search Console (by Fares)
 - Article author card: photo, bio, links to business card, LinkedIn and newsletter, and QR codes (newsletter form, bcards) on tablet and desktop; QR files in `public/qr/`
 - Blog MDX environment completed: `content/blog/{en,fr,de}` folders, `_template.mdx`, styles for images, code, dividers, italics and h4; sitemap and hreflang now list posts and case studies only in the languages that exist; tested end to end on desktop and mobile
 - Canonical site URL switched to `https://www.qartmina.com` (sitemap, canonicals, hreflang, JSON-LD); Vercel functions pinned to Frankfurt (`vercel.json`)
