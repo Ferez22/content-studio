@@ -4,7 +4,6 @@ import { FAQs } from "@/components/faqs";
 import { Features } from "@/components/features";
 import { WhyUs } from "@/components/features-tertiary";
 import { Hero } from "@/components/hero";
-import { LogoCloud } from "@/components/logo-cloud";
 import { Team } from "@/components/team";
 import { Contact } from "@/components/contact";
 import { OpenAIPartner } from "@/components/openai-partner";
@@ -58,7 +57,6 @@ export default async function Home({ params }: Props) {
         }}
       />
       <Hero />
-      <LogoCloud />
       <Features />
       <OpenAIPartner />
       {/* <WhyUs /> */}

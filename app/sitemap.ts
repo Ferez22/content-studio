@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getSlugs, type Collection } from "@/lib/content";
-import { serviceSlugs, site } from "@/lib/site";
+import { partnerProgramEnabled, partnerSlugs, serviceSlugs, site } from "@/lib/site";
 
 const staticPaths = [
   "",
@@ -44,9 +44,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     collectionEntries("blog", "/blog"),
   ]);
   return [
-    ...[...staticPaths, ...serviceSlugs.map((slug) => `/services/${slug}`)].flatMap((path) =>
-      entry(path, routing.locales)
-    ),
+    ...[
+      ...staticPaths,
+      ...serviceSlugs.map((slug) => `/services/${slug}`),
+      ...(partnerProgramEnabled ? partnerSlugs.map((slug) => `/partners/${slug}`) : []),
+    ].flatMap((path) => entry(path, routing.locales)),
     ...cases,
     ...posts,
   ];

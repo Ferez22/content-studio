@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { Logo } from "./logo";
 import { Link } from "@/i18n/navigation";
 import { Button } from "./ui/button";
-import { IconChevronDown, IconX } from "@tabler/icons-react";
+import { IconArrowUpRight, IconChevronDown, IconX } from "@tabler/icons-react";
 import {
   AnimatePresence,
   motion,
@@ -14,7 +14,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./locale-switcher";
-import { serviceSlugs } from "@/lib/site";
+import { partnerProgramEnabled, serviceSlugs } from "@/lib/site";
 import { serviceIcons } from "./service-icons";
 
 const navlinks = [
@@ -89,7 +89,10 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
           : "py-4 border-transparent bg-background",
       )}
     >
-      <Logo compact={scrolled} />
+      <div className="flex items-center gap-3">
+        <Logo compact={scrolled} />
+        <PartnerCta />
+      </div>
       <button
         ref={buttonRef}
         onClick={openMenu}
@@ -203,7 +206,10 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
           : "border-transparent",
       )}
     >
-      <Logo compact={scrolled} />
+      <div className="flex items-center gap-4">
+        <Logo compact={scrolled} />
+        <PartnerCta />
+      </div>
       <nav className="flex items-center gap-10">
         {navlinks.map((item) =>
           item.key === "services" ? (
@@ -303,5 +309,20 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
         );
       })}
     </div>
+  );
+};
+
+// Partner program entry point: a light, italic text link so it stays secondary to the main CTA.
+const PartnerCta = () => {
+  const t = useTranslations("header");
+  if (!partnerProgramEnabled) return null;
+  return (
+    <Link
+      href="/partners"
+      className="inline-flex items-center gap-1 text-sm font-light italic text-blue-500 dark:text-blue-400 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40FF] rounded-sm"
+    >
+      {t("becomePartner")}
+      <IconArrowUpRight className="size-3.5" aria-hidden="true" />
+    </Link>
   );
 };

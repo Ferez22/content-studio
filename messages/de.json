@@ -19,7 +19,9 @@
     "bookCall": "Gespräch buchen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "partners": "Partner",
+    "becomePartner": "Partner werden"
   },
   "footer": {
     "positioning": "Strategie, Daten und KI, gebaut für den Einsatz in Ihrem Unternehmen.",
@@ -887,5 +889,177 @@
       "esgitech": "ESGITECH, unser Schulungspartner"
     },
     "home": "Zurück zur Website"
+  },
+  "partners": {
+    "bookCta": "Partnergespräch buchen",
+    "howCta": "So funktioniert es",
+    "kpis": [
+      {
+        "value": "1 Woche",
+        "label": "Erster funktionierender Agent"
+      },
+      {
+        "value": "< 1 Monat",
+        "label": "Live in Produktion"
+      },
+      {
+        "value": "99 %",
+        "label": "Verfügbarkeit"
+      }
+    ],
+    "jointForces": {
+      "title": "Zwei Köpfe, ein Produkt. Das hat schon funktioniert.",
+      "intro": "Fachlich starke Unternehmen machen ihr Know-how bereits gemeinsam mit einem Tech-Partner zu KI-Produkten. Das ist dabei entstanden.",
+      "items": [
+        {
+          "pair": "A&O + Harvey + Microsoft",
+          "year": "2023",
+          "story": "Eine internationale Anwaltskanzlei brachte ihre Vertragsmuster und ihr Verhandlungs-Know-how ein. Ein KI-Startup und Microsoft lieferten die Technologie. Gemeinsam entstand ContractMatrix, ein Vertragstool, das die Kanzlei heute an ihre Mandanten verkauft.",
+          "result": "Über 1.000 Anwältinnen und Anwälte der Kanzlei nutzten es ab dem Start und sparten bei manchen Vertragsverhandlungen rund sieben Stunden.",
+          "source": "https://www.aoshearman.com/news/ao-launches-saas-partnership-with-microsoft-and-harvey"
+        },
+        {
+          "pair": "PwC + Harvey",
+          "year": "2024",
+          "story": "Die Steuerexperten von PwC wählten die Daten aus, kommentierten Beispiele und prüften die Antworten. Die Ingenieure von Harvey bauten das Modell. Das Ergebnis ist ein KI-Steuerassistent, geprägt von PwCs eigener Methode.",
+          "result": "In einem Blindtest bevorzugten die Experten von PwC seine Antworten in 91 % der Fälle gegenüber anderen KI-Tools.",
+          "source": "https://www.harvey.ai/en-US/blog/harvey-co-builds-custom-model-for-tax-with-pwc"
+        },
+        {
+          "pair": "Sanofi + Formation Bio + OpenAI",
+          "year": "2024",
+          "story": "Arzneimittelentwickler brachten jahrzehntelange Erfahrung mit klinischen Studien ein. OpenAI lieferte die Modelle. Gemeinsam entstand Muse, ein Tool, das plant, wie Patienten für Studien gewonnen werden.",
+          "result": "Laut den Unternehmen verkürzt es diese Planung von Monaten auf Minuten.",
+          "source": "https://formation.bio/blog/introducing-muse"
+        }
+      ]
+    },
+    "inMotion": {
+      "title": "Schon in Bewegung",
+      "text": "Wir bauen solche Partnerschaften heute bereits mit einer Universität, einem Übersetzungsunternehmen und einer gemeinnützigen Organisation auf, die Tech- und KI-Konferenzen veranstaltet. Jeder Partner bringt sein Fachgebiet ein, wir die Technik, und das Produkt trägt beide Namen."
+    },
+    "book": {
+      "title": "Lassen Sie uns Ihr erstes Produkt gemeinsam bauen",
+      "text": "Buchen Sie ein 30-minütiges Partnergespräch. Bringen Sie ein Problem mit, das Ihre Kunden immer wieder mit KI gelöst haben möchten.",
+      "calendarTitle": "Buchungskalender für Partnergespräche"
+    }
+  },
+  "partnerPages": {
+    "consulting-firms": {
+      "metaTitle": "Partnerprogramm für Beratungsunternehmen",
+      "metaDescription": "Ihre Methode, unsere Technik. Beratungsunternehmen und Qartmina entwickeln gemeinsam KI-Agenten für ihre Branche, unter beiden Marken und im gemeinsamen Eigentum. Erster funktionierender Agent in einer Woche.",
+      "eyebrow": "Partnerprogramm · Für Beratungsunternehmen",
+      "title": "Ihr Know-how. Unser Motor. Ein KI-Produkt, gemeinsam gebaut.",
+      "intro": "Ihre Kunden fragen nach KI-Agenten. Sie kennen deren Geschäft besser als jeder andere, aber Agenten zu bauen ist nicht Ihr Handwerk. Es ist unseres. Gemeinsam machen wir aus Ihrer Methode ein KI-Produkt für Ihre Branche, unter beiden Marken und im Besitz von uns beiden.",
+      "why": {
+        "title": "Ihre Kunden wollen KI. Beratung auf Papier reicht nicht mehr.",
+        "items": [
+          {
+            "title": "Ihre Kunden werden jemanden fragen",
+            "text": "Digitalisierung steht auf der Agenda jeder Geschäftsführung. Eine Beratung, die nur Folien und Empfehlungen liefert, verliert das nächste Mandat an eine, die funktionierende Tools liefert."
+          },
+          {
+            "title": "Ein KI-Team aufzubauen dauert Jahre",
+            "text": "Ingenieure einstellen, Tools auswählen, Daten absichern und Systeme am Laufen halten ist ein eigenes Geschäft. Sie sollten damit nicht bei null anfangen müssen."
+          },
+          {
+            "title": "Partnerschaft schlägt Alleingang",
+            "text": "In der MIT-Studie 2025 zu KI in Unternehmen schafften es Tools, die mit einem externen Partner gebaut wurden, in etwa 67 % der Fälle über die Pilotphase hinaus in den echten Einsatz. Intern gebaute Tools: etwa 33 %.",
+            "source": "https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf"
+          }
+        ]
+      },
+      "bring": {
+        "title": "Zwei Arten von Know-how. Ein Produkt.",
+        "intro": "Denken Sie an einen Architekten und einen Bauunternehmer. Der eine weiß, was das Haus sein muss, der andere, wie es stehen bleibt. Keiner baut allein ein großartiges Haus.",
+        "you": {
+          "title": "Sie bringen den Business-Kopf mit",
+          "items": [
+            "Ihre Methode: Frameworks, Checklisten, Vorlagen und Ihre Arbeitsweise",
+            "Tiefes Wissen über Ihre Branche und ihre Regeln",
+            "Ihre Kundenbeziehungen und das Vertrauen dahinter",
+            "Das Urteil darüber, wie eine gute Antwort aussieht"
+          ]
+        },
+        "us": {
+          "title": "Wir bringen den Tech-Kopf mit",
+          "items": [
+            "KI-Agenten und mehrstufige Agentensysteme, entworfen, gebaut und gehostet",
+            "Anbindung an die Tools, die Ihre Kunden bereits nutzen: E-Mail, Dokumente, Kundendatenbanken (CRM), Unternehmenssoftware (ERP)",
+            "Fähigkeiten für den Agenten, Open Source oder für Sie entwickelt, und die Daten dahinter",
+            "Sicherheit, Überwachung und 99 % Verfügbarkeit in Produktion",
+            "Wartung und neue Versionen, während sich KI weiterentwickelt"
+          ]
+        },
+        "together": {
+          "title": "Gemeinsam: Ihre Methode als Produkt.",
+          "text": "Ein KI-Agent unter beiden Marken, den Ihre Beratung jedem Kunden Ihrer Branche anbieten kann. Sie verkaufen nicht mehr nur Stunden, sondern ein digitales Produkt, und digitalisieren dabei Ihr eigenes Unternehmen. Wir wachsen gemeinsam: Ihre Expertise macht unsere Technik nützlich, unsere Technik macht Ihre Expertise skalierbar. Was wir schaffen, gehört uns beiden."
+        }
+      },
+      "steps": {
+        "title": "Vom ersten Gespräch zum Produkt in Produktion",
+        "items": [
+          {
+            "time": "Tag 1",
+            "title": "Partnergespräch",
+            "text": "Wir lernen, wie Ihre Beratung arbeitet, für welches Problem Ihre Kunden Sie bezahlen und wo sich ein Agent wirklich lohnt."
+          },
+          {
+            "time": "Woche 1",
+            "title": "Ihre Methode, erfasst",
+            "text": "Sie teilen Ihre Frameworks, Dokumente und Beispiele guter Arbeit. Wir machen daraus das Wissen, die Regeln und die Tools des Agenten."
+          },
+          {
+            "time": "Ende von Woche 1",
+            "title": "Erster funktionierender Agent",
+            "text": "Ein funktionierender Prototyp, keine Folien. Sie testen ihn an einem echten Fall."
+          },
+          {
+            "time": "Wochen 2 bis 4",
+            "title": "Gemeinsam anlernen und testen",
+            "text": "Wir arbeiten im Wechsel. Sie prüfen die Antworten, wir passen an, bis Sie sagen, dass das Ergebnis dem entspricht, was Sie selbst liefern würden."
+          },
+          {
+            "time": "In unter einem Monat",
+            "title": "Live in Produktion",
+            "text": "Der Agent läuft sicher, verbunden mit den Tools, die er braucht, überwacht und mit 99 % Verfügbarkeit."
+          },
+          {
+            "time": "Ab dann",
+            "title": "Gemeinsam starten und wachsen",
+            "text": "Wir bringen das Produkt unter beiden Marken zu Ihren Kunden, lernen aus dem echten Einsatz und verbessern es laufend."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Fragen, die Beratungsunternehmen uns stellen",
+        "items": [
+          {
+            "question": "Brauchen wir technisches Personal?",
+            "answer": "Nein. Wir übernehmen Konzeption, Entwicklung, Hosting, Sicherheit und Wartung. Ihr Team bringt die Methode ein und prüft die Ergebnisse."
+          },
+          {
+            "question": "Wem gehört das Produkt?",
+            "answer": "Wir entwickeln es gemeinsam, und es gehört uns beiden. Die genauen Bedingungen, auch was jeder später damit tun darf, legen wir vor dem Start in einer Partnerschaftsvereinbarung fest."
+          },
+          {
+            "question": "Wie bringen wir dem Agenten unsere Arbeitsweise bei?",
+            "answer": "Sie teilen Ihre Dokumente, Frameworks und Beispiele. Wir machen daraus das Wissen und die Regeln des Agenten und testen ihn dann mit Ihnen Fall für Fall, bis die Antworten Ihrem Standard entsprechen. Nach dem Start können Sie sein Wissen selbst weiter aktualisieren."
+          },
+          {
+            "question": "Können wir es mehreren Kunden anbieten?",
+            "answer": "Ja, genau darum geht es. Wir bauen ein Produkt für Ihre Branche und richten es dann für jeden Kunden mit dessen eigenen Daten und Tools ein."
+          },
+          {
+            "question": "Was passiert mit den Daten unserer Kunden?",
+            "answer": "Die Daten jedes Kunden bleiben getrennt. Wir vereinbaren mit jedem Kunden, wo seine Daten gespeichert werden und wer sie sehen darf, und wir unterzeichnen eine Vertraulichkeitsvereinbarung, bevor Daten geteilt werden."
+          },
+          {
+            "question": "Welche Agenten können wir bauen?",
+            "answer": "Alles, was sich mit Ihrer Methode beschreiben lässt: Assistenten, die aus Ihrer Wissensdatenbank antworten, Agenten, die Berichte, Audits oder Angebote entwerfen, oder mehrstufige Systeme, die in den Tools Ihrer Kunden arbeiten."
+          }
+        ]
+      }
+    }
   }
 }

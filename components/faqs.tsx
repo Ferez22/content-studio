@@ -8,8 +8,9 @@ import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
-export const FAQs = () => {
-  const t = useTranslations("home.faq");
+// Reads `title` and `items` from the given messages namespace.
+export const FAQs = ({ namespace = "home.faq" }: { namespace?: string }) => {
+  const t = useTranslations(namespace);
   const questions = t.raw("items") as { question: string; answer: string }[];
   return (
     <section

@@ -19,7 +19,9 @@
     "bookCall": "Prendre rendez-vous",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "language": "Langue"
+    "language": "Langue",
+    "partners": "Partenaires",
+    "becomePartner": "Devenir partenaire"
   },
   "footer": {
     "positioning": "Stratégie, données et IA, conçues pour fonctionner au cœur de votre entreprise.",
@@ -887,5 +889,177 @@
       "esgitech": "ESGITECH, notre partenaire formation"
     },
     "home": "Retour au site"
+  },
+  "partners": {
+    "bookCta": "Réserver un appel partenaire",
+    "howCta": "Voir comment ça marche",
+    "kpis": [
+      {
+        "value": "1 semaine",
+        "label": "Premier agent opérationnel"
+      },
+      {
+        "value": "< 1 mois",
+        "label": "En production"
+      },
+      {
+        "value": "99 %",
+        "label": "Disponibilité"
+      }
+    ],
+    "jointForces": {
+      "title": "Deux cerveaux, un produit. Ça a déjà fait ses preuves.",
+      "intro": "Des cabinets experts transforment déjà leur savoir-faire en produits IA avec un partenaire tech. Voici ce que cela a donné.",
+      "items": [
+        {
+          "pair": "A&O + Harvey + Microsoft",
+          "year": "2023",
+          "story": "Un cabinet d'avocats international a apporté ses modèles de contrats et son savoir-faire en négociation. Une startup d'IA et Microsoft ont apporté la technologie. Ensemble, ils ont créé ContractMatrix, un outil contractuel que le cabinet vend aujourd'hui à ses clients.",
+          "result": "Plus de 1 000 avocats du cabinet l'ont utilisé dès le lancement, avec un gain d'environ sept heures sur certaines négociations de contrats.",
+          "source": "https://www.aoshearman.com/news/ao-launches-saas-partnership-with-microsoft-and-harvey"
+        },
+        {
+          "pair": "PwC + Harvey",
+          "year": "2024",
+          "story": "Les fiscalistes de PwC ont sélectionné les données, annoté des exemples et relu les réponses. Les ingénieurs de Harvey ont construit le modèle. Résultat : un assistant fiscal IA façonné par la méthode de PwC.",
+          "result": "Lors d'un test à l'aveugle, les experts de PwC ont préféré ses réponses à celles d'autres outils d'IA dans 91 % des cas.",
+          "source": "https://www.harvey.ai/en-US/blog/harvey-co-builds-custom-model-for-tax-with-pwc"
+        },
+        {
+          "pair": "Sanofi + Formation Bio + OpenAI",
+          "year": "2024",
+          "story": "Des spécialistes du médicament ont apporté des décennies d'expérience des essais cliniques. OpenAI a apporté les modèles. Ensemble, ils ont créé Muse, un outil qui planifie le recrutement des patients pour les essais.",
+          "result": "Selon les entreprises, cette planification passe de plusieurs mois à quelques minutes.",
+          "source": "https://formation.bio/blog/introducing-muse"
+        }
+      ]
+    },
+    "inMotion": {
+      "title": "Déjà en marche",
+      "text": "Nous construisons aujourd'hui des partenariats de ce type avec une université, une société de traduction et une association qui organise des conférences sur la tech et l'IA. Chaque partenaire apporte son domaine, nous apportons l'ingénierie, et le produit porte les deux noms."
+    },
+    "book": {
+      "title": "Construisons ensemble votre premier produit",
+      "text": "Réservez un appel partenaire de 30 minutes. Venez avec un problème que vos clients vous demandent sans cesse de résoudre avec l'IA.",
+      "calendarTitle": "Calendrier de réservation des appels partenaires"
+    }
+  },
+  "partnerPages": {
+    "consulting-firms": {
+      "metaTitle": "Programme partenaire pour cabinets de conseil",
+      "metaDescription": "Votre méthode, notre ingénierie. Les cabinets de conseil et Qartmina co-créent des agents IA pour leur secteur, en co-marque et détenus par les deux. Premier agent opérationnel en une semaine.",
+      "eyebrow": "Programme partenaire · Pour les cabinets de conseil",
+      "title": "Votre savoir-faire. Notre moteur. Un produit IA, construit ensemble.",
+      "intro": "Vos clients demandent des agents IA. Vous connaissez leur métier mieux que quiconque, mais construire des agents n'est pas votre spécialité. C'est la nôtre. Ensemble, nous transformons votre méthode en un produit IA en co-marque pour votre secteur, qui nous appartient à tous les deux.",
+      "why": {
+        "title": "Vos clients veulent de l'IA. Le conseil sur papier ne suffit plus.",
+        "items": [
+          {
+            "title": "Vos clients iront voir quelqu'un",
+            "text": "La digitalisation est à l'ordre du jour de chaque conseil d'administration. Un cabinet qui n'apporte que des slides et des recommandations perd la prochaine mission face à celui qui livre des outils qui fonctionnent."
+          },
+          {
+            "title": "Une équipe IA se construit en plusieurs années",
+            "text": "Recruter des ingénieurs, choisir les outils, sécuriser les données et faire tourner les systèmes est un métier à part entière. Vous ne devriez pas avoir à partir de zéro."
+          },
+          {
+            "title": "S'associer vaut mieux que construire seul",
+            "text": "Selon l'étude 2025 du MIT sur l'IA en entreprise, les outils construits avec un partenaire externe dépassaient le stade pilote pour un usage réel dans environ 67 % des cas. Les outils construits en interne : environ 33 %.",
+            "source": "https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf"
+          }
+        ]
+      },
+      "bring": {
+        "title": "Deux savoir-faire. Un seul produit.",
+        "intro": "Pensez à un architecte et à un bâtisseur. L'un sait ce que la maison doit être, l'autre sait comment la faire tenir debout. Aucun des deux ne construit seul une belle maison.",
+        "you": {
+          "title": "Vous apportez le cerveau métier",
+          "items": [
+            "Votre méthode : cadres, checklists, modèles et façon de travailler",
+            "Une connaissance approfondie de votre secteur et de ses règles",
+            "Vos relations clients et la confiance qui les porte",
+            "Le jugement sur ce qu'est une bonne réponse"
+          ]
+        },
+        "us": {
+          "title": "Nous apportons le cerveau tech",
+          "items": [
+            "Des agents IA et des systèmes d'agents en plusieurs étapes, conçus, construits et hébergés",
+            "Des connexions aux outils que vos clients utilisent déjà : e-mail, documents, bases de données clients (CRM), logiciels de gestion (ERP)",
+            "Des compétences pour l'agent, open source ou développées pour vous, et les données qui vont avec",
+            "Sécurité, supervision et 99 % de disponibilité en production",
+            "Maintenance et nouvelles versions au rythme de l'IA"
+          ]
+        },
+        "together": {
+          "title": "Ensemble : votre méthode, devenue produit.",
+          "text": "Un agent IA en co-marque que votre cabinet peut proposer à chaque client de votre secteur. Vous passez de la vente d'heures à la vente d'un produit numérique, et vous digitalisez votre propre cabinet au passage. Nous grandissons ensemble : votre expertise rend notre ingénierie utile, notre ingénierie permet à votre expertise de passer à l'échelle. Ce que nous créons nous appartient à tous les deux."
+        }
+      },
+      "steps": {
+        "title": "Du premier appel à un produit en production",
+        "items": [
+          {
+            "time": "Jour 1",
+            "title": "Appel partenaire",
+            "text": "Nous découvrons le fonctionnement de votre cabinet, le problème que vos clients vous paient pour résoudre, et là où un agent serait vraiment rentable."
+          },
+          {
+            "time": "Semaine 1",
+            "title": "Votre méthode, cartographiée",
+            "text": "Vous partagez vos cadres, vos documents et des exemples de travail réussi. Nous les transformons en connaissances, règles et outils pour l'agent."
+          },
+          {
+            "time": "Fin de la semaine 1",
+            "title": "Premier agent opérationnel",
+            "text": "Un prototype qui fonctionne, pas des slides. Vous le testez sur un cas réel."
+          },
+          {
+            "time": "Semaines 2 à 4",
+            "title": "Former et tester, ensemble",
+            "text": "Nous faisons des allers-retours. Vous relisez les réponses, nous ajustons, jusqu'à ce que vous disiez que le résultat est celui que vous livreriez vous-même."
+          },
+          {
+            "time": "En moins d'un mois",
+            "title": "En production",
+            "text": "L'agent tourne en toute sécurité, connecté aux outils dont il a besoin, supervisé, avec 99 % de disponibilité."
+          },
+          {
+            "time": "Ensuite",
+            "title": "Lancer et grandir ensemble",
+            "text": "Nous présentons le produit à vos clients sous nos deux marques, nous apprenons de l'usage réel et nous continuons à l'améliorer."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Les questions que nous posent les cabinets de conseil",
+        "items": [
+          {
+            "question": "Avons-nous besoin de profils techniques ?",
+            "answer": "Non. Nous prenons en charge la conception, le développement, l'hébergement, la sécurité et la maintenance. Votre équipe apporte la méthode et relit les résultats."
+          },
+          {
+            "question": "À qui appartient le produit ?",
+            "answer": "Nous le créons ensemble et il nous appartient à tous les deux. Les conditions exactes, y compris ce que chacun pourra en faire par la suite, sont fixées dans un accord de partenariat avant de commencer."
+          },
+          {
+            "question": "Comment apprendre à l'agent notre façon de travailler ?",
+            "answer": "Vous partagez vos documents, vos cadres et vos exemples. Nous les transformons en connaissances et en règles pour l'agent, puis nous le testons avec vous, cas par cas, jusqu'à ce que ses réponses atteignent votre niveau d'exigence. Après le lancement, vous pouvez continuer à mettre à jour ses connaissances vous-même."
+          },
+          {
+            "question": "Pouvons-nous le proposer à plusieurs clients ?",
+            "answer": "Oui, c'est tout l'intérêt. Nous construisons un produit pour votre secteur, puis nous le configurons pour chaque client avec ses propres données et outils."
+          },
+          {
+            "question": "Que deviennent les données de nos clients ?",
+            "answer": "Les données de chaque client restent séparées. Nous convenons avec chaque client du lieu de stockage de ses données et de qui peut y accéder, et nous signons un accord de confidentialité avant tout partage de données."
+          },
+          {
+            "question": "Quels types d'agents pouvons-nous construire ?",
+            "answer": "Tout ce que votre méthode peut décrire : des assistants qui répondent à partir de votre base de connaissances, des agents qui rédigent rapports, audits ou propositions, ou des systèmes en plusieurs étapes qui travaillent dans les outils de vos clients."
+          }
+        ]
+      }
+    }
   }
 }

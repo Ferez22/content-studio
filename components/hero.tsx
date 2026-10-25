@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { HeroWorkflow } from "./hero-workflow";
 import { Figures } from "./figures";
+import { LogoCloud } from "./logo-cloud";
 
 export const Hero = () => {
   const t = useTranslations("home");
@@ -27,9 +28,10 @@ export const Hero = () => {
           </Button>
         </div>
         <Figures
-          className="mt-10 md:mt-14 max-w-3xl"
+          className="mt-10 md:mt-14 max-w-3xl mx-auto text-center"
           items={t.raw("hero.kpis") as { value: string; label: string }[]}
         />
+        <LogoCloud className="mt-8 md:mt-10" />
         <HeroWorkflow />
       </Container>
     </section>

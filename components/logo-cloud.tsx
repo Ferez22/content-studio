@@ -1,96 +1,64 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 
 // Only real partner or client logos, used with permission. The OpenAI badge
-// sits in the middle and keeps its original look, as OpenAI's guidance requires.
-const leftLogos = [
+// stays still beside the moving row and keeps its original look, as OpenAI's guidance requires.
+const logos = [
   { title: "Additionality", src: "/logos/additionality.png", width: 746, height: 112 },
   { title: "AMLD Africa", src: "/logos/amld.png", width: 241, height: 112 },
-];
-const rightLogos = [
   { title: "Almajd TCS", src: "/logos/almajd.png", width: 154, height: 112 },
   { title: "bcards", src: "/logos/bcards.png", width: 171, height: 112 },
   { title: "Docutrad", src: "/logos/docutrad.png", width: 238, height: 39 },
 ];
 
-const allLogos = [...leftLogos, ...rightLogos];
+// The track shifts by half its width, so it holds an even number of copies, enough to
+// stay wider than the visible row.
+const COPIES = 4;
 
-const reveal = (index: number) => ({
-  initial: { y: -10, opacity: 0, filter: "blur(10px)" },
-  whileInView: { y: 0, opacity: 1, filter: "blur(0px)" },
-  transition: { duration: 0.5, ease: "easeOut" as const, delay: index * 0.1 },
-  viewport: { once: true },
-});
-
-export const LogoCloud = () => {
+export const LogoCloud = ({ className }: { className?: string }) => {
   const t = useTranslations("home");
-  const logo = (item: (typeof leftLogos)[number], index: number) => (
-    <motion.div key={item.title} {...reveal(index)}>
-      <Image
-        src={item.src}
-        width={item.width}
-        height={item.height}
-        alt={item.title}
-        // One-tone silhouettes keep mixed-colour logos consistent in both themes.
-        className="h-8 md:h-10 w-auto max-w-40 object-contain brightness-0 opacity-70 dark:invert"
-      />
-    </motion.div>
-  );
 
   return (
-    <section className="py-10 md:py-16 px-4">
-      <h2 className="text-neutral-600 font-medium dark:text-neutral-400 text-lg text-center max-w-xl mx-auto">
+    <div className={cn("flex flex-col items-center gap-4", className)}>
+      <h2 className="text-sm font-medium text-neutral-500 dark:text-neutral-400 text-center">
         {t("trusted.title")}
       </h2>
-      {/* Phones: badge, then the logos as one moving row. */}
-      <div className="md:hidden mt-8 flex flex-col items-center gap-8">
-        <Link href="/#openai" className="block">
+      <div className="w-full max-w-3xl flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+        <Link
+          href="/#openai"
+          className="block shrink-0 transition-transform duration-200 hover:scale-105"
+        >
           <Image
             src="/openai-select-partner-badge.svg"
             alt={t("partner.badgeAlt")}
             width={375}
             height={177}
-            className="h-12 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
-        <div className="w-full overflow-hidden mask-x-from-80%">
-          <div className="marquee-track flex w-max items-center">
-            {[...allLogos, ...allLogos].map((item, index) => (
-              <Image
-                key={`${item.title}-${index}`}
-                src={item.src}
-                width={item.width}
-                height={item.height}
-                alt={index < allLogos.length ? item.title : ""}
-                aria-hidden={index >= allLogos.length || undefined}
-                className="h-6 w-auto max-w-28 mx-6 object-contain brightness-0 opacity-70 dark:invert"
-              />
-            ))}
+        <div className="w-full min-w-0 overflow-hidden mask-x-from-80%">
+          <div className="marquee-track flex w-max items-center hover:[animation-play-state:paused]">
+            {Array.from({ length: COPIES }, () => logos)
+              .flat()
+              .map((item, index) => (
+                <Image
+                  key={`${item.title}-${index}`}
+                  src={item.src}
+                  width={item.width}
+                  height={item.height}
+                  alt={index < logos.length ? item.title : ""}
+                  aria-hidden={index >= logos.length || undefined}
+                  // One-tone silhouettes keep mixed-colour logos consistent in both themes.
+                  className="h-5 md:h-6 w-auto max-w-24 md:max-w-28 mx-5 md:mx-6 object-contain brightness-0 opacity-70 dark:invert"
+                />
+              ))}
           </div>
         </div>
       </div>
-
-      {/* Tablet and desktop: static row with the badge in the middle. */}
-      <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8 max-w-6xl mx-auto mt-10">
-        {leftLogos.map((item, index) => logo(item, index + 1))}
-        <motion.div {...reveal(0)}>
-          <Link href="/#openai" className="block transition-transform duration-200 hover:scale-105">
-            <Image
-              src="/openai-select-partner-badge.svg"
-              alt={t("partner.badgeAlt")}
-              width={375}
-              height={177}
-              className="h-16 w-auto"
-            />
-          </Link>
-        </motion.div>
-        {rightLogos.map((item, index) => logo(item, index + 3))}
-      </div>
-    </section>
+    </div>
   );
 };

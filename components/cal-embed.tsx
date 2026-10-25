@@ -8,7 +8,15 @@ const INITIAL_HEIGHT = 600;
 
 // Cal.com booking page in an iframe that takes the height of its content. Cal's embed
 // reports its size once the parent answers its "ready" message, the way embed.js does.
-export const CalEmbed = ({ title, className }: { title: string; className?: string }) => {
+export const CalEmbed = ({
+  title,
+  className,
+  url = site.bookingUrl,
+}: {
+  title: string;
+  className?: string;
+  url?: string;
+}) => {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(INITIAL_HEIGHT);
   // Cal's own colours follow the site theme. Browsers paint an opaque backdrop behind an
@@ -47,7 +55,7 @@ export const CalEmbed = ({ title, className }: { title: string; className?: stri
       ref={frameRef}
       key={theme}
       title={title}
-      src={`${site.bookingUrl}&theme=${theme}`}
+      src={`${url}&theme=${theme}`}
       loading="lazy"
       // Cal's page always declares a light colour scheme, so the frame must too (even in dark mode).
       style={{ height, colorScheme: "light", background: "transparent" }}

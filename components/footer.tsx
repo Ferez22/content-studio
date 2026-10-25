@@ -8,7 +8,7 @@ import { IconArrowUpRight, IconBrandLinkedin } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./mode-toggle";
 import { useTranslations } from "next-intl";
-import { serviceSlugs, site } from "@/lib/site";
+import { partnerProgramEnabled, serviceSlugs, site } from "@/lib/site";
 import { NewsletterForm } from "./newsletter-form";
 
 const linkClassName =
@@ -33,6 +33,7 @@ export const Footer = () => {
     { title: tHeader("about"), href: "/about" },
     { title: tHeader("blog"), href: "/blog" },
     { title: tHeader("portfolio"), href: "/portfolio" },
+    ...(partnerProgramEnabled ? [{ title: tHeader("partners"), href: "/partners" }] : []),
     { title: tHeader("contact"), href: "/contact" },
   ];
 

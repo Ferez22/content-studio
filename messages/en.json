@@ -19,7 +19,9 @@
     "bookCall": "Book a call",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "partners": "Partners",
+    "becomePartner": "Become a partner"
   },
   "footer": {
     "positioning": "Strategy, data and AI, built to run inside your business.",
@@ -887,5 +889,177 @@
       "esgitech": "ESGITECH, our training partner"
     },
     "home": "Back to the website"
+  },
+  "partners": {
+    "bookCta": "Book a partner call",
+    "howCta": "See how it works",
+    "kpis": [
+      {
+        "value": "1 week",
+        "label": "First working agent"
+      },
+      {
+        "value": "< 1 month",
+        "label": "Live in production"
+      },
+      {
+        "value": "99%",
+        "label": "Uptime"
+      }
+    ],
+    "jointForces": {
+      "title": "Two brains, one product. It has worked before.",
+      "intro": "Firms with deep expertise are already turning their know-how into AI products with a tech partner. Here is what came out of it.",
+      "items": [
+        {
+          "pair": "A&O + Harvey + Microsoft",
+          "year": "2023",
+          "story": "A global law firm brought its precedents and negotiating know-how. An AI startup and Microsoft brought the technology. Together they built ContractMatrix, a contract tool the firm now sells to its clients.",
+          "result": "Over 1,000 of the firm's lawyers used it from launch, saving about seven hours on some contract negotiations.",
+          "source": "https://www.aoshearman.com/news/ao-launches-saas-partnership-with-microsoft-and-harvey"
+        },
+        {
+          "pair": "PwC + Harvey",
+          "year": "2024",
+          "story": "PwC's tax experts curated the data, annotated examples and reviewed the answers. Harvey's engineers built the model. The result is an AI tax assistant shaped by PwC's own method.",
+          "result": "In a blind test, PwC's experts preferred its answers 91% of the time over other AI tools.",
+          "source": "https://www.harvey.ai/en-US/blog/harvey-co-builds-custom-model-for-tax-with-pwc"
+        },
+        {
+          "pair": "Sanofi + Formation Bio + OpenAI",
+          "year": "2024",
+          "story": "Drug developers brought decades of clinical trial know-how. OpenAI brought the models. Together they built Muse, a tool that plans how to recruit patients for trials.",
+          "result": "According to the companies, it cuts that planning from months to minutes.",
+          "source": "https://formation.bio/blog/introducing-muse"
+        }
+      ]
+    },
+    "inMotion": {
+      "title": "Already in motion",
+      "text": "We are building partnerships like this today with a university, a translation company and a non-profit that runs tech and AI conferences. Each partner brings its field, we bring the engineering, and the product carries both names."
+    },
+    "book": {
+      "title": "Let's build your first product together",
+      "text": "Book a 30-minute partner call. Bring one problem your clients keep asking you to solve with AI.",
+      "calendarTitle": "Partner call booking calendar"
+    }
+  },
+  "partnerPages": {
+    "consulting-firms": {
+      "metaTitle": "Partner program for consulting firms",
+      "metaDescription": "Your method, our engineering. Consulting firms and Qartmina co-create AI agents for their sector, co-branded and owned by both. First working agent in one week.",
+      "eyebrow": "Partner program · For consulting firms",
+      "title": "Your know-how. Our engine. One AI product, built together.",
+      "intro": "Your clients ask for AI agents. You know their business better than anyone, but building agents is not your trade. It is ours. Together we turn your method into a co-branded AI product for your sector, owned by both of us.",
+      "why": {
+        "title": "Your clients want AI. Advice on paper is no longer enough.",
+        "items": [
+          {
+            "title": "Clients will ask someone",
+            "text": "Digitalisation is on every board agenda. A firm that brings only slides and recommendations loses the next mandate to one that ships working tools."
+          },
+          {
+            "title": "An AI team takes years to build",
+            "text": "Hiring engineers, choosing tools, securing data and keeping systems running is a business of its own. You should not have to start it from zero."
+          },
+          {
+            "title": "Partnering beats building alone",
+            "text": "In MIT's 2025 study of AI in business, tools built with an outside partner made it past the pilot and into real use about 67% of the time. Tools built in-house: about 33%.",
+            "source": "https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf"
+          }
+        ]
+      },
+      "bring": {
+        "title": "Two kinds of know-how. One product.",
+        "intro": "Think of an architect and a builder. One knows what the house must be, the other knows how to make it stand. Neither builds a great house alone.",
+        "you": {
+          "title": "You bring the business brain",
+          "items": [
+            "Your method: frameworks, checklists, templates and the way you work",
+            "Deep knowledge of your sector and its rules",
+            "Your client relationships and the trust behind them",
+            "The judgement on what a good answer looks like"
+          ]
+        },
+        "us": {
+          "title": "We bring the tech brain",
+          "items": [
+            "AI agents and multi-step agent systems, designed, built and hosted",
+            "Connections to the tools your clients already use: email, documents, client databases (CRM), business software (ERP)",
+            "Skills for the agent, open source or built for you, and the data behind them",
+            "Security, monitoring and 99% uptime in production",
+            "Maintenance and new versions as AI moves on"
+          ]
+        },
+        "together": {
+          "title": "Together: your method, as a product.",
+          "text": "A co-branded AI agent your firm can offer to every client in your sector. You go from selling hours to selling a digital product, and you digitalise your own firm along the way. We grow together: your expertise makes our engineering useful, our engineering makes your expertise scale. Both of us own what we create."
+        }
+      },
+      "steps": {
+        "title": "From first call to a product in production",
+        "items": [
+          {
+            "time": "Day 1",
+            "title": "Partner call",
+            "text": "We learn how your firm works, which problem your clients pay you to solve, and where an agent would earn its keep."
+          },
+          {
+            "time": "Week 1",
+            "title": "Your method, mapped",
+            "text": "You share your frameworks, documents and examples of good work. We turn them into the agent's knowledge, rules and tools."
+          },
+          {
+            "time": "End of week 1",
+            "title": "First working agent",
+            "text": "A working prototype, not slides. You try it on a real case."
+          },
+          {
+            "time": "Weeks 2 to 4",
+            "title": "Teach and test, together",
+            "text": "We go back and forth. You review the answers, we adjust, until you say the output is what you would deliver yourself."
+          },
+          {
+            "time": "Under one month",
+            "title": "Live in production",
+            "text": "The agent runs securely, connected to the tools it needs, monitored, with 99% uptime."
+          },
+          {
+            "time": "From then on",
+            "title": "Launch and grow together",
+            "text": "We bring the product to your clients under both brands, learn from real use and keep improving it."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions consulting firms ask us",
+        "items": [
+          {
+            "question": "Do we need technical staff?",
+            "answer": "No. We handle the design, build, hosting, security and maintenance. Your team brings the method and reviews the output."
+          },
+          {
+            "question": "Who owns the product?",
+            "answer": "We create it together and both own it. The exact terms, including what each of us can do with it later, are set in a partnership agreement before we start."
+          },
+          {
+            "question": "How do we teach the agent our way of working?",
+            "answer": "You share your documents, frameworks and examples. We turn them into the agent's knowledge and rules, then test it with you case by case until the answers meet your standard. After launch you can keep updating its knowledge yourself."
+          },
+          {
+            "question": "Can we offer it to several clients?",
+            "answer": "Yes, that is the idea. We build one product for your sector, then set it up for each client with their own data and tools."
+          },
+          {
+            "question": "What happens to our clients' data?",
+            "answer": "Each client's data stays separate. We agree with every client where their data is stored and who can see it, and we sign a confidentiality agreement before any data is shared."
+          },
+          {
+            "question": "What kind of agents can we build?",
+            "answer": "Anything your method can describe: assistants that answer from your knowledge base, agents that draft reports, audits or proposals, or multi-step systems that work inside your clients' tools."
+          }
+        ]
+      }
+    }
   }
 }

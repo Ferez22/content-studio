@@ -4,6 +4,9 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-24
 
+- Partner program: `/partners/consulting-firms` in en, fr and de (who brings what, six-step process, sourced proof from three co-built AI products (ContractMatrix, PwC tax assistant, Muse), MIT 2025 partner vs in-house figure, FAQ, partner call booking); `/partners` redirects there; light italic "Become a partner" text link with an arrow next to the logo in the navbar (desktop and phones); footer and sitemap links. Everything sits behind `NEXT_PUBLIC_PARTNER_PROGRAM` (only `true` shows it; unset or anything else: routes 404, no sitemap entries, no links). `FAQs` and `CalEmbed` now take a namespace and booking URL
+- Hero: KPIs centred, "trusted by" logos moved under them as a smaller marquee next to the static OpenAI badge
+
 - Portfolio: case study `crm-startup-cloud-migration` (CRM startup: AI coding setup cleanup, dev/staging/prod split, VPS to Railway, Cloudflare and S3 migration, CI/CD with tests on staging) in en, fr and de
 - Portfolio: internal case study `qartmina-ai-workforce` (seven agents for prospecting, outreach, content and SEO) in en, fr and de
 - Fixed portfolio pages crashing on the server (Radix Slot could not unwrap nested lazy children from server-rendered `Link`s, which also caused the "script tag" console error); `Button` now resolves them. Navbar About link now scrolls to the home team section (`/#team`). Removed the legacy `allowTransparency` iframe prop (console error on the home page) and added `data-scroll-behavior` on `<html>`

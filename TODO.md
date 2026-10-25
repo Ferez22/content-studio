@@ -2,6 +2,15 @@
 
 Open work. When an item is done, remove it here and add it to `DONE.md` with the date.
 
+## Partner program
+
+- [ ] Launch: set `NEXT_PUBLIC_PARTNER_PROGRAM=true` in Vercel Production and redeploy (hidden in prod until then: routes 404, no sitemap entries, no navbar/footer links)
+- [ ] Choose the program name (working copy says "Partner program") and update `partners`/`partnerPages` in all three message files
+- [ ] Add the dedicated partner Cal.com link to `site.partnerBookingUrl` in `lib/site.ts` (falls back to the discovery call)
+- [ ] Lawyer check: co-ownership and contract model before promising terms beyond "set in a partnership agreement"
+- [ ] Partner pages for the other types (universities, startups, non-profits): add the slug to `partnerSlugs`, copy under `partnerPages.<slug>`, then turn `/partners` into an overview page
+- [ ] Replace "Already in motion" with named partners and results once they agree to be named
+
 ## Legal
 
 - [ ] Optional but recommended: have a lawyer review privacy, terms and legal notice (governing law set to Tunisia, courts of Tunis)
