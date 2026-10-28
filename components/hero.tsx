@@ -20,7 +20,7 @@ export const Hero = () => {
 
         <Subheading className="py-8">{t("hero.subtitle")}</Subheading>
         <div className="flex flex-wrap items-center gap-4 md:gap-6">
-          <Button asChild className="shadow-brand">
+          <Button asChild>
             <Link href="/book">{t("hero.primary")}</Link>
           </Button>
           <Button asChild variant="outline">

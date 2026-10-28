@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: import.meta.dirname,
   },
+  // Dev only: lets a phone on the local network (http://192.168.x.x:3000) load the dev
+  // scripts. Without it Next blocks them and the page never becomes interactive.
+  allowedDevOrigins: ["192.168.*.*"],
   async redirects() {
     return Object.entries(legacyServiceSlugs).map(([legacy, service]) => ({
       source: `/:locale(en|fr|de)/services/${legacy}`,

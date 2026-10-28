@@ -4,6 +4,19 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-28
 
+- Desktop services menu: a square preview on the left (from xl) shows the hovered service's card media, with its title and summary; the menu is now centred on the page instead of on the Services link (it overflowed the left edge at 1024 to 1280px)
+
+- Motion design page content: before/after slider (`components/ui/before-after.tsx`, sweeps once on view) comparing Fares's business card still and building itself in an editor (cursor adds, edits, publishes); "Content that feels alive" with the JayScambler film; "Looks like your brand" with our own Qartmina brand film (`assets/motion/qartmina-brand`, rendered with the now shared `assets/motion/render.py <name>`); benefit cards load one after another; "Your video engine" (AI system from brand to launch schedule); an offer section instead of "How we deliver"; features and use cases about ads, launches and social content; "How we work" removed
+
+- Video and motion design page simplified after scroll bugs on iPhone: no pinned sections or scroll-driven scenes anymore. Hero (letter reveal, description, video with light parallax), "Still or in motion" toggle on a website mockup, four benefit cards with demos (the mockup in motion, the explainer video, our countdown video, "Your brand"), "How we work" in four steps, then the examples. Navbar pill removed with the dark full-screen sections
+- Services overview, category hubs and "More in" now use the same card as the home panel (photo or animated visual, two per row on phones)
+- Dev: `allowedDevOrigins` lets phones on the local network load the dev server (Next 16 blocks them by default)
+
+- Home service cards get real visuals: affectUI illustrations (team invite for AI consulting, agent team for AI agents, lead sourcing for process automation, integration beam for connecting tools, layer stack for business apps; installed with `shadcn add`, reviewed first) and our own animated UIs on a scaled 480x270 canvas (chat composer with AI model logos, ElevenLabs on voice, logo cluster with Shopify, Stripe and Amboras, Shopify dashboard, SEO ranking, CRM and ERP tables with a clicking cursor, phones, cloud migration to AWS, Azure and Google Cloud)
+- No more shadows on hover: buttons swap black to white with a light grey outline, cards lift and their outline darkens
+
+- Home services section: each category has its own soft colour (front card and the panel it flips to); white round close button; every service card in the panel has a free Unsplash photo or an animated graphic (voice waveform, rising bars, security scan, automation flow) and the logos of the tools involved (n8n, Make, Zapier, Salesforce, HubSpot, Odoo, Shopify, Figma...)
+
 - Every button is now a pill (`rounded-full`, set once in `buttonVariants`, matching the navbar). Desktop services menu: categories and services as plain text links with an underline that draws in and an arrow that appears on hover (no icons, no hover background). Motion page examples section renamed "Other examples"
 
 - Video and motion design page, third pass: the hero description crosses the bottom of the full-screen video in big type, right to left (shorter text, slower); the navbar shrinks to a thin white pill during the dark sections (hover or tap brings it back; `lib/navbar-mode.ts` lets any section ask for it); "Stops the scroll" is a pinned cube: the screen turns from the title and description onto a dark face where our own motion graphic plays (`public/motion/stop-the-scroll.mp4`, 7.5 s: a countdown with a water drop, a ray burst and a rise, then "See, it made you stop..."; rendered from `assets/motion/stop-the-scroll/` with real motion blur); "Explains in seconds" stays on one row on desktop and its video grows from small; phone layouts for every scene (uncropped hero video band on a dark stage, bigger kinetic type, edge-to-edge video)

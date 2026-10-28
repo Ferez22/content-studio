@@ -23,8 +23,7 @@
     "partners": "Partners",
     "becomePartner": "Become a partner",
     "allServices": "See all services",
-    "categoryOverview": "Overview",
-    "showMenu": "Show menu"
+    "categoryOverview": "Overview"
   },
   "footer": {
     "positioning": "Your digital partner for AI, software, websites, brand and security.",
@@ -1500,14 +1499,32 @@
     "video-motion": {
       "title": "Video and motion design",
       "metaTitle": "Explainer videos and motion design",
-      "summary": "Motion graphics and videos that make your website, posts and presentations feel alive: explainers, product videos, animated logos and social clips.",
-      "intro": "Motion design is graphic design that moves. On a website, it replaces a still image with something that feels alive and more professional.",
+      "summary": "Motion graphics and videos for ads, product launches and social media: content that catches the eye, explains in seconds and looks like your brand.",
+      "intro": "Motion design is graphic design that moves. It is perfect for ads and social content: it captivates the eye and keeps your viewers watching for longer.",
+      "compare": {
+        "title": "Still or in motion",
+        "intro": "Motion design is graphic design that moves. Drag the handle: on one side a business card as a still image, on the other the same card building itself, element by element.",
+        "still": "Still",
+        "motion": "In motion",
+        "handle": "Drag to compare the still and the moving version",
+        "card": {
+          "name": "Fares Aouani Cherif",
+          "title": "Founder Qartmina | bcards.io",
+          "company": "Qartmina",
+          "bio": "Founder of Qartmina. We build custom software tailored to each company's needs: your CRM, ERP and other tools into one central platform, with AI at their core.",
+          "email": "fares@qartmina.com",
+          "photoAlt": "Portrait of Fares Aouani Cherif",
+          "editing": "Editing",
+          "publish": "Publish",
+          "published": "Published"
+        }
+      },
       "explainer": {
-        "title": "What motion design is, and what it is good for",
+        "title": "What motion design is good for",
         "points": [
           {
-            "title": "Websites that feel alive",
-            "text": "Instead of a stock photo, your hero section shows your product or idea in motion. Visitors understand faster, and the site looks more modern and more professional."
+            "title": "Content that feels alive",
+            "text": "A post, an ad or a page that moves gets watched instead of skipped. Your product and message come to life, and your brand looks more modern and more professional."
           },
           {
             "title": "Explains in seconds",
@@ -1519,15 +1536,11 @@
           },
           {
             "title": "Looks like your brand",
-            "text": "Built from your colours, fonts and logo, so every clip feels part of the same company."
+            "text": "Built from your logo, colours and fonts, so every clip feels part of the same company. This one is ours."
           }
         ],
-        "brandDemo": {
-          "word": "Your brand",
-          "hoverHint": "Hover to replay",
-          "tapHint": "Tap to replay"
-        },
-        "stopVideoLabel": "Motion graphic: a countdown, then: See, it made you stop, this is what happens when people watch your content"
+        "stopVideoLabel": "Motion graphic: a countdown, then: See, it made you stop, this is what happens when people watch your content",
+        "brandVideoLabel": "Motion graphic made for Qartmina in its own brand: logo, colours and fonts"
       },
       "examples": {
         "title": "Other examples",
@@ -1553,16 +1566,16 @@
       },
       "features": [
         {
-          "title": "Script and storyboard first",
-          "text": "You approve the words and a scene-by-scene sketch before any animation begins."
+          "title": "Ads that stop the scroll",
+          "text": "Short video ads built to catch attention in the first second and earn the click."
         },
         {
-          "title": "Explainer and product videos",
-          "text": "Your service or product shown step by step, through animation, screen recordings or filmed footage."
+          "title": "Product launch videos",
+          "text": "A launch film that shows what is new and why it matters, ready for your site and every channel."
         },
         {
-          "title": "Animations for your website",
-          "text": "Light, looping animations for your hero section and pages, exported to load fast."
+          "title": "Social content that converts",
+          "text": "A steady flow of clips and animated posts made for each platform's feed."
         },
         {
           "title": "Cut for every platform",
@@ -1570,10 +1583,10 @@
         }
       ],
       "useCases": [
-        "A moving hero section for a company website instead of a stock photo",
-        "Product demo videos a sales team sends after meetings",
-        "An animated logo for a company's YouTube channel and webinars",
-        "A series of short subtitled clips for Instagram and LinkedIn"
+        "A launch film and teaser clips for a new app or product",
+        "Video ads for Instagram, TikTok and LinkedIn that need to catch the eye in a second",
+        "A month of animated posts for a brand's social accounts",
+        "Product demo videos a sales team sends after meetings"
       ],
       "faq": {
         "title": "Questions about video and motion design",
@@ -1592,7 +1605,40 @@
           }
         ]
       },
-      "scrollHint": "Scroll"
+      "engine": {
+        "title": "Your video engine",
+        "intro": "With AI and automations we set up a system that learns your brand, understands your product and comes up with video ideas that follow patterns that work. It then generates the videos in minutes, ready to post. We help you plan the schedule so your launch builds momentum.",
+        "steps": [
+          {
+            "title": "Your brand",
+            "text": "Logo, colours, fonts and tone of voice, learned once."
+          },
+          {
+            "title": "Your product",
+            "text": "What it does, who it is for and why it matters."
+          },
+          {
+            "title": "Video ideas",
+            "text": "Hooks and formats that follow proven patterns."
+          },
+          {
+            "title": "Videos in minutes",
+            "text": "Generated by the system, checked by a person."
+          },
+          {
+            "title": "Launch schedule",
+            "text": "What to post, where and when, for momentum."
+          }
+        ]
+      },
+      "offer": {
+        "title": "Get your first motion graphic",
+        "text": "Tell us what you want to show. We script it, animate it in your brand and deliver it ready to post.",
+        "cta": "Start your project",
+        "launchTitle": "Launching a product?",
+        "launchText": "We prepare the launch film, the teaser clips and the posting plan for launch week, so your launch arrives with momentum.",
+        "launchCta": "Book a call"
+      }
     },
     "security-audits": {
       "title": "Security audits",
@@ -1983,6 +2029,152 @@
         {
           "label": "Passwords",
           "status": "ok"
+        }
+      ]
+    },
+    "cards": {
+      "chat": {
+        "prompts": [
+          "What is our return policy for damaged items?",
+          "Summarise this week's support tickets",
+          "Draft a reply to the Atlas order delay"
+        ],
+        "approval": "Request approval",
+        "auto": "Auto",
+        "models": "Works with your AI model"
+      },
+      "shop": {
+        "store": "Your store",
+        "sales": "Total sales",
+        "orders": "Orders",
+        "visitors": "Visitors",
+        "newOrder": "New order #{number}",
+        "nav": [
+          "Home",
+          "Orders",
+          "Products",
+          "Customers",
+          "Analytics"
+        ]
+      },
+      "seo": {
+        "query": "dentist near me",
+        "site": "yourclinic.com",
+        "title": "Your Clinic · Family dentist",
+        "results": [
+          "citydental.com",
+          "smilecare.com",
+          "dentalplus.com"
+        ],
+        "tags": [
+          "Google Search Console",
+          "Bing Webmaster Tools",
+          "SEO"
+        ]
+      },
+      "crm": {
+        "title": "Deals",
+        "columns": [
+          "Company",
+          "Stage",
+          "Value"
+        ],
+        "rows": [
+          {
+            "name": "Atlas Logistics",
+            "stage": "Negotiation",
+            "value": "€48,000"
+          },
+          {
+            "name": "Nova Foods",
+            "stage": "Proposal",
+            "value": "€12,500"
+          },
+          {
+            "name": "Sahel Trading",
+            "stage": "Qualified",
+            "value": "€86,000"
+          },
+          {
+            "name": "Medina Labs",
+            "stage": "New",
+            "value": "€9,800"
+          }
+        ],
+        "won": "Won"
+      },
+      "erp": {
+        "title": "Inventory",
+        "columns": [
+          "Item",
+          "Stock",
+          "Status"
+        ],
+        "rows": [
+          {
+            "name": "Olive oil 1L",
+            "status": "In stock"
+          },
+          {
+            "name": "Durum wheat 25kg",
+            "status": "Low stock"
+          },
+          {
+            "name": "Glass jars",
+            "status": "In stock"
+          }
+        ],
+        "reorder": "Reorder",
+        "ordered": "Ordered"
+      },
+      "mobile": {
+        "greeting": "Good morning",
+        "card": "Your order is on its way",
+        "tabs": [
+          "Home",
+          "Orders",
+          "Profile"
+        ]
+      },
+      "cloud": {
+        "from": "Your servers",
+        "migrating": "Migrating {percent}%",
+        "done": "Live in the cloud",
+        "azure": "Azure"
+      },
+      "agents": {
+        "prompt": "Build a team to follow up every new lead",
+        "roles": [
+          "Lead researcher",
+          "CRM updater",
+          "Email writer"
+        ]
+      },
+      "layers": [
+        {
+          "title": "Approvals",
+          "hint": "Workflows",
+          "icon": "bolt"
+        },
+        {
+          "title": "Your data",
+          "hint": "Database",
+          "icon": "database"
+        },
+        {
+          "title": "Your tools",
+          "hint": "APIs",
+          "icon": "plug"
+        },
+        {
+          "title": "AI help",
+          "hint": "Assist",
+          "icon": "spark"
+        },
+        {
+          "title": "Dashboards",
+          "hint": "Reports",
+          "icon": "pulse"
         }
       ]
     }

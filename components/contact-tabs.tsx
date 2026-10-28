@@ -44,7 +44,7 @@ export const ContactTabs = ({
               {tab === key && (
                 <motion.span
                   layoutId="contact-tab"
-                  className="absolute inset-0 rounded-xl sm:rounded-full bg-black dark:bg-white shadow-brand"
+                  className="absolute inset-0 rounded-xl sm:rounded-full bg-black dark:bg-white"
                   transition={{ type: "spring", stiffness: 400, damping: 32 }}
                 />
               )}

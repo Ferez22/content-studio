@@ -269,38 +269,174 @@
   }
 }
 
-/* A dot travelling back and forth along a line (motion design explainer). */
-@keyframes visual-dot {
+
+
+/* Home service cards: a breathing waveform and bars rising in turn. */
+@keyframes card-wave {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.card-wave {
+  animation: card-wave 1.2s ease-in-out infinite;
+}
+@keyframes card-bar {
+  0%,
+  10% {
+    transform: scaleY(0.15);
+  }
+  45%,
+  85% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.15);
+  }
+}
+.card-bar {
+  animation: card-bar 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-wave,
+  .card-bar {
+    animation: none;
+  }
+}
+
+/* Home service card visuals. */
+@keyframes wire-dot {
   from {
     left: 0;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  to {
+    left: 100%;
+    opacity: 0;
+  }
+}
+.wire-dot {
+  animation: wire-dot 1.6s linear infinite;
+}
+@keyframes card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.card-float {
+  animation: card-float 3.2s ease-in-out infinite;
+}
+@keyframes shop-line {
+  from {
+    stroke-dashoffset: 1;
+  }
+  60%,
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.shop-line {
+  stroke-dasharray: 1;
+  animation: shop-line 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+@keyframes cluster-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+.cluster-spin {
+  animation: cluster-spin 40s linear 0.9s infinite;
+}
+.cluster-spin-reverse {
+  animation: cluster-spin 40s linear 0.9s infinite reverse;
+}
+@keyframes phone-scroll {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  60%,
+  80% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.phone-scroll {
+  animation: phone-scroll 6s ease-in-out infinite;
+}
+@keyframes packet {
+  from {
+    left: -24px;
   }
   to {
     left: 100%;
   }
 }
-.visual-dot {
-  animation: visual-dot 2.4s ease-in-out infinite alternate;
+.packet {
+  animation: packet 1.35s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .visual-dot {
+  .wire-dot,
+  .card-float,
+  .shop-line,
+  .cluster-spin,
+  .cluster-spin-reverse,
+  .phone-scroll,
+  .packet {
     animation: none;
+  }
+  .wire-dot,
+  .packet {
+    display: none;
   }
 }
 
-/* "Scroll" cue: a short bar sliding down a thin track. */
-@keyframes scroll-cue {
+/* Motion design page: a pulse running along the video engine steps. */
+@keyframes engine-pulse-x {
   from {
-    transform: translateY(-100%);
+    left: 0;
   }
   to {
-    transform: translateY(200%);
+    left: calc(100% - 3rem);
   }
 }
-.scroll-cue {
-  animation: scroll-cue 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+@keyframes engine-pulse-y {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 3rem);
+  }
+}
+.engine-pulse {
+  left: -1px;
+  width: 3px;
+  height: 3rem;
+  animation: engine-pulse-y 3.2s ease-in-out infinite alternate;
+}
+@media (min-width: 768px) {
+  .engine-pulse {
+    top: -1px;
+    width: 3rem;
+    height: 3px;
+    animation-name: engine-pulse-x;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .scroll-cue {
+  .engine-pulse {
     animation: none;
   }
 }

@@ -7,9 +7,11 @@ import { Card, CardCTA, CardTitle } from "./card";
 import { IconArrowRight, IconPlus, IconX } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { categoryPath, serviceCategories, servicePath, type CategorySlug } from "@/lib/site";
+import { categoryPath, serviceCategories, type CategorySlug } from "@/lib/site";
 import { CategoryVisual } from "../services/visuals";
-import { categoryIcons, serviceIcons } from "../service-icons";
+import { categoryIcons } from "../service-icons";
+import { tintBg, tintFrom, tintStyle } from "../services/category-tints";
+import { ServiceCards } from "../services/service-cards";
 import { FlipCard } from "../ui/flip-card";
 import { Reveal } from "../reveal";
 import { Figures } from "../figures";
@@ -119,8 +121,10 @@ const CategoryGrid = ({
             className="group block w-full h-full text-left rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40FF] dark:focus-visible:ring-blue-400"
           >
             <Card
+              style={tintStyle(slug)}
               className={cn(
                 "relative isolate overflow-hidden h-44 sm:h-60 lg:h-[max(14rem,calc((100svh-17rem)/2))]",
+                tintBg,
                 cornerClassNames[index]
               )}
             >
@@ -128,7 +132,7 @@ const CategoryGrid = ({
                 category={slug}
                 className="h-full sm:h-full md:h-full max-lg:w-[161%] max-lg:h-[161%] max-lg:origin-top-left max-lg:scale-[0.62]"
               />
-              <div className="absolute inset-x-0 bottom-0 z-30 px-3 md:px-6 pb-3 md:pb-6 pt-8 md:pt-12 bg-gradient-to-t from-neutral-50 via-neutral-50/95 to-transparent dark:from-neutral-800 dark:via-neutral-800/95">
+              <div className={cn("absolute inset-x-0 bottom-0 z-30 px-3 md:px-6 pb-3 md:pb-6 pt-8 md:pt-12 bg-gradient-to-t to-transparent", tintFrom)}>
                 <div className="flex items-end justify-between gap-4">
                   <div className="min-w-0">
                     <CardTitle className="text-sm sm:text-lg md:text-2xl leading-snug">
@@ -164,7 +168,6 @@ const CategoryServices = ({
 }) => {
   const t = useTranslations("services");
   const tCategories = useTranslations("serviceCategories");
-  const tServices = useTranslations("servicePages");
   const services = serviceCategories.find((c) => c.slug === category)!.services;
   const CategoryIcon = categoryIcons[category];
   return (
@@ -172,19 +175,20 @@ const CategoryServices = ({
       id="service-category-panel"
       role="region"
       aria-labelledby="service-category-title"
-      className="relative rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-4 md:p-8"
+      style={tintStyle(category)}
+      className={cn("relative rounded-3xl p-4 md:p-8", tintBg)}
     >
       <button
         ref={closeRef}
         type="button"
         onClick={onClose}
         aria-label={t("closeCategory")}
-        className="absolute top-3 right-3 md:top-5 md:right-5 size-10 rounded-full flex items-center justify-center bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40FF] dark:focus-visible:ring-blue-400"
+        className="absolute top-3 right-3 md:top-5 md:right-5 size-11 rounded-full flex items-center justify-center bg-white text-black shadow-sm ring-1 ring-black/5 hover:scale-105 active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40FF] dark:focus-visible:ring-blue-400"
       >
         <IconX className="size-5" />
       </button>
       <div className="flex items-start gap-3 md:gap-4 pr-12">
-        <div className="size-10 md:size-12 shrink-0 rounded-xl bg-white dark:bg-neutral-900 ring-1 ring-black/5 dark:ring-white/10 flex items-center justify-center">
+        <div className="size-10 md:size-12 shrink-0 rounded-xl bg-white/80 dark:bg-white/10 ring-1 ring-black/5 dark:ring-white/10 flex items-center justify-center">
           <CategoryIcon className="size-5 md:size-6 text-[#1E40FF] dark:text-blue-400" />
         </div>
         <div>
@@ -196,27 +200,7 @@ const CategoryServices = ({
           </p>
         </div>
       </div>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6 md:mt-8">
-        {services.map((slug) => {
-          const Icon = serviceIcons[slug];
-          return (
-            <li key={slug}>
-              <Link
-                href={servicePath(slug)}
-                className="group flex h-full items-start gap-3 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700/60 p-4 hover:shadow-brand transition duration-200"
-              >
-                <Icon className="size-5 mt-0.5 shrink-0 text-neutral-500 group-hover:text-[#1E40FF] dark:group-hover:text-blue-400 transition duration-200" />
-                <div className="min-w-0">
-                  <p className="font-bold text-black dark:text-white">{tServices(`${slug}.title`)}</p>
-                  <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                    {tServices(`${slug}.summary`)}
-                  </p>
-                </div>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <ServiceCards services={services} className="mt-6 md:mt-8" />
       <Link
         href={categoryPath(category)}
         className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black dark:text-white"

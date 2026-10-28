@@ -20,8 +20,9 @@ import {
   serviceCategories,
   servicePath,
   type CategorySlug,
+  type ServiceSlug,
 } from "@/lib/site";
-import { useMinimalNavbar } from "@/lib/navbar-mode";
+import { ServiceCardMedia } from "./services/service-card-media";
 
 const navlinks = [
   { key: "services", href: "/services" },
@@ -40,68 +41,14 @@ const menuSpring = {
 } as const;
 
 export const Navbar = () => {
-  const t = useTranslations("header");
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
-  // Where the visitor was when they brought the navbar back; scrolling on hides it again.
-  const peekedAt = useRef<number | null>(null);
-  useMotionValueEvent(scrollY, "change", (y) => {
-    setScrolled(y > 24);
-    if (peekedAt.current !== null && Math.abs(y - peekedAt.current) > 160) {
-      peekedAt.current = null;
-      setPeek(false);
-    }
-  });
-
-  // Full-screen sections can ask the navbar to step aside: it slides up out of view and a
-  // thin pill stays at the top. Hovering (or tapping, on phones) the pill brings the navbar
-  // back until the pointer leaves it or the visitor scrolls on. The bars stay in the layout,
-  // so the page never jumps.
-  const minimal = useMinimalNavbar();
-  const [peek, setPeekState] = useState(false);
-  const setPeek = (value: boolean) => {
-    peekedAt.current = value ? window.scrollY : null;
-    setPeekState(value);
-  };
-  useEffect(() => {
-    if (!minimal) setPeekState(false);
-  }, [minimal]);
-  const hidden = minimal && !peek;
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 24));
 
   return (
-    <div className="sticky top-0 lg:top-2 z-50" onMouseLeave={() => minimal && setPeek(false)}>
-      <motion.div
-        initial={false}
-        animate={hidden ? { y: "-160%", opacity: 0 } : { y: 0, opacity: 1 }}
-        transition={
-          hidden
-            ? { duration: 0.4, ease: [0.65, 0, 0.35, 1] }
-            : { type: "spring", stiffness: 260, damping: 26 }
-        }
-        inert={hidden}
-      >
-        <DesktopNavbar scrolled={scrolled} />
-        <MobileNavbar scrolled={scrolled} />
-      </motion.div>
-      <AnimatePresence>
-        {hidden && (
-          <div className="absolute inset-x-0 top-0 flex justify-center pointer-events-none">
-            <motion.button
-              type="button"
-              aria-label={t("showMenu")}
-              onClick={() => setPeek(true)}
-              onMouseEnter={() => setPeek(true)}
-              onFocus={() => setPeek(true)}
-              initial={{ opacity: 0, scaleX: 0.3 }}
-              animate={{ opacity: 1, scaleX: 1, transition: { delay: 0.25, duration: 0.45, ease: [0.16, 1, 0.3, 1] } }}
-              exit={{ opacity: 0, scaleX: 0.3, transition: { duration: 0.2 } }}
-              className="pointer-events-auto px-6 py-3 lg:py-2 focus-visible:outline-none group"
-            >
-              <span className="block h-[5px] w-[134px] rounded-full bg-white/90 shadow-[0_0_0_1px_rgb(0_0_0/0.15)] group-hover:bg-white group-focus-visible:ring-2 group-focus-visible:ring-blue-400 transition-colors" />
-            </motion.button>
-          </div>
-        )}
-      </AnimatePresence>
+    <div className="sticky top-0 lg:top-2 z-50">
+      <DesktopNavbar scrolled={scrolled} />
+      <MobileNavbar scrolled={scrolled} />
     </div>
   );
 };
@@ -258,9 +205,10 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
       <nav className="flex items-center gap-10">
         {navlinks.map((item) =>
           item.key === "services" ? (
+            // Not positioned: the menu below anchors to the full-width navbar wrapper, so the
+            // wide services menu is centred on the page rather than on this link.
             <div
               key={item.key}
-              className="relative"
               onMouseEnter={() => setActive(item.key)}
               onFocus={() => setActive(item.key)}
             >
@@ -279,12 +227,15 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
                 />
               </Link>
               {active === item.key && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.85, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={menuSpring}
-                >
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6">
+                // Full-width strip under the navbar (anchored to the sticky wrapper), so the wide
+                // menu is centred on the page. Only the menu itself takes the pointer.
+                <div className="pointer-events-none absolute inset-x-0 top-full flex justify-center pt-6">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.85, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={menuSpring}
+                    className="pointer-events-auto origin-top"
+                  >
                     <motion.div
                       transition={menuSpring}
                       layoutId="nav-menu"
@@ -294,8 +245,8 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
                         <ServicesMenu onNavigate={() => setActive(null)} />
                       </motion.div>
                     </motion.div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               )}
             </div>
           ) : (
@@ -321,13 +272,36 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
 };
 
 // Desktop: the six categories in three columns, each with its services. Plain text links:
-// an underline draws in and an arrow appears on hover.
+// an underline draws in and an arrow appears on hover. From xl, a square preview on the left
+// shows the hovered service's card media (a category shows its first service).
 const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
   const t = useTranslations("header");
   const tCategories = useTranslations("serviceCategories");
   const tServices = useTranslations("servicePages");
+  const [preview, setPreview] = useState<ServiceSlug>(serviceCategories[0].services[0]);
   return (
-    <div className="w-[48rem] p-2">
+    <div className="flex gap-7 p-2">
+      <div className="hidden xl:block w-60 shrink-0">
+        <div className="relative aspect-square overflow-hidden rounded-xl ring-1 ring-black/5 dark:ring-white/10 bg-neutral-100 dark:bg-neutral-900">
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={preview}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="absolute inset-0"
+            >
+              <ServiceCardMedia slug={preview} className="aspect-auto size-full" />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <p className="mt-3 text-sm font-semibold text-black dark:text-white">{tServices(`${preview}.title`)}</p>
+        <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 line-clamp-3">
+          {tServices(`${preview}.summary`)}
+        </p>
+      </div>
+    <div className="w-[48rem]">
       <div className="grid grid-cols-3 gap-x-8 gap-y-7">
         {serviceCategories.map(({ slug, services }, index) => (
           <motion.div
@@ -339,6 +313,7 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
             <MenuLink
               href={categoryPath(slug)}
               onClick={onNavigate}
+              onHover={() => setPreview(services[0])}
               className="text-[13px] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white"
             >
               {tCategories(`${slug}.title`)}
@@ -349,6 +324,7 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
                   <MenuLink
                     href={servicePath(service)}
                     onClick={onNavigate}
+                    onHover={() => setPreview(service)}
                     className="text-sm text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white"
                   >
                     {tServices(`${service}.title`)}
@@ -369,23 +345,28 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
         </MenuLink>
       </div>
     </div>
+    </div>
   );
 };
 
 const MenuLink = ({
   href,
   onClick,
+  onHover,
   className,
   children,
 }: {
   href: string;
   onClick: () => void;
+  onHover?: () => void;
   className?: string;
   children: React.ReactNode;
 }) => (
   <Link
     href={href}
     onClick={onClick}
+    onMouseEnter={onHover}
+    onFocus={onHover}
     className={cn("group/link inline-flex w-fit items-center gap-1 py-1 transition-colors duration-200 focus-visible:outline-none", className)}
   >
     <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat [background-position:0_100%] [background-size:0%_1px] group-hover/link:[background-size:100%_1px] group-focus-visible/link:[background-size:100%_1px] transition-[background-size] duration-300 ease-out">

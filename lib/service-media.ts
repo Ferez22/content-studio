@@ -15,9 +15,13 @@ const socialVideo = promptMotion("sab8a-opus-5-5-openedit-prompt/video.f57b6670.
 
 // `hero` replaces the mockup next to the page title (always playing); `examples` are the
 // cards of the examples section, in the order of `servicePages.<slug>.examples.items`;
-// `explain` is the large video of the "Explains in seconds" scene (video-motion only).
+// `explain` and `alive` are the demo videos of the "Explains in seconds" and "Content that feels
+// alive" cards (video-motion only).
 export const serviceMedia: Partial<
-  Record<ServiceSlug, { hero?: ShowcaseVideo; examples?: ShowcaseVideo[]; explain?: ShowcaseVideo }>
+  Record<
+    ServiceSlug,
+    { hero?: ShowcaseVideo; examples?: ShowcaseVideo[]; explain?: ShowcaseVideo; alive?: ShowcaseVideo }
+  >
 > = {
   "video-motion": {
     hero: promptMotion("sudo-kiran-no-storyboard-no-detailed/video.d1ffb723.mp4", "sudo_kiran"),
@@ -28,6 +32,7 @@ export const serviceMedia: Partial<
       promptMotion("notdwd-another-one-1000-ai/video.c8dc9ba6.mp4", "notdwd"),
     ],
     explain: promptMotion("ratheejaisal-bro-i-just-one/video.5e8b257d.mp4", "RatheeJaisal"),
+    alive: promptMotion("jayscambler-credit-to-opus-5-5/video.bff19905.mp4", "JayScambler"),
   },
   "social-media": { hero: socialVideo },
   "personal-branding": { hero: socialVideo },

@@ -82,7 +82,7 @@ export const ChatWidget = () => {
         onClick={() => setOpen(!open)}
         aria-label={open ? t("close") : t("open")}
         aria-expanded={open}
-        className="size-12 rounded-full bg-primary text-primary-foreground shadow-brand flex items-center justify-center active:scale-[0.98] transition duration-200"
+        className="size-12 rounded-full bg-primary text-primary-foreground ring-1 ring-neutral-300 dark:ring-neutral-700 flex items-center justify-center active:scale-[0.98] transition duration-200"
       >
         {open ? <IconX className="size-5" /> : <IconMessageCircle className="size-5" />}
       </button>

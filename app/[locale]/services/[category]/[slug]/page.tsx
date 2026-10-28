@@ -15,7 +15,7 @@ import { Delivery } from "@/components/services/delivery";
 import { ServiceCards } from "@/components/services/service-cards";
 import { Examples, Explainer, Included } from "@/components/services/service-sections";
 import { HeroVideo } from "@/components/services/showcase-video";
-import { MotionDesignHero, MotionDesignStory } from "@/components/services/motion-design";
+import { MotionDesignHero, MotionDesignStory, MotionOffer } from "@/components/services/motion-design";
 import { ServiceVisual } from "@/components/services/visuals";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -118,7 +118,7 @@ export default async function ServicePage({ params }: Props) {
               <div>
                 <Heading as="h1">{t("title")}</Heading>
                 <Subheading className="py-8">{t("intro")}</Subheading>
-                <Button asChild className="shadow-brand">
+                <Button asChild>
                   <Link href="/contact">{tCommon("startProject")}</Link>
                 </Button>
               </div>
@@ -134,7 +134,7 @@ export default async function ServicePage({ params }: Props) {
         </section>
       )}
 
-      {motionPage ? <MotionDesignStory explainVideo={media?.explain} /> : t.has("explainer") && <Explainer slug={slug} />}
+      {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} />}
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
       {t.has("included") && <Included slug={slug} />}
 
@@ -180,7 +180,7 @@ export default async function ServicePage({ params }: Props) {
         </Container>
       </section>
 
-      <Delivery />
+      {motionPage ? <MotionOffer /> : <Delivery />}
 
       <FAQs namespace={`servicePages.${slug}.faq`} />
 

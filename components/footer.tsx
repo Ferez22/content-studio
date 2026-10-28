@@ -109,7 +109,7 @@ export const Footer = () => {
       <Container className="relative z-20 mt-10 md:mt-12">
         <Separator />
         <div className="flex justify-center py-8 md:py-10">
-          <Button asChild size="lg" className="shadow-brand">
+          <Button asChild size="lg">
             <Link href="/book">
               {tHeader("bookCall")}
               <IconArrowUpRight />

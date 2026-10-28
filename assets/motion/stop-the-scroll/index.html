@@ -287,6 +287,8 @@
       let oCenter = { x: 960, y: 540 };
       // Countdown pieces: three ripples for the drop, a ring of rays for the burst.
       const COUNTDOWN = 1.5;
+      window.DURATION = 7.5;
+      window.POSTER = 0;
       const ripples = [0, 1, 2].map((i) => {
         const ring = document.createElement("div");
         ring.className = i === 1 ? "ripple accent" : "ripple";

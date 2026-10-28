@@ -1,45 +1,50 @@
 import { useTranslations } from "next-intl";
-import { IconArrowUpRight } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
 import { servicePath, type ServiceSlug } from "@/lib/site";
 import { serviceIcons } from "@/components/service-icons";
 import { cn } from "@/lib/utils";
+import { ServiceCardMedia } from "./service-card-media";
 
-// Grid of service links: icon, title and summary. Used on the overview, hub and service pages.
+// The service card used everywhere: the home category panel, the services overview, the
+// category hubs and "More in" on service pages. A photo or animated visual on top, then the
+// icon, title and (from sm up) the summary.
+export const ServiceCard = ({ slug }: { slug: ServiceSlug }) => {
+  const tServices = useTranslations("servicePages");
+  const Icon = serviceIcons[slug];
+  return (
+    <Link
+      href={servicePath(slug)}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 ring-1 ring-black/5 dark:ring-white/10 hover:-translate-y-1 hover:ring-black/20 dark:hover:ring-white/30 transition duration-300 ease-out"
+    >
+      <ServiceCardMedia slug={slug} />
+      {/* Two per row on phones: title only there, the summary from sm up. */}
+      <div className="flex items-start gap-2 sm:gap-3 p-2.5 sm:p-4">
+        <Icon className="size-4 sm:size-5 mt-0.5 shrink-0 text-neutral-500 group-hover:text-[#1E40FF] dark:group-hover:text-blue-400 transition duration-200" />
+        <div className="min-w-0">
+          <p className="text-[13px] sm:text-base leading-snug font-bold text-black dark:text-white">
+            {tServices(`${slug}.title`)}
+          </p>
+          <p className="hidden sm:block mt-1 text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
+            {tServices(`${slug}.summary`)}
+          </p>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
 export const ServiceCards = ({
   services,
   className,
 }: {
   services: readonly ServiceSlug[];
   className?: string;
-}) => {
-  const tServices = useTranslations("servicePages");
-  return (
-    <ul className={cn("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4", className)}>
-      {services.map((slug) => {
-        const Icon = serviceIcons[slug];
-        return (
-          <li key={slug}>
-            <Link
-              href={servicePath(slug)}
-              className="group flex h-full flex-col rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-6 hover:shadow-brand transition duration-200"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="size-11 shrink-0 rounded-xl bg-white dark:bg-neutral-900 ring-1 ring-black/5 dark:ring-white/10 flex items-center justify-center">
-                  <Icon className="size-5 text-neutral-700 dark:text-neutral-200 group-hover:text-[#1E40FF] dark:group-hover:text-blue-400 transition duration-200" />
-                </div>
-                <IconArrowUpRight className="size-5 text-neutral-400 group-hover:text-black dark:group-hover:text-white group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition duration-200" />
-              </div>
-              <h3 className="mt-5 text-lg font-bold font-display text-black dark:text-white">
-                {tServices(`${slug}.title`)}
-              </h3>
-              <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400">
-                {tServices(`${slug}.summary`)}
-              </p>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+}) => (
+  <ul className={cn("grid grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-3", className)}>
+    {services.map((slug) => (
+      <li key={slug}>
+        <ServiceCard slug={slug} />
+      </li>
+    ))}
+  </ul>
+);

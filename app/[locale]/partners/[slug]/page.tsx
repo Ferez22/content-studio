@@ -78,7 +78,7 @@ export default async function PartnerPage({ params }: Props) {
           </Heading>
           <Subheading className="py-8">{t("intro")}</Subheading>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <Button asChild className="shadow-brand">
+            <Button asChild>
               <a href="#book">{tShared("bookCta")}</a>
             </Button>
             <Button asChild variant="outline">

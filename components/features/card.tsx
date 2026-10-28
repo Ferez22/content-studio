@@ -3,13 +3,16 @@ import React from "react";
 
 export const Card = ({
   className,
+  style,
   children,
 }: {
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
 }) => {
   return (
     <div
+      style={style}
       className={cn(
         "h-full mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-lg",
         className

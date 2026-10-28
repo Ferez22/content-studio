@@ -67,7 +67,7 @@ export default async function CategoryPage({ params }: Props) {
             <div>
               <Heading as="h1">{t("title")}</Heading>
               <Subheading className="py-8">{t("intro")}</Subheading>
-              <Button asChild className="shadow-brand">
+              <Button asChild>
                 <Link href="/contact">{tCommon("startProject")}</Link>
               </Button>
             </div>
