@@ -64,10 +64,6 @@
     "trusted": {
       "title": "Kunden und Partner, die uns vertrauen"
     },
-    "services": {
-      "title": "Was wir bauen",
-      "intro": "Sechs Wege, wie wir KI und Daten für Sie arbeiten lassen. Jeder ist auf ein messbares Ergebnis ausgerichtet."
-    },
     "why": {
       "title": "Warum mit uns arbeiten",
       "intro": "Wir sind in erster Linie Ingenieure. Wir bauen funktionierende Software, messen, was sie verändert, und befähigen Ihr Team, sie selbst zu betreiben.",
@@ -166,12 +162,12 @@
         "label": "bis zum Produktivbetrieb"
       },
       {
-        "value": "6",
-        "label": "Leistungen, ein Team"
+        "value": "29",
+        "label": "Leistungen, eine Projektleitung"
       },
       {
         "value": "100%",
-        "label": "der Ergebnisse von einem Menschen freigegeben"
+        "label": "der Ergebnisse vor der Übergabe geprüft"
       }
     ],
     "partner": {
@@ -245,193 +241,6 @@
     "verification": "Bitte schließen Sie vor dem Senden die Sicherheitsprüfung ab.",
     "consent": "Mit dem Absenden dieses Formulars stimmen Sie zu, dass wir Ihre Angaben zur Beantwortung Ihrer Anfrage verwenden, wie in unserer <link>Datenschutzerklärung</link> beschrieben.",
     "honeypot": "Dieses Feld bitte leer lassen"
-  },
-  "services": {
-    "back": "Unsere Leistungen",
-    "featuresTitle": "Wichtigste Merkmale",
-    "useCasesTitle": "Anwendungsfälle"
-  },
-  "servicePages": {
-    "ai-agents": {
-      "title": "Entwicklung von KI-Agenten",
-      "summary": "Individuelle Agenten, die mehrstufige Arbeit über Ihre Tools hinweg erledigen und das Ergebnis einem Menschen zur Freigabe vorlegen.",
-      "intro": "Ein Agent ist Software, die über mehrere Systeme hinweg lesen, prüfen und handeln kann, ähnlich wie eine Assistenz, aber in Minuten und ohne zu ermüden. Wir gestalten den Agenten rund um einen Ihrer echten Prozesse, verbinden ihn mit Ihren Tools und sorgen dafür, dass ein Mensch alles Wichtige freigibt, bevor es das Haus verlässt.",
-      "features": [
-        {
-          "title": "Arbeitet über Ihre Tools hinweg",
-          "text": "Liest E-Mails, Dokumente, Tabellen und Ihre Geschäftssysteme in einem Durchgang."
-        },
-        {
-          "title": "Fragt, bevor etwas hinausgeht",
-          "text": "Ein Mensch gibt jede Nachricht, Zahlung oder Änderung frei, die nach außen geht."
-        },
-        {
-          "title": "Jede Zahl mit ihrer Quelle verknüpft",
-          "text": "Jede Zahl im Ergebnis verweist auf die Datei oder den Datensatz, aus dem sie stammt."
-        },
-        {
-          "title": "Nach Zeitplan oder auf Abruf",
-          "text": "Läuft jeden Morgen, zu jedem Monatsabschluss oder wenn jemand ihn anstößt."
-        }
-      ],
-      "useCases": [
-        "Datenraum- und Dokumentenanalyse für die Due Diligence",
-        "Rechnungseingang und Abgleich mit Bestellungen",
-        "Monatliche Berichtspakete aus mehreren Quellen",
-        "Lead-Qualifizierung und CRM-Pflege"
-      ],
-      "metaTitle": "Entwicklung von KI-Agenten"
-    },
-    "automation": {
-      "title": "Prozessautomatisierung",
-      "summary": "Durchgängige Abläufe ohne Copy-and-paste, manuelle Dateneingabe und händische Übergaben.",
-      "intro": "Viele Prozesse hängen noch davon ab, dass jemand Daten von einem Bildschirm in den nächsten kopiert. Wir erfassen den Prozess, wie er heute läuft, entfernen die manuellen Schritte und verbinden die Systeme direkt. KI setzen wir nur dort ein, wo sie mehr leistet als feste Regeln.",
-      "features": [
-        {
-          "title": "Erst erfasst, dann gebaut",
-          "text": "Wir dokumentieren den Prozess, wie er wirklich abläuft, einschließlich der Ausnahmen."
-        },
-        {
-          "title": "Kein Abtippen mehr",
-          "text": "Daten fließen ohne manuelle Eingabe zwischen E-Mail, Tabellen und Systemen."
-        },
-        {
-          "title": "Ausnahmen gehen an einen Menschen",
-          "text": "Alles Ungewöhnliche wird markiert und an die zuständige Person weitergeleitet."
-        },
-        {
-          "title": "Sichtbar und gemessen",
-          "text": "Jeder Durchlauf wird protokolliert. Sie sehen, was passiert ist und wie lange es gedauert hat."
-        }
-      ],
-      "useCases": [
-        "Auftragserfassung aus E-Mails direkt ins ERP",
-        "Lieferanten-Onboarding und Dokumentenprüfung",
-        "Wöchentliche Vertriebs- und Lagerberichte",
-        "Freigabeprozesse, die heute in E-Mail-Verläufen stecken"
-      ],
-      "metaTitle": "Prozessautomatisierung"
-    },
-    "integration": {
-      "title": "Integration",
-      "summary": "KI verbunden mit Excel, CRM, ERP, E-Mail und Datenbanken über sichere Schnittstellen.",
-      "intro": "KI nützt nur, wenn sie Ihre Daten sehen und in Ihren Systemen handeln kann. Wir bauen sichere Verbindungen zwischen KI-Tools und der Software, die Sie bereits einsetzen. So fließen Informationen dorthin, wo sie gebraucht werden, und der Zugriff bleibt auf das beschränkt, was Sie freigeben.",
-      "features": [
-        {
-          "title": "Ihre Systeme, keine neuen",
-          "text": "Wir verbinden, was Sie schon nutzen: Excel, CRM, ERP, E-Mail, Datenbanken."
-        },
-        {
-          "title": "Minimaler Zugriff als Standard",
-          "text": "Jede Verbindung darf nur lesen oder ändern, was Sie ausdrücklich erlauben."
-        },
-        {
-          "title": "Standardisierte Schnittstellen",
-          "text": "Wir nutzen offene Standards wie MCP, einen gemeinsamen Weg, KI-Tools an Systeme anzubinden. So bleiben Sie unabhängig."
-        },
-        {
-          "title": "Lückenlos protokolliert",
-          "text": "Jede Anfrage über eine Verbindung wird für Prüfzwecke aufgezeichnet."
-        }
-      ],
-      "useCases": [
-        "Ihrem Unternehmensassistenten Zugriff auf CRM und ERP geben",
-        "Tabellen mit einer zentralen Datenbank synchronisieren",
-        "E-Mail-Postfächer mit Ticket- oder Bestellsystemen verbinden",
-        "Interne Daten über eine sichere Schnittstelle für KI-Tools bereitstellen"
-      ],
-      "metaTitle": "KI-Integration"
-    },
-    "consulting": {
-      "title": "KI-Beratung",
-      "summary": "Eine Analyse Ihrer Prozesse und ein Fahrplan mit den Agenten, die sich zuerst lohnen.",
-      "intro": "Bevor Sie in KI investieren, sollten Sie wissen, wo sie sich auszahlt. Wir analysieren, wie heute gearbeitet wird, prüfen, ob Ihre Daten bereit sind, und liefern einen priorisierten Plan: was zuerst gebaut wird, was es einspart und was es kostet.",
-      "features": [
-        {
-          "title": "Prozess-Audit",
-          "text": "Gemeinsam mit Ihrem Team ermitteln wir in Ihren echten Tools, wohin die Stunden fließen."
-        },
-        {
-          "title": "Prüfung der Datenbasis",
-          "text": "Welche Daten Sie haben, wo sie liegen und was zuerst bereinigt werden muss."
-        },
-        {
-          "title": "Priorisierter Fahrplan",
-          "text": "Kurz-, mittel- und langfristige Schritte, jeweils mit einem messbaren Ziel."
-        },
-        {
-          "title": "Ehrliche Antworten",
-          "text": "Wenn KI nicht das richtige Werkzeug für ein Problem ist, sagen wir das."
-        }
-      ],
-      "useCases": [
-        "Den ersten Agenten auswählen",
-        "Ein KI-Pilotprojekt prüfen, das nie in Produktion ging",
-        "Die Modernisierung eines Altsystems planen",
-        "Eine KI-Strategie für die Geschäftsführung vorbereiten"
-      ],
-      "metaTitle": "KI-Beratung"
-    },
-    "training": {
-      "title": "Team-Schulungen",
-      "summary": "Das Programm AI for Business mit ESGITECH, von den Grundlagen bis zum ersten funktionierenden Ablauf.",
-      "intro": "Tools verändern ein Unternehmen erst, wenn die Menschen sie zu nutzen wissen. Gemeinsam mit ESGITECH bieten wir das Programm AI for Business an: praxisnahe Einheiten, die Ihr Team von den Grundlagen bis zu einem ersten Ablauf führen, der mit den eigenen Aufgaben läuft.",
-      "features": [
-        {
-          "title": "Für nicht-technische Teams",
-          "text": "Verständliche Sprache, echte Beispiele, keine Programmierkenntnisse nötig."
-        },
-        {
-          "title": "Ihre Aufgaben, keine Spielbeispiele",
-          "text": "Die Teilnehmenden arbeiten an Prozessen aus ihrem eigenen Arbeitsalltag."
-        },
-        {
-          "title": "Ein funktionierendes Ergebnis",
-          "text": "Alle Teilnehmenden gehen mit einem ersten Ablauf, der läuft."
-        },
-        {
-          "title": "Sicherer Umgang",
-          "text": "Was Sie mit KI-Tools teilen dürfen, was nicht, und warum."
-        }
-      ],
-      "useCases": [
-        "Einführung in KI für Führungsteams",
-        "Praxis-Workshops für Finanzen und Operations",
-        "Prompting und Assistenten für Büroteams",
-        "Train-the-Trainer für interne KI-Verantwortliche"
-      ],
-      "metaTitle": "KI-Schulungen für Teams"
-    },
-    "chatbots": {
-      "title": "Chatbots und Assistenten",
-      "summary": "Assistenten, die Kunden oder Mitarbeitenden rund um die Uhr auf Basis Ihrer eigenen Dokumente antworten.",
-      "intro": "Ihr Team beantwortet jeden Tag dieselben Fragen aus denselben Dokumenten. Wir bauen Assistenten, die auf Grundlage Ihrer Richtlinien, Handbücher und Daten antworten, zu jeder Antwort die Quelle zeigen und an einen Menschen übergeben, wenn es angebracht ist.",
-      "features": [
-        {
-          "title": "Antworten aus Ihren Dokumenten",
-          "text": "Der Assistent antwortet nur aus Quellen, die Sie freigeben."
-        },
-        {
-          "title": "Zeigt seine Quellen",
-          "text": "Jede Antwort verlinkt auf das Dokument, aus dem sie stammt."
-        },
-        {
-          "title": "Übergibt an einen Menschen",
-          "text": "Sensible oder unklare Anfragen gehen an Ihr Team."
-        },
-        {
-          "title": "Rund um die Uhr erreichbar",
-          "text": "Auf Ihrer Website, im Intranet oder in Ihren Messaging-Tools."
-        }
-      ],
-      "useCases": [
-        "Kundenservice auf Ihrer Website",
-        "Interner Helpdesk für Personal- und IT-Fragen",
-        "Suche in Produkt- und technischer Dokumentation",
-        "Onboarding-Assistent für neue Mitarbeitende"
-      ],
-      "metaTitle": "Chatbots und KI-Assistenten"
-    }
   },
   "visuals": {
     "tools": [

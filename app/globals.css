@@ -203,3 +203,104 @@
     animation: none;
   }
 }
+
+/* Category card mockups: blocks pop in one after another, then the loop restarts. */
+@keyframes visual-pop {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  16%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* A card that travels across the pipeline columns. */
+@keyframes visual-travel {
+  0%,
+  15% {
+    transform: translateX(0);
+  }
+  35%,
+  50% {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  70%,
+  85% {
+    transform: translateX(calc(200% + 2 * var(--gap)));
+  }
+  100% {
+    transform: translateX(calc(200% + 2 * var(--gap)));
+    opacity: 0;
+  }
+}
+
+/* Scanner line sweeping down a list. */
+@keyframes visual-scan {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.visual-pop {
+  animation: visual-pop 6s ease-out infinite both;
+}
+.visual-travel {
+  animation: visual-travel 5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+.visual-scan {
+  animation: visual-scan 2.8s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visual-pop,
+  .visual-travel,
+  .visual-scan {
+    animation: none;
+  }
+}
+
+/* A dot travelling back and forth along a line (motion design explainer). */
+@keyframes visual-dot {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+.visual-dot {
+  animation: visual-dot 2.4s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .visual-dot {
+    animation: none;
+  }
+}
+
+/* "Scroll" cue: a short bar sliding down a thin track. */
+@keyframes scroll-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(200%);
+  }
+}
+.scroll-cue {
+  animation: scroll-cue 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
+  }
+}

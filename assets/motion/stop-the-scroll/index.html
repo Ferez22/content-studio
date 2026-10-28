@@ -1,0 +1,422 @@
+<!doctype html>
+<!--
+  "Stops the scroll" motion graphic, 7.5 s at 120 BPM (a beat every 0.5 s, bars of 2 s).
+  Every style is computed from the time in window.seek(t): no CSS animations, no timers,
+  no state carried between frames. Rendered to video by render.py.
+
+  Countdown, one effect per beat:
+  0.0   "3": a drop of water falls and hits; the number forms with the ripples
+  0.5   "2": lines burst out of the number
+  1.0   "1" rises from its mask
+
+  Then the piece (times below are after the countdown, so add 1.5 s):
+  0.0   "See," rises from its mask; a reel of feed words races upward on the right
+  0.5   "it" 0.75 "made" 1.0 "you" land on the eighths
+  1.5   the reel brakes and locks on "stop"; a blue line draws under it
+  2.0   match cut: the camera dives into the counter of the "o"
+  2.5   "this" 2.625 "is" 2.75 "what" 3.0 "happens"
+  3.25  "when" 3.375 "people"; 3.5 "watch" arrives as slit-scan slices, settled by 3.9
+  4.0   push cut to "your" 4.25 "content"
+  5.0   logo
+  5.5   fade to black
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #0a0a0a;
+      }
+      #stage {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a0a0a;
+        font-family: Inter, sans-serif;
+        color: #fff;
+      }
+      .shot,
+      #fade {
+        position: absolute;
+        inset: 0;
+      }
+      .mask {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        padding: 0.06em 0.02em 0.14em;
+        margin: -0.06em -0.02em -0.14em;
+      }
+      .mask > span {
+        display: inline-block;
+        will-change: transform;
+      }
+      .line {
+        position: absolute;
+        left: 200px;
+        white-space: nowrap;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        line-height: 1;
+      }
+      #hook {
+        top: 474px;
+        font-size: 132px;
+      }
+      #reel {
+        position: absolute;
+        top: 300px;
+        height: 480px;
+        overflow: hidden;
+        font-size: 132px;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+      }
+      #reel-column > div {
+        height: 160px;
+        line-height: 160px;
+        white-space: nowrap;
+      }
+      #underline {
+        position: absolute;
+        height: 10px;
+        background: #60a5fa;
+        transform-origin: left center;
+      }
+      #s2 .line {
+        font-size: 120px;
+      }
+      #l1 {
+        top: 380px;
+      }
+      #l2 {
+        top: 540px;
+      }
+      #watch {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+      }
+      #watch .slice {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      #watch .ghost {
+        visibility: hidden;
+      }
+      #s0 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .count {
+        position: absolute;
+        font-size: 440px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        line-height: 1;
+      }
+      #drop {
+        position: absolute;
+        left: 947px;
+        top: 0;
+        width: 26px;
+        height: 34px;
+        background: #fff;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      }
+      .ripple {
+        position: absolute;
+        left: 960px;
+        top: 540px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+      }
+      .ripple.accent {
+        border-color: #60a5fa;
+      }
+      .ray {
+        position: absolute;
+        left: 960px;
+        top: 540px;
+        height: 6px;
+        border-radius: 3px;
+        background: #fff;
+        transform-origin: 0 50%;
+      }
+      .ray.accent {
+        background: #60a5fa;
+      }
+      #s3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #big {
+        font-size: 236px;
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      #big .accent {
+        color: #60a5fa;
+      }
+      #logo {
+        position: absolute;
+        left: 50%;
+        bottom: 120px;
+        width: 260px;
+        transform: translateX(-50%);
+        overflow: hidden;
+      }
+      #logo img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage">
+      <div id="fade">
+        <div class="shot" id="s0">
+          <div id="ripples"></div>
+          <div id="rays"></div>
+          <div id="drop"></div>
+          <div class="count" id="n3">3</div>
+          <div class="count" id="n2">2</div>
+          <div class="count" id="n1"><span class="mask"><span>1</span></span></div>
+        </div>
+        <div class="shot" id="s1">
+          <div class="line" id="hook">
+            <span class="mask"><span>See,</span></span>
+            <span class="mask"><span>it</span></span>
+            <span class="mask"><span>made</span></span>
+            <span class="mask"><span>you</span></span>
+          </div>
+          <div id="reel"><div id="reel-column"></div></div>
+          <div id="underline"></div>
+        </div>
+        <div class="shot" id="s2">
+          <div class="line" id="l1">
+            <span class="mask"><span>this</span></span>
+            <span class="mask"><span>is</span></span>
+            <span class="mask"><span>what</span></span>
+            <span class="mask"><span>happens</span></span>
+          </div>
+          <div class="line" id="l2">
+            <span class="mask"><span>when</span></span>
+            <span class="mask"><span>people</span></span>
+            <span id="watch"><span class="ghost">watch</span></span>
+          </div>
+        </div>
+        <div class="shot" id="s3">
+          <div id="big">
+            <span class="mask"><span>your</span></span>
+            <span class="mask"><span class="accent">content</span></span>
+          </div>
+          <div id="logo"><img src="../../og/logo-white.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const clamp = (x) => Math.min(1, Math.max(0, x));
+      const easeOut = (x) => 1 - Math.pow(1 - clamp(x), 3);
+      const expoOut = (x) => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * clamp(x)));
+      const easeIn = (x) => Math.pow(clamp(x), 3);
+      const lerp = (a, b, x) => a + (b - a) * x;
+      const $ = (selector) => document.querySelector(selector);
+
+      // Masked word reveal: rises from below its mask on its beat.
+      const rise = (element, start, t, duration = 0.32) => {
+        const k = expoOut((t - start) / duration);
+        element.style.transform = `translateY(${lerp(112, 0, k)}%)`;
+      };
+
+      // The feed the viewer is flicking through, ending on the word that stops it.
+      const FEED = ["scroll", "skip", "next", "swipe"];
+      const STOP_INDEX = 14;
+      const LINE = 160;
+      const column = $("#reel-column");
+      for (let i = 0; i < STOP_INDEX + 3; i++) {
+        const row = document.createElement("div");
+        if (i === STOP_INDEX) {
+          row.innerHTML = '<span id="stop">st<span id="o">o</span>p</span>';
+        } else {
+          row.textContent = FEED[i % FEED.length];
+        }
+        column.appendChild(row);
+      }
+
+      const s1 = $("#s1");
+      const s2 = $("#s2");
+      const s3 = $("#s3");
+      const hookWords = [...document.querySelectorAll("#hook .mask > span")];
+      const l1Words = [...document.querySelectorAll("#l1 .mask > span")];
+      const l2Words = [...document.querySelectorAll("#l2 .mask > span")];
+      const bigWords = [...document.querySelectorAll("#big .mask > span")];
+      const rows = [...column.children];
+
+      // Slit-scan "watch": the word cut into horizontal bands, each arriving a little late.
+      const SLICES = 16;
+      const watch = $("#watch");
+      const slices = [];
+      for (let k = 0; k < SLICES; k++) {
+        const slice = document.createElement("span");
+        slice.className = "slice";
+        slice.textContent = "watch";
+        const top = (k / SLICES) * 100;
+        const bottom = 100 - ((k + 1) / SLICES) * 100;
+        slice.style.clipPath = `inset(${top}% -20% ${bottom}% -20%)`;
+        watch.appendChild(slice);
+        slices.push(slice);
+      }
+
+      // Positions measured once the layout and fonts are ready (match cut and reel column).
+      let oCenter = { x: 960, y: 540 };
+      // Countdown pieces: three ripples for the drop, a ring of rays for the burst.
+      const COUNTDOWN = 1.5;
+      const ripples = [0, 1, 2].map((i) => {
+        const ring = document.createElement("div");
+        ring.className = i === 1 ? "ripple accent" : "ripple";
+        $("#ripples").appendChild(ring);
+        return ring;
+      });
+      const RAYS = 18;
+      const rays = Array.from({ length: RAYS }, (_, i) => {
+        const ray = document.createElement("div");
+        ray.className = i % 3 === 0 ? "ray accent" : "ray";
+        $("#rays").appendChild(ray);
+        return ray;
+      });
+
+      const seekCountdown = (c) => {
+        // Beat 1: the drop falls (stretched by its speed), hits at 0.2, the "3" forms.
+        const fall = clamp(c / 0.2);
+        const drop = $("#drop");
+        drop.style.display = c < 0.2 ? "block" : "none";
+        drop.style.transform = `translateY(${lerp(-80, 523, easeIn(fall))}px) scaleY(${lerp(1, 1.5, fall)})`;
+        ripples.forEach((ring, i) => {
+          const k = clamp((c - 0.2 - i * 0.07) / 0.5);
+          const size = lerp(0, 1100, easeOut(k));
+          ring.style.width = `${size}px`;
+          ring.style.height = `${size * 0.42}px`;
+          ring.style.transform = "translate(-50%, -50%)";
+          ring.style.opacity = c < 0.2 || c >= 0.5 ? 0 : 1 - k;
+        });
+        const three = $("#n3");
+        const settle = easeOut((c - 0.2) / 0.28);
+        three.style.display = c >= 0.2 && c < 0.5 ? "block" : "none";
+        three.style.transform = `scale(${lerp(1.35, 1, settle)}, ${lerp(0.55, 1, settle)})`;
+
+        // Beat 2: the "2" lands and rays burst out of it.
+        const two = $("#n2");
+        two.style.display = c >= 0.5 && c < 1 ? "block" : "none";
+        two.style.transform = `scale(${lerp(1.12, 1, expoOut((c - 0.5) / 0.3))})`;
+        rays.forEach((ray, i) => {
+          const k = expoOut((c - 0.5) / 0.42);
+          const angle = (i / RAYS) * 360 + 8;
+          const start = lerp(200, 760, k);
+          const length = lerp(170, 0, k);
+          ray.style.display = c >= 0.5 && c < 1 ? "block" : "none";
+          ray.style.width = `${length}px`;
+          ray.style.transform = `translateY(-50%) rotate(${angle}deg) translateX(${start}px)`;
+        });
+
+        // Beat 3: the "1" rises from its mask.
+        $("#n1").style.display = c >= 1 ? "block" : "none";
+        rise($("#n1 .mask > span"), 1, c, 0.32);
+      };
+
+      window.prepare = () => {
+        const hook = $("#hook");
+        const reel = $("#reel");
+        reel.style.left = `${hook.offsetLeft + hook.offsetWidth + 34}px`;
+        seekMain(1.9);
+        const o = $("#o").getBoundingClientRect();
+        // The counter sits slightly above the glyph's centre.
+        oCenter = { x: o.left + o.width / 2, y: o.top + o.height * 0.52 };
+        const stop = $("#stop").getBoundingClientRect();
+        const underline = $("#underline");
+        underline.style.left = `${stop.left}px`;
+        underline.style.width = `${stop.width}px`;
+        underline.style.top = `${stop.bottom - 8}px`;
+      };
+
+      window.seek = (t) => {
+        const counting = t < COUNTDOWN;
+        seekMain(Math.max(0, t - COUNTDOWN));
+        seekCountdown(Math.min(t, COUNTDOWN));
+        $("#s0").style.display = counting ? "flex" : "none";
+        if (counting) s1.style.display = "none";
+      };
+
+      const seekMain = (t) => {
+        // Shot visibility.
+        s1.style.display = t < 2.5 ? "block" : "none";
+        s2.style.display = t >= 2.45 && t < 4 ? "block" : "none";
+        s3.style.display = t >= 4 ? "flex" : "none";
+
+        // Shot 1: the hook, word by word.
+        [0, 0.5, 0.75, 1.0].forEach((start, i) => rise(hookWords[i], start, t));
+
+        // The reel races at full speed, then brakes hard onto "stop" at 1.5 (no overshoot):
+        // constant speed until 1.15, then a straight deceleration to zero.
+        const travel = STOP_INDEX * LINE - LINE;
+        const cruiseEnd = 1.15;
+        const brake = 1.5 - cruiseEnd;
+        const speed = travel / (cruiseEnd + brake / 2);
+        const tc = Math.min(Math.max(t, 0), 1.5);
+        const distance =
+          tc < cruiseEnd
+            ? speed * tc
+            : speed * cruiseEnd + speed * ((tc - cruiseEnd) - (tc - cruiseEnd) ** 2 / (2 * brake));
+        column.style.transform = `translateY(${-distance}px)`;
+        const locked = clamp((t - 1.42) / 0.16);
+        rows.forEach((row, i) => {
+          const isStop = i === STOP_INDEX;
+          const grey = Math.round(lerp(58, 255, isStop ? locked : 0));
+          row.style.color = `rgb(${grey}, ${grey}, ${grey})`;
+          row.style.opacity = isStop ? 1 : 1 - clamp((t - 1.5) / 0.16);
+        });
+        $("#underline").style.transform = `scaleX(${easeOut((t - 1.5) / 0.3)})`;
+
+        // Match cut: dive into the counter of the "o" until it fills the frame.
+        const dive = easeIn((t - 2.0) / 0.5);
+        s1.style.transformOrigin = `${oCenter.x}px ${oCenter.y}px`;
+        s1.style.transform = `scale(${1 + dive * 90})`;
+
+        // Shot 2.
+        [2.5, 2.625, 2.75, 3.0].forEach((start, i) => rise(l1Words[i], start, t));
+        [3.25, 3.375].forEach((start, i) => rise(l2Words[i], start, t));
+        slices.forEach((slice, k) => {
+          const start = 3.5 + k * 0.01;
+          const k01 = expoOut((t - start) / 0.26);
+          slice.style.transform = `translateX(${lerp(340, 0, k01)}px)`;
+          slice.style.opacity = clamp((t - start) / 0.05);
+        });
+
+        // Shot 3: push cut onto the payoff, then the logo.
+        const push = easeOut((t - 4) / 0.6);
+        s3.style.transform = `scale(${lerp(1.08, 1, push)})`;
+        [4.0, 4.25].forEach((start, i) => rise(bigWords[i], start, t, 0.38));
+        const logo = expoOut((t - 5) / 0.4);
+        $("#logo img").style.transform = `translateY(${lerp(105, 0, logo)}%)`;
+
+        // Fade to black (on the wrapper, never on a 3D element).
+        $("#fade").style.opacity = 1 - clamp((t - 5.5) / 0.5);
+      };
+    </script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 import React from "react";
-import type { ServiceSlug } from "@/lib/site";
+import { categoryOf, type CategorySlug, type ServiceSlug } from "@/lib/site";
 import { CardSkeleton } from "@/components/features/card";
 import { SkeletonOne as AutomationVisual } from "@/components/features/skeletons/first";
 import { SkeletonTwo as AgentRunVisual } from "@/components/features/skeletons/second";
@@ -7,34 +7,55 @@ import { SkeletonOne as ChatbotVisual } from "@/components/features-secondary/sk
 import { SkeletonTwo as IntegrationVisual } from "@/components/features-secondary/skeletons/second";
 import { SkeletonTwo as TrainingVisual } from "@/components/features-tertiary/skeletons/second";
 import { SkeletonFour as ConsultingVisual } from "@/components/features-tertiary/skeletons/four";
+import { BrandVisual, SecurityVisual, SoftwareVisual, WebsiteVisual } from "./category-visuals";
 
-// Each service keeps its own animated mockup, used on the home card and its page.
-const visuals: Record<ServiceSlug, { Visual: React.ComponentType; className?: string }> = {
+type VisualEntry = { Visual: React.ComponentType; className?: string };
+
+const centred = "flex flex-col justify-center";
+
+// One animated mockup per category, used on its home card and hub page.
+const categoryVisuals: Record<CategorySlug, VisualEntry> = {
+  ai: { Visual: AgentRunVisual },
+  "data-automation": { Visual: AutomationVisual },
+  "websites-ecommerce": { Visual: WebsiteVisual, className: centred },
+  "software-development": { Visual: SoftwareVisual, className: centred },
+  brand: { Visual: BrandVisual, className: centred },
+  "cybersecurity-it": { Visual: SecurityVisual, className: centred },
+};
+
+// Services with a mockup of their own; the others show their category's.
+const serviceVisuals: Partial<Record<ServiceSlug, VisualEntry>> = {
   "ai-agents": { Visual: AgentRunVisual },
-  automation: { Visual: AutomationVisual },
-  integration: {
+  "process-automation": { Visual: AutomationVisual },
+  "api-integration": {
     Visual: IntegrationVisual,
     className: "flex flex-col mask-radial-from-50% mask-t-from-50%",
   },
-  consulting: { Visual: ConsultingVisual, className: "flex flex-col" },
-  training: {
+  "ai-consulting": { Visual: ConsultingVisual, className: "flex flex-col" },
+  "ai-training": {
     Visual: TrainingVisual,
     className: "flex flex-col justify-center mask-radial-from-20%",
   },
   chatbots: { Visual: ChatbotVisual, className: "flex flex-col" },
 };
 
-export const ServiceVisual = ({
-  slug,
+const Render = ({ entry, className }: { entry: VisualEntry; className?: string }) => (
+  <CardSkeleton className={[entry.className, className].filter(Boolean).join(" ")}>
+    <entry.Visual />
+  </CardSkeleton>
+);
+
+export const CategoryVisual = ({
+  category,
   className,
 }: {
-  slug: ServiceSlug;
+  category: CategorySlug;
   className?: string;
-}) => {
-  const { Visual, className: visualClassName } = visuals[slug];
-  return (
-    <CardSkeleton className={[visualClassName, className].filter(Boolean).join(" ")}>
-      <Visual />
-    </CardSkeleton>
-  );
-};
+}) => <Render entry={categoryVisuals[category]} className={className} />;
+
+export const ServiceVisual = ({ slug, className }: { slug: ServiceSlug; className?: string }) => (
+  <Render
+    entry={serviceVisuals[slug] ?? categoryVisuals[categoryOf(slug)]}
+    className={className}
+  />
+);

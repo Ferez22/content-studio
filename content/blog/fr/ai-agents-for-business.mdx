@@ -71,7 +71,7 @@ Une façon pratique de choisir :
 - Si la tâche est **figée et ne varie jamais**, une simple automatisation des workflows est moins chère et plus prévisible. Ne payez pas pour une intelligence dont vous n'avez pas besoin.
 - Si la tâche **varie, demande du jugement et touche plusieurs systèmes**, c'est là qu'un agent fait la différence.
 
-En pratique, nous combinons souvent les trois. En comptabilité fournisseurs, une automatisation figée peut récupérer les factures dans la boîte de réception, l'agent se charge de la lecture et du rapprochement, et un chatbot répond aux questions des fournisseurs sur l'état de leurs paiements. Notre [service agents IA](/fr/services/ai-agents) commence généralement par classer les tâches d'une équipe dans ces trois catégories, avant que quiconque n'écrive une ligne de code.
+En pratique, nous combinons souvent les trois. En comptabilité fournisseurs, une automatisation figée peut récupérer les factures dans la boîte de réception, l'agent se charge de la lecture et du rapprochement, et un chatbot répond aux questions des fournisseurs sur l'état de leurs paiements. Notre [service agents IA](/fr/services/ai/ai-agents) commence généralement par classer les tâches d'une équipe dans ces trois catégories, avant que quiconque n'écrive une ligne de code.
 
 ## Exemples d'agents IA par équipe
 
@@ -132,7 +132,7 @@ La voie la plus propre est une **API** (application programming interface, ou in
 
 Une pièce plus récente du puzzle s'appelle **MCP**, le Model Context Protocol. Voyez-le comme une prise universelle. Au lieu de construire une connexion sur mesure pour chaque outil d'IA et chaque système, vous construisez un seul connecteur MCP pour votre ERP, et n'importe quel agent compatible peut l'utiliser avec les permissions que vous lui accordez. Anthropic a publié MCP comme standard ouvert en novembre 2024, et en décembre 2025 il a été [confié à l'Agentic AI Foundation, sous l'égide de la Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), avec OpenAI et Block parmi les cofondateurs. Ce cadre neutre compte pour les acheteurs : votre intégration n'est pas liée à un seul fournisseur.
 
-Pour notre agent de facturation, les besoins de connexion restent modestes : un accès en lecture aux bons de commande et aux réceptions de marchandises, et l'autorisation de créer une écriture en brouillon qu'une personne comptabilise. Aucun accès direct en écriture au grand livre. Notre [service d'intégration](/fr/services/integration) couvre ce travail, et l'explication complète, systèmes sur mesure compris, se trouve dans [Connecter des agents IA à votre ERP et à votre CRM, même sur mesure](/fr/blog/connect-ai-agent-erp-crm).
+Pour notre agent de facturation, les besoins de connexion restent modestes : un accès en lecture aux bons de commande et aux réceptions de marchandises, et l'autorisation de créer une écriture en brouillon qu'une personne comptabilise. Aucun accès direct en écriture au grand livre. Notre [service d'intégration](/fr/services/data-automation/api-integration) couvre ce travail, et l'explication complète, systèmes sur mesure compris, se trouve dans [Connecter des agents IA à votre ERP et à votre CRM, même sur mesure](/fr/blog/connect-ai-agent-erp-crm).
 
 ## RGPD et AI Act
 
@@ -170,7 +170,7 @@ Ce qui fonctionne est volontairement sans éclat, et nous l'assumons. C'est l'or
 5. **Passez en production avec une personne dans la boucle.** Validez chaque action importante au début. Ne montez le curseur d'autonomie que lorsque le taux d'erreur le justifie.
 6. **Puis élargissez.** Une fois qu'un agent est stable, les connexions et la base de connaissances que vous avez construites rendent le deuxième beaucoup plus rapide.
 
-Si vous ne savez pas par quel workflow commencer, c'est précisément le rôle de notre [service de conseil en IA](/fr/services/consulting) : une courte revue de vos processus qui aboutit à une liste classée de candidats et à un plan réaliste.
+Si vous ne savez pas par quel workflow commencer, c'est précisément le rôle de notre [service de conseil en IA](/fr/services/ai/ai-consulting) : une courte revue de vos processus qui aboutit à une liste classée de candidats et à un plan réaliste.
 
 ## FAQ
 

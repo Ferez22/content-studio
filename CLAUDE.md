@@ -38,9 +38,11 @@ app/[locale]/opengraph-image.tsx   social preview, generated per locale
 components/              sections and shared UI (one component per file)
 components/ui/           primitives: button (magnetic), dotted-glow-background
 components/features*/skeletons/    animated card mockups reused across sections
-components/services/visuals.tsx    service slug → its animated mockup
+components/services/visuals.tsx    category → animated mockup; services use their own or their category's
+components/ui/flip-card.tsx        3D two-face flip (home service categories, contact tabs)
+components/ui/letter-reveal.tsx    letters springing up from a mask, staggered (CSS only)
 i18n/                    routing (locales), request config, locale-aware navigation
-lib/site.ts              site constants: URL, email, LinkedIn, Cal.com, Brevo form URL, service slugs
+lib/site.ts              site constants: URL, email, LinkedIn, Cal.com, Brevo form URL, service categories
 lib/metadata.ts          pageMetadata(): canonical, hreflang, Open Graph, Twitter
 lib/content.ts           MDX loader for content/
 messages/{en,fr,de}.json all UI copy
@@ -50,12 +52,23 @@ assets/og/               images read at build time by the OG image route (not se
 proxy.ts                 next-intl locale detection and redirects (Next 16 name for middleware)
 ```
 
-Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI badge in the centre) → Features (services) → OpenAIPartner → Team → Testimonials → FAQs → Contact. `WhyUs` exists but is commented out.
+Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI badge in the centre) → Features (6 service category cards that flip to their services) → OpenAIPartner → Team → Testimonials → FAQs → Contact. `WhyUs` exists but is commented out.
+
+## Services
+
+- Six categories, each with its services, defined once in `serviceCategories` (`lib/site.ts`). URLs: `/services` (overview), `/services/<category>` (hub), `/services/<category>/<service>`. Build links with `categoryPath()` / `servicePath()`, never by hand.
+- Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items, rendered as FAQPage JSON-LD).
+- Adding a service: add the slug to its category, the copy in `messages/en.json`, an icon in `components/service-icons.tsx`; optionally its own mockup in `components/services/visuals.tsx`. Update the "29 services" figure in `home.figures`.
+- Optional per-service extras: a hero video and example videos in `lib/service-media.ts`, and the sections `explainer`, `examples` and `included` in `servicePages.<service>` (each renders only when its copy exists). Example videos made by others always show the creator's credit and the "not Qartmina projects" note.
+- `video-motion` has its own hero and scroll story (`components/services/motion-design.tsx`, copy under `servicePages.video-motion.explainer`). Its "Stops the scroll" video is our own render: edit `assets/motion/stop-the-scroll/index.html` (time-driven `seek(t)`, no CSS animations) and run `python3 assets/motion/stop-the-scroll/render.py` (`--probe` for stills) to regenerate `public/motion/stop-the-scroll.mp4`.
+- The old flat URLs (`/services/ai-agents`, `consulting`, `automation`...) redirect permanently via `legacyServiceSlugs` in `next.config.ts`.
+- Positioning: Qartmina is a digital partner. Clients buy project management, quality assurance and trust: one project lead, specialists cherry-picked from a vetted freelancer network, quality control before delivery. No prices on service pages.
 
 ## i18n rules
 
 - Three locales, same slugs in every locale: `en` (default), `fr`, `de`. Routes are always prefixed (`/en/...`).
 - **No hard-coded user-facing text in components.** Add the key to all three `messages/*.json` files with identical structure. Use `t.raw()` for arrays.
+- Exception, for now: the services namespaces (`services`, `serviceCategories`, `servicePages`, `home.services`) exist in English only. Missing keys in fr/de fall back to English key by key (`i18n/messages.ts`). Untranslated service pages point their canonical to the English page and are left out of the fr/de sitemap and hreflang (`translatedLocales`); adding the namespace to fr.json/de.json makes them indexable in that language automatically.
 - Links use `Link` from `@/i18n/navigation`, never `next/link`.
 - Every page exports `generateMetadata` using `pageMetadata()` and calls `setRequestLocale(locale)`.
 - Testimonials stay in the client's original words (not translated); FR/DE show a small "original in English" note.
@@ -83,7 +96,7 @@ Home page order: Hero (title, KPIs, interactive workflow) → LogoCloud (OpenAI 
 
 - Layout primitives: `Container` (max-w-7xl, px-4 md:px-8), `Heading` (h1/h2, text-3xl → 6xl), `Subheading`. Sections use `py-10 md:py-20 lg:py-32`.
 - Cards: `bg-neutral-50 dark:bg-neutral-800`, generous radius (`rounded-3xl` on outer corners of grids), thin `border-neutral-200 dark:border-neutral-800`.
-- **Buttons:** always the shared `Button` (`components/ui/button.tsx`). Every CTA is magnetic (follows the cursor by 35%, 0.15s ease-out) and keeps the default square-ish radius. Primary CTAs use `shadow-brand`. Don't hand-roll buttons for CTAs.
+- **Buttons:** always the shared `Button` (`components/ui/button.tsx`). Every CTA is magnetic (follows the cursor by 35%, 0.15s ease-out) and is a pill (`rounded-full`, set once in `buttonVariants`, matching the navbar); never override the radius per page. Primary CTAs use `shadow-brand`. Don't hand-roll buttons for CTAs.
 - **Animation:** entrance reveals use `Reveal` (fade + lift + blur, once). Respect `prefers-reduced-motion` in anything that loops (robot video falls back to the poster, magnetic effect and float stop). Prefer CSS for simple infinite loops (`float-bob`, `progress-fill` keyframes in `globals.css`).
 - **Mobile first-class:** every UI change must also be checked on mobile (about 390px wide) and look good there with proper proportions: readable font sizes, nothing oversized, no cramped rows, no horizontal scroll. Test at 390px. Phones get a full-width navbar with a custom burger (short top bar) and a full-screen drop menu; desktop gets the floating pill navbar that shrinks on scroll. Service cards are 2 columns on phones (titles only). Carousels use `SnapCarousel` (native scroll snap + dots).
 - No horizontal page overflow at any width. Clip decorative overflow inside its own section.

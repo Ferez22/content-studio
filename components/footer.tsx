@@ -8,7 +8,7 @@ import { IconArrowUpRight, IconBrandLinkedin } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./mode-toggle";
 import { useTranslations } from "next-intl";
-import { partnerProgramEnabled, serviceSlugs, site } from "@/lib/site";
+import { categoryPath, categorySlugs, partnerProgramEnabled, site } from "@/lib/site";
 import { NewsletterForm } from "./newsletter-form";
 
 const linkClassName =
@@ -27,7 +27,7 @@ const Separator = ({ className }: { className?: string }) => (
 export const Footer = () => {
   const t = useTranslations("footer");
   const tHeader = useTranslations("header");
-  const tServices = useTranslations("servicePages");
+  const tCategories = useTranslations("serviceCategories");
 
   const company = [
     { title: tHeader("about"), href: "/about" },
@@ -61,10 +61,10 @@ export const Footer = () => {
             {t("services")}
           </h4>
           <ul className="list-none flex flex-col gap-2">
-            {serviceSlugs.map((slug) => (
+            {categorySlugs.map((slug) => (
               <li key={slug}>
-                <Link href={`/services/${slug}`} className={linkClassName}>
-                  {tServices(`${slug}.title`)}
+                <Link href={categoryPath(slug)} className={linkClassName}>
+                  {tCategories(`${slug}.title`)}
                 </Link>
               </li>
             ))}
