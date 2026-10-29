@@ -287,7 +287,10 @@
       "playLabel": "Play example: {title}",
       "disclaimer": "These examples were made by independent creators with AI and shared on Prompt Motion. We show them to illustrate the format; they are not Qartmina projects."
     },
-    "toc": "Categories"
+    "toc": "Categories",
+    "seeDemo": "See the demo",
+    "closeDemo": "Close the demo",
+    "expandDemo": "Open full screen"
   },
   "serviceCategories": {
     "ai": {
@@ -380,6 +383,224 @@
       "metaTitle": "Custom AI agent development for business",
       "summary": "Custom AI agents that run multi-step work across your tools and hand the result to a person to approve before anything goes out.",
       "intro": "An agent is software that can read, check and act across several systems, the way an assistant would, but in minutes and without getting tired. We design the agent around one of your real processes, connect it to your tools and make sure a person approves anything that matters before it leaves.",
+      "graph": {
+        "title": "Agent team",
+        "label": "Demo",
+        "stats": "4 agents, 4 tools",
+        "hint": "Click any agent or tool to see what it does.",
+        "close": "Close",
+        "legend": {
+          "call": "Call",
+          "answer": "Answer",
+          "needs": "Needs you",
+          "failed": "Failed"
+        },
+        "nodes": {
+          "you": {
+            "name": "You",
+            "role": "Approves",
+            "badge": "Needs you",
+            "text": "You hand over the month-end check and approve the supplier emails before they go out. Nothing leaves without you."
+          },
+          "coordinator": {
+            "name": "Coordinator",
+            "role": "Plans and checks",
+            "badge": "Working",
+            "text": "Splits the month-end check between the other agents and reviews each result before it reaches you.",
+            "activity": [
+              {
+                "node": "reader",
+                "text": "Collect this month's invoices",
+                "time": "1.3s"
+              },
+              {
+                "node": "checker",
+                "text": "Match them with purchase orders",
+                "time": "2.9s"
+              },
+              {
+                "node": "writer",
+                "text": "Draft emails for the 2 mismatches",
+                "time": "1.1s"
+              }
+            ]
+          },
+          "reader": {
+            "name": "Reader",
+            "role": "Reads invoices",
+            "badge": "Done",
+            "text": "Opens each invoice in the accounts inbox and pulls out the supplier, amount, date and order number.",
+            "activity": [
+              {
+                "node": "gmail",
+                "text": "Read 37 invoices from the accounts inbox",
+                "time": "1.4s"
+              }
+            ]
+          },
+          "checker": {
+            "name": "Checker",
+            "role": "Matches orders",
+            "badge": "Working",
+            "text": "Compares each invoice with its purchase order and flags any difference above 2%.",
+            "activity": [
+              {
+                "node": "odoo",
+                "text": "Look up order PO-2291",
+                "time": "600ms"
+              },
+              {
+                "node": "odoo",
+                "text": "No answer, tried again",
+                "failed": true
+              },
+              {
+                "node": "odoo",
+                "text": "Look up order PO-2294",
+                "time": "700ms"
+              }
+            ]
+          },
+          "writer": {
+            "name": "Writer",
+            "role": "Drafts emails",
+            "badge": "Needs you",
+            "text": "Drafts a short, polite email to each supplier whose invoice does not match, and posts it for your approval.",
+            "activity": [
+              {
+                "node": "slack",
+                "text": "Email about invoice INV-0412, waiting for approval",
+                "time": "900ms"
+              }
+            ]
+          },
+          "analyst": {
+            "name": "Analyst",
+            "role": "Builds the report",
+            "badge": "Working",
+            "text": "Adds every checked invoice to the month-end sheet and totals spending by supplier.",
+            "activity": [
+              {
+                "node": "sheets",
+                "text": "Add the 35 matched invoices",
+                "time": "800ms"
+              },
+              {
+                "node": "sheets",
+                "text": "Total spending by supplier",
+                "time": "500ms"
+              }
+            ]
+          },
+          "gmail": {
+            "name": "Gmail",
+            "role": "Accounts inbox",
+            "badge": "Read only",
+            "text": "The Reader can open invoices in the accounts inbox. It cannot send or delete email."
+          },
+          "odoo": {
+            "name": "Odoo",
+            "role": "Purchase orders",
+            "badge": "Read only",
+            "text": "The Checker can look up orders and delivery notes. It cannot change them or make payments."
+          },
+          "slack": {
+            "name": "Slack",
+            "role": "Approvals",
+            "badge": "Post only",
+            "text": "Drafts wait in the approvals channel until a person sends them."
+          },
+          "sheets": {
+            "name": "Google Sheets",
+            "role": "Month-end report",
+            "badge": "One sheet",
+            "text": "The Analyst can edit the month-end report and nothing else in your Drive."
+          }
+        },
+        "failedLabel": "Failed"
+      },
+      "levels": {
+        "title": "What goes into an agent",
+        "intro": "An agent is a few parts put together with care. Each one is something your team can read, test and change.",
+        "items": [
+          {
+            "label": "Instructions",
+            "title": "A written job description",
+            "text": "What the agent is for, the steps it follows and what it must never do, in plain language.",
+            "examples": [
+              {
+                "title": "Steps",
+                "text": "Match each supplier invoice to its purchase order and flag any difference above 2%."
+              },
+              {
+                "title": "Limits",
+                "text": "Never approve a payment. Never email a supplier directly."
+              },
+              {
+                "title": "Language",
+                "text": "Write to suppliers in French unless they wrote in English."
+              }
+            ]
+          },
+          {
+            "label": "Tools",
+            "title": "Access to your systems, nothing more",
+            "text": "Each tool opens one system, only as far as the job needs.",
+            "examples": [
+              {
+                "title": "Email",
+                "text": "Reads invoices in the accounts inbox. Cannot send or delete."
+              },
+              {
+                "title": "Accounting software",
+                "text": "Looks up purchase orders. Cannot change them or pay."
+              },
+              {
+                "title": "Spreadsheet",
+                "text": "Edits the month-end sheet and nothing else."
+              }
+            ]
+          },
+          {
+            "label": "Approvals",
+            "title": "A person signs off",
+            "text": "Anything that leaves the company waits for a person. The agent prepares, you decide.",
+            "examples": [
+              {
+                "title": "Supplier emails",
+                "text": "Drafts wait in a Slack channel until someone approves them."
+              },
+              {
+                "title": "Daily summary",
+                "text": "Every morning, a list of what it did and what it could not finish."
+              },
+              {
+                "title": "Logbook",
+                "text": "Every step is recorded, so you can see why it did what it did."
+              }
+            ]
+          },
+          {
+            "label": "Team",
+            "title": "Several agents, one coordinator",
+            "text": "Bigger jobs are split between agents that each do one thing well, with a coordinator that hands out the work and checks the results.",
+            "examples": [
+              {
+                "title": "Reader",
+                "text": "Pulls supplier, amount, date and order number from each invoice."
+              },
+              {
+                "title": "Checker",
+                "text": "Compares every invoice with its order."
+              },
+              {
+                "title": "Writer",
+                "text": "Drafts the emails about invoices that do not match."
+              }
+            ]
+          }
+        ]
+      },
       "features": [
         {
           "title": "Works across your tools",
@@ -399,10 +620,22 @@
         }
       ],
       "useCases": [
-        "Data room and document analysis for due diligence",
-        "Invoice intake and reconciliation against orders",
-        "Monthly reporting packs built from several sources",
-        "Lead qualification and updates to your sales records"
+        {
+          "title": "Document review for due diligence",
+          "text": "Reads every file in a data room, pulls out the key terms of each contract and lists the risks, with a link to the page where each one appears."
+        },
+        {
+          "title": "Invoices checked against orders",
+          "text": "Reads supplier invoices as they arrive, matches them with purchase orders and delivery notes, and flags the ones that do not add up."
+        },
+        {
+          "title": "Monthly reporting packs",
+          "text": "Collects figures from your accounting, sales and HR files, builds the monthly pack in your format and notes where every number came from."
+        },
+        {
+          "title": "Lead qualification",
+          "text": "Researches each new enquiry, scores it against your criteria, updates your sales records and drafts the first reply for a person to send."
+        }
       ],
       "faq": {
         "title": "Questions about AI agents",
@@ -427,6 +660,122 @@
       "metaTitle": "AI chatbots and company assistants for business",
       "summary": "Assistants that answer customers or staff from your own documents, around the clock, and hand over to a person when they should.",
       "intro": "Your team answers the same questions every day from the same documents. We build assistants that answer from your own policies, manuals and data, show where each answer comes from and hand over to a person when they should.",
+      "demo": {
+        "label": "Demo",
+        "question": "My laptop won't connect to the VPN since this morning. Can you help?",
+        "toolsRunning": "Looking into it…",
+        "toolsDone": "Used 3 tools",
+        "tools": [
+          {
+            "name": "search_it_guide",
+            "summary": "Searched the IT guide for VPN sign-in errors",
+            "args": {
+              "query": "VPN will not connect"
+            },
+            "result": {
+              "document": "IT guide 2026.pdf",
+              "section": "5.3 VPN sign-in errors",
+              "page": 42
+            }
+          },
+          {
+            "name": "check_account",
+            "summary": "Checked your account",
+            "args": {
+              "employee": "E-1042"
+            },
+            "result": {
+              "vpn_access": "active",
+              "password": "expired yesterday"
+            }
+          },
+          {
+            "name": "create_ticket",
+            "summary": "Opened ticket IT-2318 as a backup",
+            "args": {
+              "topic": "VPN",
+              "priority": "normal"
+            },
+            "result": {
+              "ticket": "IT-2318",
+              "status": "open"
+            }
+          }
+        ],
+        "answer": "Your VPN access is fine, but your password expired yesterday. Reset it with the link in section 5.3 of the IT guide, then reconnect. I opened ticket IT-2318 in case it still fails.",
+        "source": "IT guide 2026, page 42"
+      },
+      "levels": {
+        "title": "From chatbot to agent to specialist",
+        "intro": "A chatbot answers questions. Connect it to your tools and it becomes an agent that gets things done. Give it skills and it does specific jobs the way your team does them.",
+        "items": [
+          {
+            "label": "Chatbot",
+            "title": "Answers from your documents",
+            "text": "It reads your documents and answers in plain words, with the source of every answer.",
+            "examples": [
+              {
+                "title": "HR handbook",
+                "text": "\"How many leave days can I carry over to next year?\""
+              },
+              {
+                "title": "Contracts",
+                "text": "\"What notice period does our supplier contract give us?\""
+              },
+              {
+                "title": "Manuals",
+                "text": "\"What does error E42 on the packing machine mean?\""
+              }
+            ]
+          },
+          {
+            "label": "Agent",
+            "title": "Connected to your tools",
+            "text": "Linked to the software you already use, it looks things up and takes action, only within the limits you set.",
+            "examples": [
+              {
+                "title": "Online shop",
+                "text": "Finds a customer's order and tells them when it will arrive."
+              },
+              {
+                "title": "Calendar",
+                "text": "Books a meeting in a free slot and sends the invitation."
+              },
+              {
+                "title": "Helpdesk",
+                "text": "Opens a ticket with the conversation attached."
+              },
+              {
+                "title": "Customer database",
+                "text": "Adds a new enquiry with the contact details and what they asked for."
+              }
+            ]
+          },
+          {
+            "label": "Specialist",
+            "title": "Trained with skills",
+            "text": "A skill is a set of written instructions, sometimes with templates or small programs, that teaches the assistant one job, done the same way every time.",
+            "examples": [
+              {
+                "title": "Coding",
+                "text": "Writes and runs a small program that compares two invoice spreadsheets and lists the ones that do not match."
+              },
+              {
+                "title": "Your house style",
+                "text": "Replies to customers the way your team does: formal in French, short on WhatsApp, never promising a delivery date."
+              },
+              {
+                "title": "Reading contracts",
+                "text": "Goes through a supplier contract and pulls the payment terms, notice period, penalties and renewal date into a one-page summary."
+              },
+              {
+                "title": "Weekly report",
+                "text": "Turns the sales export into the Monday report, with the same headings and charts every week."
+              }
+            ]
+          }
+        ]
+      },
       "features": [
         {
           "title": "Answers from your documents",
@@ -446,10 +795,22 @@
         }
       ],
       "useCases": [
-        "Customer service on your website",
-        "Internal helpdesk for HR and IT questions",
-        "Product and technical documentation search",
-        "Onboarding assistant for new employees"
+        {
+          "title": "Answers from long documents",
+          "text": "Ask a 300-page tender, a contract or a technical manual a question in plain words. The answer comes back in seconds with the page it came from, so you can check it."
+        },
+        {
+          "title": "IT support for your staff",
+          "text": "Walks people through password resets, VPN and printer problems, checks their account and opens a ticket when a technician is needed."
+        },
+        {
+          "title": "A chatbot on your website",
+          "text": "Answers visitors about products, prices, delivery and opening hours at any hour, and passes serious enquiries to your sales team with the conversation attached."
+        },
+        {
+          "title": "An internal assistant for your company",
+          "text": "One place where staff ask about leave, expenses, HR policies and how things are done, answered from your handbook and intranet."
+        }
       ],
       "faq": {
         "title": "Questions about chatbots and company assistants",
@@ -467,6 +828,18 @@
             "answer": "Current AI models handle all three, and customers can usually write in the language they prefer. We test with real questions from your customers and staff, including local dialect and mixed languages, before it goes live."
           }
         ]
+      },
+      "assistant": {
+        "name": "Your assistant",
+        "tagline": "Answers from your documents and tools.",
+        "prompt": "What can I help with?",
+        "chips": [
+          "Summarise this contract",
+          "Reset my password",
+          "Where is my order?",
+          "My leave balance"
+        ],
+        "placeholder": "Ask anything..."
       }
     },
     "voice-agents": {
@@ -942,8 +1315,649 @@
     "crm-development": {
       "title": "CRM development",
       "metaTitle": "CRM development and customisation",
-      "summary": "Custom CRMs and tailored HubSpot, Salesforce or Odoo setups that give your sales team one clear view of every customer and deal.",
-      "intro": "A CRM (customer relationship management system) is where your sales team keeps track of customers, contacts and deals. When it is set up badly, people drift back to spreadsheets and notebooks. We configure existing CRMs such as HubSpot, Salesforce or Odoo, or build a custom one when your sales process does not fit them, so the team actually uses it.",
+      "summary": "Custom CRMs, or CRMs like HubSpot, Salesforce and Odoo set up for your team, so sales has one clear view of every customer and deal.",
+      "intro": "A CRM keeps every customer, contact and deal in one place. We set up CRMs like HubSpot, Salesforce or Odoo, or build your own when your sales process does not fit them.",
+      "clients": {
+        "title": "Teams we built CRMs for",
+        "logos": [
+          "docutrad"
+        ],
+        "caseStudy": {
+          "label": "Read the case study: from a fragile VPS to a production-ready cloud",
+          "href": "/portfolio/crm-startup-cloud-migration"
+        }
+      },
+      "system": {
+        "title": "Architecture",
+        "label": "Example",
+        "hint": "Click any part to see what it can be built with.",
+        "close": "Close",
+        "failedLabel": "Failed",
+        "stackLabel": "Built with, for example",
+        "legend": {
+          "call": "Request",
+          "answer": "Response",
+          "needs": "Background",
+          "failed": "Retry"
+        },
+        "nodes": {
+          "cloud": {
+            "name": "Your cloud",
+            "role": "Hosting",
+            "badge": "Infrastructure",
+            "text": "Everything inside runs in your own cloud account or data centre, in the country you choose, with backups and monitoring."
+          },
+          "client": {
+            "name": "Client",
+            "role": "Web and mobile app",
+            "badge": "Frontend",
+            "text": "The screens your team uses in a browser or on a phone, built in a framework your developers know."
+          },
+          "api": {
+            "name": "Server",
+            "role": "Business rules",
+            "badge": "Backend",
+            "text": "Checks every request, applies your rules (who can change a deal, which discounts need approval) and talks to every other part."
+          },
+          "auth": {
+            "name": "Auth",
+            "role": "Sign-in and roles",
+            "badge": "Security",
+            "text": "Company accounts, two-step sign-in and roles that decide who sees which customers and figures."
+          },
+          "jobs": {
+            "name": "Queue",
+            "role": "Background jobs",
+            "badge": "Automation",
+            "text": "Work that runs on its own: syncing email and invoices, sending reminders, trying again when another system does not answer."
+          },
+          "sql": {
+            "name": "Database",
+            "role": "Customers and deals",
+            "badge": "Data",
+            "text": "The main record of customers, contacts, deals and their history, with every change recorded."
+          },
+          "agent": {
+            "name": "AI agent",
+            "role": "Does the repeat work",
+            "badge": "AI",
+            "text": "Prepares reviews, drafts follow-ups and answers questions, using only the data and actions it is given, and asks before it sends anything."
+          },
+          "rag": {
+            "name": "RAG",
+            "role": "Finds the right facts",
+            "badge": "AI",
+            "text": "Retrieval: before the AI answers, it looks up the relevant documents and records, so answers come from your data and show their source."
+          },
+          "vector": {
+            "name": "Vector DB",
+            "role": "Search by meaning",
+            "badge": "Data",
+            "text": "Stores documents in a form that can be searched by meaning, so \"late delivery complaint\" also finds \"order arrived a week after the date\"."
+          },
+          "graph": {
+            "name": "Graph DB",
+            "role": "Who is linked to whom",
+            "badge": "Data",
+            "text": "Stores relationships: which contact works where, who referred whom, which deals share a supplier. Useful when the links matter as much as the records."
+          },
+          "llm": {
+            "name": "LLM",
+            "role": "The language model",
+            "badge": "AI",
+            "text": "The model that reads and writes text. Chosen for quality, cost and where your data may go, and replaceable without rebuilding the rest."
+          },
+          "integrations": {
+            "name": "Integrations",
+            "role": "Your other tools",
+            "badge": "Integration",
+            "text": "Email, invoicing, messaging and payments connected, so nobody types the same thing twice."
+          }
+        }
+      },
+      "demo": {
+        "label": "Demo",
+        "tabsLabel": "Screens of the demo CRM",
+        "workspace": "Acme",
+        "user": "Alex Morgan",
+        "what": "What it does",
+        "why": "Why it is easy to use",
+        "groups": {
+          "start": "Start",
+          "work": "Daily work",
+          "ai": "AI agent",
+          "admin": "Admin"
+        },
+        "screens": {
+          "onboarding": {
+            "tab": "Onboarding",
+            "what": "New users connect their email, calendar and invoicing in a few clicks, so the CRM fills itself from the first day.",
+            "why": "One step at a time, a checklist that shows what is left, and the option to skip and come back later."
+          },
+          "records": {
+            "tab": "Companies",
+            "what": "Every company and deal in one table, with its owner, value and stage at a glance.",
+            "why": "Sort with one click, select rows to act on them together, and move a deal by clicking its stage. No forms to open."
+          },
+          "analytics": {
+            "tab": "Reports",
+            "what": "Open pipeline, won deals and win rate from live data, by week, month or quarter.",
+            "why": "The four numbers managers ask about first sit at the top, with the detail right below."
+          },
+          "agent": {
+            "tab": "Agent run",
+            "what": "An AI agent prepares the weekly pipeline review: it pulls the deals, finds the ones going cold and writes the summary.",
+            "why": "You see every step as it happens, and it stops to ask you before it sends or books anything."
+          },
+          "assistant": {
+            "tab": "Assistant",
+            "what": "Ask about any customer or deal in plain words. The assistant searches the CRM, your emails and your notes.",
+            "why": "Suggested questions to start from, and answers that point to the records they came from."
+          },
+          "evals": {
+            "tab": "Evals",
+            "what": "Every change to the AI is tested on real cases from your business before it goes live.",
+            "why": "One pass rate to watch, the exact wording that changed, and every test case open to check."
+          },
+          "settings": {
+            "tab": "Settings",
+            "what": "Team roles, your own pipeline stages, seats and billing, managed by your team.",
+            "why": "Plain labels, changes saved as you go, and nothing hidden behind a support ticket."
+          }
+        },
+        "onboarding": {
+          "step": "Step 2 of 4",
+          "title": "Welcome to Acme, Alex",
+          "subtitle": "A few quick steps and your workspace is ready, in about two minutes.",
+          "steps": [
+            "Workspace",
+            "Tools",
+            "Team",
+            "Contacts"
+          ],
+          "cardTitle": "Connect your tools",
+          "cardText": "Your CRM reads from and writes to the apps you connect. Change this anytime.",
+          "connected": "Connected",
+          "tools": [
+            {
+              "logo": "gmail",
+              "name": "Gmail",
+              "text": "Emails with a customer are filed under their record."
+            },
+            {
+              "logo": "google",
+              "name": "Google Calendar",
+              "text": "Meetings appear on the deal they belong to."
+            },
+            {
+              "logo": "whatsapp",
+              "name": "WhatsApp",
+              "text": "Log chats with customers who prefer messaging."
+            },
+            {
+              "logo": "odoo",
+              "name": "Odoo",
+              "text": "See invoices and payment status next to each deal."
+            },
+            {
+              "logo": "slack",
+              "name": "Slack",
+              "text": "Get a message when a deal moves stage."
+            }
+          ],
+          "skip": "Skip for now",
+          "back": "Back",
+          "continue": "Continue",
+          "checklist": "Setup checklist",
+          "checklistItems": [
+            {
+              "title": "Workspace",
+              "text": "Acme, 2 to 10 people"
+            },
+            {
+              "title": "Connect your tools",
+              "text": "In progress"
+            },
+            {
+              "title": "Invite your team",
+              "text": "Under a minute"
+            },
+            {
+              "title": "Import contacts",
+              "text": "About 2 minutes"
+            }
+          ],
+          "help": "Need a hand?",
+          "helpText": "Book a free 15-minute setup call"
+        },
+        "records": {
+          "title": "Companies",
+          "hint": "Click a stage to move the deal",
+          "addRow": "Add row",
+          "selected": "{count} selected",
+          "clear": "Clear",
+          "columns": {
+            "company": "Company",
+            "industry": "Industry",
+            "owner": "Owner",
+            "value": "Value (€)",
+            "stage": "Stage",
+            "last": "Last contact"
+          },
+          "sortBy": "Sort by value",
+          "stages": {
+            "new": "New",
+            "qualified": "Qualified",
+            "proposal": "Proposal",
+            "negotiation": "Negotiation",
+            "won": "Won",
+            "lost": "Lost"
+          },
+          "rows": [
+            {
+              "company": "Nour Pharma",
+              "industry": "Healthcare",
+              "owner": "Yasmine Ben Ali",
+              "value": 48000,
+              "stage": "negotiation",
+              "last": "Today"
+            },
+            {
+              "company": "Atlas Logistics",
+              "industry": "Transport",
+              "owner": "Karim Haddad",
+              "value": 12500,
+              "stage": "proposal",
+              "last": "Yesterday"
+            },
+            {
+              "company": "Sahel Foods",
+              "industry": "Food and drink",
+              "owner": "Amina Okafor",
+              "value": 86000,
+              "stage": "won",
+              "last": "Oct 24"
+            },
+            {
+              "company": "Medina Textiles",
+              "industry": "Manufacturing",
+              "owner": "Yasmine Ben Ali",
+              "value": 31200,
+              "stage": "qualified",
+              "last": "Oct 23"
+            },
+            {
+              "company": "Cedar Clinics",
+              "industry": "Healthcare",
+              "owner": "Omar Farouk",
+              "value": 9800,
+              "stage": "new",
+              "last": "Oct 22"
+            },
+            {
+              "company": "Blue Coast Hotels",
+              "industry": "Hospitality",
+              "owner": "Karim Haddad",
+              "value": 62000,
+              "stage": "proposal",
+              "last": "Oct 21"
+            },
+            {
+              "company": "Highland Coffee",
+              "industry": "Food and drink",
+              "owner": "Amina Okafor",
+              "value": 18900,
+              "stage": "qualified",
+              "last": "Oct 20"
+            },
+            {
+              "company": "Delta Engineering",
+              "industry": "Construction",
+              "owner": "Omar Farouk",
+              "value": 21000,
+              "stage": "new",
+              "last": "Oct 18"
+            },
+            {
+              "company": "Oasis Retail",
+              "industry": "Retail",
+              "owner": "Karim Haddad",
+              "value": 6400,
+              "stage": "lost",
+              "last": "Oct 16"
+            }
+          ]
+        },
+        "analytics": {
+          "title": "Sales report",
+          "export": "Export",
+          "ranges": {
+            "week": "Last 7 days",
+            "month": "Last 30 days",
+            "quarter": "This quarter"
+          },
+          "kpis": {
+            "pipeline": "Open pipeline",
+            "won": "Won",
+            "winRate": "Win rate",
+            "cycle": "Average deal cycle"
+          },
+          "days": "{count} days",
+          "chartTitle": "Revenue won",
+          "current": "This period",
+          "previous": "Previous period",
+          "funnelTitle": "Deals by stage"
+        },
+        "agent": {
+          "runs": "Runs",
+          "title": "Prepare the weekly pipeline review",
+          "running": "Running",
+          "waiting": "Waiting for you",
+          "done": "Done",
+          "plan": "Plan, 5 steps",
+          "steps": [
+            {
+              "title": "Pull this week's deals",
+              "text": "From the CRM, every stage",
+              "tool": "crm.query"
+            },
+            {
+              "title": "Find deals with no contact in 14 days",
+              "text": "4 deals need a follow-up",
+              "tool": "crm.search"
+            },
+            {
+              "title": "Write the pipeline summary",
+              "text": "Totals, changes and risks on one page",
+              "tool": "docs.write"
+            },
+            {
+              "title": "Send the summary to Karim",
+              "text": "Needs your approval first",
+              "tool": "gmail.send"
+            },
+            {
+              "title": "Book the Monday review",
+              "text": "30 minutes with the sales team",
+              "tool": "calendar.create"
+            }
+          ],
+          "progress": "Step {step} of 5",
+          "skipped": "Skipped",
+          "again": "Run again",
+          "needs": "Needs your input",
+          "nothing": "Nothing needs you yet",
+          "nothingText": "The agent asks here before it sends or books anything.",
+          "approveTitle": "Send the summary to Karim?",
+          "approveText": "Weekly pipeline review, one page, 4 follow-ups listed.",
+          "approve": "Approve and send",
+          "reject": "Not now",
+          "approved": "Approved. The summary is on its way to Karim.",
+          "rejected": "Not sent. The summary stays in your drafts.",
+          "details": "Details",
+          "agentLabel": "Agent",
+          "agentName": "Pipeline review",
+          "trigger": "Runs",
+          "triggerValue": "Every Friday, 4 pm",
+          "calls": "Tool calls"
+        },
+        "assistant": {
+          "greeting": "Good afternoon! What's next on your list?",
+          "placeholder": "Ask about a customer, a deal or your pipeline...",
+          "plugins": "Plugins",
+          "auto": "Auto",
+          "connect": "Connect apps",
+          "newChat": "New chat",
+          "working": "Agents working",
+          "agents": [
+            "CRM search",
+            "Email history",
+            "Writer"
+          ],
+          "chats": [
+            {
+              "chip": "Follow up on stalled deals",
+              "reply": "4 deals have had no contact for 14 days or more. I drafted a short follow-up for each one. Pick the ones to send.",
+              "panel": "Stalled deals",
+              "items": [
+                {
+                  "title": "Blue Coast Hotels",
+                  "text": "€62,000, proposal, 18 days"
+                },
+                {
+                  "title": "Medina Textiles",
+                  "text": "€31,200, qualified, 15 days"
+                },
+                {
+                  "title": "Highland Coffee",
+                  "text": "€18,900, qualified, 14 days"
+                }
+              ]
+            },
+            {
+              "chip": "Summarise my week",
+              "reply": "You closed Sahel Foods (€86,000), moved Nour Pharma to negotiation and added 3 new leads. Two proposals are waiting for an answer.",
+              "panel": "This week",
+              "items": [
+                {
+                  "title": "Won",
+                  "text": "Sahel Foods, €86,000"
+                },
+                {
+                  "title": "Moved",
+                  "text": "Nour Pharma to negotiation"
+                },
+                {
+                  "title": "New leads",
+                  "text": "Cedar Clinics, Delta Engineering and 1 more"
+                }
+              ]
+            },
+            {
+              "chip": "Prepare my call with Nour Pharma",
+              "reply": "Here is a one-page brief: their open quote, the last three emails and the questions they asked about delivery times.",
+              "panel": "Call brief",
+              "items": [
+                {
+                  "title": "Open quote",
+                  "text": "€48,000, sent Oct 20"
+                },
+                {
+                  "title": "Last email",
+                  "text": "Asked about delivery to Sfax"
+                },
+                {
+                  "title": "Decision maker",
+                  "text": "Head of purchasing"
+                }
+              ]
+            },
+            {
+              "chip": "Find duplicate contacts",
+              "reply": "I found 6 contacts that look like duplicates. Nothing is merged until you confirm each pair.",
+              "panel": "Possible duplicates",
+              "items": [
+                {
+                  "title": "K. Haddad and Karim Haddad",
+                  "text": "Same phone number"
+                },
+                {
+                  "title": "Sahel Foods and Sahel Food",
+                  "text": "Same website"
+                },
+                {
+                  "title": "y.benali@ and yasmine.benali@",
+                  "text": "Same name, two emails"
+                }
+              ]
+            }
+          ]
+        },
+        "evals": {
+          "title": "Lead scoring prompt",
+          "version": "v12 current",
+          "lastRun": "Last run 2 hours ago",
+          "run": "Run eval",
+          "running": "Running...",
+          "kpis": {
+            "pass": "Pass rate",
+            "score": "Average score",
+            "time": "Answer time",
+            "cost": "Cost per 1,000 runs"
+          },
+          "vs": "vs v11",
+          "chartTitle": "Pass rate by version",
+          "chartNote": "Last 12 versions, same test cases each time",
+          "changes": "Changes in v12",
+          "diff": [
+            {
+              "t": "Score each new lead from 1 to 5 "
+            },
+            {
+              "del": "based on company size"
+            },
+            {
+              "ins": "based on budget, timing and fit with what we sell"
+            },
+            {
+              "t": ". "
+            },
+            {
+              "del": "Always reply in English."
+            },
+            {
+              "ins": "Reply in the language the lead wrote in."
+            },
+            {
+              "t": " If key details are missing, "
+            },
+            {
+              "del": "guess"
+            },
+            {
+              "ins": "ask one short question"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "cases": "Test cases",
+          "filters": {
+            "all": "All",
+            "pass": "Pass",
+            "partial": "Partial",
+            "fail": "Fail"
+          },
+          "columns": {
+            "input": "Lead message",
+            "expected": "Expected",
+            "score": "Result"
+          },
+          "items": [
+            {
+              "id": "TC-01",
+              "input": "Pharma distributor, 120 staff, needs a quote by Friday",
+              "expected": "5, call today",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-02",
+              "input": "Bonjour, nous cherchons un CRM pour 8 commerciaux.",
+              "expected": "4, reply in French",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-03",
+              "input": "Just browsing, student project",
+              "expected": "1, polite reply",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-04",
+              "input": "Hotel group, 4 sites, no budget given",
+              "expected": "3, ask about budget",
+              "result": "partial",
+              "score": "3/5"
+            },
+            {
+              "id": "TC-05",
+              "input": "نريد ربط المتجر الإلكتروني بنظام المحاسبة",
+              "expected": "4, reply in Arabic",
+              "result": "pass",
+              "score": "4/5"
+            },
+            {
+              "id": "TC-06",
+              "input": "Can you also do our payroll?",
+              "expected": "2, explain it is out of scope",
+              "result": "fail",
+              "score": "1/5"
+            }
+          ],
+          "justNow": "Last run just now"
+        },
+        "settings": {
+          "title": "Settings",
+          "subtitle": "Manage your team, your pipeline and your plan.",
+          "tabs": {
+            "members": "Members",
+            "pipeline": "Pipeline",
+            "billing": "Billing"
+          },
+          "invite": "Invite",
+          "roles": {
+            "admin": "Admin",
+            "sales": "Sales",
+            "viewer": "Viewer"
+          },
+          "roleLabel": "Role for {name}",
+          "members": [
+            {
+              "name": "Alex Morgan",
+              "email": "alex@acme.example",
+              "role": "admin"
+            },
+            {
+              "name": "Yasmine Ben Ali",
+              "email": "yasmine@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Karim Haddad",
+              "email": "karim@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Amina Okafor",
+              "email": "amina@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Omar Farouk",
+              "email": "omar@acme.example",
+              "role": "viewer"
+            }
+          ],
+          "pipelineText": "The stages your deals move through, in order.",
+          "addStage": "Add stage",
+          "newStage": "New stage",
+          "billing": {
+            "plan": "Team plan",
+            "renews": "Renews on Nov 12",
+            "seats": "Seats",
+            "seatsValue": "8 of 10",
+            "storage": "Storage",
+            "storageValue": "42 of 100 GB",
+            "ai": "AI credits this month",
+            "aiValue": "34,000 of 50,000"
+          }
+        },
+        "title": "Try the demo",
+        "intro": "A CRM we designed to show how we work. Click through the screens, move a deal, approve the agent's email, filter the test cases."
+      },
       "features": [
         {
           "title": "Your sales stages, not defaults",
@@ -960,13 +1974,23 @@
         {
           "title": "Reports managers trust",
           "text": "Pipeline, forecast and team activity shown in dashboards built from live data."
+        },
+        {
+          "title": "Roles and permissions",
+          "text": "Each person sees the customers and figures their role allows."
+        },
+        {
+          "title": "Works on any screen",
+          "text": "The same CRM on a laptop in the office or a phone on the road."
+        },
+        {
+          "title": "In your languages",
+          "text": "Arabic, French and English, with right-to-left layouts where needed."
+        },
+        {
+          "title": "Your data stays yours",
+          "text": "Export everything at any time, hosted where you choose."
         }
-      ],
-      "useCases": [
-        "Moving a sales team off shared spreadsheets into one CRM",
-        "Cleaning up a HubSpot or Salesforce account nobody trusts any more",
-        "A custom CRM for a business that sells through distributors and agents",
-        "Linking the CRM to invoicing so sales can see payment status"
       ],
       "faq": {
         "title": "Questions about CRM setup and development",

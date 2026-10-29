@@ -1,7 +1,17 @@
+import type React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { IconCircleCheckFilled } from "@tabler/icons-react";
+import {
+  IconArrowDown,
+  IconChecklist,
+  IconMessageChatbot,
+  IconPlugConnected,
+  IconSparkles,
+  IconUserCheck,
+  IconUsersGroup,
+  type Icon,
+} from "@tabler/icons-react";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
@@ -10,10 +20,18 @@ import { Card } from "@/components/features/card";
 import { CtaSection } from "@/components/cta-section";
 import { FAQs } from "@/components/faqs";
 import { JsonLd } from "@/components/json-ld";
+import { Reveal, RevealItem, RevealList } from "@/components/reveal";
+import { AgentGraph } from "@/components/services/agent-graph";
 import { Breadcrumbs } from "@/components/services/breadcrumbs";
+import { ChatbotDemo } from "@/components/services/chatbot-demo";
+import { Clients } from "@/components/services/clients";
+import { AssistantCard } from "@/components/services/chatbots";
+import { CrmDemo } from "@/components/services/crm-demo";
 import { Delivery } from "@/components/services/delivery";
+import { DemoStage } from "@/components/services/demo-stage";
 import { ServiceCards } from "@/components/services/service-cards";
-import { Examples, Explainer, Included } from "@/components/services/service-sections";
+import { Examples, Explainer, Features, Included, Levels, UseCases } from "@/components/services/service-sections";
+import { ArchitectureDiagram } from "@/components/services/system-graph";
 import { HeroVideo } from "@/components/services/showcase-video";
 import { MotionDesignHero, MotionDesignStory, MotionOffer } from "@/components/services/motion-design";
 import { ServiceVisual } from "@/components/services/visuals";
@@ -29,9 +47,47 @@ import {
   servicePath,
   serviceSlugs,
   site,
+  type ServiceSlug,
 } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string; category: string; slug: string }> };
+
+// Pages that go further than the standard layout. Each piece is optional:
+// heroVisual     beside the hero text (instead of the category visual)
+// wideHero       full width under the hero text
+// sections       own sections right after the hero
+// levelIcons     one icon per item of the `levels` copy
+// useCasesAside  a visual next to the use cases
+// marquee        key features as a marquee
+// demo           an interactive demo, last before the FAQ, opened by a "See the demo" button
+// A page with any of these skips the general "How we deliver" section.
+type Extras = {
+  heroVisual?: React.ComponentType;
+  wideHero?: React.ComponentType;
+  sections?: React.ComponentType<{ slug: ServiceSlug }>[];
+  levelIcons?: Icon[];
+  useCasesAside?: React.ComponentType;
+  marquee?: boolean;
+  demo?: React.ComponentType;
+};
+
+const extras: Partial<Record<ServiceSlug, Extras>> = {
+  chatbots: {
+    heroVisual: ChatbotDemo,
+    levelIcons: [IconMessageChatbot, IconPlugConnected, IconSparkles],
+    useCasesAside: AssistantCard,
+  },
+  "ai-agents": {
+    wideHero: AgentGraph,
+    levelIcons: [IconChecklist, IconPlugConnected, IconUserCheck, IconUsersGroup],
+  },
+  "crm-development": {
+    heroVisual: ArchitectureDiagram,
+    sections: [Clients],
+    marquee: true,
+    demo: CrmDemo,
+  },
+};
 
 export const dynamicParams = false;
 
@@ -62,12 +118,17 @@ export default async function ServicePage({ params }: Props) {
   const tServices = await getTranslations("services");
   const tCategory = await getTranslations(`serviceCategories.${category}`);
   const tCommon = await getTranslations("common");
-  const features = t.raw("features") as { title: string; text: string }[];
-  const useCases = t.raw("useCases") as string[];
   const faqs = t.raw("faq.items") as { question: string; answer: string }[];
   const media = serviceMedia[slug];
   // Video and motion design shows the craft itself: its own hero and scroll-driven story.
   const motionPage = slug === "video-motion" && media?.hero;
+  const page = extras[slug];
+  const HeroVisual = page?.heroVisual;
+  const WideHero = page?.wideHero;
+  const UseCasesAside = page?.useCasesAside;
+  const Demo = page?.demo;
+  // Without a visual beside it, the hero text spreads over both columns.
+  const textOnlyHero = Boolean(page && !HeroVisual && !media?.hero);
   const siblings = serviceCategories
     .find((c) => c.slug === category)!
     .services.filter((service) => service !== slug);
@@ -115,72 +176,72 @@ export default async function ServicePage({ params }: Props) {
           <Container>
             <Breadcrumbs label={tServices("breadcrumb")} items={breadcrumbs} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-8">
-              <div>
-                <Heading as="h1">{t("title")}</Heading>
-                <Subheading className="py-8">{t("intro")}</Subheading>
-                <Button asChild>
-                  <Link href="/contact">{tCommon("startProject")}</Link>
-                </Button>
-              </div>
+              <RevealList
+                as="div"
+                className={textOnlyHero ? "lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-10 lg:items-end" : undefined}
+              >
+                <RevealItem as="div">
+                  <Heading as="h1">{t("title")}</Heading>
+                </RevealItem>
+                <RevealItem as="div">
+                  <Subheading className={textOnlyHero ? "py-8 lg:pt-0" : "py-8"}>{t("intro")}</Subheading>
+                  <div className="flex flex-wrap gap-3">
+                    <Button asChild>
+                      <Link href="/contact">{tCommon("startProject")}</Link>
+                    </Button>
+                    {Demo && (
+                      <Button asChild variant="outline" className="border border-neutral-200 dark:border-neutral-700">
+                        <a href="#demo">
+                          {tServices("seeDemo")}
+                          <IconArrowDown />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </RevealItem>
+              </RevealList>
               {media?.hero ? (
                 <HeroVideo video={media.hero} label={t("title")} />
-              ) : (
+              ) : HeroVisual ? (
+                <Reveal delay={0.25}>
+                  <HeroVisual />
+                </Reveal>
+              ) : page ? null : (
                 <Card className="w-full rounded-3xl">
                   <ServiceVisual slug={slug} />
                 </Card>
               )}
             </div>
+            {WideHero && (
+              <Reveal delay={0.3} className="mt-10 md:mt-16">
+                <WideHero />
+              </Reveal>
+            )}
           </Container>
         </section>
       )}
 
+      {page?.sections?.map((Section, index) => <Section key={index} slug={slug} />)}
       {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} />}
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
       {t.has("included") && <Included slug={slug} />}
+      {t.has("levels") && <Levels slug={slug} icons={page?.levelIcons ?? []} />}
 
-      <section className="pt-10 md:pt-20 lg:pt-32">
-        <Container>
-          <Heading>{tServices("featuresTitle")}</Heading>
-          <div className="grid grid-cols-1 md:grid-cols-2 border-y border-neutral-200 dark:border-neutral-800 mt-10 md:mt-16">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className={[
-                  "p-4 md:p-8 border-neutral-200 dark:border-neutral-800",
-                  index % 2 === 0 ? "md:border-r" : "",
-                  index < 2 ? "border-b" : index === 2 ? "border-b md:border-b-0" : "",
-                ].join(" ")}
-              >
-                <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
-                  {feature.title}
-                </h3>
-                <p className="text-neutral-600 dark:text-neutral-400 mt-2 max-w-md text-balance">
-                  {feature.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <Features slug={slug} marquee={page?.marquee} />
+      {t.has("useCases") && <UseCases slug={slug} aside={UseCasesAside ? <UseCasesAside /> : undefined} />}
 
-      <section className="pt-10 md:pt-20 lg:pt-32">
-        <Container>
-          <Heading>{tServices("useCasesTitle")}</Heading>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 md:mt-16">
-            {useCases.map((useCase) => (
-              <li
-                key={useCase}
-                className="flex items-center gap-3 rounded-2xl bg-neutral-100 dark:bg-neutral-800 p-4 md:p-6 font-medium"
-              >
-                <IconCircleCheckFilled className="size-5 shrink-0 text-neutral-500" />
-                {useCase}
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+      {motionPage ? <MotionOffer /> : !page && <Delivery />}
 
-      {motionPage ? <MotionOffer /> : <Delivery />}
+      {Demo && (
+        <DemoStage
+          title={t("demo.title")}
+          intro={t("demo.intro")}
+          close={tServices("closeDemo")}
+          expand={tServices("expandDemo")}
+        >
+          <Demo />
+        </DemoStage>
+      )}
 
       <FAQs namespace={`servicePages.${slug}.faq`} />
 

@@ -73,6 +73,7 @@ proxy.ts                       next-intl locale detection (Next 16 name for midd
 - Six categories with their services, defined once in `serviceCategories` (`lib/site.ts`). Build links with `categoryPath()` / `servicePath()`, never by hand.
 - Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items as FAQPage JSON-LD). Optional sections render when their copy exists: `explainer`, `examples`, `included`.
 - **One card everywhere:** `ServiceCard` / `ServiceCards` (`components/services/service-cards.tsx`) on the home panel, overview, hubs and "More in". Its top is `ServiceCardMedia`: a free-license Unsplash photo (`service-photos.ts`) or an animated visual (`card-visuals.tsx`), plus tool logos. The desktop Services menu previews the same media on hover.
+- **Deeper service pages:** the `extras` map in `app/[locale]/services/[category]/[slug]/page.tsx` adds a hero visual, a wide visual under the hero, own sections, level icons, a use-case aside, a features marquee or a demo per slug; such pages skip "How we deliver". Copy-driven sections (`explainer`, `levels`, `useCases`, `included`, `examples`) render only when their copy exists.
 - **Adding a service:** slug in its category, copy in `messages/en.json`, icon in `components/service-icons.tsx`, photo or visual in `service-card-media.tsx`, update the "29 services" figure in `home.figures`.
 - Each category has a soft tint (pastel light, deep tone dark), only in `components/services/category-tints.ts`.
 
@@ -84,16 +85,18 @@ Reusable pieces:
 
 | Need | Use |
 |---|---|
-| Entrance on scroll (fade, lift, unblur, once) | `Reveal` (`components/reveal.tsx`); `ServiceCards reveal` staggers cards |
+| Entrance on scroll (fade, lift, unblur, once) | `Reveal` (`components/reveal.tsx`); `RevealList` + `RevealItem` stagger a list; `ServiceCards reveal` staggers cards |
 | Letters springing up from a mask | `LetterReveal` (`components/ui/letter-reveal.tsx`) |
 | Two faces flipping in 3D | `FlipCard` (`components/ui/flip-card.tsx`) |
 | Before/after drag comparison (sweeps once on view) | `BeforeAfter` (`components/ui/before-after.tsx`) |
 | Small animated UI at a fixed size, scaled to its box | `Canvas` in `components/services/card-visuals.tsx` (480 x 270, plays only in view, `useStep` / `useTyping` helpers) |
 | Video that plays only on screen, no controls | `HeroVideo`, `DoorVideo`, `usePlayWhileVisible` (`components/services/showcase-video.tsx`) |
 | A UI drawn as a function of time (editor building a card) | `BusinessCard` (`components/services/business-card.tsx`) |
+| Node graph that builds in, runs beams along its lines, popover per node | `NodeGraph` (`components/services/node-graph.tsx`) fed a `GraphSpec` (tiles, labelled diagram boxes with logos, dashed zones); see `agent-graph.tsx`, `system-graph.tsx` |
+| Interactive demo that pins centred over the page (Esc / X to release, `#demo` opens it) | `DemoStage` (`components/services/demo-stage.tsx`); no transformed or filtered ancestor |
 | Simple infinite loops | CSS keyframes in `app/globals.css` (with a reduced-motion block next to each) |
 
-**affectUI illustrations** (affectui.com) are added with `pnpm dlx shadcn@latest add https://www.affectui.com/r/<name>.json`. Before installing, fetch the JSON and read the file: it must be a single self-contained component with no network, storage or eval code. They land in `components/<name>.tsx`; wrap them in `Canvas` to size them.
+**affectUI illustrations** (affectui.com) are added with `pnpm dlx shadcn@latest add https://www.affectui.com/r/<name>.json`. Before installing, fetch the JSON and read the file: it must be a single self-contained component with no network, storage or eval code. They land in `components/<name>.tsx` (UI pieces like `tool-call-card-clean` in `components/ui/`); wrap illustrations in `Canvas` to size them.
 
 **Reduced motion and hydration:** `useReducedMotion()` differs between server and client. Switching only styles is fine; to render a different *layout* for reduced motion, wait for a `mounted` flag set in an effect, or React throws a hydration error.
 
