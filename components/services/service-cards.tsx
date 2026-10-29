@@ -4,6 +4,7 @@ import { servicePath, type ServiceSlug } from "@/lib/site";
 import { serviceIcons } from "@/components/service-icons";
 import { cn } from "@/lib/utils";
 import { ServiceCardMedia } from "./service-card-media";
+import { Reveal } from "@/components/reveal";
 
 // The service card used everywhere: the home category panel, the services overview, the
 // category hubs and "More in" on service pages. A photo or animated visual on top, then the
@@ -33,17 +34,27 @@ export const ServiceCard = ({ slug }: { slug: ServiceSlug }) => {
   );
 };
 
+// `reveal`: the cards rise into place one after another as they scroll into view (services
+// pages). Off in the home panel, whose cards sit on the hidden face of a flip card.
 export const ServiceCards = ({
   services,
   className,
+  reveal = false,
 }: {
   services: readonly ServiceSlug[];
   className?: string;
+  reveal?: boolean;
 }) => (
   <ul className={cn("grid grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-3", className)}>
-    {services.map((slug) => (
+    {services.map((slug, index) => (
       <li key={slug}>
-        <ServiceCard slug={slug} />
+        {reveal ? (
+          <Reveal delay={(index % 3) * 0.08} className="h-full">
+            <ServiceCard slug={slug} />
+          </Reveal>
+        ) : (
+          <ServiceCard slug={slug} />
+        )}
       </li>
     ))}
   </ul>

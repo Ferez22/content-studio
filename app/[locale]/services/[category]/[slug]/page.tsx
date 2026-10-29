@@ -187,7 +187,7 @@ export default async function ServicePage({ params }: Props) {
       <section>
         <Container>
           <Heading>{tServices("relatedTitle", { category: tCategory("title") })}</Heading>
-          <ServiceCards services={siblings} className="mt-10 md:mt-16" />
+          <ServiceCards services={siblings} className="mt-10 md:mt-16" reveal />
         </Container>
       </section>
 

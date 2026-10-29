@@ -4,6 +4,9 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-10-28
 
+- Services menu: a subtle opening (fade, small lift, slight unblur) with the elements inside cascading in; the gap under the navbar now belongs to the menu, so the hover is not lost on the way down
+- Services overview: a sticky list of the categories on the left (reusing the blog's table of contents; collapsible above the sections on phones) that scrolls to each section and highlights the one in view; category headers and service cards reveal as they scroll into view (also on hubs and "More in")
+
 - Desktop services menu: a square preview on the left (from xl) shows the hovered service's card media, with its title and summary; the menu is now centred on the page instead of on the Services link (it overflowed the left edge at 1024 to 1280px)
 
 - Motion design page content: before/after slider (`components/ui/before-after.tsx`, sweeps once on view) comparing Fares's business card still and building itself in an editor (cursor adds, edits, publishes); "Content that feels alive" with the JayScambler film; "Looks like your brand" with our own Qartmina brand film (`assets/motion/qartmina-brand`, rendered with the now shared `assets/motion/render.py <name>`); benefit cards load one after another; "Your video engine" (AI system from brand to launch schedule); an offer section instead of "How we deliver"; features and use cases about ads, launches and social content; "How we work" removed

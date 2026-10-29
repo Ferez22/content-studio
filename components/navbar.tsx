@@ -228,13 +228,14 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
               </Link>
               {active === item.key && (
                 // Full-width strip under the navbar (anchored to the sticky wrapper), so the wide
-                // menu is centred on the page. Only the menu itself takes the pointer.
-                <div className="pointer-events-none absolute inset-x-0 top-full flex justify-center pt-6">
+                // menu is centred on the page. Only the menu takes the pointer, including the gap
+                // above it (its padding), so the hover is not lost on the way down.
+                <div className="pointer-events-none absolute inset-x-0 top-full flex justify-center">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.85, y: 10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={menuSpring}
-                    className="pointer-events-auto origin-top"
+                    initial={{ opacity: 0, scale: 0.98, y: 8, filter: "blur(4px)" }}
+                    animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    className="pointer-events-auto origin-top pt-6"
                   >
                     <motion.div
                       transition={menuSpring}
@@ -271,6 +272,13 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
   );
 };
 
+// Elements inside the services menu come in one after another: a short rise and unblur.
+const menuItem = (delay: number) => ({
+  initial: { opacity: 0, y: 6, filter: "blur(3px)" },
+  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  transition: { duration: 0.3, delay, ease: [0.16, 1, 0.3, 1] as const },
+});
+
 // Desktop: the six categories in three columns, each with its services. Plain text links:
 // an underline draws in and an arrow appears on hover. From xl, a square preview on the left
 // shows the hovered service's card media (a category shows its first service).
@@ -281,7 +289,7 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
   const [preview, setPreview] = useState<ServiceSlug>(serviceCategories[0].services[0]);
   return (
     <div className="flex gap-7 p-2">
-      <div className="hidden xl:block w-60 shrink-0">
+      <motion.div {...menuItem(0.04)} className="hidden xl:block w-60 shrink-0">
         <div className="relative aspect-square overflow-hidden rounded-xl ring-1 ring-black/5 dark:ring-white/10 bg-neutral-100 dark:bg-neutral-900">
           <AnimatePresence initial={false}>
             <motion.div
@@ -300,15 +308,13 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
         <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 line-clamp-3">
           {tServices(`${preview}.summary`)}
         </p>
-      </div>
+      </motion.div>
     <div className="w-[48rem]">
       <div className="grid grid-cols-3 gap-x-8 gap-y-7">
         {serviceCategories.map(({ slug, services }, index) => (
           <motion.div
             key={slug}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.05 + index * 0.04 }}
+            {...menuItem(0.06 + index * 0.04)}
           >
             <MenuLink
               href={categoryPath(slug)}
@@ -319,8 +325,8 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
               {tCategories(`${slug}.title`)}
             </MenuLink>
             <ul className="mt-2 flex flex-col">
-              {services.map((service) => (
-                <li key={service}>
+              {services.map((service, position) => (
+                <motion.li key={service} {...menuItem(0.1 + index * 0.04 + position * 0.03)}>
                   <MenuLink
                     href={servicePath(service)}
                     onClick={onNavigate}
@@ -329,13 +335,13 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
                   >
                     {tServices(`${service}.title`)}
                   </MenuLink>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
         ))}
       </div>
-      <div className="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+      <motion.div {...menuItem(0.35)} className="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
         <MenuLink
           href="/services"
           onClick={onNavigate}
@@ -343,7 +349,7 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
         >
           {t("allServices")}
         </MenuLink>
-      </div>
+      </motion.div>
     </div>
     </div>
   );

@@ -286,7 +286,8 @@
       "tapHint": "Tap to play",
       "playLabel": "Play example: {title}",
       "disclaimer": "These examples were made by independent creators with AI and shared on Prompt Motion. We show them to illustrate the format; they are not Qartmina projects."
-    }
+    },
+    "toc": "Categories"
   },
   "serviceCategories": {
     "ai": {

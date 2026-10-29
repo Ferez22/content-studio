@@ -81,7 +81,7 @@ export default async function CategoryPage({ params }: Props) {
       <section className="pt-10 md:pt-20 lg:pt-32">
         <Container>
           <Heading>{tServices("categoryServicesTitle")}</Heading>
-          <ServiceCards services={services} className="mt-10 md:mt-16" />
+          <ServiceCards services={services} className="mt-10 md:mt-16" reveal />
         </Container>
       </section>
 
