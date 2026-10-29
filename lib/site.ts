@@ -34,7 +34,7 @@ export const serviceCategories = [
     slug: "software-development",
     services: [
       "crm-development",
-      "erp-development",
+      "erp-crm-setup",
       "business-apps",
       "mobile-apps",
       "cloud-migration",
@@ -81,6 +81,8 @@ export const legacyServiceSlugs: Record<string, ServiceSlug> = {
   consulting: "ai-consulting",
   training: "ai-training",
   chatbots: "chatbots",
+  // Replaced by ERP and CRM setup (2026-10-29).
+  "software-development/erp-development": "erp-crm-setup",
 };
 
 // Partner program pages, one per partner type: /partners/<slug>.

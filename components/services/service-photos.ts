@@ -17,7 +17,7 @@ export const servicePhotos: Record<ServiceSlug, string> = {
   shopify: "https://images.unsplash.com/photo-1773146916231-e6aeae932080",
   "website-care": "https://images.unsplash.com/photo-1573164713988-8665fc963095",
   "crm-development": "https://images.unsplash.com/photo-1758691737124-05c5bffe46f0",
-  "erp-development": "https://images.unsplash.com/photo-1664382953403-fc1ac77073a0",
+  "erp-crm-setup": "https://images.unsplash.com/photo-1664382953403-fc1ac77073a0",
   "business-apps": "https://images.unsplash.com/photo-1648824572347-517357c9c44e",
   "mobile-apps": "https://images.unsplash.com/photo-1551650975-87deedd944c3",
   "cloud-migration": "https://images.unsplash.com/photo-1784652852605-6945598f2af3",

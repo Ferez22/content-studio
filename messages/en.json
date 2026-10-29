@@ -290,7 +290,8 @@
     "toc": "Categories",
     "seeDemo": "See the demo",
     "closeDemo": "Close the demo",
-    "expandDemo": "Open full screen"
+    "expandDemo": "Open full screen",
+    "platformsTitle": "Platforms we set up and support"
   },
   "serviceCategories": {
     "ai": {
@@ -2010,49 +2011,152 @@
         ]
       }
     },
-    "erp-development": {
-      "title": "ERP development",
-      "metaTitle": "ERP implementation and Odoo development",
-      "summary": "ERP software set up for your finance, stock, purchasing and HR, from Odoo implementation to custom modules and migration off spreadsheets.",
-      "intro": "An ERP (enterprise resource planning system) is the software that runs the back office: accounts, stock, purchasing, payroll and HR in one place. Many growing companies still run these on spreadsheets only one person understands. We implement and customise ERPs, often Odoo, which is widely used in the region, and move your data across without stopping daily operations.",
+    "erp-crm-setup": {
+      "title": "ERP and CRM setup",
+      "metaTitle": "HubSpot, Salesforce and Odoo setup and support",
+      "summary": "We set up mainstream CRMs and ERPs like HubSpot, Salesforce and Odoo for your company, bring your data in, train your team and stay on after go-live.",
+      "intro": "Buying a CRM or an ERP is easy. Getting the team to use it is the hard part. We set up platforms like HubSpot, Salesforce, Zoho or Odoo around how you work, train your people and stay with you after go-live.",
+      "stats": {
+        "title": "What a well-run CRM changes",
+        "intro": "Published figures from the vendors and from independent analysts. The pattern is the same: the gain comes from the team actually using it.",
+        "note": "Most of these figures come from the vendors' own data or from studies they paid for (only Nucleus Research is independent of the product). They show what is possible, not a promise: results depend on the setup and on adoption.",
+        "guide": {
+          "label": "How to choose a CRM",
+          "href": "/blog/how-to-choose-a-crm"
+        },
+        "items": [
+          {
+            "value": "94%",
+            "label": "more deals closed after six months on HubSpot Sales Hub, compared with the customer's own first quarter (81,528 customers).",
+            "source": "HubSpot ROI Report 2025",
+            "url": "https://www.hubspot.com/roi"
+          },
+          {
+            "value": "4x",
+            "label": "more deals closed by HubSpot customers who work with an implementation partner than by those who do not.",
+            "source": "HubSpot ROI Report 2025",
+            "url": "https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Data%20Assets%20Repository/ROI%20Report%202025/HubSpot%20ROI%20Report%202025.pdf"
+          },
+          {
+            "value": "$3.10",
+            "label": "returned for every dollar spent on a CRM, on average across 11 case studies in 2023.",
+            "source": "Nucleus Research, 2024",
+            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+          },
+          {
+            "value": "51%",
+            "label": "of that return comes from time saved and smoother processes, more than from new revenue.",
+            "source": "Nucleus Research, 2024",
+            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+          },
+          {
+            "value": "26%",
+            "label": "higher employee productivity, as estimated by 3,706 Salesforce customers in a 2022 survey.",
+            "source": "Salesforce, 2022",
+            "url": "https://www.salesforce.com/news/press-releases/2022/11/07/companies-report-cost-savings-with-salesforce/"
+          },
+          {
+            "value": "209%",
+            "label": "return over three years and payback in under six months for a modelled 300-person company on Dynamics 365 Business Central.",
+            "source": "Forrester TEI for Microsoft, 2026",
+            "url": "https://tei.forrester.com/go/microsoft/Dynamics365BusinessCentral/"
+          }
+        ]
+      },
       "features": [
         {
-          "title": "Process first, software second",
-          "text": "We map how money, stock and approvals move today before configuring anything."
+          "title": "Help choosing the platform",
+          "text": "We compare the options for your size, budget and processes, and say when a cheaper plan is enough."
         },
         {
-          "title": "Modules for local rules",
-          "text": "Custom modules where you need local tax, invoicing or reporting formats."
+          "title": "Set up for how you work",
+          "text": "Pipelines, fields, permissions and automations configured for your process, not left on the defaults."
         },
         {
-          "title": "Migration in stages",
-          "text": "Opening balances, products and suppliers moved and reconciled one area at a time."
+          "title": "Your data moved in cleanly",
+          "text": "Contacts, deals and history imported from spreadsheets or your old system, with duplicates removed."
         },
         {
-          "title": "One set of figures",
-          "text": "Finance, sales and the warehouse all work from the same numbers."
+          "title": "Training and support after go-live",
+          "text": "Short training by role, a written guide, and someone to ask when questions come up."
         }
       ],
       "useCases": [
-        "A distributor replacing stock spreadsheets with Odoo inventory and purchasing",
-        "Moving accounting from an old desktop program to a cloud ERP",
-        "Extra approval steps for purchase orders above a set amount",
-        "Connecting the ERP to the online store and the sales team's CRM"
+        {
+          "title": "Your first CRM after spreadsheets",
+          "text": "Pick the right platform, import your contacts and deals, and get the sales team working in it within weeks."
+        },
+        {
+          "title": "A CRM nobody uses",
+          "text": "Clean up an existing HubSpot, Salesforce or Zoho account so the fields, stages and reports make sense again."
+        },
+        {
+          "title": "Odoo for the back office",
+          "text": "Stock, purchasing and invoicing in Odoo, set up module by module without stopping daily work."
+        },
+        {
+          "title": "Moving to another platform",
+          "text": "Switch from one CRM or ERP to another with your history intact and both systems checked side by side."
+        }
       ],
-      "faq": {
-        "title": "Questions about ERP and Odoo projects",
+      "stories": {
+        "title": "What companies in the region say",
+        "intro": "Companies in Kenya, Egypt, the UAE and Jordan on what changed when they introduced their CRM or ERP.",
+        "note": "Quotes from case studies published by Odoo, Zoho and Microsoft. These companies are not Qartmina clients.",
+        "readStory": "Read the story",
         "items": [
           {
-            "question": "How long does an ERP implementation take?",
-            "answer": "It depends on how many departments go live and how clean your current data is. We usually start with one or two areas, such as stock and purchasing, and add the others once those run smoothly. You get a staged plan with dates before work begins."
+            "quote": "The role of our implementation partner, Animatrix ERP Solutions Ltd, has been very important. Their structured approach, strong understanding of our industry, and ongoing support ensured a smooth transition and high user adoption.",
+            "name": "Qayyum Shiraz, CTO",
+            "company": "Transfreight Logistics",
+            "country": "Kenya",
+            "platform": "odoo",
+            "platformName": "Odoo",
+            "result": "About 30% less manual work, according to Odoo's case study",
+            "url": "https://www.odoo.com/blog/customer-reviews-6/transfreight-logistics-limited-reduced-manual-work-by-30-using-odoo-s-management-system-2308"
           },
           {
-            "question": "Why Odoo?",
-            "answer": "Odoo covers most back-office needs in one system, is widely used across the region and can be extended with custom modules. It is not always the right fit, and when another ERP suits you better, we say so."
+            "quote": "Zoho One is the best thing that's happened to us. Our recruiters average productivity increased from 25 to 40 tasks per day and our clients serving time decreased from average two weeks to four days",
+            "name": "Mahmoud Salem, Managing Director",
+            "company": "Tawzef",
+            "country": "Egypt",
+            "platform": "zoho",
+            "platformName": "Zoho One",
+            "url": "https://www.zoho.com/one/customers/tawzef.html"
           },
           {
-            "question": "Who looks after the ERP after go-live?",
-            "answer": "Your team runs it day to day, with training by role and a written guide. We stay on through the first month-end closes, when most questions come up, and can continue with a monthly support plan."
+            "quote": "Previously, we lacked a comprehensive view of our processes, customers, and partners. We had to search multiple systems for customer information. Now, with MS Dynamics Platform and Analytics, all details are accessible with a click.",
+            "name": "Shrikant A. Kabboor, Chief Technology Officer",
+            "company": "Arada",
+            "country": "UAE",
+            "platformName": "Dynamics 365",
+            "url": "https://www.microsoft.com/en/customers/story/1736469938408312587-arada-azure-other-unsegmented-en-united-arab-emirates"
+          },
+          {
+            "quote": "Today, with Odoo, everything is clear. I can reserve the car I want, follow the right steps, and keep all my data stored in one place. It saves me effort, time, and provides speed.",
+            "name": "Hamza Al-Radaydah, Sales Supervisor",
+            "company": "Great Wall Motors Jordan",
+            "country": "Jordan",
+            "platform": "odoo",
+            "platformName": "Odoo",
+            "url": "https://www.odoo.com/blog/customer-reviews-6/great-wall-motors-jordan-drives-efficiency-with-odoo-1824"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about ERP and CRM setup",
+        "items": [
+          {
+            "question": "Which CRM should we choose?",
+            "answer": "It depends on your team size, budget and how you sell. HubSpot is easy to start with, Salesforce suits larger and complex sales teams, Pipedrive is simple and visual, and Odoo is strong when you also want stock and invoicing in the same system. We compare them for your case before you buy anything."
+          },
+          {
+            "question": "Whose name is the licence in?",
+            "answer": "Yours. You buy the licence from the vendor in your company's name, so the account and the data stay yours. We work inside it as your setup partner."
+          },
+          {
+            "question": "How long does a setup take?",
+            "answer": "It depends on how many teams start using it and how clean your current data is. We usually start with one team or one process and add the rest once it runs well. You get a plan with dates before we begin."
           }
         ]
       }

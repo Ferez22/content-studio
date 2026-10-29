@@ -1,5 +1,6 @@
 import React from "react";
 import { headingId } from "@/lib/utils";
+import { ToolLogo, type ToolSlug } from "@/icons/tool-logos";
 
 // Plain text of rendered children (bold, links...), so the id matches the table of contents.
 const textOf = (node: React.ReactNode): string => {
@@ -72,6 +73,13 @@ export const mdxComponents = {
     />
   ),
   hr: () => <hr className="my-10 border-neutral-200 dark:border-neutral-800" />,
+  // A brand's logo from icons/tool-logos.tsx (Simple Icons) on a white tile, for posts that
+  // compare products: <Logo tool="hubspot" />. Only for brands whose logo we may show.
+  Logo: ({ tool }: { tool: ToolSlug }) => (
+    <span className="mt-8 -mb-4 flex size-12 items-center justify-center rounded-2xl border border-neutral-200 bg-white dark:border-neutral-700">
+      <ToolLogo tool={tool} className="size-6" />
+    </span>
+  ),
   // Markdown images: ![Alt text](/blog/<slug>/image.png). Files go in public/blog/<slug>/.
   img: ({ alt, ...props }: React.ComponentProps<"img">) => (
     // eslint-disable-next-line @next/next/no-img-element

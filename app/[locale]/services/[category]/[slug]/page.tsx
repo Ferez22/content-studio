@@ -24,6 +24,7 @@ import { Reveal, RevealItem, RevealList } from "@/components/reveal";
 import { AgentGraph } from "@/components/services/agent-graph";
 import { Breadcrumbs } from "@/components/services/breadcrumbs";
 import { ChatbotDemo } from "@/components/services/chatbot-demo";
+import { PlatformsVisual, Stats, Stories } from "@/components/services/proof";
 import { Clients } from "@/components/services/clients";
 import { AssistantCard } from "@/components/services/chatbots";
 import { CrmDemo } from "@/components/services/crm-demo";
@@ -58,6 +59,7 @@ type Props = { params: Promise<{ locale: string; category: string; slug: string 
 // sections       own sections right after the hero
 // levelIcons     one icon per item of the `levels` copy
 // useCasesAside  a visual next to the use cases
+// afterUseCases  own sections after the use cases
 // marquee        key features as a marquee
 // demo           an interactive demo, last before the FAQ, opened by a "See the demo" button
 // A page with any of these skips the general "How we deliver" section.
@@ -69,6 +71,7 @@ type Extras = {
   useCasesAside?: React.ComponentType;
   marquee?: boolean;
   demo?: React.ComponentType;
+  afterUseCases?: React.ComponentType<{ slug: ServiceSlug }>[];
 };
 
 const extras: Partial<Record<ServiceSlug, Extras>> = {
@@ -80,6 +83,11 @@ const extras: Partial<Record<ServiceSlug, Extras>> = {
   "ai-agents": {
     wideHero: AgentGraph,
     levelIcons: [IconChecklist, IconPlugConnected, IconUserCheck, IconUsersGroup],
+  },
+  "erp-crm-setup": {
+    heroVisual: PlatformsVisual,
+    sections: [Stats],
+    afterUseCases: [Stories],
   },
   "crm-development": {
     heroVisual: ArchitectureDiagram,
@@ -229,6 +237,7 @@ export default async function ServicePage({ params }: Props) {
 
       <Features slug={slug} marquee={page?.marquee} />
       {t.has("useCases") && <UseCases slug={slug} aside={UseCasesAside ? <UseCasesAside /> : undefined} />}
+      {page?.afterUseCases?.map((Section, index) => <Section key={index} slug={slug} />)}
 
       {motionPage ? <MotionOffer /> : !page && <Delivery />}
 

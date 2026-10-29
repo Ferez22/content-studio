@@ -22,7 +22,7 @@ const media: Partial<Record<ServiceSlug, { visual?: CardVisualKind; tools?: Tool
   shopify: { visual: "shop" },
   "website-care": { visual: "seo" },
   "crm-development": { visual: "crm" },
-  "erp-development": { visual: "erp" },
+  "erp-crm-setup": { visual: "erp" },
   "business-apps": { visual: "layers" },
   "mobile-apps": { visual: "mobile", tools: ["apple", "android", "flutter"] },
   "cloud-migration": { visual: "cloud" },

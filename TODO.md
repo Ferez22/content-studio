@@ -34,6 +34,10 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 
 ## Content (later)
 
+- [ ] CRM blog (`how-to-choose-a-crm`): product screenshots. No vendor licenses screenshots for this use except Microsoft (unaltered, with "Used with permission from Microsoft") and a monday.com press image without stated terms. Decide: ask vendors, take our own screenshots under Microsoft-style terms, or keep it without images
+- [ ] CRM blog: logos for Pipedrive (press kit says files must be requested), monday.com (pack only has guideline examples), Freshworks (no official download) and Microsoft (needs an express licence). Ask the brands, or keep them as names
+- [ ] CRM blog: re-check prices every few months and bump `updated` (HubSpot Starter promo, Odoo first-year discount, Salesforce UAE hosting routed to the EU since 20 Oct 2026)
+- [ ] ERP and CRM setup: confirm the FAQ promise that licences are bought in the client's name, and add our own CRM setup results and testimonials once clients agree
 - [ ] Blog: write `ai-2026-year-in-review` in the first week of December (brief in `briefs/`)
 - [ ] Blog: refresh prices in the n8n and Copilot articles every few months (Copilot Business $18 promo ends 31 Dec 2026) and bump `updated`
 - [ ] Portfolio: real case studies (Additionality, Almajd, AMLD, Docutrad) with before/after results
