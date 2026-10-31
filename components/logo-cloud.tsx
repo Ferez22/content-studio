@@ -7,13 +7,15 @@ import { cn } from "@/lib/utils";
 
 // Only real partner or client logos, used with permission. The OpenAI badge
 // stays still beside the moving row and keeps its original look, as OpenAI's guidance requires.
-const logos = [
-  { title: "Additionality", src: "/logos/additionality.png", width: 746, height: 112 },
-  { title: "AMLD Africa", src: "/logos/amld.png", width: 241, height: 112 },
-  { title: "Almajd TCS", src: "/logos/almajd.png", width: 154, height: 112 },
-  { title: "bcards", src: "/logos/bcards.png", width: 171, height: 112 },
-  { title: "Docutrad", src: "/logos/docutrad.png", width: 238, height: 39 },
-];
+export const clientLogos = {
+  additionality: { title: "Additionality", src: "/logos/additionality.png", width: 746, height: 112 },
+  amld: { title: "AMLD Africa", src: "/logos/amld.png", width: 241, height: 112 },
+  almajd: { title: "Almajd TCS", src: "/logos/almajd.png", width: 154, height: 112 },
+  bcards: { title: "bcards", src: "/logos/bcards.png", width: 171, height: 112 },
+  docutrad: { title: "Docutrad", src: "/logos/docutrad.png", width: 238, height: 39 },
+};
+export type ClientLogo = keyof typeof clientLogos;
+const logos = Object.values(clientLogos);
 
 // The track shifts by half its width, so it holds an even number of copies, enough to
 // stay wider than the visible row.

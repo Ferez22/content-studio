@@ -106,7 +106,7 @@ export const NewsletterForm = ({
                 className="absolute left-0 top-0 size-px overflow-hidden opacity-0 pointer-events-none [clip-path:inset(50%)]"
               />
               <input type="hidden" name="locale" value={locale} />
-              <Button type="submit" disabled={status === "sending"} className="rounded-full">
+              <Button type="submit" disabled={status === "sending"}>
                 <IconSend />
                 {status === "sending" ? t("sending") : t("submit")}
               </Button>

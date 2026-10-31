@@ -22,8 +22,22 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 - [ ] LinkedIn Post Inspector: check the preview for `https://www.qartmina.com/en`
 - [ ] Create a Google Business Profile for Qartmina (Les Berges du Lac)
 
+## Services
+
+- [ ] Translate the services copy to fr and de (`services`, `serviceCategories`, `servicePages`, `home.services`, `home.hero` title and subtitle, `metadata`, `header.allServices`/`categoryOverview`, `footer.positioning`, `common.readyText`). The pre-category fr/de copy for the first 6 services is in git history (commit 21cef84) if useful
+- [ ] Hero KPIs (3.2M€ ROI, 80% time saved) and the interactive workflow under the hero are still about AI agents: decide whether to keep them under the new digital partner title
+- [ ] Example videos on video-motion, social-media and personal-branding are by independent creators on Prompt Motion (no licence stated) and hotlinked from their server (up to 28 MB each): ask the creators for permission, or replace them with our own work, then self-host compressed copies
+- [ ] Confirm the network can deliver what the copy promises: voice-overs in Arabic, French and English (video), on-site IT via a local technician (IT support), Power BI as an example tool (data platforms) (Fares is asking them)
+- [ ] Deepen the other service pages the same way (explainer, examples, what's included), then switch each one on in `serviceToggles` (`lib/site.ts`). 24 services are off for now
+- [ ] Show freelancer portfolio work on service pages, with each person's permission and labelled as their work
+- [ ] SEO plan from Search Console data (export the Performance report or connect a GSC MCP), then blog posts per category
+
 ## Content (later)
 
+- [ ] CRM blog (`how-to-choose-a-crm`): product screenshots. No vendor licenses screenshots for this use except Microsoft (unaltered, with "Used with permission from Microsoft") and a monday.com press image without stated terms. Decide: ask vendors, take our own screenshots under Microsoft-style terms, or keep it without images
+- [ ] CRM blog: logos for Pipedrive (press kit says files must be requested), monday.com (pack only has guideline examples), Freshworks (no official download) and Microsoft (needs an express licence). Ask the brands, or keep them as names
+- [ ] CRM blog: re-check prices every few months and bump `updated` (HubSpot Starter promo, Odoo first-year discount, Salesforce UAE hosting routed to the EU since 20 Oct 2026)
+- [ ] ERP and CRM setup: confirm the FAQ promise that licences are bought in the client's name, and add our own CRM setup results and testimonials once clients agree
 - [ ] Blog: write `ai-2026-year-in-review` in the first week of December (brief in `briefs/`)
 - [ ] Blog: refresh prices in the n8n and Copilot articles every few months (Copilot Business $18 promo ends 31 Dec 2026) and bump `updated`
 - [ ] Portfolio: real case studies (Additionality, Almajd, AMLD, Docutrad) with before/after results

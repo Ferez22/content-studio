@@ -11,7 +11,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { getEntry, getSlugs, type CaseStudyFrontmatter, getEntryLocales } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
-import { serviceSlugs } from "@/lib/site";
+import { isServiceSlug, servicePath } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -48,9 +48,7 @@ export default async function CaseStudyPage({ params }: Props) {
   const tCommon = await getTranslations("common");
   const tServices = await getTranslations("servicePages");
   const { frontmatter } = entry;
-  const service = (serviceSlugs as readonly string[]).includes(frontmatter.service)
-    ? frontmatter.service
-    : null;
+  const service = isServiceSlug(frontmatter.service) ? frontmatter.service : null;
 
   return (
     <div className="min-h-screen">
@@ -79,7 +77,7 @@ export default async function CaseStudyPage({ params }: Props) {
               <div>
                 <dt className="text-sm text-neutral-400">{t("service")}</dt>
                 <dd className="font-medium mt-1">
-                  <Link href={`/services/${service}`} className="underline underline-offset-4">
+                  <Link href={servicePath(service)} className="underline underline-offset-4">
                     {tServices(`${service}.title`)}
                   </Link>
                 </dd>

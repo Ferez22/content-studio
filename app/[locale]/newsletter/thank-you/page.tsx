@@ -89,7 +89,7 @@ export default async function NewsletterThanksPage({ params }: Props) {
           ))}
         </ul>
 
-        <Button asChild className="mt-12 shadow-brand">
+        <Button asChild className="mt-12">
           <Link href="/">{t("home")}</Link>
         </Button>
       </Container>

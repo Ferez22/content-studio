@@ -64,10 +64,6 @@
     "trusted": {
       "title": "Ils nous font confiance"
     },
-    "services": {
-      "title": "Ce que nous construisons",
-      "intro": "Six façons de mettre l'IA et les données au travail. Chacune est cadrée sur un résultat mesurable."
-    },
     "why": {
       "title": "Pourquoi travailler avec nous",
       "intro": "Nous sommes avant tout des ingénieurs. Nous construisons des logiciels qui fonctionnent, mesurons ce qu'ils changent et rendons votre équipe autonome pour les faire tourner.",
@@ -166,12 +162,12 @@
         "label": "pour la mise en production"
       },
       {
-        "value": "6",
-        "label": "services, une seule équipe"
+        "value": "{services}",
+        "label": "services, un seul chef de projet"
       },
       {
         "value": "100%",
-        "label": "des résultats validés par une personne"
+        "label": "des livrables vérifiés avant la remise"
       }
     ],
     "partner": {
@@ -245,193 +241,6 @@
     "verification": "Veuillez effectuer la vérification de sécurité avant l'envoi.",
     "consent": "En envoyant ce formulaire, vous acceptez que nous utilisions vos coordonnées pour vous répondre, comme décrit dans notre <link>politique de confidentialité</link>.",
     "honeypot": "Laissez ce champ vide"
-  },
-  "services": {
-    "back": "Nos services",
-    "featuresTitle": "Fonctionnalités clés",
-    "useCasesTitle": "Cas d'usage"
-  },
-  "servicePages": {
-    "ai-agents": {
-      "title": "Développement d'agents IA",
-      "summary": "Des agents sur mesure qui enchaînent plusieurs étapes dans vos outils et soumettent le résultat à la validation d'une personne.",
-      "intro": "Un agent est un logiciel capable de lire, vérifier et agir dans plusieurs systèmes, comme le ferait un assistant, mais en quelques minutes et sans fatigue. Nous concevons l'agent autour de l'un de vos processus réels, le connectons à vos outils et veillons à ce qu'une personne valide tout ce qui compte avant que cela ne sorte.",
-      "features": [
-        {
-          "title": "Fonctionne dans tous vos outils",
-          "text": "Lit les e-mails, les documents, les tableurs et vos logiciels métier en une seule exécution."
-        },
-        {
-          "title": "Demande avant tout envoi",
-          "text": "Une personne valide chaque message, paiement ou mise à jour destiné à l'extérieur."
-        },
-        {
-          "title": "Chaque chiffre relié à sa source",
-          "text": "Chaque nombre du résultat renvoie au fichier ou à l'enregistrement d'origine."
-        },
-        {
-          "title": "Planifié ou à la demande",
-          "text": "S'exécute chaque matin, à chaque clôture mensuelle, ou quand quelqu'un le sollicite."
-        }
-      ],
-      "useCases": [
-        "Analyse de data room et de documents pour une due diligence",
-        "Réception des factures et rapprochement avec les commandes",
-        "Reporting mensuel construit à partir de plusieurs sources",
-        "Qualification des prospects et mise à jour du CRM"
-      ],
-      "metaTitle": "Développement d'agents IA"
-    },
-    "automation": {
-      "title": "Automatisation des processus",
-      "summary": "Des flux de travail de bout en bout qui suppriment le copier-coller, la saisie manuelle et les transmissions à la main.",
-      "intro": "Beaucoup de processus dépendent encore d'une personne qui copie des données d'un écran à un autre. Nous cartographions le processus tel qu'il est, supprimons les étapes manuelles et connectons directement les systèmes, avec de l'IA uniquement là où elle apporte ce que des règles ne peuvent pas.",
-      "features": [
-        {
-          "title": "Cartographié avant d'être construit",
-          "text": "Nous documentons le processus tel qu'il se déroule vraiment, exceptions comprises."
-        },
-        {
-          "title": "Fini la ressaisie",
-          "text": "Les données circulent entre e-mails, tableurs et systèmes sans saisie manuelle."
-        },
-        {
-          "title": "Les exceptions vont à une personne",
-          "text": "Tout cas inhabituel est signalé et transmis au bon collègue."
-        },
-        {
-          "title": "Visible et mesuré",
-          "text": "Chaque exécution est journalisée : vous voyez ce qui s'est passé et combien de temps cela a pris."
-        }
-      ],
-      "useCases": [
-        "Saisie des commandes reçues par e-mail dans l'ERP",
-        "Référencement des fournisseurs et contrôle des documents",
-        "Rapports hebdomadaires de ventes et de stocks",
-        "Circuits de validation qui vivent aujourd'hui dans des fils d'e-mails"
-      ],
-      "metaTitle": "Automatisation des processus"
-    },
-    "integration": {
-      "title": "Intégration",
-      "summary": "L'IA connectée à Excel, au CRM, à l'ERP, aux e-mails et aux bases de données via des connecteurs et des API sécurisés.",
-      "intro": "L'IA n'est utile que si elle peut voir vos données et agir dans vos systèmes. Nous construisons des connecteurs sécurisés entre les outils d'IA et les logiciels que vous utilisez déjà, pour que l'information circule là où elle est utile et que l'accès reste limité à ce que vous autorisez.",
-      "features": [
-        {
-          "title": "Vos systèmes, pas de nouveaux",
-          "text": "Nous connectons ce que vous utilisez déjà : Excel, CRM, ERP, e-mail, bases de données."
-        },
-        {
-          "title": "Accès minimal par défaut",
-          "text": "Chaque connecteur ne peut lire ou modifier que ce que vous autorisez explicitement."
-        },
-        {
-          "title": "Connecteurs standards",
-          "text": "Nous utilisons des standards ouverts comme MCP, une méthode commune pour brancher les outils d'IA sur vos systèmes. Vous n'êtes donc pas captif."
-        },
-        {
-          "title": "Traçabilité de bout en bout",
-          "text": "Chaque requête passant par un connecteur est enregistrée pour l'audit."
-        }
-      ],
-      "useCases": [
-        "Permettre à l'assistant de votre entreprise de lire le CRM et l'ERP",
-        "Synchroniser des tableurs avec une base de données centrale",
-        "Relier les boîtes mail aux systèmes de tickets ou de commandes",
-        "Ouvrir les données internes aux outils d'IA via une API sécurisée"
-      ],
-      "metaTitle": "Intégration de l'IA"
-    },
-    "consulting": {
-      "title": "Conseil en IA",
-      "summary": "Un audit de vos processus et une feuille de route des agents à construire en priorité.",
-      "intro": "Avant d'investir dans l'IA, il faut savoir où elle est rentable. Nous auditons la façon dont le travail est fait aujourd'hui, vérifions si vos données sont prêtes et vous remettons un plan priorisé : quoi construire en premier, ce que cela fera gagner et ce que cela coûtera.",
-      "features": [
-        {
-          "title": "Audit des processus",
-          "text": "Nous identifions où passent les heures, avec votre équipe, dans vos outils réels."
-        },
-        {
-          "title": "Diagnostic des données",
-          "text": "Quelles données vous avez, où elles se trouvent et ce qu'il faut nettoyer d'abord."
-        },
-        {
-          "title": "Feuille de route priorisée",
-          "text": "Des étapes à court, moyen et long terme, chacune liée à un résultat mesurable."
-        },
-        {
-          "title": "Des réponses franches",
-          "text": "Si l'IA n'est pas le bon outil pour un problème, nous le disons."
-        }
-      ],
-      "useCases": [
-        "Choisir le premier agent à construire",
-        "Reprendre un pilote IA qui n'a jamais atteint la production",
-        "Planifier la modernisation d'un système existant",
-        "Préparer une stratégie IA pour le conseil d'administration"
-      ],
-      "metaTitle": "Conseil en IA"
-    },
-    "training": {
-      "title": "Formation des équipes",
-      "summary": "Le programme IA pour l'entreprise avec ESGITECH, des bases jusqu'à un premier flux de travail opérationnel.",
-      "intro": "Les outils ne transforment une entreprise que si les gens savent s'en servir. Avec ESGITECH, nous animons le programme IA pour l'entreprise : des sessions pratiques qui mènent votre équipe des bases jusqu'à un premier flux de travail appliqué à ses propres tâches.",
-      "features": [
-        {
-          "title": "Conçu pour des équipes non techniques",
-          "text": "Un langage simple, des exemples réels, aucun code nécessaire."
-        },
-        {
-          "title": "Vos tâches, pas des exercices fictifs",
-          "text": "Les participants travaillent sur les processus de leur propre métier."
-        },
-        {
-          "title": "Un résultat concret",
-          "text": "Chaque participant repart avec un premier flux de travail qui fonctionne."
-        },
-        {
-          "title": "Un usage sûr",
-          "text": "Ce que vous pouvez partager avec les outils d'IA, ce que vous ne pouvez pas, et pourquoi."
-        }
-      ],
-      "useCases": [
-        "Introduction à l'IA pour les équipes de direction",
-        "Ateliers pratiques pour la finance et les opérations",
-        "Rédaction de requêtes et usage des assistants pour les équipes administratives",
-        "Formation de formateurs pour les référents IA internes"
-      ],
-      "metaTitle": "Formation des équipes à l'IA"
-    },
-    "chatbots": {
-      "title": "Chatbots et assistants",
-      "summary": "Des assistants qui répondent à vos clients ou à vos collaborateurs à partir de vos propres documents, jour et nuit.",
-      "intro": "Votre équipe répond chaque jour aux mêmes questions à partir des mêmes documents. Nous construisons des assistants qui répondent à partir de vos politiques, manuels et données, indiquent la source de chaque réponse et passent la main à une personne quand il le faut.",
-      "features": [
-        {
-          "title": "Des réponses tirées de vos documents",
-          "text": "L'assistant ne répond qu'à partir des sources que vous approuvez."
-        },
-        {
-          "title": "Indique ses sources",
-          "text": "Chaque réponse renvoie au document d'origine."
-        },
-        {
-          "title": "Passe la main à une personne",
-          "text": "Les demandes sensibles ou ambiguës sont transmises à votre équipe."
-        },
-        {
-          "title": "Disponible jour et nuit",
-          "text": "Sur votre site, votre intranet ou vos outils de messagerie."
-        }
-      ],
-      "useCases": [
-        "Service client sur votre site web",
-        "Support interne pour les questions RH et informatiques",
-        "Recherche dans la documentation produit et technique",
-        "Assistant d'intégration pour les nouveaux collaborateurs"
-      ],
-      "metaTitle": "Chatbots et assistants IA"
-    }
   },
   "visuals": {
     "tools": [

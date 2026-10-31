@@ -1,14 +1,15 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import React, { useState } from "react";
+import { motion } from "motion/react";
 import { IconCalendarEvent, IconMail } from "@tabler/icons-react";
 import { ContactForm } from "./contact-form";
 import { CalEmbed } from "./cal-embed";
+import { FlipCard } from "./ui/flip-card";
 import { cn } from "@/lib/utils";
 
 type Tab = "call" | "message";
 
-// Two centred tabs; switching flips one card in 3D between the calendar (front) and the form (back).
+// Two centred tabs; switching flips a FlipCard between the calendar (front) and the form (back).
 export const ContactTabs = ({
   labels,
   calendarTitle,
@@ -17,23 +18,7 @@ export const ContactTabs = ({
   calendarTitle: string;
 }) => {
   const [tab, setTab] = useState<Tab>("call");
-  const reduceMotion = useReducedMotion();
   const flipped = tab === "message";
-
-  // The card takes the height of the visible face, so a short form never sits on
-  // top of the (much taller) calendar's empty space.
-  const frontRef = useRef<HTMLDivElement>(null);
-  const backRef = useRef<HTMLDivElement>(null);
-  const [heights, setHeights] = useState<{ front?: number; back?: number }>({});
-  useEffect(() => {
-    const observer = new ResizeObserver(() =>
-      setHeights({ front: frontRef.current?.offsetHeight, back: backRef.current?.offsetHeight })
-    );
-    if (frontRef.current) observer.observe(frontRef.current);
-    if (backRef.current) observer.observe(backRef.current);
-    return () => observer.disconnect();
-  }, []);
-  const activeHeight = flipped ? heights.back : heights.front;
   const icons: Record<Tab, React.ReactNode> = {
     call: <IconCalendarEvent className="size-4 shrink-0" />,
     message: <IconMail className="size-4 shrink-0" />,
@@ -59,7 +44,7 @@ export const ContactTabs = ({
               {tab === key && (
                 <motion.span
                   layoutId="contact-tab"
-                  className="absolute inset-0 rounded-xl sm:rounded-full bg-black dark:bg-white shadow-brand"
+                  className="absolute inset-0 rounded-xl sm:rounded-full bg-black dark:bg-white"
                   transition={{ type: "spring", stiffness: 400, damping: 32 }}
                 />
               )}
@@ -72,62 +57,23 @@ export const ContactTabs = ({
         </div>
       </div>
 
-      <motion.div
-        className="mt-8 md:mt-10 mx-auto max-w-4xl [overflow-y:clip] [overflow-clip-margin:2rem]"
-        style={{ perspective: 1800 }}
-        initial={false}
-        animate={activeHeight ? { height: activeHeight } : undefined}
-        transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 90, damping: 18 }}
-      >
-        <motion.div
-          className="grid"
-          style={{ transformStyle: "preserve-3d" }}
-          animate={{ rotateY: flipped ? 180 : 0 }}
-          transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 70, damping: 14 }}
-        >
-          <Face visible={!flipped} innerRef={frontRef}>
-            <div>
-              <CalEmbed title={calendarTitle} />
+      <FlipCard
+        className="mt-8 md:mt-10 mx-auto max-w-4xl"
+        flipped={flipped}
+        front={
+          <div>
+            <CalEmbed title={calendarTitle} />
+          </div>
+        }
+        back={
+          <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-4 md:p-10">
+            <div className="max-w-2xl mx-auto">
+              <ContactForm />
             </div>
-          </Face>
-          <Face visible={flipped} back innerRef={backRef}>
-            <div className="rounded-3xl bg-neutral-100 dark:bg-neutral-800 p-4 md:p-10">
-              <div className="max-w-2xl mx-auto">
-                <ContactForm />
-              </div>
-            </div>
-          </Face>
-        </motion.div>
-      </motion.div>
+          </div>
+        }
+      />
     </div>
   );
 };
 
-const Face = ({
-  visible,
-  back = false,
-  innerRef,
-  children,
-}: {
-  visible: boolean;
-  back?: boolean;
-  innerRef: React.Ref<HTMLDivElement>;
-  children: React.ReactNode;
-}) => (
-  <div
-    ref={innerRef}
-    aria-hidden={!visible}
-    inert={!visible}
-    className="[grid-area:1/1] self-start"
-    style={{
-      backfaceVisibility: "hidden",
-      WebkitBackfaceVisibility: "hidden",
-      transform: back ? "rotateY(180deg)" : undefined,
-      // Hide the turned-away face at mid-flip: iframes can bleed through backface-visibility in Safari.
-      visibility: visible ? "visible" : "hidden",
-      transition: "visibility 0s linear 0.22s",
-    }}
-  >
-    {children}
-  </div>
-);

@@ -1,0 +1,491 @@
+<!doctype html>
+<!--
+  Qartmina brand film, 10 s. The same format as a product launch film, made in Qartmina's own
+  brand: Manrope, EB Garamond italic for the accent words, black, cream and royal blue.
+  Every style is computed from the time in window.seek(t). Rendered by assets/motion/render.py.
+
+  0.0   a ring of dots turns, then collapses into the "Q." mark
+  2.0   "One partner." / "Everything digital." with the services cycling on the right
+  4.0   a tilted grid of service cards drifts under "Built for your business."
+  5.8   cream brand card: "Strategy, data and AI that works." and the mark in dots
+  7.6   logo reveal: Q. mark, wordmark and the four pillars
+  8.9   "Start that project." and a click on "Book a call"; fade to black
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=EB+Garamond:ital,wght@0,700;1,500&family=JetBrains+Mono:wght@500&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #0a0a0a;
+      }
+      #stage {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a0a0a;
+        font-family: Manrope, sans-serif;
+        color: #fff;
+      }
+      .shot,
+      #fade,
+      canvas {
+        position: absolute;
+        inset: 0;
+      }
+      .serif {
+        font-family: "EB Garamond", serif;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+      }
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .mask {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        padding: 0.06em 0.04em 0.16em;
+        margin: -0.06em -0.04em -0.16em;
+      }
+      .mask > span {
+        display: inline-block;
+      }
+      .headline {
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        line-height: 1.02;
+      }
+      .blue {
+        color: #6b8cff;
+      }
+      /* Shot 2 */
+      #s2 .headline {
+        position: absolute;
+        left: 180px;
+        top: 360px;
+        font-size: 128px;
+      }
+      #list {
+        position: absolute;
+        right: 200px;
+        top: 300px;
+        width: 420px;
+      }
+      #list .item {
+        position: relative;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 28px;
+        font-size: 34px;
+        font-weight: 700;
+        color: #6b6b6b;
+      }
+      #list .item small {
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      #pick {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 88px;
+        border-radius: 20px;
+        background: #1a1a1a;
+        border: 1px solid #2c2c2c;
+      }
+      /* Shot 3 */
+      #plane {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 3000px;
+        height: 2000px;
+        margin: -1000px 0 0 -1500px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px;
+        transform-style: preserve-3d;
+      }
+      .tile {
+        border-radius: 28px;
+        background: #f4f2ed;
+        padding: 36px;
+        color: #111;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .tile.dark {
+        background: #161616;
+        color: #fff;
+        border: 1px solid #262626;
+      }
+      .tile b {
+        font-size: 38px;
+        letter-spacing: -0.03em;
+      }
+      .bar {
+        height: 16px;
+        border-radius: 8px;
+        background: currentColor;
+        opacity: 0.12;
+      }
+      .tile .accent {
+        height: 80px;
+        border-radius: 18px;
+        background: #1e40ff;
+        opacity: 0.9;
+      }
+      #s3 .over {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 120px;
+      }
+      #s3 .over span.panel {
+        padding: 40px 72px;
+        border-radius: 40px;
+        background: rgba(10, 10, 10, 0.86);
+      }
+      /* Shot 4 */
+      #s4 {
+        background: #f3f0ea;
+        color: #111;
+      }
+      #s4 .word {
+        position: absolute;
+        left: 120px;
+        top: 96px;
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 56px;
+      }
+      #s4 .headline {
+        position: absolute;
+        left: 120px;
+        top: 360px;
+        font-size: 104px;
+        width: 980px;
+      }
+      #s4 .blue {
+        color: #1e40ff;
+      }
+      #s4 .sub {
+        position: absolute;
+        left: 120px;
+        top: 760px;
+        font-size: 30px;
+        color: #555;
+      }
+      #panel {
+        position: absolute;
+        right: 120px;
+        top: 160px;
+        width: 620px;
+        height: 760px;
+        border-radius: 48px;
+        background: #1e40ff;
+        overflow: hidden;
+      }
+      /* Shot 5 */
+      #s5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+      }
+      #mark {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 300px;
+        line-height: 0.9;
+      }
+      #mark .dot {
+        color: #6b8cff;
+      }
+      #wordmark {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 1;
+      }
+      /* Shot 6 */
+      #s6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+      }
+      #s6 .headline {
+        font-size: 140px;
+      }
+      #cta {
+        position: relative;
+        padding: 30px 64px;
+        border-radius: 999px;
+        background: #fff;
+        color: #111;
+        font-size: 38px;
+        font-weight: 700;
+      }
+      #cursor {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage">
+      <div id="fade">
+        <canvas id="dots" width="1920" height="1080"></canvas>
+        <div class="shot" id="s1">
+          <div id="q1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+            <span id="qText" style="font-family: 'EB Garamond', serif; font-weight: 700; font-size: 560px; line-height: 1">Q<span class="blue">.</span></span>
+          </div>
+        </div>
+        <div class="shot" id="s2">
+          <div class="headline">
+            <div><span class="mask"><span>One partner.</span></span></div>
+            <div><span class="mask"><span class="serif blue" style="font-size: 1.08em">Everything digital.</span></span></div>
+          </div>
+          <div id="list"><div id="pick"></div></div>
+        </div>
+        <div class="shot" id="s3" style="perspective: 2200px">
+          <div id="plane"></div>
+          <div class="over">
+            <span class="panel headline"><span class="mask"><span>Built for <span class="serif blue">your</span> business.</span></span></span>
+          </div>
+        </div>
+        <div class="shot" id="s4">
+          <div class="word"><span class="mask"><span>Qartmina<span style="color: #1e40ff">.</span></span></span></div>
+          <div class="headline">
+            <span class="mask"><span>Strategy, data</span></span><br />
+            <span class="mask"><span>and <span class="serif blue">AI that works.</span></span></span>
+          </div>
+          <div class="sub"><span class="mask"><span>One partner from the first call to launch.</span></span></div>
+          <div id="panel"><canvas id="panelDots" width="620" height="760" style="position: absolute; inset: 0"></canvas></div>
+        </div>
+        <div class="shot" id="s5">
+          <div id="mark">Q<span class="dot">.</span></div>
+          <div id="wordmark"><span class="mask"><span>Qartmina.</span></span></div>
+          <div class="mono" id="pillars" style="font-size: 22px; color: #8a8a8a">
+            <span class="mask"><span>Strategy · Data · AI · Execution</span></span>
+          </div>
+        </div>
+        <div class="shot" id="s6">
+          <div class="headline"><span class="mask"><span>Start that <span class="serif blue">project.</span></span></span></div>
+          <div id="cta">Book a call</div>
+          <svg id="cursor" viewBox="0 0 24 24">
+            <path d="M4 2l15 10-6.5 1.4L9.6 20z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.DURATION = 10;
+      window.POSTER = 8.3;
+      const clamp = (x) => Math.min(1, Math.max(0, x));
+      const easeOut = (x) => 1 - Math.pow(1 - clamp(x), 3);
+      const easeInOut = (x) => {
+        x = clamp(x);
+        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+      };
+      const expoOut = (x) => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * clamp(x)));
+      const lerp = (a, b, x) => a + (b - a) * x;
+      const $ = (selector) => document.querySelector(selector);
+      const rise = (element, start, t, duration = 0.45) => {
+        element.style.transform = `translateY(${lerp(115, 0, expoOut((t - start) / duration))}%)`;
+      };
+      // Deterministic random numbers, so every render is identical.
+      let seed = 7;
+      const random = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
+
+      const SHOTS = [
+        ["#s1", 0, 2.0],
+        ["#s2", 2.0, 4.0],
+        ["#s3", 4.0, 5.8],
+        ["#s4", 5.8, 7.6],
+        ["#s5", 7.6, 8.9],
+        ["#s6", 8.9, 10.01],
+      ];
+      const SERVICES = [
+        ["AI agents", "ai"],
+        ["Websites", "web"],
+        ["Software", "dev"],
+        ["Brand", "design"],
+        ["Security", "it"],
+      ];
+      const TILES = ["AI agents", "Websites", "CRM", "Brand identity", "Data", "Security", "Shopify", "Mobile apps", "Automation", "ERP", "UI/UX", "Cloud", "Chatbots", "SEO", "Video", "Training", "Voice agents", "Dashboards"];
+
+      let qPoints = [];
+      let panelPoints = [];
+      let particles = [];
+
+      // Points of the "Q." mark, sampled from text drawn on an off-screen canvas.
+      const sample = (width, height, size, step) => {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#fff";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.font = `700 ${size}px "EB Garamond"`;
+        ctx.fillText("Q.", width / 2, height / 2 + size * 0.04);
+        const data = ctx.getImageData(0, 0, width, height).data;
+        const points = [];
+        for (let y = 0; y < height; y += step)
+          for (let x = 0; x < width; x += step) if (data[(y * width + x) * 4 + 3] > 128) points.push([x, y]);
+        return points;
+      };
+
+      window.prepare = () => {
+        qPoints = sample(1920, 1080, 560, 9);
+        panelPoints = sample(620, 760, 420, 12);
+        particles = qPoints.map(([x, y], i) => {
+          const angle = random() * Math.PI * 2;
+          const radius = 330 + (random() - 0.5) * 70;
+          return { x, y, angle, radius, delay: random() * 0.45, blue: random() < 0.28, size: 2 + random() * 2.2 };
+        });
+        const list = $("#list");
+        SERVICES.forEach(([name, tag]) => {
+          const item = document.createElement("div");
+          item.className = "item";
+          item.innerHTML = `${name}<small class="mono">${tag}</small>`;
+          list.appendChild(item);
+        });
+        const plane = $("#plane");
+        TILES.forEach((name, i) => {
+          const tile = document.createElement("div");
+          tile.className = i % 3 === 1 ? "tile dark" : "tile";
+          tile.innerHTML = `<b>${name}</b><span class="bar" style="width:${60 + ((i * 17) % 35)}%"></span><span class="bar" style="width:${40 + ((i * 23) % 40)}%"></span>${i % 4 === 0 ? '<span class="accent"></span>' : ""}`;
+          plane.appendChild(tile);
+        });
+      };
+
+      const drawDots = (t) => {
+        const canvas = $("#dots");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, 1920, 1080);
+        if (t >= 2.0) return;
+        const spin = t * 0.9;
+        const fadeOut = 1 - clamp((t - 1.55) / 0.35);
+        particles.forEach((p) => {
+          const k = easeInOut((t - 0.55 - p.delay) / 0.9);
+          const rx = 960 + Math.cos(p.angle + spin) * p.radius;
+          const ry = 540 + Math.sin(p.angle + spin) * p.radius;
+          const x = lerp(rx, p.x, k);
+          const y = lerp(ry, p.y, k);
+          ctx.globalAlpha = fadeOut * (0.55 + 0.45 * k);
+          ctx.fillStyle = p.blue ? "#6b8cff" : "#ffffff";
+          ctx.beginPath();
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+      };
+
+      const drawPanel = (t) => {
+        const canvas = $("#panelDots");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, 620, 760);
+        const k = easeOut((t - 6.1) / 0.9);
+        panelPoints.forEach(([x, y], i) => {
+          const wave = Math.sin(i * 0.37 + t * 3) * 0.5 + 0.5;
+          ctx.globalAlpha = k * (0.35 + 0.65 * wave);
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(x - 3, y - 3, 6, 6);
+        });
+        ctx.globalAlpha = 1;
+      };
+
+      window.seek = (t) => {
+        SHOTS.forEach(([selector, from, to]) => ($(selector).style.display = t >= from && t < to ? "" : "none"));
+
+        // Shot 1: dots, then the solid mark appears as they settle.
+        drawDots(t);
+        const solid = clamp((t - 1.45) / 0.3);
+        $("#qText").style.opacity = solid;
+        $("#q1").style.transform = `scale(${lerp(1, 1.06, clamp((t - 1.45) / 0.55))})`;
+
+        // Shot 2: headline lines, and the selection moving through the services.
+        const lines = document.querySelectorAll("#s2 .mask > span");
+        rise(lines[0], 2.1, t);
+        rise(lines[1], 2.35, t);
+        const items = [...document.querySelectorAll("#list .item")];
+        items.forEach((item, i) => {
+          const k = expoOut((t - 2.2 - i * 0.08) / 0.4);
+          item.style.opacity = k;
+          item.style.transform = `translateX(${lerp(40, 0, k)}px)`;
+        });
+        const step = Math.min(SERVICES.length - 1, Math.max(0, Math.floor((t - 2.6) / 0.28)));
+        const move = easeOut(((t - 2.6) % 0.28) / 0.18);
+        const from = Math.max(0, step - 1);
+        const pickY = t < 2.6 ? 0 : lerp(from * 88, step * 88, step === 0 ? 1 : move);
+        $("#pick").style.transform = `translateY(${pickY}px)`;
+        $("#pick").style.opacity = clamp((t - 2.45) / 0.15);
+        items.forEach((item, i) => (item.style.color = i === step && t >= 2.6 ? "#ffffff" : "#6b6b6b"));
+
+        // Shot 3: the tilted grid drifts diagonally under the headline.
+        const drift = (t - 4.0) / 1.8;
+        $("#plane").style.transform = `rotateX(52deg) rotateZ(-28deg) translate3d(${lerp(160, -220, drift)}px, ${lerp(-120, 200, drift)}px, 0)`;
+        rise(document.querySelector("#s3 .over .mask > span"), 4.25, t, 0.5);
+        $("#s3 .over .panel").style.opacity = clamp((t - 4.28) / 0.15);
+
+        // Shot 4: the cream brand card.
+        const s4 = document.querySelectorAll("#s4 .mask > span");
+        rise(s4[0], 5.85, t);
+        rise(s4[1], 6.0, t);
+        rise(s4[2], 6.15, t);
+        rise(s4[3], 6.45, t);
+        const panel = expoOut((t - 5.9) / 0.6);
+        $("#panel").style.transform = `translateX(${lerp(120, 0, panel)}px) scale(${lerp(0.94, 1, panel)})`;
+        drawPanel(t);
+
+        // Shot 5: logo reveal.
+        const mark = expoOut((t - 7.65) / 0.5);
+        $("#mark").style.transform = `scale(${lerp(0.82, 1, mark)})`;
+        $("#mark").style.opacity = mark;
+        rise($("#wordmark .mask > span"), 7.95, t);
+        rise($("#pillars .mask > span"), 8.2, t);
+
+        // Shot 6: the call to action, clicked.
+        rise($("#s6 .mask > span"), 8.95, t);
+        const cta = $("#cta");
+        const ctaIn = expoOut((t - 9.1) / 0.35);
+        cta.style.opacity = ctaIn;
+        const pressed = t >= 9.55 && t < 9.7;
+        cta.style.transform = `scale(${pressed ? 0.95 : lerp(0.9, 1, ctaIn)})`;
+        cta.style.background = t >= 9.55 ? "#1e40ff" : "#fff";
+        cta.style.color = t >= 9.55 ? "#fff" : "#111";
+        const cursorK = easeInOut((t - 9.1) / 0.45);
+        const cursor = $("#cursor");
+        cursor.style.left = `${lerp(1400, 1020, cursorK)}px`;
+        cursor.style.top = `${lerp(900, 640, cursorK)}px`;
+        cursor.style.opacity = clamp((t - 9.05) / 0.1);
+
+        $("#fade").style.opacity = 1 - clamp((t - 9.72) / 0.28);
+      };
+    </script>
+  </body>
+</html>

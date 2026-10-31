@@ -102,7 +102,7 @@ export const ContactForm = () => {
         })}
       </p>
 
-      <Button type="submit" className="shadow-brand self-start" disabled={status === "sending"}>
+      <Button type="submit" className="self-start" disabled={status === "sending"}>
         {status === "sending" ? t("sending") : t("send")}
       </Button>
 

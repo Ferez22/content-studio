@@ -14,11 +14,18 @@ import {
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./locale-switcher";
-import { partnerProgramEnabled, serviceSlugs } from "@/lib/site";
-import { serviceIcons } from "./service-icons";
+import {
+  categoryPath,
+  partnerProgramEnabled,
+  serviceCategories,
+  servicePath,
+  type CategorySlug,
+  type ServiceSlug,
+} from "@/lib/site";
+import { ServiceCardMedia } from "./services/service-card-media";
 
 const navlinks = [
-  { key: "services", href: "/#services" },
+  { key: "services", href: "/services" },
   { key: "portfolio", href: "/portfolio" },
   { key: "about", href: "/#team" },
   { key: "blog", href: "/blog" },
@@ -48,7 +55,6 @@ export const Navbar = () => {
 
 export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
   const t = useTranslations("header");
-  const tServices = useTranslations("servicePages");
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   // The menu grows like a drop from the toggle button until it covers the screen.
@@ -143,21 +149,7 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
                         >
                           {t(item.key)}
                         </Link>
-                        {item.key === "services" && (
-                          <ul className="mt-3 ml-1 flex flex-col gap-2 border-l border-neutral-200 dark:border-neutral-800 pl-4">
-                            {serviceSlugs.map((slug) => (
-                              <li key={slug}>
-                                <Link
-                                  href={`/services/${slug}`}
-                                  onClick={close}
-                                  className="text-base text-neutral-500 dark:text-neutral-400"
-                                >
-                                  {tServices(`${slug}.title`)}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        {item.key === "services" && <MobileServices onNavigate={close} />}
                       </motion.div>
                     ))}
                   </div>
@@ -213,9 +205,10 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
       <nav className="flex items-center gap-10">
         {navlinks.map((item) =>
           item.key === "services" ? (
+            // Not positioned: the menu below anchors to the full-width navbar wrapper, so the
+            // wide services menu is centred on the page rather than on this link.
             <div
               key={item.key}
-              className="relative"
               onMouseEnter={() => setActive(item.key)}
               onFocus={() => setActive(item.key)}
             >
@@ -234,12 +227,16 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
                 />
               </Link>
               {active === item.key && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.85, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={menuSpring}
-                >
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6">
+                // Full-width strip under the navbar (anchored to the sticky wrapper), so the wide
+                // menu is centred on the page. Only the menu takes the pointer, including the gap
+                // above it (its padding), so the hover is not lost on the way down.
+                <div className="pointer-events-none absolute inset-x-0 top-full flex justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.98, y: 8, filter: "blur(4px)" }}
+                    animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    className="pointer-events-auto origin-top pt-6"
+                  >
                     <motion.div
                       transition={menuSpring}
                       layoutId="nav-menu"
@@ -249,8 +246,8 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
                         <ServicesMenu onNavigate={() => setActive(null)} />
                       </motion.div>
                     </motion.div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               )}
             </div>
           ) : (
@@ -275,40 +272,180 @@ export const DesktopNavbar = ({ scrolled }: { scrolled: boolean }) => {
   );
 };
 
+// Elements inside the services menu come in one after another: a short rise and unblur.
+const menuItem = (delay: number) => ({
+  initial: { opacity: 0, y: 6, filter: "blur(3px)" },
+  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  transition: { duration: 0.3, delay, ease: [0.16, 1, 0.3, 1] as const },
+});
+
+// Desktop: the six categories in three columns, each with its services. Plain text links:
+// an underline draws in and an arrow appears on hover. From xl, a square preview on the left
+// shows the hovered service's card media (a category shows its first service).
 const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
+  const t = useTranslations("header");
+  const tCategories = useTranslations("serviceCategories");
   const tServices = useTranslations("servicePages");
+  const [preview, setPreview] = useState<ServiceSlug>(serviceCategories[0].services[0]);
   return (
-    <div className="grid grid-cols-2 gap-2 w-[44rem]">
-      {serviceSlugs.map((slug, index) => {
-        const Icon = serviceIcons[slug];
-        return (
+    <div className="flex gap-7 p-2">
+      <motion.div {...menuItem(0.04)} className="hidden xl:block w-60 shrink-0">
+        <div className="relative aspect-square overflow-hidden rounded-xl ring-1 ring-black/5 dark:ring-white/10 bg-neutral-100 dark:bg-neutral-900">
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={preview}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="absolute inset-0"
+            >
+              <ServiceCardMedia slug={preview} className="aspect-auto size-full" />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <p className="mt-3 text-sm font-semibold text-black dark:text-white">{tServices(`${preview}.title`)}</p>
+        <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 line-clamp-3">
+          {tServices(`${preview}.summary`)}
+        </p>
+      </motion.div>
+    <div className="w-[48rem]">
+      <div className="grid grid-cols-3 gap-x-8 gap-y-7">
+        {serviceCategories.map(({ slug, services }, index) => (
           <motion.div
             key={slug}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.05 + index * 0.04 }}
+            {...menuItem(0.06 + index * 0.04)}
           >
-            <Link
-              href={`/services/${slug}`}
+            <MenuLink
+              href={categoryPath(slug)}
               onClick={onNavigate}
-              className="group flex items-start gap-4 rounded-xl p-3 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition duration-200"
+              onHover={() => setPreview(services[0])}
+              className="text-[13px] text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white"
             >
-              <div className="size-14 shrink-0 rounded-xl bg-neutral-100 dark:bg-neutral-900 ring-1 ring-black/5 dark:ring-white/10 flex items-center justify-center group-hover:bg-white dark:group-hover:bg-neutral-800 group-hover:shadow-brand transition duration-200">
-                <Icon className="size-6 text-neutral-700 dark:text-neutral-200 group-hover:text-[#1E40FF] dark:group-hover:text-blue-400 transition duration-200" />
-              </div>
-              <div>
-                <p className="font-bold text-black dark:text-white">
-                  {tServices(`${slug}.title`)}
-                </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1 max-w-[16rem]">
-                  {tServices(`${slug}.summary`)}
-                </p>
-              </div>
-            </Link>
+              {tCategories(`${slug}.title`)}
+            </MenuLink>
+            <ul className="mt-2 flex flex-col">
+              {services.map((service, position) => (
+                <motion.li key={service} {...menuItem(0.1 + index * 0.04 + position * 0.03)}>
+                  <MenuLink
+                    href={servicePath(service)}
+                    onClick={onNavigate}
+                    onHover={() => setPreview(service)}
+                    className="text-sm text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white"
+                  >
+                    {tServices(`${service}.title`)}
+                  </MenuLink>
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
+        ))}
+      </div>
+      <motion.div {...menuItem(0.35)} className="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+        <MenuLink
+          href="/services"
+          onClick={onNavigate}
+          className="text-sm font-semibold text-black dark:text-white"
+        >
+          {t("allServices")}
+        </MenuLink>
+      </motion.div>
+    </div>
+    </div>
+  );
+};
+
+const MenuLink = ({
+  href,
+  onClick,
+  onHover,
+  className,
+  children,
+}: {
+  href: string;
+  onClick: () => void;
+  onHover?: () => void;
+  className?: string;
+  children: React.ReactNode;
+}) => (
+  <Link
+    href={href}
+    onClick={onClick}
+    onMouseEnter={onHover}
+    onFocus={onHover}
+    className={cn("group/link inline-flex w-fit items-center gap-1 py-1 transition-colors duration-200 focus-visible:outline-none", className)}
+  >
+    <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat [background-position:0_100%] [background-size:0%_1px] group-hover/link:[background-size:100%_1px] group-focus-visible/link:[background-size:100%_1px] transition-[background-size] duration-300 ease-out">
+      {children}
+    </span>
+    <IconArrowUpRight
+      aria-hidden="true"
+      className="size-3.5 shrink-0 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-focus-visible/link:opacity-100 group-focus-visible/link:translate-x-0 transition duration-200"
+    />
+  </Link>
+);
+
+// Phones: one row per category that opens to show its services.
+const MobileServices = ({ onNavigate }: { onNavigate: () => void }) => {
+  const t = useTranslations("header");
+  const tCategories = useTranslations("serviceCategories");
+  const tServices = useTranslations("servicePages");
+  const [expanded, setExpanded] = useState<CategorySlug | null>(null);
+  return (
+    <ul className="mt-3 ml-1 flex flex-col border-l border-neutral-200 dark:border-neutral-800 pl-4">
+      {serviceCategories.map(({ slug, services }) => {
+        const isOpen = expanded === slug;
+        return (
+          <li key={slug}>
+            <button
+              type="button"
+              onClick={() => setExpanded(isOpen ? null : slug)}
+              aria-expanded={isOpen}
+              aria-controls={`mobile-services-${slug}`}
+              className="flex w-full items-center justify-between gap-3 py-2 text-left text-base font-medium text-neutral-600 dark:text-neutral-300"
+            >
+              {tCategories(`${slug}.title`)}
+              <IconChevronDown
+                className={cn("size-4 shrink-0 transition-transform duration-200", isOpen && "rotate-180")}
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.ul
+                  id={`mobile-services-${slug}`}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="overflow-hidden flex flex-col gap-2 pl-3"
+                >
+                  <li className="pt-1">
+                    <Link
+                      href={categoryPath(slug)}
+                      onClick={onNavigate}
+                      className="text-sm font-semibold text-black dark:text-white"
+                    >
+                      {t("categoryOverview")}
+                    </Link>
+                  </li>
+                  {services.map((service) => (
+                    <li key={service} className="last:pb-2">
+                      <Link
+                        href={servicePath(service)}
+                        onClick={onNavigate}
+                        className="text-sm text-neutral-500 dark:text-neutral-400"
+                      >
+                        {tServices(`${service}.title`)}
+                      </Link>
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 };
 

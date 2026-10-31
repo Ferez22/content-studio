@@ -14,7 +14,7 @@ export const CtaSection = () => {
           <Heading>{t("readyTitle")}</Heading>
           <Subheading className="py-8">{t("readyText")}</Subheading>
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <Button asChild className="shadow-brand">
+            <Button asChild>
               <Link href="/contact">{t("startProject")}</Link>
             </Button>
             <Button asChild variant="outline">
