@@ -7,7 +7,7 @@ import { Card, CardCTA, CardTitle } from "./card";
 import { IconArrowRight, IconPlus, IconX } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { categoryPath, serviceCategories, type CategorySlug } from "@/lib/site";
+import { categoryPath, serviceCategories, serviceSlugs, type CategorySlug } from "@/lib/site";
 import { CategoryVisual } from "../services/visuals";
 import { categoryIcons } from "../service-icons";
 import { tintBg, tintFrom, tintStyle } from "../services/category-tints";
@@ -18,14 +18,32 @@ import { Figures } from "../figures";
 import { cn } from "@/lib/utils";
 
 // Outer corners of the grid are rounded: 2 x 3 on phones, 3 x 2 from lg.
-const cornerClassNames = [
-  "rounded-tl-3xl",
-  "rounded-tr-3xl lg:rounded-tr-lg",
-  "lg:rounded-tr-3xl",
-  "lg:rounded-bl-3xl",
-  "rounded-bl-3xl lg:rounded-bl-lg",
-  "rounded-br-3xl",
-];
+// The grid's outer corners are round, the inner ones tight, for any number of categories
+// (2 columns on phones, 3 from lg). Per corner: round on phones, round from lg, tight from lg.
+const cornerClasses = {
+  tl: ["rounded-tl-3xl", "lg:rounded-tl-3xl", "lg:rounded-tl-lg"],
+  tr: ["rounded-tr-3xl", "lg:rounded-tr-3xl", "lg:rounded-tr-lg"],
+  bl: ["rounded-bl-3xl", "lg:rounded-bl-3xl", "lg:rounded-bl-lg"],
+  br: ["rounded-br-3xl", "lg:rounded-br-3xl", "lg:rounded-br-lg"],
+} as const;
+
+const outerCorners = (index: number, count: number, columns: number) => {
+  const left = index % columns === 0;
+  const right = index % columns === columns - 1 || index === count - 1;
+  const top = index < columns;
+  const bottom = index + columns >= count;
+  return { tl: top && left, tr: top && right, bl: bottom && left, br: bottom && right };
+};
+
+const cornerClassNames = (index: number, count: number) => {
+  const phone = outerCorners(index, count, 2);
+  const desktop = outerCorners(index, count, 3);
+  return (Object.keys(cornerClasses) as (keyof typeof cornerClasses)[]).map((corner) => {
+    const [round, lgRound, lgTight] = cornerClasses[corner];
+    if (phone[corner]) return desktop[corner] ? round : `${round} ${lgTight}`;
+    return desktop[corner] ? lgRound : "";
+  });
+};
 
 // Category cards on the front; clicking one flips the grid to that category's services.
 export const Features = () => {
@@ -77,7 +95,7 @@ export const Features = () => {
         <Reveal className="flex xl:flex-row flex-col xl:items-baseline-last justify-between gap-6 xl:gap-10">
           <Heading className="text-center lg:text-left">{t("services.title")}</Heading>
           <Subheading className="text-center lg:text-left mx-auto lg:mx-0">
-            {t("services.intro")}
+            {t("services.intro", { areas: serviceCategories.length })}
           </Subheading>
         </Reveal>
         <div ref={gridRef} className="mt-10 lg:mt-8 scroll-mt-28">
@@ -94,7 +112,11 @@ export const Features = () => {
         </div>
         <Figures
           className="mt-10 md:mt-16"
-          items={t.raw("figures") as { value: string; label: string }[]}
+          // "{services}" is the number of published services (serviceToggles).
+          items={(t.raw("figures") as { value: string; label: string }[]).map((figure) => ({
+            ...figure,
+            value: figure.value.replace("{services}", String(serviceSlugs.length)),
+          }))}
         />
       </Container>
     </section>
@@ -125,7 +147,7 @@ const CategoryGrid = ({
               className={cn(
                 "relative isolate overflow-hidden h-44 sm:h-60 lg:h-[max(14rem,calc((100svh-17rem)/2))]",
                 tintBg,
-                cornerClassNames[index]
+                cornerClassNames(index, serviceCategories.length)
               )}
             >
               <CategoryVisual

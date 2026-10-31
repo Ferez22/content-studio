@@ -162,7 +162,7 @@
         "label": "pour la mise en production"
       },
       {
-        "value": "29",
+        "value": "{services}",
         "label": "services, un seul chef de projet"
       },
       {

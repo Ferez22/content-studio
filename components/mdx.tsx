@@ -1,6 +1,7 @@
 import React from "react";
 import { headingId } from "@/lib/utils";
 import { ToolLogo, type ToolSlug } from "@/icons/tool-logos";
+import { isPublishedServiceHref } from "@/lib/site";
 
 // Plain text of rendered children (bold, links...), so the id matches the table of contents.
 const textOf = (node: React.ReactNode): string => {
@@ -42,14 +43,18 @@ export const mdxComponents = {
   strong: (props: React.ComponentProps<"strong">) => (
     <strong className="font-semibold text-black dark:text-white" {...props} />
   ),
-  a: (props: React.ComponentProps<"a">) => (
-    <a
-      className="underline underline-offset-4 hover:text-black dark:hover:text-white"
-      target={props.href?.startsWith("http") ? "_blank" : undefined}
-      rel={props.href?.startsWith("http") ? "noopener noreferrer" : undefined}
-      {...props}
-    />
-  ),
+  // A link to a hidden service keeps its words and drops the link (see serviceToggles).
+  a: (props: React.ComponentProps<"a">) =>
+    props.href && !isPublishedServiceHref(props.href) ? (
+      <>{props.children}</>
+    ) : (
+      <a
+        className="underline underline-offset-4 hover:text-black dark:hover:text-white"
+        target={props.href?.startsWith("http") ? "_blank" : undefined}
+        rel={props.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+        {...props}
+      />
+    ),
   h4: (props: React.ComponentProps<"h4">) => (
     <h4 className="text-lg font-display font-bold mt-6 mb-2" {...props} />
   ),

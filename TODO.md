@@ -28,7 +28,7 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 - [ ] Hero KPIs (3.2M€ ROI, 80% time saved) and the interactive workflow under the hero are still about AI agents: decide whether to keep them under the new digital partner title
 - [ ] Example videos on video-motion, social-media and personal-branding are by independent creators on Prompt Motion (no licence stated) and hotlinked from their server (up to 28 MB each): ask the creators for permission, or replace them with our own work, then self-host compressed copies
 - [ ] Confirm the network can deliver what the copy promises: voice-overs in Arabic, French and English (video), on-site IT via a local technician (IT support), Power BI as an example tool (data platforms) (Fares is asking them)
-- [ ] Deepen the other service pages the same way (explainer, examples, what's included)
+- [ ] Deepen the other service pages the same way (explainer, examples, what's included), then switch each one on in `serviceToggles` (`lib/site.ts`). 24 services are off for now
 - [ ] Show freelancer portfolio work on service pages, with each person's permission and labelled as their work
 - [ ] SEO plan from Search Console data (export the Performance report or connect a GSC MCP), then blog posts per category
 

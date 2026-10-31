@@ -70,11 +70,12 @@ proxy.ts                       next-intl locale detection (Next 16 name for midd
 
 ## Services
 
-- Six categories with their services, defined once in `serviceCategories` (`lib/site.ts`). Build links with `categoryPath()` / `servicePath()`, never by hand.
+- Six categories with their services, defined once in `lib/site.ts`. Build links with `categoryPath()` / `servicePath()`, never by hand.
+- **Feature toggles:** `serviceToggles` (`lib/site.ts`) switches each service on or off. Off means no page (404), no sitemap entry, no link in menus, footer, home, overview, hubs or "More in"; blog and case-study links to it render as plain text; a category with nothing on disappears too. `serviceCategories`, `categorySlugs`, `serviceSlugs` and `isServiceSlug` only contain what is on, so new code gets this for free.
 - Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items as FAQPage JSON-LD). Optional sections render when their copy exists: `explainer`, `examples`, `included`.
 - **One card everywhere:** `ServiceCard` / `ServiceCards` (`components/services/service-cards.tsx`) on the home panel, overview, hubs and "More in". Its top is `ServiceCardMedia`: a free-license Unsplash photo (`service-photos.ts`) or an animated visual (`card-visuals.tsx`), plus tool logos. The desktop Services menu previews the same media on hover.
 - **Deeper service pages:** the `extras` map in `app/[locale]/services/[category]/[slug]/page.tsx` adds a hero visual, a wide visual under the hero, own sections, level icons, a use-case aside, a features marquee or a demo per slug; such pages skip "How we deliver". Copy-driven sections (`explainer`, `levels`, `useCases`, `included`, `examples`) render only when their copy exists.
-- **Adding a service:** slug in its category, copy in `messages/en.json`, icon in `components/service-icons.tsx`, photo or visual in `service-card-media.tsx`, update the "29 services" figure in `home.figures`.
+- **Adding a service:** slug in its category, copy in `messages/en.json`, icon in `components/service-icons.tsx`, photo or visual in `service-card-media.tsx`, switch it on in `serviceToggles` (`lib/site.ts`). The service count on the home page follows the toggles.
 - Each category has a soft tint (pastel light, deep tone dark), only in `components/services/category-tints.ts`.
 
 ## Motion and animation toolkit

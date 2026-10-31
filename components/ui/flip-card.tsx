@@ -54,7 +54,8 @@ export const FlipCard = ({
       className={cn("[overflow-y:clip] [overflow-clip-margin:2rem]", className)}
       style={{ perspective: 1800 }}
       initial={false}
-      animate={activeHeight ? { height: activeHeight } : undefined}
+      // "auto" until measured: starting from undefined, motion never applied the height.
+      animate={{ height: activeHeight ?? "auto" }}
       transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 90, damping: 18 }}
     >
       <motion.div

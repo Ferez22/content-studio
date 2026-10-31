@@ -2,6 +2,11 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-10-30
+
+- Service feature toggles: `serviceToggles` in `lib/site.ts` switches each service on or off. Off means no page (404), no sitemap entry, no legacy redirect, no link in the menu, footer, home, overview, hubs or "More in"; blog and case-study links to it show as plain text; categories with nothing on disappear. On: AI agent development, chatbots and assistants, CRM development, ERP and CRM setup, video and motion design (3 categories). The home figure ("5 services") and intro ("3 areas") follow the toggles; the home category grid rounds its outer corners for any number of cards
+- Fix: the home category flip card now takes the height of its visible face (it never applied the height, so a tall back face left empty space under the cards)
+
 ## 2026-10-29
 
 - ERP development replaced by **ERP and CRM setup** (`erp-crm-setup`; the old URL redirects permanently): setting up HubSpot, Salesforce, Odoo, Zoho and similar for clients. Platforms hero visual, six sourced KPIs (HubSpot ROI Report 2025, Nucleus Research 2024, Salesforce 2022, Forrester TEI for Microsoft 2026; vendor sponsorship stated), four customer stories from Kenya, Egypt, the UAE and Jordan quoted from Odoo, Zoho and Microsoft case studies (labelled as not Qartmina clients). Reusable `Stats`, `Stories`, `PlatformsVisual` in `components/services/proof.tsx`
