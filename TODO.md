@@ -26,6 +26,7 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 
 ## Positioning
 
+- [ ] France first for now (Fares 2026-11-05). Next markets when ready: French-speaking Europe (Belgium, Switzerland, Luxembourg), then DACH: add them to `about.coreMarkets` / `about.reach` in all three message files
 - [ ] `how-to-choose-a-crm` still frames hosting for the Gulf and Egypt: refresh for European SMEs when the post is next updated
 
 ## Services

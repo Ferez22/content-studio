@@ -3383,16 +3383,10 @@
     "locationsText": "Remote-first across Europe, delivered to international standards. Based in France.",
     "coreMarketsLabel": "Core markets",
     "coreMarkets": [
-      "France",
-      "Belgium",
-      "Switzerland",
-      "Luxembourg"
+      "France"
     ],
     "reachLabel": "Also active in",
-    "reach": [
-      "Germany",
-      "Austria"
-    ]
+    "reach": []
   },
   "contactPage": {
     "metaTitle": "Contact",

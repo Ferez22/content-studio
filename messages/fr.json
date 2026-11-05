@@ -438,16 +438,10 @@
     "locationsText": "À distance partout en Europe, selon des standards internationaux. Basés en France.",
     "coreMarketsLabel": "Marchés principaux",
     "coreMarkets": [
-      "France",
-      "Belgique",
-      "Suisse",
-      "Luxembourg"
+      "France"
     ],
     "reachLabel": "Également présents en",
-    "reach": [
-      "Allemagne",
-      "Autriche"
-    ]
+    "reach": []
   },
   "contactPage": {
     "metaTitle": "Contact",

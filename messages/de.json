@@ -438,16 +438,10 @@
     "locationsText": "Remote-first in ganz Europa, umgesetzt nach internationalen Standards. Sitz in Frankreich.",
     "coreMarketsLabel": "Kernmärkte",
     "coreMarkets": [
-      "Frankreich",
-      "Belgien",
-      "Schweiz",
-      "Luxemburg"
+      "Frankreich"
     ],
     "reachLabel": "Außerdem aktiv in",
-    "reach": [
-      "Deutschland",
-      "Österreich"
-    ]
+    "reach": []
   },
   "contactPage": {
     "metaTitle": "Kontakt",
