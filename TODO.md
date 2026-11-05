@@ -21,8 +21,7 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 - [ ] Bing Webmaster Tools: import the site from Search Console
 - [ ] LinkedIn Post Inspector: check the preview for `https://www.qartmina.com/en`
 - [ ] Create a Google Business Profile for Qartmina (Les Berges du Lac)
-- [ ] Old-site posts still 404 at `/blog/<slug>` (low impressions): `mcp-and-the-future-of-saas`, `eu-ai-act-transparency-enforcement`, `why-ai-pilots-never-reach-production`, `ai-agents-with-tools-banking-insurance`. Restore or redirect to the closest live page (sources in the old `website` repo history)
-- [ ] Rewrite title and description of `copilot-vs-chatgpt-claude-gemini` (Search Console: 641 impressions, position 8, 0 clicks over 90 days)
+- [ ] Decide: permanent (308) redirects for old unprefixed pages still indexed (`/about`, `/contact`, `/blog`) to `/en/...`. Today next-intl answers 307 with language detection; a permanent redirect would send everyone to English on those three paths
 
 ## Services
 

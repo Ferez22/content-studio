@@ -4,14 +4,23 @@ import { isServiceSlug, legacyServiceSlugs, servicePath } from "./lib/site";
 
 const withNextIntl = createNextIntlPlugin();
 
-// Old-site posts restored in content/blog/en (same slug). Still indexed by Google at /blog/<slug>.
-const restoredLegacyPosts = [
-  "security-certifications-explained",
-  "ai-and-data-consulting-cost",
-  "how-to-identify-ai-use-cases",
-  "qartmina-openai-select-partner",
-  "databricks-alternatives-comparison",
-];
+// Posts from the previous site lived at /blog/<slug> (English, no locale) and are still indexed.
+// Restored posts keep their slug; the others point to the live post on the same topic.
+// Old posts with no close match (no-standard-process-digital-transformation) are left to 404.
+const legacyPosts: Record<string, string> = {
+  "security-certifications-explained": "security-certifications-explained",
+  "ai-and-data-consulting-cost": "ai-and-data-consulting-cost",
+  "how-to-identify-ai-use-cases": "how-to-identify-ai-use-cases",
+  "qartmina-openai-select-partner": "qartmina-openai-select-partner",
+  "databricks-alternatives-comparison": "databricks-alternatives-comparison",
+  "mcp-and-the-future-of-saas": "connect-ai-agent-erp-crm",
+  "eu-ai-act-transparency-enforcement": "ai-agents-gdpr-eu-ai-act",
+  "why-ai-pilots-never-reach-production": "ai-and-data-consulting-cost",
+  "what-you-pay-for-ai-consulting": "ai-and-data-consulting-cost",
+  "ai-agents-with-tools-banking-insurance": "ai-agents-for-business",
+  "databricks-business-case": "databricks-alternatives-comparison",
+  "llm-plus-your-data": "ai-agent-knowledge-base",
+};
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -29,10 +38,8 @@ const nextConfig: NextConfig = {
         destination: `/:locale${servicePath(service)}`,
         permanent: true,
       }));
-    // Posts from the previous site lived at /blog/<slug> (English, no locale). Only restored
-    // posts get a permanent redirect; the others keep the default locale redirect.
-    const posts = restoredLegacyPosts.map((slug) => ({
-      source: `/blog/${slug}`,
+    const posts = Object.entries(legacyPosts).map(([legacy, slug]) => ({
+      source: `/blog/${legacy}`,
       destination: `/en/blog/${slug}`,
       permanent: true,
     }));
