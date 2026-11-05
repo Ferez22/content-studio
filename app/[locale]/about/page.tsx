@@ -84,8 +84,10 @@ export default async function AboutPage({ params }: Props) {
             <Heading>{t("locationsTitle")}</Heading>
             <Subheading className="py-8">{t("locationsText")}</Subheading>
             <div className="flex flex-col gap-6">
-              <Tags label={t("coreMarketsLabel")} items={t.raw("coreMarkets") as string[]} />
-              <Tags label={t("reachLabel")} items={t.raw("reach") as string[]} />
+              {(["coreMarkets", "reach"] as const).map((key) => {
+                const items = t.raw(key) as string[];
+                return items.length > 0 && <Tags key={key} label={t(`${key}Label`)} items={items} />;
+              })}
             </div>
           </div>
           <div>
