@@ -26,7 +26,6 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 
 ## Positioning
 
-- [ ] About page "Where we work": core markets shows only France and "Also active in" is hidden (empty list). Add the European countries you actively target to `about.coreMarkets` / `about.reach` in all three message files
 - [ ] `how-to-choose-a-crm` still frames hosting for the Gulf and Egypt: refresh for European SMEs when the post is next updated
 
 ## Services
