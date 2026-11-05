@@ -10,7 +10,7 @@ Guidelines for anyone (human or AI agent) working on the Qartmina website. Read 
 
 ## What this is
 
-Marketing site for **Qartmina**, a **digital partner** for businesses: AI, data and automation, websites and e-commerce, software, brand and online presence, cybersecurity and IT. Clients buy project management, quality assurance and trust: one Qartmina project lead, specialists cherry-picked from a vetted freelancer network, quality control before delivery. Positioned as an **OpenAI Select Partner**. Audience: decision-makers at European SMEs, often non-technical; based in France. Clear for the board, precise for engineers. No prices on service pages.
+Marketing site for **Qartmina**, a **digital partner** for businesses: AI, data and automation, websites and e-commerce, software, brand and online presence, cybersecurity and IT. Clients buy project management, quality assurance and trust: one Qartmina project lead, specialists cherry-picked from a vetted freelancer network, quality control before delivery. Positioned as an **OpenAI Select Partner**. Audience: decision-makers at SMEs in France (France first, Europe later), often non-technical. Clear for the board, precise for engineers. No prices on service pages.
 
 Live at https://www.qartmina.com (canonical; the bare domain redirects), deployed on Vercel from `main`, server functions in Frankfurt (`vercel.json`, `fra1`). DNS on Hostinger. Work on a branch, never commit to `main` directly.
 

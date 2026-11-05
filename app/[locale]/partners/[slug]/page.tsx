@@ -66,7 +66,7 @@ export default async function PartnerPage({ params }: Props) {
           description: t("metaDescription"),
           url: `${site.url}/${locale}/partners/${slug}`,
           provider: { "@type": "Organization", name: site.name, url: site.url },
-          areaServed: "Europe",
+          areaServed: "France",
         }}
       />
 

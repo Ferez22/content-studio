@@ -28,7 +28,7 @@
     "services": "Services",
     "company": "Entreprise",
     "contact": "Contact",
-    "location": "Basés en France. Avec des PME partout en Europe.",
+    "location": "Basés en France. Avec des PME partout en France.",
     "rights": "© {year} Qartmina. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions d'utilisation",
@@ -145,7 +145,7 @@
       "emailLabel": "E-mail",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Adresse",
-      "location": "Basés en France. Avec des PME partout en Europe.",
+      "location": "Basés en France. Avec des PME partout en France.",
       "tabs": {
         "call": "Réserver un appel gratuit de 30 min",
         "message": "Nous contacter"
@@ -397,7 +397,7 @@
   },
   "about": {
     "metaTitle": "À propos",
-    "metaDescription": "Qartmina est une société de conseil en IA et en données au service des PME partout en Europe. Découvrez notre nom, notre fondateur et notre façon de travailler.",
+    "metaDescription": "Qartmina est une société de conseil en IA et en données au service des PME partout en France. Découvrez notre nom, notre fondateur et notre façon de travailler.",
     "title": "À propos de Qartmina",
     "intro": "Nous aidons les entreprises à se digitaliser et à mettre l'IA au travail, de la stratégie à l'exécution, en appuyant chaque recommandation sur des preuves.",
     "nameTitle": "Le nom",
@@ -435,7 +435,7 @@
     ],
     "partnersTitle": "Partenaires",
     "locationsTitle": "Où nous travaillons",
-    "locationsText": "À distance partout en Europe, selon des standards internationaux. Basés en France.",
+    "locationsText": "À distance partout en France, selon des standards internationaux. Basés en France.",
     "coreMarketsLabel": "Marchés principaux",
     "coreMarkets": [
       "France"

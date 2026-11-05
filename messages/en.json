@@ -30,7 +30,7 @@
     "services": "Services",
     "company": "Company",
     "contact": "Contact",
-    "location": "Based in France. Working with SMEs across Europe.",
+    "location": "Based in France. Working with SMEs across France.",
     "rights": "© {year} Qartmina. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -151,7 +151,7 @@
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Location",
-      "location": "Based in France. Working with SMEs across Europe.",
+      "location": "Based in France. Working with SMEs across France.",
       "tabs": {
         "call": "Schedule a free 30-min call",
         "message": "Contact us"
@@ -3342,7 +3342,7 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Qartmina is an AI and data consulting company working with SMEs across Europe. Learn about our name, our founder and how we work.",
+    "metaDescription": "Qartmina is an AI and data consulting company working with SMEs across France. Learn about our name, our founder and how we work.",
     "title": "About Qartmina",
     "intro": "We help businesses digitalise and put AI to work, from strategy to execution, and back every recommendation with evidence.",
     "nameTitle": "The name",
@@ -3380,7 +3380,7 @@
     ],
     "partnersTitle": "Partners",
     "locationsTitle": "Where we work",
-    "locationsText": "Remote-first across Europe, delivered to international standards. Based in France.",
+    "locationsText": "Remote-first across France, delivered to international standards. Based in France.",
     "coreMarketsLabel": "Core markets",
     "coreMarkets": [
       "France"
