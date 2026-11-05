@@ -2,6 +2,13 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-05
+
+- Restored five posts from the previous site that Search Console still showed with impressions but returned 404 (about 1,800 impressions in 90 days): `security-certifications-explained`, `ai-and-data-consulting-cost`, `how-to-identify-ai-use-cases`, `qartmina-openai-select-partner`, `databricks-alternatives-comparison`. Same slugs in `content/blog/en`, original date kept, `updated` set, titles and descriptions aligned with the queries they rank for, dashes removed, links moved to live `/en/...` pages, CTA to `/en/book`. Permanent redirects for every old `/blog/<slug>` URL (`legacyPosts` in `next.config.ts`): restored posts to their new URL, the other old posts to the live post on the same topic (`mcp-and-the-future-of-saas` to `connect-ai-agent-erp-crm`, `eu-ai-act-transparency-enforcement` to `ai-agents-gdpr-eu-ai-act`, `why-ai-pilots-never-reach-production` and `what-you-pay-for-ai-consulting` to `ai-and-data-consulting-cost`, `ai-agents-with-tools-banking-insurance` to `ai-agents-for-business`, `databricks-business-case` to `databricks-alternatives-comparison`, `llm-plus-your-data` to `ai-agent-knowledge-base`)
+- Every unprefixed blog URL (`/blog`, `/blog/<slug>`) now redirects permanently to English (`/en/blog/...`) instead of next-intl language detection, until the blog exists in fr and de
+- `copilot-vs-chatgpt-claude-gemini`: shorter title and description (old title was cut in search results; 641 impressions, 0 clicks in 90 days)
+- `company-brain-ai` refreshed for "company brain" (position 31): title "What Is a Company Brain?", definition first, people and AI agents as users, new "Company brain vs a wiki" section, FAQ aligned
+
 ## 2026-10-30
 
 - Service feature toggles: `serviceToggles` in `lib/site.ts` switches each service on or off. Off means no page (404), no sitemap entry, no legacy redirect, no link in the menu, footer, home, overview, hubs or "More in"; blog and case-study links to it show as plain text; categories with nothing on disappear. On: AI agent development, chatbots and assistants, CRM development, ERP and CRM setup, video and motion design (3 categories). The home figure ("5 services") and intro ("3 areas") follow the toggles; the home category grid rounds its outer corners for any number of cards

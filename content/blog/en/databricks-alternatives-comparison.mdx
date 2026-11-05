@@ -1,0 +1,118 @@
+---
+title: "Databricks Alternatives Compared: How to Choose"
+summary: "Snowflake, Microsoft Fabric, BigQuery, Redshift and open table formats: what each Databricks alternative is genuinely good at, and why market share figures mislead."
+description: "Databricks alternatives compared: Snowflake, Microsoft Fabric, BigQuery, Redshift and open table formats, and the questions that predict your real bill."
+slug: "databricks-alternatives-comparison"
+date: "2026-03-11"
+updated: "2026-11-05"
+tags: ["Data platform", "Procurement", "Databricks"]
+primaryKeyword: "Databricks alternatives"
+secondaryKeywords: ["Databricks competitors", "Snowflake vs Databricks", "Microsoft Fabric vs Databricks", "BigQuery vs Databricks"]
+author: "Fares"
+faq:
+  - question: "What are the main alternatives to Databricks?"
+    answer: "Snowflake for structured analytics run by a broad team, Microsoft Fabric if you already live in Microsoft 365, Azure and Power BI, Google BigQuery for serverless simplicity on Google Cloud, Amazon Redshift for AWS-centric estates, and open table formats such as Iceberg or Delta in your own storage if lock-in is the main concern."
+  - question: "Is Snowflake or Databricks better?"
+    answer: "Neither in general. Snowflake fits when reporting and analytics are the centre of gravity and operational simplicity matters. Databricks fits when machine learning and unstructured data are a large share of the work and you have real data engineering capability."
+  - question: "Should we migrate to a new data platform?"
+    answer: "Often not yet. If you cannot name the system of record for your three most important data entities in one sentence each, fix data ownership first. A migration moves the confusion along with the data and takes 12 to 24 months for a large estate."
+---
+
+**Start with a warning about the numbers you'll be shown when you compare Databricks alternatives.**
+
+While researching this piece I found a widely circulated 2026 breakdown giving Snowflake 35% of the enterprise data platform market, BigQuery 28%, Redshift 20%, Fabric 12% and Databricks 5%. I also found analyst commentary describing Databricks as the leader in AI and ML workloads, alongside company disclosures showing Databricks at a $6.9bn revenue run rate growing about 80% year on year, and Snowflake reporting quarterly product revenue just under $1bn growing 26%.
+
+Those pictures are not compatible. A vendor cannot simultaneously hold 5% of a market and out-grow the vendor holding 35% of it by three times.
+
+The explanation is boring: **"data platform market share" is not a defined quantity.** Different analysts count different products, different revenue lines, and different definitions of the market. Every vendor cites the study that flatters it.
+
+**Practical instruction: strike market-share slides from your evaluation entirely.** They are the least informative page in any deck and they consume the most discussion time. What matters is fit with your workload and your existing estate. Nothing else.
+
+## The five real options
+
+### Snowflake: the safe warehouse choice
+
+Strongest where the primary job is structured analytics done well by a broad group of people. Genuinely easy to operate, which matters more than technologists admit: a platform your existing team can run is worth more than a superior platform requiring people you can't hire.
+
+Weaker when the workload is heavily machine-learning oriented or unstructured-data heavy. It has moved in that direction, but it started from the warehouse and it shows.
+
+**Choose it if** reporting and analytics are the centre of gravity, you have a broad analyst population, and ML is important but not dominant.
+
+### Databricks: the ML and unstructured choice
+
+Strongest where machine learning is central and where a large share of the valuable data isn't in neat tables. Built from that direction and it shows equally clearly.
+
+Weaker on operational simplicity. It expects real engineering capability. Organisations that adopt it without a platform team get a large bill and a small return.
+
+**Choose it if** ML workloads are a substantial share of the estate, you have or will hire genuine data engineering capability, and unstructured data matters.
+
+### Microsoft Fabric: the incumbency choice
+
+Fabric reported over 21,000 paid customers, up 80% year on year. That growth is real, and it has almost nothing to do with product superiority. It's a distribution result: if your organisation runs Microsoft 365, Azure and Power BI, Fabric arrives pre-integrated with an enterprise agreement attached.
+
+This is not a criticism. **Integration with what you already own is a legitimate and frequently decisive advantage.** The cost of a slightly weaker product that already speaks to your identity system, your reporting tool and your procurement process is usually lower than the cost of a better product that doesn't.
+
+Weaker on maturity in the deepest engineering scenarios, and it locks you further into one vendor.
+
+**Choose it if** Power BI is where your reporting lives and Azure is your default cloud. In that situation the burden of proof should be on the alternatives.
+
+### Google BigQuery: the operational-simplicity choice
+
+Strongest on genuinely serverless operation. Very little to run, very good at large-scale SQL, and a strong story where analytics and ML sit close together.
+
+Weaker if you're not otherwise on Google Cloud, which for most large European enterprises is the deciding factor.
+
+**Choose it if** you're on GCP, or if operational simplicity is the top priority and you're willing to place a workload outside your primary cloud.
+
+### Amazon Redshift: the incumbent you may already have
+
+Widely deployed, well understood, deeply integrated with AWS. Often the honest answer for an AWS-centric organisation is that a modernised Redshift estate is sufficient, and the migration budget is better spent on data ownership and quality.
+
+**Choose it if** you're AWS-centric and your requirements are mainstream. Ask hard whether migrating anywhere would change a business outcome.
+
+### The sixth option nobody presents: open table formats
+
+Not a product, an architectural choice. Store data in an open format (Iceberg or Delta) in your own cloud storage, and connect whichever query engines you want on top.
+
+The benefit is structural: **your data stops being inside a vendor's product.** Switching engines becomes a decision rather than a migration programme. All the major platforms now support these formats to varying degrees, precisely because customers started asking.
+
+The cost is that you assume responsibility for things a platform would have handled. It needs real engineering maturity.
+
+**Consider it if** you have strong engineering capability, a long time horizon, and lock-in is a board-level concern. **Ask about it regardless.** How a vendor answers "can I keep my data in open format in my own storage?" tells you a great deal about the relationship you're entering.
+
+## The comparison that actually predicts your bill
+
+| Question | Why it decides more than features |
+|---|---|
+| What cloud are you already on, and how strong is that commitment? | Cross-cloud data movement charges are the most underestimated line in any TCO model |
+| Where does reporting live today? | Migrating a BI estate is often larger than migrating the data platform |
+| Can you hire for this platform in your market? | A platform your team can't operate has a negative return regardless of capability |
+| What proportion of workload is ML versus BI? | The single strongest technical differentiator between the options |
+| Can you keep your data in an open format? | Determines the cost of your next decision, not this one |
+| What will you switch off? | If nothing, you are adding cost, not consolidating it |
+
+## Three ways evaluations go wrong
+
+**The proof of concept is designed by the vendor.** They will propose a use case their product handles well. Insist on your own: take a real workload that is currently painful, and make every candidate run it against your data.
+
+**Nobody models the second year.** Consumption pricing plus growth plus expanding adoption produces a year-two bill substantially above year one. Databricks' net dollar retention above 140% and Snowflake's around 124% are the industry telling you this plainly: the average customer's spend rises materially every year. Model three years, not one.
+
+**The migration cost is left out.** For a large estate, migration takes 12 to 24 months with both systems running for much of it. If that isn't in the business case, the business case is wrong regardless of which platform it recommends.
+
+## The uncomfortable recommendation
+
+For a lot of large organisations, the correct answer is: **not yet.**
+
+Not because the platforms aren't good. They are, all five. But because the constraint on getting value from data in most large companies isn't the platform. It's that nobody can say which system is authoritative for a given field, permissions live in application code where a retrieval system can't see them, and there's no owner for the data itself.
+
+None of those are fixed by procurement. All of them make a new platform more expensive, because you migrate the confusion along with the data.
+
+The test I'd apply before starting an evaluation: **pick your three most important data entities and name the system of record for each, in one sentence, without convening a meeting.**
+
+If you can't, spend the next quarter on that instead. It costs a fraction of a platform migration and it improves the outcome of every subsequent decision, including which platform you eventually buy. For how data work weighs in a total budget, see [what AI and data consulting actually costs](/en/blog/ai-and-data-consulting-cost).
+
+---
+
+**Choosing a data platform?** [Book a free 30-minute call](/en/book) and we'll pressure-test the decision against your own workloads.
+
+*Sources: Databricks company newsroom (revenue run rate, net dollar retention), Microsoft (Fabric customer figures), Snowflake quarterly results, and published market analyses, all accessed 2026-07-26. Market share figures are cited only to illustrate their inconsistency. Qartmina has no reseller agreements with any vendor named here.*

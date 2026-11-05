@@ -1,0 +1,149 @@
+---
+title: "AI Consulting Cost: 2026 Rates, Ranges and Drivers"
+summary: "What AI and data consulting costs in 2026: hourly and day rates, project ranges, the four factors that move a quote, and the questions that expose a padded proposal."
+description: "AI consulting rates and project costs in 2026, the four factors that can move a quote by 3x, and six questions that expose a padded proposal."
+slug: "ai-and-data-consulting-cost"
+date: "2026-07-28"
+updated: "2026-11-05"
+tags: ["AI consulting", "Procurement", "Pricing", "Data engineering"]
+primaryKeyword: "AI consulting cost"
+secondaryKeywords: ["AI consulting rates", "AI consultancy day rate", "how much does AI consulting cost", "AI consulting pricing"]
+author: "Fares"
+faq:
+  - question: "How much does AI consulting cost per hour?"
+    answer: "Independents and small firms typically charge $100 to $250 per hour. Mid-sized consultancies charge $250 to $600. The largest global firms charge $600 and up. Rate alone is a poor predictor of total cost, because the number of hours depends on your data readiness far more than on the vendor."
+  - question: "Why are AI consulting quotes so different for the same brief?"
+    answer: "Because the brief is not what determines the work. Data readiness, integration surface, regulatory load, and whether production is in scope can each move the total by multiples. Quotes that differ by 4x usually differ in assumptions, not in quality."
+  - question: "Is a proof of concept worth paying for?"
+    answer: "Only if it is scoped to answer a specific question you cannot answer otherwise, and only if you have already decided what result would cause you to stop. A proof of concept with no kill criterion is a demonstration, and demonstrations always succeed."
+  - question: "Should we hire a consultancy or build in house?"
+    answer: "Build in house when the capability is core to your business, recurring, and you can actually recruit for it. Buy when the work is time limited, when you need capability faster than you can hire, or when you need an outside read on what is worth doing. Many organisations sensibly do both, buying the first build and taking over the run."
+  - question: "How long before an AI investment pays back?"
+    answer: "Industry reporting puts typical break even at 18 to 30 months for larger programmes. A single well chosen workflow can pay back considerably faster, which is the main argument for starting narrow."
+---
+
+**Short answer:** AI consulting cost in 2026 starts with hourly rates of roughly $100 to $250 for independents and small firms, $250 to $600 by established consultancies, and upward of $600 by the largest global firms. Project-wise, a strategy assessment runs about $25,000 to $75,000, a proof of concept about $50,000 to $250,000, and a single production use case about $100,000 to $500,000. **The single biggest driver of where you land is not the AI. It is the state of your data.**
+
+That last sentence is the part most cost guides leave out, so the rest of this page is about why it is true and what to do about it.
+
+## Why published rates tell you so little
+
+Rate cards are real but nearly useless on their own, because the same nominal rate can produce wildly different bills depending on how many hours the work actually takes. And the hours are governed by conditions inside your organisation, not by the vendor's price list.
+
+Two companies can buy "an AI assistant over our internal documents", receive quotes from the same firm at the same day rate, and pay amounts that differ by a factor of four. The difference is never the model. It is whether the documents have an owner, an access path, a permission model, and a consistent format.
+
+This is why industry estimates put real implementation cost at three to five times the headline figure once data preparation, integration and change management are counted. It is also why a quote that arrives without any questions about your data should be treated as a guess.
+
+## The four things that actually move the number
+
+### 1. Data readiness
+
+The dominant variable. If your data is already structured, owned, accessible through a live path, and governed by a permission model somebody can explain, an AI project is mostly application work and lands at the low end of every range above.
+
+If it is not, then before anything else happens somebody has to build pipelines, resolve ownership, reconcile schemas, and construct an access layer. That is ordinary data engineering. It is well understood, it is not exotic, and it is most of the effort.
+
+The largest AI consultancy in the world has effectively confirmed this: roughly half its AI projects bundle data modernisation.
+
+### 2. Integration surface
+
+A system that reads from one database is cheap. A system that reads from a CRM, an ERP, a document store and a mail server, and writes back to two of them, is not. Cost scales with the number of systems touched and, more sharply, with the number of systems it has to write to. Read-only is a different price bracket from write access. We go into how that plumbing works in [connecting an AI agent to your ERP and CRM](/en/blog/connect-ai-agent-erp-crm).
+
+### 3. Regulatory and security load
+
+In financial services, healthcare, insurance and the public sector, a meaningful share of the budget goes to controls, audit trails, data residency and review cycles rather than to building anything. If a deal or a regulator requires a formal certification, that is its own line item with its own timeline, which we cover in [SOC 2 vs ISO 27001](/en/blog/security-certifications-explained).
+
+### 4. Whether it has to reach production
+
+This is the widest gap of all, and the most commonly underestimated. A pilot needs a model and a demo. Production needs authentication, monitoring, access controls, a deployment pipeline, error handling, and somebody to maintain it after everyone has moved on.
+
+That gap is why roughly 95% of enterprise generative AI pilots deliver no measurable business impact, according to MIT NANDA's 2025 research. The pilot was priced and scoped as a pilot, and the production work was never funded.
+
+## What the ranges look like in practice
+
+| Engagement | Typical range | What you receive |
+| --- | --- | --- |
+| Strategy assessment | $25,000 to $75,000 | Use case inventory, maturity assessment, roadmap. A document. |
+| Proof of concept | $50,000 to $250,000 | A working demonstration on sample data. Usually not production ready. |
+| Single production use case | $100,000 to $500,000 | One workflow live, integrated, monitored, maintained. |
+| Enterprise programme | $500,000 to $5,000,000+ | Multiple use cases, platform work, change management, ongoing run. |
+
+Treat these as market observations rather than quotes. They come from published 2026 industry pricing surveys, and the spread within each row is wider than the gap between rows, which is the real lesson.
+
+## The pricing models, and what each one hides
+
+**Hourly or day rate.** Transparent, and it puts the risk on you. Sensible when scope genuinely cannot be fixed in advance, such as during discovery. Dangerous as the model for an entire build, because nobody is incentivised to finish.
+
+**Fixed price.** The risk moves to the vendor, and the vendor prices that risk in. Expect a premium of twenty to forty percent over the honest hourly estimate, plus a change request process that becomes the real commercial negotiation. Works well when scope is genuinely known.
+
+**Retainer.** Good for ongoing run and iteration. Bad as a way to fund an initial build, because it obscures whether anything is actually shipping.
+
+**Outcome based.** Attractive in theory and rare in practice, because it requires both sides to agree on a measurement everyone trusts before work starts. Where it does work, it usually works because the measurement was easy, which normally means the problem was well understood, which normally means it could have been priced as a fixed project.
+
+There is no honest universal answer here. The useful rule: match the model to how much is genuinely unknown. High uncertainty, buy time. Low uncertainty, buy an outcome.
+
+## Where the money goes inside an engagement
+
+Roughly, in a large programme, effort distributes something like this:
+
+- **Discovery and strategy.** High margin, highly leveraged, produces a document.
+- **Data and platform work.** The largest share of hours by a distance. Ordinary engineering, frequently priced as AI work.
+- **Model and application layer.** Genuine specialist skill, and a small share of total effort.
+- **Change management and enablement.** Training and adoption.
+- **Run.** Where multi-year vendor revenue lives, plus the usage bill of the models themselves ([what AI agents cost to run](/en/blog/ai-agent-token-cost)).
+
+The part that requires scarce AI expertise is the smallest part. That is not an accusation, since all of it needs doing. But it does mean that if you buy the whole thing as one undifferentiated "AI programme", you pay a specialist rate for a lot of non-specialist work.
+
+## Questions that expose a padded proposal
+
+Ask these before signing. The answers are more informative than the number at the bottom.
+
+1. **What proportion of this engagement is data work rather than AI work?** If the honest answer is half, the quote should reflect data engineering rates for that half.
+2. **What has to be true about our data for this estimate to hold?** A vendor who cannot answer has not looked, which means the estimate is fiction.
+3. **Does this price include getting to production, or to a demonstration?** Get this in writing. It is the most expensive ambiguity in the document.
+4. **Who maintains it in month seven?** If there is no answer, you are buying something that will quietly stop working.
+5. **What would make you tell us not to do this?** A vendor with no such answer is selling, not advising.
+6. **How will we know it worked?** Agreed before the work starts, not after.
+
+## How to spend less without buying less
+
+**Sequence it properly.** Foundations, then data, then AI. Attempting AI on unusable data means paying for the data work anyway, at a worse rate, halfway through a project that is already late. There is no shortcut past this.
+
+**Buy the assessment separately.** A short, cheap, honest scoping exercise before committing to a build is the highest return spend available. It should tell you what your data can and cannot currently support.
+
+**Scope to one workflow.** One thing, live, measured, is worth more than five pilots. It also generates the evidence you need to fund the next one. Our guide on [how to identify AI use cases](/en/blog/how-to-identify-ai-use-cases) shows how to pick that first workflow.
+
+**Separate the line items.** Price the data work as data work. Price the AI layer as the AI layer. Vendors resist this because bundling protects margin, and that resistance is itself informative.
+
+**Do not buy a platform before you have a use case.** Platform decisions are expensive and sticky. Our [Databricks alternatives comparison](/en/blog/databricks-alternatives-comparison) walks through how to make that call on evidence rather than on a vendor's roadmap.
+
+## Frequently asked questions
+
+**How much does AI consulting cost per hour?**
+Independents and small firms typically charge $100 to $250 per hour. Mid-sized consultancies charge $250 to $600. The largest global firms charge $600 and up. Rate alone is a poor predictor of total cost, because the number of hours depends on your data readiness far more than on the vendor.
+
+**Why are AI consulting quotes so different for the same brief?**
+Because the brief is not what determines the work. Data readiness, integration surface, regulatory load, and whether production is in scope can each move the total by multiples. Quotes that differ by 4x usually differ in assumptions, not in quality.
+
+**Is a proof of concept worth paying for?**
+Only if it is scoped to answer a specific question you cannot answer otherwise, and only if you have already decided what result would cause you to stop. A proof of concept with no kill criterion is a demonstration, and demonstrations always succeed.
+
+**Should we hire a consultancy or build in house?**
+Build in house when the capability is core to your business, recurring, and you can actually recruit for it. Buy when the work is time limited, when you need capability faster than you can hire, or when you need an outside read on what is worth doing. Many organisations sensibly do both, buying the first build and taking over the run.
+
+**What is the most common way AI budgets get overspent?**
+Funding a pilot without funding the path to production. The pilot succeeds, the production work turns out to cost several times the pilot, and the project stalls in between with the money already spent.
+
+**How long before an AI investment pays back?**
+Industry reporting puts typical break even at 18 to 30 months for larger programmes. A single well chosen workflow can pay back considerably faster, which is the main argument for starting narrow.
+
+## The one thing worth remembering
+
+You are almost never buying AI. You are buying the data engineering that makes AI possible, plus a comparatively thin layer of AI on top. Price it that way, scope it that way, and the quotes stop looking arbitrary.
+
+---
+
+**Want an honest read on what your own data can support?** [Book a free 30-minute call](/en/book). We will tell you if the answer is that you are not ready, because finding that out in a conversation is considerably cheaper than finding it out in month four.
+
+*Sources: published 2026 AI consulting rate and project pricing surveys from multiple independent advisory and agency sources, cross-referenced for consistency. Figures are market ranges, not quotes, and vary considerably by scope, sector and geography. Pilot failure rate per MIT NANDA, "The GenAI Divide: State of AI in Business 2025". Data modernisation share per Accenture Q1 FY2026 results and earnings commentary. All accessed 2026-07-28.*
+
+*Qartmina sells AI and data work, which makes us an interested party in a discussion about consulting rates. Read it accordingly.*
