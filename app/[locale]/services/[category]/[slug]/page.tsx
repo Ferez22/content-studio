@@ -158,7 +158,7 @@ export default async function ServicePage({ params }: Props) {
           category: tCategory("title"),
           url: `${site.url}/${locale}${servicePath(slug)}`,
           provider: { "@type": "Organization", name: site.name, url: site.url },
-          areaServed: ["Middle East", "North Africa", "Africa"],
+          areaServed: "Europe",
         }}
       />
       <JsonLd data={breadcrumbJsonLd(locale, breadcrumbs)} />

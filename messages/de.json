@@ -28,7 +28,7 @@
     "services": "Leistungen",
     "company": "Unternehmen",
     "contact": "Kontakt",
-    "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika.",
+    "location": "Sitz in Frankreich. Für KMU in ganz Europa.",
     "rights": "© {year} Qartmina. Alle Rechte vorbehalten.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
@@ -48,12 +48,12 @@
       "secondary": "Unsere Arbeit ansehen",
       "kpis": [
         {
-          "value": "3,2 Mio. €",
-          "label": "Ø ROI"
+          "value": "1",
+          "label": "Projektleitung"
         },
         {
-          "value": "80 %",
-          "label": "Zeitersparnis"
+          "value": "100 %",
+          "label": "Vor Übergabe geprüft"
         },
         {
           "value": "30 Tage",
@@ -145,7 +145,7 @@
       "emailLabel": "E-Mail",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Standort",
-      "location": "Les Berges du Lac, Tunesien. Remote in der MENA-Region und in Afrika.",
+      "location": "Sitz in Frankreich. Für KMU in ganz Europa.",
       "tabs": {
         "call": "Kostenloses 30-Min.-Gespräch buchen",
         "message": "Kontakt aufnehmen"
@@ -397,7 +397,7 @@
   },
   "about": {
     "metaTitle": "Über uns",
-    "metaDescription": "Qartmina ist ein Beratungsunternehmen für KI und Daten mit Schwerpunkt auf der MENA-Region und Afrika. Erfahren Sie mehr über unseren Namen, unseren Gründer und unsere Arbeitsweise.",
+    "metaDescription": "Qartmina ist ein Beratungsunternehmen für KI und Daten für KMU in ganz Europa. Erfahren Sie mehr über unseren Namen, unseren Gründer und unsere Arbeitsweise.",
     "title": "Über Qartmina",
     "intro": "Wir helfen Unternehmen, sich zu digitalisieren und KI gewinnbringend einzusetzen, von der Strategie bis zur Umsetzung, und belegen jede Empfehlung mit Fakten.",
     "nameTitle": "Der Name",
@@ -435,29 +435,13 @@
     ],
     "partnersTitle": "Partner",
     "locationsTitle": "Wo wir arbeiten",
-    "locationsText": "Remote-first in der MENA-Region und in Afrika, umgesetzt nach internationalen Standards. Sitz in Les Berges du Lac, Tunesien.",
+    "locationsText": "Remote-first in ganz Europa, umgesetzt nach internationalen Standards. Sitz in Frankreich.",
     "coreMarketsLabel": "Kernmärkte",
     "coreMarkets": [
-      "Marokko",
-      "Tunesien",
-      "Ägypten",
-      "Nigeria",
-      "Kenia",
-      "Südafrika",
-      "VAE",
-      "Saudi-Arabien"
+      "Frankreich"
     ],
     "reachLabel": "Außerdem aktiv in",
-    "reach": [
-      "Algerien",
-      "Senegal",
-      "Ghana",
-      "Côte d'Ivoire",
-      "Ruanda",
-      "Äthiopien",
-      "Katar",
-      "Jordanien"
-    ]
+    "reach": []
   },
   "contactPage": {
     "metaTitle": "Kontakt",

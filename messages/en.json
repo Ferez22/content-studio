@@ -30,7 +30,7 @@
     "services": "Services",
     "company": "Company",
     "contact": "Contact",
-    "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa.",
+    "location": "Based in France. Working with SMEs across Europe.",
     "rights": "© {year} Qartmina. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -50,12 +50,12 @@
       "secondary": "See our work",
       "kpis": [
         {
-          "value": "3.2M€",
-          "label": "Avg. ROI"
+          "value": "1",
+          "label": "Project lead"
         },
         {
-          "value": "80%",
-          "label": "Time saved"
+          "value": "100%",
+          "label": "Checked before handover"
         },
         {
           "value": "30 days",
@@ -151,7 +151,7 @@
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Location",
-      "location": "Les Berges du Lac, Tunisia. Remote across MENA and Africa.",
+      "location": "Based in France. Working with SMEs across Europe.",
       "tabs": {
         "call": "Schedule a free 30-min call",
         "message": "Contact us"
@@ -3342,7 +3342,7 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Qartmina is an AI and data consulting company working across MENA and Africa. Learn about our name, our founder and how we work.",
+    "metaDescription": "Qartmina is an AI and data consulting company working with SMEs across Europe. Learn about our name, our founder and how we work.",
     "title": "About Qartmina",
     "intro": "We help businesses digitalise and put AI to work, from strategy to execution, and back every recommendation with evidence.",
     "nameTitle": "The name",
@@ -3380,29 +3380,13 @@
     ],
     "partnersTitle": "Partners",
     "locationsTitle": "Where we work",
-    "locationsText": "Remote-first across MENA and Africa, delivered to international standards. Based in Les Berges du Lac, Tunisia.",
+    "locationsText": "Remote-first across Europe, delivered to international standards. Based in France.",
     "coreMarketsLabel": "Core markets",
     "coreMarkets": [
-      "Morocco",
-      "Tunisia",
-      "Egypt",
-      "Nigeria",
-      "Kenya",
-      "South Africa",
-      "UAE",
-      "Saudi Arabia"
+      "France"
     ],
     "reachLabel": "Also active in",
-    "reach": [
-      "Algeria",
-      "Senegal",
-      "Ghana",
-      "Côte d'Ivoire",
-      "Rwanda",
-      "Ethiopia",
-      "Qatar",
-      "Jordan"
-    ]
+    "reach": []
   },
   "contactPage": {
     "metaTitle": "Contact",

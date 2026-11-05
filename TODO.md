@@ -15,18 +15,24 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 
 - [ ] Optional but recommended: have a lawyer review privacy, terms and legal notice (governing law set to Tunisia, courts of Tunis)
 - [ ] Add the full tax number (matricule fiscal) to the legal notice if you want it shown
+- [ ] Legal pages (privacy, terms, legal notice) still name Qartmina SUARL in Les Berges du Lac, Tunisia, under Tunisian law: that is the legal entity, so it stays until the entity or its address changes. Update them (with a lawyer) when it does
 
 ## Search and indexing
 
 - [ ] Bing Webmaster Tools: import the site from Search Console
 - [ ] LinkedIn Post Inspector: check the preview for `https://www.qartmina.com/en`
-- [ ] Create a Google Business Profile for Qartmina (Les Berges du Lac)
+- [ ] Create a Google Business Profile for Qartmina (France address)
 - [ ] When the blog is written for fr and de: remove the `/blog/:path*` to `/en/blog/:path*` redirect in `next.config.ts` so unprefixed blog URLs get language detection again. `/about` and `/contact` keep the next-intl 307 with language detection
+
+## Positioning
+
+- [ ] About page "Where we work": core markets shows only France and "Also active in" is hidden (empty list). Add the European countries you actively target to `about.coreMarkets` / `about.reach` in all three message files
+- [ ] `how-to-choose-a-crm` still frames hosting for the Gulf and Egypt: refresh for European SMEs when the post is next updated
 
 ## Services
 
 - [ ] Translate the services copy to fr and de (`services`, `serviceCategories`, `servicePages`, `home.services`, `home.hero` title and subtitle, `metadata`, `header.allServices`/`categoryOverview`, `footer.positioning`, `common.readyText`). The pre-category fr/de copy for the first 6 services is in git history (commit 21cef84) if useful
-- [ ] Hero KPIs (3.2M€ ROI, 80% time saved) and the interactive workflow under the hero are still about AI agents: decide whether to keep them under the new digital partner title
+- [ ] The interactive workflow under the hero is still about AI agents: decide whether to keep it under the digital partner title
 - [ ] Example videos on video-motion, social-media and personal-branding are by independent creators on Prompt Motion (no licence stated) and hotlinked from their server (up to 28 MB each): ask the creators for permission, or replace them with our own work, then self-host compressed copies
 - [ ] Confirm the network can deliver what the copy promises: voice-overs in Arabic, French and English (video), on-site IT via a local technician (IT support), Power BI as an example tool (data platforms) (Fares is asking them)
 - [ ] Deepen the other service pages the same way (explainer, examples, what's included), then switch each one on in `serviceToggles` (`lib/site.ts`). 24 services are off for now
