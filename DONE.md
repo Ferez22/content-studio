@@ -2,6 +2,10 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-05
+
+- Restored five posts from the previous site that Search Console still showed with impressions but returned 404 (about 1,800 impressions in 90 days): `security-certifications-explained`, `ai-and-data-consulting-cost`, `how-to-identify-ai-use-cases`, `qartmina-openai-select-partner`, `databricks-alternatives-comparison`. Same slugs in `content/blog/en`, original date kept, `updated` set, titles and descriptions aligned with the queries they rank for, dashes removed, links moved to live `/en/...` pages, CTA to `/en/book`. Permanent redirects `/blog/<slug>` to `/en/blog/<slug>` for these slugs (`restoredLegacyPosts` in `next.config.ts`)
+
 ## 2026-10-30
 
 - Service feature toggles: `serviceToggles` in `lib/site.ts` switches each service on or off. Off means no page (404), no sitemap entry, no legacy redirect, no link in the menu, footer, home, overview, hubs or "More in"; blog and case-study links to it show as plain text; categories with nothing on disappear. On: AI agent development, chatbots and assistants, CRM development, ERP and CRM setup, video and motion design (3 categories). The home figure ("5 services") and intro ("3 areas") follow the toggles; the home category grid rounds its outer corners for any number of cards
