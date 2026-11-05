@@ -5,14 +5,9 @@ import { isServiceSlug, legacyServiceSlugs, servicePath } from "./lib/site";
 const withNextIntl = createNextIntlPlugin();
 
 // Posts from the previous site lived at /blog/<slug> (English, no locale) and are still indexed.
-// Restored posts keep their slug; the others point to the live post on the same topic.
+// Old posts that were not restored point to the live post on the same topic.
 // Old posts with no close match (no-standard-process-digital-transformation) are left to 404.
 const legacyPosts: Record<string, string> = {
-  "security-certifications-explained": "security-certifications-explained",
-  "ai-and-data-consulting-cost": "ai-and-data-consulting-cost",
-  "how-to-identify-ai-use-cases": "how-to-identify-ai-use-cases",
-  "qartmina-openai-select-partner": "qartmina-openai-select-partner",
-  "databricks-alternatives-comparison": "databricks-alternatives-comparison",
   "mcp-and-the-future-of-saas": "connect-ai-agent-erp-crm",
   "eu-ai-act-transparency-enforcement": "ai-agents-gdpr-eu-ai-act",
   "why-ai-pilots-never-reach-production": "ai-and-data-consulting-cost",
@@ -43,7 +38,10 @@ const nextConfig: NextConfig = {
       destination: `/en/blog/${slug}`,
       permanent: true,
     }));
-    return [...services, ...posts];
+    // Until the blog is written for fr and de: every other unprefixed blog URL (/blog, restored
+    // posts) goes to English instead of next-intl language detection. Must come after `posts`.
+    const blog = { source: "/blog/:path*", destination: "/en/blog/:path*", permanent: true };
+    return [...services, ...posts, blog];
   },
   images: {
     remotePatterns: [
