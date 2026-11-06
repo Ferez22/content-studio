@@ -1,0 +1,83 @@
+---
+title: "An MVP in One Week: Software Built From Scratch With AI, Tested at Every Step"
+summary: "The startup whose CRM we had put back on solid ground wanted new software, built from scratch. From Friday, October 30 to Friday, November 6, 2026, we shipped the MVP to production: onboarding, multi-tenant authentication, an agentic workflow for documents, analytics and a connection to the CRM. AI wrote the code. The method made the difference."
+sector: "Software (CRM startup)"
+service: "ai-agents"
+problem: "Build complete software from scratch, from user sign-in to production, without spending months on it and without giving up code quality."
+result: "An MVP in production in one week, covered by tests, running as a standalone app and as a microservice connected to the CRM"
+date: "2026-11-06"
+---
+
+## The goal
+
+You may already know this client. It's the startup whose CRM [we audited, and whose entire production setup we rebuilt](/en/portfolio/crm-startup-cloud-migration). When that work was done, they handed us the next one: new software, built from scratch.
+
+The product stays confidential until launch. Let's just say it reads documents, pulls out the key information and produces new ones.
+
+## The challenge
+
+Start from a blank page and end with real software. Not a demo.
+
+- **Users to welcome**, with a sign-up flow.
+- **Several client companies on one platform**, each with its own data, kept apart from the others.
+- **Sensitive documents**, anonymized before the AI touches them.
+- **A final document to produce**, editable, then exported as a PDF.
+- **A link to the existing CRM**, so both products work together.
+
+Our estimate: about a year for a team without AI, and about three months with a poor vibe-coding setup, where agents write code with no plan and no rules. We had a week.
+
+## What we did
+
+### 1. Pinned down the goal, on the business side and the technical side
+
+Before a single line of code, we asked the uncomfortable questions.
+
+Business: what is this software for? Should it cut costs, save time, automate a whole process? Or become the single point every business request goes through, gathered on an admin dashboard that assigns each job?
+
+Technical: which core features, where to host it, should it offer an API, or an MCP server so other AI agents can plug into it?
+
+Every answer ruled options out. In the end, one goal was left, and a short list of what the MVP had to do.
+
+### 2. Planned brick by brick, until the plan was crystal clear
+
+We broke the software into bricks, each small enough to be built and tested on its own. Then we refined the plan, again and again.
+
+We build the plan with AI, but we don't hand it over. We check what it proposes, then we check again. We ask questions. We look for the flaw. One rule drives everything else: **we only let the AI code once its words paint the right picture in our heads.**
+
+### 3. Set up the repository for AI-assisted coding
+
+An AI agent codes as well as the frame you give it. Before execution started, we wrote its rules: how to write the code, how to structure the project, how to work day to day.
+
+The code follows test-driven development (TDD): the test is written before the code. A feature only exists once its test passes. And when an agent changes the code later, the tests catch regressions before anything goes live.
+
+### 4. Executed with an orchestrator and sub-agents
+
+Claude Fable acted as the orchestrator. For each brick of the plan, it launched Claude Opus 5.5 sub-agents set to high reasoning effort. We reviewed every step before moving to the next.
+
+### 5. Make it work, then make it beautiful
+
+Our motto on this project: *make it work, make it beautiful*. The MVP worked on Friday, November 6. The same day, we started on the user experience and the finishing touches.
+
+## What shipped in one week
+
+- **An onboarding flow** for new users.
+- **Multi-tenant authentication**: several client companies on one platform, each limited to its own data.
+- **A graphRAG dictionary for the AI agent**: the domain vocabulary and the links between terms, stored as a graph, so the agent reads documents like a domain expert.
+- **An autonomous agentic workflow**: information extraction from documents, anonymization, a call to the language model, document reconstruction, direct editing, final PDF generation.
+- **Analytics**: jobs run, time spent, logs and telemetry.
+- **An API connection** to the client's CRM.
+- **A production release** as a standalone app and as a microservice.
+
+## The result
+
+From Friday, October 30 to Friday, November 6, 2026, the software went from a blank page to an MVP in production. Every feature is covered by its tests, and the product can now evolve without each change putting the rest at risk.
+
+> "I can't believe how fast Fares delivers. And it actually works!"
+
+## What we learned
+
+In our [previous case study](/en/portfolio/crm-startup-cloud-migration), we said: make it work first. That still holds. This project adds a nuance.
+
+With AI, writing code costs almost nothing. What costs is writing the wrong thing. Speed doesn't come from the agent writing the code. It comes from the plan you give it, the rules it follows and the tests that watch it. With those three in place, a week is enough for what used to take months.
+
+**Have software in mind, but not a year to spare?** [Book a 30-minute call](/en/book). You leave with a plan, whether we work together or not.

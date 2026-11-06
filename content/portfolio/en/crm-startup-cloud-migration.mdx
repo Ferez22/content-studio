@@ -65,6 +65,14 @@ For a startup, money you don't spend is money you keep. So we moved the heavy pa
 
 Before, a lot of bugs reached production. Now it's barely a couple, because the pipeline catches them on staging first.
 
+### 5. Handled the unexpected, mid-migration
+
+On October 21, 2026, in the middle of the migration, Railway disclosed [a security incident](https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/). An unauthorized third party may have accessed some customers' environment variables, and Railway asked everyone to rotate their secrets.
+
+We dealt with it within a day. Every environment variable and every secret of the CRM was replaced, then we went through the logs. No sign of access to the project.
+
+Migrations rarely go to plan. The job takes flexibility, and the speed to act on it.
+
 ## Before and after
 
 | | Before | After |

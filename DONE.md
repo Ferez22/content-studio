@@ -2,6 +2,12 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-06
+
+- Default language is French. Unprefixed URLs are detected in `proxy.ts`: `NEXT_LOCALE` cookie first, else a French browser gets `fr`, any other language `en` (never `de` automatically), no header `fr`. Missing message keys and untranslated service pages fall back to English (`sourceLocale`); `x-default` points to English
+- Blog posts and case studies exist in `fr` and `en` only (`contentLocales`, Fares): the 12 German posts and 3 German case studies are removed, `/de/blog/*` and `/de/portfolio/*` redirect permanently to `/en/...`, and the sitemap lists no German post, case study or list page. German stays for site pages. A post missing in one content locale redirects (temporary) to the other, e.g. `/fr/blog/how-to-choose-a-crm` to English. The forced `/blog/*` to English rule is gone: unprefixed blog URLs follow detection
+- New case study `document-agent-mvp-one-week` (fr, en): an MVP built from scratch in one week (2026-10-30 to 11-06) for the CRM startup. `crm-startup-cloud-migration` (fr, en) gets section 5, the Railway security incident of 2026-10-21 handled in a day
+
 ## 2026-11-05
 
 - Positioning moved to SMEs in France (France first, Europe later): footer and contact location, about page meta description and "Where we work" (core market: France first; the "Also active in" list hides while empty), `areaServed: "France"` in service and partner JSON-LD. MENA and Africa mentions removed from marketing copy; legal pages unchanged (legal entity)

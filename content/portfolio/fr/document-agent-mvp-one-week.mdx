@@ -1,0 +1,83 @@
+---
+title: "Un MVP en une semaine : un logiciel construit de zéro avec l'IA, et testé à chaque étape"
+summary: "La startup dont nous avions remis en état le CRM voulait un nouveau logiciel, construit de zéro. Du vendredi 30 octobre au vendredi 6 novembre 2026, nous avons livré le MVP en production : onboarding, authentification multi-tenant, un workflow agentique sur documents, des analytics et la connexion au CRM. L'IA a écrit le code. La méthode a fait la différence."
+sector: "Logiciel (startup CRM)"
+service: "ai-agents"
+problem: "Construire de zéro un logiciel complet, de la connexion des utilisateurs à la mise en production, sans y passer des mois et sans sacrifier la qualité du code."
+result: "Un MVP en production en une semaine, couvert par des tests, disponible en application autonome et en microservice connecté au CRM"
+date: "2026-11-06"
+---
+
+## L'objectif
+
+Vous connaissez peut-être déjà ce client. C'est la startup dont nous avons [audité le CRM et refait toute l'architecture de production](/fr/portfolio/crm-startup-cloud-migration). À la fin de cette mission, elle nous a confié la suivante : un nouveau logiciel, à construire de zéro.
+
+Le produit reste confidentiel jusqu'à son lancement. Disons simplement qu'il lit des documents, en extrait les informations clés et en produit de nouveaux.
+
+## Le défi
+
+Partir d'une page blanche, et arriver à un vrai logiciel. Pas une démo.
+
+- **Des utilisateurs à accueillir**, avec un parcours d'inscription.
+- **Plusieurs entreprises clientes sur la même plateforme**, chacune avec ses données, séparées des autres.
+- **Des documents sensibles**, à anonymiser avant tout traitement par l'IA.
+- **Un document final à produire**, modifiable, puis exporté en PDF.
+- **Un lien avec le CRM existant**, pour que les deux produits travaillent ensemble.
+
+Notre estimation : environ un an pour une équipe sans IA, et environ trois mois avec un mauvais setup de vibe coding, quand des agents codent sans plan ni règles. Nous avions une semaine.
+
+## Ce que nous avons fait
+
+### 1. Cadré le but, côté business et côté technique
+
+Avant la moindre ligne de code, nous avons posé les questions qui fâchent.
+
+Côté business : à quoi sert ce logiciel ? Doit-il réduire des coûts, faire gagner du temps, automatiser un processus entier ? Ou devenir le point de passage unique des demandes métier, centralisées dans un tableau de bord admin qui assigne chaque tâche ?
+
+Côté technique : quelles fonctionnalités de base, où l'héberger, doit-il offrir une API, ou un serveur MCP pour que d'autres agents IA puissent s'y brancher ?
+
+Chaque réponse a écarté des options. À la fin, il restait un seul objectif, et une liste courte de ce que le MVP devait faire.
+
+### 2. Planifié brique par brique, jusqu'à ce que le plan soit clair comme de l'eau de roche
+
+Nous avons découpé le logiciel en briques, chacune assez petite pour être construite et testée seule. Puis nous avons affiné le plan, encore et encore.
+
+Le plan, nous le construisons avec l'IA, mais nous ne le lui laissons pas. Nous vérifions ce qu'elle propose, puis nous vérifions encore. Nous posons des questions. Nous cherchons la faille. Une règle guide tout le reste : **nous ne laissons l'IA coder que lorsque ses mots dessinent une image juste dans nos têtes.**
+
+### 3. Préparé le dépôt pour le code assisté par IA
+
+Un agent IA code aussi bien que le cadre qu'on lui donne. Avant de lancer l'exécution, nous avons écrit ses règles : comment écrire le code, comment structurer le projet, comment travailler au quotidien.
+
+Le code suit le développement piloté par les tests (TDD) : le test est écrit avant le code. Une fonctionnalité n'existe que lorsque son test passe. Et quand un agent modifie le code plus tard, les tests repèrent les régressions avant toute mise en ligne.
+
+### 4. Exécuté avec un orchestrateur et des sous-agents
+
+Claude Fable a joué le rôle d'orchestrateur. Pour chaque brique du plan, il a lancé des sous-agents Claude Opus 5.5, réglés sur un niveau de réflexion élevé. Nous relisions chaque étape avant de passer à la suivante.
+
+### 5. D'abord que ça marche, ensuite que ce soit beau
+
+Notre devise sur ce projet : *make it work, make it beautiful*. Le MVP fonctionnait le vendredi 6 novembre. Le même jour, nous avons commencé l'expérience utilisateur et les finitions.
+
+## Ce qui a été livré en une semaine
+
+- **Un parcours d'onboarding** pour les nouveaux utilisateurs.
+- **Une authentification multi-tenant** : plusieurs entreprises clientes sur une même plateforme, chacune limitée à ses propres données.
+- **Un dictionnaire en graphRAG pour l'agent IA** : le vocabulaire métier et les liens entre les termes, rangés sous forme de graphe, pour que l'agent comprenne les documents comme un expert du domaine.
+- **Un workflow agentique autonome** : extraction des informations depuis les documents, anonymisation, appel au modèle de langage, reconstruction du document, modification directe, génération du PDF final.
+- **Des analytics** : les traitements lancés, le temps passé, les logs et la télémétrie.
+- **Une connexion par API au CRM** du client.
+- **Une mise en production** en application autonome et en microservice.
+
+## Le résultat
+
+Du vendredi 30 octobre au vendredi 6 novembre 2026, le logiciel est passé d'une page blanche à un MVP en production. Chaque fonctionnalité est couverte par ses tests, et le produit peut maintenant évoluer sans que chaque changement remette le reste en danger.
+
+> « Incroyable à quelle vitesse Fares est rapide, et ça fonctionne en plus ! »
+
+## Ce que nous en avons appris
+
+Dans notre [étude de cas précédente](/fr/portfolio/crm-startup-cloud-migration), nous disions : d'abord le faire fonctionner. C'est toujours vrai. Ce projet y ajoute une nuance.
+
+Avec l'IA, coder ne coûte presque plus rien. Ce qui coûte, c'est de coder la mauvaise chose. La vitesse ne vient pas de l'agent qui écrit le code. Elle vient du plan qu'on lui donne, des règles qu'il suit et des tests qui le surveillent. Quand ces trois éléments sont en place, une semaine suffit pour ce qui demandait des mois.
+
+**Vous avez un logiciel en tête, mais pas un an devant vous ?** [Réservez un appel de 30 minutes](/fr/book). Vous repartez avec un plan, que l'on travaille ensemble ou non.

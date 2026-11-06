@@ -65,6 +65,14 @@ Pour une startup, l'argent qu'on ne dépense pas est de l'argent qu'on garde. No
 
 Avant, beaucoup de bugs arrivaient en production. Aujourd'hui, c'est à peine un ou deux, parce que le pipeline les attrape d'abord sur le staging.
 
+### 5. Géré un imprévu en pleine migration
+
+Le 21 octobre 2026, en pleine migration, Railway a annoncé [un incident de sécurité](https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/). Un tiers non autorisé avait pu accéder aux variables d'environnement de certains clients, et l'hébergeur demandait à tous de changer leurs secrets.
+
+Nous avons réglé la question en une journée. Toutes les variables d'environnement et tous les secrets du CRM ont été remplacés, puis nous avons passé les logs en revue. Aucune trace d'accès au projet.
+
+Une migration se déroule rarement comme prévu. Les aléas du métier demandent de la souplesse, et de la vitesse d'exécution.
+
 ## Avant et après
 
 | | Avant | Après |

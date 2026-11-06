@@ -1,4 +1,4 @@
-import { routing } from "./routing";
+import { routing, sourceLocale } from "./routing";
 
 type Messages = { [key: string]: unknown };
 
@@ -8,7 +8,7 @@ const load = async (locale: string): Promise<Messages> =>
 const isObject = (value: unknown): value is Messages =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
-// Keys missing in a translation fall back to the default locale, key by key.
+// Keys missing in a translation fall back to the source locale (English), key by key.
 const merge = (base: Messages, override: Messages): Messages =>
   Object.fromEntries(
     Object.keys({ ...base, ...override }).map((key) => {
@@ -19,8 +19,8 @@ const merge = (base: Messages, override: Messages): Messages =>
 
 export const withFallback = async (locale: string) => {
   const messages = await load(locale);
-  if (locale === routing.defaultLocale) return messages;
-  return merge(await load(routing.defaultLocale), messages);
+  if (locale === sourceLocale) return messages;
+  return merge(await load(sourceLocale), messages);
 };
 
 // Locales whose own message file has the given namespace, e.g. "servicePages.shopify".
