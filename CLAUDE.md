@@ -65,7 +65,7 @@ messages/{en,fr,de}.json       all UI copy
 assets/motion/<name>/          our own motion video compositions (see below)
 assets/og/                     images read at build time by the OG route (not served)
 public/motion/                 rendered motion videos and posters
-proxy.ts                       next-intl locale detection (Next 16 name for middleware)
+proxy.ts                       locale detection (fr browser -> fr, else en; cookie wins), /de/blog|portfolio -> /en
 ```
 
 ## Services
@@ -114,7 +114,10 @@ Needs Python Playwright with Chrome (`channel="chrome"`) and ffmpeg. Existing: `
 
 ## i18n rules
 
-- Three locales, same slugs in every locale: `en` (default), `fr`, `de`.
+- Three locales for site pages, same slugs in every locale: `fr` (default), `en`, `de`. Detection (proxy.ts): NEXT_LOCALE
+  cookie, else a French browser gets `fr`, any other language `en` (never `de` automatically), no header `fr`.
+- Blog posts and case studies: `fr` and `en` only (`contentLocales`, Fares 2026-11-06). No `de` content: /de/blog/* and
+  /de/portfolio/* redirect to /en. A post missing in one content locale redirects to the other (next.config.ts).
 - **No hard-coded user-facing text in components.** Add keys to `messages/*.json` with identical structure; `t.raw()` for arrays.
 - For now the services copy (`services`, `serviceCategories`, `servicePages`, `visuals.cards`, `home.services`) is English only. Missing fr/de keys fall back to English key by key (`i18n/messages.ts`); untranslated service pages are canonical to English and left out of the fr/de sitemap (`translatedLocales`). Adding the namespace to fr.json/de.json makes them indexable.
 - Links use `Link` from `@/i18n/navigation`, never `next/link`. Every page exports `generateMetadata` (`pageMetadata()` or `translatedPageMetadata()`) and calls `setRequestLocale(locale)`.
@@ -146,7 +149,7 @@ Needs Python Playwright with Chrome (`channel="chrome"`) and ffmpeg. Existing: `
 
 ## Blog posts (MDX)
 
-Copy `content/blog/_template.mdx` to `content/blog/<locale>/<slug>.mdx` (file name = URL, same slug in every language). Frontmatter: `title`, `summary`, `date` (`YYYY-MM-DD`), optional `tags`, `description`, `faq`, `updated`. Images in `public/blog/<slug>/`. A post may exist in one language only. List, reading time, related posts, JSON-LD and sitemap are automatic.
+Copy `content/blog/_template.mdx` to `content/blog/<locale>/<slug>.mdx`, locale `fr` or `en` only (file name = URL, same slug in both). Frontmatter: `title`, `summary`, `date` (`YYYY-MM-DD`), optional `tags`, `description`, `faq`, `updated`. Images in `public/blog/<slug>/`. A post may exist in one language only. List, reading time, related posts, JSON-LD and sitemap are automatic.
 
 ## Forms, integrations and secrets
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { routing } from "@/i18n/routing";
+import { routing, sourceLocale } from "@/i18n/routing";
 
 // Canonical, hreflang alternates and social tags for a path such as "" or "/about".
 export const pageMetadata = ({
@@ -19,7 +19,8 @@ export const pageMetadata = ({
   locales?: readonly string[];
 }): Metadata => {
   const languages = Object.fromEntries(locales.map((l) => [l, `/${l}${path}`]));
-  const fallback = locales.includes(routing.defaultLocale) ? routing.defaultLocale : locale;
+  // x-default = what a browser in another language gets (proxy.ts): English.
+  const fallback = locales.includes(sourceLocale) ? sourceLocale : locale;
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,

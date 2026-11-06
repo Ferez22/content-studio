@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { routing } from "@/i18n/routing";
+import { sourceLocale } from "@/i18n/routing";
 import { translatedLocales } from "@/i18n/messages";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
@@ -20,7 +20,7 @@ export const translatedPageMetadata = async ({
   const locales = await translatedLocales(namespace);
   return pageMetadata({
     ...rest,
-    locale: (locales as string[]).includes(locale) ? locale : routing.defaultLocale,
+    locale: (locales as string[]).includes(locale) ? locale : sourceLocale,
     locales,
   });
 };

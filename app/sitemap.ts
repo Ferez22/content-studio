@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { routing } from "@/i18n/routing";
+import { contentLocales, routing } from "@/i18n/routing";
 import { getSlugs, type Collection } from "@/lib/content";
 import { translatedLocales } from "@/i18n/messages";
 import {
@@ -24,6 +24,9 @@ const staticPaths = [
   "/legal",
 ];
 
+// Blog and case-study lists exist in the content locales only (German = site pages).
+const contentPaths = ["/portfolio", "/blog"];
+
 const entry = (path: string, locales: readonly string[]) =>
   locales.map((locale) => ({
     url: `${site.url}/${locale}${path}`,
@@ -36,7 +39,7 @@ const entry = (path: string, locales: readonly string[]) =>
 // the locales that have it, with alternates limited to those locales.
 const collectionEntries = async (collection: Collection, base: string) => {
   const perLocale = await Promise.all(
-    routing.locales.map(async (locale) => ({ locale, slugs: await getSlugs(collection, locale) }))
+    contentLocales.map(async (locale) => ({ locale, slugs: await getSlugs(collection, locale) }))
   );
   const slugs = new Set(perLocale.flatMap((l) => l.slugs));
   return [...slugs].flatMap((slug) =>
@@ -67,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...[
       ...staticPaths,
       ...(partnerProgramEnabled ? partnerSlugs.map((slug) => `/partners/${slug}`) : []),
-    ].flatMap((path) => entry(path, routing.locales)),
+    ].flatMap((path) => entry(path, contentPaths.includes(path) ? contentLocales : routing.locales)),
     ...services,
     ...cases,
     ...posts,

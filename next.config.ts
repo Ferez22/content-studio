@@ -1,6 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import { isServiceSlug, legacyServiceSlugs, servicePath } from "./lib/site";
+import { contentLocales } from "./i18n/routing";
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -16,6 +19,28 @@ const legacyPosts: Record<string, string> = {
   "databricks-business-case": "databricks-alternatives-comparison",
   "llm-plus-your-data": "ai-agent-knowledge-base",
 };
+
+const slugsOf = (collection: string, locale: string) => {
+  const dir = path.join(import.meta.dirname, "content", collection, locale);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""));
+};
+
+// /fr/blog/<slug> with no French version -> the English one, and the other way round.
+const missingTranslations = () =>
+  ["blog", "portfolio"].flatMap((collection) =>
+    contentLocales.flatMap((locale) => {
+      const own = new Set(slugsOf(collection, locale));
+      const other = contentLocales.find((l) => l !== locale)!;
+      return slugsOf(collection, other)
+        .filter((slug) => !own.has(slug))
+        .map((slug) => ({
+          source: `/${locale}/${collection}/${slug}`,
+          destination: `/${other}/${collection}/${slug}`,
+          permanent: false,
+        }));
+    })
+  );
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -38,10 +63,9 @@ const nextConfig: NextConfig = {
       destination: `/en/blog/${slug}`,
       permanent: true,
     }));
-    // Until the blog is written for fr and de: every other unprefixed blog URL (/blog, restored
-    // posts) goes to English instead of next-intl language detection. Must come after `posts`.
-    const blog = { source: "/blog/:path*", destination: "/en/blog/:path*", permanent: true };
-    return [...services, ...posts, blog];
+    // A post or case study missing in one content locale goes to the locale that has it
+    // (temporary: the translation may come later). Unprefixed URLs are detected in proxy.ts.
+    return [...services, ...posts, ...missingTranslations()];
   },
   images: {
     remotePatterns: [
