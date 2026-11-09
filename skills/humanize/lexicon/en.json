@@ -1,0 +1,173 @@
+{
+ "_note": "English AI tells (our own list). Add a pattern when the owner keeps removing it (skill learn). Domain terms are fine: an AI 'harness' is a noun, not slop.",
+ "patterns": [
+  {
+   "pattern": "\\bdelv(e|es|ing)\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "say what you look at: 'look at', 'go through'"
+  },
+  {
+   "pattern": "in today's (fast-paced|ever-changing|digital|modern) (world|landscape|age)",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "start with the concrete case"
+  },
+  {
+   "pattern": "in a world where",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "start with the concrete case"
+  },
+  {
+   "pattern": "it'?s (important|worth|crucial) (to note|noting|to remember)",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "just say it"
+  },
+  {
+   "pattern": "\\b(unlock|unleash)(s|ed|ing)? (the |your |its )?(full )?(potential|power|value|growth)",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "say what changes, with a number if you have one"
+  },
+  {
+   "pattern": "\\bharness(ing)? the power\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "say what it does (the noun 'harness' is fine)"
+  },
+  {
+   "pattern": "\\b(elevate|supercharge|turbocharge|skyrocket)(s|d|ing)?\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "plain verb: improve, speed up, grow"
+  },
+  {
+   "pattern": "\\bseamless(ly)?\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "say what the user no longer has to do"
+  },
+  {
+   "pattern": "\\bgame[- ]?changer\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "name the actual effect"
+  },
+  {
+   "pattern": "\\b(revolutioni[sz]e|revolutionary)\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "describe the real change"
+  },
+  {
+   "pattern": "\\bcutting[- ]edge\\b|\\bstate[- ]of[- ]the[- ]art\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "prove it or cut it"
+  },
+  {
+   "pattern": "\\b(navigate|navigating) (the )?(complex|ever-changing|evolving)?\\s?(landscape|world|waters)",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "concrete verb"
+  },
+  {
+   "pattern": "\\b(landscape|realm|tapestry|testament to)\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "concrete noun"
+  },
+  {
+   "pattern": "\\bleverag(e|es|ed|ing)\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "'use'"
+  },
+  {
+   "pattern": "\\b(robust|holistic|synergy|synergies|paradigm)\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "say what you mean"
+  },
+  {
+   "pattern": "\\bempower(s|ed|ing)?\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "say what the reader can now do"
+  },
+  {
+   "pattern": "\\bembark(s|ed|ing)? on\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "'start'"
+  },
+  {
+   "pattern": "^(furthermore|moreover|additionally|in conclusion|in summary|ultimately)\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "cut the connector"
+  },
+  {
+   "pattern": "\\blet'?s dive (in|into)\\b|\\bdive deep\\b|\\bdeep dive\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "cut it, give the point"
+  },
+  {
+   "pattern": "\\bbuckle up\\b|\\bhere'?s the (thing|kicker)\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "cut it"
+  },
+  {
+   "pattern": "\\bit'?s not (just|only) (about )?.{1,40}[,;] it'?s\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "the 'not X, it's Y' pattern: say Y"
+  },
+  {
+   "pattern": "\\bin (the )?ever[- ]evolving\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "cut it"
+  },
+  {
+   "pattern": "\\b(guaranteed|guarantee)\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "promise less: say what you deliver"
+  },
+  {
+   "pattern": "\\bplethora\\b|\\bmyriad\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "'many', or the number"
+  },
+  {
+   "pattern": "\\bfoster(s|ed|ing)?\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "plain verb: build, grow"
+  },
+  {
+   "pattern": "\\bcrucial\\b|\\bpivotal\\b|\\bparamount\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "say why it matters"
+  },
+  {
+   "pattern": "\\bmeticulous(ly)?\\b",
+   "kind": "AI tell",
+   "severity": "warning",
+   "fix": "show the care, do not claim it"
+  },
+  {
+   "pattern": "\\bimagine a world\\b",
+   "kind": "AI tell",
+   "severity": "blocking",
+   "fix": "start with the real case"
+  }
+ ]
+}

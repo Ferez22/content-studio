@@ -1,0 +1,322 @@
+{
+  "_note": "Motifs regex (insensibles à la casse). severity: bloquant = à corriger avant publication, avertissement = à juger. Ajouter un motif quand l'utilisateur corrige un tic.",
+  "tics": [
+    {
+      "motif": "dans un monde (en constante évolution|en perpétuel changement|où)",
+      "fix": "entrer directement dans le cas concret",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "à l'(ère|heure) (du numérique|de l'ia|de l'intelligence artificielle|où)",
+      "fix": "supprimer, commencer par le fait",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "il (est|semble) (important|essentiel|crucial|primordial|nécessaire) de (noter|souligner|rappeler|comprendre)",
+      "fix": "dire la chose directement",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "il convient de (noter|souligner|rappeler)",
+      "fix": "dire la chose directement",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "n'hésitez pas à",
+      "fix": "verbe direct: « Écrivez-moi », « Réservez un appel »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "dans cet article,? (nous allons|je vais|on va)",
+      "fix": "supprimer l'annonce, donner la réponse",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\b(plongeons|plongeons ensemble|explorons ensemble|découvrons ensemble)\\b",
+      "fix": "supprimer",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "plonger (dans|au cœur)",
+      "fix": "« regarder », « entrer dans le détail »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(un |une )?(véritable|vrai) (levier|atout|game[- ]changer|révolution|tournant)",
+      "fix": "nommer l'effet concret, avec un chiffre si possible",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bgame[- ]?changer\\b",
+      "fix": "nommer l'effet concret",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bincontournables?\\b",
+      "fix": "dire pourquoi c'est utile",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\brévolution(ner|naire|nent|ne)\\b",
+      "fix": "décrire le changement réel",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(solutions?|approches?|outils?) innovant(e|es|s)?",
+      "fix": "nommer la solution et ce qu'elle fait",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\b(à la pointe|de pointe|sans précédent|dernier cri)\\b",
+      "fix": "supprimer ou prouver",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(libérer|exploiter|révéler) (tout )?(le|votre|son|leur) (plein )?potentiel",
+      "fix": "dire ce que ça change concrètement",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "tirer (pleinement )?parti",
+      "fix": "« utiliser », « profiter de »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "(passer|faire passer|propulser) .{0,20}au niveau supérieur",
+      "fix": "dire le résultat mesurable",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bpropulse[rz]?\\b",
+      "fix": "verbe concret",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "(pierre angulaire|clé de voûte|au cœur de (votre|la|notre) stratégie)",
+      "fix": "supprimer la métaphore",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\b(holistique|synergies?)\\b",
+      "fix": "dire ce qui est relié à quoi",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(expérience|intégration|transition) (fluide|sans couture|sans friction)",
+      "fix": "dire ce que l'utilisateur ne fait plus",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "le paysage (de l'ia|numérique|technologique|actuel)",
+      "fix": "« le marché », ou supprimer",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "naviguer (dans|à travers) (la complexité|le paysage|les défis|ce monde)",
+      "fix": "verbe concret",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(un monde|une infinité|un océan) de possibilités",
+      "fix": "citer deux possibilités réelles",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "(bien plus qu'un(e)? simple|bien plus que de simples)",
+      "fix": "dire ce que c'est",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "mais ce n'est pas tout",
+      "fix": "supprimer la transition",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "et si je (vous|te) disais",
+      "fix": "dire la chose",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\ble saviez-vous\\b",
+      "fix": "question précise au lecteur",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "que (vous soyez|tu sois) .{1,60} ou .{1,60},",
+      "fix": "choisir un lecteur précis",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "^(en conclusion|en somme|en résumé|pour conclure|en définitive)\\b",
+      "fix": "finir sur l'idée ou la question, sans annonce",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "^en effet\\b",
+      "fix": "supprimer",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\b(redéfinir|réinventer) (la façon|la manière|le futur|l'avenir)",
+      "fix": "décrire le changement réel",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\b(écosystème|paradigme)\\b",
+      "fix": "mot concret",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bgaranti(e|s|es|r|t)?\\b",
+      "fix": "promettre moins: dire ce qui est livré, pas garanti (voicing: under-promise)",
+      "severity": "avertissement"
+    }
+  ],
+  "calques": [
+    {
+      "motif": "faire du sens",
+      "fix": "« avoir du sens », « c'est logique »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\badress(er|e|ent|ons|ez|é|ée|és|ées) (un|le|ce|les|des|vos|nos|ces|votre|notre) (problème|enjeu|sujet|besoin|défi)s?",
+      "fix": "« traiter », « répondre à », « régler »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bdélivr(er|e|ent|ons|ez|é|ée) (de la |une )?(valeur|résultats?|projets?)",
+      "fix": "« apporter », « livrer », « obtenir »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "être en charge de|(suis|est|sont|es|sommes|êtes) en charge de",
+      "fix": "« s'occuper de », « être chargé de », « gérer »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bsupport(er|e|ent|ons|ez) (les|vos|nos|nos|des|une?|la|le) (équipes?|clients?|projets?|entreprises?)",
+      "fix": "« accompagner », « aider », « soutenir »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bdéfinitivement\\b",
+      "fix": "« vraiment », « sans aucun doute » (sauf sens « pour toujours »)",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\béventuellement\\b",
+      "fix": "« finalement », « à terme » (sauf sens « peut-être »)",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\binit(ier|ie|ié|iée) (un|le|ce|votre|notre) (projet|changement|processus)",
+      "fix": "« lancer », « démarrer »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bimplément(er|e|é|ée|ation)\\b",
+      "fix": "« mettre en place », « mettre en œuvre », « déployer »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bversatile\\b",
+      "fix": "« polyvalent »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bconsistant(e|s|es)?\\b",
+      "fix": "« cohérent », « régulier »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bun large (nombre|éventail de clients)",
+      "fix": "« un grand nombre »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\ben ligne avec\\b",
+      "fix": "« conforme à », « cohérent avec »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "à la fin de la journée",
+      "fix": "« au bout du compte », « au final »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\b(suis|sommes|est) (tellement |très )?excité(e|s|es)? (de|par)",
+      "fix": "« ravi de », « j'ai hâte de »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bexcitant(e|s|es)?\\b",
+      "fix": "« enthousiasmant », « passionnant »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "(être|suis|êtes|sont) confortable(s)? avec",
+      "fix": "« à l'aise avec »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "sur une base (quotidienne|régulière|hebdomadaire|mensuelle|annuelle)",
+      "fix": "« chaque jour », « régulièrement », « chaque mois »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "appliqu(er|ez|é) (pour|à) (un|le|ce) (poste|job|programme)",
+      "fix": "« postuler »",
+      "severity": "bloquant"
+    },
+    {
+      "motif": "\\bréalis(er|e|é|ez) que\\b",
+      "fix": "« se rendre compte que »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bfocus(er|e|é|ez|ons)?\\b",
+      "fix": "« se concentrer sur »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bimpact(er|e|é|ée|ent)\\b",
+      "fix": "« toucher », « avoir un effet sur »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bchalleng(er|e|é|ez)\\b",
+      "fix": "« remettre en question », « mettre à l'épreuve »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\b(booker|booké|booste[rz]?|boosté)\\b",
+      "fix": "« réserver », « augmenter », « renforcer »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\ben termes de\\b",
+      "fix": "« pour », « côté », « en matière de »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bopportunités?\\b",
+      "fix": "souvent « occasion », « possibilité », « piste »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bbasé(e|s|es)? sur\\b",
+      "fix": "« fondé sur », « à partir de », « qui s'appuie sur »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\bprocess\\b",
+      "fix": "« processus », « procédure », « façon de faire »",
+      "severity": "avertissement"
+    },
+    {
+      "motif": "\\b(call|calls)\\b",
+      "fix": "« appel », « rendez-vous »",
+      "severity": "avertissement"
+    }
+  ]
+}

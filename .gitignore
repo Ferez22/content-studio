@@ -1,0 +1,26 @@
+.env
+.env.*
+node_modules/
+.DS_Store
+__pycache__/
+**/rendu/
+remotion/out/
+
+# secrets: OAuth clients, credentials, tokens (never commit)
+ID client Google Auth.json
+*client_secret*.json
+*credentials*.json
+token.json
+
+# Owner data stays local: this repo is the tool (open source). See CLAUDE.md "Owner data stays local".
+/brands/*
+!/brands/example/
+/users/
+/memory/
+/voicing.md
+/PLAN.md
+/CLAUDE.local.md
+/prompts/motion/*
+!/prompts/motion/README.md
+/prompts/references/
+/remotion/src/videos/*/

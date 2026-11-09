@@ -1,0 +1,25 @@
+{
+  "_source": "Render demo only (Remotion example-test composition). Not a real brand: replace with your own brand via brand-voice + brand-assets.",
+  "brand_name": "Example",
+  "lang": "en",
+  "direction": "ltr",
+  "colors": {
+    "bg": "#ffffff",
+    "fg": "#111418",
+    "accent": "#3b5bdb",
+    "muted": "#5c6470",
+    "surface": "#f5f6f8",
+    "border": "#e3e6ea",
+    "button": "#111418",
+    "button_fg": "#ffffff",
+    "secondary": {}
+  },
+  "fonts": {"heading": "Inter", "body": "Inter", "arabic": "Tajawal"},
+  "logos": {
+    "light_bg": "example/assets/logo/logo.svg",
+    "dark_bg": "example/assets/logo/logo.svg",
+    "icon_light_bg": "example/assets/logo/logo.svg",
+    "icon_dark_bg": "example/assets/logo/logo.svg",
+    "includes_name": false
+  }
+}

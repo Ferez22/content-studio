@@ -1,0 +1,383 @@
+{
+ "_note": "French: AI tics + English calques. Add a pattern when the owner keeps removing it (skill learn).",
+ "patterns": [
+  {
+   "pattern": "dans un monde (en constante évolution|en perpétuel changement|où)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "entrer directement dans le cas concret"
+  },
+  {
+   "pattern": "à l'(ère|heure) (du numérique|de l'ia|de l'intelligence artificielle|où)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer, commencer par le fait"
+  },
+  {
+   "pattern": "il (est|semble) (important|essentiel|crucial|primordial|nécessaire) de (noter|souligner|rappeler|comprendre)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire la chose directement"
+  },
+  {
+   "pattern": "il convient de (noter|souligner|rappeler)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire la chose directement"
+  },
+  {
+   "pattern": "n'hésitez pas à",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "verbe direct: « Écrivez-moi », « Réservez un appel »"
+  },
+  {
+   "pattern": "dans cet article,? (nous allons|je vais|on va)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer l'annonce, donner la réponse"
+  },
+  {
+   "pattern": "\\b(plongeons|plongeons ensemble|explorons ensemble|découvrons ensemble)\\b",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer"
+  },
+  {
+   "pattern": "plonger (dans|au cœur)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "« regarder », « entrer dans le détail »"
+  },
+  {
+   "pattern": "(un |une )?(véritable|vrai) (levier|atout|game[- ]changer|révolution|tournant)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "nommer l'effet concret, avec un chiffre si possible"
+  },
+  {
+   "pattern": "\\bgame[- ]?changer\\b",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "nommer l'effet concret"
+  },
+  {
+   "pattern": "\\bincontournables?\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "dire pourquoi c'est utile"
+  },
+  {
+   "pattern": "\\brévolution(ner|naire|nent|ne)\\b",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "décrire le changement réel"
+  },
+  {
+   "pattern": "(solutions?|approches?|outils?) innovant(e|es|s)?",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "nommer la solution et ce qu'elle fait"
+  },
+  {
+   "pattern": "\\b(à la pointe|de pointe|sans précédent|dernier cri)\\b",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer ou prouver"
+  },
+  {
+   "pattern": "(libérer|exploiter|révéler) (tout )?(le|votre|son|leur) (plein )?potentiel",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire ce que ça change concrètement"
+  },
+  {
+   "pattern": "tirer (pleinement )?parti",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "« utiliser », « profiter de »"
+  },
+  {
+   "pattern": "(passer|faire passer|propulser) .{0,20}au niveau supérieur",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire le résultat mesurable"
+  },
+  {
+   "pattern": "\\bpropulse[rz]?\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "verbe concret"
+  },
+  {
+   "pattern": "(pierre angulaire|clé de voûte|au cœur de (votre|la|notre) stratégie)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer la métaphore"
+  },
+  {
+   "pattern": "\\b(holistique|synergies?)\\b",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire ce qui est relié à quoi"
+  },
+  {
+   "pattern": "(expérience|intégration|transition) (fluide|sans couture|sans friction)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire ce que l'utilisateur ne fait plus"
+  },
+  {
+   "pattern": "le paysage (de l'ia|numérique|technologique|actuel)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "« le marché », ou supprimer"
+  },
+  {
+   "pattern": "naviguer (dans|à travers) (la complexité|le paysage|les défis|ce monde)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "verbe concret"
+  },
+  {
+   "pattern": "(un monde|une infinité|un océan) de possibilités",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "citer deux possibilités réelles"
+  },
+  {
+   "pattern": "(bien plus qu'un(e)? simple|bien plus que de simples)",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "dire ce que c'est"
+  },
+  {
+   "pattern": "mais ce n'est pas tout",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "supprimer la transition"
+  },
+  {
+   "pattern": "et si je (vous|te) disais",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "dire la chose"
+  },
+  {
+   "pattern": "\\ble saviez-vous\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "question précise au lecteur"
+  },
+  {
+   "pattern": "que (vous soyez|tu sois) .{1,60} ou .{1,60},",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "choisir un lecteur précis"
+  },
+  {
+   "pattern": "^(en conclusion|en somme|en résumé|pour conclure|en définitive)\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "finir sur l'idée ou la question, sans annonce"
+  },
+  {
+   "pattern": "^en effet\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "supprimer"
+  },
+  {
+   "pattern": "\\b(redéfinir|réinventer) (la façon|la manière|le futur|l'avenir)",
+   "kind": "AI tic",
+   "severity": "blocking",
+   "fix": "décrire le changement réel"
+  },
+  {
+   "pattern": "\\b(écosystème|paradigme)\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "mot concret"
+  },
+  {
+   "pattern": "\\bgaranti(e|s|es|r|t)?\\b",
+   "kind": "AI tic",
+   "severity": "warning",
+   "fix": "promettre moins: dire ce qui est livré, pas garanti (voicing: under-promise)"
+  },
+  {
+   "pattern": "faire du sens",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« avoir du sens », « c'est logique »"
+  },
+  {
+   "pattern": "\\badress(er|e|ent|ons|ez|é|ée|és|ées) (un|le|ce|les|des|vos|nos|ces|votre|notre) (problème|enjeu|sujet|besoin|défi)s?",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« traiter », « répondre à », « régler »"
+  },
+  {
+   "pattern": "\\bdélivr(er|e|ent|ons|ez|é|ée) (de la |une )?(valeur|résultats?|projets?)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« apporter », « livrer », « obtenir »"
+  },
+  {
+   "pattern": "être en charge de|(suis|est|sont|es|sommes|êtes) en charge de",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« s'occuper de », « être chargé de », « gérer »"
+  },
+  {
+   "pattern": "\\bsupport(er|e|ent|ons|ez) (les|vos|nos|nos|des|une?|la|le) (équipes?|clients?|projets?|entreprises?)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« accompagner », « aider », « soutenir »"
+  },
+  {
+   "pattern": "\\bdéfinitivement\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« vraiment », « sans aucun doute » (sauf sens « pour toujours »)"
+  },
+  {
+   "pattern": "\\béventuellement\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« finalement », « à terme » (sauf sens « peut-être »)"
+  },
+  {
+   "pattern": "\\binit(ier|ie|ié|iée) (un|le|ce|votre|notre) (projet|changement|processus)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« lancer », « démarrer »"
+  },
+  {
+   "pattern": "\\bimplément(er|e|é|ée|ation)\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« mettre en place », « mettre en œuvre », « déployer »"
+  },
+  {
+   "pattern": "\\bversatile\\b",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« polyvalent »"
+  },
+  {
+   "pattern": "\\bconsistant(e|s|es)?\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« cohérent », « régulier »"
+  },
+  {
+   "pattern": "\\bun large (nombre|éventail de clients)",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« un grand nombre »"
+  },
+  {
+   "pattern": "\\ben ligne avec\\b",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« conforme à », « cohérent avec »"
+  },
+  {
+   "pattern": "à la fin de la journée",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« au bout du compte », « au final »"
+  },
+  {
+   "pattern": "\\b(suis|sommes|est) (tellement |très )?excité(e|s|es)? (de|par)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« ravi de », « j'ai hâte de »"
+  },
+  {
+   "pattern": "\\bexcitant(e|s|es)?\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« enthousiasmant », « passionnant »"
+  },
+  {
+   "pattern": "(être|suis|êtes|sont) confortable(s)? avec",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« à l'aise avec »"
+  },
+  {
+   "pattern": "sur une base (quotidienne|régulière|hebdomadaire|mensuelle|annuelle)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« chaque jour », « régulièrement », « chaque mois »"
+  },
+  {
+   "pattern": "appliqu(er|ez|é) (pour|à) (un|le|ce) (poste|job|programme)",
+   "kind": "anglicism/calque",
+   "severity": "blocking",
+   "fix": "« postuler »"
+  },
+  {
+   "pattern": "\\bréalis(er|e|é|ez) que\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« se rendre compte que »"
+  },
+  {
+   "pattern": "\\bfocus(er|e|é|ez|ons)?\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« se concentrer sur »"
+  },
+  {
+   "pattern": "\\bimpact(er|e|é|ée|ent)\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« toucher », « avoir un effet sur »"
+  },
+  {
+   "pattern": "\\bchalleng(er|e|é|ez)\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« remettre en question », « mettre à l'épreuve »"
+  },
+  {
+   "pattern": "\\b(booker|booké|booste[rz]?|boosté)\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« réserver », « augmenter », « renforcer »"
+  },
+  {
+   "pattern": "\\ben termes de\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« pour », « côté », « en matière de »"
+  },
+  {
+   "pattern": "\\bopportunités?\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "souvent « occasion », « possibilité », « piste »"
+  },
+  {
+   "pattern": "\\bbasé(e|s|es)? sur\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« fondé sur », « à partir de », « qui s'appuie sur »"
+  },
+  {
+   "pattern": "\\bprocess\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« processus », « procédure », « façon de faire »"
+  },
+  {
+   "pattern": "\\b(call|calls)\\b",
+   "kind": "anglicism/calque",
+   "severity": "warning",
+   "fix": "« appel », « rendez-vous »"
+  }
+ ]
+}

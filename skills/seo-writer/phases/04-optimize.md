@@ -1,0 +1,11 @@
+# P4 Optimize: checklist (write result in brief.md, all must pass)
+- title <= 60 chars, contains primary keyword (natural), not clickbait
+- description <= 155 chars, contains keyword, says what the reader gets
+- slug short, keyword, lowercase-hyphen, same in every language
+- one H1 (title), H2s cover the outline, keyword in first 100 words + one H2
+- FAQ frontmatter 3-5 real questions (renders FAQPage JSON-LD if the site supports it)
+- internal links: 3-5 out to our pages (site link component/paths), plus 1-2 existing posts updated to link in (refresh them in the same PR)
+- external: sources cited with links, no affiliate/unknown links
+- images: alt text, files in the site's image folder, compressed (< 300 KB)
+- no em/en dashes, no slop words, li-human long-form gate (03-write step 6) passed
+- no invented facts; every number has a source
