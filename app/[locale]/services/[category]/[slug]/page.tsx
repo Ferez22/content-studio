@@ -36,6 +36,7 @@ import { ArchitectureDiagram } from "@/components/services/system-graph";
 import { HeroVideo } from "@/components/services/showcase-video";
 import { MotionDesignHero, MotionDesignStory, MotionOffer } from "@/components/services/motion-design";
 import { ServiceVisual } from "@/components/services/visuals";
+import { DiagnoseArt, ScaleArt, TrainArt, TransformArt } from "@/components/services/step-art";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { breadcrumbJsonLd, translatedPageMetadata } from "@/lib/service-metadata";
@@ -95,6 +96,11 @@ const extras: Partial<Record<ServiceSlug, Extras>> = {
     marquee: true,
     demo: CrmDemo,
   },
+};
+
+// One small illustration per point of the explainer ("How we work"), in order.
+const explainerArt: Partial<Record<ServiceSlug, React.ComponentType<{ className?: string }>[]>> = {
+  "ai-automation": [DiagnoseArt, TransformArt, ScaleArt, TrainArt],
 };
 
 // Standard pages that skip the general "How we deliver" section (the new expertise pages).
@@ -234,7 +240,7 @@ export default async function ServicePage({ params }: Props) {
 
       {page?.sections?.map((Section, index) => <Section key={index} slug={slug} />)}
       {t.has("included") && <Included slug={slug} />}
-      {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} />}
+      {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} art={explainerArt[slug]} />}
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
       {t.has("levels") && <Levels slug={slug} icons={page?.levelIcons ?? []} />}
 
