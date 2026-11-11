@@ -1182,89 +1182,56 @@
       "intro": "Nous automatisons les processus qui reviennent chaque jour et coûtent le plus en temps et en erreurs. L'IA lit, trie et prépare le travail dans vos outils actuels, et votre équipe garde la main sur les décisions.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "De l'analyse du processus au suivi après la mise en service, avec un seul chef de projet.",
+        "intro": "Des exemples concrets de tâches que l'IA prend en charge, pendant que votre équipe garde la main sur les décisions.",
         "items": [
           {
-            "title": "Repérer les tâches à automatiser",
-            "text": "Nous identifions les tâches répétitives qui occupent vos équipes, et celles qui rapporteront le plus une fois automatisées."
+            "title": "Commandes reçues par e-mail",
+            "text": "Les bons de commande arrivés dans votre boîte mail sont lus et saisis dans votre ERP. Votre équipe ne traite que les cas inhabituels."
           },
           {
-            "title": "Estimer le gain avant de commencer",
-            "text": "Temps gagné, erreurs évitées, volume traité : vous savez ce que le projet doit rapporter avant le moindre développement."
+            "title": "Factures fournisseurs",
+            "text": "Chaque facture est lue, vérifiée et rapprochée de son bon de commande. Les écarts vous sont signalés avant le paiement."
           },
           {
-            "title": "Choisir la bonne méthode",
-            "text": "Règles simples, IA ou un mélange des deux : nous retenons la solution la plus fiable pour chaque étape, pas la plus impressionnante."
+            "title": "Demandes clients",
+            "text": "Les e-mails et formulaires entrants sont triés par sujet et par urgence, puis transmis à la bonne personne avec un brouillon de réponse."
           },
           {
-            "title": "Brancher l'automatisation sur vos outils",
-            "text": "Elle s'intègre à votre CRM, votre ERP, votre messagerie ou vos tableurs, sans tout reconstruire."
+            "title": "Devis et chiffrages",
+            "text": "Un premier chiffrage est préparé à partir de la demande et de vos grilles de prix. Votre expert le relit et l'ajuste avant envoi."
           },
           {
-            "title": "Garder une personne dans la boucle",
-            "text": "Les cas sensibles ou inhabituels passent par un membre de votre équipe avant toute action."
+            "title": "Rapports et comptes rendus",
+            "text": "Le rapport hebdomadaire des ventes ou le compte rendu de réunion est rédigé à partir de vos données, prêt à être relu."
           },
           {
-            "title": "Mesurer et faire évoluer",
-            "text": "Nous suivons les résultats après la mise en service et améliorons l'automatisation à partir de l'usage réel."
+            "title": "Relances et suivi",
+            "text": "Pièces manquantes, devis sans réponse, factures en retard : les relances partent au bon moment, sans que personne ait à y penser."
           }
         ]
       },
       "explainer": {
-        "title": "Notre approche",
-        "intro": "Quatre principes pour éviter les automatisations qui brillent en démo et cassent en production.",
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du premier diagnostic jusqu'à l'usage au quotidien par vos équipes.",
         "points": [
           {
-            "title": "Le processus d'abord, l'outil ensuite",
-            "text": "Nous regardons comment le travail se fait vraiment : qui fait quoi, combien de fois, avec quelles erreurs. C'est là que se trouvent les gains."
+            "title": "Diagnostic IA",
+            "text": "Nous passons en revue vos processus avec vos équipes, choisissons les tâches à automatiser en premier et fixons ensemble le gain attendu."
           },
           {
-            "title": "Tester sur vos données",
-            "text": "Avant de développer, nous essayons la méthode sur des cas réels pour mesurer sa fiabilité. Vous décidez de la suite avec des chiffres en main."
+            "title": "Transformation du processus",
+            "text": "Avec vos équipes, nous redéfinissons le déroulé du travail : ce que l'IA fait seule, et ce qu'une personne valide avant d'agir."
           },
           {
-            "title": "S'intégrer sans tout casser",
-            "text": "L'automatisation se branche sur vos outils existants et se désactive à tout moment. Vous ne dépendez ni de nous, ni d'un outil en particulier."
+            "title": "Du POC à l'échelle",
+            "text": "Nous testons d'abord sur vos données réelles et mesurons la fiabilité. Quand les chiffres sont bons, nous déployons dans vos outils existants."
           },
           {
-            "title": "Mesurer, puis ajuster",
-            "text": "Temps gagné, taux d'erreur, volume traité : nous suivons ces chiffres et améliorons la solution au fil de l'usage."
+            "title": "Formation et gouvernance",
+            "text": "Nous formons vos équipes, suivons les coûts et la qualité, et encadrons les usages : RGPD, AI Act, validation humaine."
           }
         ]
       },
-      "featuresTitle": "Ce que nous automatisons",
-      "features": [
-        {
-          "title": "La saisie et la ressaisie",
-          "text": "Les informations d'un document, d'un e-mail ou d'un formulaire arrivent directement dans vos outils."
-        },
-        {
-          "title": "Le tri des demandes",
-          "text": "Les e-mails et demandes entrantes sont classés et transmis à la bonne personne."
-        },
-        {
-          "title": "Les devis et chiffrages",
-          "text": "Un premier chiffrage est préparé à partir des données du projet, puis validé par votre expert."
-        },
-        {
-          "title": "La rédaction de documents",
-          "text": "Comptes rendus, dossiers et rapports sont pré-rédigés, prêts à être relus."
-        },
-        {
-          "title": "La qualité de vos données",
-          "text": "Fiches incomplètes, doublons et incohérences sont repérés avant de poser problème."
-        },
-        {
-          "title": "Les relances et le suivi",
-          "text": "Les bonnes relances partent au bon moment, sans que personne ait à y penser."
-        }
-      ],
-      "useCases": [
-        "Commandes reçues par e-mail saisies dans votre ERP",
-        "Factures fournisseurs lues et rapprochées des bons de commande",
-        "Demandes clients triées et transmises à la bonne équipe",
-        "Rapport hebdomadaire des ventes rédigé à partir de votre CRM"
-      ],
       "faq": {
         "title": "Questions sur l'automatisation par l'IA",
         "items": [

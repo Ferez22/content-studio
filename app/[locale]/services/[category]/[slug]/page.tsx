@@ -235,7 +235,7 @@ export default async function ServicePage({ params }: Props) {
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
       {t.has("levels") && <Levels slug={slug} icons={page?.levelIcons ?? []} />}
 
-      <Features slug={slug} marquee={page?.marquee} />
+      {t.has("features") && <Features slug={slug} marquee={page?.marquee} />}
       {t.has("useCases") && <UseCases slug={slug} aside={UseCasesAside ? <UseCasesAside /> : undefined} />}
       {page?.afterUseCases?.map((Section, index) => <Section key={index} slug={slug} />)}
 

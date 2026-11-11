@@ -387,89 +387,56 @@
       "intro": "We automate the processes that come back every day and cost the most in time and errors. AI reads, sorts and prepares the work inside the tools you already use, and your team keeps the decisions.",
       "included": {
         "title": "What we do for you",
-        "intro": "From mapping the process to follow-up after launch, with one project lead.",
+        "intro": "Concrete examples of tasks AI takes on, while your team keeps the decisions.",
         "items": [
           {
-            "title": "Find the tasks worth automating",
-            "text": "We identify the repetitive tasks that keep your team busy, and the ones that will pay back most once automated."
+            "title": "Orders received by email",
+            "text": "Purchase orders that land in your inbox are read and entered into your ERP. Your team only handles the unusual ones."
           },
           {
-            "title": "Estimate the gain before we start",
-            "text": "Time saved, errors avoided, volume handled: you know what the project should return before any development starts."
+            "title": "Supplier invoices",
+            "text": "Each invoice is read, checked and matched with its purchase order. Any mismatch is flagged to you before payment."
           },
           {
-            "title": "Pick the right method",
-            "text": "Simple rules, AI or a mix of both: for each step we choose the most reliable option, not the most impressive one."
+            "title": "Customer requests",
+            "text": "Incoming emails and forms are sorted by topic and urgency, then passed to the right person with a draft reply."
           },
           {
-            "title": "Plug automation into your tools",
-            "text": "It works with your CRM, your ERP, your inbox or your spreadsheets, without rebuilding anything."
+            "title": "Quotes and estimates",
+            "text": "A first estimate is prepared from the request and your price lists. Your expert reviews and adjusts it before it goes out."
           },
           {
-            "title": "Keep a person in the loop",
-            "text": "Sensitive or unusual cases go through someone on your team before anything happens."
+            "title": "Reports and meeting notes",
+            "text": "The weekly sales report or the meeting notes are written from your data, ready for review."
           },
           {
-            "title": "Measure and improve",
-            "text": "We track results after launch and improve the automation based on how it is really used."
+            "title": "Reminders and follow-up",
+            "text": "Missing documents, unanswered quotes, late invoices: reminders go out at the right time, without anyone having to think about them."
           }
         ]
       },
       "explainer": {
-        "title": "Our approach",
-        "intro": "Four principles that keep automations from shining in a demo and breaking in production.",
+        "title": "How we work",
+        "intro": "Four steps, from the first assessment to everyday use by your team.",
         "points": [
           {
-            "title": "Process first, tool second",
-            "text": "We look at how the work really gets done: who does what, how often and with which errors. That is where the gains are."
+            "title": "AI assessment",
+            "text": "We review your processes with your team, choose which tasks to automate first and agree on the gain we are aiming for."
           },
           {
-            "title": "Test on your data",
-            "text": "Before building, we try the method on real cases to measure how reliable it is. You decide on the next step with numbers in hand."
+            "title": "Process redesign",
+            "text": "Together with your team, we redraw how the work flows: what AI does on its own, and what a person approves before anything happens."
           },
           {
-            "title": "Fit in without breaking things",
-            "text": "The automation connects to the tools you already have and can be switched off at any time. You depend neither on us nor on any one tool."
+            "title": "From pilot to rollout",
+            "text": "We test on your real data first and measure how reliable it is. When the numbers hold up, we roll it out in the tools you already use."
           },
           {
-            "title": "Measure, then adjust",
-            "text": "Time saved, error rate, volume handled: we track these numbers and improve the solution as it gets used."
+            "title": "Training and governance",
+            "text": "We train your team, track cost and quality, and set the rules for use: GDPR, the EU AI Act, human approval."
           }
         ]
       },
-      "featuresTitle": "What we automate",
-      "features": [
-        {
-          "title": "Data entry and retyping",
-          "text": "Details from a document, an email or a form go straight into your tools."
-        },
-        {
-          "title": "Sorting requests",
-          "text": "Incoming emails and requests are classified and passed to the right person."
-        },
-        {
-          "title": "Quotes and estimates",
-          "text": "A first estimate is prepared from the project data, then approved by your expert."
-        },
-        {
-          "title": "Writing documents",
-          "text": "Meeting notes, files and reports are drafted and ready for review."
-        },
-        {
-          "title": "Data quality",
-          "text": "Incomplete records, duplicates and inconsistencies are caught before they cause trouble."
-        },
-        {
-          "title": "Reminders and follow-up",
-          "text": "The right reminders go out at the right time, without anyone having to think about them."
-        }
-      ],
-      "useCases": [
-        "Orders received by email entered into your ERP",
-        "Supplier invoices read and matched with purchase orders",
-        "Customer requests sorted and sent to the right team",
-        "Weekly sales report written from your CRM"
-      ],
       "faq": {
         "title": "Questions about AI automation",
         "items": [
