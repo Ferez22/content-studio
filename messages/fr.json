@@ -11,7 +11,7 @@
   },
   "header": {
     "home": "Accueil",
-    "services": "Services",
+    "services": "Expertises",
     "portfolio": "Réalisations",
     "about": "À propos",
     "blog": "Blog",
@@ -22,12 +22,12 @@
     "language": "Langue",
     "partners": "Partenaires",
     "becomePartner": "Devenir partenaire",
-    "allServices": "Voir tous les services",
+    "allServices": "Voir toutes nos expertises",
     "categoryOverview": "Vue d'ensemble"
   },
   "footer": {
     "positioning": "Stratégie, données et IA, conçues pour fonctionner au cœur de votre entreprise.",
-    "services": "Services",
+    "services": "Expertises",
     "company": "Entreprise",
     "contact": "Contact",
     "location": "Basés en France. Avec des PME partout en France.",
@@ -109,7 +109,7 @@
         }
       ],
       "cta": "Parlez-nous d'un processus",
-      "secondary": "Voir nos services d'IA"
+      "secondary": "Voir nos expertises en IA"
     },
     "trusted": {
       "title": "Ils nous font confiance"
@@ -213,7 +213,7 @@
       },
       {
         "value": "{services}",
-        "label": "services, un seul chef de projet"
+        "label": "expertises, un seul chef de projet"
       },
       {
         "value": "100%",
@@ -298,9 +298,9 @@
   },
   "services": {
     "overview": {
-      "title": "Services",
+      "title": "Expertises",
       "intro": "Tout ce qu'il faut à une entreprise pour se digitaliser, du site et de la marque au logiciel sur mesure, à l'IA et à la sécurité. Un chef de projet, des spécialistes choisis dans notre réseau et un contrôle qualité avant chaque livraison.",
-      "metaTitle": "Services digitaux : IA, logiciel, web, marque et sécurité",
+      "metaTitle": "Nos expertises : IA, logiciel, web, marque et sécurité",
       "metaDescription": "IA, data, sites web, logiciels, marque et cybersécurité chez un seul partenaire digital, avec un chef de projet et des spécialistes vérifiés sur chaque projet."
     },
     "breadcrumb": "Fil d'Ariane",
@@ -688,7 +688,7 @@
     "title": "Nos réalisations",
     "intro": "Chaque étude de cas présente le problème, ce que nous avons construit et ce qui a changé. Les démos sont signalées comme telles.",
     "sector": "Secteur",
-    "service": "Service",
+    "service": "Expertise",
     "result": "Résultat",
     "readCase": "Lire l'étude de cas",
     "back": "Toutes les études de cas",
@@ -1169,6 +1169,128 @@
           {
             "question": "Quels types d'agents pouvons-nous construire ?",
             "answer": "Tout ce que votre méthode peut décrire : des assistants qui répondent à partir de votre base de connaissances, des agents qui rédigent rapports, audits ou propositions, ou des systèmes en plusieurs étapes qui travaillent dans les outils de vos clients."
+          }
+        ]
+      }
+    }
+  },
+  "servicePages": {
+    "ai-automation": {
+      "title": "Automatisation par l'IA",
+      "metaTitle": "Automatisation des processus par l'IA pour les PME",
+      "summary": "Moins de saisie, de tri et de relances : l'IA prend en charge les tâches répétitives de vos équipes, et une personne valide ce qui compte.",
+      "intro": "Nous automatisons les processus qui reviennent chaque jour et coûtent le plus en temps et en erreurs. L'IA lit, trie et prépare le travail dans vos outils actuels, et votre équipe garde la main sur les décisions.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "De l'analyse du processus au suivi après la mise en service, avec un seul chef de projet.",
+        "items": [
+          {
+            "title": "Repérer les tâches à automatiser",
+            "text": "Nous identifions les tâches répétitives qui occupent vos équipes, et celles qui rapporteront le plus une fois automatisées."
+          },
+          {
+            "title": "Estimer le gain avant de commencer",
+            "text": "Temps gagné, erreurs évitées, volume traité : vous savez ce que le projet doit rapporter avant le moindre développement."
+          },
+          {
+            "title": "Choisir la bonne méthode",
+            "text": "Règles simples, IA ou un mélange des deux : nous retenons la solution la plus fiable pour chaque étape, pas la plus impressionnante."
+          },
+          {
+            "title": "Brancher l'automatisation sur vos outils",
+            "text": "Elle s'intègre à votre CRM, votre ERP, votre messagerie ou vos tableurs, sans tout reconstruire."
+          },
+          {
+            "title": "Garder une personne dans la boucle",
+            "text": "Les cas sensibles ou inhabituels passent par un membre de votre équipe avant toute action."
+          },
+          {
+            "title": "Mesurer et faire évoluer",
+            "text": "Nous suivons les résultats après la mise en service et améliorons l'automatisation à partir de l'usage réel."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Notre approche",
+        "intro": "Quatre principes pour éviter les automatisations qui brillent en démo et cassent en production.",
+        "points": [
+          {
+            "title": "Le processus d'abord, l'outil ensuite",
+            "text": "Nous regardons comment le travail se fait vraiment : qui fait quoi, combien de fois, avec quelles erreurs. C'est là que se trouvent les gains."
+          },
+          {
+            "title": "Tester sur vos données",
+            "text": "Avant de développer, nous essayons la méthode sur des cas réels pour mesurer sa fiabilité. Vous décidez de la suite avec des chiffres en main."
+          },
+          {
+            "title": "S'intégrer sans tout casser",
+            "text": "L'automatisation se branche sur vos outils existants et se désactive à tout moment. Vous ne dépendez ni de nous, ni d'un outil en particulier."
+          },
+          {
+            "title": "Mesurer, puis ajuster",
+            "text": "Temps gagné, taux d'erreur, volume traité : nous suivons ces chiffres et améliorons la solution au fil de l'usage."
+          }
+        ]
+      },
+      "featuresTitle": "Ce que nous automatisons",
+      "features": [
+        {
+          "title": "La saisie et la ressaisie",
+          "text": "Les informations d'un document, d'un e-mail ou d'un formulaire arrivent directement dans vos outils."
+        },
+        {
+          "title": "Le tri des demandes",
+          "text": "Les e-mails et demandes entrantes sont classés et transmis à la bonne personne."
+        },
+        {
+          "title": "Les devis et chiffrages",
+          "text": "Un premier chiffrage est préparé à partir des données du projet, puis validé par votre expert."
+        },
+        {
+          "title": "La rédaction de documents",
+          "text": "Comptes rendus, dossiers et rapports sont pré-rédigés, prêts à être relus."
+        },
+        {
+          "title": "La qualité de vos données",
+          "text": "Fiches incomplètes, doublons et incohérences sont repérés avant de poser problème."
+        },
+        {
+          "title": "Les relances et le suivi",
+          "text": "Les bonnes relances partent au bon moment, sans que personne ait à y penser."
+        }
+      ],
+      "useCases": [
+        "Commandes reçues par e-mail saisies dans votre ERP",
+        "Factures fournisseurs lues et rapprochées des bons de commande",
+        "Demandes clients triées et transmises à la bonne équipe",
+        "Rapport hebdomadaire des ventes rédigé à partir de votre CRM"
+      ],
+      "faq": {
+        "title": "Questions sur l'automatisation par l'IA",
+        "items": [
+          {
+            "question": "Par où commencer ?",
+            "answer": "Par une tâche qui revient souvent, prend du temps et génère des erreurs. Lors d'un premier appel de 30 minutes, nous regardons vos processus avec vous et vous disons franchement lesquels valent la peine d'être automatisés."
+          },
+          {
+            "question": "Faut-il toujours de l'IA pour automatiser ?",
+            "answer": "Non, et souvent ce n'est pas nécessaire. Quand une règle simple suffit, elle est plus fiable et moins chère. Nous réservons l'IA aux étapes où il faut lire, comprendre ou classer des contenus qui varient."
+          },
+          {
+            "question": "Est-ce que ça fonctionne avec nos outils actuels ?",
+            "answer": "Oui. Nous connectons l'automatisation à votre CRM, votre ERP, votre messagerie ou vos tableurs. Vous n'avez pas besoin de changer de logiciel."
+          },
+          {
+            "question": "Comment évitez-vous les erreurs de l'IA ?",
+            "answer": "Nous testons sur vos données avant la mise en service, nous fixons un seuil de confiance en dessous duquel une personne vérifie, et nous gardons une validation humaine sur les étapes sensibles."
+          },
+          {
+            "question": "Où vont nos données ?",
+            "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. Avant la mise en service, nous vérifions par où passe chaque information."
+          },
+          {
+            "question": "Comment mesurer le retour sur investissement ?",
+            "answer": "Nous mesurons le temps passé, les erreurs et les volumes avant de commencer, puis les mêmes chiffres après la mise en service. Le résultat est un chiffre, pas une impression."
           }
         ]
       }

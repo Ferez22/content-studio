@@ -150,7 +150,7 @@ export const Features = ({ slug, marquee }: { slug: ServiceSlug; marquee?: boole
     <section className="pt-10 md:pt-20 lg:pt-32">
       <Container>
         <Reveal>
-          <Heading>{tServices("featuresTitle")}</Heading>
+          <Heading>{t.has("featuresTitle") ? t("featuresTitle") : tServices("featuresTitle")}</Heading>
         </Reveal>
         {marquee ? (
           <Reveal className="mt-10 md:mt-16 overflow-hidden mask-x-from-90%">

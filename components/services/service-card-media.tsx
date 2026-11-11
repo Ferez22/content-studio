@@ -13,6 +13,7 @@ const media: Partial<Record<ServiceSlug, { visual?: CardVisualKind; tools?: Tool
   "ai-agents": { visual: "agents" },
   chatbots: { visual: "chat" },
   "voice-agents": { visual: "voice", tools: ["elevenlabs", "openai"] },
+  "ai-automation": { visual: "sourcing", tools: ["n8n", "make"] },
   "process-automation": { visual: "sourcing", tools: ["n8n", "make"] },
   "api-integration": { visual: "integration" },
   "data-platforms": { visual: "bars", tools: ["postgresql", "googlesheets"] },

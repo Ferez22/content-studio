@@ -23,6 +23,7 @@ const allServiceCategories = [
   {
     slug: "ai",
     services: [
+      "ai-automation",
       "ai-consulting",
       "ai-agents",
       "chatbots",
@@ -86,6 +87,7 @@ export type ServiceSlug =
 // portfolio, blog links). A category with no service switched on is hidden the same way.
 // Set at build time, so a change needs a redeploy.
 export const serviceToggles: Record<ServiceSlug, boolean> = {
+  "ai-automation": true,
   "ai-consulting": false,
   "ai-agents": true,
   chatbots: true,

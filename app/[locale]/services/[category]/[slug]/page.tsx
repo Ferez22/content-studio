@@ -230,9 +230,9 @@ export default async function ServicePage({ params }: Props) {
       )}
 
       {page?.sections?.map((Section, index) => <Section key={index} slug={slug} />)}
+      {t.has("included") && <Included slug={slug} />}
       {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} />}
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
-      {t.has("included") && <Included slug={slug} />}
       {t.has("levels") && <Levels slug={slug} icons={page?.levelIcons ?? []} />}
 
       <Features slug={slug} marquee={page?.marquee} />

@@ -11,7 +11,7 @@
   },
   "header": {
     "home": "Home",
-    "services": "Services",
+    "services": "Expertise",
     "portfolio": "Portfolio",
     "about": "About",
     "blog": "Blog",
@@ -22,12 +22,12 @@
     "language": "Language",
     "partners": "Partners",
     "becomePartner": "Become a partner",
-    "allServices": "See all services",
+    "allServices": "See all our expertise",
     "categoryOverview": "Overview"
   },
   "footer": {
     "positioning": "Your digital partner for AI, software, websites, brand and security.",
-    "services": "Services",
+    "services": "Expertise",
     "company": "Company",
     "contact": "Contact",
     "location": "Based in France. Working with SMEs across France.",
@@ -109,7 +109,7 @@
         }
       ],
       "cta": "Tell us about a process",
-      "secondary": "See our AI services"
+      "secondary": "See our AI expertise"
     },
     "trusted": {
       "title": "Clients and partners who trust us"
@@ -217,7 +217,7 @@
       },
       {
         "value": "{services}",
-        "label": "services, one project lead"
+        "label": "areas of expertise, one project lead"
       },
       {
         "value": "100%",
@@ -298,9 +298,9 @@
   },
   "services": {
     "overview": {
-      "title": "Services",
+      "title": "Expertise",
       "intro": "Everything a business needs to go digital, from the website and the brand to custom software, AI and security. One project lead, specialists we cherry-pick from our network, and quality control before anything reaches you.",
-      "metaTitle": "Digital services: AI, software, web, brand and security",
+      "metaTitle": "Our expertise: AI, software, web, brand and security",
       "metaDescription": "AI, data, websites, software, brand and cybersecurity from one digital partner, with one project lead and vetted specialists on every project."
     },
     "breadcrumb": "Breadcrumb",
@@ -380,6 +380,126 @@
     }
   },
   "servicePages": {
+    "ai-automation": {
+      "title": "AI automation",
+      "metaTitle": "AI process automation for small and mid-sized businesses",
+      "summary": "Less data entry, sorting and chasing: AI takes on your team's repetitive tasks, and a person approves what matters.",
+      "intro": "We automate the processes that come back every day and cost the most in time and errors. AI reads, sorts and prepares the work inside the tools you already use, and your team keeps the decisions.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "From mapping the process to follow-up after launch, with one project lead.",
+        "items": [
+          {
+            "title": "Find the tasks worth automating",
+            "text": "We identify the repetitive tasks that keep your team busy, and the ones that will pay back most once automated."
+          },
+          {
+            "title": "Estimate the gain before we start",
+            "text": "Time saved, errors avoided, volume handled: you know what the project should return before any development starts."
+          },
+          {
+            "title": "Pick the right method",
+            "text": "Simple rules, AI or a mix of both: for each step we choose the most reliable option, not the most impressive one."
+          },
+          {
+            "title": "Plug automation into your tools",
+            "text": "It works with your CRM, your ERP, your inbox or your spreadsheets, without rebuilding anything."
+          },
+          {
+            "title": "Keep a person in the loop",
+            "text": "Sensitive or unusual cases go through someone on your team before anything happens."
+          },
+          {
+            "title": "Measure and improve",
+            "text": "We track results after launch and improve the automation based on how it is really used."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Our approach",
+        "intro": "Four principles that keep automations from shining in a demo and breaking in production.",
+        "points": [
+          {
+            "title": "Process first, tool second",
+            "text": "We look at how the work really gets done: who does what, how often and with which errors. That is where the gains are."
+          },
+          {
+            "title": "Test on your data",
+            "text": "Before building, we try the method on real cases to measure how reliable it is. You decide on the next step with numbers in hand."
+          },
+          {
+            "title": "Fit in without breaking things",
+            "text": "The automation connects to the tools you already have and can be switched off at any time. You depend neither on us nor on any one tool."
+          },
+          {
+            "title": "Measure, then adjust",
+            "text": "Time saved, error rate, volume handled: we track these numbers and improve the solution as it gets used."
+          }
+        ]
+      },
+      "featuresTitle": "What we automate",
+      "features": [
+        {
+          "title": "Data entry and retyping",
+          "text": "Details from a document, an email or a form go straight into your tools."
+        },
+        {
+          "title": "Sorting requests",
+          "text": "Incoming emails and requests are classified and passed to the right person."
+        },
+        {
+          "title": "Quotes and estimates",
+          "text": "A first estimate is prepared from the project data, then approved by your expert."
+        },
+        {
+          "title": "Writing documents",
+          "text": "Meeting notes, files and reports are drafted and ready for review."
+        },
+        {
+          "title": "Data quality",
+          "text": "Incomplete records, duplicates and inconsistencies are caught before they cause trouble."
+        },
+        {
+          "title": "Reminders and follow-up",
+          "text": "The right reminders go out at the right time, without anyone having to think about them."
+        }
+      ],
+      "useCases": [
+        "Orders received by email entered into your ERP",
+        "Supplier invoices read and matched with purchase orders",
+        "Customer requests sorted and sent to the right team",
+        "Weekly sales report written from your CRM"
+      ],
+      "faq": {
+        "title": "Questions about AI automation",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With a task that comes back often, takes time and causes errors. On a first 30-minute call, we look at your processes with you and tell you honestly which ones are worth automating."
+          },
+          {
+            "question": "Do you always need AI to automate?",
+            "answer": "No, and often you do not. When a simple rule is enough, it is more reliable and cheaper. We keep AI for the steps where something varied has to be read, understood or classified."
+          },
+          {
+            "question": "Does it work with the tools we already use?",
+            "answer": "Yes. We connect the automation to your CRM, your ERP, your inbox or your spreadsheets. You do not need to change software."
+          },
+          {
+            "question": "How do you prevent AI mistakes?",
+            "answer": "We test on your data before launch, set a confidence threshold below which a person checks the result, and keep human approval on sensitive steps."
+          },
+          {
+            "question": "Where does our data go?",
+            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. Before launch, we check where every piece of information travels."
+          },
+          {
+            "question": "How do we measure the return on investment?",
+            "answer": "We measure time spent, errors and volumes before we start, then the same figures after launch. The result is a number, not a feeling."
+          }
+        ]
+      }
+    },
     "ai-consulting": {
       "title": "AI consulting",
       "metaTitle": "AI consulting and AI strategy for businesses",
@@ -3362,7 +3482,7 @@
     "title": "Our work",
     "intro": "Each case study shows the problem, what we built and what changed. Demos are labelled as demos.",
     "sector": "Sector",
-    "service": "Service",
+    "service": "Expertise",
     "result": "Result",
     "readCase": "Read the case study",
     "back": "All case studies",

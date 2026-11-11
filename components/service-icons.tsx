@@ -51,6 +51,7 @@ export const serviceIcons: Record<ServiceSlug, Icon> = {
   chatbots: IconMessageChatbot,
   "voice-agents": IconPhoneCall,
   "ai-training": IconSchool,
+  "ai-automation": IconBolt,
   "process-automation": IconBolt,
   "api-integration": IconPlugConnected,
   "data-platforms": IconDatabase,
