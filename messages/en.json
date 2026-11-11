@@ -63,6 +63,54 @@
         }
       ]
     },
+    "automation": {
+      "title": "The processes we automate",
+      "intro": "We start from the tasks that come back every week and keep your team busy. AI does the repetitive work, and a person on your team approves what matters.",
+      "processes": [
+        {
+          "title": "Read and file incoming documents",
+          "text": "Invoices, purchase orders, contracts, forms: AI reads them, checks the details and files them in the right place. No more retyping."
+        },
+        {
+          "title": "Write reports and documents",
+          "text": "Meeting notes, monthly reports, proposals: drafted from your data and your templates, then reviewed by your team before they go out."
+        },
+        {
+          "title": "Check without rereading everything",
+          "text": "Mismatches, duplicates, missing documents, compliance rules: AI flags what looks wrong, and your team decides what happens next."
+        }
+      ],
+      "casesTitle": "The business cases we handle",
+      "casesIntro": "For each process we pick the simplest technique that works. A person on your team always makes the final call.",
+      "cases": [
+        {
+          "title": "Assistant on your documents (RAG)",
+          "text": "An assistant that answers from your procedures, contracts and technical sheets, and quotes the passage behind every answer, so checking takes one click."
+        },
+        {
+          "title": "Data extraction and OCR",
+          "text": "Invoices, letters or forms, even scanned: the right fields are pulled out and sent into your tools, with no retyping."
+        },
+        {
+          "title": "Teams of AI agents",
+          "text": "Several specialised agents share one process: one gathers, one checks, one writes. A person approves the sensitive steps."
+        },
+        {
+          "title": "Document generation",
+          "text": "Reports, summaries, product sheets or standard replies, produced from your data and templates and reviewed by your team before sending."
+        },
+        {
+          "title": "Conversational assistants",
+          "text": "On your website or inside your internal tools, an assistant answers questions from customers or staff and hands over to a person when needed."
+        },
+        {
+          "title": "Automation across your software",
+          "text": "Repetitive tasks run on their own between your CRM, your ERP and your inbox. AI handles the steps that need judgement."
+        }
+      ],
+      "cta": "Tell us about a process",
+      "secondary": "See our AI services"
+    },
     "trusted": {
       "title": "Clients and partners who trust us"
     },

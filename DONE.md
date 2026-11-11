@@ -4,6 +4,8 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-11-11
 
+- Hero background: `AmbientTexture` (`components/ambient-texture.tsx`), slowly drifting brand blues with film grain in WebGL (24 fps, paused off screen, still frame under reduced motion, CSS fallback), light and dark palettes
+- New home section after the hero: `AutomationOffer` (`components/automation-offer.tsx`), "The processes we automate" (3) and "The business cases we handle" (6) in one rounded panel over the texture, copy in `home.automation` (en, fr written natively)
 - German removed (Fares): the site is `fr` (default) and `en` only. `messages/de.json` deleted, the language switcher shows FR and EN, every `/de` URL redirects permanently (308) to the same `/en` path (`proxy.ts`), legacy service redirects and the hidden-service link check no longer match `de`
 - French completed for everything except service page copy: `header`, `home.services`, `services`, `serviceCategories` and `visuals` written natively in French (fr-human check OK). The home "What we do" section is now titled "Expertise" (Fares). Service pages (`servicePages`) stay English until their rewrite
 - `brand.md` and `design.md` added at the root (copies from Content Studio) and referenced in CLAUDE.md

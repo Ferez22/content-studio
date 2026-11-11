@@ -63,6 +63,54 @@
         }
       ]
     },
+    "automation": {
+      "title": "Les processus que nous automatisons",
+      "intro": "Nous partons des tâches qui reviennent chaque semaine et occupent vos équipes. L'IA fait le travail répétitif, une personne de votre équipe valide ce qui compte.",
+      "processes": [
+        {
+          "title": "Lire et classer les documents entrants",
+          "text": "Factures, bons de commande, contrats, formulaires : l'IA les lit, vérifie les informations et les range au bon endroit. Plus de ressaisie."
+        },
+        {
+          "title": "Rédiger rapports et documents",
+          "text": "Comptes rendus, rapports mensuels, propositions : rédigés à partir de vos données et de vos modèles, puis relus par votre équipe avant envoi."
+        },
+        {
+          "title": "Contrôler sans tout relire",
+          "text": "Écarts, doublons, pièces manquantes, règles de conformité : l'IA signale ce qui cloche, votre équipe décide de la suite."
+        }
+      ],
+      "casesTitle": "Les cas métier que nous traitons",
+      "casesIntro": "Pour chaque processus, nous choisissons la technique la plus simple qui fonctionne. La décision reste toujours à une personne de votre équipe.",
+      "cases": [
+        {
+          "title": "Assistant sur vos documents (RAG)",
+          "text": "Un assistant qui répond à partir de vos procédures, contrats et fiches techniques, en citant le passage d'où vient chaque réponse. Vous vérifiez en un clic."
+        },
+        {
+          "title": "Extraction de données et OCR",
+          "text": "Factures, courriers ou formulaires, même scannés : les bonnes informations sont extraites et envoyées dans vos outils, sans ressaisie."
+        },
+        {
+          "title": "Équipes d'agents IA",
+          "text": "Plusieurs agents spécialisés se partagent un processus : l'un collecte, l'autre vérifie, un troisième rédige. Une personne valide les étapes sensibles."
+        },
+        {
+          "title": "Génération de documents",
+          "text": "Rapports, synthèses, fiches produit ou réponses types, produits à partir de vos données et de vos modèles et relus par votre équipe avant envoi."
+        },
+        {
+          "title": "Assistants conversationnels",
+          "text": "Sur votre site ou dans vos outils internes, un assistant répond aux questions de vos clients ou de vos équipes, et passe la main à une personne quand il le faut."
+        },
+        {
+          "title": "Automatisation entre vos logiciels",
+          "text": "Les tâches répétitives s'enchaînent seules entre votre CRM, votre ERP et votre messagerie. L'IA prend les étapes qui demandent du jugement."
+        }
+      ],
+      "cta": "Parlez-nous d'un processus",
+      "secondary": "Voir nos services d'IA"
+    },
     "trusted": {
       "title": "Ils nous font confiance"
     },
