@@ -26,7 +26,7 @@
     "categoryOverview": "Overview"
   },
   "footer": {
-    "positioning": "Your digital partner for AI, software, websites, brand and security.",
+    "positioning": "Your digital partner for data and AI, software, brand and online presence.",
     "services": "Expertise",
     "company": "Company",
     "contact": "Contact",
@@ -40,12 +40,12 @@
   },
   "metadata": {
     "siteTitle": "Qartmina | Your digital partner for AI, software and web",
-    "siteDescription": "AI, software, websites, brand and cybersecurity from one digital partner: specialists we hand-pick, one project lead and quality control on every project."
+    "siteDescription": "Data and AI, custom software and SaaS, brand and online presence from one digital partner: specialists we hand-pick, one project lead and quality control on every project."
   },
   "home": {
     "hero": {
       "title": "One partner for everything digital",
-      "subtitle": "AI, software, websites, brand and security, built by specialists we hand-pick and checked by us before it reaches you. One project lead from the first call to launch.",
+      "subtitle": "Data and AI, software, brand and online presence, built by specialists we hand-pick and checked by us before it reaches you. One project lead from the first call to launch.",
       "primary": "Book a free 30-minute call",
       "secondary": "See our work",
       "kpis": [
@@ -299,9 +299,9 @@
   "services": {
     "overview": {
       "title": "Expertise",
-      "intro": "Everything a business needs to go digital, from the website and the brand to custom software, AI and security. One project lead, specialists we cherry-pick from our network, and quality control before anything reaches you.",
-      "metaTitle": "Our expertise: AI, software, web, brand and security",
-      "metaDescription": "AI, data, websites, software, brand and cybersecurity from one digital partner, with one project lead and vetted specialists on every project."
+      "intro": "Everything a business needs to put data and AI to work, build its software and look its best online. One project lead, specialists we cherry-pick from our network, and quality control before anything reaches you.",
+      "metaTitle": "Our expertise: data and AI, software, brand",
+      "metaDescription": "Data and AI, custom software and SaaS, brand and online presence from one digital partner, with one project lead and vetted specialists on every project."
     },
     "breadcrumb": "Breadcrumb",
     "categoryServicesTitle": "What we offer",
@@ -342,41 +342,23 @@
     "platformsTitle": "Platforms we set up and support"
   },
   "serviceCategories": {
-    "ai": {
-      "title": "Artificial intelligence",
-      "metaTitle": "AI services for business: strategy to production",
-      "summary": "AI for your business: strategy, agents, assistants, voice agents and training for your team.",
-      "intro": "AI is worth paying for when it takes real work off your team. We start with an honest look at where it pays off, then build agents, assistants and voice agents around your own processes and data. Your team learns to run them, so the value stays when the project ends."
-    },
-    "data-automation": {
-      "title": "Data and automation",
-      "metaTitle": "Data, automation and system integration services",
-      "summary": "Clean data, connected tools and workflows that stop your team retyping the same information.",
-      "intro": "Most AI projects fail on the groundwork, not the AI. We remove manual steps from your processes, connect the tools you already use and turn scattered data into one set of figures you can trust. That is the foundation everything else is built on."
-    },
-    "websites-ecommerce": {
-      "title": "Websites and e-commerce",
-      "metaTitle": "Website design and e-commerce development",
-      "summary": "Business websites, web platforms and online stores, built to load fast and kept secure after launch.",
-      "intro": "Your website is often the first conversation a customer has with you. We build business sites, custom platforms and online stores that load fast, work on every phone and are easy for your team to update. After launch, we keep them secure, backed up and visible in search."
+    "data-ai": {
+      "title": "Data & AI",
+      "metaTitle": "Data and AI for SMEs: automation, agents, MCP",
+      "summary": "Automation, generative AI, document extraction, MCP, prediction and vision: AI applied to your processes, with a person who approves.",
+      "intro": "AI is worth it when it takes real work off your team. We start from your processes and your data, pick the simplest technique that works and plug it into your tools. Your team learns to run it, and a person keeps control of what matters."
     },
     "software-development": {
       "title": "Software development",
-      "metaTitle": "Custom software development for businesses",
-      "summary": "CRM, ERP, business apps and mobile apps built around how your company actually works.",
-      "intro": "Off-the-shelf software rarely fits the way your business runs, and spreadsheets stop scaling long before anyone notices. We build and customise the systems your teams use every day, from sales and finance to staff in the field. Every project has one Qartmina project lead who answers for it, from the first workshop to handover."
+      "metaTitle": "Custom software and SaaS development for businesses",
+      "summary": "Custom software and SaaS platforms built around how your company actually works.",
+      "intro": "Off-the-shelf software rarely fits the way your business runs, and spreadsheets stop scaling long before anyone notices. We build the internal tools your teams use every day and the SaaS products you sell to your clients. Every project has one Qartmina project lead who answers for it, from the first workshop to handover."
     },
     "brand": {
       "title": "Brand and online presence",
       "metaTitle": "Branding, design and social media services",
       "summary": "Logos, design, easy-to-use screens and social media that keep your name in front of clients.",
       "intro": "People judge a company by what they see before they ever speak to it. We design your identity, the material you publish and the screens your customers use, then help you stay visible on social media. Everything follows one brand, so your company looks the same on a sign, a slide and a phone."
-    },
-    "cybersecurity-it": {
-      "title": "Cybersecurity and IT",
-      "metaTitle": "Cybersecurity and IT services for businesses",
-      "summary": "Security checks, audit preparation and day-to-day IT support, explained in plain language.",
-      "intro": "Security problems rarely start with something dramatic. They start with an old account, an open setting or a backup nobody tested. We find those weaknesses, help you fix them and prepare you for the audits your clients ask for, and we can run your everyday IT so it stays in order."
     }
   },
   "servicePages": {
@@ -467,58 +449,92 @@
         ]
       }
     },
-    "ai-consulting": {
-      "title": "AI consulting",
-      "metaTitle": "AI consulting and AI strategy for businesses",
-      "summary": "An audit of how your team works today and a ranked roadmap of the AI projects worth building first, with costs and expected savings.",
-      "intro": "Before spending on AI, you need to know where it pays off. We audit how work is done today, check whether your data is ready and give you a ranked plan: what to build first, what it will save and what it will cost.",
-      "features": [
-        {
-          "title": "Process audit",
-          "text": "We map where the hours go, with your team, in your real tools."
-        },
-        {
-          "title": "Data readiness check",
-          "text": "What data you have, where it lives and what needs cleaning first."
-        },
-        {
-          "title": "Ranked roadmap",
-          "text": "Short, mid and long term steps, each tied to a measurable outcome."
-        },
-        {
-          "title": "Honest answers",
-          "text": "If AI is not the right tool for a problem, we say so."
-        }
-      ],
-      "useCases": [
-        "Choosing the first agent to build",
-        "Reviewing an AI pilot that never reached production",
-        "Planning a legacy system modernisation",
-        "Preparing a board-level AI strategy"
-      ],
-      "faq": {
-        "title": "Questions about AI strategy and consulting",
+    "generative-ai": {
+      "title": "Generative AI",
+      "metaTitle": "Generative AI for SMEs: assistants and AI agents",
+      "summary": "AI assistants and agents connected to your documents and tools: your team finds, writes and analyses faster, and still makes the call.",
+      "intro": "We build AI assistants and agents that work with your documents, your data and your software. Every use starts from a real need in your team, and a person approves anything that commits the business.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of what generative AI does inside a business, with your team in charge.",
         "items": [
           {
-            "question": "What do you need from our side?",
-            "answer": "Time with the people who do the work, not only with management, plus access to the tools and sample documents they use every day. We keep interviews short and work around your team's schedule."
+            "title": "Ask your documents",
+            "text": "Your team asks a question in plain words and gets an answer drawn from your procedures, contracts or product sheets, with the source shown. This is called RAG: the AI searches your documents first, then answers."
           },
           {
-            "question": "What do we have at the end?",
-            "answer": "A written roadmap ranked by value and effort, with the reasoning behind each step and an estimate of cost and savings based on your own figures. Where AI is not the answer, the plan says what would work better, such as cleaning data or simplifying a process first."
+            "title": "A team of AI agents",
+            "text": "One agent reads the file, another checks the documents, a third writes the summary and a fourth analyses the figures. They hand the work to each other, and someone on your team approves it before anything goes out."
           },
           {
-            "question": "Do we have to build the projects with you afterwards?",
-            "answer": "No. The roadmap is yours, and your internal team or another provider can deliver it. If you build with us, one project lead stays your contact from the audit to delivery."
+            "title": "File and contract review",
+            "text": "Contracts, tenders, due diligence files: AI pulls out the key points and flags what needs a careful read. We have built an AI agent for due diligence work, for example."
+          },
+          {
+            "title": "A copilot for your team",
+            "text": "In support, sales or accounting, an assistant inside the tool people already use summarises conversations, drafts replies and suggests the next step."
+          },
+          {
+            "title": "Drafts and summaries",
+            "text": "Meeting notes, tender responses, product sheets: a first draft in your tone, written from your own material, which your team reviews and corrects."
+          },
+          {
+            "title": "AI in your product",
+            "text": "Do you sell software? We add generative AI features to it, such as search in plain language or an agent that handles documents. For a CRM startup, we built an agent like this in one week."
           }
         ]
-      }
-    },
-    "ai-agents": {
-      "title": "AI agent development",
-      "metaTitle": "Custom AI agent development for business",
-      "summary": "Custom AI agents that run multi-step work across your tools and hand the result to a person to approve before anything goes out.",
-      "intro": "An agent is software that can read, check and act across several systems, the way an assistant would, but in minutes and without getting tired. We design the agent around one of your real processes, connect it to your tools and make sure a person approves anything that matters before it leaves.",
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from choosing the first uses to everyday work by your team.",
+        "points": [
+          {
+            "title": "AI assessment",
+            "text": "We start from your tasks and your documents, not from the technology. Together we pick the uses where generative AI brings a real gain, and set aside those where something simpler will do."
+          },
+          {
+            "title": "Process redesign",
+            "text": "We define the role of each assistant or agent, which documents and tools it can reach, and the steps where a person approves before anything happens."
+          },
+          {
+            "title": "From pilot to rollout",
+            "text": "We begin with a pilot on your real documents and measure the quality of the answers. When it holds up, we connect it to your tools and open it to the whole team."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We train your team, track quality and cost, and set the rules: which data is allowed, who can access what, GDPR, the EU AI Act."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about generative AI",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With one specific task where your team spends a lot of time searching, reading or writing. On a free 30-minute first call, we talk it through and tell you honestly whether generative AI is the right answer."
+          },
+          {
+            "question": "Is our data used to train the models?",
+            "answer": "Not with the plans we use. We choose enterprise AI plans that do not train on your data, and we favour hosting in Europe. Each assistant only reaches the documents it needs."
+          },
+          {
+            "question": "Can the AI make things up?",
+            "answer": "Yes, the risk is real. We reduce it by making the assistant work from your documents and cite its sources, by testing it on questions whose answers we already know, and by keeping human approval on anything that leaves the company."
+          },
+          {
+            "question": "Can it work with our tools or our own software?",
+            "answer": "Yes. We connect AI to your CRM, your inbox, your shared documents or your own product. Where it helps, we use MCP, a standard that gives an AI model controlled access to your tools."
+          },
+          {
+            "question": "How long does it take?",
+            "answer": "It depends on the scope. For a well-defined task, a first prototype takes weeks rather than months. Connecting it to your tools and rolling it out to the whole team takes longer."
+          },
+          {
+            "question": "What drives the cost?",
+            "answer": "The number of uses, the volume and state of your documents, the tools to connect and how much checking you need. Model usage comes on top: we estimate it before we start and track it afterwards."
+          }
+        ]
+      },
       "graph": {
         "title": "Agent team",
         "label": "Demo",
@@ -654,902 +670,528 @@
           }
         },
         "failedLabel": "Failed"
-      },
-      "levels": {
-        "title": "What goes into an agent",
-        "intro": "An agent is a few parts put together with care. Each one is something your team can read, test and change.",
+      }
+    },
+    "document-extraction": {
+      "title": "Document extraction",
+      "metaTitle": "AI document extraction for small and mid-sized businesses",
+      "summary": "No more retyping invoices, contracts and forms: AI reads each document, pulls out the data for your tools, and a person checks anything uncertain.",
+      "intro": "We take the reading off your team's desk: OCR (software that turns a scan or a photo into text) and AI models pull out the data you need and send it to your tools. Before we build anything, we measure how reliable it is on your own documents.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of documents AI reads for you, from a printed invoice to a form filled in by hand.",
         "items": [
           {
-            "label": "Instructions",
-            "title": "A written job description",
-            "text": "What the agent is for, the steps it follows and what it must never do, in plain language.",
-            "examples": [
-              {
-                "title": "Steps",
-                "text": "Match each supplier invoice to its purchase order and flag any difference above 2%."
-              },
-              {
-                "title": "Limits",
-                "text": "Never approve a payment. Never email a supplier directly."
-              },
-              {
-                "title": "Language",
-                "text": "Write to suppliers in French unless they wrote in English."
-              }
-            ]
+            "title": "Supplier invoices",
+            "text": "Supplier name, amounts before and after VAT, due date: each invoice is read and entered into your accounting software, ready for approval."
           },
           {
-            "label": "Tools",
-            "title": "Access to your systems, nothing more",
-            "text": "Each tool opens one system, only as far as the job needs.",
-            "examples": [
-              {
-                "title": "Email",
-                "text": "Reads invoices in the accounts inbox. Cannot send or delete."
-              },
-              {
-                "title": "Accounting software",
-                "text": "Looks up purchase orders. Cannot change them or pay."
-              },
-              {
-                "title": "Spreadsheet",
-                "text": "Edits the month-end sheet and nothing else."
-              }
-            ]
+            "title": "Expense receipts",
+            "text": "Staff take a photo of their receipt. Amount, date and category are filled in for them, and unreadable receipts are set aside for a person."
           },
           {
-            "label": "Approvals",
-            "title": "A person signs off",
-            "text": "Anything that leaves the company waits for a person. The agent prepares, you decide.",
-            "examples": [
-              {
-                "title": "Supplier emails",
-                "text": "Drafts wait in a Slack channel until someone approves them."
-              },
-              {
-                "title": "Daily summary",
-                "text": "Every morning, a list of what it did and what it could not finish."
-              },
-              {
-                "title": "Logbook",
-                "text": "Every step is recorded, so you can see why it did what it did."
-              }
-            ]
+            "title": "Contracts and amendments",
+            "text": "For each contract, we record who signed, for how much and until when. Notice deadlines can then trigger a reminder."
           },
           {
-            "label": "Team",
-            "title": "Several agents, one coordinator",
-            "text": "Bigger jobs are split between agents that each do one thing well, with a coordinator that hands out the work and checks the results.",
-            "examples": [
-              {
-                "title": "Reader",
-                "text": "Pulls supplier, amount, date and order number from each invoice."
-              },
-              {
-                "title": "Checker",
-                "text": "Compares every invoice with its order."
-              },
-              {
-                "title": "Writer",
-                "text": "Drafts the emails about invoices that do not match."
-              }
-            ]
+            "title": "Customer files",
+            "text": "Sign-up forms, financing requests, insurance claims: every field is read, and a missing document is spotted before the file moves on."
+          },
+          {
+            "title": "Handwritten forms",
+            "text": "Signed delivery notes, job sheets, forms filled in by pen and photographed on a phone: AI reads them, and a person takes over whatever stays uncertain."
+          },
+          {
+            "title": "Supporting documents",
+            "text": "Tax notices, proof of address, company registration extracts: the details are read and compared with each other. Any mismatch goes to a person to check."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Works across your tools",
-          "text": "Reads email, documents, spreadsheets and your business systems in one run."
-        },
-        {
-          "title": "Asks before anything leaves",
-          "text": "A person approves every message, payment or update that goes outside."
-        },
-        {
-          "title": "Every figure linked to its source",
-          "text": "Each number in the output points back to the file or record it came from."
-        },
-        {
-          "title": "On a schedule or on demand",
-          "text": "Runs every morning, every month end, or when someone asks it to."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Document review for due diligence",
-          "text": "Reads every file in a data room, pulls out the key terms of each contract and lists the risks, with a link to the page where each one appears."
-        },
-        {
-          "title": "Invoices checked against orders",
-          "text": "Reads supplier invoices as they arrive, matches them with purchase orders and delivery notes, and flags the ones that do not add up."
-        },
-        {
-          "title": "Monthly reporting packs",
-          "text": "Collects figures from your accounting, sales and HR files, builds the monthly pack in your format and notes where every number came from."
-        },
-        {
-          "title": "Lead qualification",
-          "text": "Researches each new enquiry, scores it against your criteria, updates your sales records and drafts the first reply for a person to send."
-        }
-      ],
-      "faq": {
-        "title": "Questions about AI agents",
-        "items": [
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from a sample of your documents to automatic data entry every day.",
+        "points": [
           {
-            "question": "What is the difference between an agent and a chatbot?",
-            "answer": "A chatbot answers questions. An agent works through a task step by step: it collects documents, checks figures against your systems and prepares the result, such as a draft entry or a report, for a person to approve."
+            "title": "AI assessment",
+            "text": "With your team, we list the documents you receive, how many there are and how long they take to type in, then pick the ones to tackle first."
           },
           {
-            "question": "What if the agent gets something wrong?",
-            "answer": "It is built so mistakes are caught before they matter. The agent can only take the actions we give it, every figure points to its source, and a person approves anything that leaves the company. Before handover, a reviewer outside the build team tests it on real cases from your own files."
+            "title": "Process redesign",
+            "text": "Together we decide what goes straight into your tools and what a person sees first. Every value read comes with a confidence score: below the threshold we set, someone checks it."
           },
           {
-            "question": "How long until a first agent runs?",
-            "answer": "We aim for a working first version on one process within a month, and production within about three. It depends mostly on how easy your systems are to connect and how clean the data is."
-          }
-        ]
-      }
-    },
-    "chatbots": {
-      "title": "Chatbots and assistants",
-      "metaTitle": "AI chatbots and company assistants for business",
-      "summary": "Assistants that answer customers or staff from your own documents, around the clock, and hand over to a person when they should.",
-      "intro": "Your team answers the same questions every day from the same documents. We build assistants that answer from your own policies, manuals and data, show where each answer comes from and hand over to a person when they should.",
-      "demo": {
-        "label": "Demo",
-        "question": "My laptop won't connect to the VPN since this morning. Can you help?",
-        "toolsRunning": "Looking into it…",
-        "toolsDone": "Used 3 tools",
-        "tools": [
-          {
-            "name": "search_it_guide",
-            "summary": "Searched the IT guide for VPN sign-in errors",
-            "args": {
-              "query": "VPN will not connect"
-            },
-            "result": {
-              "document": "IT guide 2026.pdf",
-              "section": "5.3 VPN sign-in errors",
-              "page": 42
-            }
+            "title": "From pilot to rollout",
+            "text": "The pilot runs on a sample of your real documents, so you know the accuracy before going further. Then we connect the extraction to your ERP, your CRM or your accounting software."
           },
           {
-            "name": "check_account",
-            "summary": "Checked your account",
-            "args": {
-              "employee": "E-1042"
-            },
-            "result": {
-              "vpn_access": "active",
-              "password": "expired yesterday"
-            }
-          },
-          {
-            "name": "create_ticket",
-            "summary": "Opened ticket IT-2318 as a backup",
-            "args": {
-              "topic": "VPN",
-              "priority": "normal"
-            },
-            "result": {
-              "ticket": "IT-2318",
-              "status": "open"
-            }
-          }
-        ],
-        "answer": "Your VPN access is fine, but your password expired yesterday. Reset it with the link in section 5.3 of the IT guide, then reconnect. I opened ticket IT-2318 in case it still fails.",
-        "source": "IT guide 2026, page 42"
-      },
-      "levels": {
-        "title": "From chatbot to agent to specialist",
-        "intro": "A chatbot answers questions. Connect it to your tools and it becomes an agent that gets things done. Give it skills and it does specific jobs the way your team does them.",
-        "items": [
-          {
-            "label": "Chatbot",
-            "title": "Answers from your documents",
-            "text": "It reads your documents and answers in plain words, with the source of every answer.",
-            "examples": [
-              {
-                "title": "HR handbook",
-                "text": "\"How many leave days can I carry over to next year?\""
-              },
-              {
-                "title": "Contracts",
-                "text": "\"What notice period does our supplier contract give us?\""
-              },
-              {
-                "title": "Manuals",
-                "text": "\"What does error E42 on the packing machine mean?\""
-              }
-            ]
-          },
-          {
-            "label": "Agent",
-            "title": "Connected to your tools",
-            "text": "Linked to the software you already use, it looks things up and takes action, only within the limits you set.",
-            "examples": [
-              {
-                "title": "Online shop",
-                "text": "Finds a customer's order and tells them when it will arrive."
-              },
-              {
-                "title": "Calendar",
-                "text": "Books a meeting in a free slot and sends the invitation."
-              },
-              {
-                "title": "Helpdesk",
-                "text": "Opens a ticket with the conversation attached."
-              },
-              {
-                "title": "Customer database",
-                "text": "Adds a new enquiry with the contact details and what they asked for."
-              }
-            ]
-          },
-          {
-            "label": "Specialist",
-            "title": "Trained with skills",
-            "text": "A skill is a set of written instructions, sometimes with templates or small programs, that teaches the assistant one job, done the same way every time.",
-            "examples": [
-              {
-                "title": "Coding",
-                "text": "Writes and runs a small program that compares two invoice spreadsheets and lists the ones that do not match."
-              },
-              {
-                "title": "Your house style",
-                "text": "Replies to customers the way your team does: formal in French, short on WhatsApp, never promising a delivery date."
-              },
-              {
-                "title": "Reading contracts",
-                "text": "Goes through a supplier contract and pulls the payment terms, notice period, penalties and renewal date into a one-page summary."
-              },
-              {
-                "title": "Weekly report",
-                "text": "Turns the sales export into the Monday report, with the same headings and charts every week."
-              }
-            ]
+            "title": "Training and governance",
+            "text": "We train the people who review uncertain cases, track accuracy over time and adjust when your documents change layout. GDPR and the EU AI Act are covered from the start."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Answers from your documents",
-          "text": "The assistant only answers from sources you approve."
-        },
-        {
-          "title": "Shows its sources",
-          "text": "Every answer links to the document it came from."
-        },
-        {
-          "title": "Hands over to a person",
-          "text": "Sensitive or unclear requests go to your team."
-        },
-        {
-          "title": "Available around the clock",
-          "text": "On your website, in your intranet or in your messaging tools."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Answers from long documents",
-          "text": "Ask a 300-page tender, a contract or a technical manual a question in plain words. The answer comes back in seconds with the page it came from, so you can check it."
-        },
-        {
-          "title": "IT support for your staff",
-          "text": "Walks people through password resets, VPN and printer problems, checks their account and opens a ticket when a technician is needed."
-        },
-        {
-          "title": "A chatbot on your website",
-          "text": "Answers visitors about products, prices, delivery and opening hours at any hour, and passes serious enquiries to your sales team with the conversation attached."
-        },
-        {
-          "title": "An internal assistant for your company",
-          "text": "One place where staff ask about leave, expenses, HR policies and how things are done, answered from your handbook and intranet."
-        }
-      ],
       "faq": {
-        "title": "Questions about chatbots and company assistants",
+        "title": "Questions about document extraction",
         "items": [
           {
-            "question": "What happens when the assistant does not know the answer?",
-            "answer": "It says so instead of guessing, and passes the question to the right person with the conversation attached. Those unanswered questions also show you which documents are missing or out of date."
+            "question": "Where should we start?",
+            "answer": "With the document your team retypes the most. On a first 30-minute call, we look at your volumes with you and tell you honestly whether automatic extraction is worth it."
           },
           {
-            "question": "How do the answers stay current when our documents change?",
-            "answer": "The assistant reads from the folders and systems where your documents already live. When a policy or price list is updated there, the next answer uses the new version, and retired documents can be removed from its sources."
+            "question": "How do we know how reliable it will be?",
+            "answer": "Before building anything, we run a sample of your real documents through the extraction and compare each value with the right answer. You see what to expect, one document type at a time, before deciding what comes next."
           },
           {
-            "question": "Can it answer in Arabic, French and English?",
-            "answer": "Current AI models handle all three, and customers can usually write in the language they prefer. We test with real questions from your customers and staff, including local dialect and mixed languages, before it goes live."
+            "question": "Can AI read handwriting?",
+            "answer": "Often, yes. OCR alone struggles with handwriting, while recent AI models do much better, especially on a clear photo. Results vary from one document to the next, which is why we test on yours and a person reviews every uncertain reading."
+          },
+          {
+            "question": "What drives the cost and the timeline?",
+            "answer": "The number of document types, how hard they are to read, your volumes and the tools to connect. A printed invoice costs less to process than a handwritten form. A first version can come quickly: for a start-up that makes a CRM, we built a working document agent from scratch in one week."
+          },
+          {
+            "question": "Does it work with the tools we already use?",
+            "answer": "Yes. We send the data where your team already works: accounting software, ERP, CRM or a shared spreadsheet. You keep the software you have."
+          },
+          {
+            "question": "Where do our documents go?",
+            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. For sensitive documents such as contracts or ID, we choose the model and the hosting accordingly, and agree with you how long files are kept."
+          }
+        ]
+      }
+    },
+    "mcp": {
+      "title": "Model Context Protocol (MCP)",
+      "metaTitle": "Model Context Protocol (MCP) for SMEs",
+      "summary": "Connect your CRM, ERP and documents to AI with controlled access, so it answers from your real data instead of guessing.",
+      "intro": "MCP is an open standard that works like a common plug between an AI assistant and your software: CRM, ERP, databases, documents. We build these connections so AI works from your real data, with only the rights you choose to give it.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of what AI can do once it is connected to your tools, within the limits you set.",
+        "items": [
+          {
+            "title": "A customer's history",
+            "text": "A salesperson asks where things stand with a customer. The assistant checks the CRM and sums up the latest emails, quotes and orders in a few lines."
+          },
+          {
+            "title": "Stock and lead times",
+            "text": "The assistant reads your ERP to answer questions about stock levels, delivery times or an order's status. It looks, it does not change anything."
+          },
+          {
+            "title": "Searching your documents",
+            "text": "Contracts, procedures, product sheets: AI finds the right passage and shows where it came from. Here MCP works together with RAG, a method that fetches the relevant extracts before the answer is written."
+          },
+          {
+            "title": "Controlled updates",
+            "text": "Creating a task, filling in a record, drafting an email: AI writes into your tools only where you allow it, and asks for your approval on sensitive actions."
+          },
+          {
+            "title": "Your in-house tools",
+            "text": "Your internal software or in-house API becomes available to AI through a dedicated MCP server, with no need to rewrite it."
+          },
+          {
+            "title": "Figures on request",
+            "text": "The managing director asks for this month's revenue by branch. The assistant queries the database in read-only mode and replies with the figures and where they come from."
           }
         ]
       },
-      "assistant": {
-        "name": "Your assistant",
-        "tagline": "Answers from your documents and tools.",
-        "prompt": "What can I help with?",
-        "chips": [
-          "Summarise this contract",
-          "Reset my password",
-          "Where is my order?",
-          "My leave balance"
-        ],
-        "placeholder": "Ask anything..."
-      }
-    },
-    "voice-agents": {
-      "title": "AI voice agents",
-      "metaTitle": "AI voice agents for business phone calls",
-      "summary": "AI phone agents that answer calls, book appointments, qualify leads and pass the caller to a person when the call needs judgement.",
-      "intro": "Every missed call is a booking or a customer that may go elsewhere. An AI voice agent picks up the phone, holds a natural conversation and does something useful with it: it books the appointment, takes the details or transfers the call to the right person. We start with one type of call, such as after-hours calls, and widen it only once it has proved itself.",
-      "features": [
-        {
-          "title": "Books straight into your calendar",
-          "text": "The agent checks free slots, books or reschedules, and texts the caller a confirmation."
-        },
-        {
-          "title": "Asks your qualifying questions",
-          "text": "It asks what your sales team always asks and writes the answers into your customer records."
-        },
-        {
-          "title": "Transfers with a short summary",
-          "text": "Upset callers, urgent cases and anything that needs judgement go to a person, with the context."
-        },
-        {
-          "title": "Open about being AI",
-          "text": "The first sentence tells callers they are speaking to an AI assistant and whether the call is recorded."
-        }
-      ],
-      "useCases": [
-        "After-hours calls for plumbers and electricians, with emergencies sent to whoever is on call",
-        "Bookings, cancellations and earlier-slot requests for dental and physio clinics",
-        "Viewing requests and repair reports for property managers",
-        "A hotel reservations line in Arabic, French and English"
-      ],
-      "faq": {
-        "title": "Questions about AI voice agents",
-        "items": [
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from choosing which tools to connect to everyday use by your team.",
+        "points": [
           {
-            "question": "Can we keep our existing phone number?",
-            "answer": "Yes. The simplest start is to forward calls to the agent only after hours or when nobody answers, so your main line stays as it is. Once the pilot has proved itself, the number can be moved to a provider that connects it to the agent directly."
+            "title": "AI assessment",
+            "text": "We list with you the questions and tasks AI should handle, the tools it needs to read, and the data that must stay out of its reach."
           },
           {
-            "question": "Do callers have to be told they are speaking to an AI?",
-            "answer": "In the EU, yes, unless it is already obvious, and today's voices sound human enough that it often is not. We put the disclosure, and the recording notice where calls are recorded, in the first sentence of every call. Rules on recording differ by country, so we check yours before going live."
+            "title": "Process redesign",
+            "text": "We write down the business context AI needs: your terms, your rules, who is allowed to see what. For each tool we set read-only, write, or human approval before anything happens."
           },
           {
-            "question": "Will it understand our callers' accents and dialects?",
-            "answer": "Speech recognition is only as good as what it was trained on, so we do not assume. Before launch we test with recordings of your real callers, including dialect mixed with French or English, and keep a person on the transfer line for anything it does not understand."
+            "title": "From pilot to rollout",
+            "text": "We connect one or two sources first and check the answers on real cases. Each new tool is then added as a separate module, without rebuilding the rest."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We train your team, log every time AI touches your data, and track usage, cost and quality: GDPR, the EU AI Act, access rights reviewed regularly."
           }
         ]
-      }
-    },
-    "ai-training": {
-      "title": "Team training",
-      "metaTitle": "AI training for teams and managers",
-      "summary": "The AI for Business programme with ESGITECH: practical sessions that take your team from the basics to a first workflow on real tasks.",
-      "intro": "Tools only change a company when people know how to use them. Together with ESGITECH we run the AI for Business programme: practical sessions that take your team from the basics to a first workflow running on their own tasks.",
-      "features": [
-        {
-          "title": "Built for non-technical teams",
-          "text": "Plain language, real examples, no coding required."
-        },
-        {
-          "title": "Your tasks, not toy examples",
-          "text": "Participants work on processes from their own job."
-        },
-        {
-          "title": "A working result",
-          "text": "Every participant leaves with a first workflow that runs."
-        },
-        {
-          "title": "Safe use",
-          "text": "What you can share with AI tools, what you cannot, and why."
-        }
-      ],
-      "useCases": [
-        "Introduction to AI for management teams",
-        "Hands-on workshops for finance and operations",
-        "Prompting and assistant use for office teams",
-        "Train-the-trainer for internal AI champions"
-      ],
-      "faq": {
-        "title": "Questions about AI training for your team",
-        "items": [
-          {
-            "question": "Do participants need a technical background?",
-            "answer": "No. The programme is written for people who have never built anything with AI. If someone can write an email and use a spreadsheet, they can follow it."
-          },
-          {
-            "question": "Which AI tools do participants learn?",
-            "answer": "We train on the tools your company already has or plans to approve, so what people learn works on Monday morning. If nothing is chosen yet, the sessions also help you compare the main options for your needs."
-          },
-          {
-            "question": "How do you adapt the programme to our company?",
-            "answer": "Before the sessions, we collect a few real tasks from each team, such as a recurring report or a standard reply. Participants then build their first workflow on those tasks, and the length and format are agreed with you."
-          }
-        ]
-      }
-    },
-    "process-automation": {
-      "title": "Process automation",
-      "metaTitle": "Business process automation with n8n and Make",
-      "summary": "Workflows that remove copy-paste, retyping and manual hand-offs between email, spreadsheets and the systems your team already uses.",
-      "intro": "Many processes still depend on someone copying data from one screen to another. We map the process as it is, remove the manual steps and connect the systems directly, with AI only where it adds something rules cannot.",
-      "features": [
-        {
-          "title": "Mapped before it is built",
-          "text": "We document the process as it really runs, including the exceptions."
-        },
-        {
-          "title": "No more retyping",
-          "text": "Data moves between email, spreadsheets and systems without manual entry."
-        },
-        {
-          "title": "Exceptions go to a person",
-          "text": "Anything unusual is flagged and routed to the right colleague."
-        },
-        {
-          "title": "Visible and measured",
-          "text": "Every run is logged, so you can see what happened and how long it took."
-        }
-      ],
-      "useCases": [
-        "Order entry from email into your finance and stock system",
-        "Supplier onboarding and document checks",
-        "Weekly sales and stock reports",
-        "Approval workflows that today live in email threads"
-      ],
-      "faq": {
-        "title": "Questions about process automation",
-        "items": [
-          {
-            "question": "Which tools do you build automations with?",
-            "answer": "Often with workflow tools such as n8n or Make, and with custom code when the logic, the volume or a security review calls for it. We choose the tool that fits the people who will look after it, not the one that makes the best demo."
-          },
-          {
-            "question": "Can our data stay in Europe or on our own servers?",
-            "answer": "Usually, yes. n8n can run on your own servers or in its hosted service in Frankfurt, and Make offers EU data zones, with some exceptions for its AI features. We check where each step of the workflow sends data before anything goes live."
-          },
-          {
-            "question": "What happens when an automation breaks?",
-            "answer": "Every run is logged, and a failed or unusual run alerts a named person instead of failing quietly. We hand over documentation so your team can see how each workflow works, and agree with you who fixes what after launch."
-          }
-        ]
-      }
-    },
-    "api-integration": {
-      "title": "Connect your existing tools",
-      "metaTitle": "API and MCP integration for your business tools",
-      "summary": "Your existing tools connected to each other and to AI, through secure connectors that only reach the data and actions you approve.",
-      "intro": "AI is only useful when it can see your data and act in your systems, and your systems are more useful when they share information. We build secure connectors between the software you already run and between that software and AI tools, so information flows where it is needed and access stays limited to what you approve.",
-      "features": [
-        {
-          "title": "Your systems, not new ones",
-          "text": "We connect what you already use: Excel, email, databases, your sales system and your finance and stock software."
-        },
-        {
-          "title": "Least access by default",
-          "text": "Each connector can only read or change what you explicitly allow."
-        },
-        {
-          "title": "Standard connectors",
-          "text": "We use open standards such as MCP, a common way for AI tools to plug into systems, so you are not locked in."
-        },
-        {
-          "title": "Logged end to end",
-          "text": "Every request through a connector is recorded for audit."
-        }
-      ],
-      "useCases": [
-        "Letting your company assistant read your sales and finance systems",
-        "Syncing spreadsheets with a central database",
-        "Connecting email inboxes to ticketing or order systems",
-        "Giving AI tools safe, read-only access to an old in-house system"
-      ],
-      "faq": {
-        "title": "Questions about connecting your tools",
-        "items": [
-          {
-            "question": "What are APIs and MCP, in plain words?",
-            "answer": "An API is a documented door that lets one piece of software talk to another, and most modern business systems have one. MCP is an open standard that works like a universal plug for AI: we build one connector per system, and any compatible AI tool can use it with only the permissions you grant."
-          },
-          {
-            "question": "Can you connect an old system that has no API?",
-            "answer": "Usually, yes. We can read from a limited, read-only view of its database, or work from the files it already exports each night. Automating the screens is possible but fragile, so we only use it as a last resort."
-          },
-          {
-            "question": "Will AI be able to change data in our systems?",
-            "answer": "Only what you decide, and usually only drafts that a person then confirms. Payments, bank details and master data stay out of reach. Every connector is tested on a copy of your system with test data before it touches the live one, starting with read-only access."
-          }
-        ]
-      }
-    },
-    "data-platforms": {
-      "title": "Data platforms and dashboards",
-      "metaTitle": "Data warehouse, data cleaning and dashboards",
-      "summary": "Your data cleaned, brought into one place and turned into dashboards your managers can trust, so every meeting starts from the same figures.",
-      "intro": "When sales, finance and operations each keep their own spreadsheet, every meeting starts with an argument about whose figure is right. We clean and structure your data, bring it into one central store and build the reports people actually use. It is also the step that comes before AI: an assistant or agent is only as reliable as the data it reads.",
-      "features": [
-        {
-          "title": "Cleaned and checked at entry",
-          "text": "Duplicates, missing values and inconsistent formats are fixed by rules that run on every load, not by hand."
-        },
-        {
-          "title": "One central data store",
-          "text": "A data warehouse, one database where figures from all your systems are kept in the same format."
-        },
-        {
-          "title": "Dashboards built around decisions",
-          "text": "Each report answers a question a manager actually asks, at the level of detail they need."
-        },
-        {
-          "title": "Every figure traceable",
-          "text": "Any number on a dashboard can be followed back to the system and record it came from."
-        }
-      ],
-      "useCases": [
-        "A monthly management report that builds itself from sales, finance and stock data",
-        "One customer list merged from several branches, without duplicates",
-        "Replacing a chain of linked spreadsheets that only one person understands",
-        "Preparing clean, structured data before launching an AI assistant"
-      ],
-      "faq": {
-        "title": "Questions about data platforms and dashboards",
-        "items": [
-          {
-            "question": "Our data is messy. Where do we start?",
-            "answer": "With the few figures your managers argue about most, such as revenue, margin or stock. We trace where each one comes from, fix the sources and rules behind it, and widen from there instead of trying to clean everything at once."
-          },
-          {
-            "question": "Which dashboard tools do you use?",
-            "answer": "It depends on what your team already has and pays for. If you work in Microsoft 365, Power BI is often the natural choice, and there are open-source options when licence costs matter. The central data store stays independent of the dashboard tool, so you can change one without rebuilding the other."
-          },
-          {
-            "question": "Who owns the platform, and who keeps it running?",
-            "answer": "You own the data and the platform, built in your company's own accounts. A Qartmina project lead runs the build, the engineering is done by data specialists we select for the job, and everything is checked by us before handover. We document it so your team can run it, and agree any ongoing support with you."
-          }
-        ]
-      }
-    },
-    "business-websites": {
-      "title": "Business websites",
-      "metaTitle": "Business website design and development",
-      "summary": "Showcase sites, landing pages and multilingual websites that load fast, read well on phones and are easy for your team to update.",
-      "intro": "A business website has one job: make it easy for the right customer to trust you and get in touch. We plan the structure with you, design it around your brand and build it so pages open quickly on any phone. Your team can then change text, photos and offers without calling a developer.",
-      "features": [
-        {
-          "title": "Multilingual from day one",
-          "text": "Arabic, French and English versions, with right-to-left layouts where Arabic needs them."
-        },
-        {
-          "title": "Edit it yourself",
-          "text": "A simple editor lets your team update pages, news and photos in minutes."
-        },
-        {
-          "title": "Fast on mobile data",
-          "text": "Light pages and compressed images, so the site opens quickly on a phone connection."
-        },
-        {
-          "title": "Built to be found",
-          "text": "Clear page structure, titles and descriptions so search engines understand every page."
-        }
-      ],
-      "useCases": [
-        "A company website that replaces an outdated template site",
-        "A landing page for a product launch or advertising campaign",
-        "A trilingual site for a business selling across North Africa and the Gulf",
-        "A careers page that collects job applications in one place"
-      ],
-      "faq": {
-        "title": "Questions about business websites",
-        "items": [
-          {
-            "question": "How long does a business website take?",
-            "answer": "A focused showcase site or landing page usually takes a few weeks. The biggest factor is how quickly text, photos and approvals come together. We agree a timeline at the start and tell you early if anything changes it."
-          },
-          {
-            "question": "What do you need from us?",
-            "answer": "Your logo and brand colours, a clear idea of who the site is for, and one person who can approve content. If you do not have text or photos yet, we can write the copy with you and plan the images."
-          },
-          {
-            "question": "Who owns the website and the domain?",
-            "answer": "You do. The domain is registered in your company's name, and you receive the admin access and source files at handover. If you later choose another provider, you can take everything with you."
-          }
-        ]
-      }
-    },
-    "web-platforms": {
-      "title": "Web platforms and portals",
-      "metaTitle": "Custom web platform and portal development",
-      "summary": "Client portals, booking platforms, marketplaces and member areas with logins, payments and links to the systems you already use.",
-      "intro": "Some websites need to do more than inform. Clients log in to track an order, members book a session, sellers list products, staff approve requests. We design and build these platforms around your process, connect them to the tools you already run and make sure each user only sees the data meant for them.",
-      "features": [
-        {
-          "title": "Accounts and permissions",
-          "text": "Clients, partners and staff each see only what their role allows."
-        },
-        {
-          "title": "Bookings, payments and reminders",
-          "text": "Calendars, online payment and email or text reminders handled inside the platform."
-        },
-        {
-          "title": "Connected to your systems",
-          "text": "Orders, invoices and customer records flow to your accounting and customer software."
-        },
-        {
-          "title": "Tested before every release",
-          "text": "Each change is checked on a separate test version before real users see it."
-        }
-      ],
-      "useCases": [
-        "A client portal where customers download invoices and follow their files",
-        "A booking platform for clinics, training centres or service teams",
-        "A marketplace connecting independent sellers with buyers",
-        "A members' area with paid content and automatic renewals"
-      ],
-      "faq": {
-        "title": "Questions about custom web platforms",
-        "items": [
-          {
-            "question": "Why not use an off-the-shelf tool?",
-            "answer": "Often you should, and we will tell you when a ready-made product fits. A custom platform makes sense when your process is what sets you apart, or when you have outgrown tools that cannot talk to each other. We compare both options before you commit."
-          },
-          {
-            "question": "How do you keep user data secure?",
-            "answer": "Logins, permissions and encryption are designed in from the first week, not added at the end. Personal data is stored only where it is needed and access is logged. Before launch, a security specialist from our vetted network reviews the platform."
-          },
-          {
-            "question": "Can we start small and grow?",
-            "answer": "Yes, and we recommend it. We launch a first version with the features that matter most, learn from real users, then add the rest in planned stages."
-          }
-        ]
-      }
-    },
-    "ecommerce": {
-      "title": "Custom e-commerce",
-      "metaTitle": "Custom e-commerce website development",
-      "summary": "Online stores built around your catalogue, payments and delivery, with stock kept in sync and payment methods your customers already use.",
-      "intro": "Store builders work until your catalogue, pricing or delivery rules stop fitting their templates. We build custom online stores for businesses that sell to other businesses, sell across borders, or need the store tied into their own stock and accounting. The store follows your rules, not the other way round.",
-      "features": [
-        {
-          "title": "Payments your customers trust",
-          "text": "Cards, mobile wallets, bank transfer or cash on delivery, depending on the market."
-        },
-        {
-          "title": "Stock that stays accurate",
-          "text": "Every order updates stock levels in your warehouse or accounting system."
-        },
-        {
-          "title": "Delivery rules that match reality",
-          "text": "Shipping zones, couriers, pickup points and fees set per city or country."
-        },
-        {
-          "title": "Catalogues of any shape",
-          "text": "Variants, bundles, trade pricing and large product ranges without workarounds."
-        }
-      ],
-      "useCases": [
-        "A wholesaler offering trade prices and bulk orders to registered buyers",
-        "A brand selling in several countries with local currencies and languages",
-        "A retailer linking its online store to the stock system in its shops",
-        "A store adding cash on delivery and mobile payments for local customers"
-      ],
-      "faq": {
-        "title": "Questions about custom online stores",
-        "items": [
-          {
-            "question": "Should we build a custom store or use Shopify?",
-            "answer": "If your products, pricing and delivery are standard, Shopify is usually faster to launch and simpler to run, and we set that up too. Custom makes sense for trade pricing, complex catalogues, specific local payment needs or deep links to your own systems. We help you decide before any code is written."
-          },
-          {
-            "question": "Which payment methods can you connect?",
-            "answer": "It depends on the countries you sell in and the payment providers available there. We look at what your customers actually use, from cards to mobile wallets and cash on delivery, and connect providers that cover them. Your company holds the merchant account, so the money goes straight to you."
-          },
-          {
-            "question": "What happens after the store goes live?",
-            "answer": "We stay on for a stabilisation period to fix anything real orders reveal. After that, your team can take over with the training and documentation we hand over, or keep us on a monthly care plan for updates, security and new features."
-          }
-        ]
-      }
-    },
-    "shopify": {
-      "title": "Shopify stores",
-      "metaTitle": "Shopify store setup and migration",
-      "summary": "Shopify stores set up properly from the start, or moved from another platform with products, customers and orders intact.",
-      "intro": "Shopify is a sound choice for many shops: reliable, secure and simple to run. Getting it right still takes work, from the theme and product data to payments, shipping and the few apps you really need. We set up new stores, move existing ones from platforms such as WooCommerce, Wix or Magento, and train your team to run the shop day to day.",
-      "features": [
-        {
-          "title": "Theme adapted to your brand",
-          "text": "A proven theme, customised so the store looks like yours and not a template."
-        },
-        {
-          "title": "Clean product data",
-          "text": "Products, variants, photos and descriptions imported and checked before launch."
-        },
-        {
-          "title": "Only the apps you need",
-          "text": "Each app is chosen for a reason, so monthly fees and slow pages stay in check."
-        },
-        {
-          "title": "Migration without broken links",
-          "text": "Old addresses redirect to the new pages, so search rankings and saved links keep working."
-        }
-      ],
-      "useCases": [
-        "A new brand opening its first online shop",
-        "Moving from WooCommerce to Shopify to stop maintaining plugins",
-        "Bringing several small shops into one store that serves multiple countries",
-        "Training staff to add products, run promotions and handle returns"
-      ],
-      "faq": {
-        "title": "Questions about Shopify setup and migration",
-        "items": [
-          {
-            "question": "Will we lose customers or orders when we migrate?",
-            "answer": "Not if the move is planned properly. Products, customers and past orders are copied across and counted against the old store before the switch. We go live at a quiet moment and keep the old store available until everything is confirmed."
-          },
-          {
-            "question": "Does Shopify work in our country?",
-            "answer": "Shopify works in most countries, but payment options differ from market to market. We check which payment providers work for you and your customers before you commit, and tell you plainly if another platform suits you better."
-          },
-          {
-            "question": "Can our team run the store without you?",
-            "answer": "That is the goal. We run hands-on training on your own store and leave a short written guide for everyday tasks. If you want help later, a monthly care plan is available."
-          }
-        ]
-      }
-    },
-    "website-care": {
-      "title": "Website care and SEO",
-      "metaTitle": "Website maintenance and SEO services",
-      "summary": "Monthly care for your website: hosting, updates, backups, security fixes, speed and the technical work that helps people find you in search.",
-      "intro": "A website is not finished at launch. Software needs updates, security holes get discovered, pages slow down and search engines change what they reward. Our monthly care plan handles all of it, including SEO (the technical work that helps search engines find and rank your pages), and you get a plain report of what was done.",
-      "features": [
-        {
-          "title": "Updates and security fixes",
-          "text": "Software, plugins and themes kept current, with security fixes applied promptly."
-        },
-        {
-          "title": "Backups you can restore",
-          "text": "Regular backups stored separately and tested by actually restoring them."
-        },
-        {
-          "title": "Speed kept in check",
-          "text": "Load times tracked, with heavy images and slow scripts fixed as they appear."
-        },
-        {
-          "title": "Technical search fixes",
-          "text": "Broken links, missing titles, sitemaps and indexing problems found and corrected."
-        }
-      ],
-      "useCases": [
-        "A company website nobody has updated since it launched",
-        "An online store that slowed down after years of added plugins",
-        "A site that dropped out of search results after a redesign",
-        "Taking over hosting and upkeep from a previous agency"
-      ],
-      "faq": {
-        "title": "Questions about website maintenance and SEO",
-        "items": [
-          {
-            "question": "What is included each month?",
-            "answer": "Hosting or hosting oversight, updates, backups, uptime monitoring, security fixes and a technical search check. You receive a short monthly report in plain language. Content changes and new features can be added as a set number of hours."
-          },
-          {
-            "question": "Can you guarantee first place on Google?",
-            "answer": "Nobody honestly can. We fix the technical issues that stop search engines from reading your site and track how your visibility changes over time. Rankings also depend on your content and your competitors, and we tell you what would help most."
-          },
-          {
-            "question": "Can you look after a site another agency built?",
-            "answer": "Yes. We start with an audit of the code, hosting and access, so we know exactly what we are taking on. Every update is then checked by a second person on our side before it reaches your live site."
-          }
-        ]
-      }
-    },
-    "crm-development": {
-      "title": "CRM development",
-      "metaTitle": "CRM development and customisation",
-      "summary": "Custom CRMs, or CRMs like HubSpot, Salesforce and Odoo set up for your team, so sales has one clear view of every customer and deal.",
-      "intro": "A CRM keeps every customer, contact and deal in one place. We set up CRMs like HubSpot, Salesforce or Odoo, or build your own when your sales process does not fit them.",
-      "clients": {
-        "title": "Teams we built CRMs for",
-        "logos": [
-          "docutrad"
-        ],
-        "caseStudy": {
-          "label": "Read the case study: from a fragile VPS to a production-ready cloud",
-          "href": "/portfolio/crm-startup-cloud-migration"
-        }
       },
-      "system": {
-        "title": "Architecture",
-        "label": "Example",
-        "hint": "Click any part to see what it can be built with.",
-        "close": "Close",
-        "failedLabel": "Failed",
-        "stackLabel": "Built with, for example",
-        "legend": {
-          "call": "Request",
-          "answer": "Response",
-          "needs": "Background",
-          "failed": "Retry"
-        },
-        "nodes": {
-          "cloud": {
-            "name": "Your cloud",
-            "role": "Hosting",
-            "badge": "Infrastructure",
-            "text": "Everything inside runs in your own cloud account or data centre, in the country you choose, with backups and monitoring."
+      "faq": {
+        "title": "Questions about the Model Context Protocol",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With a question your team asks often, whose answer sits in one or two tools. On a first 30-minute call, we look with you at which sources to connect first and which can wait."
           },
-          "client": {
-            "name": "Client",
-            "role": "Web and mobile app",
-            "badge": "Frontend",
-            "text": "The screens your team uses in a browser or on a phone, built in a framework your developers know."
+          {
+            "question": "Will it work with the tools we already use?",
+            "answer": "With most of them, as long as they have an API or a database we can reach. Some vendors already offer an MCP server; if not, we build one. Because MCP is an open standard, your connections keep working if you switch AI models."
           },
-          "api": {
-            "name": "Server",
-            "role": "Business rules",
-            "badge": "Backend",
-            "text": "Checks every request, applies your rules (who can change a deal, which discounts need approval) and talks to every other part."
+          {
+            "question": "Can AI change our data?",
+            "answer": "Only if you decide it can. By default we give read-only access. Write access is opened tool by tool, on a clearly defined scope, with human approval for sensitive actions."
           },
-          "auth": {
-            "name": "Auth",
-            "role": "Sign-in and roles",
-            "badge": "Security",
-            "text": "Company accounts, two-step sign-in and roles that decide who sees which customers and figures."
+          {
+            "question": "Where does our data go?",
+            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. AI only sees what the MCP server passes to it, and every access is logged."
           },
-          "jobs": {
-            "name": "Queue",
-            "role": "Background jobs",
-            "badge": "Automation",
-            "text": "Work that runs on its own: syncing email and invoices, sending reminders, trying again when another system does not answer."
+          {
+            "question": "Will AI make fewer mistakes?",
+            "answer": "Yes, fewer. It answers from your data instead of guessing. The risk does not go away, though: we test on real cases, ask AI to show its sources, and keep a human check wherever a mistake would be costly."
           },
-          "sql": {
-            "name": "Database",
-            "role": "Customers and deals",
-            "badge": "Data",
-            "text": "The main record of customers, contacts, deals and their history, with every change recorded."
-          },
-          "agent": {
-            "name": "AI agent",
-            "role": "Does the repeat work",
-            "badge": "AI",
-            "text": "Prepares reviews, drafts follow-ups and answers questions, using only the data and actions it is given, and asks before it sends anything."
-          },
-          "rag": {
-            "name": "RAG",
-            "role": "Finds the right facts",
-            "badge": "AI",
-            "text": "Retrieval: before the AI answers, it looks up the relevant documents and records, so answers come from your data and show their source."
-          },
-          "vector": {
-            "name": "Vector DB",
-            "role": "Search by meaning",
-            "badge": "Data",
-            "text": "Stores documents in a form that can be searched by meaning, so \"late delivery complaint\" also finds \"order arrived a week after the date\"."
-          },
-          "graph": {
-            "name": "Graph DB",
-            "role": "Who is linked to whom",
-            "badge": "Data",
-            "text": "Stores relationships: which contact works where, who referred whom, which deals share a supplier. Useful when the links matter as much as the records."
-          },
-          "llm": {
-            "name": "LLM",
-            "role": "The language model",
-            "badge": "AI",
-            "text": "The model that reads and writes text. Chosen for quality, cost and where your data may go, and replaceable without rebuilding the rest."
-          },
-          "integrations": {
-            "name": "Integrations",
-            "role": "Your other tools",
-            "badge": "Integration",
-            "text": "Email, invoicing, messaging and payments connected, so nobody types the same thing twice."
+          {
+            "question": "What drives the cost and the timeline?",
+            "answer": "Mostly the number of tools to connect and how easy they are to reach. A tool with a documented API connects quickly; older software without one takes more work. We follow the protocol closely, so we can tell you early what will be simple and what will not."
           }
-        }
+        ]
+      }
+    },
+    "predictive-systems": {
+      "title": "Predictive systems",
+      "metaTitle": "Predictive systems and custom forecasting for SMEs",
+      "summary": "Forecast sales, stock or cash flow from your own history, with predictions that come with their reasons and land in the tools you already use.",
+      "intro": "We build models that learn from your history to anticipate demand, customers about to leave, stock needs or tight cash weeks. Every forecast reaches your tools with the reasons behind it, and we tell you plainly when your data is not enough yet.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of decisions your data can inform ahead of time.",
+        "items": [
+          {
+            "title": "Sales forecasts",
+            "text": "Sales for the coming weeks are estimated by product or by branch, taking seasons and promotions into account. Purchasing and staff rotas start from a number."
+          },
+          {
+            "title": "Right stock levels",
+            "text": "The model sees stock-outs and overstock coming. It suggests order quantities. Your buyer decides."
+          },
+          {
+            "title": "Customers drifting away",
+            "text": "Customers whose activity is slowing down are spotted early, along with the signals that triggered the alert. Your sales team knows who to call first."
+          },
+          {
+            "title": "Cash flow outlook",
+            "text": "Likely incoming payments, the usual late payers, recurring costs: you see the tight weeks before they arrive."
+          },
+          {
+            "title": "Predictive maintenance",
+            "text": "Using breakdown history and readings from your machines or vehicles, the model flags which equipment to inspect before it fails."
+          },
+          {
+            "title": "Customer risk and bad debt",
+            "text": "Each new customer or large order gets a risk score with its reasons. You decide on a deposit or payment terms knowing what is behind it."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the first question put to your data to forecasts your team uses every week.",
+        "points": [
+          {
+            "title": "AI assessment",
+            "text": "We pick with you the decision a forecast should support, then look at your data: history, volume, quality. Not enough? We say so, and tell you what to start collecting."
+          },
+          {
+            "title": "Process redesign",
+            "text": "We prepare and clean your data, then decide who receives each forecast, when, and what they do with it."
+          },
+          {
+            "title": "From pilot to rollout",
+            "text": "The model is first tested on past periods and compared with the way you forecast today. If it does better, its forecasts go into your dashboards and arrive as alerts in your tools."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We show your team how to read a forecast and its margin of error, and we watch the model as your business changes. When its forecasts start to drift from reality, we retrain it."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about predictive systems",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With a decision you make often and that costs you when it goes wrong: a supplier order, seasonal staffing, which customer to call. On a first 30-minute call, we look with you at whether your data can predict it."
+          },
+          {
+            "question": "Do we have enough data?",
+            "answer": "Often more than you think: sales, invoices, CRM, spreadsheets. You usually need a history that covers several cycles of your business, for example at least two full seasons if your activity is seasonal. If you do not have that yet, we tell you before anything starts."
+          },
+          {
+            "question": "How reliable will the forecasts be?",
+            "answer": "A forecast is never a certainty. We deliver it with a range and the factors that explain it, then measure the gap with reality on a regular basis. If the model does not beat your current method, we do not roll it out."
+          },
+          {
+            "question": "Do we need new software?",
+            "answer": "No. Forecasts show up in your ERP, your CRM, your spreadsheets or a simple dashboard, and alerts come by email or in your team chat."
+          },
+          {
+            "question": "Where does our data go?",
+            "answer": "We favour hosting in Europe and use only the data the model actually needs. When customer data is involved, we check the GDPR side with you before we start."
+          },
+          {
+            "question": "What drives the cost and the timeline?",
+            "answer": "Mostly the state of your data: spread across several files, incomplete, or already clean. The number of sources to connect and of tools where forecasts should appear matters too. After the first call, we give you a clear estimate."
+          }
+        ]
+      }
+    },
+    "computer-vision": {
+      "title": "Computer vision",
+      "metaTitle": "Computer vision for small and mid-sized businesses",
+      "summary": "Your photos and video become data: defects spotted, plates and meters read, stock counted. Your team stays in charge of the decisions.",
+      "intro": "Computer vision teaches software to recognise what it sees in a photo or a video. We use it to pull one precise fact out of your images, such as a defect, a reading or a count, which then triggers an action in your tools.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of tasks where images save time, while your team keeps the decisions.",
+        "items": [
+          {
+            "title": "Quality inspection",
+            "text": "A camera on the line spots scratches, badly fitted parts or crooked labels. A doubtful part is set aside and photographed for your quality manager."
+          },
+          {
+            "title": "Meter readings",
+            "text": "Your technicians take a photo of the water, gas or electricity meter. The reading goes straight into your tracking tool, with no copying by hand."
+          },
+          {
+            "title": "Plates and labels",
+            "text": "Number plates are read at the entrance to a car park or a loading bay. On parcels, the product code and batch number are picked up automatically."
+          },
+          {
+            "title": "Photo checks",
+            "text": "Move-in inspections, site photos, claim photos, ID documents: AI checks that each image is sharp, complete and consistent with the file before a person signs it off."
+          },
+          {
+            "title": "Site safety",
+            "text": "Missing helmet or hi-vis vest, restricted area entered, blocked aisle: an alert goes to the site manager. We set it up with you so it respects GDPR and your staff."
+          },
+          {
+            "title": "Stock counts",
+            "text": "A photo of a shelf, a pallet or a storage bay is enough to count items and spot gaps. You can run stock checks more often and spend fewer hours on them."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the first image analysed to everyday use on the ground.",
+        "points": [
+          {
+            "title": "AI assessment",
+            "text": "We start from a concrete problem, such as a defect that slips through or a stock count that takes too long, and check with you that images can answer it."
+          },
+          {
+            "title": "Process redesign",
+            "text": "We decide who gets the alert, what the system does on its own and what a person confirms. We also work with real conditions: lighting, camera angles, the cameras you already have."
+          },
+          {
+            "title": "From pilot to rollout",
+            "text": "A pilot runs on your own photos and video, and we measure what is recognised well and what is not. If the results hold up, we roll it out across your sites and tools."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We train the people who handle alerts, track accuracy over time and retrain the model when your products or premises change. GDPR and the EU AI Act are covered, especially whenever people appear on camera."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about computer vision",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With a task where someone looks at images or objects today to make a call: inspecting, counting, reading. On a first 30-minute call, we tell you honestly whether computer vision is the right answer, or whether a sensor or a simple rule would do."
+          },
+          {
+            "question": "Do we need new cameras?",
+            "answer": "Not necessarily. A smartphone or the cameras you already have are often enough to start. We check image quality during the pilot and only recommend hardware if the results call for it."
+          },
+          {
+            "question": "Do you train a custom model?",
+            "answer": "Not always. To read text or recognise common objects, existing models often do the job. For a defect specific to your products, we train a model on your own images, including examples of faulty parts."
+          },
+          {
+            "question": "What happens when the system gets it wrong?",
+            "answer": "It will happen, as it does to any person doing inspections. We measure the error rate before launch, set a confidence threshold below which a person checks, and keep tracking results over time."
+          },
+          {
+            "question": "What drives the cost and the timeline?",
+            "answer": "Mostly the image work: how many images are needed, and whether they have to be labelled by hand, which means marking what each one shows. Then the number of sites, the hardware and the tools to connect. A narrow use case with photos you already have moves much faster than equipping a production line."
+          },
+          {
+            "question": "What about images that show people?",
+            "answer": "We favour hosting in Europe, or processing on site when possible. As soon as a person or a number plate is in the picture, we keep only what is needed, can blur faces and plates, and agree the rules of use with you under GDPR and the EU AI Act."
+          }
+        ]
+      }
+    },
+    "ai-sprint": {
+      "title": "AI Sprint",
+      "metaTitle": "AI Sprint for SMEs: AI use cases and a clear roadmap",
+      "summary": "One day with your team to find the tasks where AI saves time, put a cost on them, rank them and leave with a roadmap you can act on.",
+      "intro": "In one day, on site or remote, we go through your operations with the people who run them. You leave with costed AI use cases, ranked by priority, and a clear plan for what comes next.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "The key moments of the day, and what you keep once it is over.",
+        "items": [
+          {
+            "title": "Workshops with your team",
+            "text": "Management, operational teams and IT depending on the topic: we listen to the people who do the work every day, at your offices or on a video call."
+          },
+          {
+            "title": "Finding the heavy tasks",
+            "text": "Data typed in twice, piles of documents, the same errors again and again, manual reminders: we note what costs your team the most time."
+          },
+          {
+            "title": "Costed use cases",
+            "text": "For each idea, we estimate the expected gain, how feasible it is, the risks to quality and data, and a rough cost."
+          },
+          {
+            "title": "Clear priorities",
+            "text": "Ideas are ranked by gain and effort. Some go to the top, some wait, and a few are dropped, with the reason why."
+          },
+          {
+            "title": "A written roadmap",
+            "text": "A summary document sets out the use cases you keep, their order, the data they need and the first practical steps."
+          },
+          {
+            "title": "Debrief with management",
+            "text": "We present the findings to the decision makers and answer their questions. The roadmap is yours: run it in-house, with another provider or with us."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "The AI Sprint covers the first step. The other three only follow if you decide to go further.",
+        "points": [
+          {
+            "title": "AI assessment",
+            "text": "This is the day itself: we look at your operations with your team and find the tasks where AI can bring a measurable gain."
+          },
+          {
+            "title": "Process redesign",
+            "text": "For the use cases you keep, we map out how the work will flow: what AI takes on, and what a person approves."
+          },
+          {
+            "title": "From pilot to rollout",
+            "text": "If you want, we test the first use case on your real data with a small pilot. We only roll it out when the results justify it."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We train your team and set the rules for use from the start: which data is allowed, GDPR, the EU AI Act, human approval."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about the AI Sprint",
+        "items": [
+          {
+            "question": "How much does an AI Sprint cost?",
+            "answer": "It depends on the scope: how many teams and topics, on site or remote, travel. We agree the price with you before the day."
+          },
+          {
+            "question": "On site or remote?",
+            "answer": "Both work. On site, we see your tools and the way people work up close. Remote, the day runs on a video call, with screen sharing so we can look at your tools together."
+          },
+          {
+            "question": "Who should take part?",
+            "answer": "Someone from management to make the calls, people who live the processes day to day, and your IT lead or IT provider when data and tools are involved."
+          },
+          {
+            "question": "Do we need to know what we want from AI already?",
+            "answer": "No. A hunch is enough, and so is no idea at all. The day starts from your real tasks, not from the technology."
+          },
+          {
+            "question": "What do we get at the end?",
+            "answer": "A list of costed, ranked AI use cases, each with its expected gain, effort and risks, and a written roadmap."
+          },
+          {
+            "question": "What happens after the day?",
+            "answer": "That is up to you. You can run the roadmap in-house or with another provider. If you want, we move on to a first prototype, with a Qartmina project lead and specialists picked for the job."
+          }
+        ]
+      }
+    },
+    "custom-software": {
+      "title": "Custom software",
+      "metaTitle": "Custom business software for SMEs",
+      "summary": "Internal tools shaped around how your business runs: less retyping, clearer processes and all your data in one place.",
+      "intro": "We build the internal tools your business needs when off-the-shelf software stops fitting: CRMs, admin back offices, business apps. They connect to what you already use and grow with you.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of tools we build or adapt, always starting from how your team actually works.",
+        "items": [
+          {
+            "title": "A CRM built for you",
+            "text": "Contacts, deal stages, follow-ups and dashboards are built around your sales cycle, not the other way round."
+          },
+          {
+            "title": "Odoo or HubSpot setup",
+            "text": "When an existing platform covers most of what you need, we configure and extend it instead of rebuilding everything. Custom work stays where it matters."
+          },
+          {
+            "title": "Admin back office",
+            "text": "One place to manage customers, orders, stock or contracts, instead of spreadsheets passed around by email."
+          },
+          {
+            "title": "Links to your systems",
+            "text": "Your tool exchanges data with your ERP, CRM or accounting software through their APIs, the connectors that let two programs talk. No more entering things twice."
+          },
+          {
+            "title": "Routine tasks automated",
+            "text": "Quotes, record updates, alerts, reports: anything that follows a clear rule runs by itself, and your team handles the rest."
+          },
+          {
+            "title": "Access rights and security",
+            "text": "Each person sees and changes only what concerns them. Key actions are logged, and we favour hosting in Europe."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the first conversation to a tool that keeps growing with your business.",
+        "points": [
+          {
+            "title": "Scoping",
+            "text": "We look at how your team works today, spot the retyping and the bottlenecks, then agree with you on what the first version must do."
+          },
+          {
+            "title": "Design",
+            "text": "We sketch the screens with the people who will use them, then plan the data, access rights and links to your tools. You sign off before the build starts."
+          },
+          {
+            "title": "Build and launch",
+            "text": "We deliver in short stages, each tested on real cases and checked by your Qartmina project lead. We switch over gradually, so your business keeps running."
+          },
+          {
+            "title": "Handover and growth",
+            "text": "We train your team, fix what needs fixing and look after maintenance. The tool then changes as your needs do."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about custom software",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "On a first 30-minute call, we look at the tools and workarounds your team relies on today. If an existing product such as Odoo or HubSpot would do the job, we will tell you."
+          },
+          {
+            "question": "What drives the cost?",
+            "answer": "Mainly the number of screens and business rules, how many tools need connecting and the level of security required. We start with a lean first version, then add what proves useful."
+          },
+          {
+            "question": "How long does it take?",
+            "answer": "It depends on scope. A first usable version can come quickly: we built the MVP (a first working version cut down to essentials) of a document-processing agent from scratch in one week. You get a precise timeline at the end of scoping."
+          },
+          {
+            "question": "Will it work with the tools we already use?",
+            "answer": "Yes. We connect it to your CRM, ERP, accounting software or spreadsheets. We can also take over an existing tool and improve it step by step, as we did when we moved a CRM startup's platform to the cloud."
+          },
+          {
+            "question": "Where is our data hosted?",
+            "answer": "We favour hosting in Europe, role-based access and a log of key actions. GDPR is part of the design from the start, not added at the end."
+          },
+          {
+            "question": "How do you keep the tool reliable?",
+            "answer": "Automated tests check the tool every time the code changes, and every delivery goes through a quality check. Once it is live, we monitor it and fix issues as part of maintenance."
+          }
+        ]
       },
       "demo": {
         "label": "Demo",
@@ -2094,345 +1736,188 @@
         "title": "Try the demo",
         "intro": "A CRM we designed to show how we work. Click through the screens, move a deal, approve the agent's email, filter the test cases."
       },
-      "features": [
-        {
-          "title": "Your sales stages, not defaults",
-          "text": "The pipeline mirrors how your team really wins deals, step by step."
+      "system": {
+        "title": "Architecture",
+        "label": "Example",
+        "hint": "Click any part to see what it can be built with.",
+        "close": "Close",
+        "failedLabel": "Failed",
+        "stackLabel": "Built with, for example",
+        "legend": {
+          "call": "Request",
+          "answer": "Response",
+          "needs": "Background",
+          "failed": "Retry"
         },
-        {
-          "title": "Contacts cleaned and imported",
-          "text": "Old spreadsheets and address books merged, with duplicates removed before go-live."
-        },
-        {
-          "title": "Linked to email and quotes",
-          "text": "Emails, calls and quotes are filed under the right customer without retyping."
-        },
-        {
-          "title": "Reports managers trust",
-          "text": "Pipeline, forecast and team activity shown in dashboards built from live data."
-        },
-        {
-          "title": "Roles and permissions",
-          "text": "Each person sees the customers and figures their role allows."
-        },
-        {
-          "title": "Works on any screen",
-          "text": "The same CRM on a laptop in the office or a phone on the road."
-        },
-        {
-          "title": "In your languages",
-          "text": "Arabic, French and English, with right-to-left layouts where needed."
-        },
-        {
-          "title": "Your data stays yours",
-          "text": "Export everything at any time, hosted where you choose."
-        }
-      ],
-      "faq": {
-        "title": "Questions about CRM setup and development",
-        "items": [
-          {
-            "question": "Should we customise an existing CRM or build our own?",
-            "answer": "Most businesses are better served by configuring a proven CRM, and that is where we start. A custom build makes sense when your sales model is unusual, or when licence costs for a large team outweigh the cost of building. We compare both options for your situation before you decide."
+        "nodes": {
+          "cloud": {
+            "name": "Your cloud",
+            "role": "Hosting",
+            "badge": "Infrastructure",
+            "text": "Everything inside runs in your own cloud account or data centre, in the country you choose, with backups and monitoring."
           },
-          {
-            "question": "How do we get the team to actually use it?",
-            "answer": "We involve the people who will use it from the first workshop, keep fields and steps to what they need, and train them on their own deals. Managers take their reports from the CRM, which gives everyone a reason to keep it up to date."
+          "client": {
+            "name": "Client",
+            "role": "Web and mobile app",
+            "badge": "Frontend",
+            "text": "The screens your team uses in a browser or on a phone, built in a framework your developers know."
           },
-          {
-            "question": "What happens to our existing customer data?",
-            "answer": "We export it, clean it and import it in stages, checking counts and samples against the original at each step. Nothing old is deleted until you have confirmed the new system is complete."
+          "api": {
+            "name": "Server",
+            "role": "Business rules",
+            "badge": "Backend",
+            "text": "Checks every request, applies your rules (who can change a deal, which discounts need approval) and talks to every other part."
+          },
+          "auth": {
+            "name": "Auth",
+            "role": "Sign-in and roles",
+            "badge": "Security",
+            "text": "Company accounts, two-step sign-in and roles that decide who sees which customers and figures."
+          },
+          "jobs": {
+            "name": "Queue",
+            "role": "Background jobs",
+            "badge": "Automation",
+            "text": "Work that runs on its own: syncing email and invoices, sending reminders, trying again when another system does not answer."
+          },
+          "sql": {
+            "name": "Database",
+            "role": "Customers and deals",
+            "badge": "Data",
+            "text": "The main record of customers, contacts, deals and their history, with every change recorded."
+          },
+          "agent": {
+            "name": "AI agent",
+            "role": "Does the repeat work",
+            "badge": "AI",
+            "text": "Prepares reviews, drafts follow-ups and answers questions, using only the data and actions it is given, and asks before it sends anything."
+          },
+          "rag": {
+            "name": "RAG",
+            "role": "Finds the right facts",
+            "badge": "AI",
+            "text": "Retrieval: before the AI answers, it looks up the relevant documents and records, so answers come from your data and show their source."
+          },
+          "vector": {
+            "name": "Vector DB",
+            "role": "Search by meaning",
+            "badge": "Data",
+            "text": "Stores documents in a form that can be searched by meaning, so \"late delivery complaint\" also finds \"order arrived a week after the date\"."
+          },
+          "graph": {
+            "name": "Graph DB",
+            "role": "Who is linked to whom",
+            "badge": "Data",
+            "text": "Stores relationships: which contact works where, who referred whom, which deals share a supplier. Useful when the links matter as much as the records."
+          },
+          "llm": {
+            "name": "LLM",
+            "role": "The language model",
+            "badge": "AI",
+            "text": "The model that reads and writes text. Chosen for quality, cost and where your data may go, and replaceable without rebuilding the rest."
+          },
+          "integrations": {
+            "name": "Integrations",
+            "role": "Your other tools",
+            "badge": "Integration",
+            "text": "Email, invoicing, messaging and payments connected, so nobody types the same thing twice."
           }
-        ]
+        }
+      },
+      "clients": {
+        "title": "Teams we built CRMs for",
+        "logos": [
+          "docutrad"
+        ],
+        "caseStudy": {
+          "label": "Read the case study: from a fragile VPS to a production-ready cloud",
+          "href": "/portfolio/crm-startup-cloud-migration"
+        }
       }
     },
-    "erp-crm-setup": {
-      "title": "ERP and CRM setup",
-      "metaTitle": "HubSpot, Salesforce and Odoo setup and support",
-      "summary": "We set up mainstream CRMs and ERPs like HubSpot, Salesforce and Odoo for your company, bring your data in, train your team and stay on after go-live.",
-      "intro": "Buying a CRM or an ERP is easy. Getting the team to use it is the hard part. We set up platforms like HubSpot, Salesforce, Zoho or Odoo around how you work, train your people and stay with you after go-live.",
-      "stats": {
-        "title": "What a well-run CRM changes",
-        "intro": "Published figures from the vendors and from independent analysts. The pattern is the same: the gain comes from the team actually using it.",
-        "note": "Most of these figures come from the vendors' own data or from studies they paid for (only Nucleus Research is independent of the product). They show what is possible, not a promise: results depend on the setup and on adoption.",
-        "guide": {
-          "label": "How to choose a CRM",
-          "href": "/blog/how-to-choose-a-crm"
-        },
+    "saas": {
+      "title": "SaaS platforms",
+      "metaTitle": "SaaS platform development, from MVP to growth",
+      "summary": "We design and build your subscription software, from a first version customers will pay for to a platform that keeps up as you grow.",
+      "intro": "You want to sell software online, by subscription, to your own customers. We help you launch a first version people will pay for, then grow it without starting over.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "The concrete building blocks of a SaaS product, which we build with you from the first version to the updates after launch.",
         "items": [
           {
-            "value": "94%",
-            "label": "more deals closed after six months on HubSpot Sales Hub, compared with the customer's own first quarter (81,528 customers).",
-            "source": "HubSpot ROI Report 2025",
-            "url": "https://www.hubspot.com/roi"
+            "title": "A first sellable version",
+            "text": "We define the MVP with you: the smallest product your first customers will pay for. Everything else waits for their feedback."
           },
           {
-            "value": "4x",
-            "label": "more deals closed by HubSpot customers who work with an implementation partner than by those who do not.",
-            "source": "HubSpot ROI Report 2025",
-            "url": "https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Data%20Assets%20Repository/ROI%20Report%202025/HubSpot%20ROI%20Report%202025.pdf"
+            "title": "Sign-up and onboarding",
+            "text": "Account creation, guided first steps, team invitations: new customers see what the product does for them within their first few minutes."
           },
           {
-            "value": "$3.10",
-            "label": "returned for every dollar spent on a CRM, on average across 11 case studies in 2023.",
-            "source": "Nucleus Research, 2024",
-            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+            "title": "Separate data per customer",
+            "text": "One platform serves all your customers, and each one only sees its own data. This is called a multi-tenant architecture."
           },
           {
-            "value": "51%",
-            "label": "of that return comes from time saved and smoother processes, more than from new revenue.",
-            "source": "Nucleus Research, 2024",
-            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+            "title": "Subscriptions and billing",
+            "text": "Plans, free trials, upgrades, invoices and failed-payment reminders are handled by the platform, through a payment provider such as Stripe."
           },
           {
-            "value": "26%",
-            "label": "higher employee productivity, as estimated by 3,706 Salesforce customers in a 2022 survey.",
-            "source": "Salesforce, 2022",
-            "url": "https://www.salesforce.com/news/press-releases/2022/11/07/companies-report-cost-savings-with-salesforce/"
+            "title": "Users and roles",
+            "text": "Admins, members, read-only users: each customer account manages its own team and permissions, without going through your support."
           },
           {
-            "value": "209%",
-            "label": "return over three years and payback in under six months for a modelled 300-person company on Dynamics 365 Business Central.",
-            "source": "Forrester TEI for Microsoft, 2026",
-            "url": "https://tei.forrester.com/go/microsoft/Dynamics365BusinessCentral/"
+            "title": "APIs and integrations",
+            "text": "Your product exchanges data with the tools your customers already use, such as their CRM or accounting software, through APIs and connectors."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Help choosing the platform",
-          "text": "We compare the options for your size, budget and processes, and say when a cheaper plan is enough."
-        },
-        {
-          "title": "Set up for how you work",
-          "text": "Pipelines, fields, permissions and automations configured for your process, not left on the defaults."
-        },
-        {
-          "title": "Your data moved in cleanly",
-          "text": "Contacts, deals and history imported from spreadsheets or your old system, with duplicates removed."
-        },
-        {
-          "title": "Training and support after go-live",
-          "text": "Short training by role, a written guide, and someone to ask when questions come up."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Your first CRM after spreadsheets",
-          "text": "Pick the right platform, import your contacts and deals, and get the sales team working in it within weeks."
-        },
-        {
-          "title": "A CRM nobody uses",
-          "text": "Clean up an existing HubSpot, Salesforce or Zoho account so the fields, stages and reports make sense again."
-        },
-        {
-          "title": "Odoo for the back office",
-          "text": "Stock, purchasing and invoicing in Odoo, set up module by module without stopping daily work."
-        },
-        {
-          "title": "Moving to another platform",
-          "text": "Switch from one CRM or ERP to another with your history intact and both systems checked side by side."
-        }
-      ],
-      "stories": {
-        "title": "What companies in the region say",
-        "intro": "Companies in Kenya, Egypt, the UAE and Jordan on what changed when they introduced their CRM or ERP.",
-        "note": "Quotes from case studies published by Odoo, Zoho and Microsoft. These companies are not Qartmina clients.",
-        "readStory": "Read the story",
-        "items": [
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the product idea to the updates that follow launch.",
+        "points": [
           {
-            "quote": "The role of our implementation partner, Animatrix ERP Solutions Ltd, has been very important. Their structured approach, strong understanding of our industry, and ongoing support ensured a smooth transition and high user adoption.",
-            "name": "Qayyum Shiraz, CTO",
-            "company": "Transfreight Logistics",
-            "country": "Kenya",
-            "platform": "odoo",
-            "platformName": "Odoo",
-            "result": "About 30% less manual work, according to Odoo's case study",
-            "url": "https://www.odoo.com/blog/customer-reviews-6/transfreight-logistics-limited-reduced-manual-work-by-30-using-odoo-s-management-system-2308"
+            "title": "Scoping",
+            "text": "We pin down the target customer, the problem the product solves and what the first version must include. We also settle how you will charge for it."
           },
           {
-            "quote": "Zoho One is the best thing that's happened to us. Our recruiters average productivity increased from 25 to 40 tasks per day and our clients serving time decreased from average two weeks to four days",
-            "name": "Mahmoud Salem, Managing Director",
-            "company": "Tawzef",
-            "country": "Egypt",
-            "platform": "zoho",
-            "platformName": "Zoho One",
-            "url": "https://www.zoho.com/one/customers/tawzef.html"
+            "title": "Design",
+            "text": "We sketch the key journeys and test them with a few users, then lay out the architecture: data separation, roles, billing, security."
           },
           {
-            "quote": "Previously, we lacked a comprehensive view of our processes, customers, and partners. We had to search multiple systems for customer information. Now, with MS Dynamics Platform and Analytics, all details are accessible with a click.",
-            "name": "Shrikant A. Kabboor, Chief Technology Officer",
-            "company": "Arada",
-            "country": "UAE",
-            "platformName": "Dynamics 365",
-            "url": "https://www.microsoft.com/en/customers/story/1736469938408312587-arada-azure-other-unsegmented-en-united-arab-emirates"
+            "title": "Build and launch",
+            "text": "We ship in short cycles, with automated tests and monitoring that alerts us when something slows down or fails. Your Qartmina project lead checks every delivery."
           },
           {
-            "quote": "Today, with Odoo, everything is clear. I can reserve the car I want, follow the right steps, and keep all my data stored in one place. It saves me effort, time, and provides speed.",
-            "name": "Hamza Al-Radaydah, Sales Supervisor",
-            "company": "Great Wall Motors Jordan",
-            "country": "Jordan",
-            "platform": "odoo",
-            "platformName": "Odoo",
-            "url": "https://www.odoo.com/blog/customer-reviews-6/great-wall-motors-jordan-drives-efficiency-with-odoo-1824"
+            "title": "Handover and growth",
+            "text": "After launch, we watch real usage, fix issues and develop the product from your customers' feedback, keeping disruption for them low."
           }
         ]
       },
       "faq": {
-        "title": "Questions about ERP and CRM setup",
+        "title": "Questions about SaaS platforms",
         "items": [
           {
-            "question": "Which CRM should we choose?",
-            "answer": "It depends on your team size, budget and how you sell. HubSpot is easy to start with, Salesforce suits larger and complex sales teams, Pipedrive is simple and visual, and Odoo is strong when you also want stock and invoicing in the same system. We compare them for your case before you buy anything."
+            "question": "Where should we start?",
+            "answer": "With the problem your future customer wants gone, and a few people willing to test. On a first 30-minute call, we look at your idea with you and tell you what belongs in the first version."
           },
           {
-            "question": "Whose name is the licence in?",
-            "answer": "Yours. You buy the licence from the vendor in your company's name, so the account and the data stay yours. We work inside it as your setup partner."
+            "question": "What drives the cost?",
+            "answer": "The scope of the first version, the number of integrations and the level of security required. A lean MVP costs less and tells you sooner what your customers actually want."
           },
           {
-            "question": "How long does a setup take?",
-            "answer": "It depends on how many teams start using it and how clean your current data is. We usually start with one team or one process and add the rest once it runs well. You get a plan with dates before we begin."
-          }
-        ]
-      }
-    },
-    "business-apps": {
-      "title": "Business apps and tools",
-      "metaTitle": "Custom business apps and internal tools",
-      "summary": "Internal tools, dashboards and approval apps that replace the spreadsheets and email threads your team uses to run daily work.",
-      "intro": "Most companies run at least one critical process on a spreadsheet passed around by email. It works until two versions disagree or the person who built it leaves. We build focused internal apps that do one job well: collect the data, apply your rules, route approvals and show managers where things stand.",
-      "features": [
-        {
-          "title": "Forms that check themselves",
-          "text": "Required fields and rules catch mistakes when data is entered, not weeks later."
-        },
-        {
-          "title": "Approvals with a trail",
-          "text": "Every request shows who approved it, when and with what comment."
-        },
-        {
-          "title": "Dashboards from live data",
-          "text": "Managers see current figures without waiting for someone to compile a report."
-        },
-        {
-          "title": "Access by role",
-          "text": "Each person sees and edits only what their job requires."
-        }
-      ],
-      "useCases": [
-        "Expense claims with receipts, approvals and export to accounting",
-        "A quality inspection checklist that replaces paper forms",
-        "An operations dashboard combining sales, stock and delivery figures",
-        "A contract register that reminds you before renewals fall due"
-      ],
-      "faq": {
-        "title": "Questions about custom internal tools",
-        "items": [
-          {
-            "question": "Why not just improve the spreadsheet?",
-            "answer": "Sometimes that is enough, and we will say so. An app makes sense when several people edit the same data, when approvals matter or when errors are expensive. It keeps one version of the truth and a record of every change."
+            "question": "How fast can we launch?",
+            "answer": "It depends on scope. For a CRM startup, we built a document-agent MVP from scratch in one week, but every product is different. You get a precise timeline at the end of scoping."
           },
           {
-            "question": "How quickly can we have a first version?",
-            "answer": "A tool with one clear job can often reach a first working version within a few weeks, which your team then tests on real work. We improve it in short rounds based on what they report."
+            "question": "Can you take over a SaaS that is already live?",
+            "answer": "Yes. We first review the code, the architecture and the hosting, then improve the platform step by step, planning each change so your customers are not disrupted. We have, for example, carried out a CRM startup's cloud migration."
           },
           {
-            "question": "Who owns the code?",
-            "answer": "You do. The code, the data and the accounts it runs on belong to your company, and we document how it all works. A senior engineer on our side reviews every release before your team sees it, so what you inherit is easy to maintain."
-          }
-        ]
-      }
-    },
-    "mobile-apps": {
-      "title": "Mobile apps",
-      "metaTitle": "Mobile app development for iOS and Android",
-      "summary": "iOS and Android apps for your customers or field teams, published to the App Store and Google Play and maintained after launch.",
-      "intro": "An app earns its place when people need you in their pocket: customers reordering, booking or tracking, or field staff recording visits, deliveries and inspections away from a desk. We design and build apps for iPhone and Android, usually from one shared codebase to keep upkeep simple, publish them to both stores and keep them working as phones change.",
-      "features": [
-        {
-          "title": "Works with weak signal",
-          "text": "Field apps save data on the phone and sync once the connection returns."
-        },
-        {
-          "title": "Published under your name",
-          "text": "The app appears in the App Store and Google Play under your company's account."
-        },
-        {
-          "title": "Notifications that matter",
-          "text": "Order updates and reminders go only to the people they concern."
-        },
-        {
-          "title": "Kept current after launch",
-          "text": "We update the app when new iOS and Android versions change the rules."
-        }
-      ],
-      "useCases": [
-        "A field sales app for taking orders during customer visits",
-        "A delivery app with photo and signature proof of delivery",
-        "A customer app for reordering and tracking orders",
-        "An inspection app for sites with no mobile signal"
-      ],
-      "faq": {
-        "title": "Questions about mobile app development",
-        "items": [
-          {
-            "question": "Do we need an app, or would a website do?",
-            "answer": "Often a well-built mobile website is enough, and it costs less to run. An app makes sense when people use it every week, need it offline, or rely on the camera, location or notifications. We help you decide before you invest."
-          },
-          {
-            "question": "How long until the app is in the stores?",
-            "answer": "Building a first version usually takes a few months, depending on scope. Apple and Google then review each app before it goes live, which can take from a few hours to several days. We prepare the store listings and handle the review process for you."
+            "question": "Where is our customers' data hosted?",
+            "answer": "We favour hosting in Europe. Each customer's data is kept apart, access is controlled and GDPR is part of the design from the start. If your product uses AI, we choose enterprise plans that do not train on your data."
           },
           {
             "question": "What happens after launch?",
-            "answer": "We watch crash reports and store reviews, fix issues and release updates when Apple or Google change their requirements. You can keep us on a maintenance plan, or your team can take over with full documentation and access."
-          }
-        ]
-      }
-    },
-    "cloud-migration": {
-      "title": "Cloud migration",
-      "metaTitle": "Cloud migration and legacy system modernisation",
-      "summary": "Old servers and legacy software moved to the cloud and modernised step by step, while your business and customers keep working.",
-      "intro": "Many companies run on software that still works but cannot grow: a server in a cupboard, a system only one developer understands, a disk someone clears by hand every week. We move these systems to the cloud and modernise them in stages, with backups at every step, so the business never has to stop for the change.",
-      "features": [
-        {
-          "title": "Staged, not all at once",
-          "text": "Data and services move in planned steps, with a short maintenance window only for the final switch."
-        },
-        {
-          "title": "Separate test and live systems",
-          "text": "Development and testing get their own data, so nobody experiments on real customer records."
-        },
-        {
-          "title": "Automatic checks before release",
-          "text": "Every change runs through the full set of tests before it goes live."
-        },
-        {
-          "title": "A way back at every step",
-          "text": "Each stage has a backup and a rollback plan in case anything goes wrong."
-        }
-      ],
-      "useCases": [
-        "Moving a growing product off a single rented server",
-        "Replacing a system on an office server with a cloud version, one module at a time",
-        "Moving years of stored files to cloud storage while users keep working",
-        "Adding a test environment and release pipeline to an existing product"
-      ],
-      "faq": {
-        "title": "Questions about cloud migration and modernisation",
-        "items": [
-          {
-            "question": "Will our business have to stop during the move?",
-            "answer": "Not if it is planned well. We move data and services in stages while you keep working, and keep a short, scheduled maintenance window for the final switch. For one software company, we moved about 20 GB of files to cloud storage while its customers kept using the product."
-          },
-          {
-            "question": "Do we need to rebuild everything?",
-            "answer": "Rarely. We keep what works, fix what holds you back and replace old parts one at a time. In a recent project the product itself was sound, and the work went into hosting, separating test data from live data and the release process."
-          },
-          {
-            "question": "Which cloud providers do you use?",
-            "answer": "We choose based on your needs, your budget and where your data must be stored. We have worked with providers such as AWS, Railway and Cloudflare, and we explain each choice in plain terms. The accounts are in your name, so you are never tied to us."
+            "answer": "We monitor the platform, fix bugs, apply security updates and build the features your customers ask for. You set the pace."
           }
         ]
       }
@@ -2902,241 +2387,6 @@
         "launchTitle": "Launching a product?",
         "launchText": "We prepare the launch film, the teaser clips and the posting plan for launch week, so your launch arrives with momentum.",
         "launchCta": "Book a call"
-      }
-    },
-    "security-audits": {
-      "title": "Security audits",
-      "metaTitle": "Security audit and vulnerability scanning services",
-      "summary": "Automated and manual checks of your websites, servers and cloud accounts, with a prioritised report in plain language and a re-test after fixes.",
-      "intro": "Many break-ins start with something ordinary: an outdated plugin, a server left open, an old account nobody switched off. A security audit finds these weaknesses before someone else does. We scan and manually check your websites, servers and cloud accounts, then give you a report ranked by risk, written so a manager can decide and a developer can fix. Once the fixes are in, we check again.",
-      "features": [
-        {
-          "title": "Scans plus manual checks",
-          "text": "Automated tools find known flaws, and a specialist confirms each one to remove false alarms."
-        },
-        {
-          "title": "Cloud account review",
-          "text": "Settings in services such as AWS, Azure, Google Cloud or Microsoft 365 checked for open storage and excess access."
-        },
-        {
-          "title": "A report ranked by risk",
-          "text": "Each finding explains what it means for the business, how urgent it is and how to fix it."
-        },
-        {
-          "title": "Re-test after fixes",
-          "text": "Once your team or ours has fixed the issues, we confirm each one is closed."
-        }
-      ],
-      "useCases": [
-        "A yearly check before renewing a cyber insurance policy",
-        "An online shop that stores customer accounts and order history",
-        "Reviewing cloud settings after moving servers to the cloud",
-        "Checking a company's IT before an acquisition"
-      ],
-      "faq": {
-        "title": "Questions about security audits",
-        "items": [
-          {
-            "question": "What is the difference between an audit and a penetration test?",
-            "answer": "An audit looks broadly for known weaknesses and wrong settings across your systems. A penetration test goes deeper on a defined target and tries to exploit what it finds, the way an attacker would. Many companies start with an audit."
-          },
-          {
-            "question": "Will the scans slow down or break our website?",
-            "answer": "Scans run at times agreed with you and are tuned to avoid heavy load. We confirm in writing which systems are in scope before we start, and we stop at once if anything behaves unexpectedly."
-          },
-          {
-            "question": "What do you need from us?",
-            "answer": "A list of the websites, servers and cloud accounts to check, a technical contact and read-only access where we review settings from the inside. We never need your staff's personal passwords."
-          }
-        ]
-      }
-    },
-    "penetration-testing": {
-      "title": "Penetration testing",
-      "metaTitle": "Penetration testing for web apps, APIs and networks",
-      "summary": "Authorised, scoped simulated attacks on your web apps, APIs and networks, with a report showing what an attacker could reach and how to close it.",
-      "intro": "A penetration test is a controlled attack on your own systems, carried out by a specialist with your written permission. It answers a question scans cannot: if someone really tried, how far would they get? Before any testing, we agree in writing what is in scope, when we test and who to call if something goes wrong. The testing is done by experienced specialists we select for your technology and supervise from start to finish.",
-      "features": [
-        {
-          "title": "Written authorisation first",
-          "text": "Scope, dates, test accounts and emergency contacts are signed off before the first test."
-        },
-        {
-          "title": "Web apps and APIs",
-          "text": "We test logins, permissions and data access, including the APIs, the links your app uses to exchange data with other systems."
-        },
-        {
-          "title": "Internal and external networks",
-          "text": "Tested from the internet and, if you choose, from inside your office network, as a staff laptop would see it."
-        },
-        {
-          "title": "A report with proof and fixes",
-          "text": "Each finding shows how it was exploited, what it exposes and the steps to close it."
-        }
-      ],
-      "useCases": [
-        "A customer portal tested before launch",
-        "A mobile app checked so one customer can never see another's data",
-        "A client asking for a recent penetration test report before signing a contract",
-        "An office network tested after a merger or a move"
-      ],
-      "faq": {
-        "title": "Questions about penetration testing",
-        "items": [
-          {
-            "question": "Is it safe to attack our live systems?",
-            "answer": "Testing is planned to avoid disruption: we agree the times, exclude anything fragile and avoid actions that delete data or overload servers. Where possible we test a copy of your live system. If something unexpected happens, we stop and call your named contact."
-          },
-          {
-            "question": "What do we need to prepare?",
-            "answer": "Written authorisation from someone entitled to give it, plus your hosting or cloud provider's approval where their rules require it. Then a scope list, test accounts with different roles and a technical contact during the test window."
-          },
-          {
-            "question": "How often should we test?",
-            "answer": "Many companies test once a year and after any major change, such as a new app, a new login system or a move to the cloud. Your clients, your insurer or a standard you follow may set their own requirement."
-          }
-        ]
-      }
-    },
-    "compliance": {
-      "title": "Security compliance",
-      "metaTitle": "ISO 27001, SOC 2 and GDPR compliance readiness",
-      "summary": "Gap analysis, policies and evidence that prepare your company for an ISO 27001 or SOC 2 audit and for its GDPR obligations.",
-      "intro": "Larger clients often ask suppliers to prove their security, through ISO 27001, the international standard for managing information security, or a SOC 2 report, which American customers commonly request. We find the gaps between how you work today and what the auditor will check, write the policies, help you collect the evidence and prepare your team. The certificate itself is issued by an independent accredited body, not by us, which is exactly what gives it value.",
-      "features": [
-        {
-          "title": "Gap analysis",
-          "text": "A clear list of what the standard requires, what you already do and what is missing."
-        },
-        {
-          "title": "Policies that match reality",
-          "text": "Written for how your company actually works, not copied from a template nobody follows."
-        },
-        {
-          "title": "Evidence organised for the auditor",
-          "text": "Access reviews, backup checks, training records and logs collected in one place."
-        },
-        {
-          "title": "A rehearsal before the audit",
-          "text": "A mock audit with your team, so the real one holds fewer surprises."
-        }
-      ],
-      "useCases": [
-        "A software supplier asked for ISO 27001 by a bank or telecom client",
-        "A startup selling to American companies that request a SOC 2 report",
-        "A company serving European customers putting its GDPR records in order",
-        "Answering a long security questionnaire in a tender"
-      ],
-      "faq": {
-        "title": "Questions about security compliance and certification",
-        "items": [
-          {
-            "question": "Can Qartmina certify us?",
-            "answer": "No. An ISO 27001 certificate is issued by an accredited certification body after its own audit, and a SOC 2 report is signed by an independent audit firm. Our job is to get you ready, and we can help you choose the auditor."
-          },
-          {
-            "question": "How long does it take to get ready?",
-            "answer": "It depends on your size and on what is already in place. A small company with good habits can move quickly, while one starting from scratch should plan for several months, because some evidence has to build up over time."
-          },
-          {
-            "question": "Does this cover GDPR?",
-            "answer": "In large part. GDPR is the European data protection law, and many of the same controls, such as access rights, records and breach procedures, support it. On legal questions we work alongside your lawyer rather than replace them."
-          }
-        ]
-      }
-    },
-    "ai-security": {
-      "title": "AI and agent security",
-      "metaTitle": "AI agent security review and prompt injection testing",
-      "summary": "Permissions, data access, prompt injection testing and human approval, set up for your AI tools and agents before they touch real data.",
-      "intro": "An AI agent that reads email and works in your systems can be tricked by instructions hidden in a document. That trick is called prompt injection, and today it cannot be fully prevented. What you can control is how much damage it could do. We review what your AI tools can read, what they can change and what they can send out, then narrow that access, add human approval for high-impact actions and test the setup the way an attacker would.",
-      "features": [
-        {
-          "title": "Least access for every tool",
-          "text": "Each agent gets only the data and actions its job needs, through its own dedicated account."
-        },
-        {
-          "title": "Approval enforced by the system",
-          "text": "Payments, data changes and outgoing messages wait for a person, whatever the agent has been told."
-        },
-        {
-          "title": "Prompt injection testing",
-          "text": "We feed the agent emails and documents with hidden instructions and record what it does."
-        },
-        {
-          "title": "Safe connectors and full logs",
-          "text": "Every connection to your systems is reviewed, and every document read and action taken is recorded."
-        }
-      ],
-      "useCases": [
-        "An agent that reads supplier invoices from the accounts payable inbox",
-        "A customer chatbot that must never reveal another customer's data",
-        "Staff using ChatGPT or Copilot with company documents",
-        "A review before connecting an AI assistant to your customer database or accounting system"
-      ],
-      "faq": {
-        "title": "Questions about AI and agent security",
-        "items": [
-          {
-            "question": "What is prompt injection in plain words?",
-            "answer": "It is when someone hides instructions inside content an AI tool reads, such as an email, a PDF or a web page, so the tool follows the attacker instead of you. It works because the AI cannot reliably tell data it should read from orders it should obey."
-          },
-          {
-            "question": "Can you make our agent completely safe?",
-            "answer": "No one honestly can, because prompt injection has no complete fix yet. We limit the damage it can do: narrow permissions, separating the agent that reads untrusted content from the one that acts, and human approval for anything that moves money or data."
-          },
-          {
-            "question": "When should we do this?",
-            "answer": "Before go-live, while permissions are still easy to change. If an agent is already running, we start from what it can access today and what its logs show it has done."
-          }
-        ]
-      }
-    },
-    "it-support": {
-      "title": "IT support and managed IT",
-      "metaTitle": "IT support and managed IT services",
-      "summary": "Devices, accounts, Microsoft 365 or Google Workspace, backups and a helpdesk for your staff, run by one team that knows your setup.",
-      "intro": "Many growing companies run IT on goodwill: whoever is good with computers fixes things between their real tasks. We take that over. We look after laptops and phones, user accounts and email in Microsoft 365 or Google Workspace, check that backups actually restore, and open and close access when people join or leave. Your staff have one place to ask for help, and you have one accountable contact.",
-      "features": [
-        {
-          "title": "A helpdesk for your staff",
-          "text": "One address for problems and requests, each tracked until it is solved."
-        },
-        {
-          "title": "Microsoft 365 and Google Workspace",
-          "text": "Accounts, licences, shared drives and email security managed, with two-step sign-in switched on."
-        },
-        {
-          "title": "Backups that are tested",
-          "text": "Regular restore tests prove you can get files back, not only that copies exist."
-        },
-        {
-          "title": "Joiners and leavers handled",
-          "text": "New staff start with a ready laptop and accounts, and leavers lose access the day they go."
-        }
-      ],
-      "useCases": [
-        "A 20-person office with no IT staff of its own",
-        "Moving company email from an old server to Microsoft 365 or Google Workspace",
-        "Securing laptops used by staff who work from home",
-        "Cleaning up shared passwords and old accounts after staff changes"
-      ],
-      "faq": {
-        "title": "Questions about IT support and managed IT",
-        "items": [
-          {
-            "question": "Do you work remotely or on site?",
-            "answer": "Most support is remote, which is faster for everyday issues. Where on-site work is needed, such as installing equipment, we agree before we start how it is handled, through a local technician or with your team guided by ours."
-          },
-          {
-            "question": "We already have someone in-house. Can you work with them?",
-            "answer": "Yes. Many companies keep an internal person for daily needs and use us for administration, security settings and backups, or as cover when that person is away."
-          },
-          {
-            "question": "What happens to our accounts if we stop working together?",
-            "answer": "Everything stays yours. Accounts, licences and admin access are registered to your company, and at the end we hand over documentation and access in an orderly way."
-          }
-        ]
       }
     }
   },

@@ -11,7 +11,7 @@ import { NodeGraph, type GraphBeam, type GraphEdge, type GraphNode, type GraphSp
 
 // Hero of the agent development page: a team of agents checking month-end invoices, with
 // one failure and retry and one approval request per cycle. Copy under
-// servicePages.ai-agents.graph.
+// servicePages.generative-ai.graph.
 
 const nodes: GraphNode[] = [
   { id: "coordinator", kind: "lead", icon: IconTopologyStar3 },
@@ -99,5 +99,5 @@ const beams: GraphBeam[] = [
 const spec: GraphSpec = { nodes, edges, layouts, beams, build: BUILD, cycle: CYCLE };
 
 export const AgentGraph = () => (
-  <NodeGraph spec={spec} namespace="servicePages.ai-agents.graph" icon={IconTopologyStar3} />
+  <NodeGraph spec={spec} namespace="servicePages.generative-ai.graph" icon={IconTopologyStar3} />
 );

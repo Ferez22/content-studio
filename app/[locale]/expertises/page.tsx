@@ -11,7 +11,7 @@ import { TableOfContents } from "@/components/table-of-contents";
 import { Reveal } from "@/components/reveal";
 import { Link } from "@/i18n/navigation";
 import { translatedPageMetadata } from "@/lib/service-metadata";
-import { categoryPath, serviceCategories } from "@/lib/site";
+import { categoryPath, expertisesPath, serviceCategories } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return translatedPageMetadata({
     locale,
     namespace: "services.overview",
-    path: "/services",
+    path: expertisesPath,
     title: t("metaTitle"),
     description: t("metaDescription"),
   });

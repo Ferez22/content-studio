@@ -2,16 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import {
-  IconArrowDown,
-  IconChecklist,
-  IconMessageChatbot,
-  IconPlugConnected,
-  IconSparkles,
-  IconUserCheck,
-  IconUsersGroup,
-  type Icon,
-} from "@tabler/icons-react";
+import { IconArrowDown, type Icon } from "@tabler/icons-react";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
@@ -23,10 +14,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Reveal, RevealItem, RevealList } from "@/components/reveal";
 import { AgentGraph } from "@/components/services/agent-graph";
 import { Breadcrumbs } from "@/components/services/breadcrumbs";
-import { ChatbotDemo } from "@/components/services/chatbot-demo";
-import { PlatformsVisual, Stats, Stories } from "@/components/services/proof";
 import { Clients } from "@/components/services/clients";
-import { AssistantCard } from "@/components/services/chatbots";
 import { CrmDemo } from "@/components/services/crm-demo";
 import { Delivery } from "@/components/services/delivery";
 import { DemoStage } from "@/components/services/demo-stage";
@@ -42,6 +30,7 @@ import { routing } from "@/i18n/routing";
 import { breadcrumbJsonLd, translatedPageMetadata } from "@/lib/service-metadata";
 import { serviceMedia } from "@/lib/service-media";
 import {
+  expertisesPath,
   categoryOf,
   categoryPath,
   isServiceSlug,
@@ -76,35 +65,22 @@ type Extras = {
 };
 
 const extras: Partial<Record<ServiceSlug, Extras>> = {
-  chatbots: {
-    heroVisual: ChatbotDemo,
-    levelIcons: [IconMessageChatbot, IconPlugConnected, IconSparkles],
-    useCasesAside: AssistantCard,
-  },
-  "ai-agents": {
+  "generative-ai": {
     wideHero: AgentGraph,
-    levelIcons: [IconChecklist, IconPlugConnected, IconUserCheck, IconUsersGroup],
   },
-  "erp-crm-setup": {
-    heroVisual: PlatformsVisual,
-    sections: [Stats],
-    afterUseCases: [Stories],
-  },
-  "crm-development": {
+  "custom-software": {
     heroVisual: ArchitectureDiagram,
     sections: [Clients],
-    marquee: true,
     demo: CrmDemo,
   },
 };
 
-// One small illustration per point of the explainer ("How we work"), in order.
-const explainerArt: Partial<Record<ServiceSlug, React.ComponentType<{ className?: string }>[]>> = {
-  "ai-automation": [DiagnoseArt, TransformArt, ScaleArt, TrainArt],
-};
+// The four steps of "How we work" (explainer), one small motion graphic each, in order.
+const stepArt = [DiagnoseArt, TransformArt, ScaleArt, TrainArt];
 
-// Standard pages that skip the general "How we deliver" section (the new expertise pages).
-const withoutDelivery: ServiceSlug[] = ["ai-automation"];
+// Expertise pages built on the new model (2026-11-11): illustrated "How we work" steps and
+// no general "How we deliver" section. Brand pages keep their own layout.
+const newModel = (slug: ServiceSlug) => categoryOf(slug) !== "brand";
 
 export const dynamicParams = false;
 
@@ -151,7 +127,7 @@ export default async function ServicePage({ params }: Props) {
     .services.filter((service) => service !== slug);
 
   const breadcrumbs = [
-    { name: tServices("overview.title"), path: "/services" },
+    { name: tServices("overview.title"), path: expertisesPath },
     { name: tCategory("title"), path: categoryPath(category) },
     { name: t("title"), path: servicePath(slug) },
   ];
@@ -240,7 +216,7 @@ export default async function ServicePage({ params }: Props) {
 
       {page?.sections?.map((Section, index) => <Section key={index} slug={slug} />)}
       {t.has("included") && <Included slug={slug} />}
-      {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} art={explainerArt[slug]} />}
+      {motionPage ? <MotionDesignStory explainVideo={media?.explain} aliveVideo={media?.alive} /> : t.has("explainer") && <Explainer slug={slug} art={newModel(slug) ? stepArt : undefined} />}
       {media?.examples && t.has("examples") && <Examples slug={slug} videos={media.examples} />}
       {t.has("levels") && <Levels slug={slug} icons={page?.levelIcons ?? []} />}
 
@@ -248,7 +224,7 @@ export default async function ServicePage({ params }: Props) {
       {t.has("useCases") && <UseCases slug={slug} aside={UseCasesAside ? <UseCasesAside /> : undefined} />}
       {page?.afterUseCases?.map((Section, index) => <Section key={index} slug={slug} />)}
 
-      {motionPage ? <MotionOffer /> : !page && !withoutDelivery.includes(slug) && <Delivery />}
+      {motionPage ? <MotionOffer /> : !page && !newModel(slug) && <Delivery />}
 
       {Demo && (
         <DemoStage

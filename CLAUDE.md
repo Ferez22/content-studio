@@ -40,10 +40,10 @@ All pages live under `app/[locale]/` (`fr`, `en`, always prefixed).
 
 | Route | What |
 |---|---|
-| `/` | Home: Hero → LogoCloud → Features (6 category cards that flip to their services) → OpenAIPartner → Team → Testimonials → FAQs → Contact |
-| `/services` | Overview with a sticky category list (`TableOfContents`) |
-| `/services/<category>` | Category hub |
-| `/services/<category>/<service>` | Service page; `video-motion` has its own layout |
+| `/` | Home: Hero → LogoCloud → Expertise (3 category cards that flip to their services) → OpenAIPartner → Team → Testimonials → FAQs → Contact |
+| `/expertises` | Overview with a sticky category list (`TableOfContents`) |
+| `/expertises/<category>` | Category hub (`data-ai`, `software-development`, `brand`) |
+| `/expertises/<category>/<service>` | Expertise page; `video-motion` has its own layout |
 | `/portfolio`, `/portfolio/<slug>` | Case studies (MDX in `content/portfolio/<locale>/`) |
 | `/blog`, `/blog/<slug>` | Articles (MDX in `content/blog/<locale>/`) |
 | `/about`, `/contact`, `/book`, `/newsletter/thank-you` | Company, contact form, Cal.com booking |
@@ -51,7 +51,7 @@ All pages live under `app/[locale]/` (`fr`, `en`, always prefixed).
 | `/privacy`, `/terms`, `/legal` | Legal pages (copy in `messages` under `legal`) |
 | `/api/contact` | Contact form handler (Turnstile, then Brevo email) |
 
-Old flat service URLs (`/services/ai-agents`...) redirect permanently via `legacyServiceSlugs` in `next.config.ts`.
+Every old `/services/...` URL (categories, services and the flat ones from before) redirects permanently (308) to its closest page today via `oldServiceUrls` in `next.config.ts`; anything else under `/services` goes to `/expertises`. Never remove an entry: Google keeps old URLs for years.
 
 ## Structure
 
@@ -78,11 +78,11 @@ brand.md, design.md            brand facts and visual style reference (copies fr
 
 ## Services
 
-- Six categories with their services, defined once in `lib/site.ts`. Build links with `categoryPath()` / `servicePath()`, never by hand.
+- Three categories (Fares 2026-11-11): Data & AI (ai-automation, generative-ai, document-extraction, mcp, predictive-systems, computer-vision, ai-sprint), Software development (custom-software, saas), Brand and online presence. Defined once in `lib/site.ts`; UI label "Expertises" / "Expertise". Build links with `categoryPath()` / `servicePath()`, never by hand.
 - **Feature toggles:** `serviceToggles` (`lib/site.ts`) switches each service on or off. Off means no page (404), no sitemap entry, no link in menus, footer, home, overview, hubs or "More in"; blog and case-study links to it render as plain text; a category with nothing on disappears too. `serviceCategories`, `categorySlugs`, `serviceSlugs` and `isServiceSlug` only contain what is on, so new code gets this for free.
 - Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items as FAQPage JSON-LD). Optional sections render when their copy exists: `explainer`, `examples`, `included`.
 - **One card everywhere:** `ServiceCard` / `ServiceCards` (`components/services/service-cards.tsx`) on the home panel, overview, hubs and "More in". Its top is `ServiceCardMedia`: a free-license Unsplash photo (`service-photos.ts`) or an animated visual (`card-visuals.tsx`), plus tool logos. The desktop Services menu previews the same media on hover.
-- **Deeper service pages:** the `extras` map in `app/[locale]/services/[category]/[slug]/page.tsx` adds a hero visual, a wide visual under the hero, own sections, level icons, a use-case aside, a features marquee or a demo per slug; such pages skip "How we deliver". Copy-driven sections (`explainer`, `levels`, `useCases`, `included`, `examples`) render only when their copy exists.
+- **Deeper service pages:** the `extras` map in `app/[locale]/expertises/[category]/[slug]/page.tsx` adds a hero visual, a wide visual under the hero, own sections, level icons, a use-case aside, a features marquee or a demo per slug; such pages skip "How we deliver". Copy-driven sections (`included`, `explainer`, `levels`, `features`, `useCases`, `examples`) render only when their copy exists. Data & AI and Software pages follow one model: `included` = 6 use-case cards ("Ce que nous faisons pour vous"), `explainer` = 4 steps "Comment nous travaillons" with a small motion graphic each (`step-art.tsx`), FAQ, no "How we deliver".
 - **Adding a service:** slug in its category, copy in `messages/en.json`, icon in `components/service-icons.tsx`, photo or visual in `service-card-media.tsx`, switch it on in `serviceToggles` (`lib/site.ts`). The service count on the home page follows the toggles.
 - Each category has a soft tint (pastel light, deep tone dark), only in `components/services/category-tints.ts`.
 

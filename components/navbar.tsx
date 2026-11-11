@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./locale-switcher";
 import {
+  expertisesPath,
   categoryPath,
   partnerProgramEnabled,
   serviceCategories,
@@ -25,7 +26,7 @@ import {
 import { ServiceCardMedia } from "./services/service-card-media";
 
 const navlinks = [
-  { key: "services", href: "/services" },
+  { key: "services", href: expertisesPath },
   { key: "portfolio", href: "/portfolio" },
   { key: "about", href: "/#team" },
   { key: "blog", href: "/blog" },
@@ -343,7 +344,7 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
       </div>
       <motion.div {...menuItem(0.35)} className="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
         <MenuLink
-          href="/services"
+          href={expertisesPath}
           onClick={onNavigate}
           className="text-sm font-semibold text-black dark:text-white"
         >

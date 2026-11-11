@@ -22,7 +22,7 @@ import { NodeGraph, type GraphBeam, type GraphEdge, type GraphNode, type GraphSp
 // stack-agnostic; names without a Simple Icons logo are listed as text). Beams follow one
 // request through the server, the AI agent's retrieval (RAG) and the LLM, while background
 // jobs sync the integrations (one timeout and retry). Copy under
-// servicePages.crm-development.system.
+// servicePages.custom-software.system.
 
 const nodes: GraphNode[] = [
   {
@@ -132,5 +132,5 @@ const beams: GraphBeam[] = [
 const spec: GraphSpec = { nodes, edges, layouts, beams, build: BUILD, cycle: CYCLE };
 
 export const ArchitectureDiagram = () => (
-  <NodeGraph spec={spec} namespace="servicePages.crm-development.system" icon={IconStack2} compact />
+  <NodeGraph spec={spec} namespace="servicePages.custom-software.system" icon={IconStack2} compact />
 );

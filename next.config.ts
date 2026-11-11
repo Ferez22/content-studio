@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import { isServiceSlug, legacyServiceSlugs, servicePath } from "./lib/site";
+import { categoryPath, expertisesPath, servicePath, type CategorySlug, type ServiceSlug } from "./lib/site";
 import { contentLocales } from "./i18n/routing";
 
 const withNextIntl = createNextIntlPlugin();
@@ -28,6 +28,66 @@ const legacyPosts: Record<string, string> = {
   "ai-agents-with-tools-banking-insurance": "ai-agents-for-business",
   "databricks-business-case": "databricks-alternatives-comparison",
   "llm-plus-your-data": "ai-agent-knowledge-base",
+};
+
+// Every /services URL before the move to /expertises (2026-11-11), mapped to its closest page
+// today: a service, a category or the overview. Covers the old
+// categories, their services and the flat URLs from before the categories.
+const toService = (slug: ServiceSlug) => servicePath(slug);
+const toCategory = (slug: CategorySlug) => categoryPath(slug);
+const oldServiceUrls: Record<string, string> = {
+  "": expertisesPath,
+  // Old categories
+  ai: toCategory("data-ai"),
+  "data-automation": toCategory("data-ai"),
+  "websites-ecommerce": expertisesPath,
+  "software-development": toCategory("software-development"),
+  brand: toCategory("brand"),
+  "cybersecurity-it": expertisesPath,
+  // AI
+  "ai/ai-automation": toService("ai-automation"),
+  "ai/ai-consulting": toService("ai-sprint"),
+  "ai/ai-agents": toService("generative-ai"),
+  "ai/chatbots": toService("generative-ai"),
+  "ai/voice-agents": toService("generative-ai"),
+  "ai/ai-training": toService("ai-sprint"),
+  // Data and automation
+  "data-automation/process-automation": toService("ai-automation"),
+  "data-automation/api-integration": toService("mcp"),
+  "data-automation/data-platforms": toService("predictive-systems"),
+  // Websites and e-commerce (no longer offered as such)
+  "websites-ecommerce/web-platforms": toService("saas"),
+  "websites-ecommerce/business-websites": expertisesPath,
+  "websites-ecommerce/ecommerce": expertisesPath,
+  "websites-ecommerce/shopify": expertisesPath,
+  "websites-ecommerce/website-care": expertisesPath,
+  // Software development
+  "software-development/crm-development": toService("custom-software"),
+  "software-development/erp-crm-setup": toService("custom-software"),
+  "software-development/erp-development": toService("custom-software"),
+  "software-development/business-apps": toService("custom-software"),
+  "software-development/mobile-apps": toService("custom-software"),
+  "software-development/cloud-migration": toService("custom-software"),
+  // Brand and online presence (same services, new base path)
+  "brand/brand-identity": toCategory("brand"),
+  "brand/graphic-design": toCategory("brand"),
+  "brand/ui-ux-design": toService("ui-ux-design"),
+  "brand/personal-branding": toService("personal-branding"),
+  "brand/social-media": toService("social-media"),
+  "brand/video-motion": toService("video-motion"),
+  // Cybersecurity and IT (no longer offered as such)
+  "cybersecurity-it/security-audits": expertisesPath,
+  "cybersecurity-it/penetration-testing": expertisesPath,
+  "cybersecurity-it/compliance": expertisesPath,
+  "cybersecurity-it/ai-security": expertisesPath,
+  "cybersecurity-it/it-support": expertisesPath,
+  // Flat URLs from before the categories
+  "ai-agents": toService("generative-ai"),
+  chatbots: toService("generative-ai"),
+  automation: toService("ai-automation"),
+  integration: toService("mcp"),
+  consulting: toService("ai-sprint"),
+  training: toService("ai-sprint"),
 };
 
 const slugsOf = (collection: string, locale: string) => {
@@ -60,14 +120,15 @@ const nextConfig: NextConfig = {
   // scripts. Without it Next blocks them and the page never becomes interactive.
   allowedDevOrigins: ["192.168.*.*"],
   async redirects() {
-    // Only to published services: a hidden one 404s instead of redirecting permanently.
-    const services = Object.entries(legacyServiceSlugs)
-      .filter(([, service]) => isServiceSlug(service))
-      .map(([legacy, service]) => ({
-        source: `/:locale(en|fr)/services/${legacy}`,
-        destination: `/:locale${servicePath(service)}`,
+    // Old /services URLs: each to its closest page, anything else to the overview.
+    const services = [
+      ...Object.entries(oldServiceUrls).map(([from, to]) => ({
+        source: `/:locale(en|fr)/services${from ? `/${from}` : ""}`,
+        destination: `/:locale${to}`,
         permanent: true,
-      }));
+      })),
+      { source: "/:locale(en|fr)/services/:path*", destination: `/:locale${expertisesPath}`, permanent: true },
+    ];
     const posts = Object.entries(legacyPosts).map(([legacy, slug]) => ({
       source: `/blog/${legacy}`,
       destination: `/en/blog/${slug}`,

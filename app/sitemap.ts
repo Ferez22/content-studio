@@ -3,6 +3,7 @@ import { contentLocales, routing } from "@/i18n/routing";
 import { getSlugs, type Collection } from "@/lib/content";
 import { translatedLocales } from "@/i18n/messages";
 import {
+  expertisesPath,
   categoryPath,
   categorySlugs,
   partnerProgramEnabled,
@@ -54,7 +55,7 @@ const collectionEntries = async (collection: Collection, base: string) => {
 const servicePages = async () =>
   (
     await Promise.all([
-      ["/services", "services.overview"],
+      [expertisesPath, "services.overview"],
       ...categorySlugs.map((slug) => [categoryPath(slug), `serviceCategories.${slug}`]),
       ...serviceSlugs.map((slug) => [servicePath(slug), `servicePages.${slug}`]),
     ].map(async ([path, namespace]) => entry(path, await translatedLocales(namespace))))
