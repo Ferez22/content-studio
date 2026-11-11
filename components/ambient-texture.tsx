@@ -93,14 +93,19 @@ export const AmbientTexture = ({
   scale?: number;
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
     const wrap = wrapRef.current;
-    if (!canvas || !wrap) return;
+    if (!wrap) return;
+    // A fresh canvas on every run: Next keeps the page's DOM when you navigate away and back,
+    // and the previous canvas's WebGL context was released in the cleanup below.
+    delete wrap.dataset.fallback;
+    const canvas = document.createElement("canvas");
+    canvas.className = "absolute inset-0 size-full";
+    wrap.appendChild(canvas);
     const gl = canvas.getContext("webgl", { premultipliedAlpha: true, alpha: true, antialias: false });
     if (!gl) {
+      canvas.remove();
       wrap.dataset.fallback = "true";
       return;
     }
@@ -109,6 +114,7 @@ export const AmbientTexture = ({
     const fs = compile(gl, gl.FRAGMENT_SHADER, FRAGMENT);
     const program = gl.createProgram();
     if (!vs || !fs || !program) {
+      canvas.remove();
       wrap.dataset.fallback = "true";
       return;
     }
@@ -202,6 +208,7 @@ export const AmbientTexture = ({
       document.removeEventListener("visibilitychange", run);
       still.removeEventListener("change", run);
       gl.getExtension("WEBGL_lose_context")?.loseContext();
+      canvas.remove();
     };
   }, [layout, scale]);
 
@@ -211,8 +218,6 @@ export const AmbientTexture = ({
       aria-hidden="true"
       className={cn("ambient-texture pointer-events-none", className)}
       data-layout={layout}
-    >
-      <canvas ref={canvasRef} className="absolute inset-0 size-full" />
-    </div>
+    />
   );
 };
