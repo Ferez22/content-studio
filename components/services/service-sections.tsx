@@ -43,7 +43,7 @@ export const Explainer = ({ slug, art }: { slug: ServiceSlug; art?: Art[] }) => 
                 className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-8"
               >
                 {PointArt && (
-                  <div className="mb-6 flex h-28 md:h-32 items-center justify-center overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900">
+                  <div className="mb-6 flex h-40 md:h-48 items-center justify-center overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] bg-[size:14px_14px]">
                     <PointArt className="h-full w-auto max-w-full py-3" />
                   </div>
                 )}
