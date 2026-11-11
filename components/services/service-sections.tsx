@@ -43,14 +43,17 @@ export const Explainer = ({ slug, art }: { slug: ServiceSlug; art?: Art[] }) => 
                 className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-8"
               >
                 {PointArt && (
-                  <div className="mb-6 flex h-40 md:h-48 items-center justify-center overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] bg-[size:14px_14px]">
-                    <PointArt className="h-full w-auto max-w-full py-3" />
+                  <div className="mb-5 flex h-20 md:h-24 items-center justify-center overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] bg-[size:12px_12px]">
+                    <PointArt className="h-full w-auto max-w-full py-1.5" />
                   </div>
                 )}
-                <span className="font-display font-bold text-sm text-[#1E40FF] dark:text-blue-400">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral-200">
+                {/* Numbered unless the point has an illustration. */}
+                {!PointArt && (
+                  <span className="mb-3 block font-display font-bold text-sm text-[#1E40FF] dark:text-blue-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                )}
+                <h3 className="text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral-200">
                   {point.title}
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 mt-2 text-balance">{point.text}</p>
