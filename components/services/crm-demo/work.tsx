@@ -17,7 +17,7 @@ import { ToolLogo, type ToolSlug } from "@/icons/tool-logos";
 import { cn } from "@/lib/utils";
 import { Badge, ease, Initials, Item, Panel, ScreenHeader, SmallButton, Stagger, Toggle, type ScreenProps, type Tone } from "./ui";
 
-const T = "servicePages.crm-development.demo";
+const T = "servicePages.custom-software.demo";
 
 /* ---------- Onboarding: connect your tools ---------- */
 

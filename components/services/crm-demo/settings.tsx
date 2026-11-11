@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { stageTone } from "./work";
 import { Badge, ease, Initials, Item, Panel, SmallButton, Stagger } from "./ui";
 
-const T = "servicePages.crm-development.demo";
+const T = "servicePages.custom-software.demo";
 
 type Role = "admin" | "sales" | "viewer";
 type Member = { name: string; email: string; role: Role };

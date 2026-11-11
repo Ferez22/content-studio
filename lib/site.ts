@@ -16,44 +16,26 @@ export const site = {
     "https://0388cea7.sibforms.com/serve/MUIFANIIqhw3eaJh3xhabLoSVOzemQpOfaIC6104xvsX1Ab0KfWr52CDHwYAl_YmbNSSVsGjeLfnE97irPCWgfcqo_wFcxN8SFKzxT2YmtTRvzb8fE-ro1eGm0hZyXBKNAVFzndDzCDM_2kUxrJUz_asq3LJn1MVN4b33oY9z-ohfa4G4Y7PfB-eTvyN-RRYNoaRXWEiVtUVWGDjWQ==",
 };
 
-// Every service we can offer, grouped by category: /services/<category>/<service>. Copy
+// Every expertise we can offer, grouped by category: /expertises/<category>/<service>. Copy
 // lives in messages under serviceCategories.<category> and servicePages.<service>. Only
-// the services switched on in serviceToggles are published.
+// the services switched on in serviceToggles are published. Restructured 2026-11-11 (Fares):
+// Data & AI, Software development, Brand and online presence. Old URLs: next.config.ts.
 const allServiceCategories = [
   {
-    slug: "ai",
+    slug: "data-ai",
     services: [
       "ai-automation",
-      "ai-consulting",
-      "ai-agents",
-      "chatbots",
-      "voice-agents",
-      "ai-training",
-    ],
-  },
-  {
-    slug: "data-automation",
-    services: ["process-automation", "api-integration", "data-platforms"],
-  },
-  {
-    slug: "websites-ecommerce",
-    services: [
-      "business-websites",
-      "web-platforms",
-      "ecommerce",
-      "shopify",
-      "website-care",
+      "generative-ai",
+      "document-extraction",
+      "mcp",
+      "predictive-systems",
+      "computer-vision",
+      "ai-sprint",
     ],
   },
   {
     slug: "software-development",
-    services: [
-      "crm-development",
-      "erp-crm-setup",
-      "business-apps",
-      "mobile-apps",
-      "cloud-migration",
-    ],
+    services: ["custom-software", "saas"],
   },
   {
     slug: "brand",
@@ -64,16 +46,6 @@ const allServiceCategories = [
       "personal-branding",
       "social-media",
       "video-motion",
-    ],
-  },
-  {
-    slug: "cybersecurity-it",
-    services: [
-      "security-audits",
-      "penetration-testing",
-      "compliance",
-      "ai-security",
-      "it-support",
     ],
   },
 ] as const;
@@ -88,35 +60,20 @@ export type ServiceSlug =
 // Set at build time, so a change needs a redeploy.
 export const serviceToggles: Record<ServiceSlug, boolean> = {
   "ai-automation": true,
-  "ai-consulting": false,
-  "ai-agents": true,
-  chatbots: true,
-  "voice-agents": false,
-  "ai-training": false,
-  "process-automation": false,
-  "api-integration": false,
-  "data-platforms": false,
-  "business-websites": false,
-  "web-platforms": false,
-  ecommerce: false,
-  shopify: false,
-  "website-care": false,
-  "crm-development": true,
-  "erp-crm-setup": true,
-  "business-apps": false,
-  "mobile-apps": false,
-  "cloud-migration": false,
+  "generative-ai": true,
+  "document-extraction": true,
+  mcp: true,
+  "predictive-systems": true,
+  "computer-vision": true,
+  "ai-sprint": true,
+  "custom-software": true,
+  saas: true,
   "brand-identity": false,
   "graphic-design": false,
   "ui-ux-design": true,
   "personal-branding": true,
   "social-media": true,
   "video-motion": true,
-  "security-audits": false,
-  "penetration-testing": false,
-  compliance: false,
-  "ai-security": false,
-  "it-support": false,
 };
 
 // The published services and categories. Everything on the site reads these.
@@ -146,33 +103,22 @@ export const categoryOf = (service: ServiceSlug): CategorySlug =>
     (c.services as readonly string[]).includes(service),
   )!.slug;
 
-export const categoryPath = (category: CategorySlug) => `/services/${category}`;
+export const expertisesPath = "/expertises";
+export const categoryPath = (category: CategorySlug) => `${expertisesPath}/${category}`;
 export const servicePath = (service: ServiceSlug) =>
   `${categoryPath(categoryOf(service))}/${service}`;
 
-// False for a link to a hidden service or category page (/en/services/<category>/<service>),
+// False for a link to a hidden service or category page (/en/expertises/<category>/<service>),
 // so written content (blog, case studies) can show the words without a dead link.
 export const isPublishedServiceHref = (href: string) => {
   const match = href.match(
-    /^(?:\/(?:en|fr))?\/services\/([^/?#]+)(?:\/([^/?#]+))?/,
+    /^(?:\/(?:en|fr))?\/expertises\/([^/?#]+)(?:\/([^/?#]+))?/,
   );
   if (!match) return true;
   const [, category, service] = match;
   return service
     ? isServiceSlug(service) && categoryOf(service) === category
     : (categorySlugs as string[]).includes(category);
-};
-
-// Service URLs before the categories (/services/<old>), redirected permanently in next.config.ts.
-export const legacyServiceSlugs: Record<string, ServiceSlug> = {
-  "ai-agents": "ai-agents",
-  automation: "process-automation",
-  integration: "api-integration",
-  consulting: "ai-consulting",
-  training: "ai-training",
-  chatbots: "chatbots",
-  // Replaced by ERP and CRM setup (2026-10-29).
-  "software-development/erp-development": "erp-crm-setup",
 };
 
 // Partner program pages, one per partner type: /partners/<slug>.

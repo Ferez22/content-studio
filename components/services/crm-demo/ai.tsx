@@ -20,7 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Badge, ease, Item, Panel, ScreenHeader, SmallButton, Stagger, type Tone } from "./ui";
 
-const T = "servicePages.crm-development.demo";
+const T = "servicePages.custom-software.demo";
 
 /* ---------- Agent run: the weekly pipeline review ---------- */
 

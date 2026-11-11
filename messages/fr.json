@@ -299,9 +299,9 @@
   "services": {
     "overview": {
       "title": "Expertises",
-      "intro": "Tout ce qu'il faut à une entreprise pour se digitaliser, du site et de la marque au logiciel sur mesure, à l'IA et à la sécurité. Un chef de projet, des spécialistes choisis dans notre réseau et un contrôle qualité avant chaque livraison.",
-      "metaTitle": "Nos expertises : IA, logiciel, web, marque et sécurité",
-      "metaDescription": "IA, data, sites web, logiciels, marque et cybersécurité chez un seul partenaire digital, avec un chef de projet et des spécialistes vérifiés sur chaque projet."
+      "intro": "Tout ce qu'il faut à une entreprise pour mettre la data et l'IA au travail, construire ses logiciels et soigner son image en ligne. Un chef de projet, des spécialistes choisis dans notre réseau et un contrôle qualité avant chaque livraison.",
+      "metaTitle": "Nos expertises : data et IA, logiciel, marque",
+      "metaDescription": "Data et IA, logiciels sur mesure et SaaS, marque et présence en ligne chez un seul partenaire digital, avec un chef de projet et des spécialistes vérifiés sur chaque projet."
     },
     "breadcrumb": "Fil d'Ariane",
     "categoryServicesTitle": "Ce que nous proposons",
@@ -342,41 +342,23 @@
     "platformsTitle": "Les plateformes que nous installons et maintenons"
   },
   "serviceCategories": {
-    "ai": {
-      "title": "Intelligence artificielle",
-      "metaTitle": "IA pour les entreprises : de la stratégie à la production",
-      "summary": "L'IA au service de votre activité : stratégie, agents, assistants, agents vocaux et formation de vos équipes.",
-      "intro": "L'IA vaut son prix quand elle enlève du vrai travail à vos équipes. Nous commençons par regarder honnêtement où elle sera rentable, puis nous construisons des agents, des assistants et des agents vocaux autour de vos processus et de vos données. Vos équipes apprennent à les faire tourner : la valeur reste quand le projet se termine."
-    },
-    "data-automation": {
-      "title": "Data et automatisation",
-      "metaTitle": "Data, automatisation et intégration de vos outils",
-      "summary": "Des données propres, des outils connectés et des processus qui évitent à vos équipes de ressaisir les mêmes informations.",
-      "intro": "La plupart des projets d'IA échouent sur les fondations, pas sur l'IA. Nous supprimons les étapes manuelles de vos processus, connectons les outils que vous utilisez déjà et rassemblons des données éparpillées en un seul jeu de chiffres fiable. C'est la base sur laquelle tout le reste se construit."
-    },
-    "websites-ecommerce": {
-      "title": "Sites web et e-commerce",
-      "metaTitle": "Création de sites web et de boutiques en ligne",
-      "summary": "Sites vitrines, plateformes web et boutiques en ligne rapides, sécurisés et suivis après la mise en ligne.",
-      "intro": "Votre site est souvent le premier échange d'un client avec vous. Nous créons des sites d'entreprise, des plateformes sur mesure et des boutiques en ligne qui se chargent vite, fonctionnent sur tous les téléphones et que votre équipe met à jour facilement. Après la mise en ligne, nous les gardons sécurisés, sauvegardés et visibles dans les moteurs de recherche."
+    "data-ai": {
+      "title": "Data & IA",
+      "metaTitle": "Data et IA pour les PME : automatisation, agents, MCP",
+      "summary": "Automatisation, IA générative, extraction de documents, MCP, prédiction et vision : l'IA appliquée à vos processus, avec une personne qui valide.",
+      "intro": "L'IA vaut la peine quand elle enlève du vrai travail à vos équipes. Nous partons de vos processus et de vos données, choisissons la technique la plus simple qui fonctionne et la branchons sur vos outils. Vos équipes apprennent à la faire tourner, et une personne garde la main sur ce qui compte."
     },
     "software-development": {
       "title": "Développement logiciel",
-      "metaTitle": "Développement de logiciels sur mesure pour les entreprises",
-      "summary": "CRM, ERP, applications métier et mobiles construits autour de la façon dont votre entreprise travaille vraiment.",
-      "intro": "Un logiciel du marché colle rarement à votre façon de travailler, et les tableurs atteignent leurs limites bien avant qu'on s'en rende compte. Nous construisons et adaptons les outils que vos équipes utilisent chaque jour, de la vente à la finance jusqu'aux équipes sur le terrain. Chaque projet a un chef de projet Qartmina qui en répond, du premier atelier à la livraison."
+      "metaTitle": "Logiciel sur mesure et plateformes SaaS pour les entreprises",
+      "summary": "Des logiciels sur mesure et des plateformes SaaS construits autour de votre façon de travailler.",
+      "intro": "Un logiciel du marché colle rarement à votre façon de travailler, et les tableurs atteignent leurs limites bien avant qu'on s'en rende compte. Nous construisons les outils internes de vos équipes et les produits SaaS que vous vendez à vos clients. Chaque projet a un chef de projet Qartmina qui en répond, du premier atelier à la livraison."
     },
     "brand": {
       "title": "Marque et présence en ligne",
       "metaTitle": "Identité de marque, design et réseaux sociaux",
       "summary": "Logo, design, écrans simples à utiliser et réseaux sociaux pour rester présent à l'esprit de vos clients.",
       "intro": "On juge une entreprise sur ce qu'on voit d'elle avant même de lui parler. Nous concevons votre identité, vos supports et les écrans qu'utilisent vos clients, puis nous vous aidons à rester visible sur les réseaux sociaux. Tout suit la même marque : votre entreprise a la même allure sur une enseigne, une présentation ou un téléphone."
-    },
-    "cybersecurity-it": {
-      "title": "Cybersécurité et informatique",
-      "metaTitle": "Cybersécurité et services informatiques pour les entreprises",
-      "summary": "Contrôles de sécurité, préparation aux audits et support informatique au quotidien, expliqués simplement.",
-      "intro": "Un problème de sécurité commence rarement de façon spectaculaire. Il commence par un ancien compte, un réglage resté ouvert ou une sauvegarde que personne n'a testée. Nous trouvons ces failles, vous aidons à les corriger et vous préparons aux audits que vos clients demandent. Nous pouvons aussi gérer votre informatique au quotidien pour qu'elle reste en ordre."
     }
   },
   "visuals": {
@@ -1262,11 +1244,92 @@
         ]
       }
     },
-    "ai-agents": {
-      "title": "Développement d'agents IA",
-      "metaTitle": "Développement d'agents IA sur mesure pour les entreprises",
-      "summary": "Des agents IA sur mesure qui enchaînent les étapes d'un travail dans vos outils, puis soumettent le résultat à une personne avant tout envoi.",
-      "intro": "Un agent est un logiciel qui lit, vérifie et agit dans plusieurs systèmes, comme le ferait un assistant, mais en quelques minutes et sans se fatiguer. Nous le concevons autour d'un de vos vrais processus, nous le connectons à vos outils et une personne valide tout ce qui compte avant que cela ne parte.",
+    "generative-ai": {
+      "title": "IA générative",
+      "metaTitle": "IA générative pour les PME : assistants et agents IA",
+      "summary": "Assistants et agents IA branchés sur vos documents et vos outils : vos équipes trouvent, rédigent et analysent plus vite, et gardent la décision.",
+      "intro": "Nous concevons des assistants et des agents IA qui travaillent avec vos documents, vos données et vos logiciels. Chaque usage part d'un besoin réel de vos équipes, et une personne valide ce qui engage l'entreprise.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets de ce que l'IA générative fait dans une entreprise, avec vos équipes aux commandes.",
+        "items": [
+          {
+            "title": "Assistant sur vos documents",
+            "text": "Vos équipes posent une question avec leurs mots et obtiennent une réponse tirée de vos procédures, contrats ou fiches produits, source à l'appui. C'est le principe du RAG : l'IA cherche d'abord dans vos documents, puis répond."
+          },
+          {
+            "title": "Une équipe d'agents IA",
+            "text": "Un agent lit le dossier, un deuxième vérifie les pièces, un troisième rédige la synthèse et un quatrième analyse les chiffres. Ils se passent le travail, et une personne de votre équipe approuve avant tout envoi."
+          },
+          {
+            "title": "Analyse de dossiers",
+            "text": "Contrats, appels d'offres, dossiers de due diligence : l'IA relève les points clés et signale ce qui mérite une lecture attentive. Nous avons par exemple conçu un agent IA dédié à la due diligence."
+          },
+          {
+            "title": "Copilote pour vos équipes",
+            "text": "Au support, au commercial ou en comptabilité, un assistant intégré à l'outil de tous les jours résume les échanges, prépare les réponses et propose l'étape suivante."
+          },
+          {
+            "title": "Rédaction et synthèse",
+            "text": "Comptes rendus, réponses aux appels d'offres, fiches produits : un premier jet rédigé dans le style de votre entreprise à partir de vos contenus, que votre équipe relit et corrige."
+          },
+          {
+            "title": "L'IA dans votre produit",
+            "text": "Vous éditez un logiciel ? Nous y ajoutons des fonctions d'IA générative, comme une recherche en langage courant ou un agent qui traite les documents. Pour une startup du CRM, nous avons construit ce type d'agent en une semaine."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du choix des premiers usages jusqu'à l'utilisation au quotidien par vos équipes.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "Nous partons de vos tâches et de vos documents, pas de la technologie. Ensemble, nous retenons les usages où l'IA générative apporte un vrai gain, et nous écartons ceux où une solution plus simple suffit."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Nous fixons le rôle de chaque assistant ou agent, les documents et outils auxquels il a accès, et les étapes où une personne valide avant d'agir."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Nous commençons par un POC, une première version testée sur vos vrais documents, et nous mesurons la qualité des réponses. Quand elle tient, nous l'intégrons à vos outils et l'ouvrons à toute l'équipe."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous formons vos équipes, suivons la qualité et les coûts, et posons les règles : données autorisées, droits d'accès, RGPD, AI Act."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur l'IA générative",
+        "items": [
+          {
+            "question": "Par où commencer ?",
+            "answer": "Par une tâche précise où vos équipes passent beaucoup de temps à chercher, lire ou rédiger. Lors d'un premier appel gratuit de 30 minutes, nous en parlons avec vous et vous disons franchement si l'IA générative est la bonne réponse."
+          },
+          {
+            "question": "Nos données servent-elles à entraîner les modèles ?",
+            "answer": "Pas avec les offres que nous retenons. Nous choisissons des offres d'IA entreprise qui ne s'entraînent pas sur vos données et privilégions un hébergement en Europe. Chaque assistant n'accède qu'aux documents dont il a besoin."
+          },
+          {
+            "question": "L'IA peut-elle inventer des réponses ?",
+            "answer": "Oui, le risque existe. Nous le réduisons en obligeant l'assistant à s'appuyer sur vos documents et à citer ses sources, en le testant sur des questions dont la réponse est connue, et en gardant une validation humaine sur tout ce qui part à l'extérieur."
+          },
+          {
+            "question": "Peut-on l'intégrer à nos outils ou à notre logiciel ?",
+            "answer": "Oui. Nous connectons l'IA à votre CRM, votre messagerie, vos espaces de documents ou votre propre produit. Quand c'est utile, nous passons par MCP, un standard qui donne à un modèle d'IA un accès contrôlé à vos outils."
+          },
+          {
+            "question": "Combien de temps faut-il ?",
+            "answer": "Cela dépend du périmètre. Sur un cas bien délimité, un premier prototype se compte en semaines, pas en mois. L'intégration dans vos outils et l'ouverture à toute l'équipe prennent ensuite plus de temps."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût ?",
+            "answer": "Le nombre d'usages, le volume et l'état de vos documents, les outils à connecter et le niveau de contrôle attendu. Le coût d'utilisation des modèles s'y ajoute : nous l'estimons avant de commencer, puis nous le suivons."
+          }
+        ]
+      },
       "graph": {
         "title": "Équipe d'agents",
         "label": "Démo",
@@ -1402,432 +1465,528 @@
           }
         },
         "failedLabel": "Échec"
-      },
-      "levels": {
-        "title": "Ce qui compose un agent",
-        "intro": "Un agent, c'est quelques éléments assemblés avec soin. Votre équipe peut lire, tester et modifier chacun d'eux.",
+      }
+    },
+    "document-extraction": {
+      "title": "Extraction de documents",
+      "metaTitle": "Extraction de documents par l'IA pour les PME",
+      "summary": "Vos équipes ne ressaisissent plus factures, contrats et formulaires : l'IA lit chaque document, en tire les données, et une personne vérifie les cas douteux.",
+      "intro": "Nous lisons vos documents à la place de vos équipes : l'OCR (la reconnaissance du texte dans un scan ou une photo) et des modèles d'IA en tirent les données utiles, puis les envoient dans vos outils. Avant de construire quoi que ce soit, nous mesurons la fiabilité sur vos propres documents.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets de documents que l'IA lit pour vous, de la facture imprimée à la fiche remplie au stylo.",
         "items": [
           {
-            "label": "Instructions",
-            "title": "Une fiche de poste écrite",
-            "text": "À quoi sert l'agent, les étapes qu'il suit et ce qu'il ne doit jamais faire, le tout en langage simple.",
-            "examples": [
-              {
-                "title": "Étapes",
-                "text": "Rapprocher chaque facture fournisseur de son bon de commande et signaler tout écart de plus de 2 %."
-              },
-              {
-                "title": "Limites",
-                "text": "Ne jamais valider un paiement. Ne jamais écrire directement à un fournisseur."
-              },
-              {
-                "title": "Langue",
-                "text": "Écrire aux fournisseurs en français, sauf s'ils ont écrit en anglais."
-              }
-            ]
+            "title": "Factures fournisseurs",
+            "text": "Nom du fournisseur, montants HT et TTC, TVA, échéance : chaque facture est lue et saisie dans votre logiciel comptable, prête à être validée."
           },
           {
-            "label": "Outils",
-            "title": "L'accès à vos systèmes, rien de plus",
-            "text": "Chaque outil ouvre un seul système, juste ce qu'il faut pour la tâche.",
-            "examples": [
-              {
-                "title": "E-mail",
-                "text": "Lit les factures de la boîte comptabilité. Ne peut ni envoyer ni supprimer."
-              },
-              {
-                "title": "Logiciel comptable",
-                "text": "Consulte les bons de commande. Ne peut ni les modifier ni payer."
-              },
-              {
-                "title": "Tableur",
-                "text": "Modifie le tableau de fin de mois, et rien d'autre."
-              }
-            ]
+            "title": "Notes de frais",
+            "text": "Vos salariés prennent leur ticket en photo. Le montant, la date et la catégorie se remplissent seuls, et les tickets illisibles sont mis de côté pour une personne."
           },
           {
-            "label": "Validations",
-            "title": "Une personne donne son accord",
-            "text": "Tout ce qui sort de l'entreprise attend le feu vert d'une personne. L'agent prépare, vous décidez.",
-            "examples": [
-              {
-                "title": "E-mails fournisseurs",
-                "text": "Les brouillons attendent dans un canal Slack jusqu'à ce que quelqu'un les valide."
-              },
-              {
-                "title": "Résumé quotidien",
-                "text": "Chaque matin, la liste de ce qu'il a fait et de ce qu'il n'a pas pu terminer."
-              },
-              {
-                "title": "Journal",
-                "text": "Chaque étape est enregistrée : vous voyez pourquoi il a agi ainsi."
-              }
-            ]
+            "title": "Contrats et avenants",
+            "text": "Pour chaque contrat, nous relevons qui s'engage, pour combien et jusqu'à quand. Les dates de préavis peuvent ensuite déclencher un rappel."
           },
           {
-            "label": "Équipe",
-            "title": "Plusieurs agents, un coordinateur",
-            "text": "Les gros travaux sont répartis entre des agents qui font chacun une seule chose, et bien, avec un coordinateur qui distribue le travail et vérifie les résultats.",
-            "examples": [
-              {
-                "title": "Lecteur",
-                "text": "Extrait de chaque facture le fournisseur, le montant, la date et le numéro de commande."
-              },
-              {
-                "title": "Contrôleur",
-                "text": "Compare chaque facture à sa commande."
-              },
-              {
-                "title": "Rédacteur",
-                "text": "Rédige les e-mails sur les factures qui ne correspondent pas."
-              }
-            ]
+            "title": "Dossiers clients",
+            "text": "Formulaires d'inscription, demandes de financement, déclarations de sinistre : chaque champ est lu, et une pièce manquante est repérée avant que le dossier avance."
+          },
+          {
+            "title": "Fiches écrites à la main",
+            "text": "Bons de livraison signés, fiches d'intervention, formulaires remplis au stylo puis photographiés : l'IA les déchiffre, et une personne reprend ce qui reste incertain."
+          },
+          {
+            "title": "Justificatifs à contrôler",
+            "text": "Avis d'imposition, justificatifs de domicile, extraits Kbis : les informations sont lues puis comparées entre elles. Une incohérence part chez une personne pour vérification."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Travaille dans tous vos outils",
-          "text": "Lit vos e-mails, documents, tableurs et logiciels métier en une seule passe."
-        },
-        {
-          "title": "Demande avant tout envoi",
-          "text": "Une personne valide chaque message, paiement ou mise à jour qui sort de l'entreprise."
-        },
-        {
-          "title": "Chaque chiffre relié à sa source",
-          "text": "Chaque nombre du résultat renvoie au fichier ou à l'enregistrement d'où il vient."
-        },
-        {
-          "title": "Planifié ou à la demande",
-          "text": "Tourne chaque matin, à chaque fin de mois, ou quand quelqu'un le lui demande."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Revue documentaire pour une due diligence",
-          "text": "Lit chaque fichier d'une data room, extrait les clauses clés de chaque contrat et liste les risques, avec un lien vers la page où chacun apparaît."
-        },
-        {
-          "title": "Factures rapprochées des commandes",
-          "text": "Lit les factures fournisseurs dès leur arrivée, les rapproche des bons de commande et des bons de livraison, et signale celles qui ne collent pas."
-        },
-        {
-          "title": "Reporting mensuel",
-          "text": "Rassemble les chiffres de vos fichiers comptables, commerciaux et RH, monte le reporting du mois dans votre format et indique d'où vient chaque chiffre."
-        },
-        {
-          "title": "Qualification des prospects",
-          "text": "Se renseigne sur chaque nouvelle demande, la note selon vos critères, met à jour votre suivi commercial et rédige une première réponse, qu'une personne envoie."
-        }
-      ],
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, d'un échantillon de vos documents jusqu'à la saisie automatique au quotidien.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "Nous recensons avec vos équipes les documents que vous recevez, leurs volumes et le temps passé à les saisir, puis nous choisissons ceux à traiter en premier."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Nous décidons ensemble de ce qui part directement dans vos outils et de ce qui passe d'abord par une personne. Chaque donnée lue porte un niveau de confiance : en dessous du seuil fixé, quelqu'un vérifie."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Le POC, une première version testée en conditions réelles, tourne sur un échantillon de vos vrais documents : vous connaissez la fiabilité avant d'aller plus loin. Ensuite, nous branchons l'extraction sur votre ERP, votre CRM ou votre logiciel comptable."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous formons les personnes qui valident les cas douteux, suivons la fiabilité dans la durée et ajustons quand vos documents changent de présentation. Le RGPD et l'AI Act sont cadrés dès le départ."
+          }
+        ]
+      },
       "faq": {
-        "title": "Questions sur les agents IA",
+        "title": "Questions sur l'extraction de documents",
         "items": [
           {
-            "question": "Quelle différence entre un agent et un chatbot ?",
-            "answer": "Un chatbot répond à des questions. Un agent mène une tâche étape par étape : il rassemble les documents, vérifie les chiffres dans vos systèmes et prépare le résultat, par exemple un brouillon d'écriture comptable ou un rapport, qu'une personne valide."
+            "question": "Par où commencer ?",
+            "answer": "Par le type de document que vos équipes ressaisissent le plus. Lors d'un premier appel de 30 minutes, nous regardons vos volumes avec vous et vous disons franchement si l'extraction automatique vaut la peine."
           },
           {
-            "question": "Et si l'agent se trompe ?",
-            "answer": "Il est conçu pour que les erreurs soient repérées avant d'avoir des conséquences. L'agent ne peut faire que ce que nous lui permettons, chaque chiffre renvoie à sa source et une personne valide tout ce qui sort de l'entreprise. Avant la remise, une personne extérieure à l'équipe de développement le teste sur des cas réels tirés de vos propres fichiers."
+            "question": "Comment connaître la fiabilité avant de se lancer ?",
+            "answer": "Avant de développer quoi que ce soit, nous faisons lire un échantillon de vos documents réels et comparons chaque donnée extraite à la bonne réponse. Vous savez à quoi vous attendre, type de document par type de document, avant de décider de la suite."
           },
           {
-            "question": "Combien de temps avant qu'un premier agent tourne ?",
-            "answer": "Nous visons une première version opérationnelle sur un processus en un mois, et une mise en production en trois mois environ. Cela dépend surtout de la facilité à connecter vos systèmes et de la qualité de vos données."
+            "question": "L'IA sait-elle lire l'écriture manuscrite ?",
+            "answer": "Souvent, oui. L'OCR seul a du mal avec l'écriture à la main, les modèles d'IA récents s'en sortent bien mieux, surtout sur une photo nette. Le résultat varie d'un document à l'autre : c'est pourquoi nous testons sur les vôtres et qu'une personne reprend chaque lecture incertaine."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
+            "answer": "Le nombre de types de documents, leur difficulté de lecture, les volumes et les outils à connecter. Une facture imprimée coûte moins cher à traiter qu'un formulaire manuscrit. Une première version peut aller vite : pour une start-up qui édite un CRM, nous avons construit un agent de lecture de documents en une semaine, en partant de zéro."
+          },
+          {
+            "question": "Est-ce que ça fonctionne avec nos outils actuels ?",
+            "answer": "Oui. Nous envoyons les données là où vos équipes travaillent déjà : logiciel comptable, ERP, CRM ou simple tableur partagé. Vous gardez vos logiciels."
+          },
+          {
+            "question": "Où vont nos documents ?",
+            "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. Pour les documents sensibles, comme les contrats ou les pièces d'identité, nous choisissons le modèle et l'hébergement en conséquence, et fixons avec vous la durée de conservation."
           }
         ]
       }
     },
-    "chatbots": {
-      "title": "Chatbots et assistants",
-      "metaTitle": "Chatbots IA et assistants internes pour votre entreprise",
-      "summary": "Des assistants qui répondent à vos clients ou à vos équipes à partir de vos propres documents, jour et nuit, et passent la main à une personne quand il le faut.",
-      "intro": "Votre équipe répond chaque jour aux mêmes questions, à partir des mêmes documents. Nous construisons des assistants qui s'appuient sur vos procédures, vos manuels et vos données, montrent d'où vient chaque réponse et passent la main à une personne quand il le faut.",
-      "demo": {
-        "label": "Démo",
-        "question": "Mon ordinateur portable ne se connecte plus au VPN depuis ce matin. Vous pouvez m'aider ?",
-        "toolsRunning": "Je regarde…",
-        "toolsDone": "3 outils utilisés",
-        "tools": [
-          {
-            "name": "search_it_guide",
-            "summary": "Recherche des erreurs de connexion VPN dans le guide informatique",
-            "args": {
-              "query": "le VPN ne se connecte pas"
-            },
-            "result": {
-              "document": "Guide informatique 2026.pdf",
-              "section": "5.3 Erreurs de connexion VPN",
-              "page": 42
-            }
-          },
-          {
-            "name": "check_account",
-            "summary": "Vérification de votre compte",
-            "args": {
-              "employee": "E-1042"
-            },
-            "result": {
-              "vpn_access": "actif",
-              "password": "expiré hier"
-            }
-          },
-          {
-            "name": "create_ticket",
-            "summary": "Ticket IT-2318 ouvert par précaution",
-            "args": {
-              "topic": "VPN",
-              "priority": "normale"
-            },
-            "result": {
-              "ticket": "IT-2318",
-              "status": "ouvert"
-            }
-          }
-        ],
-        "answer": "Votre accès VPN fonctionne, mais votre mot de passe a expiré hier. Réinitialisez-le avec le lien de la section 5.3 du guide informatique, puis reconnectez-vous. J'ai ouvert le ticket IT-2318 au cas où le problème persisterait.",
-        "source": "Guide informatique 2026, page 42"
-      },
-      "levels": {
-        "title": "Du chatbot à l'agent, puis au spécialiste",
-        "intro": "Un chatbot répond aux questions. Connecté à vos outils, il devient un agent qui passe à l'action. Doté de compétences, il accomplit des tâches précises comme votre équipe les fait.",
+    "mcp": {
+      "title": "Model Context Protocol (MCP)",
+      "metaTitle": "Model Context Protocol (MCP) pour les PME",
+      "summary": "Reliez votre CRM, votre ERP et vos documents à l'IA avec des accès contrôlés : elle répond à partir de vos vraies données, pas de suppositions.",
+      "intro": "Le MCP est une norme ouverte qui sert de prise commune entre un assistant IA et vos logiciels : CRM, ERP, bases de données, documents. Nous construisons ces connexions pour que l'IA travaille sur vos vraies données, avec uniquement les droits que vous lui donnez.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets de ce que l'IA peut faire une fois reliée à vos outils, dans les limites que vous fixez.",
         "items": [
           {
-            "label": "Chatbot",
-            "title": "Répond à partir de vos documents",
-            "text": "Il lit vos documents et répond avec des mots simples, en donnant la source de chaque réponse.",
-            "examples": [
-              {
-                "title": "Manuel RH",
-                "text": "« Combien de jours de congé puis-je reporter sur l'année prochaine ? »"
-              },
-              {
-                "title": "Contrats",
-                "text": "« Quel préavis nous laisse notre contrat fournisseur ? »"
-              },
-              {
-                "title": "Manuels",
-                "text": "« Que signifie l'erreur E42 sur la machine d'emballage ? »"
-              }
-            ]
+            "title": "Historique d'un client",
+            "text": "Un commercial demande où en est un client. L'assistant consulte le CRM et résume les derniers échanges, devis et commandes en quelques lignes."
           },
           {
-            "label": "Agent",
-            "title": "Connecté à vos outils",
-            "text": "Relié aux logiciels que vous utilisez déjà, il va chercher l'information et agit, uniquement dans les limites que vous fixez.",
-            "examples": [
-              {
-                "title": "Boutique en ligne",
-                "text": "Retrouve la commande d'un client et lui indique quand elle arrivera."
-              },
-              {
-                "title": "Agenda",
-                "text": "Cale une réunion sur un créneau libre et envoie l'invitation."
-              },
-              {
-                "title": "Support",
-                "text": "Ouvre un ticket avec la conversation jointe."
-              },
-              {
-                "title": "Base clients",
-                "text": "Enregistre une nouvelle demande avec les coordonnées du contact et l'objet de sa demande."
-              }
-            ]
+            "title": "Stocks et délais",
+            "text": "L'assistant lit votre ERP pour répondre sur un stock, un délai de livraison ou l'état d'une commande. Il consulte, il ne modifie rien."
           },
           {
-            "label": "Spécialiste",
-            "title": "Formé grâce à des compétences",
-            "text": "Une compétence est un ensemble d'instructions écrites, parfois accompagnées de modèles ou de petits programmes, qui apprend à l'assistant une tâche précise, faite de la même façon à chaque fois.",
-            "examples": [
-              {
-                "title": "Code",
-                "text": "Écrit et lance un petit programme qui compare deux tableurs de factures et liste celles qui ne correspondent pas."
-              },
-              {
-                "title": "Votre style maison",
-                "text": "Répond aux clients comme votre équipe : formel en français, court sur WhatsApp, sans jamais promettre de date de livraison."
-              },
-              {
-                "title": "Lecture de contrats",
-                "text": "Parcourt un contrat fournisseur et rassemble sur une page les conditions de paiement, le préavis, les pénalités et la date de renouvellement."
-              },
-              {
-                "title": "Rapport hebdomadaire",
-                "text": "Transforme l'export des ventes en rapport du lundi, avec les mêmes rubriques et les mêmes graphiques chaque semaine."
-              }
-            ]
+            "title": "Recherche dans vos documents",
+            "text": "Contrats, procédures, fiches produits : l'IA retrouve le bon passage et cite sa source. Le MCP se combine ici avec le RAG, une méthode qui va chercher les extraits utiles avant de répondre."
+          },
+          {
+            "title": "Mises à jour encadrées",
+            "text": "Créer une tâche, compléter une fiche, préparer un brouillon d'e-mail : l'IA écrit dans vos outils seulement là où vous l'autorisez, avec votre validation pour les actions sensibles."
+          },
+          {
+            "title": "Vos outils maison connectés",
+            "text": "Votre logiciel interne ou votre API maison devient accessible à l'IA grâce à un serveur MCP dédié, sans réécrire le logiciel."
+          },
+          {
+            "title": "Chiffres à la demande",
+            "text": "Le dirigeant demande le chiffre d'affaires du mois par agence. L'assistant interroge la base en lecture seule et répond avec les chiffres et leur provenance."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Répond à partir de vos documents",
-          "text": "L'assistant ne répond qu'à partir des sources que vous validez."
-        },
-        {
-          "title": "Cite ses sources",
-          "text": "Chaque réponse renvoie au document dont elle provient."
-        },
-        {
-          "title": "Passe la main à une personne",
-          "text": "Les demandes sensibles ou floues sont transmises à votre équipe."
-        },
-        {
-          "title": "Disponible jour et nuit",
-          "text": "Sur votre site, sur votre intranet ou dans vos messageries."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Des réponses tirées de longs documents",
-          "text": "Interrogez en langage courant un appel d'offres de 300 pages, un contrat ou un manuel technique. La réponse arrive en quelques secondes avec la page d'où elle vient : vous pouvez vérifier."
-        },
-        {
-          "title": "Support informatique pour vos équipes",
-          "text": "Guide chacun pour réinitialiser un mot de passe ou régler un souci de VPN ou d'imprimante, vérifie son compte et ouvre un ticket quand un technicien doit intervenir."
-        },
-        {
-          "title": "Un chatbot sur votre site",
-          "text": "Renseigne les visiteurs à toute heure sur vos produits, vos prix, la livraison et vos horaires d'ouverture, et transmet les demandes sérieuses à votre équipe commerciale avec la conversation jointe."
-        },
-        {
-          "title": "Un assistant interne pour votre entreprise",
-          "text": "Un seul endroit où vos équipes posent leurs questions sur les congés, les notes de frais, les règles RH et le fonctionnement de l'entreprise, avec des réponses tirées de votre manuel et de votre intranet."
-        }
-      ],
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du choix des outils à connecter jusqu'à l'usage quotidien par vos équipes.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "Nous listons avec vous les questions et les tâches à confier à l'IA, les outils qu'elle doit consulter et les données qui doivent rester hors de sa portée."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Nous décrivons le contexte métier utile à l'IA : votre vocabulaire, vos règles, qui a le droit de voir quoi. Pour chaque outil, nous fixons la lecture seule, l'écriture ou une validation humaine avant d'agir."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Nous branchons d'abord une ou deux sources et vérifions les réponses sur des cas réels. Chaque nouvel outil s'ajoute ensuite comme un module, sans tout reconstruire."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous formons vos équipes, enregistrons chaque accès de l'IA à vos données et suivons l'usage, les coûts et la qualité : RGPD, AI Act, droits revus régulièrement."
+          }
+        ]
+      },
       "faq": {
-        "title": "Questions sur les chatbots et les assistants d'entreprise",
+        "title": "Questions sur le Model Context Protocol",
         "items": [
           {
-            "question": "Que se passe-t-il quand l'assistant ne connaît pas la réponse ?",
-            "answer": "Il le dit au lieu de deviner, et transmet la question à la bonne personne avec la conversation jointe. Ces questions sans réponse vous montrent aussi quels documents manquent ou ne sont plus à jour."
+            "question": "Par où commencer ?",
+            "answer": "Par une question que vos équipes posent souvent et dont la réponse se trouve dans un ou deux outils. Lors d'un premier appel de 30 minutes, nous regardons avec vous quelles sources connecter en premier et lesquelles peuvent attendre."
           },
           {
-            "question": "Comment les réponses restent-elles à jour quand nos documents changent ?",
-            "answer": "L'assistant lit les dossiers et les systèmes où vos documents se trouvent déjà. Quand une procédure ou une grille tarifaire y est mise à jour, la réponse suivante s'appuie sur la nouvelle version, et vous pouvez retirer de ses sources les documents qui ne servent plus."
+            "question": "Est-ce que ça fonctionne avec nos outils ?",
+            "answer": "Avec la plupart, dès qu'ils disposent d'une API ou d'une base de données accessible. Certains éditeurs proposent déjà un serveur MCP, sinon nous en développons un. Le MCP étant une norme ouverte, vos connexions restent valables si vous changez de modèle d'IA."
           },
           {
-            "question": "Peut-il répondre en arabe, en français et en anglais ?",
-            "answer": "Les modèles d'IA actuels gèrent les trois langues, et vos clients peuvent en général écrire dans celle qu'ils préfèrent. Avant la mise en ligne, nous testons avec de vraies questions de vos clients et de vos équipes, y compris en dialecte local et avec des langues mélangées."
+            "question": "L'IA peut-elle modifier nos données ?",
+            "answer": "Seulement si vous le décidez. Par défaut, nous ouvrons les accès en lecture seule. L'écriture s'ouvre outil par outil, sur un périmètre précis, avec une validation humaine pour les actions sensibles."
+          },
+          {
+            "question": "Où vont nos données ?",
+            "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. L'IA ne voit que ce que le serveur MCP lui transmet, et chaque accès est enregistré."
+          },
+          {
+            "question": "Est-ce que l'IA se trompera moins ?",
+            "answer": "Moins souvent, parce qu'elle répond à partir de vos données au lieu de deviner. Le risque ne disparaît pas pour autant : nous testons sur des cas réels, demandons à l'IA de citer ses sources et gardons une vérification humaine là où une erreur coûte cher."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
+            "answer": "Surtout le nombre d'outils à relier et l'état de leurs accès. Un outil avec une API documentée se connecte vite, un vieux logiciel sans API demande plus de travail. Nous suivons de près l'évolution du protocole, ce qui nous permet de vous dire tôt ce qui sera simple et ce qui ne le sera pas."
           }
         ]
-      },
-      "assistant": {
-        "name": "Votre assistant",
-        "tagline": "Répond à partir de vos documents et de vos outils.",
-        "prompt": "Comment puis-je vous aider ?",
-        "chips": [
-          "Résumer ce contrat",
-          "Réinitialiser mon mot de passe",
-          "Où en est ma commande ?",
-          "Mon solde de congés"
-        ],
-        "placeholder": "Posez votre question..."
       }
     },
-    "crm-development": {
-      "title": "Développement CRM",
-      "metaTitle": "Développement et personnalisation de CRM",
-      "summary": "Des CRM sur mesure, ou des CRM comme HubSpot, Salesforce et Odoo configurés pour votre équipe : vos commerciaux ont une vue claire de chaque client et de chaque affaire.",
-      "intro": "Un CRM réunit tous vos clients, contacts et affaires au même endroit. Nous configurons des CRM comme HubSpot, Salesforce ou Odoo, ou nous construisons le vôtre quand votre façon de vendre n'y trouve pas sa place.",
-      "clients": {
-        "title": "Les équipes pour qui nous avons construit un CRM",
-        "logos": [
-          "docutrad"
-        ],
-        "caseStudy": {
-          "label": "Lire l'étude de cas : d'un VPS fragile à un cloud prêt pour la production",
-          "href": "/portfolio/crm-startup-cloud-migration"
-        }
-      },
-      "system": {
-        "title": "Architecture",
-        "label": "Exemple",
-        "hint": "Cliquez sur un élément pour voir avec quoi il peut être construit.",
-        "close": "Fermer",
-        "failedLabel": "Échec",
-        "stackLabel": "Construit, par exemple, avec",
-        "legend": {
-          "call": "Requête",
-          "answer": "Réponse",
-          "needs": "Arrière-plan",
-          "failed": "Nouvel essai"
-        },
-        "nodes": {
-          "cloud": {
-            "name": "Votre cloud",
-            "role": "Hébergement",
-            "badge": "Infrastructure",
-            "text": "Tout ce qui s'y trouve tourne dans votre propre compte cloud ou votre centre de données, dans le pays de votre choix, avec sauvegardes et supervision."
+    "predictive-systems": {
+      "title": "Systèmes prédictifs",
+      "metaTitle": "Systèmes prédictifs et prévisions sur mesure pour PME",
+      "summary": "Anticipez vos ventes, vos stocks ou votre trésorerie à partir de votre historique, avec des prévisions expliquées et livrées dans vos outils.",
+      "intro": "Nous construisons des modèles qui apprennent de votre historique pour anticiper la demande, les départs de clients, les besoins de stock ou les tensions de trésorerie. Chaque prévision arrive dans vos outils avec ses raisons, et nous vous disons franchement quand vos données ne suffisent pas encore.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets de décisions que vos données peuvent éclairer à l'avance.",
+        "items": [
+          {
+            "title": "Prévision des ventes",
+            "text": "Les ventes des prochaines semaines sont estimées par produit ou par agence, en tenant compte des saisons et de vos promotions. Vos achats et vos plannings partent d'une estimation chiffrée."
           },
-          "client": {
-            "name": "Client",
-            "role": "Application web et mobile",
-            "badge": "Frontend",
-            "text": "Les écrans que votre équipe utilise dans un navigateur ou sur un téléphone, construits avec un framework que vos développeurs connaissent."
+          {
+            "title": "Stocks au bon niveau",
+            "text": "Le modèle anticipe les ruptures et les surstocks. Il propose des quantités à commander, et votre acheteur tranche."
           },
-          "api": {
-            "name": "Serveur",
-            "role": "Règles métier",
-            "badge": "Backend",
-            "text": "Vérifie chaque requête, applique vos règles (qui peut modifier une affaire, quelles remises demandent une validation) et échange avec toutes les autres briques."
+          {
+            "title": "Clients sur le départ",
+            "text": "Les clients dont l'activité ralentit sont repérés tôt, avec les signaux qui ont pesé dans l'alerte. Votre équipe commerciale sait qui appeler en premier."
           },
-          "auth": {
-            "name": "Auth",
-            "role": "Connexion et rôles",
-            "badge": "Sécurité",
-            "text": "Comptes d'entreprise, connexion en deux étapes et rôles qui décident qui voit quels clients et quels chiffres."
+          {
+            "title": "Trésorerie prévisionnelle",
+            "text": "Encaissements probables, retards de paiement habituels, dépenses récurrentes : vous voyez venir les semaines tendues avant qu'elles arrivent."
           },
-          "jobs": {
-            "name": "File d'attente",
-            "role": "Tâches en arrière-plan",
-            "badge": "Automatisation",
-            "text": "Le travail qui se fait tout seul : synchroniser les e-mails et les factures, envoyer des rappels, réessayer quand un autre système ne répond pas."
+          {
+            "title": "Maintenance anticipée",
+            "text": "À partir de l'historique des pannes et des relevés de vos machines ou véhicules, le modèle signale les équipements à contrôler avant l'arrêt."
           },
-          "sql": {
-            "name": "Base de données",
-            "role": "Clients et affaires",
-            "badge": "Données",
-            "text": "Le registre principal des clients, des contacts, des affaires et de leur historique, avec chaque modification enregistrée."
-          },
-          "agent": {
-            "name": "Agent IA",
-            "role": "Fait le travail répétitif",
-            "badge": "IA",
-            "text": "Prépare les revues, rédige les relances et répond aux questions, avec les seules données et actions qui lui sont confiées, et vous demande votre accord avant tout envoi."
-          },
-          "rag": {
-            "name": "RAG",
-            "role": "Trouve les bonnes informations",
-            "badge": "IA",
-            "text": "Recherche documentaire : avant de répondre, l'IA consulte les documents et les fiches utiles. Les réponses viennent de vos données et citent leur source."
-          },
-          "vector": {
-            "name": "Base vectorielle",
-            "role": "Recherche par le sens",
-            "badge": "Données",
-            "text": "Stocke les documents sous une forme interrogeable par le sens : « réclamation pour livraison en retard » trouve aussi « commande arrivée une semaine après la date »."
-          },
-          "graph": {
-            "name": "Base graphe",
-            "role": "Qui est lié à qui",
-            "badge": "Données",
-            "text": "Stocke les relations : quel contact travaille où, qui a recommandé qui, quelles affaires ont un fournisseur en commun. Utile quand les liens comptent autant que les fiches."
-          },
-          "llm": {
-            "name": "LLM",
-            "role": "Le modèle de langage",
-            "badge": "IA",
-            "text": "Le modèle qui lit et écrit le texte. Choisi selon la qualité, le coût et l'endroit où vos données ont le droit d'aller, et remplaçable sans reconstruire le reste."
-          },
-          "integrations": {
-            "name": "Intégrations",
-            "role": "Vos autres outils",
-            "badge": "Intégration",
-            "text": "E-mail, facturation, messagerie et paiements connectés : personne ne saisit deux fois la même chose."
+          {
+            "title": "Risque client et impayés",
+            "text": "Chaque nouveau client ou grosse commande reçoit une note de risque expliquée. Vous décidez d'un acompte ou d'un délai de paiement en connaissance de cause."
           }
-        }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, de la première question posée à vos données jusqu'aux prévisions utilisées chaque semaine.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "Nous choisissons avec vous la décision à éclairer, puis nous examinons vos données : historique, volume, qualité. Pas assez de données ? Nous vous le disons, et vous indiquons quoi collecter d'abord."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Nous préparons et nettoyons vos données, puis définissons qui reçoit chaque prévision, à quel moment, et ce qu'il en fait."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Le modèle est d'abord testé sur des périodes passées et comparé à votre méthode actuelle. S'il fait mieux, ses prévisions arrivent dans vos tableaux de bord et sous forme d'alertes dans vos outils."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous apprenons à vos équipes à lire une prévision et sa marge d'erreur, et nous surveillons le modèle quand votre activité change. Il est réentraîné quand ses prévisions s'écartent de la réalité."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur les systèmes prédictifs",
+        "items": [
+          {
+            "question": "Par où commencer ?",
+            "answer": "Par une décision que vous prenez souvent et qui coûte cher quand elle est mauvaise : une commande fournisseur, des renforts saisonniers, un client à relancer. Lors d'un premier appel de 30 minutes, nous regardons avec vous si vos données permettent de la prévoir."
+          },
+          {
+            "question": "Avons-nous assez de données ?",
+            "answer": "Souvent plus que vous ne le pensez : ventes, factures, CRM, tableurs. Il faut en général un historique qui couvre plusieurs cycles de votre activité, par exemple au moins deux saisons complètes si elle est saisonnière. Sinon, nous vous le disons avant de lancer quoi que ce soit."
+          },
+          {
+            "question": "Quelle fiabilité attendre ?",
+            "answer": "Une prévision n'est jamais une certitude. Nous la livrons avec une fourchette et les facteurs qui l'expliquent, puis nous mesurons régulièrement l'écart avec la réalité. Si le modèle ne fait pas mieux que votre méthode actuelle, nous ne le déployons pas."
+          },
+          {
+            "question": "Faut-il changer d'outils ?",
+            "answer": "Non. Les prévisions arrivent dans votre ERP, votre CRM, vos tableurs ou un tableau de bord simple, et les alertes par e-mail ou sur votre messagerie d'équipe."
+          },
+          {
+            "question": "Où vont nos données ?",
+            "answer": "Nous privilégions un hébergement en Europe et limitons les données au strict nécessaire. Quand des données clients sont en jeu, nous vérifions avec vous le cadre RGPD avant de commencer."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
+            "answer": "Surtout l'état de vos données : dispersées dans plusieurs fichiers, incomplètes ou déjà propres. Le nombre de sources à relier et d'outils où afficher les prévisions compte aussi. Après le premier appel, nous vous donnons une estimation précise."
+          }
+        ]
+      }
+    },
+    "computer-vision": {
+      "title": "Computer vision",
+      "metaTitle": "Computer vision et analyse d'images par l'IA pour les PME",
+      "summary": "Vos photos et vidéos deviennent des données : défauts repérés, plaques et compteurs lus, stocks comptés. Votre équipe garde la main sur les décisions.",
+      "intro": "La computer vision, ou vision par ordinateur, apprend à un logiciel à reconnaître ce qu'il voit sur une photo ou une vidéo. Nous nous en servons pour tirer de vos images une information précise, un défaut, un chiffre, un comptage, qui déclenche ensuite une action dans vos outils.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets de tâches où l'image fait gagner du temps, pendant que votre équipe garde la main sur les décisions.",
+        "items": [
+          {
+            "title": "Contrôle qualité",
+            "text": "Une caméra sur la ligne repère les rayures, les pièces mal montées ou les étiquettes de travers. La pièce douteuse est écartée et photographiée pour votre responsable qualité."
+          },
+          {
+            "title": "Relevé de compteurs",
+            "text": "Vos techniciens prennent le compteur d'eau, de gaz ou d'électricité en photo. L'index part directement dans votre outil de suivi, sans recopie à la main."
+          },
+          {
+            "title": "Plaques et étiquettes",
+            "text": "À l'entrée d'un parking ou d'un quai de chargement, les plaques d'immatriculation sont lues. Sur un colis, la référence et le numéro de lot sont relevés automatiquement."
+          },
+          {
+            "title": "Vérification de photos",
+            "text": "Photos d'état des lieux, de chantier ou de sinistre, pièces d'identité : l'IA vérifie que l'image est nette, complète et cohérente avec le dossier avant qu'une personne la valide."
+          },
+          {
+            "title": "Sécurité sur site",
+            "text": "Casque ou gilet oublié, zone interdite franchie, allée encombrée : une alerte part vers le responsable du site. Nous cadrons ce dispositif avec vous pour respecter le RGPD et vos salariés."
+          },
+          {
+            "title": "Comptage des stocks",
+            "text": "Une photo d'un rayon, d'une palette ou d'une travée suffit pour compter les articles et repérer les ruptures. Vous faites l'inventaire plus souvent, en y passant moins d'heures."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, de la première image analysée jusqu'à l'usage au quotidien sur le terrain.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "Nous partons d'un problème concret, comme un défaut qui échappe au contrôle ou un inventaire trop long, et vérifions avec vous que l'image suffit pour y répondre."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Nous définissons qui reçoit l'alerte, ce que le système fait seul et ce qu'une personne confirme. Nous tenons compte des conditions réelles : éclairage, angle de prise de vue, caméras déjà en place."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Un POC, c'est-à-dire un premier test en conditions réelles, tourne sur vos propres photos et vidéos : nous mesurons ce qui est bien reconnu et ce qui ne l'est pas. Si les résultats tiennent, nous déployons sur vos sites et dans vos outils."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous formons les équipes qui traitent les alertes, suivons la fiabilité dans le temps et réentraînons le modèle quand vos produits ou vos locaux changent. Le RGPD et l'AI Act sont cadrés, surtout dès que des personnes apparaissent à l'image."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur la computer vision",
+        "items": [
+          {
+            "question": "Par où commencer ?",
+            "answer": "Par une tâche où quelqu'un regarde aujourd'hui des images ou des objets pour décider : contrôler, compter, lire. Lors d'un premier appel de 30 minutes, nous vous disons franchement si la vision par ordinateur est la bonne réponse, ou si un capteur ou une règle simple suffit."
+          },
+          {
+            "question": "Faut-il acheter de nouvelles caméras ?",
+            "answer": "Pas forcément. Un smartphone ou vos caméras actuelles suffisent souvent pour commencer. Nous vérifions la qualité de vos images pendant le test et ne recommandons du matériel que si les résultats l'exigent."
+          },
+          {
+            "question": "Faut-il entraîner un modèle sur mesure ?",
+            "answer": "Pas toujours. Pour lire un texte ou reconnaître des objets courants, des modèles existants font souvent l'affaire. Pour un défaut propre à vos produits, nous entraînons un modèle avec vos propres images, y compris des exemples de pièces défectueuses."
+          },
+          {
+            "question": "Que se passe-t-il quand le système se trompe ?",
+            "answer": "Cela arrivera, comme à toute personne qui inspecte. Nous mesurons le taux d'erreur avant la mise en service, fixons un seuil de confiance en dessous duquel une personne vérifie, et suivons les résultats dans la durée."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
+            "answer": "Surtout la préparation des images : combien il en faut, et s'il faut les annoter, c'est-à-dire indiquer à la main ce que chacune contient. Viennent ensuite le nombre de sites, le matériel et les outils à connecter. Un cas bien délimité, sur des photos que vous avez déjà, avance bien plus vite qu'une ligne de production à équiper."
+          },
+          {
+            "question": "Et les images où apparaissent des personnes ?",
+            "answer": "Nous privilégions un hébergement en Europe, ou un traitement directement sur place quand c'est possible. Dès qu'une personne ou une plaque est à l'image, nous ne gardons que le nécessaire, pouvons flouter visages et plaques, et cadrons l'usage avec vous selon le RGPD et l'AI Act."
+          }
+        ]
+      }
+    },
+    "ai-sprint": {
+      "title": "IA Sprint",
+      "metaTitle": "IA Sprint pour PME : cas d'usage IA et feuille de route",
+      "summary": "Une journée avec vos équipes pour repérer les tâches où l'IA fait gagner du temps, les chiffrer, les classer, et repartir avec une feuille de route.",
+      "intro": "En une journée, sur place ou à distance, nous passons vos opérations en revue avec les personnes qui les font tourner. Vous repartez avec des cas d'usage IA chiffrés, classés par priorité, et un plan clair pour la suite.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Les temps forts de la journée, et ce qui vous reste entre les mains une fois qu'elle est finie.",
+        "items": [
+          {
+            "title": "Ateliers avec vos équipes",
+            "text": "Direction, équipes métiers et informatique selon le sujet : nous écoutons celles et ceux qui font le travail chaque jour, dans vos locaux ou en visio."
+          },
+          {
+            "title": "Repérage des tâches lourdes",
+            "text": "Saisies en double, gros volumes de documents, erreurs qui reviennent, relances à la main : nous notons ce qui coûte le plus de temps à vos équipes."
+          },
+          {
+            "title": "Cas d'usage chiffrés",
+            "text": "Pour chaque piste, nous estimons le gain attendu, la faisabilité, les risques sur la qualité et les données, et un ordre de grandeur du coût."
+          },
+          {
+            "title": "Priorités claires",
+            "text": "Les pistes sont classées selon le gain et l'effort. Certaines passent en tête, d'autres attendent, et quelques-unes sont écartées, avec la raison."
+          },
+          {
+            "title": "Feuille de route écrite",
+            "text": "Un document de synthèse reprend les cas retenus, leur ordre, les données nécessaires et les premières étapes concrètes."
+          },
+          {
+            "title": "Restitution à la direction",
+            "text": "Nous présentons les conclusions aux décideurs et répondons à leurs questions. La feuille de route vous appartient : vous la menez en interne, avec un autre prestataire ou avec nous."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "L'IA Sprint couvre la première étape. Les trois suivantes viennent seulement si vous décidez d'aller plus loin.",
+        "points": [
+          {
+            "title": "Diagnostic IA",
+            "text": "C'est la journée elle-même : nous regardons vos opérations avec vos équipes et repérons les tâches où l'IA peut apporter un gain mesurable."
+          },
+          {
+            "title": "Transformation du processus",
+            "text": "Pour les cas retenus, nous décrivons le futur déroulé du travail : ce que l'IA prend en charge, et ce qu'une personne valide."
+          },
+          {
+            "title": "Du POC à l'échelle",
+            "text": "Si vous le souhaitez, nous testons le premier cas d'usage sur vos données réelles avec un POC, une version d'essai limitée. Nous déployons seulement quand les résultats le justifient."
+          },
+          {
+            "title": "Formation et gouvernance",
+            "text": "Nous formons vos équipes et posons les règles d'usage dès le départ : données autorisées, RGPD, AI Act, validation humaine."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur l'IA Sprint",
+        "items": [
+          {
+            "question": "Combien coûte un IA Sprint ?",
+            "answer": "Le prix dépend du périmètre : nombre d'équipes et de sujets, journée sur place ou à distance, déplacement. Nous le fixons avec vous avant la journée."
+          },
+          {
+            "question": "Sur place ou à distance ?",
+            "answer": "Les deux sont possibles. Sur place, nous voyons vos outils et vos habitudes de travail de près. À distance, la journée se déroule en visio, avec partage d'écran pour regarder vos outils ensemble."
+          },
+          {
+            "question": "Qui doit participer ?",
+            "answer": "Une personne de la direction pour arbitrer, des personnes qui vivent les processus au quotidien, et votre responsable informatique ou votre prestataire quand les données et les outils sont concernés."
+          },
+          {
+            "question": "Faut-il déjà savoir ce qu'on veut faire avec l'IA ?",
+            "answer": "Non. Une intuition suffit, et même aucune idée précise. La journée part de vos tâches réelles, pas de la technologie."
+          },
+          {
+            "question": "Que reçoit-on à la fin ?",
+            "answer": "Une liste de cas d'usage IA chiffrés et classés, avec pour chacun le gain attendu, l'effort et les risques, et une feuille de route écrite."
+          },
+          {
+            "question": "Et après la journée ?",
+            "answer": "Vous décidez. Vous pouvez mener la feuille de route en interne ou avec un autre prestataire. Si vous le souhaitez, nous enchaînons sur un premier prototype, avec un chef de projet Qartmina et des spécialistes choisis pour le sujet."
+          }
+        ]
+      }
+    },
+    "custom-software": {
+      "title": "Logiciel sur mesure",
+      "metaTitle": "Logiciel métier sur mesure pour les PME",
+      "summary": "Des outils internes pensés pour votre façon de travailler : moins de ressaisie, des processus plus clairs et vos données au même endroit.",
+      "intro": "Nous construisons les outils internes dont votre entreprise a besoin quand les logiciels du marché ne suffisent plus : CRM, back-office, application métier. Ils se branchent sur ce que vous utilisez déjà et évoluent avec votre activité.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des exemples concrets d'outils que nous construisons ou adaptons, toujours à partir de la façon dont vos équipes travaillent.",
+        "items": [
+          {
+            "title": "CRM sur mesure",
+            "text": "Fiches clients, étapes de vente, relances et tableaux de bord sont construits autour de votre cycle commercial, et pas l'inverse."
+          },
+          {
+            "title": "ERP et CRM du marché",
+            "text": "Quand une plateforme comme Odoo ou HubSpot couvre l'essentiel, nous la paramétrons et la complétons au lieu de tout réécrire. Le sur-mesure se limite à ce qui compte."
+          },
+          {
+            "title": "Back-office d'administration",
+            "text": "Un seul espace pour gérer clients, commandes, stocks ou contrats, à la place des tableurs qui circulent par e-mail."
+          },
+          {
+            "title": "Connexion à vos outils",
+            "text": "Votre outil échange avec votre ERP, votre CRM ou votre logiciel comptable grâce à leurs API, les interfaces qui permettent à deux logiciels de se parler. Fini la double saisie."
+          },
+          {
+            "title": "Tâches répétitives automatisées",
+            "text": "Création de devis, mise à jour des fiches, alertes, rapports : ce qui suit une règle claire tourne tout seul, et vos équipes s'occupent du reste."
+          },
+          {
+            "title": "Droits d'accès et sécurité",
+            "text": "Chacun voit et modifie seulement ce qui le concerne. Les actions importantes sont tracées, et nous privilégions un hébergement en Europe."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du premier échange jusqu'à un outil qui évolue avec votre entreprise.",
+        "points": [
+          {
+            "title": "Cadrage",
+            "text": "Nous regardons comment vos équipes travaillent aujourd'hui, repérons les ressaisies et les blocages, puis décidons avec vous ce que la première version doit faire."
+          },
+          {
+            "title": "Conception",
+            "text": "Nous dessinons les écrans avec les personnes qui s'en serviront, puis l'architecture : données, droits, liens avec vos outils. Vous validez avant que le développement commence."
+          },
+          {
+            "title": "Développement et mise en ligne",
+            "text": "Nous livrons par étapes courtes, chacune testée sur des cas réels et vérifiée par votre chef de projet Qartmina. La mise en ligne se fait progressivement, pour que votre activité continue."
+          },
+          {
+            "title": "Formation et évolution",
+            "text": "Nous formons vos équipes, corrigeons ce qui doit l'être et assurons la maintenance. L'outil évolue ensuite au rythme de vos besoins."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur le logiciel sur mesure",
+        "items": [
+          {
+            "question": "Par où commencer ?",
+            "answer": "Lors d'un premier appel de 30 minutes, nous regardons avec vous les outils et les contournements que vos équipes utilisent aujourd'hui. Si un logiciel existant comme Odoo ou HubSpot fait l'affaire, nous vous le dirons."
+          },
+          {
+            "question": "Qu'est-ce qui fait varier le coût ?",
+            "answer": "Surtout le nombre d'écrans et de règles métier, le nombre d'outils à connecter et le niveau de sécurité demandé. Nous commençons par une première version resserrée, puis nous ajoutons ce qui sert vraiment."
+          },
+          {
+            "question": "Combien de temps faut-il ?",
+            "answer": "Cela dépend du périmètre. Une première version utilisable peut arriver vite : nous avons construit de zéro, en une semaine, le MVP (une première version réduite à l'essentiel) d'un agent qui traite des documents. Le calendrier précis vous est donné à la fin du cadrage."
+          },
+          {
+            "question": "Est-ce que ça fonctionne avec nos outils actuels ?",
+            "answer": "Oui. Nous connectons l'outil à votre CRM, votre ERP, votre comptabilité ou vos tableurs. Nous pouvons aussi reprendre un outil existant et le faire évoluer par étapes, comme la plateforme d'une start-up du CRM que nous avons migrée vers le cloud."
+          },
+          {
+            "question": "Où sont hébergées nos données ?",
+            "answer": "Nous privilégions un hébergement en Europe, des droits d'accès par rôle et une trace des actions importantes. Le RGPD est pris en compte dès la conception, pas ajouté à la fin."
+          },
+          {
+            "question": "Comment l'outil reste-t-il fiable ?",
+            "answer": "Des tests automatisés vérifient l'outil à chaque modification du code, et chaque livraison passe un contrôle qualité. Une fois l'outil en ligne, nous le surveillons et corrigeons les anomalies dans le cadre de la maintenance."
+          }
+        ]
       },
       "demo": {
         "label": "Démo",
@@ -2372,204 +2531,188 @@
         "title": "Essayez la démo",
         "intro": "Un CRM que nous avons conçu pour montrer notre façon de travailler. Parcourez les écrans, déplacez une affaire, validez l'e-mail de l'agent, filtrez les cas de test."
       },
-      "features": [
-        {
-          "title": "Vos étapes de vente, pas celles par défaut",
-          "text": "Le pipeline suit la façon dont votre équipe remporte vraiment ses affaires, étape par étape."
+      "system": {
+        "title": "Architecture",
+        "label": "Exemple",
+        "hint": "Cliquez sur un élément pour voir avec quoi il peut être construit.",
+        "close": "Fermer",
+        "failedLabel": "Échec",
+        "stackLabel": "Construit, par exemple, avec",
+        "legend": {
+          "call": "Requête",
+          "answer": "Réponse",
+          "needs": "Arrière-plan",
+          "failed": "Nouvel essai"
         },
-        {
-          "title": "Contacts nettoyés et importés",
-          "text": "Anciens tableurs et carnets d'adresses fusionnés, doublons supprimés avant la mise en service."
-        },
-        {
-          "title": "Relié aux e-mails et aux devis",
-          "text": "E-mails, appels et devis sont classés sous le bon client, sans ressaisie."
-        },
-        {
-          "title": "Des rapports fiables pour les responsables",
-          "text": "Pipeline, prévisions et activité de l'équipe dans des tableaux de bord alimentés par les données en temps réel."
-        },
-        {
-          "title": "Rôles et droits d'accès",
-          "text": "Chacun voit les clients et les chiffres que son rôle autorise."
-        },
-        {
-          "title": "Sur tous les écrans",
-          "text": "Le même CRM sur un ordinateur au bureau ou sur un téléphone en déplacement."
-        },
-        {
-          "title": "Dans vos langues",
-          "text": "Arabe, français et anglais, avec une mise en page de droite à gauche quand il le faut."
-        },
-        {
-          "title": "Vos données restent à vous",
-          "text": "Tout est exportable à tout moment et hébergé où vous le choisissez."
-        }
-      ],
-      "faq": {
-        "title": "Questions sur la mise en place et le développement d'un CRM",
-        "items": [
-          {
-            "question": "Faut-il adapter un CRM existant ou construire le nôtre ?",
-            "answer": "La plupart des entreprises ont tout intérêt à configurer un CRM éprouvé, et c'est par là que nous commençons. Un développement sur mesure se justifie quand votre modèle de vente sort de l'ordinaire, ou quand les licences d'une grande équipe coûtent plus cher que le développement. Nous comparons les deux options pour votre situation avant que vous décidiez."
+        "nodes": {
+          "cloud": {
+            "name": "Votre cloud",
+            "role": "Hébergement",
+            "badge": "Infrastructure",
+            "text": "Tout ce qui s'y trouve tourne dans votre propre compte cloud ou votre centre de données, dans le pays de votre choix, avec sauvegardes et supervision."
           },
-          {
-            "question": "Comment faire pour que l'équipe s'en serve vraiment ?",
-            "answer": "Nous impliquons les futurs utilisateurs dès le premier atelier, nous limitons les champs et les étapes au strict nécessaire, et nous les formons sur leurs propres affaires. Les responsables tirent leurs rapports du CRM, ce qui donne à chacun une raison de le tenir à jour."
+          "client": {
+            "name": "Client",
+            "role": "Application web et mobile",
+            "badge": "Frontend",
+            "text": "Les écrans que votre équipe utilise dans un navigateur ou sur un téléphone, construits avec un framework que vos développeurs connaissent."
           },
-          {
-            "question": "Que deviennent nos données clients actuelles ?",
-            "answer": "Nous les exportons, les nettoyons et les importons par étapes, en comparant à chaque étape les volumes et des échantillons avec l'original. Rien d'ancien n'est supprimé avant que vous ayez confirmé que le nouveau système est complet."
+          "api": {
+            "name": "Serveur",
+            "role": "Règles métier",
+            "badge": "Backend",
+            "text": "Vérifie chaque requête, applique vos règles (qui peut modifier une affaire, quelles remises demandent une validation) et échange avec toutes les autres briques."
+          },
+          "auth": {
+            "name": "Auth",
+            "role": "Connexion et rôles",
+            "badge": "Sécurité",
+            "text": "Comptes d'entreprise, connexion en deux étapes et rôles qui décident qui voit quels clients et quels chiffres."
+          },
+          "jobs": {
+            "name": "File d'attente",
+            "role": "Tâches en arrière-plan",
+            "badge": "Automatisation",
+            "text": "Le travail qui se fait tout seul : synchroniser les e-mails et les factures, envoyer des rappels, réessayer quand un autre système ne répond pas."
+          },
+          "sql": {
+            "name": "Base de données",
+            "role": "Clients et affaires",
+            "badge": "Données",
+            "text": "Le registre principal des clients, des contacts, des affaires et de leur historique, avec chaque modification enregistrée."
+          },
+          "agent": {
+            "name": "Agent IA",
+            "role": "Fait le travail répétitif",
+            "badge": "IA",
+            "text": "Prépare les revues, rédige les relances et répond aux questions, avec les seules données et actions qui lui sont confiées, et vous demande votre accord avant tout envoi."
+          },
+          "rag": {
+            "name": "RAG",
+            "role": "Trouve les bonnes informations",
+            "badge": "IA",
+            "text": "Recherche documentaire : avant de répondre, l'IA consulte les documents et les fiches utiles. Les réponses viennent de vos données et citent leur source."
+          },
+          "vector": {
+            "name": "Base vectorielle",
+            "role": "Recherche par le sens",
+            "badge": "Données",
+            "text": "Stocke les documents sous une forme interrogeable par le sens : « réclamation pour livraison en retard » trouve aussi « commande arrivée une semaine après la date »."
+          },
+          "graph": {
+            "name": "Base graphe",
+            "role": "Qui est lié à qui",
+            "badge": "Données",
+            "text": "Stocke les relations : quel contact travaille où, qui a recommandé qui, quelles affaires ont un fournisseur en commun. Utile quand les liens comptent autant que les fiches."
+          },
+          "llm": {
+            "name": "LLM",
+            "role": "Le modèle de langage",
+            "badge": "IA",
+            "text": "Le modèle qui lit et écrit le texte. Choisi selon la qualité, le coût et l'endroit où vos données ont le droit d'aller, et remplaçable sans reconstruire le reste."
+          },
+          "integrations": {
+            "name": "Intégrations",
+            "role": "Vos autres outils",
+            "badge": "Intégration",
+            "text": "E-mail, facturation, messagerie et paiements connectés : personne ne saisit deux fois la même chose."
           }
-        ]
+        }
+      },
+      "clients": {
+        "title": "Les équipes pour qui nous avons construit un CRM",
+        "logos": [
+          "docutrad"
+        ],
+        "caseStudy": {
+          "label": "Lire l'étude de cas : d'un VPS fragile à un cloud prêt pour la production",
+          "href": "/portfolio/crm-startup-cloud-migration"
+        }
       }
     },
-    "erp-crm-setup": {
-      "title": "Mise en place d'ERP et de CRM",
-      "metaTitle": "Mise en place et accompagnement HubSpot, Salesforce et Odoo",
-      "summary": "Nous mettons en place dans votre entreprise les CRM et ERP les plus répandus, comme HubSpot, Salesforce ou Odoo. Nous reprenons vos données, formons votre équipe et restons à vos côtés après la mise en service.",
-      "intro": "Acheter un CRM ou un ERP, c'est facile. Le plus dur, c'est que l'équipe s'en serve. Nous configurons des plateformes comme HubSpot, Salesforce, Zoho ou Odoo selon votre façon de travailler, nous formons vos équipes et nous restons avec vous après la mise en service.",
-      "stats": {
-        "title": "Ce que change un CRM bien utilisé",
-        "intro": "Des chiffres publiés par les éditeurs et par des analystes indépendants. Le constat ne change pas : le gain vient quand l'équipe s'en sert vraiment.",
-        "note": "La plupart de ces chiffres viennent des données des éditeurs eux-mêmes ou d'études qu'ils ont financées (seul Nucleus Research est indépendant du produit). Ils montrent ce qui est possible, ce n'est pas une promesse : les résultats dépendent de la mise en place et de l'adoption par l'équipe.",
-        "guide": {
-          "label": "Comment choisir un CRM",
-          "href": "/blog/how-to-choose-a-crm"
-        },
+    "saas": {
+      "title": "Plateforme SaaS",
+      "metaTitle": "Développement de plateforme SaaS, du MVP à la croissance",
+      "summary": "Nous concevons et construisons votre logiciel vendu en ligne par abonnement, de la première version vendable à une plateforme qui suit votre croissance.",
+      "intro": "Vous voulez vendre un logiciel en ligne, par abonnement, à vos propres clients. Nous vous aidons à sortir une première version qui se vend, puis à la faire grandir sans tout reconstruire.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Les briques concrètes d'un SaaS, que nous construisons avec vous, de la première version aux évolutions après le lancement.",
         "items": [
           {
-            "value": "94 %",
-            "label": "d'affaires conclues en plus après six mois sur HubSpot Sales Hub, par rapport au premier trimestre du client lui-même (81 528 clients).",
-            "source": "HubSpot ROI Report 2025",
-            "url": "https://www.hubspot.com/roi"
+            "title": "Première version vendable",
+            "text": "Nous définissons avec vous le MVP : le plus petit produit que vos premiers clients accepteront de payer. Le reste attend leurs retours."
           },
           {
-            "value": "4 fois",
-            "label": "plus d'affaires conclues chez les clients HubSpot accompagnés par un partenaire d'intégration que chez les autres.",
-            "source": "HubSpot ROI Report 2025",
-            "url": "https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Data%20Assets%20Repository/ROI%20Report%202025/HubSpot%20ROI%20Report%202025.pdf"
+            "title": "Inscription et prise en main",
+            "text": "Création de compte, premiers pas guidés, invitation de l'équipe : votre client voit ce que le produit lui apporte dès ses premières minutes."
           },
           {
-            "value": "3,10 $",
-            "label": "rapportés pour chaque dollar investi dans un CRM, en moyenne sur 11 études de cas en 2023.",
-            "source": "Nucleus Research, 2024",
-            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+            "title": "Données séparées par client",
+            "text": "Une seule plateforme sert tous vos clients, et chacun ne voit que ses propres données. C'est ce qu'on appelle une architecture multi-tenant."
           },
           {
-            "value": "51 %",
-            "label": "de ce retour vient du temps gagné et de processus plus fluides, plus que d'un chiffre d'affaires supplémentaire.",
-            "source": "Nucleus Research, 2024",
-            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+            "title": "Abonnements et facturation",
+            "text": "Formules, essais gratuits, changements d'offre, factures et relances de paiement sont gérés par la plateforme, avec un prestataire de paiement comme Stripe."
           },
           {
-            "value": "26 %",
-            "label": "de productivité en plus pour les salariés, selon l'estimation de 3 706 clients Salesforce interrogés en 2022.",
-            "source": "Salesforce, 2022",
-            "url": "https://www.salesforce.com/news/press-releases/2022/11/07/companies-report-cost-savings-with-salesforce/"
+            "title": "Utilisateurs et rôles",
+            "text": "Administrateurs, membres, lecteurs : chaque compte client gère son équipe et ses droits lui-même, sans passer par votre support."
           },
           {
-            "value": "209 %",
-            "label": "de retour sur trois ans et un investissement remboursé en moins de six mois, pour une entreprise modélisée de 300 personnes sur Dynamics 365 Business Central.",
-            "source": "Forrester TEI pour Microsoft, 2026",
-            "url": "https://tei.forrester.com/go/microsoft/Dynamics365BusinessCentral/"
+            "title": "API et intégrations",
+            "text": "Votre produit échange avec les outils que vos clients utilisent déjà, comme leur CRM ou leur comptabilité, grâce à des API et des connecteurs."
           }
         ]
       },
-      "features": [
-        {
-          "title": "Aide au choix de la plateforme",
-          "text": "Nous comparons les options selon votre taille, votre budget et vos processus, et nous vous disons quand une offre moins chère suffit."
-        },
-        {
-          "title": "Configuré selon votre façon de travailler",
-          "text": "Étapes de vente, champs, droits d'accès et automatisations réglés sur votre processus, au lieu des réglages par défaut."
-        },
-        {
-          "title": "Vos données reprises proprement",
-          "text": "Contacts, affaires et historique importés depuis vos tableurs ou votre ancien logiciel, doublons supprimés."
-        },
-        {
-          "title": "Formation et suivi après la mise en service",
-          "text": "Une formation courte par poste, un guide écrit, et quelqu'un à qui poser vos questions quand elles arrivent."
-        }
-      ],
-      "useCases": [
-        {
-          "title": "Votre premier CRM après les tableurs",
-          "text": "Nous choisissons la bonne plateforme, importons vos contacts et vos affaires, et votre équipe commerciale y travaille en quelques semaines."
-        },
-        {
-          "title": "Un CRM que personne n'utilise",
-          "text": "Nous remettons de l'ordre dans un compte HubSpot, Salesforce ou Zoho existant, pour que champs, étapes et rapports retrouvent du sens."
-        },
-        {
-          "title": "Odoo pour la gestion",
-          "text": "Stocks, achats et facturation dans Odoo, mis en place module par module, sans interrompre le travail au quotidien."
-        },
-        {
-          "title": "Changer de plateforme",
-          "text": "Passer d'un CRM ou d'un ERP à un autre en gardant tout votre historique, avec les deux systèmes vérifiés côte à côte."
-        }
-      ],
-      "stories": {
-        "title": "Ce qu'en disent des entreprises de la région",
-        "intro": "Des entreprises au Kenya, en Égypte, aux Émirats arabes unis et en Jordanie racontent ce qui a changé avec l'arrivée de leur CRM ou de leur ERP.",
-        "note": "Citations tirées d'études de cas publiées par Odoo, Zoho et Microsoft. Ces entreprises ne sont pas clientes de Qartmina.",
-        "readStory": "Lire le témoignage",
-        "items": [
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, de l'idée de produit jusqu'aux évolutions qui suivent le lancement.",
+        "points": [
           {
-            "quote": "Le rôle de notre partenaire d'intégration, Animatrix ERP Solutions Ltd, a été très important. Leur méthode structurée, leur bonne connaissance de notre secteur et leur accompagnement continu ont assuré une transition sans heurts et une forte adoption par les utilisateurs.",
-            "name": "Qayyum Shiraz, directeur technique",
-            "company": "Transfreight Logistics",
-            "country": "Kenya",
-            "platform": "odoo",
-            "platformName": "Odoo",
-            "result": "Environ 30 % de travail manuel en moins, selon l'étude de cas d'Odoo",
-            "url": "https://www.odoo.com/blog/customer-reviews-6/transfreight-logistics-limited-reduced-manual-work-by-30-using-odoo-s-management-system-2308"
+            "title": "Cadrage",
+            "text": "Nous clarifions avec vous la cible, le problème que le produit résout et ce que la première version doit contenir. Le modèle d'abonnement se décide dès ce stade."
           },
           {
-            "quote": "Zoho One, c'est ce qui nous est arrivé de mieux. La productivité moyenne de nos recruteurs est passée de 25 à 40 tâches par jour, et le délai de service à nos clients est passé de deux semaines en moyenne à quatre jours.",
-            "name": "Mahmoud Salem, directeur général",
-            "company": "Tawzef",
-            "country": "Égypte",
-            "platform": "zoho",
-            "platformName": "Zoho One",
-            "url": "https://www.zoho.com/one/customers/tawzef.html"
+            "title": "Conception",
+            "text": "Nous dessinons les parcours clés et les testons auprès de quelques utilisateurs, puis nous posons l'architecture : séparation des données, rôles, facturation, sécurité."
           },
           {
-            "quote": "Avant, nous n'avions pas de vue d'ensemble sur nos processus, nos clients et nos partenaires. Il fallait chercher les informations client dans plusieurs systèmes. Aujourd'hui, avec la plateforme MS Dynamics et Analytics, tout est accessible en un clic.",
-            "name": "Shrikant A. Kabboor, directeur technique",
-            "company": "Arada",
-            "country": "Émirats arabes unis",
-            "platformName": "Dynamics 365",
-            "url": "https://www.microsoft.com/en/customers/story/1736469938408312587-arada-azure-other-unsegmented-en-united-arab-emirates"
+            "title": "Développement et mise en ligne",
+            "text": "Nous livrons par cycles courts, avec des tests automatisés et une supervision qui alerte dès qu'un service ralentit ou tombe. Votre chef de projet Qartmina contrôle chaque livraison."
           },
           {
-            "quote": "Aujourd'hui, avec Odoo, tout est clair. Je peux réserver la voiture que je veux, suivre les bonnes étapes et garder toutes mes données au même endroit. Ça m'économise de l'effort et du temps, et tout va plus vite.",
-            "name": "Hamza Al-Radaydah, responsable commercial",
-            "company": "Great Wall Motors Jordan",
-            "country": "Jordanie",
-            "platform": "odoo",
-            "platformName": "Odoo",
-            "url": "https://www.odoo.com/blog/customer-reviews-6/great-wall-motors-jordan-drives-efficiency-with-odoo-1824"
+            "title": "Formation et évolution",
+            "text": "Après le lancement, nous suivons l'usage réel, corrigeons et faisons évoluer le produit à partir des retours de vos clients, en limitant la gêne pour eux."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur la mise en place d'un ERP ou d'un CRM",
+        "title": "Questions sur les plateformes SaaS",
         "items": [
           {
-            "question": "Quel CRM choisir ?",
-            "answer": "Cela dépend de la taille de votre équipe, de votre budget et de votre façon de vendre. HubSpot est facile à prendre en main, Salesforce convient aux équipes commerciales plus grandes aux ventes complexes, Pipedrive est simple et visuel, et Odoo s'impose quand vous voulez aussi gérer stocks et facturation dans le même système. Nous les comparons pour votre cas avant tout achat."
+            "question": "Par où commencer ?",
+            "answer": "Par le problème que votre futur client veut voir disparaître, et par quelques personnes prêtes à tester. Lors d'un premier appel de 30 minutes, nous regardons votre idée avec vous et vous disons ce qui doit entrer dans la première version."
           },
           {
-            "question": "À quel nom est la licence ?",
-            "answer": "Au vôtre. Vous achetez la licence auprès de l'éditeur, au nom de votre entreprise : le compte et les données restent à vous. Nous travaillons dedans en tant que partenaire de mise en place."
+            "question": "Qu'est-ce qui fait varier le coût ?",
+            "answer": "Le périmètre de la première version, le nombre d'intégrations et le niveau d'exigence en sécurité. Un MVP resserré coûte moins cher et vous apprend plus vite ce que veulent vos clients."
           },
           {
-            "question": "Combien de temps prend une mise en place ?",
-            "answer": "Cela dépend du nombre d'équipes qui vont l'utiliser et de l'état de vos données actuelles. En général, nous commençons par une équipe ou un processus, puis ajoutons le reste une fois que tout tourne bien. Vous recevez un planning daté avant le démarrage."
+            "question": "En combien de temps peut-on lancer ?",
+            "answer": "Cela dépend du périmètre. Pour une start-up du CRM, nous avons construit de zéro le MVP d'un agent documentaire en une semaine, mais chaque produit est différent. Le calendrier précis vous est donné à la fin du cadrage."
+          },
+          {
+            "question": "Pouvez-vous reprendre un SaaS déjà en ligne ?",
+            "answer": "Oui. Nous regardons d'abord le code, l'architecture et l'hébergement, puis nous faisons évoluer la plateforme par étapes, en planifiant chaque changement pour ne pas gêner vos clients. Nous avons par exemple mené la migration vers le cloud d'une start-up du CRM."
+          },
+          {
+            "question": "Où sont hébergées les données de nos clients ?",
+            "answer": "Nous privilégions un hébergement en Europe. Les données de chaque client sont séparées, les accès sont contrôlés et le RGPD est pris en compte dès la conception. Si votre produit utilise l'IA, nous choisissons des offres entreprise qui ne s'entraînent pas sur vos données."
+          },
+          {
+            "question": "Que se passe-t-il après le lancement ?",
+            "answer": "Nous surveillons la plateforme, corrigeons les anomalies, appliquons les mises à jour de sécurité et ajoutons les fonctionnalités que vos clients demandent. Vous décidez du rythme."
           }
         ]
       }

@@ -24,7 +24,7 @@ import { Analytics, Onboarding, Records } from "./work";
 // Hero of the CRM page: one demo CRM ("Acme") with seven screens in the order a team meets
 // them, from onboarding to daily work, the AI agent and admin. The tabs above and the
 // sidebar inside switch screens; each screen is interactive, and the caption below says
-// what it does and why it is easy to use. Copy under servicePages.crm-development.demo.
+// what it does and why it is easy to use. Copy under servicePages.custom-software.demo.
 
 const groups: { key: "start" | "work" | "ai" | "admin"; screens: { id: Screen; icon: Icon }[] }[] = [
   { key: "start", screens: [{ id: "onboarding", icon: IconHome }] },
@@ -58,7 +58,7 @@ const screens: Record<Screen, React.ComponentType<ScreenProps>> = {
 };
 
 export const CrmDemo = () => {
-  const t = useTranslations("servicePages.crm-development.demo");
+  const t = useTranslations("servicePages.custom-software.demo");
   const id = useId();
   const [screen, setScreen] = useState<Screen>("records");
   const Current = screens[screen];
@@ -161,7 +161,7 @@ export const CrmDemo = () => {
 // The app's own navigation, a second way to switch screens (mouse only: the tabs above
 // are the accessible control).
 const Sidebar = ({ screen, setScreen }: { screen: Screen; setScreen: (screen: Screen) => void }) => {
-  const t = useTranslations("servicePages.crm-development.demo");
+  const t = useTranslations("servicePages.custom-software.demo");
   return (
     <nav aria-hidden="true" className="hidden w-52 shrink-0 flex-col px-2 py-2 lg:flex">
       <div className="flex items-center justify-between px-2 py-1.5">

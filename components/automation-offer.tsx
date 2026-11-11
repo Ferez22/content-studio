@@ -18,6 +18,7 @@ import { Subheading } from "./subheading";
 import { Button } from "./ui/button";
 import { Link } from "@/i18n/navigation";
 import { AmbientTexture } from "./ambient-texture";
+import { categoryPath } from "@/lib/site";
 import { Reveal, RevealItem, RevealList } from "./reveal";
 
 type Item = { title: string; text: string };
@@ -90,7 +91,7 @@ export const AutomationOffer = () => {
               <Link href="/book">{t("cta")}</Link>
             </Button>
             <Link
-              href="/services/ai"
+              href={categoryPath("data-ai")}
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
             >
               {t("secondary")}

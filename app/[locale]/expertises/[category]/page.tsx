@@ -15,7 +15,7 @@ import { CategoryVisual } from "@/components/services/visuals";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { breadcrumbJsonLd, translatedPageMetadata } from "@/lib/service-metadata";
-import { categoryPath, categorySlugs, serviceCategories, type CategorySlug } from "@/lib/site";
+import { categoryPath, categorySlugs, expertisesPath, serviceCategories, type CategorySlug } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string; category: string }> };
 
@@ -53,7 +53,7 @@ export default async function CategoryPage({ params }: Props) {
   const services = serviceCategories.find((c) => c.slug === category)!.services;
 
   const breadcrumbs = [
-    { name: tServices("overview.title"), path: "/services" },
+    { name: tServices("overview.title"), path: expertisesPath },
     { name: t("title"), path: categoryPath(category) },
   ];
 
