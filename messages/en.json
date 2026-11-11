@@ -11,7 +11,7 @@
   },
   "header": {
     "home": "Home",
-    "services": "Services",
+    "services": "Expertise",
     "portfolio": "Portfolio",
     "about": "About",
     "blog": "Blog",
@@ -22,12 +22,12 @@
     "language": "Language",
     "partners": "Partners",
     "becomePartner": "Become a partner",
-    "allServices": "See all services",
+    "allServices": "See all our expertise",
     "categoryOverview": "Overview"
   },
   "footer": {
     "positioning": "Your digital partner for AI, software, websites, brand and security.",
-    "services": "Services",
+    "services": "Expertise",
     "company": "Company",
     "contact": "Contact",
     "location": "Based in France. Working with SMEs across France.",
@@ -109,7 +109,7 @@
         }
       ],
       "cta": "Tell us about a process",
-      "secondary": "See our AI services"
+      "secondary": "See our AI expertise"
     },
     "trusted": {
       "title": "Clients and partners who trust us"
@@ -217,7 +217,7 @@
       },
       {
         "value": "{services}",
-        "label": "services, one project lead"
+        "label": "areas of expertise, one project lead"
       },
       {
         "value": "100%",
@@ -298,9 +298,9 @@
   },
   "services": {
     "overview": {
-      "title": "Services",
+      "title": "Expertise",
       "intro": "Everything a business needs to go digital, from the website and the brand to custom software, AI and security. One project lead, specialists we cherry-pick from our network, and quality control before anything reaches you.",
-      "metaTitle": "Digital services: AI, software, web, brand and security",
+      "metaTitle": "Our expertise: AI, software, web, brand and security",
       "metaDescription": "AI, data, websites, software, brand and cybersecurity from one digital partner, with one project lead and vetted specialists on every project."
     },
     "breadcrumb": "Breadcrumb",
@@ -380,6 +380,93 @@
     }
   },
   "servicePages": {
+    "ai-automation": {
+      "title": "AI automation",
+      "metaTitle": "AI process automation for small and mid-sized businesses",
+      "summary": "Less data entry, sorting and chasing: AI takes on your team's repetitive tasks, and a person approves what matters.",
+      "intro": "We automate the processes that come back every day and cost the most in time and errors. AI reads, sorts and prepares the work inside the tools you already use, and your team keeps the decisions.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Concrete examples of tasks AI takes on, while your team keeps the decisions.",
+        "items": [
+          {
+            "title": "Orders by email",
+            "text": "Purchase orders that land in your inbox are read and entered into your ERP. Your team only handles the unusual ones."
+          },
+          {
+            "title": "Supplier invoices",
+            "text": "Each invoice is read, checked and matched with its purchase order. Any mismatch is flagged to you before payment."
+          },
+          {
+            "title": "Customer requests",
+            "text": "Incoming emails and forms are sorted by topic and urgency, then passed to the right person with a draft reply."
+          },
+          {
+            "title": "Quotes and estimates",
+            "text": "A first estimate is prepared from the request and your price lists. Your expert reviews and adjusts it before it goes out."
+          },
+          {
+            "title": "Reports and meeting notes",
+            "text": "The weekly sales report or the meeting notes are written from your data, ready for review."
+          },
+          {
+            "title": "Reminders and follow-up",
+            "text": "Missing documents, unanswered quotes, late invoices: reminders go out at the right time, without anyone having to think about them."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the first assessment to everyday use by your team.",
+        "points": [
+          {
+            "title": "AI assessment",
+            "text": "We review your processes with your team, choose which tasks to automate first and agree on the gain we are aiming for."
+          },
+          {
+            "title": "Process redesign",
+            "text": "Together with your team, we redraw how the work flows: what AI does on its own, and what a person approves before anything happens."
+          },
+          {
+            "title": "From pilot to rollout",
+            "text": "We test on your real data first and measure how reliable it is. When the numbers hold up, we roll it out in the tools you already use."
+          },
+          {
+            "title": "Training and governance",
+            "text": "We train your team, track cost and quality, and set the rules for use: GDPR, the EU AI Act, human approval."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about AI automation",
+        "items": [
+          {
+            "question": "Where should we start?",
+            "answer": "With a task that comes back often, takes time and causes errors. On a first 30-minute call, we look at your processes with you and tell you honestly which ones are worth automating."
+          },
+          {
+            "question": "Do you always need AI to automate?",
+            "answer": "No, and often you do not. When a simple rule is enough, it is more reliable and cheaper. We keep AI for the steps where something varied has to be read, understood or classified."
+          },
+          {
+            "question": "Does it work with the tools we already use?",
+            "answer": "Yes. We connect the automation to your CRM, your ERP, your inbox or your spreadsheets. You do not need to change software."
+          },
+          {
+            "question": "How do you prevent AI mistakes?",
+            "answer": "We test on your data before launch, set a confidence threshold below which a person checks the result, and keep human approval on sensitive steps."
+          },
+          {
+            "question": "Where does our data go?",
+            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. Before launch, we check where every piece of information travels."
+          },
+          {
+            "question": "How do we measure the return on investment?",
+            "answer": "We measure time spent, errors and volumes before we start, then the same figures after launch. The result is a number, not a feeling."
+          }
+        ]
+      }
+    },
     "ai-consulting": {
       "title": "AI consulting",
       "metaTitle": "AI consulting and AI strategy for businesses",
@@ -3362,7 +3449,7 @@
     "title": "Our work",
     "intro": "Each case study shows the problem, what we built and what changed. Demos are labelled as demos.",
     "sector": "Sector",
-    "service": "Service",
+    "service": "Expertise",
     "result": "Result",
     "readCase": "Read the case study",
     "back": "All case studies",

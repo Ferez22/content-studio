@@ -127,7 +127,7 @@ Needs Python Playwright with Chrome (`channel="chrome"`) and ffmpeg. Existing: `
 - German was removed (Fares 2026-11-11): every `/de` URL redirects permanently (308) to the same `/en` path (proxy.ts).
 - Blog posts and case studies: `fr` and `en` (`contentLocales`). A post missing in one locale redirects to the other (next.config.ts).
 - **No hard-coded user-facing text in components.** Add keys to `messages/*.json` with identical structure; `t.raw()` for arrays.
-- French is written natively, never translated word for word. Everything is in fr.json except `servicePages` (service page copy, English only for now). Missing fr keys fall back to English key by key (`i18n/messages.ts`); an untranslated service page is canonical to English and left out of the fr sitemap (`translatedLocales`). Adding `servicePages.<service>` to fr.json makes it indexable.
+- French is written natively, never translated word for word. Everything is in fr.json, including `servicePages` for every published service (2026-11-11); hidden services may stay English until they are published, and must be written in French before their toggle goes on. Missing fr keys fall back to English key by key (`i18n/messages.ts`); an untranslated service page is canonical to English and left out of the fr sitemap (`translatedLocales`). Adding `servicePages.<service>` to fr.json makes it indexable.
 - Links use `Link` from `@/i18n/navigation`, never `next/link`. Every page exports `generateMetadata` (`pageMetadata()` or `translatedPageMetadata()`) and calls `setRequestLocale(locale)`.
 - Testimonials stay in the client's original words; FR shows a small "original in English" note.
 

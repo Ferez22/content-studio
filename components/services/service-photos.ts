@@ -8,6 +8,7 @@ export const servicePhotos: Record<ServiceSlug, string> = {
   chatbots: "https://images.unsplash.com/photo-1554672408-17407e0322ce",
   "voice-agents": "https://images.unsplash.com/photo-1603714228681-b399854b8f80",
   "ai-training": "https://images.unsplash.com/photo-1563457012475-13cf086fd600",
+  "ai-automation": "https://images.unsplash.com/photo-1586528116022-aeda1613c63d",
   "process-automation": "https://images.unsplash.com/photo-1586528116022-aeda1613c63d",
   "api-integration": "https://images.unsplash.com/photo-1682559736721-c2e77ff4c650",
   "data-platforms": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",

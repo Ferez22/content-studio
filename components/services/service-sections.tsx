@@ -22,8 +22,11 @@ const SectionIntro = ({ title, intro }: { title: string; intro?: string }) => (
   </Reveal>
 );
 
+type Art = React.ComponentType<{ className?: string }>;
+
 // What the service is and what it is good for, as a short intro and a grid of points.
-export const Explainer = ({ slug }: { slug: ServiceSlug }) => {
+// `art`: an optional small illustration per point, in the same order as the points.
+export const Explainer = ({ slug, art }: { slug: ServiceSlug; art?: Art[] }) => {
   const t = useTranslations(`servicePages.${slug}.explainer`);
   const points = t.raw("points") as Item[];
   return (
@@ -31,21 +34,32 @@ export const Explainer = ({ slug }: { slug: ServiceSlug }) => {
       <Container>
         <SectionIntro title={t("title")} intro={t("intro")} />
         <RevealList as="div" className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-10 md:mt-16">
-          {points.map((point, index) => (
-            <RevealItem
-              as="div"
-              key={point.title}
-              className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-8"
-            >
-              <span className="font-display font-bold text-sm text-[#1E40FF] dark:text-blue-400">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-3 text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral-200">
-                {point.title}
-              </h3>
-              <p className="text-neutral-600 dark:text-neutral-400 mt-2 text-balance">{point.text}</p>
-            </RevealItem>
-          ))}
+          {points.map((point, index) => {
+            const PointArt = art?.[index];
+            return (
+              <RevealItem
+                as="div"
+                key={point.title}
+                className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-8"
+              >
+                {PointArt && (
+                  <div className="mb-5 flex h-20 md:h-24 items-center justify-center overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] bg-[size:12px_12px]">
+                    <PointArt className="h-full w-auto max-w-full py-1.5" />
+                  </div>
+                )}
+                {/* Numbered unless the point has an illustration. */}
+                {!PointArt && (
+                  <span className="mb-3 block font-display font-bold text-sm text-[#1E40FF] dark:text-blue-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                )}
+                <h3 className="text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral-200">
+                  {point.title}
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400 mt-2 text-balance">{point.text}</p>
+              </RevealItem>
+            );
+          })}
         </RevealList>
       </Container>
     </section>
@@ -150,7 +164,7 @@ export const Features = ({ slug, marquee }: { slug: ServiceSlug; marquee?: boole
     <section className="pt-10 md:pt-20 lg:pt-32">
       <Container>
         <Reveal>
-          <Heading>{tServices("featuresTitle")}</Heading>
+          <Heading>{t.has("featuresTitle") ? t("featuresTitle") : tServices("featuresTitle")}</Heading>
         </Reveal>
         {marquee ? (
           <Reveal className="mt-10 md:mt-16 overflow-hidden mask-x-from-90%">
@@ -259,13 +273,12 @@ export const Included = ({ slug }: { slug: ServiceSlug }) => {
           {items.map((item) => (
             <RevealItem
               key={item.title}
-              className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-6"
+              className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-6 md:p-8"
             >
-              <IconCircleCheckFilled className="size-5 text-[#1E40FF] dark:text-blue-400" />
-              <h3 className="mt-3 font-bold text-neutral-800 dark:text-neutral-200">{item.title}</h3>
-              <p className="mt-1.5 text-sm md:text-base text-neutral-600 dark:text-neutral-400">
-                {item.text}
-              </p>
+              <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400">{item.text}</p>
             </RevealItem>
           ))}
         </RevealList>

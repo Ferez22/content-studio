@@ -26,6 +26,7 @@ const categoryVisuals: Record<CategorySlug, VisualEntry> = {
 // Services with a mockup of their own; the others show their category's.
 const serviceVisuals: Partial<Record<ServiceSlug, VisualEntry>> = {
   "ai-agents": { Visual: AgentRunVisual },
+  "ai-automation": { Visual: AutomationVisual },
   "process-automation": { Visual: AutomationVisual },
   "api-integration": {
     Visual: IntegrationVisual,
