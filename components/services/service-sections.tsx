@@ -264,7 +264,7 @@ export const Included = ({ slug }: { slug: ServiceSlug }) => {
               <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
                 {item.title}
               </h3>
-              <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400">{item.text}</p>
+              <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400">{item.text}</p>
             </RevealItem>
           ))}
         </RevealList>
