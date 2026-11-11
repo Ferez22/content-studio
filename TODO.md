@@ -22,7 +22,6 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 - [ ] Bing Webmaster Tools: import the site from Search Console
 - [ ] LinkedIn Post Inspector: check the preview for `https://www.qartmina.com/en`
 - [ ] Create a Google Business Profile for Qartmina (France address)
-- [ ] When the blog is written for fr and de: remove the `/blog/:path*` to `/en/blog/:path*` redirect in `next.config.ts` so unprefixed blog URLs get language detection again. `/about` and `/contact` keep the next-intl 307 with language detection
 
 ## Positioning
 

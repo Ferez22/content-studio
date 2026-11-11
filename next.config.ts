@@ -8,9 +8,19 @@ import { contentLocales } from "./i18n/routing";
 const withNextIntl = createNextIntlPlugin();
 
 // Posts from the previous site lived at /blog/<slug> (English, no locale) and are still indexed.
-// Old posts that were not restored point to the live post on the same topic.
+// Restored posts keep their slug; old posts that were not restored point to the live post on the same topic.
 // Old posts with no close match (no-standard-process-digital-transformation) are left to 404.
+// Permanent, straight to English: without these, proxy.ts sends /blog/<slug> through two 307s (/fr, then /en),
+// so Google keeps the old URL and never moves its signals to the new one.
+const restoredPosts = [
+  "security-certifications-explained",
+  "ai-and-data-consulting-cost",
+  "how-to-identify-ai-use-cases",
+  "qartmina-openai-select-partner",
+  "databricks-alternatives-comparison",
+];
 const legacyPosts: Record<string, string> = {
+  ...Object.fromEntries(restoredPosts.map((slug) => [slug, slug])),
   "mcp-and-the-future-of-saas": "connect-ai-agent-erp-crm",
   "eu-ai-act-transparency-enforcement": "ai-agents-gdpr-eu-ai-act",
   "why-ai-pilots-never-reach-production": "ai-and-data-consulting-cost",

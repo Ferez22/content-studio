@@ -2,6 +2,10 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-11
+
+- Restored posts redirect permanently again: `/blog/<slug>` to `/en/blog/<slug>` (308) for the five posts restored on 2026-11-05 (`restoredPosts` in `next.config.ts`). Removing the forced `/blog/*` rule on 2026-11-06 had sent them through two temporary 307s (`/fr/blog/<slug>`, then `/en/blog/<slug>`), so Search Console still showed the old URLs. Other unprefixed blog URLs keep language detection
+
 ## 2026-11-06
 
 - Default language is French. Unprefixed URLs are detected in `proxy.ts`: `NEXT_LOCALE` cookie first, else a French browser gets `fr`, any other language `en` (never `de` automatically), no header `fr`. Missing message keys and untranslated service pages fall back to English (`sourceLocale`); `x-default` points to English
