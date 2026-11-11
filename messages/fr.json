@@ -1185,7 +1185,7 @@
         "intro": "Des exemples concrets de tâches que l'IA prend en charge, pendant que votre équipe garde la main sur les décisions.",
         "items": [
           {
-            "title": "Commandes reçues par e-mail",
+            "title": "Commandes par e-mail",
             "text": "Les bons de commande arrivés dans votre boîte mail sont lus et saisis dans votre ERP. Votre équipe ne traite que les cas inhabituels."
           },
           {

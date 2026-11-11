@@ -97,6 +97,9 @@ const extras: Partial<Record<ServiceSlug, Extras>> = {
   },
 };
 
+// Standard pages that skip the general "How we deliver" section (the new expertise pages).
+const withoutDelivery: ServiceSlug[] = ["ai-automation"];
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -239,7 +242,7 @@ export default async function ServicePage({ params }: Props) {
       {t.has("useCases") && <UseCases slug={slug} aside={UseCasesAside ? <UseCasesAside /> : undefined} />}
       {page?.afterUseCases?.map((Section, index) => <Section key={index} slug={slug} />)}
 
-      {motionPage ? <MotionOffer /> : !page && <Delivery />}
+      {motionPage ? <MotionOffer /> : !page && !withoutDelivery.includes(slug) && <Delivery />}
 
       {Demo && (
         <DemoStage

@@ -390,7 +390,7 @@
         "intro": "Concrete examples of tasks AI takes on, while your team keeps the decisions.",
         "items": [
           {
-            "title": "Orders received by email",
+            "title": "Orders by email",
             "text": "Purchase orders that land in your inbox are read and entered into your ERP. Your team only handles the unusual ones."
           },
           {

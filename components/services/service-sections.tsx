@@ -259,13 +259,12 @@ export const Included = ({ slug }: { slug: ServiceSlug }) => {
           {items.map((item) => (
             <RevealItem
               key={item.title}
-              className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-5 md:p-6"
+              className="rounded-3xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 p-6 md:p-8"
             >
-              <IconCircleCheckFilled className="size-5 text-[#1E40FF] dark:text-blue-400" />
-              <h3 className="mt-3 font-bold text-neutral-800 dark:text-neutral-200">{item.title}</h3>
-              <p className="mt-1.5 text-sm md:text-base text-neutral-600 dark:text-neutral-400">
-                {item.text}
-              </p>
+              <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-base md:text-lg text-neutral-600 dark:text-neutral-400">{item.text}</p>
             </RevealItem>
           ))}
         </RevealList>
