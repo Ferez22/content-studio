@@ -8,11 +8,13 @@ import { useTranslations } from "next-intl";
 import { HeroWorkflow } from "./hero-workflow";
 import { Figures } from "./figures";
 import { LogoCloud } from "./logo-cloud";
+import { AmbientTexture } from "./ambient-texture";
 
 export const Hero = () => {
   const t = useTranslations("home");
   return (
-    <section className="pt-10 md:pt-20 lg:pt-32 relative overflow-hidden">
+    <section className="pt-10 md:pt-20 lg:pt-32 relative isolate overflow-hidden">
+      <AmbientTexture className="absolute inset-x-0 top-0 -z-10 h-[620px] md:h-[760px] lg:h-[860px]" />
       <Container>
         <Heading as="h1" className="text-[2.6rem] leading-[1.05] sm:text-5xl lg:text-6xl">
           {t("hero.title")}

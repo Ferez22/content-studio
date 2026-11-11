@@ -567,3 +567,18 @@
     animation: none;
   }
 }
+
+/* Ambient texture (components/ambient-texture.tsx): drifting brand blues with film grain. */
+.ambient-texture {
+  overflow: hidden;
+}
+.ambient-texture[data-layout="hero"] {
+  /* Fades out toward the bottom and the left so the headline and the next section stay clean. */
+  mask-image: radial-gradient(120% 90% at 70% 35%, black 35%, transparent 80%);
+}
+.ambient-texture[data-fallback="true"] {
+  background:
+    radial-gradient(40% 50% at 60% 50%, rgb(30 64 255 / 0.28), transparent 70%),
+    radial-gradient(35% 45% at 82% 40%, rgb(84 162 255 / 0.3), transparent 70%),
+    radial-gradient(30% 40% at 92% 75%, rgb(167 139 250 / 0.28), transparent 70%);
+}

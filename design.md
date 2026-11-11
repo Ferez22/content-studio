@@ -115,6 +115,23 @@ Section headings scale 30px (mobile) to 36px (md) to 60px (lg). The hero h1 is 4
 
 ## Components
 
+### Ambient Texture
+**Role:** Living background of the hero and of the automation offer panel (added 2026-11-11, Fares)
+
+`components/ambient-texture.tsx`: three blurred colour fields (royal blue #1E40FF, sky #54a2ff, lavender #a78bfa; dark mode
+#2f4bff, #2f7fff, #7c5cf0) drift slowly through a warped space, with fine film grain only where there is colour. WebGL, 24 fps,
+paused off screen, one still frame under reduced motion, CSS gradient fallback. Hero layout: colour gathered on the right and
+faded out toward the headline (radial mask). Section layout: spread across a rounded panel. Max opacity about 50% (42% dark),
+so black headlines stay readable on top.
+
+### Automation Offer Panel
+**Role:** Home section "The processes we automate" + "The business cases we handle"
+
+A 32 to 40px-radius panel (`rounded-[2rem] md:rounded-[2.5rem]`), hairline border, neutral-50 base with the ambient texture
+behind. Inside: heading + intro, 3 process cards (icon in a royal blue 10% circle, Manrope title, Inter text), then a smaller
+heading and 6 case cards (gray icon + title on one line). Cards are white at 80% with a light backdrop blur and a 24px radius.
+Graphite pill CTA plus a text link with an arrow.
+
 ### Floating Pill Navbar
 **Role:** Primary navigation (desktop)
 
@@ -200,7 +217,8 @@ green check and amber pending for status. Optional layered `shadow-brand`.
 - Respect reduced motion: every looping animation has a `prefers-reduced-motion` off switch.
 
 ### Don't
-- Don't use royal blue as a background, a section fill or a headline color.
+- Don't use royal blue as a background, a section fill or a headline color. Only exception: the Ambient Texture, where it
+  is blurred, grained and faded (hero and the automation offer panel).
 - Don't add a third typeface. EB Garamond stays on the logo, at most one accent word.
 - Don't use sharp corners on cards or buttons (nothing under 8px except hairline dividers).
 - Don't add drop shadows to cards or buttons. Shadows belong to the floating navbar, menus and hero mockups only.
@@ -233,8 +251,8 @@ UI. Mockups animate in loops (pop in, travel across columns, scanner line) to sh
 
 ## Layout
 
-Single 1280px column with 16 / 32px side padding. Home reads: floating navbar, left-aligned hero with figures, logo marquee and
-workflow mockup, then the Expertise grid of offer category cards, OpenAI partner block, team, testimonials (snap carousel), FAQ,
+Single 1280px column with 16 / 32px side padding. Home reads: floating navbar, left-aligned hero over the ambient texture with
+figures, logo marquee and workflow mockup, then the automation offer panel, then the Expertise grid of offer category cards, OpenAI partner block, team, testimonials (snap carousel), FAQ,
 contact. Section headers place the heading left and the subheading right on wide screens (`xl:flex-row`), stacked and centered
 on mobile. Services overview uses a sticky category list on the left. Generous vertical rhythm (40 / 80 / 128px).
 
