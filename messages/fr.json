@@ -1261,6 +1261,1691 @@
           }
         ]
       }
+    },
+    "ai-agents": {
+      "title": "Développement d'agents IA",
+      "metaTitle": "Développement d'agents IA sur mesure pour les entreprises",
+      "summary": "Des agents IA sur mesure qui enchaînent les étapes d'un travail dans vos outils, puis soumettent le résultat à une personne avant tout envoi.",
+      "intro": "Un agent est un logiciel qui lit, vérifie et agit dans plusieurs systèmes, comme le ferait un assistant, mais en quelques minutes et sans se fatiguer. Nous le concevons autour d'un de vos vrais processus, nous le connectons à vos outils et une personne valide tout ce qui compte avant que cela ne parte.",
+      "graph": {
+        "title": "Équipe d'agents",
+        "label": "Démo",
+        "stats": "4 agents, 4 outils",
+        "hint": "Cliquez sur un agent ou un outil pour voir ce qu'il fait.",
+        "close": "Fermer",
+        "legend": {
+          "call": "Appel",
+          "answer": "Réponse",
+          "needs": "À valider",
+          "failed": "Échec"
+        },
+        "nodes": {
+          "you": {
+            "name": "Vous",
+            "role": "Valide",
+            "badge": "À valider",
+            "text": "Vous confiez le contrôle de fin de mois et vous validez les e-mails aux fournisseurs avant leur envoi. Rien ne part sans vous."
+          },
+          "coordinator": {
+            "name": "Coordinateur",
+            "role": "Planifie et vérifie",
+            "badge": "En cours",
+            "text": "Répartit le contrôle de fin de mois entre les autres agents et relit chaque résultat avant qu'il ne vous parvienne.",
+            "activity": [
+              {
+                "node": "reader",
+                "text": "Récupérer les factures du mois",
+                "time": "1,3 s"
+              },
+              {
+                "node": "checker",
+                "text": "Les rapprocher des bons de commande",
+                "time": "2,9 s"
+              },
+              {
+                "node": "writer",
+                "text": "Rédiger les e-mails pour les 2 écarts",
+                "time": "1,1 s"
+              }
+            ]
+          },
+          "reader": {
+            "name": "Lecteur",
+            "role": "Lit les factures",
+            "badge": "Terminé",
+            "text": "Ouvre chaque facture de la boîte comptabilité et en extrait le fournisseur, le montant, la date et le numéro de commande.",
+            "activity": [
+              {
+                "node": "gmail",
+                "text": "Lire 37 factures de la boîte comptabilité",
+                "time": "1,4 s"
+              }
+            ]
+          },
+          "checker": {
+            "name": "Contrôleur",
+            "role": "Rapproche les commandes",
+            "badge": "En cours",
+            "text": "Compare chaque facture à son bon de commande et signale tout écart de plus de 2 %.",
+            "activity": [
+              {
+                "node": "odoo",
+                "text": "Consulter la commande PO-2291",
+                "time": "600 ms"
+              },
+              {
+                "node": "odoo",
+                "text": "Pas de réponse, nouvel essai",
+                "failed": true
+              },
+              {
+                "node": "odoo",
+                "text": "Consulter la commande PO-2294",
+                "time": "700 ms"
+              }
+            ]
+          },
+          "writer": {
+            "name": "Rédacteur",
+            "role": "Rédige les e-mails",
+            "badge": "À valider",
+            "text": "Rédige un e-mail court et courtois à chaque fournisseur dont la facture ne correspond pas, puis vous le soumet pour validation.",
+            "activity": [
+              {
+                "node": "slack",
+                "text": "E-mail sur la facture INV-0412, en attente de validation",
+                "time": "900 ms"
+              }
+            ]
+          },
+          "analyst": {
+            "name": "Analyste",
+            "role": "Prépare le rapport",
+            "badge": "En cours",
+            "text": "Ajoute chaque facture contrôlée au tableau de fin de mois et totalise les dépenses par fournisseur.",
+            "activity": [
+              {
+                "node": "sheets",
+                "text": "Ajouter les 35 factures rapprochées",
+                "time": "800 ms"
+              },
+              {
+                "node": "sheets",
+                "text": "Totaliser les dépenses par fournisseur",
+                "time": "500 ms"
+              }
+            ]
+          },
+          "gmail": {
+            "name": "Gmail",
+            "role": "Boîte comptabilité",
+            "badge": "Lecture seule",
+            "text": "Le Lecteur peut ouvrir les factures de la boîte comptabilité. Il ne peut ni envoyer ni supprimer d'e-mail."
+          },
+          "odoo": {
+            "name": "Odoo",
+            "role": "Bons de commande",
+            "badge": "Lecture seule",
+            "text": "Le Contrôleur peut consulter les commandes et les bons de livraison. Il ne peut ni les modifier ni effectuer de paiement."
+          },
+          "slack": {
+            "name": "Slack",
+            "role": "Validations",
+            "badge": "Publication seule",
+            "text": "Les brouillons attendent dans le canal de validation jusqu'à ce qu'une personne les envoie."
+          },
+          "sheets": {
+            "name": "Google Sheets",
+            "role": "Rapport de fin de mois",
+            "badge": "Une seule feuille",
+            "text": "L'Analyste peut modifier le rapport de fin de mois, et rien d'autre dans votre Drive."
+          }
+        },
+        "failedLabel": "Échec"
+      },
+      "levels": {
+        "title": "Ce qui compose un agent",
+        "intro": "Un agent, c'est quelques éléments assemblés avec soin. Votre équipe peut lire, tester et modifier chacun d'eux.",
+        "items": [
+          {
+            "label": "Instructions",
+            "title": "Une fiche de poste écrite",
+            "text": "À quoi sert l'agent, les étapes qu'il suit et ce qu'il ne doit jamais faire, le tout en langage simple.",
+            "examples": [
+              {
+                "title": "Étapes",
+                "text": "Rapprocher chaque facture fournisseur de son bon de commande et signaler tout écart de plus de 2 %."
+              },
+              {
+                "title": "Limites",
+                "text": "Ne jamais valider un paiement. Ne jamais écrire directement à un fournisseur."
+              },
+              {
+                "title": "Langue",
+                "text": "Écrire aux fournisseurs en français, sauf s'ils ont écrit en anglais."
+              }
+            ]
+          },
+          {
+            "label": "Outils",
+            "title": "L'accès à vos systèmes, rien de plus",
+            "text": "Chaque outil ouvre un seul système, juste ce qu'il faut pour la tâche.",
+            "examples": [
+              {
+                "title": "E-mail",
+                "text": "Lit les factures de la boîte comptabilité. Ne peut ni envoyer ni supprimer."
+              },
+              {
+                "title": "Logiciel comptable",
+                "text": "Consulte les bons de commande. Ne peut ni les modifier ni payer."
+              },
+              {
+                "title": "Tableur",
+                "text": "Modifie le tableau de fin de mois, et rien d'autre."
+              }
+            ]
+          },
+          {
+            "label": "Validations",
+            "title": "Une personne donne son accord",
+            "text": "Tout ce qui sort de l'entreprise attend le feu vert d'une personne. L'agent prépare, vous décidez.",
+            "examples": [
+              {
+                "title": "E-mails fournisseurs",
+                "text": "Les brouillons attendent dans un canal Slack jusqu'à ce que quelqu'un les valide."
+              },
+              {
+                "title": "Résumé quotidien",
+                "text": "Chaque matin, la liste de ce qu'il a fait et de ce qu'il n'a pas pu terminer."
+              },
+              {
+                "title": "Journal",
+                "text": "Chaque étape est enregistrée : vous voyez pourquoi il a agi ainsi."
+              }
+            ]
+          },
+          {
+            "label": "Équipe",
+            "title": "Plusieurs agents, un coordinateur",
+            "text": "Les gros travaux sont répartis entre des agents qui font chacun une seule chose, et bien, avec un coordinateur qui distribue le travail et vérifie les résultats.",
+            "examples": [
+              {
+                "title": "Lecteur",
+                "text": "Extrait de chaque facture le fournisseur, le montant, la date et le numéro de commande."
+              },
+              {
+                "title": "Contrôleur",
+                "text": "Compare chaque facture à sa commande."
+              },
+              {
+                "title": "Rédacteur",
+                "text": "Rédige les e-mails sur les factures qui ne correspondent pas."
+              }
+            ]
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Travaille dans tous vos outils",
+          "text": "Lit vos e-mails, documents, tableurs et logiciels métier en une seule passe."
+        },
+        {
+          "title": "Demande avant tout envoi",
+          "text": "Une personne valide chaque message, paiement ou mise à jour qui sort de l'entreprise."
+        },
+        {
+          "title": "Chaque chiffre relié à sa source",
+          "text": "Chaque nombre du résultat renvoie au fichier ou à l'enregistrement d'où il vient."
+        },
+        {
+          "title": "Planifié ou à la demande",
+          "text": "Tourne chaque matin, à chaque fin de mois, ou quand quelqu'un le lui demande."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Revue documentaire pour une due diligence",
+          "text": "Lit chaque fichier d'une data room, extrait les clauses clés de chaque contrat et liste les risques, avec un lien vers la page où chacun apparaît."
+        },
+        {
+          "title": "Factures rapprochées des commandes",
+          "text": "Lit les factures fournisseurs dès leur arrivée, les rapproche des bons de commande et des bons de livraison, et signale celles qui ne collent pas."
+        },
+        {
+          "title": "Reporting mensuel",
+          "text": "Rassemble les chiffres de vos fichiers comptables, commerciaux et RH, monte le reporting du mois dans votre format et indique d'où vient chaque chiffre."
+        },
+        {
+          "title": "Qualification des prospects",
+          "text": "Se renseigne sur chaque nouvelle demande, la note selon vos critères, met à jour votre suivi commercial et rédige une première réponse, qu'une personne envoie."
+        }
+      ],
+      "faq": {
+        "title": "Questions sur les agents IA",
+        "items": [
+          {
+            "question": "Quelle différence entre un agent et un chatbot ?",
+            "answer": "Un chatbot répond à des questions. Un agent mène une tâche étape par étape : il rassemble les documents, vérifie les chiffres dans vos systèmes et prépare le résultat, par exemple un brouillon d'écriture comptable ou un rapport, qu'une personne valide."
+          },
+          {
+            "question": "Et si l'agent se trompe ?",
+            "answer": "Il est conçu pour que les erreurs soient repérées avant d'avoir des conséquences. L'agent ne peut faire que ce que nous lui permettons, chaque chiffre renvoie à sa source et une personne valide tout ce qui sort de l'entreprise. Avant la remise, une personne extérieure à l'équipe de développement le teste sur des cas réels tirés de vos propres fichiers."
+          },
+          {
+            "question": "Combien de temps avant qu'un premier agent tourne ?",
+            "answer": "Nous visons une première version opérationnelle sur un processus en un mois, et une mise en production en trois mois environ. Cela dépend surtout de la facilité à connecter vos systèmes et de la qualité de vos données."
+          }
+        ]
+      }
+    },
+    "chatbots": {
+      "title": "Chatbots et assistants",
+      "metaTitle": "Chatbots IA et assistants internes pour votre entreprise",
+      "summary": "Des assistants qui répondent à vos clients ou à vos équipes à partir de vos propres documents, jour et nuit, et passent la main à une personne quand il le faut.",
+      "intro": "Votre équipe répond chaque jour aux mêmes questions, à partir des mêmes documents. Nous construisons des assistants qui s'appuient sur vos procédures, vos manuels et vos données, montrent d'où vient chaque réponse et passent la main à une personne quand il le faut.",
+      "demo": {
+        "label": "Démo",
+        "question": "Mon ordinateur portable ne se connecte plus au VPN depuis ce matin. Vous pouvez m'aider ?",
+        "toolsRunning": "Je regarde…",
+        "toolsDone": "3 outils utilisés",
+        "tools": [
+          {
+            "name": "search_it_guide",
+            "summary": "Recherche des erreurs de connexion VPN dans le guide informatique",
+            "args": {
+              "query": "le VPN ne se connecte pas"
+            },
+            "result": {
+              "document": "Guide informatique 2026.pdf",
+              "section": "5.3 Erreurs de connexion VPN",
+              "page": 42
+            }
+          },
+          {
+            "name": "check_account",
+            "summary": "Vérification de votre compte",
+            "args": {
+              "employee": "E-1042"
+            },
+            "result": {
+              "vpn_access": "actif",
+              "password": "expiré hier"
+            }
+          },
+          {
+            "name": "create_ticket",
+            "summary": "Ticket IT-2318 ouvert par précaution",
+            "args": {
+              "topic": "VPN",
+              "priority": "normale"
+            },
+            "result": {
+              "ticket": "IT-2318",
+              "status": "ouvert"
+            }
+          }
+        ],
+        "answer": "Votre accès VPN fonctionne, mais votre mot de passe a expiré hier. Réinitialisez-le avec le lien de la section 5.3 du guide informatique, puis reconnectez-vous. J'ai ouvert le ticket IT-2318 au cas où le problème persisterait.",
+        "source": "Guide informatique 2026, page 42"
+      },
+      "levels": {
+        "title": "Du chatbot à l'agent, puis au spécialiste",
+        "intro": "Un chatbot répond aux questions. Connecté à vos outils, il devient un agent qui passe à l'action. Doté de compétences, il accomplit des tâches précises comme votre équipe les fait.",
+        "items": [
+          {
+            "label": "Chatbot",
+            "title": "Répond à partir de vos documents",
+            "text": "Il lit vos documents et répond avec des mots simples, en donnant la source de chaque réponse.",
+            "examples": [
+              {
+                "title": "Manuel RH",
+                "text": "« Combien de jours de congé puis-je reporter sur l'année prochaine ? »"
+              },
+              {
+                "title": "Contrats",
+                "text": "« Quel préavis nous laisse notre contrat fournisseur ? »"
+              },
+              {
+                "title": "Manuels",
+                "text": "« Que signifie l'erreur E42 sur la machine d'emballage ? »"
+              }
+            ]
+          },
+          {
+            "label": "Agent",
+            "title": "Connecté à vos outils",
+            "text": "Relié aux logiciels que vous utilisez déjà, il va chercher l'information et agit, uniquement dans les limites que vous fixez.",
+            "examples": [
+              {
+                "title": "Boutique en ligne",
+                "text": "Retrouve la commande d'un client et lui indique quand elle arrivera."
+              },
+              {
+                "title": "Agenda",
+                "text": "Cale une réunion sur un créneau libre et envoie l'invitation."
+              },
+              {
+                "title": "Support",
+                "text": "Ouvre un ticket avec la conversation jointe."
+              },
+              {
+                "title": "Base clients",
+                "text": "Enregistre une nouvelle demande avec les coordonnées du contact et l'objet de sa demande."
+              }
+            ]
+          },
+          {
+            "label": "Spécialiste",
+            "title": "Formé grâce à des compétences",
+            "text": "Une compétence est un ensemble d'instructions écrites, parfois accompagnées de modèles ou de petits programmes, qui apprend à l'assistant une tâche précise, faite de la même façon à chaque fois.",
+            "examples": [
+              {
+                "title": "Code",
+                "text": "Écrit et lance un petit programme qui compare deux tableurs de factures et liste celles qui ne correspondent pas."
+              },
+              {
+                "title": "Votre style maison",
+                "text": "Répond aux clients comme votre équipe : formel en français, court sur WhatsApp, sans jamais promettre de date de livraison."
+              },
+              {
+                "title": "Lecture de contrats",
+                "text": "Parcourt un contrat fournisseur et rassemble sur une page les conditions de paiement, le préavis, les pénalités et la date de renouvellement."
+              },
+              {
+                "title": "Rapport hebdomadaire",
+                "text": "Transforme l'export des ventes en rapport du lundi, avec les mêmes rubriques et les mêmes graphiques chaque semaine."
+              }
+            ]
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Répond à partir de vos documents",
+          "text": "L'assistant ne répond qu'à partir des sources que vous validez."
+        },
+        {
+          "title": "Cite ses sources",
+          "text": "Chaque réponse renvoie au document dont elle provient."
+        },
+        {
+          "title": "Passe la main à une personne",
+          "text": "Les demandes sensibles ou floues sont transmises à votre équipe."
+        },
+        {
+          "title": "Disponible jour et nuit",
+          "text": "Sur votre site, sur votre intranet ou dans vos messageries."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Des réponses tirées de longs documents",
+          "text": "Interrogez en langage courant un appel d'offres de 300 pages, un contrat ou un manuel technique. La réponse arrive en quelques secondes avec la page d'où elle vient : vous pouvez vérifier."
+        },
+        {
+          "title": "Support informatique pour vos équipes",
+          "text": "Guide chacun pour réinitialiser un mot de passe ou régler un souci de VPN ou d'imprimante, vérifie son compte et ouvre un ticket quand un technicien doit intervenir."
+        },
+        {
+          "title": "Un chatbot sur votre site",
+          "text": "Renseigne les visiteurs à toute heure sur vos produits, vos prix, la livraison et vos horaires d'ouverture, et transmet les demandes sérieuses à votre équipe commerciale avec la conversation jointe."
+        },
+        {
+          "title": "Un assistant interne pour votre entreprise",
+          "text": "Un seul endroit où vos équipes posent leurs questions sur les congés, les notes de frais, les règles RH et le fonctionnement de l'entreprise, avec des réponses tirées de votre manuel et de votre intranet."
+        }
+      ],
+      "faq": {
+        "title": "Questions sur les chatbots et les assistants d'entreprise",
+        "items": [
+          {
+            "question": "Que se passe-t-il quand l'assistant ne connaît pas la réponse ?",
+            "answer": "Il le dit au lieu de deviner, et transmet la question à la bonne personne avec la conversation jointe. Ces questions sans réponse vous montrent aussi quels documents manquent ou ne sont plus à jour."
+          },
+          {
+            "question": "Comment les réponses restent-elles à jour quand nos documents changent ?",
+            "answer": "L'assistant lit les dossiers et les systèmes où vos documents se trouvent déjà. Quand une procédure ou une grille tarifaire y est mise à jour, la réponse suivante s'appuie sur la nouvelle version, et vous pouvez retirer de ses sources les documents qui ne servent plus."
+          },
+          {
+            "question": "Peut-il répondre en arabe, en français et en anglais ?",
+            "answer": "Les modèles d'IA actuels gèrent les trois langues, et vos clients peuvent en général écrire dans celle qu'ils préfèrent. Avant la mise en ligne, nous testons avec de vraies questions de vos clients et de vos équipes, y compris en dialecte local et avec des langues mélangées."
+          }
+        ]
+      },
+      "assistant": {
+        "name": "Votre assistant",
+        "tagline": "Répond à partir de vos documents et de vos outils.",
+        "prompt": "Comment puis-je vous aider ?",
+        "chips": [
+          "Résumer ce contrat",
+          "Réinitialiser mon mot de passe",
+          "Où en est ma commande ?",
+          "Mon solde de congés"
+        ],
+        "placeholder": "Posez votre question..."
+      }
+    },
+    "crm-development": {
+      "title": "Développement CRM",
+      "metaTitle": "Développement et personnalisation de CRM",
+      "summary": "Des CRM sur mesure, ou des CRM comme HubSpot, Salesforce et Odoo configurés pour votre équipe : vos commerciaux ont une vue claire de chaque client et de chaque affaire.",
+      "intro": "Un CRM réunit tous vos clients, contacts et affaires au même endroit. Nous configurons des CRM comme HubSpot, Salesforce ou Odoo, ou nous construisons le vôtre quand votre façon de vendre n'y trouve pas sa place.",
+      "clients": {
+        "title": "Les équipes pour qui nous avons construit un CRM",
+        "logos": [
+          "docutrad"
+        ],
+        "caseStudy": {
+          "label": "Lire l'étude de cas : d'un VPS fragile à un cloud prêt pour la production",
+          "href": "/portfolio/crm-startup-cloud-migration"
+        }
+      },
+      "system": {
+        "title": "Architecture",
+        "label": "Exemple",
+        "hint": "Cliquez sur un élément pour voir avec quoi il peut être construit.",
+        "close": "Fermer",
+        "failedLabel": "Échec",
+        "stackLabel": "Construit, par exemple, avec",
+        "legend": {
+          "call": "Requête",
+          "answer": "Réponse",
+          "needs": "Arrière-plan",
+          "failed": "Nouvel essai"
+        },
+        "nodes": {
+          "cloud": {
+            "name": "Votre cloud",
+            "role": "Hébergement",
+            "badge": "Infrastructure",
+            "text": "Tout ce qui s'y trouve tourne dans votre propre compte cloud ou votre centre de données, dans le pays de votre choix, avec sauvegardes et supervision."
+          },
+          "client": {
+            "name": "Client",
+            "role": "Application web et mobile",
+            "badge": "Frontend",
+            "text": "Les écrans que votre équipe utilise dans un navigateur ou sur un téléphone, construits avec un framework que vos développeurs connaissent."
+          },
+          "api": {
+            "name": "Serveur",
+            "role": "Règles métier",
+            "badge": "Backend",
+            "text": "Vérifie chaque requête, applique vos règles (qui peut modifier une affaire, quelles remises demandent une validation) et échange avec toutes les autres briques."
+          },
+          "auth": {
+            "name": "Auth",
+            "role": "Connexion et rôles",
+            "badge": "Sécurité",
+            "text": "Comptes d'entreprise, connexion en deux étapes et rôles qui décident qui voit quels clients et quels chiffres."
+          },
+          "jobs": {
+            "name": "File d'attente",
+            "role": "Tâches en arrière-plan",
+            "badge": "Automatisation",
+            "text": "Le travail qui se fait tout seul : synchroniser les e-mails et les factures, envoyer des rappels, réessayer quand un autre système ne répond pas."
+          },
+          "sql": {
+            "name": "Base de données",
+            "role": "Clients et affaires",
+            "badge": "Données",
+            "text": "Le registre principal des clients, des contacts, des affaires et de leur historique, avec chaque modification enregistrée."
+          },
+          "agent": {
+            "name": "Agent IA",
+            "role": "Fait le travail répétitif",
+            "badge": "IA",
+            "text": "Prépare les revues, rédige les relances et répond aux questions, avec les seules données et actions qui lui sont confiées, et vous demande votre accord avant tout envoi."
+          },
+          "rag": {
+            "name": "RAG",
+            "role": "Trouve les bonnes informations",
+            "badge": "IA",
+            "text": "Recherche documentaire : avant de répondre, l'IA consulte les documents et les fiches utiles. Les réponses viennent de vos données et citent leur source."
+          },
+          "vector": {
+            "name": "Base vectorielle",
+            "role": "Recherche par le sens",
+            "badge": "Données",
+            "text": "Stocke les documents sous une forme interrogeable par le sens : « réclamation pour livraison en retard » trouve aussi « commande arrivée une semaine après la date »."
+          },
+          "graph": {
+            "name": "Base graphe",
+            "role": "Qui est lié à qui",
+            "badge": "Données",
+            "text": "Stocke les relations : quel contact travaille où, qui a recommandé qui, quelles affaires ont un fournisseur en commun. Utile quand les liens comptent autant que les fiches."
+          },
+          "llm": {
+            "name": "LLM",
+            "role": "Le modèle de langage",
+            "badge": "IA",
+            "text": "Le modèle qui lit et écrit le texte. Choisi selon la qualité, le coût et l'endroit où vos données ont le droit d'aller, et remplaçable sans reconstruire le reste."
+          },
+          "integrations": {
+            "name": "Intégrations",
+            "role": "Vos autres outils",
+            "badge": "Intégration",
+            "text": "E-mail, facturation, messagerie et paiements connectés : personne ne saisit deux fois la même chose."
+          }
+        }
+      },
+      "demo": {
+        "label": "Démo",
+        "tabsLabel": "Écrans du CRM de démonstration",
+        "workspace": "Acme",
+        "user": "Alex Morgan",
+        "what": "Ce qu'il fait",
+        "why": "Pourquoi il est simple à utiliser",
+        "groups": {
+          "start": "Démarrer",
+          "work": "Au quotidien",
+          "ai": "Agent IA",
+          "admin": "Administration"
+        },
+        "screens": {
+          "onboarding": {
+            "tab": "Prise en main",
+            "what": "Les nouveaux utilisateurs connectent leur messagerie, leur agenda et leur facturation en quelques clics. Le CRM se remplit dès le premier jour.",
+            "why": "Une étape à la fois, une liste qui montre ce qu'il reste à faire, et la possibilité de passer une étape pour y revenir plus tard."
+          },
+          "records": {
+            "tab": "Entreprises",
+            "what": "Toutes les entreprises et les affaires dans un seul tableau, avec leur responsable, leur montant et leur étape d'un coup d'œil.",
+            "why": "Triez en un clic, sélectionnez plusieurs lignes pour agir dessus en même temps, et faites avancer une affaire en cliquant sur son étape. Aucun formulaire à ouvrir."
+          },
+          "analytics": {
+            "tab": "Rapports",
+            "what": "Pipeline en cours, affaires gagnées et taux de transformation, calculés sur les données en temps réel, par semaine, mois ou trimestre.",
+            "why": "Les quatre chiffres que les responsables demandent en premier sont en haut, le détail juste en dessous."
+          },
+          "agent": {
+            "tab": "Agent en action",
+            "what": "Un agent IA prépare la revue hebdomadaire du pipeline : il récupère les affaires, repère celles qui refroidissent et rédige la synthèse.",
+            "why": "Vous suivez chaque étape en direct, et il s'arrête pour vous demander votre accord avant d'envoyer ou de réserver quoi que ce soit."
+          },
+          "assistant": {
+            "tab": "Assistant",
+            "what": "Posez vos questions sur un client ou une affaire avec vos propres mots. L'assistant cherche dans le CRM, vos e-mails et vos notes.",
+            "why": "Des suggestions de questions pour démarrer, et des réponses qui renvoient aux fiches d'où elles viennent."
+          },
+          "evals": {
+            "tab": "Évaluations",
+            "what": "Chaque modification de l'IA est testée sur des cas réels de votre activité avant sa mise en service.",
+            "why": "Un seul taux de réussite à suivre, la formulation exacte qui a changé, et chaque cas de test consultable."
+          },
+          "settings": {
+            "tab": "Paramètres",
+            "what": "Rôles de l'équipe, étapes de vente propres à votre entreprise, licences et facturation, gérés par votre équipe.",
+            "why": "Des libellés clairs, des modifications enregistrées au fil de l'eau, et rien de caché derrière un ticket au support."
+          }
+        },
+        "onboarding": {
+          "step": "Étape 2 sur 4",
+          "title": "Bienvenue chez Acme, Alex",
+          "subtitle": "Quelques étapes rapides et votre espace de travail est prêt, en deux minutes environ.",
+          "steps": [
+            "Espace",
+            "Outils",
+            "Équipe",
+            "Contacts"
+          ],
+          "cardTitle": "Connectez vos outils",
+          "cardText": "Votre CRM lit et écrit dans les applications que vous connectez. Modifiable à tout moment.",
+          "connected": "Connecté",
+          "tools": [
+            {
+              "logo": "gmail",
+              "name": "Gmail",
+              "text": "Les e-mails échangés avec un client sont classés dans sa fiche."
+            },
+            {
+              "logo": "google",
+              "name": "Google Agenda",
+              "text": "Les rendez-vous s'affichent sur l'affaire concernée."
+            },
+            {
+              "logo": "whatsapp",
+              "name": "WhatsApp",
+              "text": "Gardez une trace des échanges avec les clients qui préfèrent la messagerie."
+            },
+            {
+              "logo": "odoo",
+              "name": "Odoo",
+              "text": "Factures et état des paiements à côté de chaque affaire."
+            },
+            {
+              "logo": "slack",
+              "name": "Slack",
+              "text": "Recevez un message quand une affaire change d'étape."
+            }
+          ],
+          "skip": "Passer pour l'instant",
+          "back": "Retour",
+          "continue": "Continuer",
+          "checklist": "Étapes de configuration",
+          "checklistItems": [
+            {
+              "title": "Espace de travail",
+              "text": "Acme, 2 à 10 personnes"
+            },
+            {
+              "title": "Connectez vos outils",
+              "text": "En cours"
+            },
+            {
+              "title": "Invitez votre équipe",
+              "text": "Moins d'une minute"
+            },
+            {
+              "title": "Importez vos contacts",
+              "text": "Environ 2 minutes"
+            }
+          ],
+          "help": "Besoin d'aide ?",
+          "helpText": "Réservez un appel de configuration gratuit de 15 minutes"
+        },
+        "records": {
+          "title": "Entreprises",
+          "hint": "Cliquez sur une étape pour déplacer l'affaire",
+          "addRow": "Ajouter une ligne",
+          "selected": "{count} sélectionnés",
+          "clear": "Effacer",
+          "columns": {
+            "company": "Entreprise",
+            "industry": "Secteur",
+            "owner": "Responsable",
+            "value": "Montant (€)",
+            "stage": "Étape",
+            "last": "Dernier contact"
+          },
+          "sortBy": "Trier par montant",
+          "stages": {
+            "new": "Nouveau",
+            "qualified": "Qualifié",
+            "proposal": "Proposition",
+            "negotiation": "Négociation",
+            "won": "Gagné",
+            "lost": "Perdu"
+          },
+          "rows": [
+            {
+              "company": "Nour Pharma",
+              "industry": "Santé",
+              "owner": "Yasmine Ben Ali",
+              "value": 48000,
+              "stage": "negotiation",
+              "last": "Aujourd'hui"
+            },
+            {
+              "company": "Atlas Logistics",
+              "industry": "Transport",
+              "owner": "Karim Haddad",
+              "value": 12500,
+              "stage": "proposal",
+              "last": "Hier"
+            },
+            {
+              "company": "Sahel Foods",
+              "industry": "Agroalimentaire",
+              "owner": "Amina Okafor",
+              "value": 86000,
+              "stage": "won",
+              "last": "24 oct."
+            },
+            {
+              "company": "Medina Textiles",
+              "industry": "Industrie",
+              "owner": "Yasmine Ben Ali",
+              "value": 31200,
+              "stage": "qualified",
+              "last": "23 oct."
+            },
+            {
+              "company": "Cedar Clinics",
+              "industry": "Santé",
+              "owner": "Omar Farouk",
+              "value": 9800,
+              "stage": "new",
+              "last": "22 oct."
+            },
+            {
+              "company": "Blue Coast Hotels",
+              "industry": "Hôtellerie",
+              "owner": "Karim Haddad",
+              "value": 62000,
+              "stage": "proposal",
+              "last": "21 oct."
+            },
+            {
+              "company": "Highland Coffee",
+              "industry": "Agroalimentaire",
+              "owner": "Amina Okafor",
+              "value": 18900,
+              "stage": "qualified",
+              "last": "20 oct."
+            },
+            {
+              "company": "Delta Engineering",
+              "industry": "BTP",
+              "owner": "Omar Farouk",
+              "value": 21000,
+              "stage": "new",
+              "last": "18 oct."
+            },
+            {
+              "company": "Oasis Retail",
+              "industry": "Commerce",
+              "owner": "Karim Haddad",
+              "value": 6400,
+              "stage": "lost",
+              "last": "16 oct."
+            }
+          ]
+        },
+        "analytics": {
+          "title": "Rapport des ventes",
+          "export": "Exporter",
+          "ranges": {
+            "week": "7 derniers jours",
+            "month": "30 derniers jours",
+            "quarter": "Ce trimestre"
+          },
+          "kpis": {
+            "pipeline": "Pipeline en cours",
+            "won": "Gagné",
+            "winRate": "Taux de transformation",
+            "cycle": "Cycle de vente moyen"
+          },
+          "days": "{count} jours",
+          "chartTitle": "Chiffre d'affaires signé",
+          "current": "Cette période",
+          "previous": "Période précédente",
+          "funnelTitle": "Affaires par étape"
+        },
+        "agent": {
+          "runs": "Exécutions",
+          "title": "Préparer la revue hebdomadaire du pipeline",
+          "running": "En cours",
+          "waiting": "Attend votre réponse",
+          "done": "Terminé",
+          "plan": "Plan en 5 étapes",
+          "steps": [
+            {
+              "title": "Récupérer les affaires de la semaine",
+              "text": "Depuis le CRM, toutes étapes confondues",
+              "tool": "crm.query"
+            },
+            {
+              "title": "Repérer les affaires sans contact depuis 14 jours",
+              "text": "4 affaires à relancer",
+              "tool": "crm.search"
+            },
+            {
+              "title": "Rédiger la synthèse du pipeline",
+              "text": "Totaux, évolutions et risques sur une page",
+              "tool": "docs.write"
+            },
+            {
+              "title": "Envoyer la synthèse à Karim",
+              "text": "Attend d'abord votre validation",
+              "tool": "gmail.send"
+            },
+            {
+              "title": "Planifier la revue du lundi",
+              "text": "30 minutes avec l'équipe commerciale",
+              "tool": "calendar.create"
+            }
+          ],
+          "progress": "Étape {step} sur 5",
+          "skipped": "Ignorée",
+          "again": "Recommencer",
+          "needs": "Votre avis est attendu",
+          "nothing": "Rien à valider pour l'instant",
+          "nothingText": "L'agent vous demande votre accord ici avant tout envoi ou toute réservation.",
+          "approveTitle": "Envoyer la synthèse à Karim ?",
+          "approveText": "Revue hebdomadaire du pipeline, une page, 4 relances listées.",
+          "approve": "Valider et envoyer",
+          "reject": "Pas maintenant",
+          "approved": "Validé. La synthèse part chez Karim.",
+          "rejected": "Non envoyé. La synthèse reste dans vos brouillons.",
+          "details": "Détails",
+          "agentLabel": "Agent",
+          "agentName": "Revue du pipeline",
+          "trigger": "Exécution",
+          "triggerValue": "Chaque vendredi à 16 h",
+          "calls": "Appels d'outils"
+        },
+        "assistant": {
+          "greeting": "Bon après-midi ! Par quoi voulez-vous continuer ?",
+          "placeholder": "Une question sur un client, une affaire ou votre pipeline...",
+          "plugins": "Extensions",
+          "auto": "Auto",
+          "connect": "Connecter des applications",
+          "newChat": "Nouvelle conversation",
+          "working": "Agents au travail",
+          "agents": [
+            "Recherche CRM",
+            "Historique des e-mails",
+            "Rédaction"
+          ],
+          "chats": [
+            {
+              "chip": "Relancer les affaires bloquées",
+              "reply": "4 affaires n'ont eu aucun contact depuis 14 jours ou plus. J'ai préparé une courte relance pour chacune. Choisissez celles à envoyer.",
+              "panel": "Affaires bloquées",
+              "items": [
+                {
+                  "title": "Blue Coast Hotels",
+                  "text": "62 000 €, proposition, 18 jours"
+                },
+                {
+                  "title": "Medina Textiles",
+                  "text": "31 200 €, qualifié, 15 jours"
+                },
+                {
+                  "title": "Highland Coffee",
+                  "text": "18 900 €, qualifié, 14 jours"
+                }
+              ]
+            },
+            {
+              "chip": "Résumer ma semaine",
+              "reply": "Vous avez signé Sahel Foods (86 000 €), fait passer Nour Pharma en négociation et ajouté 3 nouveaux prospects. Deux propositions attendent une réponse.",
+              "panel": "Cette semaine",
+              "items": [
+                {
+                  "title": "Gagné",
+                  "text": "Sahel Foods, 86 000 €"
+                },
+                {
+                  "title": "Avancé",
+                  "text": "Nour Pharma en négociation"
+                },
+                {
+                  "title": "Nouveaux prospects",
+                  "text": "Cedar Clinics, Delta Engineering et 1 autre"
+                }
+              ]
+            },
+            {
+              "chip": "Préparer mon appel avec Nour Pharma",
+              "reply": "Voici une fiche d'une page : leur devis en cours, les trois derniers e-mails et leurs questions sur les délais de livraison.",
+              "panel": "Fiche d'appel",
+              "items": [
+                {
+                  "title": "Devis en cours",
+                  "text": "48 000 €, envoyé le 20 oct."
+                },
+                {
+                  "title": "Dernier e-mail",
+                  "text": "Question sur la livraison à Sfax"
+                },
+                {
+                  "title": "Décideur",
+                  "text": "Responsable des achats"
+                }
+              ]
+            },
+            {
+              "chip": "Trouver les contacts en double",
+              "reply": "J'ai trouvé 6 contacts qui ressemblent à des doublons. Rien n'est fusionné tant que vous n'avez pas confirmé chaque paire.",
+              "panel": "Doublons possibles",
+              "items": [
+                {
+                  "title": "K. Haddad et Karim Haddad",
+                  "text": "Même numéro de téléphone"
+                },
+                {
+                  "title": "Sahel Foods et Sahel Food",
+                  "text": "Même site web"
+                },
+                {
+                  "title": "y.benali@ et yasmine.benali@",
+                  "text": "Même nom, deux e-mails"
+                }
+              ]
+            }
+          ]
+        },
+        "evals": {
+          "title": "Prompt de notation des prospects",
+          "version": "v12 actuelle",
+          "lastRun": "Dernière exécution il y a 2 heures",
+          "run": "Lancer l'évaluation",
+          "running": "En cours...",
+          "kpis": {
+            "pass": "Taux de réussite",
+            "score": "Score moyen",
+            "time": "Temps de réponse",
+            "cost": "Coût pour 1 000 exécutions"
+          },
+          "vs": "vs v11",
+          "chartTitle": "Taux de réussite par version",
+          "chartNote": "12 dernières versions, mêmes cas de test à chaque fois",
+          "changes": "Modifications de la v12",
+          "diff": [
+            {
+              "t": "Noter chaque nouveau prospect de 1 à 5 "
+            },
+            {
+              "del": "selon la taille de l'entreprise"
+            },
+            {
+              "ins": "selon le budget, le calendrier et l'adéquation avec notre offre"
+            },
+            {
+              "t": ". "
+            },
+            {
+              "del": "Toujours répondre en anglais."
+            },
+            {
+              "ins": "Répondre dans la langue du prospect."
+            },
+            {
+              "t": " S'il manque des informations clés, "
+            },
+            {
+              "del": "deviner"
+            },
+            {
+              "ins": "poser une seule question courte"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "cases": "Cas de test",
+          "filters": {
+            "all": "Tous",
+            "pass": "Réussi",
+            "partial": "Partiel",
+            "fail": "Échec"
+          },
+          "columns": {
+            "input": "Message du prospect",
+            "expected": "Attendu",
+            "score": "Résultat"
+          },
+          "items": [
+            {
+              "id": "TC-01",
+              "input": "Distributeur pharmaceutique, 120 salariés, besoin d'un devis d'ici vendredi",
+              "expected": "5, appeler aujourd'hui",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-02",
+              "input": "Bonjour, nous cherchons un CRM pour 8 commerciaux.",
+              "expected": "4, répondre en français",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-03",
+              "input": "Je regarde juste, projet étudiant",
+              "expected": "1, réponse polie",
+              "result": "pass",
+              "score": "5/5"
+            },
+            {
+              "id": "TC-04",
+              "input": "Groupe hôtelier, 4 sites, pas de budget indiqué",
+              "expected": "3, demander le budget",
+              "result": "partial",
+              "score": "3/5"
+            },
+            {
+              "id": "TC-05",
+              "input": "نريد ربط المتجر الإلكتروني بنظام المحاسبة",
+              "expected": "4, répondre en arabe",
+              "result": "pass",
+              "score": "4/5"
+            },
+            {
+              "id": "TC-06",
+              "input": "Vous pouvez aussi gérer notre paie ?",
+              "expected": "2, expliquer que c'est hors périmètre",
+              "result": "fail",
+              "score": "1/5"
+            }
+          ],
+          "justNow": "Dernière exécution à l'instant"
+        },
+        "settings": {
+          "title": "Paramètres",
+          "subtitle": "Gérez votre équipe, votre pipeline et votre abonnement.",
+          "tabs": {
+            "members": "Membres",
+            "pipeline": "Pipeline",
+            "billing": "Facturation"
+          },
+          "invite": "Inviter",
+          "roles": {
+            "admin": "Admin",
+            "sales": "Commercial",
+            "viewer": "Lecteur"
+          },
+          "roleLabel": "Rôle de {name}",
+          "members": [
+            {
+              "name": "Alex Morgan",
+              "email": "alex@acme.example",
+              "role": "admin"
+            },
+            {
+              "name": "Yasmine Ben Ali",
+              "email": "yasmine@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Karim Haddad",
+              "email": "karim@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Amina Okafor",
+              "email": "amina@acme.example",
+              "role": "sales"
+            },
+            {
+              "name": "Omar Farouk",
+              "email": "omar@acme.example",
+              "role": "viewer"
+            }
+          ],
+          "pipelineText": "Les étapes que suivent vos affaires, dans l'ordre.",
+          "addStage": "Ajouter une étape",
+          "newStage": "Nouvelle étape",
+          "billing": {
+            "plan": "Offre Équipe",
+            "renews": "Renouvellement le 12 nov.",
+            "seats": "Licences",
+            "seatsValue": "8 sur 10",
+            "storage": "Stockage",
+            "storageValue": "42 Go sur 100",
+            "ai": "Crédits IA ce mois-ci",
+            "aiValue": "34 000 sur 50 000"
+          }
+        },
+        "title": "Essayez la démo",
+        "intro": "Un CRM que nous avons conçu pour montrer notre façon de travailler. Parcourez les écrans, déplacez une affaire, validez l'e-mail de l'agent, filtrez les cas de test."
+      },
+      "features": [
+        {
+          "title": "Vos étapes de vente, pas celles par défaut",
+          "text": "Le pipeline suit la façon dont votre équipe remporte vraiment ses affaires, étape par étape."
+        },
+        {
+          "title": "Contacts nettoyés et importés",
+          "text": "Anciens tableurs et carnets d'adresses fusionnés, doublons supprimés avant la mise en service."
+        },
+        {
+          "title": "Relié aux e-mails et aux devis",
+          "text": "E-mails, appels et devis sont classés sous le bon client, sans ressaisie."
+        },
+        {
+          "title": "Des rapports fiables pour les responsables",
+          "text": "Pipeline, prévisions et activité de l'équipe dans des tableaux de bord alimentés par les données en temps réel."
+        },
+        {
+          "title": "Rôles et droits d'accès",
+          "text": "Chacun voit les clients et les chiffres que son rôle autorise."
+        },
+        {
+          "title": "Sur tous les écrans",
+          "text": "Le même CRM sur un ordinateur au bureau ou sur un téléphone en déplacement."
+        },
+        {
+          "title": "Dans vos langues",
+          "text": "Arabe, français et anglais, avec une mise en page de droite à gauche quand il le faut."
+        },
+        {
+          "title": "Vos données restent à vous",
+          "text": "Tout est exportable à tout moment et hébergé où vous le choisissez."
+        }
+      ],
+      "faq": {
+        "title": "Questions sur la mise en place et le développement d'un CRM",
+        "items": [
+          {
+            "question": "Faut-il adapter un CRM existant ou construire le nôtre ?",
+            "answer": "La plupart des entreprises ont tout intérêt à configurer un CRM éprouvé, et c'est par là que nous commençons. Un développement sur mesure se justifie quand votre modèle de vente sort de l'ordinaire, ou quand les licences d'une grande équipe coûtent plus cher que le développement. Nous comparons les deux options pour votre situation avant que vous décidiez."
+          },
+          {
+            "question": "Comment faire pour que l'équipe s'en serve vraiment ?",
+            "answer": "Nous impliquons les futurs utilisateurs dès le premier atelier, nous limitons les champs et les étapes au strict nécessaire, et nous les formons sur leurs propres affaires. Les responsables tirent leurs rapports du CRM, ce qui donne à chacun une raison de le tenir à jour."
+          },
+          {
+            "question": "Que deviennent nos données clients actuelles ?",
+            "answer": "Nous les exportons, les nettoyons et les importons par étapes, en comparant à chaque étape les volumes et des échantillons avec l'original. Rien d'ancien n'est supprimé avant que vous ayez confirmé que le nouveau système est complet."
+          }
+        ]
+      }
+    },
+    "erp-crm-setup": {
+      "title": "Mise en place d'ERP et de CRM",
+      "metaTitle": "Mise en place et accompagnement HubSpot, Salesforce et Odoo",
+      "summary": "Nous mettons en place dans votre entreprise les CRM et ERP les plus répandus, comme HubSpot, Salesforce ou Odoo. Nous reprenons vos données, formons votre équipe et restons à vos côtés après la mise en service.",
+      "intro": "Acheter un CRM ou un ERP, c'est facile. Le plus dur, c'est que l'équipe s'en serve. Nous configurons des plateformes comme HubSpot, Salesforce, Zoho ou Odoo selon votre façon de travailler, nous formons vos équipes et nous restons avec vous après la mise en service.",
+      "stats": {
+        "title": "Ce que change un CRM bien utilisé",
+        "intro": "Des chiffres publiés par les éditeurs et par des analystes indépendants. Le constat ne change pas : le gain vient quand l'équipe s'en sert vraiment.",
+        "note": "La plupart de ces chiffres viennent des données des éditeurs eux-mêmes ou d'études qu'ils ont financées (seul Nucleus Research est indépendant du produit). Ils montrent ce qui est possible, ce n'est pas une promesse : les résultats dépendent de la mise en place et de l'adoption par l'équipe.",
+        "guide": {
+          "label": "Comment choisir un CRM",
+          "href": "/blog/how-to-choose-a-crm"
+        },
+        "items": [
+          {
+            "value": "94 %",
+            "label": "d'affaires conclues en plus après six mois sur HubSpot Sales Hub, par rapport au premier trimestre du client lui-même (81 528 clients).",
+            "source": "HubSpot ROI Report 2025",
+            "url": "https://www.hubspot.com/roi"
+          },
+          {
+            "value": "4 fois",
+            "label": "plus d'affaires conclues chez les clients HubSpot accompagnés par un partenaire d'intégration que chez les autres.",
+            "source": "HubSpot ROI Report 2025",
+            "url": "https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Data%20Assets%20Repository/ROI%20Report%202025/HubSpot%20ROI%20Report%202025.pdf"
+          },
+          {
+            "value": "3,10 $",
+            "label": "rapportés pour chaque dollar investi dans un CRM, en moyenne sur 11 études de cas en 2023.",
+            "source": "Nucleus Research, 2024",
+            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+          },
+          {
+            "value": "51 %",
+            "label": "de ce retour vient du temps gagné et de processus plus fluides, plus que d'un chiffre d'affaires supplémentaire.",
+            "source": "Nucleus Research, 2024",
+            "url": "https://nucleusresearch.com/research/single/crm-benefit-areas-with-the-greatest-roi-impact/"
+          },
+          {
+            "value": "26 %",
+            "label": "de productivité en plus pour les salariés, selon l'estimation de 3 706 clients Salesforce interrogés en 2022.",
+            "source": "Salesforce, 2022",
+            "url": "https://www.salesforce.com/news/press-releases/2022/11/07/companies-report-cost-savings-with-salesforce/"
+          },
+          {
+            "value": "209 %",
+            "label": "de retour sur trois ans et un investissement remboursé en moins de six mois, pour une entreprise modélisée de 300 personnes sur Dynamics 365 Business Central.",
+            "source": "Forrester TEI pour Microsoft, 2026",
+            "url": "https://tei.forrester.com/go/microsoft/Dynamics365BusinessCentral/"
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Aide au choix de la plateforme",
+          "text": "Nous comparons les options selon votre taille, votre budget et vos processus, et nous vous disons quand une offre moins chère suffit."
+        },
+        {
+          "title": "Configuré selon votre façon de travailler",
+          "text": "Étapes de vente, champs, droits d'accès et automatisations réglés sur votre processus, au lieu des réglages par défaut."
+        },
+        {
+          "title": "Vos données reprises proprement",
+          "text": "Contacts, affaires et historique importés depuis vos tableurs ou votre ancien logiciel, doublons supprimés."
+        },
+        {
+          "title": "Formation et suivi après la mise en service",
+          "text": "Une formation courte par poste, un guide écrit, et quelqu'un à qui poser vos questions quand elles arrivent."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Votre premier CRM après les tableurs",
+          "text": "Nous choisissons la bonne plateforme, importons vos contacts et vos affaires, et votre équipe commerciale y travaille en quelques semaines."
+        },
+        {
+          "title": "Un CRM que personne n'utilise",
+          "text": "Nous remettons de l'ordre dans un compte HubSpot, Salesforce ou Zoho existant, pour que champs, étapes et rapports retrouvent du sens."
+        },
+        {
+          "title": "Odoo pour la gestion",
+          "text": "Stocks, achats et facturation dans Odoo, mis en place module par module, sans interrompre le travail au quotidien."
+        },
+        {
+          "title": "Changer de plateforme",
+          "text": "Passer d'un CRM ou d'un ERP à un autre en gardant tout votre historique, avec les deux systèmes vérifiés côte à côte."
+        }
+      ],
+      "stories": {
+        "title": "Ce qu'en disent des entreprises de la région",
+        "intro": "Des entreprises au Kenya, en Égypte, aux Émirats arabes unis et en Jordanie racontent ce qui a changé avec l'arrivée de leur CRM ou de leur ERP.",
+        "note": "Citations tirées d'études de cas publiées par Odoo, Zoho et Microsoft. Ces entreprises ne sont pas clientes de Qartmina.",
+        "readStory": "Lire le témoignage",
+        "items": [
+          {
+            "quote": "Le rôle de notre partenaire d'intégration, Animatrix ERP Solutions Ltd, a été très important. Leur méthode structurée, leur bonne connaissance de notre secteur et leur accompagnement continu ont assuré une transition sans heurts et une forte adoption par les utilisateurs.",
+            "name": "Qayyum Shiraz, directeur technique",
+            "company": "Transfreight Logistics",
+            "country": "Kenya",
+            "platform": "odoo",
+            "platformName": "Odoo",
+            "result": "Environ 30 % de travail manuel en moins, selon l'étude de cas d'Odoo",
+            "url": "https://www.odoo.com/blog/customer-reviews-6/transfreight-logistics-limited-reduced-manual-work-by-30-using-odoo-s-management-system-2308"
+          },
+          {
+            "quote": "Zoho One, c'est ce qui nous est arrivé de mieux. La productivité moyenne de nos recruteurs est passée de 25 à 40 tâches par jour, et le délai de service à nos clients est passé de deux semaines en moyenne à quatre jours.",
+            "name": "Mahmoud Salem, directeur général",
+            "company": "Tawzef",
+            "country": "Égypte",
+            "platform": "zoho",
+            "platformName": "Zoho One",
+            "url": "https://www.zoho.com/one/customers/tawzef.html"
+          },
+          {
+            "quote": "Avant, nous n'avions pas de vue d'ensemble sur nos processus, nos clients et nos partenaires. Il fallait chercher les informations client dans plusieurs systèmes. Aujourd'hui, avec la plateforme MS Dynamics et Analytics, tout est accessible en un clic.",
+            "name": "Shrikant A. Kabboor, directeur technique",
+            "company": "Arada",
+            "country": "Émirats arabes unis",
+            "platformName": "Dynamics 365",
+            "url": "https://www.microsoft.com/en/customers/story/1736469938408312587-arada-azure-other-unsegmented-en-united-arab-emirates"
+          },
+          {
+            "quote": "Aujourd'hui, avec Odoo, tout est clair. Je peux réserver la voiture que je veux, suivre les bonnes étapes et garder toutes mes données au même endroit. Ça m'économise de l'effort et du temps, et tout va plus vite.",
+            "name": "Hamza Al-Radaydah, responsable commercial",
+            "company": "Great Wall Motors Jordan",
+            "country": "Jordanie",
+            "platform": "odoo",
+            "platformName": "Odoo",
+            "url": "https://www.odoo.com/blog/customer-reviews-6/great-wall-motors-jordan-drives-efficiency-with-odoo-1824"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur la mise en place d'un ERP ou d'un CRM",
+        "items": [
+          {
+            "question": "Quel CRM choisir ?",
+            "answer": "Cela dépend de la taille de votre équipe, de votre budget et de votre façon de vendre. HubSpot est facile à prendre en main, Salesforce convient aux équipes commerciales plus grandes aux ventes complexes, Pipedrive est simple et visuel, et Odoo s'impose quand vous voulez aussi gérer stocks et facturation dans le même système. Nous les comparons pour votre cas avant tout achat."
+          },
+          {
+            "question": "À quel nom est la licence ?",
+            "answer": "Au vôtre. Vous achetez la licence auprès de l'éditeur, au nom de votre entreprise : le compte et les données restent à vous. Nous travaillons dedans en tant que partenaire de mise en place."
+          },
+          {
+            "question": "Combien de temps prend une mise en place ?",
+            "answer": "Cela dépend du nombre d'équipes qui vont l'utiliser et de l'état de vos données actuelles. En général, nous commençons par une équipe ou un processus, puis ajoutons le reste une fois que tout tourne bien. Vous recevez un planning daté avant le démarrage."
+          }
+        ]
+      }
+    },
+    "ui-ux-design": {
+      "title": "Design UX/UI",
+      "metaTitle": "Design UX/UI pour sites web et applications",
+      "summary": "Recherche utilisateur, maquettes filaires et prototypes cliquables pour un site ou une application simple à utiliser, testés avec de vraies personnes avant tout développement.",
+      "intro": "L'UX, pour expérience utilisateur, c'est la facilité avec laquelle une personne fait ce qu'elle est venue faire sur votre site ou votre application. L'UI, l'interface utilisateur, c'est ce qu'elle voit : écrans, boutons, textes et mise en page. Nous parlons à vos utilisateurs, dessinons le parcours, construisons un prototype sur lequel on peut cliquer, puis le testons avant d'écrire la moindre ligne de code, tant que les changements coûtent encore peu.",
+      "features": [
+        {
+          "title": "Une recherche avec vos vrais utilisateurs",
+          "text": "Des entretiens courts et des séances d'observation montrent où les gens bloquent aujourd'hui."
+        },
+        {
+          "title": "La structure avant le visuel",
+          "text": "De simples croquis de pages pour valider la structure et le contenu, avant de parler couleurs."
+        },
+        {
+          "title": "Des prototypes cliquables",
+          "text": "Une version réaliste de l'application, à essayer sur un téléphone, sans encore une ligne de code derrière."
+        },
+        {
+          "title": "Un design system pour les développeurs",
+          "text": "Boutons, formulaires et règles de mise en page réutilisables, documentés pour que chaque nouvel écran reste cohérent."
+        }
+      ],
+      "useCases": [
+        "Un parcours de réservation ou de commande où les clients abandonnent avant de payer",
+        "Un outil interne que l'équipe évite parce que chaque tâche demande trop de clics",
+        "Une idée d'application mobile à tester avant d'investir dans le développement",
+        "Un site en arabe et en anglais qui doit se lire correctement de droite à gauche"
+      ],
+      "faq": {
+        "title": "Questions sur le design UX/UI",
+        "items": [
+          {
+            "question": "Pourquoi concevoir avant de développer ?",
+            "answer": "Modifier un prototype prend quelques heures, modifier un logiciel terminé prend beaucoup plus longtemps. En testant d'abord le design, vous consacrez votre budget de développement à des écrans que vos utilisateurs ont déjà su utiliser."
+          },
+          {
+            "question": "Nos développeurs peuvent-ils travailler à partir de vos maquettes ?",
+            "answer": "Oui. Nous livrons les maquettes dans Figma, avec les dimensions, les états et des notes pour chaque écran, et nous répondons aux questions pendant que votre équipe développe. Si vous n'avez pas de développeurs, nous pouvons aussi le développer pour vous."
+          },
+          {
+            "question": "Avec qui testez-vous les maquettes ?",
+            "answer": "Idéalement, avec quelques-uns de vos clients ou de vos collaborateurs à chaque série de tests. Vous nous aidez à les joindre, nous animons les séances, prenons des notes et vous partageons ce que nous avons appris. Nous n'enregistrons que les personnes qui l'acceptent."
+          }
+        ]
+      }
+    },
+    "personal-branding": {
+      "title": "Personal branding",
+      "metaTitle": "Personal branding pour fondateurs et dirigeants",
+      "summary": "Un audit de votre présence en ligne, une page lien en bio qui suit vos prospects, six mois de contenus avec les visuels prêts et un site personnel, pour les fondateurs et les dirigeants.",
+      "intro": "Clients, investisseurs et futures recrues se renseignent sur la personne avant l'entreprise. Nous faisons le point sur votre image en ligne aujourd'hui, nous fixons avec vous ce pour quoi vous voulez être reconnu, puis nous construisons tout autour : vos profils, une page lien en bio qui capte des prospects, six mois de contenus avec des visuels prêts à publier et un site personnel facile à trouver. Votre voix reste la vôtre. Nous vous interviewons, nous rédigeons, et vous validez chaque mot.",
+      "included": {
+        "title": "Ce qui est inclus",
+        "intro": "Un seul plan : comment on vous trouve, ce qu'on lit sur vous et comment on vous contacte.",
+        "items": [
+          {
+            "title": "Audit et plan de présence en ligne",
+            "text": "Nous passons en revue vos profils, les résultats de recherche à votre nom et vos anciennes publications, puis nous vous remettons un plan clair de ce qu'il faut corriger en premier."
+          },
+          {
+            "title": "Positionnement",
+            "text": "Les sujets sur lesquels vous voulez faire référence et le public auquel vous parlez, définis ensemble en une séance de travail."
+          },
+          {
+            "title": "Votre page bcards.io et un CRM pour vos prospects",
+            "text": "Un lien en bio complet avec vos coordonnées, vos liens et votre portfolio, et un CRM simple qui enregistre chaque personne qui vous contacte."
+          },
+          {
+            "title": "Des profils réécrits",
+            "text": "Titre LinkedIn, section Infos, expériences et liens mis en avant réécrits pour les personnes que vous voulez toucher, et vos autres profils mis en cohérence."
+          },
+          {
+            "title": "Un plan de contenu sur six mois",
+            "text": "Sujets, formats et dates pour les six prochains mois, rédigés à partir de courts entretiens avec vous."
+          },
+          {
+            "title": "Des visuels marketing prêts à l'emploi",
+            "text": "Carrousels, images générées par IA et vidéos en motion design, créés pour vos publications."
+          },
+          {
+            "title": "Un site portfolio personnel",
+            "text": "Un site personnel rapide qui présente votre travail, votre offre et la façon de vous joindre."
+          },
+          {
+            "title": "Le SEO sur votre nom",
+            "text": "Votre site et vos profils sont configurés pour que les personnes qui cherchent votre nom trouvent ce que vous voulez leur montrer."
+          },
+          {
+            "title": "Et plus encore, au fil de votre croissance",
+            "text": "Direction photo, bio de conférencier, dossier de presse ou publicités quand vous en avez besoin, avec la même équipe."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Construit à partir de vos entretiens",
+          "text": "De courtes séances et des messages vocaux nous donnent vos histoires, vos expressions et vos opinions."
+        },
+        {
+          "title": "Rien ne sort sans vous",
+          "text": "Chaque publication, chaque modification de profil et chaque visuel passe d'abord par votre validation."
+        },
+        {
+          "title": "La même image partout",
+          "text": "Vos profils, votre site, votre page bcards.io et vos publications portent le même message et le même style."
+        },
+        {
+          "title": "Peu de temps de votre côté",
+          "text": "Une séance plus longue au départ, puis un court entretien à quelques semaines d'intervalle."
+        }
+      ],
+      "useCases": [
+        "Un fondateur qui prépare une levée de fonds ou l'arrivée sur un nouveau marché",
+        "Un directeur général tout juste nommé qui se présente à son secteur",
+        "Un consultant qui veut que ses clients le trouvent grâce à ses publications",
+        "Un associé senior dont le profil ressemble encore à un vieux CV"
+      ],
+      "faq": {
+        "title": "Questions sur le personal branding",
+        "items": [
+          {
+            "question": "Les publications vont-elles vraiment me ressembler ?",
+            "answer": "C'est tout l'objectif. Les brouillons partent d'entretiens et de messages vocaux avec vous, et reprennent vos expressions et vos exemples. Rien n'est publié sans votre accord."
+          },
+          {
+            "question": "Combien de temps cela me prend-il ?",
+            "answer": "Prévoyez une séance plus longue au départ pour fixer votre positionnement, puis un court entretien à quelques semaines d'intervalle pour recueillir des idées. Relire les brouillons prend quelques minutes, pas des heures."
+          },
+          {
+            "question": "Pouvez-vous publier à ma place ?",
+            "answer": "Nous pouvons programmer les publications validées grâce à un accès que vous nous donnez et que vous pouvez retirer à tout moment. Nous vous conseillons tout de même de répondre vous-même aux commentaires : les lecteurs voient bien quand quelqu'un d'autre répond à votre place."
+          }
+        ]
+      }
+    },
+    "social-media": {
+      "title": "Gestion des réseaux sociaux",
+      "metaTitle": "Gestion des réseaux sociaux pour les entreprises",
+      "summary": "Plans de contenu, publications, images et vidéos générées par IA, et les automatisations qui vont avec : vos comptes restent actifs et votre équipe sait faire tourner le système.",
+      "intro": "Publier régulièrement devient difficile quand chaque publication part d'une page blanche. Nous mettons en place tout le système : un plan de contenu, des publications marketing, des images et des vidéos générées par IA, des automatisations qui transforment une idée en publications, carrousels et publicités, et le lien avec les outils que vous utilisez déjà. Ensuite, nous formons votre équipe à le faire tourner. Et nous restons à vos côtés à chaque étape.",
+      "included": {
+        "title": "Ce qui est inclus",
+        "intro": "Tout ce qu'il faut pour passer d'une idée à une publication en ligne ou à une publicité diffusée, et les compétences pour continuer seuls.",
+        "items": [
+          {
+            "title": "Un plan de contenu",
+            "text": "Sujets, formats et dates prévus autour de vos lancements et de vos saisons, validés par vous chaque mois."
+          },
+          {
+            "title": "Des publications marketing",
+            "text": "Des publications rédigées et mises en forme pour chaque plateforme, dans les langues de vos clients."
+          },
+          {
+            "title": "Images et vidéos générées par IA",
+            "text": "Visuels, motion design et vidéos courtes réalisés avec des outils d'IA, vérifiés par une personne et fidèles à votre marque."
+          },
+          {
+            "title": "Des automatisations de contenu",
+            "text": "Des flux automatisés qui transforment une idée en vidéos, images, carrousels et variantes publicitaires, prêts pour votre validation."
+          },
+          {
+            "title": "Vos outils connectés",
+            "text": "Votre tableau de planification, votre drive partagé, votre outil de programmation et vos comptes publicitaires reliés entre eux, pour que le contenu circule sans copier-coller."
+          },
+          {
+            "title": "Une formation Claude pour le marketing",
+            "text": "Une formation pratique à Claude, un assistant IA. Vous apprenez à préparer votre dossier marketing avec votre marque, vos offres, votre façon de parler et vos meilleures publications, pour que chaque brouillon parte de ce qui vous distingue."
+          },
+          {
+            "title": "Un seul système, de l'idée à la publicité",
+            "text": "Une méthode reproductible, de l'idée à la réalisation, à la publication et à la publicité payante, documentée pour votre équipe."
+          },
+          {
+            "title": "Community management et reporting",
+            "text": "Des réponses aux commentaires et aux messages dans le style de votre marque, et un rapport mensuel sur ce qui a marché et ce qui change ensuite."
+          },
+          {
+            "title": "Un accompagnement à chaque étape",
+            "text": "Nous restons avec vous après la mise en place : points de suivi, ajustements et aide dès que le système en a besoin."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Rien ne part sans vérification",
+          "text": "Chaque publication, chaque image et chaque publicité passe d'abord notre contrôle qualité, puis votre validation."
+        },
+        {
+          "title": "Un système qui vous appartient",
+          "text": "Prompts, modèles et automatisations sont dans vos comptes, documentés pour que votre équipe puisse les faire tourner."
+        },
+        {
+          "title": "Construit autour de vos outils",
+          "text": "Nous connectons ce que vous utilisez déjà au lieu d'ajouter un abonnement de plus dont vous n'avez pas besoin."
+        },
+        {
+          "title": "Un rapport mensuel sans jargon",
+          "text": "Ce qui a été publié, ce qui a fait réagir et ce que nous changeons le mois suivant."
+        }
+      ],
+      "useCases": [
+        "Une clinique ou une école qui a besoin de publications régulières et de réponses rapides aux demandes",
+        "Une entreprise qui vend aux professionnels et a besoin d'une page LinkedIn active",
+        "Un groupe de restaurants qui publie en arabe et en français sur Instagram et Facebook",
+        "Une petite équipe qui veut publier chaque semaine sans recruter un service contenu"
+      ],
+      "faq": {
+        "title": "Questions sur la gestion des réseaux sociaux",
+        "items": [
+          {
+            "question": "Quelles plateformes gérez-vous ?",
+            "answer": "LinkedIn, Instagram, Facebook, TikTok et X, selon les endroits où vos clients passent vraiment leur temps. En général, nous conseillons deux ou trois plateformes bien tenues plutôt que toutes, mal tenues."
+          },
+          {
+            "question": "Garantissez-vous des abonnés ou des ventes ?",
+            "answer": "Non, et méfiez-vous de ceux qui le font. Nous fixons des objectifs avec vous, comme la régularité des publications, les délais de réponse et les demandes venues des réseaux sociaux. Chaque mois, nous vous disons honnêtement comment ils évoluent."
+          },
+          {
+            "question": "À qui appartiennent les comptes ?",
+            "answer": "À vous. Les pages restent au nom de votre entreprise, et nous travaillons grâce à un accès que vous nous donnez et que vous pouvez retirer à tout moment. Nous ne vous demandons jamais votre mot de passe personnel."
+          },
+          {
+            "question": "Est-ce un problème d'utiliser des visuels générés par IA ?",
+            "answer": "Pas s'ils sont bien faits et utilisés honnêtement. Une personne vérifie chaque visuel avant sa publication, les vrais produits et les vrais résultats restent réels, et nous vous prévenons quand une plateforme ou la loi demande de signaler un contenu créé par IA."
+          }
+        ]
+      }
+    },
+    "video-motion": {
+      "title": "Vidéo et motion design",
+      "metaTitle": "Vidéos explicatives et motion design",
+      "summary": "Motion design et vidéos pour vos publicités, vos lancements de produit et vos réseaux sociaux : des contenus qui attirent l'œil, expliquent en quelques secondes et ressemblent à votre marque.",
+      "intro": "Le motion design, c'est du graphisme en mouvement. Il est idéal pour la publicité et les réseaux sociaux : il capte le regard et vos spectateurs restent plus longtemps.",
+      "compare": {
+        "title": "Fixe ou animé",
+        "intro": "Le motion design, c'est du graphisme en mouvement. Faites glisser la poignée : d'un côté une carte de visite en image fixe, de l'autre la même carte qui se construit, élément par élément.",
+        "still": "Fixe",
+        "motion": "Animé",
+        "handle": "Faites glisser pour comparer la version fixe et la version animée",
+        "card": {
+          "name": "Fares Aouani Cherif",
+          "title": "Fondateur Qartmina | bcards.io",
+          "company": "Qartmina",
+          "bio": "Fondateur de Qartmina. Nous développons des logiciels sur mesure, adaptés aux besoins de chaque entreprise : votre CRM, votre ERP et vos autres outils réunis dans une plateforme centrale, avec l'IA au cœur du système.",
+          "email": "fares@qartmina.com",
+          "photoAlt": "Portrait de Fares Aouani Cherif",
+          "editing": "Modification",
+          "publish": "Publier",
+          "published": "Publié"
+        }
+      },
+      "explainer": {
+        "title": "À quoi sert le motion design",
+        "points": [
+          {
+            "title": "Un contenu vivant",
+            "text": "Une publication, une publicité ou une page qui bouge, on la regarde au lieu de la passer. Votre produit et votre message prennent vie, et votre marque paraît plus moderne et plus professionnelle."
+          },
+          {
+            "title": "Tout est clair en quelques secondes",
+            "text": "Une animation de 20 secondes peut montrer comment fonctionne votre service plus clairement que trois paragraphes de texte."
+          },
+          {
+            "title": "Stoppe le scroll",
+            "text": "Le mouvement attire l'œil dans un fil d'actualité, où l'on passe vite sur les images fixes."
+          },
+          {
+            "title": "À l'image de votre marque",
+            "text": "Conçu à partir de votre logo, de vos couleurs et de vos polices, pour que chaque vidéo appartienne visiblement à la même entreprise. Celle-ci est la nôtre."
+          }
+        ],
+        "stopVideoLabel": "Animation en motion design : un compte à rebours, puis : Vous voyez, ça vous a arrêté, voilà ce qui se passe quand les gens regardent votre contenu",
+        "brandVideoLabel": "Animation en motion design réalisée pour Qartmina dans sa propre identité : logo, couleurs et polices"
+      },
+      "examples": {
+        "title": "D'autres exemples",
+        "intro": "Ouvrez une carte pour lancer la vidéo. Chacune a été réalisée avec l'IA à partir d'un prompt écrit.",
+        "items": [
+          {
+            "title": "Typographie animée",
+            "text": "Des mots qui bougent au rythme du message, idéal pour les annonces et les génériques d'ouverture."
+          },
+          {
+            "title": "Présentation produit",
+            "text": "Les écrans d'un produit présentés en mouvement, comme sur une page de lancement ou dans une vidéo d'App Store."
+          },
+          {
+            "title": "Film de lancement",
+            "text": "Un format plus long qui présente un produit étape par étape, pour le haut de page d'un site ou une publication de lancement."
+          },
+          {
+            "title": "Logo et icônes animés",
+            "text": "Un logo et ses éléments qui prennent vie, pour les débuts et fins de vidéo et les écrans de chargement."
+          }
+        ]
+      },
+      "features": [
+        {
+          "title": "Des publicités qui stoppent le scroll",
+          "text": "Des publicités vidéo courtes, pensées pour capter l'attention dès la première seconde et obtenir le clic."
+        },
+        {
+          "title": "Vidéos de lancement produit",
+          "text": "Un film de lancement qui montre ce qui est nouveau et pourquoi c'est important, prêt pour votre site et tous vos canaux."
+        },
+        {
+          "title": "Des contenus sociaux qui convertissent",
+          "text": "Un flux régulier de vidéos courtes et de publications animées, pensées pour le fil de chaque plateforme."
+        },
+        {
+          "title": "Décliné pour chaque plateforme",
+          "text": "Une vidéo maître exportée en formats vertical, carré et horizontal, avec sous-titres."
+        }
+      ],
+      "useCases": [
+        "Un film de lancement et des teasers pour une nouvelle app ou un nouveau produit",
+        "Des publicités vidéo pour Instagram, TikTok et LinkedIn qui doivent attirer l'œil en une seconde",
+        "Un mois de publications animées pour les comptes sociaux d'une marque",
+        "Des vidéos de démo produit qu'une équipe commerciale envoie après ses rendez-vous"
+      ],
+      "faq": {
+        "title": "Questions sur la vidéo et le motion design",
+        "items": [
+          {
+            "question": "Combien de temps faut-il pour produire une vidéo ?",
+            "answer": "Cela dépend de la durée, du style et du nombre d'allers-retours. Une courte vidéo explicative animée prend en général quelques semaines, du script au fichier final. C'est souvent la vitesse de validation du script qui donne le rythme."
+          },
+          {
+            "question": "Pouvez-vous faire la voix off et d'autres langues ?",
+            "answer": "Oui. Nous faisons appel à des comédiens voix professionnels et pouvons produire des versions en arabe, en français, en anglais et dans d'autres langues. Chaque version est sous-titrée pour ceux qui regardent sans le son."
+          },
+          {
+            "question": "La vidéo et sa musique nous appartiennent-elles ?",
+            "answer": "La vidéo finale vous appartient. La musique et les extraits issus de banques d'images sont sous licence pour votre usage, et nous vous expliquons les conditions, par exemple si un morceau peut aussi servir dans des publicités payantes."
+          }
+        ]
+      },
+      "engine": {
+        "title": "Votre moteur vidéo",
+        "intro": "Avec l'IA et des automatisations, nous mettons en place un système qui apprend votre marque, comprend votre produit et propose des idées de vidéos construites sur des recettes qui marchent. Il génère ensuite les vidéos en quelques minutes, prêtes à publier. Nous vous aidons à planifier le calendrier pour que votre lancement monte en puissance.",
+        "steps": [
+          {
+            "title": "Votre marque",
+            "text": "Logo, couleurs, polices et façon de vous exprimer, appris une fois pour toutes."
+          },
+          {
+            "title": "Votre produit",
+            "text": "Ce qu'il fait, pour qui, et pourquoi c'est important."
+          },
+          {
+            "title": "Des idées de vidéos",
+            "text": "Des accroches et des formats qui suivent des recettes éprouvées."
+          },
+          {
+            "title": "Des vidéos en quelques minutes",
+            "text": "Générées par le système, vérifiées par une personne."
+          },
+          {
+            "title": "Le calendrier de lancement",
+            "text": "Quoi publier, où et quand, pour créer une dynamique."
+          }
+        ]
+      },
+      "offer": {
+        "title": "Votre première vidéo en motion design",
+        "text": "Dites-nous ce que vous voulez montrer. Nous écrivons le script, nous animons la vidéo aux couleurs de votre marque et nous vous la livrons prête à publier.",
+        "cta": "Lancer votre projet",
+        "launchTitle": "Vous lancez un produit ?",
+        "launchText": "Nous préparons le film de lancement, les teasers et le calendrier de publication de la semaine de sortie, pour que votre produit arrive avec de l'élan.",
+        "launchCta": "Prendre rendez-vous"
+      }
     }
   }
 }
