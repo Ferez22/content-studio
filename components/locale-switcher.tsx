@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 const names: Record<string, string> = {
   en: "English",
   fr: "Français",
-  de: "Deutsch",
 };
 
 export const LocaleSwitcher = ({

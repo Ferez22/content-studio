@@ -14,6 +14,13 @@ Marketing site for **Qartmina**, a **digital partner** for businesses: AI, data 
 
 Live at https://www.qartmina.com (canonical; the bare domain redirects), deployed on Vercel from `main`, server functions in Frankfurt (`vercel.json`, `fra1`). DNS on Hostinger. Work on a branch, never commit to `main` directly.
 
+## Brand and design references
+
+- `brand.md`: Qartmina facts (offer, audience, market, claims we may and may not use). Read before writing copy.
+- `design.md`: the site's visual style (colors, type, radii, components, do's and don'ts, CSS and Tailwind tokens). Read before any UI change.
+- Both are copies: the source is Content Studio (`brands/qartmina/brand.md`, `brands/qartmina/design.md`). Edit there,
+  then copy here. On a conflict with the live site, the site wins and both files get updated.
+
 ## Stack
 
 - Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 4, pnpm
@@ -29,7 +36,7 @@ pnpm exec tsc --noEmit
 
 ## Routes
 
-All pages live under `app/[locale]/` (`en`, `fr`, `de`, always prefixed).
+All pages live under `app/[locale]/` (`fr`, `en`, always prefixed).
 
 | Route | What |
 |---|---|
@@ -61,11 +68,12 @@ i18n/                          routing, request config (English fallback), navig
 lib/site.ts                    site constants and serviceCategories (+ categoryPath/servicePath)
 lib/service-media.ts           videos per service (hero, examples, demos)
 lib/metadata.ts, service-metadata.ts   pageMetadata(): canonical, hreflang, OG
-messages/{en,fr,de}.json       all UI copy
+messages/{en,fr}.json          all UI copy
 assets/motion/<name>/          our own motion video compositions (see below)
 assets/og/                     images read at build time by the OG route (not served)
 public/motion/                 rendered motion videos and posters
-proxy.ts                       locale detection (fr browser -> fr, else en; cookie wins), /de/blog|portfolio -> /en
+proxy.ts                       locale detection (fr browser -> fr, else en; cookie wins), /de/* -> /en/* (308)
+brand.md, design.md            brand facts and visual style reference (copies from Content Studio, see below)
 ```
 
 ## Services
@@ -114,14 +122,14 @@ Needs Python Playwright with Chrome (`channel="chrome"`) and ffmpeg. Existing: `
 
 ## i18n rules
 
-- Three locales for site pages, same slugs in every locale: `fr` (default), `en`, `de`. Detection (proxy.ts): NEXT_LOCALE
-  cookie, else a French browser gets `fr`, any other language `en` (never `de` automatically), no header `fr`.
-- Blog posts and case studies: `fr` and `en` only (`contentLocales`, Fares 2026-11-06). No `de` content: /de/blog/* and
-  /de/portfolio/* redirect to /en. A post missing in one content locale redirects to the other (next.config.ts).
+- Two locales, same slugs in both: `fr` (default) and `en`. Detection (proxy.ts): NEXT_LOCALE cookie, else a French
+  browser gets `fr`, any other language `en`, no header `fr`.
+- German was removed (Fares 2026-11-11): every `/de` URL redirects permanently (308) to the same `/en` path (proxy.ts).
+- Blog posts and case studies: `fr` and `en` (`contentLocales`). A post missing in one locale redirects to the other (next.config.ts).
 - **No hard-coded user-facing text in components.** Add keys to `messages/*.json` with identical structure; `t.raw()` for arrays.
-- For now the services copy (`services`, `serviceCategories`, `servicePages`, `visuals.cards`, `home.services`) is English only. Missing fr/de keys fall back to English key by key (`i18n/messages.ts`); untranslated service pages are canonical to English and left out of the fr/de sitemap (`translatedLocales`). Adding the namespace to fr.json/de.json makes them indexable.
+- French is written natively, never translated word for word. Everything is in fr.json except `servicePages` (service page copy, English only for now). Missing fr keys fall back to English key by key (`i18n/messages.ts`); an untranslated service page is canonical to English and left out of the fr sitemap (`translatedLocales`). Adding `servicePages.<service>` to fr.json makes it indexable.
 - Links use `Link` from `@/i18n/navigation`, never `next/link`. Every page exports `generateMetadata` (`pageMetadata()` or `translatedPageMetadata()`) and calls `setRequestLocale(locale)`.
-- Testimonials stay in the client's original words; FR/DE show a small "original in English" note.
+- Testimonials stay in the client's original words; FR shows a small "original in English" note.
 
 ## Writing rules (copy in any language)
 
@@ -176,7 +184,7 @@ Copy `content/blog/_template.mdx` to `content/blog/<locale>/<slug>.mdx`, locale 
 ## Before you push
 
 1. `pnpm exec tsc --noEmit` and `pnpm build` pass.
-2. Copy rules followed (no dashes, evidence first); en done, fr/de if the namespace is translated.
+2. Copy rules followed (no dashes, evidence first); en and fr done.
 3. UI checked at 390px and desktop, light and dark, no horizontal scroll, no console errors.
 4. `TODO.md` and `DONE.md` updated.
 5. Commit only intended files (no probe folders, no stray assets, never `.env*`). End commit messages with the co-author line if an AI agent wrote the change.

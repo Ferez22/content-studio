@@ -24,7 +24,7 @@ const staticPaths = [
   "/legal",
 ];
 
-// Blog and case-study lists exist in the content locales only (German = site pages).
+// Blog and case-study lists exist in the content locales only.
 const contentPaths = ["/portfolio", "/blog"];
 
 const entry = (path: string, locales: readonly string[]) =>
