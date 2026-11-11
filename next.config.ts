@@ -64,7 +64,7 @@ const nextConfig: NextConfig = {
     const services = Object.entries(legacyServiceSlugs)
       .filter(([, service]) => isServiceSlug(service))
       .map(([legacy, service]) => ({
-        source: `/:locale(en|fr|de)/services/${legacy}`,
+        source: `/:locale(en|fr)/services/${legacy}`,
         destination: `/:locale${servicePath(service)}`,
         permanent: true,
       }));

@@ -4,6 +4,9 @@ History of finished work, newest first. Only read this when asked or when tracki
 
 ## 2026-11-11
 
+- German removed (Fares): the site is `fr` (default) and `en` only. `messages/de.json` deleted, the language switcher shows FR and EN, every `/de` URL redirects permanently (308) to the same `/en` path (`proxy.ts`), legacy service redirects and the hidden-service link check no longer match `de`
+- French completed for everything except service page copy: `header`, `home.services`, `services`, `serviceCategories` and `visuals` written natively in French (fr-human check OK). The home "What we do" section is now titled "Expertise" (Fares). Service pages (`servicePages`) stay English until their rewrite
+- `brand.md` and `design.md` added at the root (copies from Content Studio) and referenced in CLAUDE.md
 - Restored posts redirect permanently again: `/blog/<slug>` to `/en/blog/<slug>` (308) for the five posts restored on 2026-11-05 (`restoredPosts` in `next.config.ts`). Removing the forced `/blog/*` rule on 2026-11-06 had sent them through two temporary 307s (`/fr/blog/<slug>`, then `/en/blog/<slug>`), so Search Console still showed the old URLs. Other unprefixed blog URLs keep language detection
 
 ## 2026-11-06

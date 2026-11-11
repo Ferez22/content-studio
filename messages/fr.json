@@ -21,7 +21,9 @@
     "closeMenu": "Fermer le menu",
     "language": "Langue",
     "partners": "Partenaires",
-    "becomePartner": "Devenir partenaire"
+    "becomePartner": "Devenir partenaire",
+    "allServices": "Voir tous les services",
+    "categoryOverview": "Vue d'ensemble"
   },
   "footer": {
     "positioning": "Stratégie, données et IA, conçues pour fonctionner au cœur de votre entreprise.",
@@ -225,6 +227,10 @@
       "action": "Action",
       "actionText": "Saisie dans l'ERP",
       "loop": "Boucle continue"
+    },
+    "services": {
+      "title": "Expertise",
+      "intro": "{areas} domaines, un seul partenaire. Chaque projet a un chef de projet Qartmina et il est réalisé par des spécialistes que nous choisissons et contrôlons nous-mêmes."
     }
   },
   "contactForm": {
@@ -241,6 +247,89 @@
     "verification": "Veuillez effectuer la vérification de sécurité avant l'envoi.",
     "consent": "En envoyant ce formulaire, vous acceptez que nous utilisions vos coordonnées pour vous répondre, comme décrit dans notre <link>politique de confidentialité</link>.",
     "honeypot": "Laissez ce champ vide"
+  },
+  "services": {
+    "overview": {
+      "title": "Services",
+      "intro": "Tout ce qu'il faut à une entreprise pour se digitaliser, du site et de la marque au logiciel sur mesure, à l'IA et à la sécurité. Un chef de projet, des spécialistes choisis dans notre réseau et un contrôle qualité avant chaque livraison.",
+      "metaTitle": "Services digitaux : IA, logiciel, web, marque et sécurité",
+      "metaDescription": "IA, data, sites web, logiciels, marque et cybersécurité chez un seul partenaire digital, avec un chef de projet et des spécialistes vérifiés sur chaque projet."
+    },
+    "breadcrumb": "Fil d'Ariane",
+    "categoryServicesTitle": "Ce que nous proposons",
+    "exploreCategory": "Découvrir {category}",
+    "closeCategory": "Retour à toutes les catégories",
+    "featuresTitle": "Ce qui est inclus",
+    "useCasesTitle": "Cas d'usage",
+    "relatedTitle": "Aussi dans {category}",
+    "delivery": {
+      "title": "Comment nous livrons",
+      "intro": "Quel que soit le projet, vous avez une seule équipe en face de vous, et une personne qui répond du résultat.",
+      "points": [
+        {
+          "title": "Des spécialistes choisis pour vous",
+          "text": "Nous composons chaque équipe dans notre réseau de freelances vérifiés, en retenant ceux dont les projets passés ressemblent au vôtre."
+        },
+        {
+          "title": "Un seul chef de projet",
+          "text": "Un chef de projet Qartmina organise le travail, vous tient informé et reste responsable du premier appel jusqu'à la livraison."
+        },
+        {
+          "title": "Un contrôle qualité avant livraison",
+          "text": "Nous relisons et testons chaque livrable avant de vous le remettre : vous recevez un travail fini, pas un premier jet."
+        }
+      ]
+    },
+    "media": {
+      "credit": "Exemple de <creator>@{handle}</creator> sur <source>Prompt Motion</source>",
+      "hoverHint": "Survolez pour lancer",
+      "tapHint": "Touchez pour lancer",
+      "playLabel": "Lancer l'exemple : {title}",
+      "disclaimer": "Ces exemples ont été réalisés avec l'IA par des créateurs indépendants et partagés sur Prompt Motion. Ils illustrent le format : ce ne sont pas des projets Qartmina."
+    },
+    "toc": "Catégories",
+    "seeDemo": "Voir la démo",
+    "closeDemo": "Fermer la démo",
+    "expandDemo": "Plein écran",
+    "platformsTitle": "Les plateformes que nous installons et maintenons"
+  },
+  "serviceCategories": {
+    "ai": {
+      "title": "Intelligence artificielle",
+      "metaTitle": "IA pour les entreprises : de la stratégie à la production",
+      "summary": "L'IA au service de votre activité : stratégie, agents, assistants, agents vocaux et formation de vos équipes.",
+      "intro": "L'IA vaut son prix quand elle enlève du vrai travail à vos équipes. Nous commençons par regarder honnêtement où elle sera rentable, puis nous construisons des agents, des assistants et des agents vocaux autour de vos processus et de vos données. Vos équipes apprennent à les faire tourner : la valeur reste quand le projet se termine."
+    },
+    "data-automation": {
+      "title": "Data et automatisation",
+      "metaTitle": "Data, automatisation et intégration de vos outils",
+      "summary": "Des données propres, des outils connectés et des processus qui évitent à vos équipes de ressaisir les mêmes informations.",
+      "intro": "La plupart des projets d'IA échouent sur les fondations, pas sur l'IA. Nous supprimons les étapes manuelles de vos processus, connectons les outils que vous utilisez déjà et rassemblons des données éparpillées en un seul jeu de chiffres fiable. C'est la base sur laquelle tout le reste se construit."
+    },
+    "websites-ecommerce": {
+      "title": "Sites web et e-commerce",
+      "metaTitle": "Création de sites web et de boutiques en ligne",
+      "summary": "Sites vitrines, plateformes web et boutiques en ligne rapides, sécurisés et suivis après la mise en ligne.",
+      "intro": "Votre site est souvent le premier échange d'un client avec vous. Nous créons des sites d'entreprise, des plateformes sur mesure et des boutiques en ligne qui se chargent vite, fonctionnent sur tous les téléphones et que votre équipe met à jour facilement. Après la mise en ligne, nous les gardons sécurisés, sauvegardés et visibles dans les moteurs de recherche."
+    },
+    "software-development": {
+      "title": "Développement logiciel",
+      "metaTitle": "Développement de logiciels sur mesure pour les entreprises",
+      "summary": "CRM, ERP, applications métier et mobiles construits autour de la façon dont votre entreprise travaille vraiment.",
+      "intro": "Un logiciel du marché colle rarement à votre façon de travailler, et les tableurs atteignent leurs limites bien avant qu'on s'en rende compte. Nous construisons et adaptons les outils que vos équipes utilisent chaque jour, de la vente à la finance jusqu'aux équipes sur le terrain. Chaque projet a un chef de projet Qartmina qui en répond, du premier atelier à la livraison."
+    },
+    "brand": {
+      "title": "Marque et présence en ligne",
+      "metaTitle": "Identité de marque, design et réseaux sociaux",
+      "summary": "Logo, design, écrans simples à utiliser et réseaux sociaux pour rester présent à l'esprit de vos clients.",
+      "intro": "On juge une entreprise sur ce qu'on voit d'elle avant même de lui parler. Nous concevons votre identité, vos supports et les écrans qu'utilisent vos clients, puis nous vous aidons à rester visible sur les réseaux sociaux. Tout suit la même marque : votre entreprise a la même allure sur une enseigne, une présentation ou un téléphone."
+    },
+    "cybersecurity-it": {
+      "title": "Cybersécurité et informatique",
+      "metaTitle": "Cybersécurité et services informatiques pour les entreprises",
+      "summary": "Contrôles de sécurité, préparation aux audits et support informatique au quotidien, expliqués simplement.",
+      "intro": "Un problème de sécurité commence rarement de façon spectaculaire. Il commence par un ancien compte, un réglage resté ouvert ou une sauvegarde que personne n'a testée. Nous trouvons ces failles, vous aidons à les corriger et vous préparons aux audits que vos clients demandent. Nous pouvons aussi gérer votre informatique au quotidien pour qu'elle reste en ordre."
+    }
   },
   "visuals": {
     "tools": [
@@ -360,6 +449,188 @@
         "Point de départ",
         "Semaine 4",
         "Semaine 12"
+      ]
+    },
+    "website": {
+      "url": "votreentreprise.fr",
+      "order": "Nouvelle commande"
+    },
+    "software": {
+      "title": "Pipeline commercial",
+      "columns": [
+        "Nouveau",
+        "Proposition",
+        "Gagné"
+      ]
+    },
+    "brand": {
+      "title": "Charte graphique"
+    },
+    "security": {
+      "title": "Analyse de sécurité",
+      "checks": [
+        {
+          "label": "Site web",
+          "status": "ok"
+        },
+        {
+          "label": "Serveur mail",
+          "status": "ok"
+        },
+        {
+          "label": "Comptes cloud",
+          "status": "warning"
+        },
+        {
+          "label": "Mots de passe",
+          "status": "ok"
+        }
+      ]
+    },
+    "cards": {
+      "chat": {
+        "prompts": [
+          "Quelle est notre politique de retour pour un article abîmé ?",
+          "Résume les tickets support de la semaine",
+          "Rédige une réponse sur le retard de la commande Atlas"
+        ],
+        "approval": "Demander validation",
+        "auto": "Auto",
+        "models": "Fonctionne avec votre modèle d'IA"
+      },
+      "shop": {
+        "store": "Votre boutique",
+        "sales": "Ventes totales",
+        "orders": "Commandes",
+        "visitors": "Visiteurs",
+        "newOrder": "Nouvelle commande n° {number}",
+        "nav": [
+          "Accueil",
+          "Commandes",
+          "Produits",
+          "Clients",
+          "Statistiques"
+        ]
+      },
+      "seo": {
+        "query": "dentiste près de chez moi",
+        "site": "votrecabinet.fr",
+        "title": "Votre Cabinet · Dentiste familial",
+        "results": [
+          "dentaire-centre.fr",
+          "sourire-sante.fr",
+          "dentalplus.fr"
+        ],
+        "tags": [
+          "Google Search Console",
+          "Bing Webmaster Tools",
+          "SEO"
+        ]
+      },
+      "crm": {
+        "title": "Affaires",
+        "columns": [
+          "Entreprise",
+          "Étape",
+          "Montant"
+        ],
+        "rows": [
+          {
+            "name": "Atlas Logistics",
+            "stage": "Négociation",
+            "value": "48 000 €"
+          },
+          {
+            "name": "Nova Foods",
+            "stage": "Proposition",
+            "value": "12 500 €"
+          },
+          {
+            "name": "Sahel Trading",
+            "stage": "Qualifié",
+            "value": "86 000 €"
+          },
+          {
+            "name": "Medina Labs",
+            "stage": "Nouveau",
+            "value": "9 800 €"
+          }
+        ],
+        "won": "Gagné"
+      },
+      "erp": {
+        "title": "Stock",
+        "columns": [
+          "Article",
+          "Stock",
+          "Statut"
+        ],
+        "rows": [
+          {
+            "name": "Huile d'olive 1 L",
+            "status": "En stock"
+          },
+          {
+            "name": "Blé dur 25 kg",
+            "status": "Stock bas"
+          },
+          {
+            "name": "Bocaux en verre",
+            "status": "En stock"
+          }
+        ],
+        "reorder": "Recommander",
+        "ordered": "Commandé"
+      },
+      "mobile": {
+        "greeting": "Bonjour",
+        "card": "Votre commande est en route",
+        "tabs": [
+          "Accueil",
+          "Commandes",
+          "Profil"
+        ]
+      },
+      "cloud": {
+        "from": "Vos serveurs",
+        "migrating": "Migration {percent} %",
+        "done": "En ligne dans le cloud",
+        "azure": "Azure"
+      },
+      "agents": {
+        "prompt": "Crée une équipe qui relance chaque nouveau prospect",
+        "roles": [
+          "Recherche de prospects",
+          "Mise à jour du CRM",
+          "Rédaction des e-mails"
+        ]
+      },
+      "layers": [
+        {
+          "title": "Validations",
+          "hint": "Workflows",
+          "icon": "bolt"
+        },
+        {
+          "title": "Vos données",
+          "hint": "Base de données",
+          "icon": "database"
+        },
+        {
+          "title": "Vos outils",
+          "hint": "API",
+          "icon": "plug"
+        },
+        {
+          "title": "Aide de l'IA",
+          "hint": "Assistance",
+          "icon": "spark"
+        },
+        {
+          "title": "Tableaux de bord",
+          "hint": "Rapports",
+          "icon": "pulse"
+        }
       ]
     }
   },

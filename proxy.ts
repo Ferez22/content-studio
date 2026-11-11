@@ -20,10 +20,10 @@ function detectLocale(req: NextRequest) {
 export default function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
-  // German is for site pages only: blog posts and case studies live in fr and en.
-  const content = pathname.match(/^\/de\/(blog|portfolio)(\/.*)?$/);
-  if (content) {
-    return NextResponse.redirect(new URL(`/en/${content[1]}${content[2] ?? ""}${search}`, req.url), 308);
+  // German was removed (2026-11-11): every /de URL moves permanently to the same English page.
+  const german = pathname.match(/^\/de(\/.*)?$/);
+  if (german) {
+    return NextResponse.redirect(new URL(`/en${german[1] ?? ""}${search}`, req.url), 308);
   }
 
   if (!isLocale(pathname.split("/")[1])) {

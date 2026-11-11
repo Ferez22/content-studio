@@ -152,7 +152,7 @@ export const servicePath = (service: ServiceSlug) =>
 // so written content (blog, case studies) can show the words without a dead link.
 export const isPublishedServiceHref = (href: string) => {
   const match = href.match(
-    /^(?:\/(?:en|fr|de))?\/services\/([^/?#]+)(?:\/([^/?#]+))?/,
+    /^(?:\/(?:en|fr))?\/services\/([^/?#]+)(?:\/([^/?#]+))?/,
   );
   if (!match) return true;
   const [, category, service] = match;
