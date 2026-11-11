@@ -20,8 +20,8 @@ export type BrandTheme = {
   pillars?: Record<string, {light: string; dark: string}>; // offer areas color-coding
   status?: {done: string; pending: string}; // UI mockup states only
   fonts: {heading: string; body: string; serif?: string; arabic: string};
-  type?: {weights: {text: number; ui: number}; tracking_em: Record<string, number>; features: string};
-  radius?: {card: number; button: number; tag: number};
+  type?: {weights: {text: number; ui: number; display?: number}; tracking_em: Record<string, number>; features: string};
+  radius?: {card: number; button: number; tag: number; small?: number; thumb?: number};
   logos: {light_bg: string; dark_bg: string; icon_light_bg: string; icon_dark_bg: string; includes_name: boolean};
 };
 
