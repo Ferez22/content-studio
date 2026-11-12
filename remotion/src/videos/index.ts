@@ -4,7 +4,9 @@ import {Ratio} from '../brand/formats';
 // Registry of production videos: every src/videos/<id>/Video.tsx that exports `video` (a VideoEntry) is registered.
 // id = <brand>-<YYYYMMDD>-<slug>-<NN>, same as the folder name. Size follows props.ratio (Root calculateMetadata).
 // Video folders are brand work (gitignored): the public repo ships the registry only.
-export type VideoProps = {ratio: Ratio; test: boolean; showSafeZones: boolean};
+// subframes: k > 1 renders at fps*k (same timeline) for motion-blur blending (ffmpeg tmix). Videos must read time
+// as frame / fps (useVideoConfig), never as a raw frame count, to support it.
+export type VideoProps = {ratio: Ratio; test: boolean; showSafeZones: boolean; subframes?: number};
 
 export type VideoEntry = {
   id: string;

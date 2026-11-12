@@ -8,6 +8,12 @@ import {VIDEOS, VideoProps} from './videos';
 // Size follows props.ratio, so one composition renders every format: --props='{"ratio":"4:5"}'.
 const byRatio = <P extends {ratio: Ratio}>(): CalculateMetadataFunction<P> => ({props}) => FORMATS[props.ratio];
 
+// Videos: size by ratio + optional subframes (props.subframes = k -> fps*k, same duration in seconds).
+const videoMeta = (v: {fps: number; durationInFrames: number}): CalculateMetadataFunction<VideoProps> => ({props}) => {
+  const k = Math.max(1, Math.round(props.subframes ?? 1));
+  return {...FORMATS[props.ratio], fps: v.fps * k, durationInFrames: v.durationInFrames * k};
+};
+
 // Template checks, one per brand theme (+ dark if the brand has one). TEST copy only (placeholder, never published).
 const TESTS: {id: string; props: BrandTestProps}[] = Object.entries(BRANDS).flatMap(([brand, theme]) =>
   (theme.colors_dark ? (['light', 'dark'] as Mode[]) : (['light'] as Mode[])).map((mode) => ({
@@ -25,7 +31,7 @@ export const RemotionRoot: React.FC = () => (
     ))}
     {VIDEOS.map((v) => (
       <Composition key={v.id} id={v.id} component={v.component} durationInFrames={v.durationInFrames} fps={v.fps}
-        width={1080} height={1920} defaultProps={v.defaultProps} calculateMetadata={byRatio<VideoProps>()} />
+        width={1080} height={1920} defaultProps={v.defaultProps} calculateMetadata={videoMeta(v)} />
     ))}
   </>
 );
