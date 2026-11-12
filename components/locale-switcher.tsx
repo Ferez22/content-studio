@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { useUntranslatedPaths } from "./untranslated-paths";
 
 const names: Record<string, string> = {
   en: "English",
@@ -19,13 +20,17 @@ export const LocaleSwitcher = ({
   const t = useTranslations("header");
   const locale = useLocale();
   const pathname = usePathname();
+  const untranslated = useUntranslatedPaths();
+  // An entry missing in the target locale links to that locale's collection index, not to a redirect.
+  const hrefFor = (l: string) =>
+    untranslated[l]?.includes(pathname) ? `/${pathname.split("/")[1]}` : pathname;
 
   return (
     <nav aria-label={t("language")} className="flex items-center gap-3">
       {routing.locales.map((l) => (
         <Link
           key={l}
-          href={pathname}
+          href={hrefFor(l)}
           locale={l}
           hrefLang={l}
           lang={l}

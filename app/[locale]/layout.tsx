@@ -11,6 +11,8 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatWidget } from "@/components/chat-widget";
 import { NewsletterToast } from "@/components/newsletter-toast";
+import { UntranslatedPathsProvider } from "@/components/untranslated-paths";
+import { getUntranslatedPaths } from "@/lib/content";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -69,6 +71,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
+            <UntranslatedPathsProvider value={await getUntranslatedPaths(routing.locales)}>
             <main className="bg-background text-foreground">
               <Navbar />
               {children}
@@ -76,6 +79,7 @@ export default async function LocaleLayout({
             </main>
             <ChatWidget />
             <NewsletterToast />
+            </UntranslatedPathsProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

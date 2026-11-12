@@ -96,6 +96,19 @@ const slugsOf = (collection: string, locale: string) => {
   return fs.readdirSync(dir).filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""));
 };
 
+// German was removed on 2026-11-11 (proxy.ts sends /de/* to /en/*). Old German posts, case studies and
+// services go straight to their final page here, in one hop, instead of /de -> /en -> final.
+const germanContent = () =>
+  ["blog", "portfolio"].flatMap((collection) => {
+    const en = new Set(slugsOf(collection, "en"));
+    const all = new Set([...en, ...slugsOf(collection, "fr")]);
+    return [...all].map((slug) => ({
+      source: `/de/${collection}/${slug}`,
+      destination: `/${en.has(slug) ? "en" : "fr"}/${collection}/${slug}`,
+      permanent: true,
+    }));
+  });
+
 // /fr/blog/<slug> with no French version -> the English one, and the other way round.
 const missingTranslations = () =>
   ["blog", "portfolio"].flatMap((collection) =>
@@ -128,6 +141,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       { source: "/:locale(en|fr)/services/:path*", destination: `/:locale${expertisesPath}`, permanent: true },
+      ...Object.entries(oldServiceUrls).map(([from, to]) => ({
+        source: `/de/services${from ? `/${from}` : ""}`,
+        destination: `/en${to}`,
+        permanent: true,
+      })),
+      { source: "/de/services/:path*", destination: `/en${expertisesPath}`, permanent: true },
     ];
     const posts = Object.entries(legacyPosts).map(([legacy, slug]) => ({
       source: `/blog/${legacy}`,
@@ -136,7 +155,7 @@ const nextConfig: NextConfig = {
     }));
     // A post or case study missing in one content locale goes to the locale that has it
     // (temporary: the translation may come later). Unprefixed URLs are detected in proxy.ts.
-    return [...services, ...posts, ...missingTranslations()];
+    return [...services, ...posts, ...germanContent(), ...missingTranslations()];
   },
   images: {
     remotePatterns: [

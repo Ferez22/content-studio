@@ -2,6 +2,10 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-12
+
+- Redirect cleanup for Google ("Page with redirect" report): old German URLs go to their final page in one hop (`/de/services/...` straight to the expertise page, `/de/blog/<slug>` and `/de/portfolio/<slug>` straight to the locale that has the entry), instead of `/de` -> `/en` -> final. No internal link points to a redirect anymore: the footer "qartmina.com" link goes to the home page of the current locale (was the bare domain, which redirects), and the language switcher sends a post or case study missing in the target locale to that locale's blog or portfolio index (`getUntranslatedPaths` in `lib/content.ts`, `components/untranslated-paths.tsx`), not to the temporary redirect. Checked on a local build: 88 sitemap pages, 0 internal links to a redirect
+
 ## 2026-11-11
 
 - Expertises restructured (Fares): `/services` becomes `/expertises` with three categories. Data & AI: AI automation, generative AI (agent team demo), document extraction, MCP, predictive systems, computer vision, AI Sprint. Software development: custom software (architecture diagram, clients, CRM demo), SaaS platforms. Brand and online presence unchanged. Eight new pages written natively in fr and en on the pilot model; websites, e-commerce, cybersecurity and IT categories removed. Every old `/services/...` URL redirects (308) to its closest page (`oldServiceUrls` in `next.config.ts`); blog links and case-study services updated; positioning, meta description and overview copy updated

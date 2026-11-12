@@ -95,9 +95,9 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href={site.url} className={linkClassName}>
+              <Link href="/" className={linkClassName}>
                 qartmina.com
-              </a>
+              </Link>
             </li>
             <li className="text-neutral-600 text-sm dark:text-neutral-400">
               {t("location")}
