@@ -115,3 +115,22 @@ export const getEntryLocales = async (collection: Collection, slug: string, loca
   );
   return found.filter((locale): locale is string => locale !== null);
 };
+
+// Blog posts and case studies that exist in another locale but not in this one, as locale-less paths
+// ("/blog/<slug>"). The language switcher sends those to the collection index instead of a redirect.
+export const getUntranslatedPaths = async (locales: readonly string[]) => {
+  const collections: Collection[] = ["blog", "portfolio"];
+  const result: Record<string, string[]> = {};
+  for (const locale of locales) {
+    result[locale] = [];
+    for (const collection of collections) {
+      const own = new Set(await getSlugs(collection, locale));
+      for (const other of locales.filter((l) => l !== locale)) {
+        for (const slug of await getSlugs(collection, other)) {
+          if (!own.has(slug)) result[locale].push(`/${collection}/${slug}`);
+        }
+      }
+    }
+  }
+  return result;
+};
