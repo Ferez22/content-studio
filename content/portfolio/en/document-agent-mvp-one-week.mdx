@@ -1,22 +1,29 @@
 ---
-title: "An MVP in One Week: Software Built From Scratch With AI, Tested at Every Step"
-summary: "The startup whose CRM we had put back on solid ground wanted new software, built from scratch. From Friday, October 30 to Friday, November 6, 2026, we shipped the MVP to production: onboarding, multi-tenant authentication, an agentic workflow for documents, analytics and a connection to the CRM. AI wrote the code. The method made the difference."
+title: "A New Product in Production in One Week, Not Months"
+summary: "The startup whose CRM we had put back on solid ground wanted to launch a new product. From October 30 to November 6, 2026, we took it to production: tested, connected to its CRM, with sensitive documents anonymized before the AI ever touches them."
 sector: "Software (CRM startup)"
 service: "team-reinforcement"
-problem: "Build complete software from scratch, from user sign-in to production, without spending months on it and without giving up code quality."
-result: "An MVP in production in one week, covered by tests, running as a standalone app and as a microservice connected to the CRM"
+problem: "Launch a complete new product, from user sign-up to production, without spending months on it and without giving up quality."
+result: "A new product in production in one week, covered by tests, running on its own and connected to the client's CRM"
 date: "2026-11-06"
 ---
 
-## The goal
+## In short
 
-You may already know this client. It's the startup whose CRM [we audited, and whose entire production setup we rebuilt](/en/portfolio/crm-startup-cloud-migration). When that work was done, they handed us the next one: new software, built from scratch.
+One week. That's how long it took to go from a blank page to a product in production.
+
+- **Time saved.** Our estimate: about a year for a team without AI, about three months with AI agents set loose with no plan and no rules. The product was running after one week.
+- **A product you can rely on.** Every feature is checked by automated tests. The product can evolve without each change putting the rest at risk.
+- **A product linked to what already exists.** It runs on its own, and it talks directly to the client's CRM.
+- **Sensitive documents protected.** They are anonymized before the AI processes them, and each client company only sees its own data.
+
+## Where we started
+
+You may already know this client. It's the startup whose CRM [we audited, and whose entire production setup we rebuilt](/en/portfolio/crm-startup-cloud-migration). When that work was done, they handed us the next one: a new product, built from scratch.
 
 The product stays confidential until launch. Let's just say it reads documents, pulls out the key information and produces new ones.
 
-## The challenge
-
-Start from a blank page and end with real software. Not a demo.
+The brief wasn't a demo. It was real software:
 
 - **Users to welcome**, with a sign-up flow.
 - **Several client companies on one platform**, each with its own data, kept apart from the others.
@@ -24,53 +31,68 @@ Start from a blank page and end with real software. Not a demo.
 - **A final document to produce**, editable, then exported as a PDF.
 - **A link to the existing CRM**, so both products work together.
 
-Our estimate: about a year for a team without AI, and about three months with a poor vibe-coding setup, where agents write code with no plan and no rules. We had a week.
+We had a week.
 
-## What we did
+## What the client got in one week
 
-### 1. Pinned down the goal, on the business side and the technical side
+- **A welcome for new users**: a guided sign-up flow.
+- **One platform, data kept apart**: several client companies on the same product, each limited to its own data.
+- **An AI that speaks the trade's language**: a dictionary of the domain's vocabulary, so it reads documents like an expert.
+- **Documents handled end to end**: the AI reads the document, pulls out the information, strips the sensitive data, writes the new document, which the user can edit directly before exporting the final PDF.
+- **Activity tracking**: jobs run, time spent, and a record of what happened.
+- **A connection to the client's CRM**.
+- **A production release**, as a standalone app and as a service other software can call.
 
-Before a single line of code, we asked the uncomfortable questions.
+## How we made it possible
 
-Business: what is this software for? Should it cut costs, save time, automate a whole process? Or become the single point every business request goes through, gathered on an admin dashboard that assigns each job?
+Speed doesn't come from the AI writing the code. It comes from the method around it.
 
-Technical: which core features, where to host it, should it offer an API, or an MCP server so other AI agents can plug into it?
+### 1. The right goal, before a single line of code
 
-Every answer ruled options out. In the end, one goal was left, and a short list of what the MVP had to do.
+First, we asked the uncomfortable questions.
 
-### 2. Planned brick by brick, until the plan was crystal clear
+Business: what is this software for? Should it cut costs, save time, automate a whole process? Or become the single point every business request goes through, gathered on a dashboard that assigns each job?
+
+Technical: which core features, where to host it, how will other software and other AI agents plug into it?
+
+Every answer ruled options out. In the end, one goal was left, and a short list of what the first version had to do.
+
+### 2. A crystal-clear plan
 
 We broke the software into bricks, each small enough to be built and tested on its own. Then we refined the plan, again and again.
 
-We build the plan with AI, but we don't hand it over. We check what it proposes, then we check again. We ask questions. We look for the flaw. One rule drives everything else: **we only let the AI code once its words paint the right picture in our heads.**
+We build that plan with AI, but we don't hand it over. We check what it proposes, then we check again. We ask questions. We look for the flaw. One rule drives everything else: **we only let the AI code once its words paint the right picture in our heads.**
 
-### 3. Set up the repository for AI-assisted coding
+### 3. Rules and tests before the AI starts
 
-An AI agent codes as well as the frame you give it. Before execution started, we wrote its rules: how to write the code, how to structure the project, how to work day to day.
+An AI agent codes as well as the frame you give it. Before launching it, we wrote its rules: how to write the code, how to structure the project, how to work day to day.
 
-The code follows test-driven development (TDD): the test is written before the code. A feature only exists once its test passes. And when an agent changes the code later, the tests catch regressions before anything goes live.
+And we put tests first: for each feature, the test that checks it is written before the code. A feature only exists once its test passes.
 
-### 4. Executed with an orchestrator and sub-agents
+### 4. A human review at every step
 
-Claude Fable acted as the orchestrator. For each brick of the plan, it launched Claude Opus 5.5 sub-agents set to high reasoning effort. We reviewed every step before moving to the next.
+The AI built the product brick by brick. We reviewed every step before moving to the next.
 
 ### 5. Make it work, then make it beautiful
 
-Our motto on this project: *make it work, make it beautiful*. The MVP worked on Friday, November 6. The same day, we started on the user experience and the finishing touches.
+Our motto on this project: *make it work, make it beautiful*. The product worked on Friday, November 6. The same day, we started on the user experience and the finishing touches.
 
-## What shipped in one week
+## For technical teams
 
-- **An onboarding flow** for new users.
-- **Multi-tenant authentication**: several client companies on one platform, each limited to its own data.
-- **A graphRAG dictionary for the AI agent**: the domain vocabulary and the links between terms, stored as a graph, so the agent reads documents like a domain expert.
-- **An autonomous agentic workflow**: information extraction from documents, anonymization, a call to the language model, document reconstruction, direct editing, final PDF generation.
-- **Analytics**: jobs run, time spent, logs and telemetry.
-- **An API connection** to the client's CRM.
-- **A production release** as a standalone app and as a microservice.
+The same deliverables, by their real names:
+
+- **Multi-tenant authentication**: several clients on one instance, each isolated in its own data.
+- **A graphRAG dictionary**: the domain vocabulary and the links between terms, stored as a graph, which the agent consults to interpret documents.
+- **An autonomous agentic workflow**: information extraction, anonymization, a call to the language model, document reconstruction, direct editing, PDF generation.
+- **Analytics**: jobs, time spent, logs and telemetry.
+- **An API connection** to the CRM, and deployment as a standalone app and as a microservice.
+- **Technical scoping** also raised the question of an API, or an MCP server (a standard connector that lets other AI agents plug into the product).
+- **Test-driven development (TDD)**: when an agent changes the code later, the tests catch regressions before anything goes live.
+- **Execution**: Claude Fable acted as the orchestrator. For each brick of the plan, it launched Claude Opus 5.5 sub-agents set to high reasoning effort.
 
 ## The result
 
-From Friday, October 30 to Friday, November 6, 2026, the software went from a blank page to an MVP in production. Every feature is covered by its tests, and the product can now evolve without each change putting the rest at risk.
+From Friday, October 30 to Friday, November 6, 2026, the product went from a blank page to a first version in production. Every feature is covered by its tests, and the product can now evolve without each change putting the rest at risk.
 
 > "I can't believe how fast Fares delivers. And it actually works!"
 
@@ -78,6 +100,6 @@ From Friday, October 30 to Friday, November 6, 2026, the software went from a bl
 
 In our [previous case study](/en/portfolio/crm-startup-cloud-migration), we said: make it work first. That still holds. This project adds a nuance.
 
-With AI, writing code costs almost nothing. What costs is writing the wrong thing. Speed doesn't come from the agent writing the code. It comes from the plan you give it, the rules it follows and the tests that watch it. With those three in place, a week is enough for what used to take months.
+With AI, writing code costs almost nothing. What costs is writing the wrong thing. Speed comes from the plan you give the AI, the rules it follows and the tests that watch it. With those three in place, a week is enough for what used to take months.
 
-**Have software in mind, but not a year to spare?** [Book a 30-minute call](/en/book). You leave with a plan, whether we work together or not.
+**Have a product to ship, but not a year to spare?** [Book a 30-minute call](/en/book). You leave with a plan, whether we work together or not.

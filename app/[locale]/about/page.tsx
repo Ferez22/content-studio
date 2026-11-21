@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { DeliveryModel } from "@/components/delivery-model";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
@@ -77,6 +78,9 @@ export default async function AboutPage({ params }: Props) {
           />
         </Container>
       </section>
+
+      {/* Who does the work: senior project leads and seasoned engineers (same section as the home page). */}
+      <DeliveryModel />
 
       <section className="pt-10 md:pt-20 lg:pt-32">
         <Container className="grid grid-cols-1 lg:grid-cols-2 gap-10">

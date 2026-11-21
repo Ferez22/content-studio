@@ -31,10 +31,9 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 ## Positioning (AI studio, 2026-11-21)
 
 - [ ] Nice address: Fares gives it later. Then add `address` to the home JSON-LD (`app/[locale]/page.tsx`), the contact and about copy, and create the Google Business Profile
-- [ ] Rewrite the case studies in commercial wording; `document-agent-mvp-one-week` says "construit de zéro", which no longer matches the offer (we reinforce client teams)
 - [ ] Check the claims the new pages make on contracts (confidentiality clause, access removed at the end of a mission, replacing an engineer who is not a fit) against real contracts
+- [ ] Docutrad is named on the home page (case studies section) while both case studies keep the client anonymous: confirm with Docutrad that naming them is fine
 - [ ] Update `brand.md` / `design.md` in Content Studio with the new positioning, then copy here
-- [ ] About page: rewrite the remaining copy (name, method layers) in the new commercial tone
 
 ## Services
 

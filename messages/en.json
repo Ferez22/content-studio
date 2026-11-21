@@ -55,8 +55,8 @@
   },
   "home": {
     "hero": {
-      "title": "Integrated, robust AI, running in production.",
-      "subtitle": "We find the AI use cases that pay off most for your business and put the first one into production within a month.",
+      "title": "Your business holds a gold mine. AI is the pickaxe.",
+      "subtitle": "Fewer manual tasks, more sales, faster teams: we put AI to work in your business, and the first gain arrives within a month.",
       "primary": "Free AI consultation",
       "secondary": "See our work",
       "kpis": [
@@ -375,7 +375,7 @@
           "text": "Contracts, customer files, figures: without clear rules, sensitive information ends up in tools nobody controls."
         }
       ],
-      "highlightTitle": "There's a gold mine in your business.",
+      "highlightTitle": "You just need to know where to dig.",
       "highlightText": "Qartmina means “the new mine”. In every business, hours lie buried in manual tasks that are frustrating but unavoidable. With a little help, we dig: your teams learn to work with AI, repetitive tasks leave your desk, and new opportunities come to light.",
       "gains": [
         "The right habits and tools, role by role",
@@ -3534,26 +3534,26 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Qartmina is an AI studio based in Nice, France. We put AI into production for SMEs, agencies and startups across the PACA region and France.",
-    "title": "About Qartmina",
-    "intro": "We help SMEs put AI to work: we find the use cases that pay off most, build them and put them into production, starting with a first use case within a month.",
-    "nameTitle": "The name",
-    "nameText": "Qartmina means \"the new mine\". Data is the raw material of this era, and like any mine, it is only worth something once you dig, refine and put what you find to use. That is the work we do.",
+    "metaDescription": "Qartmina, “the new mine”: an AI studio in Nice, France, helping SMEs, agencies and startups find the gold hidden in their day-to-day work.",
+    "title": "Qartmina, the new mine",
+    "intro": "We are an AI studio based in Nice. We help SMEs, agencies and startups find the gold hidden in their day-to-day work: the hours lost to manual tasks, and the opportunities nobody ever has time to seize.",
+    "nameTitle": "Why “Qartmina”",
+    "nameText": "Qartmina means “the new mine”. Every business has one: manual processes that are frustrating but unavoidable, data lying idle, ideas put off until later. The gold is there, but you have to dig. Our job is to dig with you: train your teams, connect AI to your tools and put into production what pays off.",
     "founderTitle": "The founder",
-    "methodTitle": "How we work",
-    "methodIntro": "Every engagement builds three layers, always in this order. Each layer comes with a short, mid and long term plan tied to a specific outcome.",
+    "methodTitle": "How we dig",
+    "methodIntro": "Three layers, always in this order. We never put AI on shaky processes or messy data: that is what keeps it running in production.",
     "layers": [
       {
-        "title": "Foundation",
-        "text": "Standardised, compliant, well-tested and secure processes."
+        "title": "Clear processes",
+        "text": "We start from how your team really works, and simplify it before automating anything."
       },
       {
-        "title": "Data",
-        "text": "Clean, structured, trustworthy data that becomes an asset."
+        "title": "Reliable data",
+        "text": "Your documents, customer files and figures, organised and up to date: the raw material AI will work with."
       },
       {
-        "title": "AI",
-        "text": "AI applied where it earns its keep, and only there."
+        "title": "AI where it pays off",
+        "text": "We put it into production where the gain is clearest, and only there. Then we move to the next use case."
       }
     ],
     "rhythm": [

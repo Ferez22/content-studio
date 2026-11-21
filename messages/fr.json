@@ -55,8 +55,8 @@
   },
   "home": {
     "hero": {
-      "title": "Une IA intégrée et robuste, en production.",
-      "subtitle": "Nous trouvons les usages de l'IA qui rapportent le plus à votre entreprise et mettons le premier en production en un mois.",
+      "title": "Votre entreprise contient une mine d'or. L'IA est la pioche.",
+      "subtitle": "Moins de tâches manuelles, plus de ventes, des équipes qui vont plus vite : nous mettons l'IA au travail chez vous, et le premier gain arrive en un mois.",
       "primary": "Consultation IA gratuite",
       "secondary": "Voir nos réalisations",
       "kpis": [
@@ -375,7 +375,7 @@
           "text": "Contrats, fichiers clients, chiffres : sans cadre clair, des informations sensibles finissent dans des outils que personne ne maîtrise."
         }
       ],
-      "highlightTitle": "Une mine d'or dort dans votre entreprise.",
+      "highlightTitle": "Il suffit de savoir où creuser.",
       "highlightText": "Qartmina veut dire « la nouvelle mine ». Dans chaque entreprise, des heures dorment dans des tâches manuelles, frustrantes mais obligatoires. Avec un coup de pouce, on creuse : vos équipes apprennent à travailler avec l'IA, les tâches répétitives quittent votre bureau, et de nouvelles opportunités apparaissent.",
       "gains": [
         "Les bons réflexes et les bons outils, rôle par rôle",
@@ -809,26 +809,26 @@
   },
   "about": {
     "metaTitle": "À propos",
-    "metaDescription": "Qartmina est un studio IA basé à Nice. Nous mettons l'IA en production pour les PME, agences et startups de la région PACA et de toute la France.",
-    "title": "À propos de Qartmina",
-    "intro": "Nous aidons les PME à mettre l'IA au travail : nous trouvons les usages qui rapportent le plus, nous les construisons et nous les mettons en production, en commençant par un premier cas d'usage en un mois.",
-    "nameTitle": "Le nom",
-    "nameText": "Qartmina signifie « la nouvelle mine ». Les données sont la matière première de notre époque et, comme toute mine, elles ne valent quelque chose qu'une fois creusées, raffinées et mises à profit. C'est notre métier.",
+    "metaDescription": "Qartmina, « la nouvelle mine » : un studio IA basé à Nice qui aide les PME, agences et startups à trouver l'or caché dans leur quotidien.",
+    "title": "Qartmina, la nouvelle mine",
+    "intro": "Nous sommes un studio IA basé à Nice. Nous aidons les PME, les agences et les startups à trouver l'or caché dans leur quotidien : les heures perdues dans des tâches manuelles, et les opportunités qu'on n'a jamais le temps de saisir.",
+    "nameTitle": "Pourquoi « Qartmina »",
+    "nameText": "Qartmina signifie « la nouvelle mine ». Chaque entreprise a la sienne : des processus manuels, frustrants mais obligatoires, des données qui dorment, des idées remises à plus tard. L'or est là, mais il faut creuser. Notre métier, c'est de creuser avec vous : former vos équipes, brancher l'IA sur vos outils et mettre en production ce qui rapporte.",
     "founderTitle": "Le fondateur",
-    "methodTitle": "Notre méthode",
-    "methodIntro": "Chaque mission construit trois couches, toujours dans cet ordre. Chaque couche s'accompagne d'un plan à court, moyen et long terme lié à un résultat précis.",
+    "methodTitle": "Notre façon de creuser",
+    "methodIntro": "Trois couches, toujours dans cet ordre. Nous ne posons pas d'IA sur des processus bancals ni sur des données en désordre : c'est ce qui la fait tenir en production.",
     "layers": [
       {
-        "title": "Fondations",
-        "text": "Des processus standardisés, conformes, bien testés et sécurisés."
+        "title": "Des processus clairs",
+        "text": "Nous partons de la façon dont votre équipe travaille vraiment, et nous la simplifions avant d'automatiser quoi que ce soit."
       },
       {
-        "title": "Données",
-        "text": "Des données propres, structurées et fiables, qui deviennent un actif."
+        "title": "Des données fiables",
+        "text": "Vos documents, vos fichiers clients et vos chiffres, rangés et à jour : la matière première que l'IA va exploiter."
       },
       {
-        "title": "IA",
-        "text": "L'IA appliquée là où elle est rentable, et seulement là."
+        "title": "L'IA là où elle rapporte",
+        "text": "Nous la mettons en production là où le gain est le plus net, et seulement là. Puis nous passons au cas suivant."
       }
     ],
     "rhythm": [
