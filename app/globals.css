@@ -582,3 +582,10 @@
     radial-gradient(35% 45% at 82% 40%, rgb(84 162 255 / 0.3), transparent 70%),
     radial-gradient(30% 40% at 92% 75%, rgb(167 139 250 / 0.28), transparent 70%);
 }
+
+/* Card visuals (HoverPlay): CSS animations are off until the card is hovered or focused. */
+[data-still] *,
+[data-still] *::before,
+[data-still] *::after {
+  animation: none !important;
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { usePlaying } from "@/components/hover-play";
 
 /*
  * Layer Stack – an interactive card illustration, in a single self-contained file.
@@ -56,14 +57,15 @@ export function LayerStack({ items = defaultItems, defaultIndex = 0, interval = 
   const [active, setActive] = useState(Math.min(defaultIndex, list.length - 1));
   const [paused, setPaused] = useState(false);
   const touched = useRef(false);
+  const playing = usePlaying();
 
   // Step through the entries on its own until someone interacts; never with reduced motion
   useEffect(() => {
-    if (paused || touched.current || list.length < 2) return;
+    if (!playing || paused || touched.current || list.length < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => setActive((i) => (i + 1) % list.length), interval);
     return () => window.clearInterval(timer);
-  }, [paused, interval, list.length]);
+  }, [playing, paused, interval, list.length]);
 
   const pick = (i: number) => {
     touched.current = true;

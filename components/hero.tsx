@@ -13,8 +13,9 @@ import { AmbientTexture } from "./ambient-texture";
 export const Hero = () => {
   const t = useTranslations("home");
   return (
-    <section className="pt-10 md:pt-20 lg:pt-32 relative isolate overflow-hidden">
-      <AmbientTexture className="absolute inset-x-0 top-0 -z-10 h-[620px] md:h-[760px] lg:h-[860px]" />
+    // overflow-x-clip, not overflow-hidden: the texture extends above the section, behind the navbar.
+    <section className="pt-10 md:pt-20 lg:pt-32 relative isolate overflow-x-clip">
+      <AmbientTexture className="absolute inset-x-0 -top-24 lg:-top-32 -z-10 h-[716px] md:h-[856px] lg:h-[988px]" />
       <Container>
         <Heading as="h1" className="text-[2.6rem] leading-[1.05] sm:text-5xl lg:text-6xl">
           {t("hero.title")}

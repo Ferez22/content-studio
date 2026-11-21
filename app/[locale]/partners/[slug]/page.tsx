@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { clientMessagesWith } from "@/i18n/messages";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale, getMessages } from "next-intl/server";
 import { IconArrowUpRight, IconCircleCheckFilled, IconPlus } from "@tabler/icons-react";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
@@ -56,7 +58,9 @@ export default async function PartnerPage({ params }: Props) {
   const steps = t.raw("steps.items") as Step[];
   const jointForces = tShared.raw("jointForces.items") as JointForce[];
 
+  // This page's sections read its full copy in the browser; layout.tsx sends a trimmed set.
   return (
+    <NextIntlClientProvider messages={clientMessagesWith(await getMessages(), "partnerPages", slug)}>
     <div className="min-h-screen">
       <JsonLd
         data={{
@@ -197,6 +201,7 @@ export default async function PartnerPage({ params }: Props) {
         </Container>
       </section>
     </div>
+    </NextIntlClientProvider>
   );
 }
 

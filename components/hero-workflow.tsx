@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   AnimatePresence,
   motion,
@@ -26,6 +26,7 @@ import {
 } from "@tabler/icons-react";
 import { HubspotIcon, SheetsIcon } from "@/icons";
 import { cn } from "@/lib/utils";
+import { usePlayWhileVisible } from "./services/showcase-video";
 
 // Every scene is drawn on a 1000 x 600 canvas with the robot at its centre.
 const W = 1000;
@@ -209,6 +210,9 @@ export const HeroWorkflow = () => {
 
 const RobotCore = ({ alt }: { alt: string }) => {
   const reduceMotion = useReducedMotion();
+  // Fetched and played only while on screen, so it never competes with the first paint.
+  const videoRef = useRef<HTMLVideoElement>(null);
+  usePlayWhileVisible(videoRef);
   return (
     <div
       className="absolute -translate-x-1/2 -translate-y-1/2 aspect-square z-20"
@@ -225,11 +229,11 @@ const RobotCore = ({ alt }: { alt: string }) => {
           <img src="/robot/robot-poster.webp" alt={alt} className="size-[92%] object-contain" />
         ) : (
           <video
-            autoPlay
+            ref={videoRef}
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
             poster="/robot/robot-poster.webp"
             aria-label={alt}
             className="size-[92%] object-contain mix-blend-multiply"

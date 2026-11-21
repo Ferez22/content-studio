@@ -1,7 +1,9 @@
 import type React from "react";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { clientMessagesWith } from "@/i18n/messages";
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale, getMessages } from "next-intl/server";
 import { IconArrowDown, type Icon } from "@tabler/icons-react";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
@@ -132,7 +134,9 @@ export default async function ServicePage({ params }: Props) {
     { name: t("title"), path: servicePath(slug) },
   ];
 
+  // This page's sections read its full copy in the browser; layout.tsx sends a trimmed set.
   return (
+    <NextIntlClientProvider messages={clientMessagesWith(await getMessages(), "servicePages", slug)}>
     <div className="min-h-screen">
       <JsonLd
         data={{
@@ -248,5 +252,6 @@ export default async function ServicePage({ params }: Props) {
 
       <CtaSection />
     </div>
+    </NextIntlClientProvider>
   );
 }

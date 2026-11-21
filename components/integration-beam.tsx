@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useLayoutEffect, useRef, useState, type FocusEvent, type PointerEvent, type ReactNode } from "react";
+import { usePlaying } from "@/components/hover-play";
 
 /*
  * Integration Beam – an animated product scene, in a single self-contained file.
@@ -73,6 +74,7 @@ export function IntegrationBeam({
   const [focus, setFocus] = useState<number | null>(null);
   const [flash, setFlash] = useState<number | null>(null);
   const [syncing, setSyncing] = useState(false);
+  const playing = usePlaying();
   const [announce, setAnnounce] = useState("");
 
   const rootRef = useRef<HTMLDivElement>(null);
@@ -102,7 +104,8 @@ export function IntegrationBeam({
     const svg = svgRef.current;
     const hub = centerRef.current;
     if (!root || !scene || !svg || !hub) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Reduced motion, or a card not hovered (HoverPlay): beams stay still
+    const reduce = !playing || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let shown: Curve[] = [];
     let from: Curve[] = [];
@@ -304,7 +307,7 @@ export function IntegrationBeam({
       io?.disconnect();
       cancelAnimationFrame(raf);
     };
-  }, [n, nLeft]);
+  }, [n, nLeft, playing]);
 
   /* The status chip glides to the width of its new text */
   useIsoLayoutEffect(() => {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useSyncExternalStore } from "react";
+import { usePlaying } from "@/components/hover-play";
 
 /*
  * Lead Sourcing – a small card illustration, in a single self-contained file.
@@ -28,7 +29,8 @@ export function LeadSourcing({
   label = "A ChatGPT tile connected to Gmail and Grok, surrounded by empty tiles",
 }: LeadSourcingProps) {
   const id = useSvgId();
-  const reducedMotion = useReducedMotion();
+  // Still for reduced motion, and on cards until hovered (HoverPlay)
+  const reducedMotion = useReducedMotion() || !usePlaying();
 
   return (
     <div className={["ui-ls", className].filter(Boolean).join(" ")} role="img" aria-label={label}>

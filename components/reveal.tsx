@@ -14,8 +14,9 @@ export const Reveal = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      // No blur: animating a filter on large blocks repaints them every frame while scrolling.
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
       viewport={{ once: true, amount: 0.2 }}
       className={className}
@@ -25,7 +26,7 @@ export const Reveal = ({
   );
 };
 
-// A list whose items fade, lift and unblur into place one after another the first time
+// A list whose items fade and lift into place one after another the first time
 // the list scrolls into view. Wrap each child in RevealItem. Reduced motion: fade only.
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -73,8 +74,8 @@ export const RevealItem = ({
   return (
     <Tag
       variants={{
-        hidden: still ? { opacity: 0 } : { opacity: 0, y: 24, filter: "blur(8px)" },
-        shown: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, ease } },
+        hidden: still ? { opacity: 0 } : { opacity: 0, y: 24 },
+        shown: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
       }}
       className={className}
     >

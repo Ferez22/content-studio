@@ -20,6 +20,7 @@ import { LayerStack, type LayerStackItem } from "@/components/layer-stack";
 import { LeadSourcing } from "@/components/lead-sourcing";
 import { IntegrationBeam } from "@/components/integration-beam";
 import { cn } from "@/lib/utils";
+import { usePlaying } from "@/components/hover-play";
 
 // Small animated UIs for the service cards in the home category panel. Each one is drawn
 // on a fixed 480 x 270 canvas and scaled to the card, animates only while on screen, and
@@ -60,7 +61,9 @@ const Canvas = ({
   const ref = useRef<HTMLDivElement>(null);
   const [fit, setFit] = useState({ scale: 0, x: 0, y: 0 });
   const inView = useInView(ref, { amount: 0.3 });
-  const still = Boolean(useReducedMotion());
+  // Still for reduced motion, and on cards until hovered (HoverPlay).
+  const playing = usePlaying();
+  const still = Boolean(useReducedMotion()) || !playing;
   useEffect(() => {
     const element = ref.current;
     if (!element) return;

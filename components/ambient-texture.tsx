@@ -162,6 +162,11 @@ export const AmbientTexture = ({
     let frame = 0;
     let last = 0;
     let visible = true;
+    // Hold the current frame while the page scrolls: the drift is slow enough that a pause
+    // never shows, and the GPU stays free for scrolling.
+    let scrolledAt = 0;
+    const onScroll = () => (scrolledAt = performance.now());
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     const draw = (now: number) => {
       gl.uniform1f(uTime, (now - start) / 1000);
@@ -171,7 +176,7 @@ export const AmbientTexture = ({
     };
     const loop = (now: number) => {
       frame = requestAnimationFrame(loop);
-      if (now - last < 1000 / 24) return;
+      if (now - last < 1000 / 24 || now - scrolledAt < 150) return;
       last = now;
       draw(now);
     };
@@ -205,6 +210,7 @@ export const AmbientTexture = ({
       observer.disconnect();
       sizeObserver.disconnect();
       themeObserver.disconnect();
+      window.removeEventListener("scroll", onScroll);
       document.removeEventListener("visibilitychange", run);
       still.removeEventListener("change", run);
       gl.getExtension("WEBGL_lose_context")?.loseContext();

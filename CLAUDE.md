@@ -81,7 +81,8 @@ brand.md, design.md            brand facts and visual style reference (copies fr
 - Three categories (Fares 2026-11-11): Data & AI (ai-automation, generative-ai, document-extraction, mcp, predictive-systems, computer-vision, ai-sprint), Software development (custom-software, saas), Brand and online presence. Defined once in `lib/site.ts`; UI label "Expertises" / "Expertise". Build links with `categoryPath()` / `servicePath()`, never by hand.
 - **Feature toggles:** `serviceToggles` (`lib/site.ts`) switches each service on or off. Off means no page (404), no sitemap entry, no link in menus, footer, home, overview, hubs or "More in"; blog and case-study links to it render as plain text; a category with nothing on disappears too. `serviceCategories`, `categorySlugs`, `serviceSlugs` and `isServiceSlug` only contain what is on, so new code gets this for free.
 - Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items as FAQPage JSON-LD). Optional sections render when their copy exists: `explainer`, `examples`, `included`.
-- **One card everywhere:** `ServiceCard` / `ServiceCards` (`components/services/service-cards.tsx`) on the home panel, overview, hubs and "More in". Its top is `ServiceCardMedia`: a free-license Unsplash photo (`service-photos.ts`) or an animated visual (`card-visuals.tsx`), plus tool logos. The desktop Services menu previews the same media on hover.
+- **Home panel tiles:** the Expertise flip card's back face uses `ServiceTiles` / `ServiceTile` (same file), styled like the category cards and sized so a category fits on one screen.
+- **One card everywhere:** `ServiceCard` / `ServiceCards` (`components/services/service-cards.tsx`) on the overview, hubs and "More in". Its top is `ServiceCardMedia`: a free-license Unsplash photo (`service-photos.ts`) or an animated visual (`card-visuals.tsx`), plus tool logos. The desktop Services menu previews the same media on hover.
 - **Deeper service pages:** the `extras` map in `app/[locale]/expertises/[category]/[slug]/page.tsx` adds a hero visual, a wide visual under the hero, own sections, level icons, a use-case aside, a features marquee or a demo per slug; such pages skip "How we deliver". Copy-driven sections (`included`, `explainer`, `levels`, `features`, `useCases`, `examples`) render only when their copy exists. Data & AI and Software pages follow one model: `included` = 6 use-case cards ("Ce que nous faisons pour vous"), `explainer` = 4 steps "Comment nous travaillons" with a small motion graphic each (`step-art.tsx`), FAQ, no "How we deliver".
 - **Adding a service:** slug in its category, copy in `messages/en.json`, icon in `components/service-icons.tsx`, photo or visual in `service-card-media.tsx`, switch it on in `serviceToggles` (`lib/site.ts`). The service count on the home page follows the toggles.
 - Each category has a soft tint (pastel light, deep tone dark), only in `components/services/category-tints.ts`.
@@ -94,7 +95,7 @@ Reusable pieces:
 
 | Need | Use |
 |---|---|
-| Entrance on scroll (fade, lift, unblur, once) | `Reveal` (`components/reveal.tsx`); `RevealList` + `RevealItem` stagger a list; `ServiceCards reveal` staggers cards |
+| Entrance on scroll (fade, lift, once; no blur filter, it janks scrolling) | `Reveal` (`components/reveal.tsx`); `RevealList` + `RevealItem` stagger a list; `ServiceCards reveal` staggers cards |
 | Letters springing up from a mask | `LetterReveal` (`components/ui/letter-reveal.tsx`) |
 | Two faces flipping in 3D | `FlipCard` (`components/ui/flip-card.tsx`) |
 | Before/after drag comparison (sweeps once on view) | `BeforeAfter` (`components/ui/before-after.tsx`) |
@@ -104,6 +105,7 @@ Reusable pieces:
 | Node graph that builds in, runs beams along its lines, popover per node | `NodeGraph` (`components/services/node-graph.tsx`) fed a `GraphSpec` (tiles, labelled diagram boxes with logos, dashed zones); see `agent-graph.tsx`, `system-graph.tsx` |
 | Interactive demo that pins centred over the page (Esc / X to release, `#demo` opens it) | `DemoStage` (`components/services/demo-stage.tsx`); no transformed or filtered ancestor |
 | Simple infinite loops | CSS keyframes in `app/globals.css` (with a reduced-motion block next to each) |
+| Card visual that plays only on hover or focus | Wrap the card in `HoverPlay` (`components/hover-play.tsx`): CSS animations inside are off (`[data-still]` rule in `globals.css`), JS visuals read `usePlaying()` and treat `false` like reduced motion (final frame) |
 
 **affectUI illustrations** (affectui.com) are added with `pnpm dlx shadcn@latest add https://www.affectui.com/r/<name>.json`. Before installing, fetch the JSON and read the file: it must be a single self-contained component with no network, storage or eval code. They land in `components/<name>.tsx` (UI pieces like `tool-call-card-clean` in `components/ui/`); wrap illustrations in `Canvas` to size them.
 

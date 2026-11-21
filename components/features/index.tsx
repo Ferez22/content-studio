@@ -11,11 +11,16 @@ import { categoryPath, serviceCategories, serviceSlugs, type CategorySlug } from
 import { CategoryVisual } from "../services/visuals";
 import { categoryIcons } from "../service-icons";
 import { tintBg, tintFrom, tintStyle } from "../services/category-tints";
-import { ServiceCards } from "../services/service-cards";
+import dynamic from "next/dynamic";
 import { FlipCard } from "../ui/flip-card";
 import { Reveal } from "../reveal";
+import { HoverPlay } from "../hover-play";
 import { Figures } from "../figures";
 import { cn } from "@/lib/utils";
+
+// The service cards (with their animated visuals) only show once a category is opened: load them then.
+const loadServiceCards = () => import("../services/service-cards");
+const ServiceTiles = dynamic(() => loadServiceCards().then((m) => m.ServiceTiles));
 
 // Outer corners of the grid are rounded: 2 x 3 on phones, 3 x 2 from lg.
 // The grid's outer corners are round, the inner ones tight, for any number of categories
@@ -50,12 +55,15 @@ export const Features = () => {
   const t = useTranslations("home");
   const [open, setOpen] = useState(false);
   const [category, setCategory] = useState<CategorySlug>(serviceCategories[0].slug);
+  // The back face is built on the first open, not on page load: it holds every card visual of a category.
+  const [everOpened, setEverOpened] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const cardRefs = useRef<Partial<Record<CategorySlug, HTMLButtonElement | null>>>({});
 
   const show = (slug: CategorySlug) => {
     setCategory(slug);
+    setEverOpened(true);
     setOpen(true);
     // On phones the clicked card can sit low on the screen: bring the top of the back face into view.
     const top = gridRef.current?.getBoundingClientRect().top ?? 0;
@@ -98,7 +106,8 @@ export const Features = () => {
             {t("services.intro", { areas: serviceCategories.length })}
           </Subheading>
         </Reveal>
-        <div ref={gridRef} className="mt-10 lg:mt-8 scroll-mt-28">
+        {/* Fetch the service cards as soon as a pointer or keyboard comes near, so the flip never waits. */}
+        <div ref={gridRef} onPointerEnter={loadServiceCards} onFocus={loadServiceCards} className="mt-10 lg:mt-8 scroll-mt-28">
           <FlipCard
             flipped={open}
             front={
@@ -107,7 +116,7 @@ export const Features = () => {
                 registerCard={(slug, node) => (cardRefs.current[slug] = node)}
               />
             }
-            back={<CategoryServices category={category} onClose={close} closeRef={closeRef} />}
+            back={everOpened ? <CategoryServices category={category} onClose={close} closeRef={closeRef} /> : null}
           />
         </div>
         <Figures
@@ -135,6 +144,8 @@ const CategoryGrid = ({
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
       {serviceCategories.map(({ slug }, index) => (
         <Reveal key={slug} delay={0.1 + index * 0.08}>
+          {/* The card's visual plays only while it is hovered or focused. */}
+          <HoverPlay className="h-full">
           <button
             ref={(node) => registerCard(slug, node)}
             type="button"
@@ -173,6 +184,7 @@ const CategoryGrid = ({
               </div>
             </Card>
           </button>
+          </HoverPlay>
         </Reveal>
       ))}
     </div>
@@ -217,15 +229,15 @@ const CategoryServices = ({
           <h3 id="service-category-title" className="text-xl md:text-3xl font-bold font-display">
             {tCategories(`${category}.title`)}
           </h3>
-          <p className="mt-1 text-sm md:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          <p className="hidden md:block mt-1 text-sm md:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl">
             {tCategories(`${category}.summary`)}
           </p>
         </div>
       </div>
-      <ServiceCards services={services} className="mt-6 md:mt-8" />
+      <ServiceTiles services={services} className="mt-5 md:mt-6" />
       <Link
         href={categoryPath(category)}
-        className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-black dark:text-white"
+        className="group mt-4 md:mt-5 inline-flex items-center gap-2 text-sm font-semibold text-black dark:text-white"
       >
         {t("exploreCategory", { category: tCategories(`${category}.title`) })}
         <IconArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />

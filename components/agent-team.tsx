@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState, type ReactNode } from "react";
+import { usePlaying } from "@/components/hover-play";
 
 /*
  * Agent Team – an animated card illustration, in a single self-contained file.
@@ -44,10 +45,11 @@ export function AgentTeam({ prompt = "Build a team to work my inbound pipeline",
   const id = "ui-at" + useId().replace(/[^a-zA-Z0-9_-]/g, "");
   const [typed, setTyped] = useState(0);
   const [phase, setPhase] = useState<Phase>("typing");
+  const playing = usePlaying();
 
   useEffect(() => {
-    // Reduced motion: show the finished scene and stay there
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Reduced motion, or a card not hovered (HoverPlay): show the finished scene and stay there
+    if (!playing || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setTyped(prompt.length);
       setPhase("team");
       return;
@@ -67,7 +69,7 @@ export function AgentTeam({ prompt = "Build a team to work my inbound pipeline",
     };
     run();
     return () => timers.forEach((t) => window.clearTimeout(t));
-  }, [prompt]);
+  }, [prompt, playing]);
 
   const lines = ["M300 110C300 162 102 152 102 196", "M300 110V196", "M300 110C300 162 498 152 498 196"];
 

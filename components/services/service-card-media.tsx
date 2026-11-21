@@ -24,7 +24,16 @@ const media: Partial<Record<ServiceSlug, { visual?: CardVisualKind; tools?: Tool
   "social-media": { tools: ["instagram", "tiktok", "linkedin"] },
 };
 
-export const ServiceCardMedia = ({ slug, className }: { slug: ServiceSlug; className?: string }) => {
+export const ServiceCardMedia = ({
+  slug,
+  className,
+  toolsOnTop = false,
+}: {
+  slug: ServiceSlug;
+  className?: string;
+  /** Keep the tool logos in the top corner (the bottom is taken by a title, as on the home tiles). */
+  toolsOnTop?: boolean;
+}) => {
   const { visual, tools = [] } = media[slug] ?? {};
   return (
     // Decorative and not interactive: the whole card is the link.
@@ -41,7 +50,7 @@ export const ServiceCardMedia = ({ slug, className }: { slug: ServiceSlug; class
         />
       )}
       {tools.length > 0 && (
-        <div className={cn("absolute right-1.5 sm:right-3 z-10 flex gap-1 sm:gap-1.5", visual ? "bottom-1.5 sm:bottom-3" : "top-1.5 sm:top-3")}>
+        <div className={cn("absolute right-1.5 sm:right-3 z-10 flex gap-1 sm:gap-1.5", visual && !toolsOnTop ? "bottom-1.5 sm:bottom-3" : "top-1.5 sm:top-3")}>
           {tools.map((tool) => (
             <span
               key={tool}

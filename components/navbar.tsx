@@ -23,7 +23,10 @@ import {
   type CategorySlug,
   type ServiceSlug,
 } from "@/lib/site";
-import { ServiceCardMedia } from "./services/service-card-media";
+import dynamic from "next/dynamic";
+
+// Only the desktop Services menu (from xl, on hover) shows card media: load it with the menu.
+const ServiceCardMedia = dynamic(() => import("./services/service-card-media").then((m) => m.ServiceCardMedia));
 
 const navlinks = [
   { key: "services", href: expertisesPath },
@@ -93,7 +96,7 @@ export const MobileNavbar = ({ scrolled }: { scrolled: boolean }) => {
         "flex lg:hidden px-5 justify-between items-center relative transition-[padding,background-color,border-color] duration-300 border-b",
         scrolled
           ? "py-3 border-neutral-200 dark:border-neutral-800 bg-background/85 backdrop-blur-md"
-          : "py-4 border-transparent bg-background",
+          : "py-4 border-transparent bg-transparent",
       )}
     >
       <div className="flex items-center gap-3">

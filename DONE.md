@@ -2,6 +2,13 @@
 
 History of finished work, newest first. Only read this when asked or when tracking down a bug.
 
+## 2026-11-21
+
+- Home page performance: the browser only receives the copy it uses (`clientMessages` in `i18n/messages.ts`; service and partner pages add their own full copy), home HTML 436 KB -> 232 KB (103 -> 46 KB gzip). The hidden back of the Expertise flip card is built on first open and its cards load on demand; the Services menu preview loads with the menu; the hero robot video loads and plays only on screen. Smoother scrolling: `Reveal` fades and lifts without the blur filter, the hero texture holds its frame while the page scrolls, no more `bg-fixed` patterns
+- Hero texture reaches the top of the page behind the navbar, which is transparent at the top on phones too
+- Expertise panel on the home page: service tiles (`ServiceTiles`) in the same design as the category cards (visual full-bleed, title on a fade, summary and arrow on hover), white and grey; columns and heights so a whole category fits on one screen (checked at 1440 x 900, 1280 x 720, 390 x 844)
+- Card visuals play only on hover or focus (`HoverPlay`, `components/hover-play.tsx`): category cards, service tiles and service cards show their final frame at rest. Phones keep them still
+
 ## 2026-11-12
 
 - Redirect cleanup for Google ("Page with redirect" report): old German URLs go to their final page in one hop (`/de/services/...` straight to the expertise page, `/de/blog/<slug>` and `/de/portfolio/<slug>` straight to the locale that has the entry), instead of `/de` -> `/en` -> final. No internal link points to a redirect anymore: the footer "qartmina.com" link goes to the home page of the current locale (was the bare domain, which redirects), and the language switcher sends a post or case study missing in the target locale to that locale's blog or portfolio index (`getUntranslatedPaths` in `lib/content.ts`, `components/untranslated-paths.tsx`), not to the temporary redirect. Checked on a local build: 88 sitemap pages, 0 internal links to a redirect

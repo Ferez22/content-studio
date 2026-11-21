@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond, Inter, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { routing } from "@/i18n/routing";
@@ -13,6 +13,7 @@ import { ChatWidget } from "@/components/chat-widget";
 import { NewsletterToast } from "@/components/newsletter-toast";
 import { UntranslatedPathsProvider } from "@/components/untranslated-paths";
 import { getUntranslatedPaths } from "@/lib/content";
+import { clientMessages } from "@/i18n/messages";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -70,7 +71,7 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>
+          <NextIntlClientProvider messages={clientMessages(await getMessages())}>
             <UntranslatedPathsProvider value={await getUntranslatedPaths(routing.locales)}>
             <main className="bg-background text-foreground">
               <Navbar />
