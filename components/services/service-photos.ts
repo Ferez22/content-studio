@@ -17,6 +17,7 @@ export const servicePhotos: Partial<Record<ServiceSlug, string>> = {
   "ui-ux-design": "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
   "personal-branding": "https://images.unsplash.com/photo-1630939687530-241d630735df",
   "social-media": "https://images.unsplash.com/photo-1695408247109-3bf125ad0538",
+  "team-training": "https://images.unsplash.com/photo-1581091877018-dac6a371d50f",
   "ai-visuals": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea",
   "video-motion": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d",
 };

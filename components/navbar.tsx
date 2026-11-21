@@ -313,8 +313,9 @@ const ServicesMenu = ({ onNavigate }: { onNavigate: () => void }) => {
           {tServices(`${preview}.summary`)}
         </p>
       </motion.div>
-    <div className="w-[48rem]">
-      <div className="grid grid-cols-3 gap-x-8 gap-y-7">
+    {/* One column per offer: four since 2026-11-21. */}
+    <div className={serviceCategories.length > 3 ? "w-[58rem]" : "w-[48rem]"}>
+      <div className={cn("grid gap-x-8 gap-y-7", serviceCategories.length > 3 ? "grid-cols-4" : "grid-cols-3")}>
         {serviceCategories.map(({ slug, services }, index) => (
           <motion.div
             key={slug}

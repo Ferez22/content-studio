@@ -40,9 +40,12 @@ const outerCorners = (index: number, count: number, columns: number) => {
   return { tl: top && left, tr: top && right, bl: bottom && left, br: bottom && right };
 };
 
+// From lg, four offers sit in one row (2026-11-21); otherwise three per row.
+const desktopColumns = (count: number) => (count === 4 ? 4 : 3);
+
 const cornerClassNames = (index: number, count: number) => {
   const phone = outerCorners(index, count, 2);
-  const desktop = outerCorners(index, count, 3);
+  const desktop = outerCorners(index, count, desktopColumns(count));
   return (Object.keys(cornerClasses) as (keyof typeof cornerClasses)[]).map((corner) => {
     const [round, lgRound, lgTight] = cornerClasses[corner];
     if (phone[corner]) return desktop[corner] ? round : `${round} ${lgTight}`;
@@ -141,7 +144,7 @@ const CategoryGrid = ({
 }) => {
   const tCategories = useTranslations("serviceCategories");
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+    <div className={cn("grid grid-cols-2 gap-3 lg:gap-4", desktopColumns(serviceCategories.length) === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3")}>
       {serviceCategories.map(({ slug }, index) => (
         <Reveal key={slug} delay={0.1 + index * 0.08}>
           {/* The card's visual plays only while it is hovered or focused. */}

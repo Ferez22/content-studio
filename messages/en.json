@@ -1,6 +1,6 @@
 {
   "common": {
-    "bookCall": "Book a call",
+    "bookCall": "Free AI consultation",
     "startProject": "Start your project",
     "readyTitle": "Ready to get started?",
     "readyText": "Tell us about a task that takes your team too much time. We will tell you honestly whether AI is worth it, and where to start.",
@@ -16,7 +16,7 @@
     "about": "About",
     "blog": "Blog",
     "contact": "Contact",
-    "bookCall": "Book a call",
+    "bookCall": "Free AI consultation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
@@ -40,9 +40,10 @@
   },
   "metadata": {
     "siteTitle": "Qartmina | AI studio in Nice for SMEs",
-    "siteDescription": "AI studio in Nice, France: we put AI integrated with your tools into production within a month, for SMEs, agencies and startups. Operations, marketing, engineers.",
+    "siteDescription": "AI studio in Nice, France: we train your teams in AI and put AI integrated with your tools into production within a month, for SMEs, agencies and startups.",
     "knowsAbout": [
       "Artificial intelligence for SMEs",
+      "Corporate AI training",
       "Process automation",
       "Automated invoice and document processing",
       "AI agents and assistants",
@@ -56,7 +57,7 @@
     "hero": {
       "title": "Integrated, robust AI, running in production.",
       "subtitle": "We find the AI use cases that pay off most for your business and put the first one into production within a month.",
-      "primary": "Book a free 30-minute call",
+      "primary": "Free AI consultation",
       "secondary": "See our work",
       "kpis": [
         {
@@ -125,8 +126,8 @@
       "title": "Clients and partners who trust us"
     },
     "services": {
-      "title": "Three ways to put AI to work",
-      "intro": "{areas} offers, one partner. Every project is led by a senior Qartmina project lead and delivered by seasoned engineers we select and check ourselves."
+      "title": "Four ways to put AI to work",
+      "intro": "{areas} offers, one partner. Train your teams, automate your operations, speed up your marketing or reinforce your tech team: every project is led by a senior Qartmina project lead."
     },
     "why": {
       "title": "Why work with us",
@@ -182,6 +183,10 @@
           "answer": "One month to put a first use case into production, in your tools. We start with the one that pays off most, then add the next ones one at a time."
         },
         {
+          "question": "Do you train our teams to use AI?",
+          "answer": "Yes, it is one of our four offers. We train your teams role by role, on their real tasks: good prompts, the right tools, rules to protect your data, then AI connected to your tools and reusable skills for repetitive tasks. Coaching follows the workshops."
+        },
+        {
           "question": "How much does it cost?",
           "answer": "The price depends on the scope, and we agree on it with you before starting. Because our engineers are mainly based in North Africa, you get the level of a senior European engineer for a fraction of the cost."
         },
@@ -215,7 +220,7 @@
       "locationLabel": "Location",
       "location": "Based in Nice. Working with SMEs across the PACA region and France.",
       "tabs": {
-        "call": "Schedule a free 30-min call",
+        "call": "Free AI consultation (30 min)",
         "message": "Contact us"
       },
       "calendarTitle": "Booking calendar"
@@ -348,6 +353,37 @@
       "title": "Our work",
       "intro": "For Docutrad, a CRM software company, our engineers put the infrastructure back on solid ground, then helped take a new product into production in one week.",
       "all": "See all our work"
+    },
+    "adoption": {
+      "title": "Your teams already use AI. Each in their own corner.",
+      "intro": "ChatGPT is open in a tab, someone found the right prompt, someone else automated a piece of their job. But nobody is steering it, and what each person learns stays in their head.",
+      "pains": [
+        {
+          "title": "Everyone improvises",
+          "text": "A good prompt here, a trick there: nothing is shared, nothing is written down. The gain stays with the person, not the company."
+        },
+        {
+          "title": "AI doesn't know your business",
+          "text": "Without your documents, offers and rules, it misses the point. Your teams spend their time explaining everything again."
+        },
+        {
+          "title": "Manual tasks stay manual",
+          "text": "Copying, pasting, retyping, chasing: AI could take it on, but nobody has learned to connect it to your tools."
+        },
+        {
+          "title": "Data leaves without rules",
+          "text": "Contracts, customer files, figures: without clear rules, sensitive information ends up in tools nobody controls."
+        }
+      ],
+      "highlightTitle": "What if your whole team really knew how to use it?",
+      "highlightText": "We train your employees to work with AI on their real tasks: good prompts, connected tools, an assistant that knows your business and reusable skills for every repetitive task. Everyone does more, better, and the know-how stays in the company.",
+      "gains": [
+        "The right habits and tools, role by role",
+        "AI connected to your tools and documents",
+        "Reusable AI skills for repetitive tasks"
+      ],
+      "cta": "Free AI consultation",
+      "secondary": "Explore AI training and consulting"
     }
   },
   "contactForm": {
@@ -416,6 +452,12 @@
       "metaTitle": "AI for SMEs: invoices, documents, CRM and reports",
       "summary": "Invoices, quotes, documents and e-mails handled on their own, reports written, checks done: your teams win back hours every week.",
       "intro": "AI is worth it when it takes real work off your teams. We start from the tasks that come back every week, find where AI pays off most and put the first one into production within a month, in the tools you already use. A person on your team always keeps control of what matters."
+    },
+    "ai-training": {
+      "title": "AI training and consulting",
+      "metaTitle": "AI training for businesses in Nice: your teams and tools",
+      "summary": "Your teams learn to work with AI on their real tasks: everyone does more, better, and the know-how stays with you.",
+      "intro": "Your employees already use AI, each in their own way. We train them, role by role and on their real tasks, to write good prompts, connect AI to their tools and build their own skills for repetitive tasks. We also help you spot the use cases that pay off most. The result: a team that does more without hiring, and know-how that stays in the company."
     },
     "ai-marketing": {
       "title": "AI for your marketing and launches",
@@ -2976,6 +3018,180 @@
           {
             "question": "What if the profile is not a fit?",
             "answer": "Tell your project lead. We adjust the mission or replace the engineer, and you do not have to manage the problem on your own."
+          }
+        ]
+      }
+    },
+    "ai-skills": {
+      "title": "AI-augmented employees",
+      "metaTitle": "AI assistants and automation training for SMEs",
+      "summary": "Your employees learn to hand their repetitive tasks to AI and build their own assistants. Manual work shrinks.",
+      "intro": "Picture every employee able to hand AI the work they redo each week: copying, chasing, formatting, checking. Qartmina teaches your teams to connect AI to their tools, build their own \"skills\" and share an assistant that knows your business. Your people become AI-augmented employees, and keep their time for the work that really needs their judgement.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Teams that build the AI tools they need themselves, and know-how that stays in the company.",
+        "items": [
+          {
+            "title": "Recipes for the tasks that come back",
+            "text": "A \"skill\" is a recipe AI follows every time for a recurring task: drafting a quote from a request, writing meeting notes, checking an invoice. Your employees learn to create them and reuse them."
+          },
+          {
+            "title": "An assistant that knows your company",
+            "text": "Your offers, your procedures, your internal rules: a shared assistant answers from your own documents. New joiners find the right answer without interrupting the whole team."
+          },
+          {
+            "title": "No more copy-paste between tools",
+            "text": "Email, CRM, spreadsheets, calendar, shared folders: your teams learn to connect AI to the tools they already use, so it fetches the information itself."
+          },
+          {
+            "title": "Automations without a developer",
+            "text": "Sorting incoming emails, filling in a tracking sheet, preparing a follow-up: your employees build small automations themselves, with tools that require no coding."
+          },
+          {
+            "title": "Staying in control of what matters",
+            "text": "Every skill includes a human check wherever a mistake is costly: something sent to a customer, an amount, a decision. AI prepares, your team approves."
+          },
+          {
+            "title": "What one person builds, everyone uses",
+            "text": "The best skills go into a shared library, documented and improved by the team. Everyone benefits, and they stay in the company when their author moves on."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the tasks that eat your time to teams that create their own skills.",
+        "points": [
+          {
+            "title": "Find the tasks to hand to AI",
+            "text": "With your teams, we list the manual tasks that come back every week and pick the ones that will save the most time."
+          },
+          {
+            "title": "Design the skills and the assistant",
+            "text": "For each role, we sketch the first skills, the tools to connect and the documents the shared assistant needs to know."
+          },
+          {
+            "title": "Build together, use quickly",
+            "text": "In workshops, your employees build their first skills on their real tasks. Within a few weeks, these skills and the shared assistant are part of daily work, and more follow."
+          },
+          {
+            "title": "Make your teams autonomous",
+            "text": "Coaching, rules for validation and data access, a library of skills: your teams create the next ones alone, knowing what they can safely hand to AI."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about AI skills and assistants",
+        "items": [
+          {
+            "question": "What exactly is a \"skill\"?",
+            "answer": "A set of instructions AI follows to the letter for a specific task. For example: \"from this customer request, prepare a quote with our template, our prices and our terms\". The employee writes it once, then reuses it every time the task comes back."
+          },
+          {
+            "question": "Do people need to code?",
+            "answer": "No. Skills are written in everyday language, and the tools we use to connect AI to your software do not require programming. For the more technical connections, a Qartmina engineer handles them with you."
+          },
+          {
+            "question": "How is this different from AI training?",
+            "answer": "Training teaches your teams to use AI well in their daily work. Here they go further: they build their own skills, connect AI to their tools and share an assistant that knows your business. You can start with either."
+          },
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of teams, the tools to connect and the number of workshops. The price is agreed with you before we start."
+          },
+          {
+            "question": "Is our data protected when AI is connected to our tools?",
+            "answer": "Each assistant only reaches the information it needs, with the access rights of the person using it. We favour business plans that do not train on your data, and GDPR is built in from the design stage."
+          },
+          {
+            "question": "What if a skill gets it wrong?",
+            "answer": "Every skill is tested on real cases before it is shared, and a person approves anything that goes to a customer or commits the company. When a mistake shows up, the team fixes the recipe once, for every time after."
+          }
+        ]
+      }
+    },
+    "team-training": {
+      "title": "Train your teams to use AI",
+      "metaTitle": "AI training for SME teams, in Nice and remotely",
+      "summary": "Every employee learns to use AI on their real tasks: they work faster, and the know-how stays in your company.",
+      "intro": "Your employees already use AI, each in their own way, often without knowing what happens to your data. Qartmina, an AI studio and OpenAI Select Partner, trains your teams role by role, on their real tasks and with their own tools. Everyone saves time every day, and the know-how stays in the company instead of in one person's head.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Teams that know what to ask AI, with which tool, and what they must never hand it.",
+        "items": [
+          {
+            "title": "Workshops by role",
+            "text": "Management, sales, admin, marketing: each team works on its own cases. Nobody wastes time on examples that have nothing to do with their job."
+          },
+          {
+            "title": "Time saved from the next day",
+            "text": "We start from what your team does every week: answering a customer, preparing an offer, summing up a meeting. Everyone leaves with methods they can use straight away."
+          },
+          {
+            "title": "Requests that get good results",
+            "text": "A good request to AI makes all the difference. Your employees learn to give the context, an example and the format they expect, then to check the answer before using it."
+          },
+          {
+            "title": "The right tools, set up properly",
+            "text": "ChatGPT for teams, assistants built into your office tools: we help you choose the right plan and configure it. As an OpenAI Select Partner, we know these offers well, without locking you in."
+          },
+          {
+            "title": "Using AI without exposing your data",
+            "text": "What you can share with AI, what you never paste into it, which plans do not train on your data: simple rules, designed with GDPR in mind, that everyone understands."
+          },
+          {
+            "title": "Coaching after the training",
+            "text": "In the weeks that follow, your teams bring us their questions and their cases. Good practice becomes a habit instead of fading away."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from a clear picture of today to teams that carry on by themselves.",
+        "points": [
+          {
+            "title": "Understand your teams and tasks",
+            "text": "We talk with management and a few employees to find the tasks that take the most time, the tools already in place and where everyone stands."
+          },
+          {
+            "title": "A programme for each role",
+            "text": "We build each team's programme around its own examples, its tools and your company's rules on data."
+          },
+          {
+            "title": "Workshops on real work",
+            "text": "Your teams practise on their actual tasks, not on demos. Within a few weeks the new methods are part of daily work, then we extend to other teams."
+          },
+          {
+            "title": "Coaching until they are autonomous",
+            "text": "Follow-up, answers to questions, a good-practice guide and validation rules: your teams carry on alone and train new joiners themselves."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about AI training",
+        "items": [
+          {
+            "question": "Our employees already use ChatGPT. Why train them?",
+            "answer": "Using AI and using it well are not the same thing. A few workshops on their real tasks clearly improve the answers they get, and clear rules stop sensitive data from ending up in the wrong place."
+          },
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of teams, participants and workshops. The price is agreed with you before we start, with no surprises afterwards."
+          },
+          {
+            "question": "Do people need technical skills?",
+            "answer": "No. The workshops are designed for people who have never worked with AI as much as for those who already use it. We adapt the pace to each group."
+          },
+          {
+            "question": "On site or remote?",
+            "answer": "Both. We run workshops at your premises in Nice and across the PACA region, or remotely anywhere in France. We also work with ESGITECH, our training partner for the \"AI for Business\" programme."
+          },
+          {
+            "question": "Is our data safe during the training?",
+            "answer": "Yes. We work on anonymised or made-up examples until your tools are set up correctly, and we help you choose business plans that do not train on your data. GDPR is part of the programme."
+          },
+          {
+            "question": "What if the team stops using it after the training?",
+            "answer": "That is the main risk, which is why coaching follows the workshops. We look with you at what is being used and what is getting in the way, and we adjust the programme."
           }
         ]
       }

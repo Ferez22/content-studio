@@ -26,7 +26,6 @@ const allServiceCategories = [
   {
     slug: "ai-operations",
     services: [
-      "ai-sprint",
       "document-extraction",
       "ai-automation",
       "generative-ai",
@@ -34,6 +33,11 @@ const allServiceCategories = [
       "predictive-systems",
       "computer-vision",
     ],
+  },
+  {
+    // Put forward by Fares (2026-11-21): teams already use AI; we teach them to get far more from it.
+    slug: "ai-training",
+    services: ["team-training", "ai-skills", "ai-sprint"],
   },
   {
     slug: "ai-marketing",
@@ -64,13 +68,15 @@ export type ServiceSlug =
 // portfolio, blog links). A category with no service switched on is hidden the same way.
 // Set at build time, so a change needs a redeploy.
 export const serviceToggles: Record<ServiceSlug, boolean> = {
-  "ai-sprint": true,
   "document-extraction": true,
   "ai-automation": true,
   "generative-ai": true,
   mcp: true,
   "predictive-systems": true,
   "computer-vision": true,
+  "team-training": true,
+  "ai-skills": true,
+  "ai-sprint": true,
   "content-plan": true,
   "ai-visuals": true,
   "product-launch": true,

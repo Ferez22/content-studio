@@ -50,7 +50,7 @@ const oldServiceUrls: Record<string, string> = {
   "ai/ai-agents": toService("generative-ai"),
   "ai/chatbots": toService("generative-ai"),
   "ai/voice-agents": toService("generative-ai"),
-  "ai/ai-training": toService("ai-sprint"),
+  "ai/ai-training": toService("team-training"),
   // Data and automation
   "data-automation/process-automation": toService("ai-automation"),
   "data-automation/api-integration": toService("mcp"),
@@ -87,7 +87,7 @@ const oldServiceUrls: Record<string, string> = {
   automation: toService("ai-automation"),
   integration: toService("mcp"),
   consulting: toService("ai-sprint"),
-  training: toService("ai-sprint"),
+  training: toService("team-training"),
 };
 
 // Expertise URLs from 2026-11-11 to 2026-11-21 (three technical categories), mapped to the

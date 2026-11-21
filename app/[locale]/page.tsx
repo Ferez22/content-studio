@@ -9,6 +9,7 @@ import { Contact } from "@/components/contact";
 import { OpenAIPartner } from "@/components/openai-partner";
 import { Testimonials } from "@/components/testimonials";
 import { Method } from "@/components/method";
+import { AiAdoption } from "@/components/ai-adoption";
 import { DeliveryModel } from "@/components/delivery-model";
 import { CaseStudies } from "@/components/case-studies";
 import { JsonLd } from "@/components/json-ld";
@@ -84,9 +85,10 @@ export default async function Home({ params }: Props) {
           })),
         }}
       />
-      {/* Order (Fares 2026-11-21): promise, the three offers, what AI changes for you, the one-month
+      {/* Order (Fares 2026-11-21): promise, teams already use AI (training), the four offers, what AI changes for you, the one-month
           method, who does the work, proof, then questions and contact. */}
       <Hero />
+      <AiAdoption />
       <Features />
       <AutomationOffer />
       <Method />

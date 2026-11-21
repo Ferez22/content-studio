@@ -19,6 +19,7 @@ const media: Partial<Record<ServiceSlug, { visual?: CardVisualKind; tools?: Tool
   "custom-software": { visual: "crm" },
   saas: { visual: "cloud" },
   "graphic-design": { tools: ["canva", "figma"] },
+  "ai-skills": { visual: "cluster" },
   "content-plan": { visual: "mobile", tools: ["linkedin", "instagram"] },
   "ai-visuals": { tools: ["canva", "figma"] },
   "product-launch": { visual: "shop" },

@@ -1,6 +1,6 @@
 {
   "common": {
-    "bookCall": "Prendre rendez-vous",
+    "bookCall": "Consultation IA gratuite",
     "startProject": "Lancer votre projet",
     "readyTitle": "Prêt à vous lancer ?",
     "readyText": "Parlez-nous d'une tâche qui prend trop de temps à votre équipe. Nous vous dirons franchement si l'IA vaut la peine, et par où commencer.",
@@ -16,7 +16,7 @@
     "about": "À propos",
     "blog": "Blog",
     "contact": "Contact",
-    "bookCall": "Prendre rendez-vous",
+    "bookCall": "Consultation IA gratuite",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "language": "Langue",
@@ -40,9 +40,10 @@
   },
   "metadata": {
     "siteTitle": "Qartmina | Studio IA à Nice pour les PME",
-    "siteDescription": "Studio IA à Nice : nous mettons en production en un mois des IA intégrées à vos outils, pour PME, agences et startups. Opérations, marketing, ingénieurs.",
+    "siteDescription": "Studio IA à Nice : nous formons vos équipes à l'IA et mettons en production en un mois des IA intégrées à vos outils, pour PME, agences et startups.",
     "knowsAbout": [
       "Intelligence artificielle pour les PME",
+      "Formation à l'IA en entreprise",
       "Automatisation des processus",
       "Traitement automatique des factures et documents",
       "Agents et assistants IA",
@@ -56,7 +57,7 @@
     "hero": {
       "title": "Une IA intégrée et robuste, en production.",
       "subtitle": "Nous trouvons les usages de l'IA qui rapportent le plus à votre entreprise et mettons le premier en production en un mois.",
-      "primary": "Réserver un appel gratuit de 30 minutes",
+      "primary": "Consultation IA gratuite",
       "secondary": "Voir nos réalisations",
       "kpis": [
         {
@@ -178,6 +179,10 @@
           "answer": "Un mois pour mettre un premier cas d'usage en production, dans vos outils. Nous commençons par celui qui rapporte le plus, puis nous ajoutons les suivants un par un."
         },
         {
+          "question": "Formez-vous nos équipes à utiliser l'IA ?",
+          "answer": "Oui, c'est l'une de nos quatre offres. Nous formons vos équipes rôle par rôle, sur leurs vraies tâches : bons prompts, bons outils, règles pour protéger vos données, puis l'IA branchée sur vos outils et des compétences réutilisables pour les tâches répétitives. Un accompagnement suit les ateliers."
+        },
+        {
           "question": "Combien cela coûte-t-il ?",
           "answer": "Le prix dépend du périmètre, et nous le fixons avec vous avant de commencer. Nos ingénieurs étant principalement basés en Afrique du Nord, vous obtenez le niveau d'un ingénieur senior européen pour une fraction du coût."
         },
@@ -211,7 +216,7 @@
       "locationLabel": "Adresse",
       "location": "Basés à Nice. Avec des PME de la région PACA et de toute la France.",
       "tabs": {
-        "call": "Réserver un appel gratuit de 30 min",
+        "call": "Consultation IA gratuite (30 min)",
         "message": "Nous contacter"
       },
       "calendarTitle": "Calendrier de réservation"
@@ -291,8 +296,8 @@
       "loop": "Boucle continue"
     },
     "services": {
-      "title": "Trois façons de mettre l'IA au travail",
-      "intro": "{areas} offres, un seul partenaire. Chaque projet est piloté par un chef de projet senior Qartmina et réalisé par des ingénieurs chevronnés que nous choisissons et contrôlons."
+      "title": "Quatre façons de mettre l'IA au travail",
+      "intro": "{areas} offres, un seul partenaire. Former vos équipes, automatiser vos opérations, accélérer votre marketing ou renforcer votre équipe tech : chaque projet est piloté par un chef de projet senior Qartmina."
     },
     "method": {
       "title": "Votre premier cas d'usage en production en un mois",
@@ -348,6 +353,37 @@
       "title": "Nos réalisations",
       "intro": "Pour Docutrad, éditeur d'un CRM, nos ingénieurs ont remis l'infrastructure d'aplomb, puis aidé à mettre un nouveau produit en production en une semaine.",
       "all": "Voir toutes nos réalisations"
+    },
+    "adoption": {
+      "title": "Vos équipes utilisent déjà l'IA. Chacune dans son coin.",
+      "intro": "ChatGPT est ouvert dans un onglet, quelqu'un a trouvé le bon prompt, un autre a automatisé un bout de son travail. Mais personne ne pilote, et ce que chacun apprend reste dans sa tête.",
+      "pains": [
+        {
+          "title": "Chacun bricole à sa façon",
+          "text": "Un bon prompt ici, une astuce là : rien n'est partagé, rien n'est écrit. Le gain reste à la personne, pas à l'entreprise."
+        },
+        {
+          "title": "L'IA ne connaît pas votre métier",
+          "text": "Sans vos documents, vos offres et vos règles, elle répond à côté. Vos équipes passent leur temps à tout lui réexpliquer."
+        },
+        {
+          "title": "Les tâches manuelles restent manuelles",
+          "text": "Copier, coller, ressaisir, relancer : l'IA pourrait s'en charger, mais personne n'a appris à la brancher sur vos outils."
+        },
+        {
+          "title": "Vos données sortent sans règles",
+          "text": "Contrats, fichiers clients, chiffres : sans cadre clair, des informations sensibles finissent dans des outils que personne ne maîtrise."
+        }
+      ],
+      "highlightTitle": "Et si toute votre équipe savait vraiment s'en servir ?",
+      "highlightText": "Nous formons vos employés à travailler avec l'IA sur leurs vraies tâches : de bons prompts, des outils connectés entre eux, un assistant qui connaît votre métier et des compétences réutilisables pour chaque tâche répétitive. Chacun fait plus, mieux, et le savoir reste dans l'entreprise.",
+      "gains": [
+        "Les bons réflexes et les bons outils, rôle par rôle",
+        "L'IA branchée sur vos outils et vos documents",
+        "Des compétences IA réutilisables pour les tâches répétitives"
+      ],
+      "cta": "Consultation IA gratuite",
+      "secondary": "Découvrir la formation et le conseil IA"
     }
   },
   "contactForm": {
@@ -416,6 +452,12 @@
       "metaTitle": "IA pour les PME : factures, documents, CRM et rapports",
       "summary": "Factures, devis, documents et e-mails traités seuls, rapports rédigés, contrôles faits : vos équipes gagnent des heures chaque semaine.",
       "intro": "L'IA vaut la peine quand elle enlève du vrai travail à vos équipes. Nous partons de vos tâches qui reviennent chaque semaine, trouvons celles où l'IA rapporte le plus et mettons la première en production en un mois, dans les outils que vous utilisez déjà. Une personne de votre équipe garde toujours la main sur ce qui compte."
+    },
+    "ai-training": {
+      "title": "Formation et conseil IA",
+      "metaTitle": "Formation IA en entreprise à Nice : vos équipes et vos outils",
+      "summary": "Vos équipes apprennent à travailler avec l'IA sur leurs vraies tâches : chacun fait plus, mieux, et le savoir reste chez vous.",
+      "intro": "Vos employés utilisent déjà l'IA, chacun à sa façon. Nous les formons, rôle par rôle et sur leurs vraies tâches, à écrire de bons prompts, à brancher l'IA sur leurs outils et à créer leurs propres compétences pour les tâches répétitives. Nous vous aidons aussi à repérer les cas d'usage qui rapportent le plus. Résultat : une équipe qui fait plus sans recruter, et un savoir qui reste dans l'entreprise."
     },
     "ai-marketing": {
       "title": "L'IA pour votre marketing et vos lancements",
@@ -3678,6 +3720,180 @@
           {
             "question": "Et si le profil ne convient pas ?",
             "answer": "Dites-le à votre chef de projet. Nous ajustons la mission ou nous remplaçons l'ingénieur, sans vous laisser gérer le problème seul."
+          }
+        ]
+      }
+    },
+    "ai-skills": {
+      "title": "Des employés augmentés par l'IA",
+      "metaTitle": "Assistants IA et automatisations : formation pour PME",
+      "summary": "Vos employés apprennent à confier leurs tâches répétitives à l'IA et à créer leurs propres assistants. Le travail manuel recule.",
+      "intro": "Imaginez chaque employé capable de confier à l'IA ce qu'il refait chaque semaine : recopier, relancer, mettre en forme, vérifier. Qartmina apprend à vos équipes à relier l'IA à leurs outils, à créer leurs propres « skills » et à partager un assistant qui connaît votre métier. Vos employés deviennent des employés augmentés, et gardent leur temps pour ce qui demande vraiment leur jugement.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des équipes qui construisent elles-mêmes les outils IA dont elles ont besoin, et un savoir-faire qui reste dans l'entreprise.",
+        "items": [
+          {
+            "title": "Des recettes pour les tâches qui reviennent",
+            "text": "Un « skill », c'est une recette que l'IA suit à chaque fois pour une tâche récurrente : préparer un devis à partir d'une demande, rédiger un compte rendu, vérifier une facture. Vos employés apprennent à les créer et à les réutiliser."
+          },
+          {
+            "title": "Un assistant qui connaît votre entreprise",
+            "text": "Vos offres, vos procédures, vos règles internes : un assistant partagé répond à partir de vos propres documents. Les nouveaux arrivants trouvent la bonne réponse sans interrompre toute l'équipe."
+          },
+          {
+            "title": "Fini le copier-coller entre les outils",
+            "text": "Messagerie, CRM, tableur, agenda, dossiers partagés : vos équipes apprennent à relier l'IA aux outils qu'elles utilisent déjà, pour qu'elle aille chercher l'information elle-même."
+          },
+          {
+            "title": "Des automatisations sans développeur",
+            "text": "Trier les e-mails entrants, remplir un tableau de suivi, préparer une relance : vos employés construisent eux-mêmes de petites automatisations, avec des outils qui ne demandent pas de savoir coder."
+          },
+          {
+            "title": "Garder la main sur ce qui compte",
+            "text": "Chaque skill prévoit une validation humaine là où une erreur coûte cher : un envoi au client, un montant, une décision. L'IA prépare, votre équipe valide."
+          },
+          {
+            "title": "Ce qu'un employé construit sert à tous",
+            "text": "Les meilleurs skills sont rangés dans une bibliothèque commune, documentés et améliorés par l'équipe. Ils profitent à chacun, et restent dans l'entreprise quand leur auteur change de poste."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, des tâches qui vous font perdre du temps jusqu'à des équipes qui créent seules leurs skills.",
+        "points": [
+          {
+            "title": "Repérer les tâches à confier à l'IA",
+            "text": "Avec vos équipes, nous listons les tâches manuelles qui reviennent chaque semaine et nous choisissons celles qui feront gagner le plus de temps."
+          },
+          {
+            "title": "Concevoir les skills et l'assistant",
+            "text": "Pour chaque métier, nous dessinons les premiers skills, les outils à relier et les documents que l'assistant partagé doit connaître."
+          },
+          {
+            "title": "Construire ensemble, utiliser vite",
+            "text": "En ateliers, vos employés construisent leurs premiers skills sur leurs vraies tâches. En quelques semaines, ces skills et l'assistant partagé servent au quotidien, puis d'autres suivent."
+          },
+          {
+            "title": "Rendre vos équipes autonomes",
+            "text": "Accompagnement, règles de validation et d'accès aux données, bibliothèque de skills : vos équipes créent les suivants seules, en sachant ce qu'elles peuvent confier à l'IA."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur les skills et assistants IA",
+        "items": [
+          {
+            "question": "Un « skill », concrètement, c'est quoi ?",
+            "answer": "Une fiche d'instructions que l'IA suit à la lettre pour une tâche précise. Par exemple : « à partir de cette demande client, prépare un devis avec notre modèle, nos tarifs et nos conditions ». L'employé la crée une fois, puis la réutilise chaque fois que la tâche revient."
+          },
+          {
+            "question": "Faut-il savoir coder ?",
+            "answer": "Non. Les skills s'écrivent en langage courant, et les outils que nous utilisons pour relier l'IA à vos logiciels ne demandent pas de programmer. Pour les branchements plus techniques, un ingénieur de Qartmina s'en charge avec vous."
+          },
+          {
+            "question": "Quelle différence avec la formation à l'IA ?",
+            "answer": "La formation apprend à vos équipes à bien utiliser l'IA au quotidien. Ici, elles vont plus loin : elles construisent leurs propres skills, relient l'IA à leurs outils et partagent un assistant qui connaît votre métier. Vous pouvez commencer par l'une ou l'autre."
+          },
+          {
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du nombre d'équipes, des outils à relier et du nombre d'ateliers. Le prix est fixé avec vous avant de commencer."
+          },
+          {
+            "question": "Nos données sont-elles protégées quand l'IA est reliée à nos outils ?",
+            "answer": "Chaque assistant n'accède qu'aux informations dont il a besoin, avec les droits de la personne qui l'utilise. Nous privilégions des offres entreprise qui ne s'entraînent pas sur vos données, et le RGPD est pris en compte dès la conception."
+          },
+          {
+            "question": "Et si un skill se trompe ?",
+            "answer": "Chaque skill est testé sur de vrais cas avant d'être partagé, et une personne valide tout ce qui part chez un client ou engage l'entreprise. Quand une erreur apparaît, l'équipe corrige la recette une fois, pour toutes les fois suivantes."
+          }
+        ]
+      }
+    },
+    "team-training": {
+      "title": "Former vos équipes à l'IA",
+      "metaTitle": "Formation IA en entreprise pour PME, à Nice et à distance",
+      "summary": "Chaque employé apprend à utiliser l'IA sur ses vraies tâches : il travaille plus vite, et le savoir-faire reste chez vous.",
+      "intro": "Vos employés utilisent déjà l'IA, chacun à sa façon, souvent sans savoir ce qu'elle fait de vos données. Qartmina, studio IA et OpenAI Select Partner, forme vos équipes métier par métier, sur leurs vraies tâches et avec leurs propres outils. Chacun gagne du temps tous les jours, et ce savoir-faire reste dans l'entreprise, pas dans la tête d'une seule personne.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des équipes qui savent quoi demander à l'IA, avec quel outil, et ce qu'elles ne doivent jamais lui confier.",
+        "items": [
+          {
+            "title": "Des ateliers par métier",
+            "text": "Direction, commerciaux, administration, marketing : chaque équipe travaille sur ses propres cas. Personne ne perd son temps sur des exemples qui ne le concernent pas."
+          },
+          {
+            "title": "Gagner du temps dès le lendemain",
+            "text": "Nous partons de ce que votre équipe fait chaque semaine : répondre à un client, préparer une offre, résumer une réunion. Chacun repart avec des méthodes qu'il applique tout de suite."
+          },
+          {
+            "title": "Des demandes qui donnent de bons résultats",
+            "text": "Une bonne demande à l'IA change tout. Vos employés apprennent à donner le contexte, un exemple et le format attendu, puis à vérifier la réponse avant de s'en servir."
+          },
+          {
+            "title": "Les bons outils, bien configurés",
+            "text": "ChatGPT pour les équipes, assistants intégrés à vos outils bureautiques : nous vous aidons à choisir l'offre adaptée et à la paramétrer. OpenAI Select Partner, nous connaissons ces offres de près, sans vous y enfermer."
+          },
+          {
+            "title": "Utiliser l'IA sans exposer vos données",
+            "text": "Ce qu'on peut confier à l'IA, ce qu'on ne colle jamais dedans, quelle offre ne s'entraîne pas sur vos données : des règles simples, pensées pour le RGPD, que chacun comprend."
+          },
+          {
+            "title": "Un accompagnement après la formation",
+            "text": "Dans les semaines qui suivent, vos équipes nous posent leurs questions et nous montrent leurs cas. Les bonnes pratiques entrent dans les habitudes au lieu de s'oublier."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, de l'état des lieux jusqu'à des équipes qui avancent seules.",
+        "points": [
+          {
+            "title": "Comprendre vos équipes et leurs tâches",
+            "text": "Nous échangeons avec la direction et quelques employés pour repérer les tâches qui prennent le plus de temps, les outils en place et le niveau de chacun."
+          },
+          {
+            "title": "Un programme pour chaque métier",
+            "text": "Nous construisons le programme de chaque équipe avec ses propres exemples, ses outils et les règles de votre entreprise sur les données."
+          },
+          {
+            "title": "Des ateliers sur le travail réel",
+            "text": "Vos équipes pratiquent sur leurs vraies tâches, pas sur des démonstrations. En quelques semaines, les nouvelles méthodes servent au quotidien, puis nous étendons à d'autres équipes."
+          },
+          {
+            "title": "Accompagner jusqu'à l'autonomie",
+            "text": "Suivi, réponses aux questions, guide des bonnes pratiques et règles de validation : vos équipes continuent seules et forment à leur tour les nouveaux arrivants."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur la formation à l'IA",
+        "items": [
+          {
+            "question": "Nos employés utilisent déjà ChatGPT. Pourquoi les former ?",
+            "answer": "Utiliser l'IA et bien l'utiliser, ce n'est pas la même chose. Quelques ateliers sur leurs vraies tâches améliorent nettement la qualité des réponses qu'ils obtiennent, et des règles claires évitent qu'une donnée sensible parte au mauvais endroit."
+          },
+          {
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du nombre d'équipes, de participants et d'ateliers. Le prix est fixé avec vous avant de commencer, sans surprise ensuite."
+          },
+          {
+            "question": "Faut-il des connaissances techniques ?",
+            "answer": "Non. Les ateliers sont pensés pour des personnes qui n'ont jamais travaillé avec l'IA autant que pour celles qui s'en servent déjà. Nous adaptons le rythme au niveau de chaque groupe."
+          },
+          {
+            "question": "Sur place ou à distance ?",
+            "answer": "Les deux. Nous animons les ateliers dans vos locaux à Nice et en région PACA, ou à distance partout en France. Nous travaillons aussi avec ESGITECH, notre partenaire de formation pour le programme « IA pour l'entreprise »."
+          },
+          {
+            "question": "Nos données sont-elles en sécurité pendant la formation ?",
+            "answer": "Oui. Nous travaillons sur des exemples anonymisés ou fictifs tant que vos outils ne sont pas configurés correctement, et nous vous aidons à choisir des offres entreprise qui ne s'entraînent pas sur vos données. Le RGPD fait partie du programme."
+          },
+          {
+            "question": "Et si l'équipe ne s'en sert pas après la formation ?",
+            "answer": "C'est le risque principal, et c'est pour cela que l'accompagnement suit les ateliers. Nous regardons avec vous ce qui est utilisé, ce qui bloque, et nous ajustons le programme."
           }
         ]
       }

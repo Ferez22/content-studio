@@ -1,6 +1,9 @@
 import {
   IconAppWindow,
   IconBolt,
+  IconPresentation,
+  IconSchool,
+  IconWand,
   IconCalendarEvent,
   IconCloudUpload,
   IconPhoto,
@@ -29,6 +32,7 @@ type Icon = React.ComponentType<{ className?: string }>;
 
 export const categoryIcons: Record<CategorySlug, Icon> = {
   "ai-operations": IconSparkles,
+  "ai-training": IconSchool,
   "ai-marketing": IconSpeakerphone,
   engineers: IconUsersGroup,
 };
@@ -46,6 +50,8 @@ export const serviceIcons: Record<ServiceSlug, Icon> = {
   "brand-identity": IconPalette,
   "graphic-design": IconBrush,
   "ui-ux-design": IconLayout,
+  "team-training": IconPresentation,
+  "ai-skills": IconWand,
   "content-plan": IconCalendarEvent,
   "ai-visuals": IconPhoto,
   "product-launch": IconRocket,

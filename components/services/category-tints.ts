@@ -6,6 +6,7 @@ import type { CategorySlug } from "@/lib/site";
 // gradients built from it stay solid). Apply with `tintStyle` and the `bg-tint` classes below.
 const tints: Record<CategorySlug, { light: string; dark: string }> = {
   "ai-operations": { light: "#ede9fe", dark: "#27223d" },
+  "ai-training": { light: "#dcfce7", dark: "#1b2e22" },
   "ai-marketing": { light: "#fce7f3", dark: "#34212d" },
   engineers: { light: "#fef3c7", dark: "#33291a" },
 };

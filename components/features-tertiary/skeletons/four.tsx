@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { usePlaying } from "@/components/hover-play";
 
 export const SkeletonFour = () => {
   const t = useTranslations("visuals.consulting");
@@ -51,11 +52,13 @@ export const SkeletonFour = () => {
   const currentIndexRef = useRef(0);
 
   const [selected, setSelected] = useState(items[0]);
+  // On a card (HoverPlay), the tabs only cycle while it is hovered.
+  const playing = usePlaying();
 
   useEffect(() => {
-    startAutoplay();
+    if (playing) startAutoplay();
     return () => stopAutoplay();
-  }, []);
+  }, [playing]);
 
   const startAutoplay = () => {
     stopAutoplay();
@@ -76,11 +79,13 @@ export const SkeletonFour = () => {
     <div>
       <div className="flex gap-4 items-center justify-center max-w-lg mx-auto flex-wrap mb-4">
         {items.map((item, idx) => (
-          <button
+          // A span, not a button: this mockup sits inside the clickable home category card,
+          // and a button inside a button breaks the page's hydration.
+          <span
             key={item.title}
-            onClick={() => setSelected(item)}
+            aria-hidden="true"
             className={cn(
-              "px-2 py-1 rounded-sm relative text-xs gap-1 cursor-pointer active:scale-98 transition duration-200 flex items-center justify-center opacity-50",
+              "px-2 py-1 rounded-sm relative text-xs gap-1 transition duration-200 flex items-center justify-center opacity-50",
               selected.title === item.title && "opacity-100",
               item.className
             )}
@@ -93,7 +98,7 @@ export const SkeletonFour = () => {
             )}
             {item.icon}
             {item.title}
-          </button>
+          </span>
         ))}
       </div>
       <div className="flex-1 rounded-t-3xl gap-2 flex flex-col bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-200 max-w-[20rem] lg:max-w-sm mx-auto w-full h-full absolute inset-x-0 p-2">
