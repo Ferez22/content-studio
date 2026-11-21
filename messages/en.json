@@ -355,8 +355,8 @@
       "all": "See all our work"
     },
     "adoption": {
-      "title": "Your teams already use AI. Each in their own corner.",
-      "intro": "ChatGPT is open in a tab, someone found the right prompt, someone else automated a piece of their job. But nobody is steering it, and what each person learns stays in their head.",
+      "title": "Your business wasn't designed around AI. Yet it's already close.",
+      "intro": "Your employees already use AI, and you probably do too. ChatGPT is open in a tab, someone found the right prompt, someone else automated a piece of their job. But each in their own corner, and what each person learns stays in their head.",
       "pains": [
         {
           "title": "Everyone improvises",
@@ -375,8 +375,8 @@
           "text": "Contracts, customer files, figures: without clear rules, sensitive information ends up in tools nobody controls."
         }
       ],
-      "highlightTitle": "What if your whole team really knew how to use it?",
-      "highlightText": "We train your employees to work with AI on their real tasks: good prompts, connected tools, an assistant that knows your business and reusable skills for every repetitive task. Everyone does more, better, and the know-how stays in the company.",
+      "highlightTitle": "There's a gold mine in your business.",
+      "highlightText": "Qartmina means “the new mine”. In every business, hours lie buried in manual tasks that are frustrating but unavoidable. With a little help, we dig: your teams learn to work with AI, repetitive tasks leave your desk, and new opportunities come to light.",
       "gains": [
         "The right habits and tools, role by role",
         "AI connected to your tools and documents",

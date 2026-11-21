@@ -355,8 +355,8 @@
       "all": "Voir toutes nos réalisations"
     },
     "adoption": {
-      "title": "Vos équipes utilisent déjà l'IA. Chacune dans son coin.",
-      "intro": "ChatGPT est ouvert dans un onglet, quelqu'un a trouvé le bon prompt, un autre a automatisé un bout de son travail. Mais personne ne pilote, et ce que chacun apprend reste dans sa tête.",
+      "title": "Votre entreprise n'a pas été pensée pour l'IA. Elle en est pourtant tout près.",
+      "intro": "Vos employés utilisent déjà l'IA, et vous probablement aussi. ChatGPT est ouvert dans un onglet, quelqu'un a trouvé le bon prompt, un autre a automatisé un bout de son travail. Mais chacun dans son coin, et ce que chacun apprend reste dans sa tête.",
       "pains": [
         {
           "title": "Chacun bricole à sa façon",
@@ -375,8 +375,8 @@
           "text": "Contrats, fichiers clients, chiffres : sans cadre clair, des informations sensibles finissent dans des outils que personne ne maîtrise."
         }
       ],
-      "highlightTitle": "Et si toute votre équipe savait vraiment s'en servir ?",
-      "highlightText": "Nous formons vos employés à travailler avec l'IA sur leurs vraies tâches : de bons prompts, des outils connectés entre eux, un assistant qui connaît votre métier et des compétences réutilisables pour chaque tâche répétitive. Chacun fait plus, mieux, et le savoir reste dans l'entreprise.",
+      "highlightTitle": "Une mine d'or dort dans votre entreprise.",
+      "highlightText": "Qartmina veut dire « la nouvelle mine ». Dans chaque entreprise, des heures dorment dans des tâches manuelles, frustrantes mais obligatoires. Avec un coup de pouce, on creuse : vos équipes apprennent à travailler avec l'IA, les tâches répétitives quittent votre bureau, et de nouvelles opportunités apparaissent.",
       "gains": [
         "Les bons réflexes et les bons outils, rôle par rôle",
         "L'IA branchée sur vos outils et vos documents",
