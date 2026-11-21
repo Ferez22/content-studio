@@ -5,9 +5,9 @@ import type { CategorySlug } from "@/lib/site";
 // Light mode gets a pastel, dark mode an opaque deep tone of the same hue (so overlays and
 // gradients built from it stay solid). Apply with `tintStyle` and the `bg-tint` classes below.
 const tints: Record<CategorySlug, { light: string; dark: string }> = {
-  "data-ai": { light: "#ede9fe", dark: "#27223d" },
-  "software-development": { light: "#fef3c7", dark: "#33291a" },
-  brand: { light: "#fce7f3", dark: "#34212d" },
+  "ai-operations": { light: "#ede9fe", dark: "#27223d" },
+  "ai-marketing": { light: "#fce7f3", dark: "#34212d" },
+  engineers: { light: "#fef3c7", dark: "#33291a" },
 };
 
 export const tintStyle = (category: CategorySlug) =>

@@ -1,0 +1,32 @@
+# Qartmina
+
+> Qartmina is an AI studio based in Nice, France. It puts integrated, robust AI into production for SMEs, agencies and startups: it finds the AI use cases that pay off most for a business, builds them, and puts the first one into production within a month. The work is done by seasoned, affordable engineers, mainly from North Africa and French-speaking, led by senior Qartmina project leads who check every deliverable. Qartmina is an OpenAI Select Partner.
+
+Website languages: French (default) and English. Region: Nice and the Provence-Alpes-Côte d'Azur (PACA) region first, remote across France.
+
+## Offers
+
+- [AI for your operations](https://www.qartmina.com/en/expertises/ai-operations): invoices, quotes, purchase orders and contracts read, checked and filed automatically; documents sorted from e-mail, CRM and shared folders; reports written; checks done; AI assistants that answer from the company's own documents. Flagship offer.
+- [AI for your marketing and launches](https://www.qartmina.com/en/expertises/ai-marketing): content plans and posts, 2D and 3D visuals, launch videos, launch pages and online shops, produced with AI tools fed with the client's brand guidelines and tone.
+- [Engineers on demand](https://www.qartmina.com/en/expertises/engineers): team reinforcement, one-off expert missions (ship a feature, move to the cloud), and an AI advisor for a few days to help a client's team add AI to its product.
+
+## How we work
+
+1. Week 1: understand the need and pick the use case that pays off most.
+2. Week 2: design the solution (what AI does, what a person approves, which tools to connect).
+3. Weeks 3 and 4: build, test on real data and put into production in the client's tools.
+4. Then: train the team, measure the gain, add the next use cases.
+
+## Key pages
+
+- [Home (French)](https://www.qartmina.com/fr)
+- [Home (English)](https://www.qartmina.com/en)
+- [All offers](https://www.qartmina.com/en/expertises)
+- [Case studies](https://www.qartmina.com/en/portfolio)
+- [Blog](https://www.qartmina.com/en/blog)
+- [About](https://www.qartmina.com/en/about)
+- [Book a free 30-minute call](https://www.qartmina.com/en/book)
+
+## Contact
+
+fares@qartmina.com

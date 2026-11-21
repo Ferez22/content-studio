@@ -3,7 +3,7 @@
     "bookCall": "Book a call",
     "startProject": "Start your project",
     "readyTitle": "Ready to get started?",
-    "readyText": "Tell us about your project. We will tell you honestly what it takes, how long it should take and who is right to build it.",
+    "readyText": "Tell us about a task that takes your team too much time. We will tell you honestly whether AI is worth it, and where to start.",
     "learnMore": "Learn more",
     "source": "Source",
     "demo": "Demo",
@@ -26,11 +26,11 @@
     "categoryOverview": "Overview"
   },
   "footer": {
-    "positioning": "Your digital partner for data and AI, software, brand and online presence.",
+    "positioning": "The AI studio for SMEs: integrated, robust AI, in production within a month.",
     "services": "Expertise",
     "company": "Company",
     "contact": "Contact",
-    "location": "Based in France. Working with SMEs across France.",
+    "location": "Based in Nice. Working with SMEs across the PACA region and France.",
     "rights": "© {year} Qartmina. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -39,27 +39,37 @@
     "newsletterText": "Practical notes on putting AI and data to work in real businesses. Unsubscribe anytime."
   },
   "metadata": {
-    "siteTitle": "Qartmina | Your digital partner for AI, software and web",
-    "siteDescription": "Data and AI, custom software and SaaS, brand and online presence from one digital partner: specialists we hand-pick, one project lead and quality control on every project."
+    "siteTitle": "Qartmina | AI studio in Nice for SMEs",
+    "siteDescription": "AI studio in Nice, France: we put AI integrated with your tools into production within a month, for SMEs, agencies and startups. Operations, marketing, engineers.",
+    "knowsAbout": [
+      "Artificial intelligence for SMEs",
+      "Process automation",
+      "Automated invoice and document processing",
+      "AI agents and assistants",
+      "AI-produced marketing content",
+      "Engineers on demand",
+      "OpenAI"
+    ],
+    "offerCatalog": "Qartmina offers"
   },
   "home": {
     "hero": {
-      "title": "One partner for everything digital",
-      "subtitle": "Data and AI, software, brand and online presence, built by specialists we hand-pick and checked by us before it reaches you. One project lead from the first call to launch.",
+      "title": "Integrated, robust AI, running in production.",
+      "subtitle": "We find the AI use cases that pay off most for your business and put the first one into production within a month.",
       "primary": "Book a free 30-minute call",
       "secondary": "See our work",
       "kpis": [
         {
-          "value": "1",
-          "label": "Project lead"
+          "value": "1 month",
+          "label": "First use case in production"
+        },
+        {
+          "value": "Senior",
+          "label": "Engineers and project leads"
         },
         {
           "value": "100%",
           "label": "Checked before handover"
-        },
-        {
-          "value": "30 days",
-          "label": "Delivery"
         }
       ]
     },
@@ -80,43 +90,43 @@
           "text": "Mismatches, duplicates, missing documents, compliance rules: AI flags what looks wrong, and your team decides what happens next."
         }
       ],
-      "casesTitle": "The business cases we handle",
-      "casesIntro": "For each process we pick the simplest technique that works. A person on your team always makes the final call.",
+      "casesTitle": "What AI changes, team by team",
+      "casesIntro": "Admin, sales, marketing, customer service: we start from what costs each team the most time or money, and begin with what pays off most.",
       "cases": [
         {
-          "title": "Assistant on your documents (RAG)",
-          "text": "An assistant that answers from your procedures, contracts and technical sheets, and quotes the passage behind every answer, so checking takes one click."
+          "title": "Admin and finance",
+          "text": "Invoices, quotes and expense claims entered, matched and filed with no retyping. Your team only checks the exceptions."
         },
         {
-          "title": "Data extraction and OCR",
-          "text": "Invoices, letters or forms, even scanned: the right fields are pulled out and sent into your tools, with no retyping."
+          "title": "Sales and CRM",
+          "text": "Incoming requests sorted, CRM records kept up to date, follow-ups and proposals prepared. Your salespeople spend their time selling."
         },
         {
-          "title": "Teams of AI agents",
-          "text": "Several specialised agents share one process: one gathers, one checks, one writes. A person approves the sensitive steps."
+          "title": "Marketing and launches",
+          "text": "Content plans, visuals, videos and launch pages produced in your brand's style, in days instead of weeks."
         },
         {
-          "title": "Document generation",
-          "text": "Reports, summaries, product sheets or standard replies, produced from your data and templates and reviewed by your team before sending."
+          "title": "Customer service",
+          "text": "An assistant answers common questions around the clock from your own documents, and hands over to a person when needed."
         },
         {
-          "title": "Conversational assistants",
-          "text": "On your website or inside your internal tools, an assistant answers questions from customers or staff and hands over to a person when needed."
+          "title": "Management and reporting",
+          "text": "Monthly reports written for you, sales and stock forecast, alerts when a number drifts. You decide earlier, on reliable figures."
         },
         {
-          "title": "Automation across your software",
-          "text": "Repetitive tasks run on their own between your CRM, your ERP and your inbox. AI handles the steps that need judgement."
+          "title": "Your tech teams",
+          "text": "Seasoned engineers join your team to ship faster, or an advisor helps you build AI into your product."
         }
       ],
       "cta": "Tell us about a process",
-      "secondary": "See our AI expertise"
+      "secondary": "See AI for your operations"
     },
     "trusted": {
       "title": "Clients and partners who trust us"
     },
     "services": {
-      "title": "Expertise",
-      "intro": "{areas} areas, one partner. Every project has a Qartmina project lead and is delivered by specialists we select and check ourselves."
+      "title": "Three ways to put AI to work",
+      "intro": "{areas} offers, one partner. Every project is led by a senior Qartmina project lead and delivered by seasoned engineers we select and check ourselves."
     },
     "why": {
       "title": "Why work with us",
@@ -142,7 +152,7 @@
     },
     "team": {
       "title": "The team",
-      "intro": "A small senior team that works alongside yours, not around it.",
+      "intro": "A small senior team based in Nice, working with yours, not next to it.",
       "founder": {
         "name": "Fares",
         "role": "Founder and Principal Engineer",
@@ -168,38 +178,42 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "question": "How long does it take to build an agent?",
-          "answer": "A working first version usually takes less than a month. Getting it into production with your data, permissions and approvals takes around three months. From there it grows with your needs."
+          "question": "How long before we see results?",
+          "answer": "One month to put a first use case into production, in your tools. We start with the one that pays off most, then add the next ones one at a time."
         },
         {
-          "question": "What return can we expect, and how do you measure it?",
-          "answer": "Before we build anything, we measure how long the task takes today and how often it runs. After launch we measure again. The return is the time saved multiplied by the cost of that time, minus what the agent costs to run. If the numbers do not justify an agent, we tell you."
+          "question": "How much does it cost?",
+          "answer": "The price depends on the scope, and we agree on it with you before starting. Because our engineers are mainly based in North Africa, you get the level of a senior European engineer for a fraction of the cost."
         },
         {
-          "question": "Do you build custom agents or use ready-made ones?",
-          "answer": "Both. Where a ready-made tool does the job, we set it up and connect it. Where your process is specific, we build a custom agent around it. The choice depends on what gets you the result fastest and cheapest."
+          "question": "Who does the work?",
+          "answer": "A senior Qartmina project lead runs your project and answers for it. The work is done by seasoned engineers, mainly from North Africa and French-speaking, whom we select and check. Every deliverable is reviewed before handover."
         },
         {
-          "question": "Where is our data processed, and is it used for training?",
-          "answer": "We use enterprise AI plans whose terms exclude training on your data. Where your rules require it, we host models and data on infrastructure you control. Processing follows the GDPR, and we document where every piece of data goes."
+          "question": "What return on investment can we expect?",
+          "answer": "Before we start, we measure how much time and money the task costs today. After going live, we measure again. If the numbers do not justify the project, we tell you before you spend."
         },
         {
-          "question": "What happens after launch?",
-          "answer": "We monitor the agent, fix what breaks and improve it as your process changes. You can keep us on a support plan or take it over fully."
+          "question": "Where is our data processed, and is it used to train models?",
+          "answer": "We use enterprise AI offers whose terms exclude training on your data. If your rules require it, we host models and data on infrastructure you control. Processing complies with GDPR and we document where every piece of data goes."
         },
         {
-          "question": "Can our team maintain the agents ourselves?",
-          "answer": "Yes. We work alongside your team, document everything and train the people who will own the agent, so you are never locked in."
+          "question": "Do you work in Nice and the PACA region?",
+          "answer": "Yes. We are based in Nice and work with SMEs, agencies and startups across the PACA region, on site when it helps. We also work remotely anywhere in France."
+        },
+        {
+          "question": "Can our team take over?",
+          "answer": "Yes. We work with your team, document everything and train the people who will run the solution. You are never locked in."
         }
       ]
     },
     "contact": {
-      "title": "Let's find your first agent",
-      "text": "Tell us which task takes too much of your team's time. We reply within two working days.",
+      "title": "Let's find your first profitable use case",
+      "text": "Tell us what takes your team too much time. We reply within two business days.",
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Location",
-      "location": "Based in France. Working with SMEs across France.",
+      "location": "Based in Nice. Working with SMEs across the PACA region and France.",
       "tabs": {
         "call": "Schedule a free 30-min call",
         "message": "Contact us"
@@ -208,20 +222,20 @@
     },
     "figures": [
       {
-        "value": "< 1 month",
-        "label": "to a working first version"
-      },
-      {
-        "value": "3 months",
-        "label": "to production"
+        "value": "1 month",
+        "label": "to put a first use case into production"
       },
       {
         "value": "{services}",
-        "label": "areas of expertise, one project lead"
+        "label": "services, one project lead"
       },
       {
         "value": "100%",
         "label": "of deliverables checked before handover"
+      },
+      {
+        "value": "OpenAI",
+        "label": "Select Partner, trained and supported by OpenAI"
       }
     ],
     "partner": {
@@ -255,9 +269,9 @@
     "workflow": {
       "robotAlt": "Qartmina's robot, the agent at the centre of your workflows",
       "tabs": {
-        "integration": "Integration",
-        "agent": "AI agent",
-        "automation": "Automation"
+        "integration": "Your tools connected",
+        "agent": "The work done",
+        "automation": "Runs on its own"
       },
       "captions": {
         "integration": "Connected to the tools you already use.",
@@ -279,6 +293,61 @@
       "action": "Action",
       "actionText": "Booked in the ERP",
       "loop": "Continuous loop"
+    },
+    "method": {
+      "title": "Your first use case in production within a month",
+      "intro": "Not a demo that gathers dust: a first use case running in your business, in your tools, after four weeks. The next ones follow, one at a time.",
+      "steps": [
+        {
+          "when": "Week 1",
+          "title": "Understand and choose",
+          "text": "We look at your tasks with your teams, put a figure on each idea and pick with you the use case that pays off most."
+        },
+        {
+          "when": "Week 2",
+          "title": "Design the solution",
+          "text": "We map the new way of working: what AI takes on, what a person approves, which tools to connect."
+        },
+        {
+          "when": "Weeks 3 and 4",
+          "title": "Build and go live",
+          "text": "Our engineers build, test on your real data and put it into production in your tools. A running system, not a mock-up."
+        },
+        {
+          "when": "Then",
+          "title": "Train and extend",
+          "text": "Your team takes over, we measure the gain, then we add the next use cases."
+        }
+      ]
+    },
+    "model": {
+      "title": "Seasoned engineers, for a fraction of the cost",
+      "intro": "Our senior project leads run every engagement. The work is done by experienced engineers, mainly from North Africa: the level of a senior European engineer, at a far more accessible cost.",
+      "points": [
+        {
+          "title": "A senior project lead who answers for everything",
+          "text": "One point of contact from the first call to production. They scope, plan, check and report back to you."
+        },
+        {
+          "title": "Experienced, hand-picked engineers",
+          "text": "We pick each engineer for your project based on real work, and we only keep those whose work holds up."
+        },
+        {
+          "title": "French-speaking, in your time zone",
+          "text": "Our engineers speak French and English and work your hours, give or take an hour. Communication stays simple and fast."
+        },
+        {
+          "title": "Checked before it reaches you",
+          "text": "Every deliverable is reviewed and tested by a Qartmina project lead before handover. You pay for work that works."
+        }
+      ],
+      "formulasTitle": "Engineers on demand",
+      "formulasIntro": "Need more hands or specific expertise in your tech team? Three options, depending on your need."
+    },
+    "caseStudies": {
+      "title": "Our work",
+      "intro": "For Docutrad, a CRM software company, our engineers put the infrastructure back on solid ground, then helped take a new product into production in one week.",
+      "all": "See all our work"
     }
   },
   "contactForm": {
@@ -299,9 +368,9 @@
   "services": {
     "overview": {
       "title": "Expertise",
-      "intro": "Everything a business needs to put data and AI to work, build its software and look its best online. One project lead, specialists we cherry-pick from our network, and quality control before anything reaches you.",
-      "metaTitle": "Our expertise: data and AI, software, brand",
-      "metaDescription": "Data and AI, custom software and SaaS, brand and online presence from one digital partner, with one project lead and vetted specialists on every project."
+      "intro": "Three offers to put AI to work in your business: your operations, your marketing and launches, and engineers to reinforce your team. A senior project lead runs every project, and a first use case goes into production within a month.",
+      "metaTitle": "Our AI offers for SMEs: operations, marketing, engineers",
+      "metaDescription": "AI for your operations, AI for your marketing and launches, engineers on demand: an AI studio in Nice, one senior project lead, a first use case in production within a month."
     },
     "breadcrumb": "Breadcrumb",
     "categoryServicesTitle": "What we offer",
@@ -342,80 +411,80 @@
     "platformsTitle": "Platforms we set up and support"
   },
   "serviceCategories": {
-    "data-ai": {
-      "title": "Data & AI",
-      "metaTitle": "Data and AI for SMEs: automation, agents, MCP",
-      "summary": "Automation, generative AI, document extraction, MCP, prediction and vision: AI applied to your processes, with a person who approves.",
-      "intro": "AI is worth it when it takes real work off your team. We start from your processes and your data, pick the simplest technique that works and plug it into your tools. Your team learns to run it, and a person keeps control of what matters."
+    "ai-operations": {
+      "title": "AI for your operations",
+      "metaTitle": "AI for SMEs: invoices, documents, CRM and reports",
+      "summary": "Invoices, quotes, documents and e-mails handled on their own, reports written, checks done: your teams win back hours every week.",
+      "intro": "AI is worth it when it takes real work off your teams. We start from the tasks that come back every week, find where AI pays off most and put the first one into production within a month, in the tools you already use. A person on your team always keeps control of what matters."
     },
-    "software-development": {
-      "title": "Software development",
-      "metaTitle": "Custom software and SaaS development for businesses",
-      "summary": "Custom software and SaaS platforms built around how your company actually works.",
-      "intro": "Off-the-shelf software rarely fits the way your business runs, and spreadsheets stop scaling long before anyone notices. We build the internal tools your teams use every day and the SaaS products you sell to your clients. Every project has one Qartmina project lead who answers for it, from the first workshop to handover."
+    "ai-marketing": {
+      "title": "AI for your marketing and launches",
+      "metaTitle": "AI for SME marketing: content, visuals and videos",
+      "summary": "Content plans, visuals, videos and launch pages produced by AI in your brand's style: launch faster, more often.",
+      "intro": "Launching a product or keeping up a publishing rhythm takes weeks of work. We connect AI tools to your brand guidelines, your tone and your offers to produce your content, 2D and 3D visuals, videos and launch pages in days. Your team reviews and approves everything before it goes out."
     },
-    "brand": {
-      "title": "Brand and online presence",
-      "metaTitle": "Branding, design and social media services",
-      "summary": "Logos, design, easy-to-use screens and social media that keep your name in front of clients.",
-      "intro": "People judge a company by what they see before they ever speak to it. We design your identity, the material you publish and the screens your customers use, then help you stay visible on social media. Everything follows one brand, so your company looks the same on a sign, a slide and a phone."
+    "engineers": {
+      "title": "Engineers on demand",
+      "metaTitle": "Engineers on demand: tech reinforcement and AI advice",
+      "summary": "Seasoned engineers join your team to ship faster, for a fraction of the cost of a senior European engineer.",
+      "intro": "Your tech team is short of hands, or of the specific expertise to ship a feature, move to the cloud or add AI to your product. Our seasoned engineers, mainly from North Africa and French-speaking, join it for a few days or several months, led by a senior Qartmina project lead who checks every delivery."
     }
   },
   "servicePages": {
     "ai-automation": {
-      "title": "AI automation",
-      "metaTitle": "AI process automation for small and mid-sized businesses",
-      "summary": "Less data entry, sorting and chasing: AI takes on your team's repetitive tasks, and a person approves what matters.",
-      "intro": "We automate the processes that come back every day and cost the most in time and errors. AI reads, sorts and prepares the work inside the tools you already use, and your team keeps the decisions.",
+      "title": "Repetitive tasks that run themselves",
+      "metaTitle": "AI task automation for SMEs in Nice",
+      "summary": "Your software passes the work along by itself, AI handles the steps that need judgement, a person approves what matters.",
+      "intro": "Your teams get back the hours spent copying, sorting and chasing. The tasks that come back every day between your CRM, your business software and your e-mail run on their own, and AI handles the steps that call for reading, understanding or choosing. A person stays in charge of the decisions that matter.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of tasks AI takes on, while your team keeps the decisions.",
+        "intro": "Concrete examples of tasks that run on their own, while your team stays in charge of the decisions.",
         "items": [
           {
-            "title": "Orders by email",
-            "text": "Purchase orders that land in your inbox are read and entered into your ERP. Your team only handles the unusual ones."
+            "title": "Orders entered for you",
+            "text": "Purchase orders received by e-mail are read and entered in your business software. Your team only handles the unusual cases."
           },
           {
-            "title": "Supplier invoices",
-            "text": "Each invoice is read, checked and matched with its purchase order. Any mismatch is flagged to you before payment."
+            "title": "Invoices checked before payment",
+            "text": "Each invoice is checked and matched to its purchase order. Gaps are flagged before you pay, not after."
           },
           {
-            "title": "Customer requests",
-            "text": "Incoming emails and forms are sorted by topic and urgency, then passed to the right person with a draft reply."
+            "title": "Customer requests sorted",
+            "text": "Incoming e-mails and forms are sorted by topic and urgency, then passed to the right person with a draft reply. Your customers wait less."
           },
           {
-            "title": "Quotes and estimates",
-            "text": "A first estimate is prepared from the request and your price lists. Your expert reviews and adjusts it before it goes out."
+            "title": "Quotes ready sooner",
+            "text": "A first estimate is prepared from the request and your price lists. Your expert reviews and adjusts it, and the quote goes out sooner."
           },
           {
-            "title": "Reports and meeting notes",
-            "text": "The weekly sales report or the meeting notes are written from your data, ready for review."
+            "title": "Regular reports and checks",
+            "text": "The weekly sales update or the month-end check is prepared from your data, ready to review."
           },
           {
-            "title": "Reminders and follow-up",
-            "text": "Missing documents, unanswered quotes, late invoices: reminders go out at the right time, without anyone having to think about them."
+            "title": "Follow-ups at the right time",
+            "text": "Missing documents, unanswered quotes, late invoices: reminders go out at the right time, without anyone having to think about it."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from the first assessment to everyday use by your team.",
+        "intro": "Four steps, from choosing the first task to everyday use by your teams.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "We review your processes with your team, choose which tasks to automate first and agree on the gain we are aiming for."
+            "title": "Pick the task that pays off most",
+            "text": "We review your processes with your teams, choose the task to automate first and agree on the expected gain: hours saved, errors avoided."
           },
           {
-            "title": "Process redesign",
-            "text": "Together with your team, we redraw how the work flows: what AI does on its own, and what a person approves before anything happens."
+            "title": "Redraw the workflow",
+            "text": "With your teams, we describe the new flow: what runs on its own, what AI handles, and what a person approves before anything happens."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "We test on your real data first and measure how reliable it is. When the numbers hold up, we roll it out in the tools you already use."
+            "title": "Live in a month",
+            "text": "We test on your real data and measure accuracy, then put the first automation live in your tools within a month. The next ones follow, one at a time."
           },
           {
-            "title": "Training and governance",
-            "text": "We train your team, track cost and quality, and set the rules for use: GDPR, the EU AI Act, human approval."
+            "title": "Train and set the rules",
+            "text": "We train your teams, track costs and quality, and set the rules: GDPR, access rights, human approval on sensitive steps."
           }
         ]
       },
@@ -423,115 +492,115 @@
         "title": "Questions about AI automation",
         "items": [
           {
-            "question": "Where should we start?",
-            "answer": "With a task that comes back often, takes time and causes errors. On a first 30-minute call, we look at your processes with you and tell you honestly which ones are worth automating."
+            "question": "Where do we start?",
+            "answer": "With a task that comes back often, takes time and causes errors. On a free 30-minute first call, we look at your processes with you and tell you honestly which ones are worth automating."
           },
           {
             "question": "Do you always need AI to automate?",
-            "answer": "No, and often you do not. When a simple rule is enough, it is more reliable and cheaper. We keep AI for the steps where something varied has to be read, understood or classified."
+            "answer": "No, and often you don't. When a simple rule will do, it is more reliable and cheaper. We keep AI for the steps that need to read, understand or classify content that varies."
           },
           {
-            "question": "Does it work with the tools we already use?",
-            "answer": "Yes. We connect the automation to your CRM, your ERP, your inbox or your spreadsheets. You do not need to change software."
-          },
-          {
-            "question": "How do you prevent AI mistakes?",
-            "answer": "We test on your data before launch, set a confidence threshold below which a person checks the result, and keep human approval on sensitive steps."
+            "question": "What if AI gets it wrong?",
+            "answer": "We test on your data before going live. When AI is not sure enough, the case goes to a person, and sensitive steps always keep a human approval. You keep your current software, nothing is replaced."
           },
           {
             "question": "Where does our data go?",
-            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. Before launch, we check where every piece of information travels."
+            "answer": "We favour hosting in Europe and business AI plans that do not train on your data. Before going live, we check where every piece of information travels."
           },
           {
-            "question": "How do we measure the return on investment?",
-            "answer": "We measure time spent, errors and volumes before we start, then the same figures after launch. The result is a number, not a feeling."
+            "question": "How much does it cost, and how do we measure the gain?",
+            "answer": "The price depends on scope: number of tasks, tools to connect, volumes. We agree it with you before we start. For the gain, we measure time spent, errors and volumes before, then the same figures after going live."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "Seasoned engineers, mainly based in North Africa, led by a senior project lead who stays your contact from the first call to go-live. You get experienced engineers for a fraction of the cost of a senior European engineer."
           }
         ]
       }
     },
     "generative-ai": {
-      "title": "Generative AI",
-      "metaTitle": "Generative AI for SMEs: assistants and AI agents",
-      "summary": "AI assistants and agents connected to your documents and tools: your team finds, writes and analyses faster, and still makes the call.",
-      "intro": "We build AI assistants and agents that work with your documents, your data and your software. Every use starts from a real need in your team, and a person approves anything that commits the business.",
+      "title": "AI assistants for your teams",
+      "metaTitle": "AI assistants and agents for SMEs, on your documents",
+      "summary": "AI assistants that answer from your own documents, with the source, and draft reports and replies for your teams.",
+      "intro": "Your teams find the right information in seconds instead of digging through folders, and your customers get answers sooner. Our AI assistants and agents work with your documents, your data and your software, and they cite their source. A person approves anything that commits the company.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of what generative AI does inside a business, with your team in charge.",
+        "intro": "Concrete examples of what AI does for your teams and your customers, with you in control.",
         "items": [
           {
-            "title": "Ask your documents",
-            "text": "Your team asks a question in plain words and gets an answer drawn from your procedures, contracts or product sheets, with the source shown. This is called RAG: the AI searches your documents first, then answers."
+            "title": "Answers from your documents",
+            "text": "Your teams ask a question in their own words and get an answer drawn from your procedures, contracts or product sheets, with the source to check. AI searches your documents first, then answers."
+          },
+          {
+            "title": "An assistant for your customers",
+            "text": "Your customers get a precise answer from your documentation, at any hour. Tricky requests go to a person on your team."
+          },
+          {
+            "title": "Reports and replies drafted",
+            "text": "Meeting notes, tender responses, product sheets: a first draft in your company's style, built from your content, that your team reviews and corrects."
           },
           {
             "title": "A team of AI agents",
-            "text": "One agent reads the file, another checks the documents, a third writes the summary and a fourth analyses the figures. They hand the work to each other, and someone on your team approves it before anything goes out."
+            "text": "One agent reads the file, a second checks the documents, a third writes the summary, a fourth analyses the figures. They hand the work along one shared process, and a person approves before anything is sent."
           },
           {
-            "title": "File and contract review",
-            "text": "Contracts, tenders, due diligence files: AI pulls out the key points and flags what needs a careful read. We have built an AI agent for due diligence work, for example."
+            "title": "Files reviewed faster",
+            "text": "Contracts, tenders, pre-acquisition audits (due diligence): AI picks out the key points and flags what deserves a careful read. For example, we designed an AI agent dedicated to due diligence."
           },
           {
-            "title": "A copilot for your team",
-            "text": "In support, sales or accounting, an assistant inside the tool people already use summarises conversations, drafts replies and suggests the next step."
-          },
-          {
-            "title": "Drafts and summaries",
-            "text": "Meeting notes, tender responses, product sheets: a first draft in your tone, written from your own material, which your team reviews and corrects."
-          },
-          {
-            "title": "AI in your product",
-            "text": "Do you sell software? We add generative AI features to it, such as search in plain language or an agent that handles documents. For a CRM startup, we built an agent like this in one week."
+            "title": "A copilot in your tools",
+            "text": "In support, sales or accounting, an assistant built into the everyday tool summarises conversations, prepares replies and suggests the next step."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from choosing the first uses to everyday work by your team.",
+        "intro": "Four steps, from choosing the first assistant to everyday use.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "We start from your tasks and your documents, not from the technology. Together we pick the uses where generative AI brings a real gain, and set aside those where something simpler will do."
+            "title": "Pick the use that pays off most",
+            "text": "We start from your tasks and your documents, not from the technology. Together, we pick the use where AI saves the most time, and rule out those where a simpler solution will do."
           },
           {
-            "title": "Process redesign",
-            "text": "We define the role of each assistant or agent, which documents and tools it can reach, and the steps where a person approves before anything happens."
+            "title": "Define each assistant's role",
+            "text": "We set what each assistant or agent does, which documents and tools it can access, and the steps where a person approves before anything happens."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "We begin with a pilot on your real documents and measure the quality of the answers. When it holds up, we connect it to your tools and open it to the whole team."
+            "title": "Live in a month",
+            "text": "We test the assistant on your real documents and measure the quality of its answers. The first use is in production within a month, in your tools, then we open it to the whole team and move on to the next one."
           },
           {
-            "title": "Training and governance",
-            "text": "We train your team, track quality and cost, and set the rules: which data is allowed, who can access what, GDPR, the EU AI Act."
+            "title": "Train and set the rules",
+            "text": "We train your teams, track quality and costs, and set the rules: allowed documents, access rights, GDPR, human approval."
           }
         ]
       },
       "faq": {
-        "title": "Questions about generative AI",
+        "title": "Questions about AI assistants",
         "items": [
           {
-            "question": "Where should we start?",
-            "answer": "With one specific task where your team spends a lot of time searching, reading or writing. On a free 30-minute first call, we talk it through and tell you honestly whether generative AI is the right answer."
-          },
-          {
             "question": "Is our data used to train the models?",
-            "answer": "Not with the plans we use. We choose enterprise AI plans that do not train on your data, and we favour hosting in Europe. Each assistant only reaches the documents it needs."
+            "answer": "Not with the plans we choose. We pick business AI plans that do not train on your data and favour hosting in Europe. Each assistant only accesses the documents it needs."
           },
           {
-            "question": "Can the AI make things up?",
-            "answer": "Yes, the risk is real. We reduce it by making the assistant work from your documents and cite its sources, by testing it on questions whose answers we already know, and by keeping human approval on anything that leaves the company."
+            "question": "Can AI make up answers?",
+            "answer": "Yes, the risk exists. We reduce it by requiring the assistant to rely on your documents and cite its sources, by testing it on questions with known answers, and by keeping human approval on anything that goes outside the company."
           },
           {
-            "question": "Can it work with our tools or our own software?",
-            "answer": "Yes. We connect AI to your CRM, your inbox, your shared documents or your own product. Where it helps, we use MCP, a standard that gives an AI model controlled access to your tools."
+            "question": "Can it connect to our tools?",
+            "answer": "Yes. We connect the assistant to your CRM, your e-mail or your document spaces, with controlled access: it only sees and does what you have allowed."
           },
           {
             "question": "How long does it take?",
-            "answer": "It depends on the scope. For a well-defined task, a first prototype takes weeks rather than months. Connecting it to your tools and rolling it out to the whole team takes longer."
+            "answer": "The first use is in production within a month. Opening it to other teams and adding the next uses come after, step by step."
           },
           {
-            "question": "What drives the cost?",
-            "answer": "The number of uses, the volume and state of your documents, the tools to connect and how much checking you need. Model usage comes on top: we estimate it before we start and track it afterwards."
+            "question": "How much does it cost?",
+            "answer": "The price depends on the number of uses, the volume and state of your documents, and the tools to connect. We agree it with you before we start. The cost of running the AI models comes on top: we estimate it up front, then track it."
+          },
+          {
+            "question": "Why Qartmina?",
+            "answer": "We are an OpenAI Select Partner. A senior project lead runs a team of seasoned engineers, mainly based in North Africa: you get an experienced team for a fraction of the cost of a senior European engineer."
           }
         ]
       },
@@ -673,436 +742,436 @@
       }
     },
     "document-extraction": {
-      "title": "Document extraction",
-      "metaTitle": "AI document extraction for small and mid-sized businesses",
-      "summary": "No more retyping invoices, contracts and forms: AI reads each document, pulls out the data for your tools, and a person checks anything uncertain.",
-      "intro": "We take the reading off your team's desk: OCR (software that turns a scan or a photo into text) and AI models pull out the data you need and send it to your tools. Before we build anything, we measure how reliable it is on your own documents.",
+      "title": "No more re-typing documents",
+      "metaTitle": "Automated invoice and document processing for SMEs",
+      "summary": "Invoices, quotes, purchase orders and contracts are read, checked and filed in your tools, with no one typing them in again.",
+      "intro": "Your teams stop copying documents by hand and get time back for work that matters. Invoices, quotes, purchase orders, contracts, forms, even scanned or photographed: AI reads them, checks the details and files them in the right place in your tools. Doubtful cases go to a person, and we measure accuracy on your own documents before anything goes live.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of documents AI reads for you, from a printed invoice to a form filled in by hand.",
+        "intro": "Everyday documents, read for you, from a clean PDF to a delivery note signed in pen.",
         "items": [
           {
-            "title": "Supplier invoices",
-            "text": "Supplier name, amounts before and after VAT, due date: each invoice is read and entered into your accounting software, ready for approval."
+            "title": "Invoices entered for you",
+            "text": "Supplier, amounts before and after tax, VAT, due date: each invoice is read and entered in your accounting software, ready to approve. Duplicates are caught before payment."
           },
           {
-            "title": "Expense receipts",
-            "text": "Staff take a photo of their receipt. Amount, date and category are filled in for them, and unreadable receipts are set aside for a person."
+            "title": "Quotes and purchase orders",
+            "text": "Incoming quotes and orders are read, matched against each other and entered in your business software. A price or quantity gap is flagged straight away."
           },
           {
-            "title": "Contracts and amendments",
-            "text": "For each contract, we record who signed, for how much and until when. Notice deadlines can then trigger a reminder."
+            "title": "Files sorted as they arrive",
+            "text": "Documents arriving by e-mail, in your CRM (your customer database) or in a shared folder are recognised, classified and filed in the right place. No more attachments lost at the bottom of an inbox."
           },
           {
-            "title": "Customer files",
-            "text": "Sign-up forms, financing requests, insurance claims: every field is read, and a missing document is spotted before the file moves on."
+            "title": "Contracts and deadlines tracked",
+            "text": "For each contract, you know who commits, for how much and until when. Notice dates trigger a reminder before it is too late."
           },
           {
-            "title": "Handwritten forms",
-            "text": "Signed delivery notes, job sheets, forms filled in by pen and photographed on a phone: AI reads them, and a person takes over whatever stays uncertain."
+            "title": "Forms, even scanned",
+            "text": "Customer files, funding applications, forms filled in by hand then photographed: every field is read, and a missing document is caught before the file moves on."
           },
           {
-            "title": "Supporting documents",
-            "text": "Tax notices, proof of address, company registration extracts: the details are read and compared with each other. Any mismatch goes to a person to check."
+            "title": "Check without rereading everything",
+            "text": "Proofs of address, company registration extracts, tax notices: the details are compared with each other. AI flags what looks wrong, your team decides what happens next."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from a sample of your documents to automatic data entry every day.",
+        "intro": "Four steps, from a sample of your documents to automatic filing every day.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "With your team, we list the documents you receive, how many there are and how long they take to type in, then pick the ones to tackle first."
+            "title": "Target the costliest documents",
+            "text": "With your teams, we list the documents you receive, their volumes and the time spent typing them in, then we pick the ones to handle first."
           },
           {
-            "title": "Process redesign",
-            "text": "Together we decide what goes straight into your tools and what a person sees first. Every value read comes with a confidence score: below the threshold we set, someone checks it."
+            "title": "Decide who approves what",
+            "text": "Together we set what goes straight into your tools and what goes to a person first. When AI is not sure enough about a reading, someone checks."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "The pilot runs on a sample of your real documents, so you know the accuracy before going further. Then we connect the extraction to your ERP, your CRM or your accounting software."
+            "title": "Live in a month",
+            "text": "We first test on a sample of your real documents: you know the accuracy before going further. The first document type is handled in production within a month, then we add the next ones."
           },
           {
-            "title": "Training and governance",
-            "text": "We train the people who review uncertain cases, track accuracy over time and adjust when your documents change layout. GDPR and the EU AI Act are covered from the start."
+            "title": "Train and monitor over time",
+            "text": "We train the people who approve doubtful cases, track accuracy and adjust when your suppliers change the layout of their documents. GDPR is covered from day one."
           }
         ]
       },
       "faq": {
-        "title": "Questions about document extraction",
+        "title": "Questions about document processing",
         "items": [
           {
-            "question": "Where should we start?",
-            "answer": "With the document your team retypes the most. On a first 30-minute call, we look at your volumes with you and tell you honestly whether automatic extraction is worth it."
+            "question": "Where do we start?",
+            "answer": "With the document type your teams re-type the most. On a free 30-minute first call, we look at your volumes with you and tell you honestly whether automatic processing is worth it."
           },
           {
-            "question": "How do we know how reliable it will be?",
-            "answer": "Before building anything, we run a sample of your real documents through the extraction and compare each value with the right answer. You see what to expect, one document type at a time, before deciding what comes next."
+            "question": "How do we know the accuracy before we commit?",
+            "answer": "Before building anything, we run a sample of your real documents and compare every value read with the right answer. You know what to expect, document type by document type, before deciding what comes next."
           },
           {
-            "question": "Can AI read handwriting?",
-            "answer": "Often, yes. OCR alone struggles with handwriting, while recent AI models do much better, especially on a clear photo. Results vary from one document to the next, which is why we test on yours and a person reviews every uncertain reading."
+            "question": "Can AI read a scan or handwriting?",
+            "answer": "Often, yes. Recent AI models read a scan or a sharp photo well, and handle handwriting better and better. Results vary from one document to another: that is why we test on yours, and a person reviews every uncertain reading."
           },
           {
-            "question": "What drives the cost and the timeline?",
-            "answer": "The number of document types, how hard they are to read, your volumes and the tools to connect. A printed invoice costs less to process than a handwritten form. A first version can come quickly: for a start-up that makes a CRM, we built a working document agent from scratch in one week."
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of document types, how hard they are to read, the volumes and the tools to connect. We agree the price with you before we start. A first version can move fast: for a start-up that publishes a CRM, we built a document-reading agent in one week."
           },
           {
-            "question": "Does it work with the tools we already use?",
-            "answer": "Yes. We send the data where your team already works: accounting software, ERP, CRM or a shared spreadsheet. You keep the software you have."
+            "question": "Do we have to change software?",
+            "answer": "No. We send the data where your teams already work: accounting software, business software, CRM or a simple shared spreadsheet. You keep your tools."
           },
           {
             "question": "Where do our documents go?",
-            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. For sensitive documents such as contracts or ID, we choose the model and the hosting accordingly, and agree with you how long files are kept."
+            "answer": "We favour hosting in Europe and business AI plans that do not train on your data. For sensitive documents, such as contracts or ID papers, we choose the model and hosting to match, and agree with you how long data is kept."
           }
         ]
       }
     },
     "mcp": {
-      "title": "Model Context Protocol (MCP)",
-      "metaTitle": "Model Context Protocol (MCP) for SMEs",
-      "summary": "Connect your CRM, ERP and documents to AI with controlled access, so it answers from your real data instead of guessing.",
-      "intro": "MCP is an open standard that works like a common plug between an AI assistant and your software: CRM, ERP, databases, documents. We build these connections so AI works from your real data, with only the rights you choose to give it.",
+      "title": "AI plugged into your software",
+      "metaTitle": "Connect AI to your CRM, ERP and files for SMEs",
+      "summary": "No more copy-pasting: AI works directly in your CRM, ERP and files, with only the access you choose to give it.",
+      "intro": "Your team gets a reliable answer in seconds, without digging through three tools or pasting data into a chat window. We plug AI into your software, CRM, ERP, files, business tools, so it answers from your real data. It only sees and does what you allow.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of what AI can do once it is connected to your tools, within the limits you set.",
+        "intro": "Everyday tasks AI takes off your plate once it is connected to your tools, within the limits you set.",
         "items": [
           {
-            "title": "A customer's history",
-            "text": "A salesperson asks where things stand with a customer. The assistant checks the CRM and sums up the latest emails, quotes and orders in a few lines."
+            "title": "Prepare a client meeting in a minute",
+            "text": "A salesperson asks where things stand with a customer. AI checks the CRM and sums up the latest emails, quotes and orders in a few lines."
           },
           {
-            "title": "Stock and lead times",
-            "text": "The assistant reads your ERP to answer questions about stock levels, delivery times or an order's status. It looks, it does not change anything."
+            "title": "Answer on stock or lead times",
+            "text": "A customer calls about an order: AI reads your ERP and gives the stock level, delivery time or order status. It looks, it does not change anything."
           },
           {
-            "title": "Searching your documents",
-            "text": "Contracts, procedures, product sheets: AI finds the right passage and shows where it came from. Here MCP works together with RAG, a method that fetches the relevant extracts before the answer is written."
+            "title": "Find the right answer in your documents",
+            "text": "Contracts, procedures, product sheets: AI finds the right passage and shows where it came from. No more asking the one colleague who knows."
           },
           {
-            "title": "Controlled updates",
+            "title": "Update your tools without retyping",
             "text": "Creating a task, filling in a record, drafting an email: AI writes into your tools only where you allow it, and asks for your approval on sensitive actions."
           },
           {
-            "title": "Your in-house tools",
-            "text": "Your internal software or in-house API becomes available to AI through a dedicated MCP server, with no need to rewrite it."
+            "title": "Open your in-house software to AI",
+            "text": "Your internal tool becomes usable by AI through a dedicated connector, without rewriting the software or changing how your team works."
           },
           {
-            "title": "Figures on request",
-            "text": "The managing director asks for this month's revenue by branch. The assistant queries the database in read-only mode and replies with the figures and where they come from."
+            "title": "Your figures, without waiting for a report",
+            "text": "The managing director asks for this month's revenue by branch. AI queries your data in read-only mode and replies with the figures and where they come from."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from choosing which tools to connect to everyday use by your team.",
+        "intro": "A first use case in production within a month, then more tools connected as your priorities dictate.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "We list with you the questions and tasks AI should handle, the tools it needs to read, and the data that must stay out of its reach."
+            "title": "Find the question that saves the most time",
+            "text": "We list with you the questions and tasks that keep coming back, the tools that hold the answers, and the data AI must never reach. Then we pick the priority that pays off the most."
           },
           {
-            "title": "Process redesign",
-            "text": "We write down the business context AI needs: your terms, your rules, who is allowed to see what. For each tool we set read-only, write, or human approval before anything happens."
+            "title": "Decide who can do what",
+            "text": "We write down what AI needs to know about your business: your terms, your rules, who can see what. For each tool we decide: read-only, write, or human approval before anything happens."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "We connect one or two sources first and check the answers on real cases. Each new tool is then added as a separate module, without rebuilding the rest."
+            "title": "A first use case live within a month",
+            "text": "We connect one or two tools first and check the answers on real cases. Once that first use case is live, each new tool is added without rebuilding the rest. Under the hood we use MCP, an open standard that works like a common plug between AI and your software: your connections keep working if you switch AI models."
           },
           {
-            "title": "Training and governance",
-            "text": "We train your team, log every time AI touches your data, and track usage, cost and quality: GDPR, the EU AI Act, access rights reviewed regularly."
+            "title": "Train your team, stay in control",
+            "text": "We train your team, log every time AI touches your data, and track usage, cost and quality. Access rights are reviewed regularly, in line with GDPR."
           }
         ]
       },
       "faq": {
-        "title": "Questions about the Model Context Protocol",
+        "title": "Questions about AI plugged into your software",
         "items": [
           {
-            "question": "Where should we start?",
-            "answer": "With a question your team asks often, whose answer sits in one or two tools. On a first 30-minute call, we look with you at which sources to connect first and which can wait."
+            "question": "Will it work with the software we already use?",
+            "answer": "With most of it, as long as the software gives access to its data, which many CRMs, ERPs and online tools do. Some vendors already offer an AI-ready connector; if not, we build one. Older closed software takes more work: we tell you on the first call."
           },
           {
-            "question": "Will it work with the tools we already use?",
-            "answer": "With most of them, as long as they have an API or a database we can reach. Some vendors already offer an MCP server; if not, we build one. Because MCP is an open standard, your connections keep working if you switch AI models."
-          },
-          {
-            "question": "Can AI change our data?",
-            "answer": "Only if you decide it can. By default we give read-only access. Write access is opened tool by tool, on a clearly defined scope, with human approval for sensitive actions."
+            "question": "Can AI change or delete our data?",
+            "answer": "Only if you decide it can. By default, access is read-only. Write access is opened tool by tool, on a clearly defined scope, with human approval for sensitive actions."
           },
           {
             "question": "Where does our data go?",
-            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. AI only sees what the MCP server passes to it, and every access is logged."
+            "answer": "We favour hosting in Europe and enterprise AI plans that do not train on your data. AI only sees what the connector passes to it, and every access is logged. We check the GDPR side with you before we start."
           },
           {
-            "question": "Will AI make fewer mistakes?",
-            "answer": "Yes, fewer. It answers from your data instead of guessing. The risk does not go away, though: we test on real cases, ask AI to show its sources, and keep a human check wherever a mistake would be costly."
+            "question": "How much does it cost?",
+            "answer": "It depends on how many tools need connecting and how easy their data is to reach. Scope and price are agreed with you before we start, with no surprises along the way."
           },
           {
-            "question": "What drives the cost and the timeline?",
-            "answer": "Mostly the number of tools to connect and how easy they are to reach. A tool with a documented API connects quickly; older software without one takes more work. We follow the protocol closely, so we can tell you early what will be simple and what will not."
+            "question": "Who does the work?",
+            "answer": "Seasoned engineers, led by a senior project lead who stays your contact from the first call to go-live. This model gives you senior-level expertise for a fraction of the cost of a senior engineer in Europe. Qartmina is an OpenAI Select Partner."
+          },
+          {
+            "question": "What if AI gets it wrong?",
+            "answer": "It gets things wrong less often, because it answers from your data instead of guessing, but the risk does not disappear. We test on your real cases, AI shows its sources, and a person signs off wherever a mistake would be costly. If the answers are not reliable enough during the test, we do not go live."
           }
         ]
       }
     },
     "predictive-systems": {
-      "title": "Predictive systems",
-      "metaTitle": "Predictive systems and custom forecasting for SMEs",
-      "summary": "Forecast sales, stock or cash flow from your own history, with predictions that come with their reasons and land in the tools you already use.",
-      "intro": "We build models that learn from your history to anticipate demand, customers about to leave, stock needs or tight cash weeks. Every forecast reaches your tools with the reasons behind it, and we tell you plainly when your data is not enough yet.",
+      "title": "Forecast sales, stock and needs",
+      "metaTitle": "AI sales and stock forecasting for SMEs",
+      "summary": "See sales, stock-outs, tight cash weeks and customers about to leave coming, from your own data, so you can decide earlier.",
+      "intro": "Decide before you get caught out. Using your own history, AI anticipates your sales, stock needs, tight cash weeks or customers about to leave. Every forecast reaches your tools with the reasons behind it, and we tell you plainly when your data is not enough yet.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of decisions your data can inform ahead of time.",
+        "intro": "Everyday decisions your own data can inform ahead of time.",
         "items": [
           {
-            "title": "Sales forecasts",
-            "text": "Sales for the coming weeks are estimated by product or by branch, taking seasons and promotions into account. Purchasing and staff rotas start from a number."
+            "title": "Buy and plan from a number",
+            "text": "Sales for the coming weeks are estimated by product or by branch, taking seasons and promotions into account. Purchasing and staff rotas start from an estimate, not a hunch."
           },
           {
-            "title": "Right stock levels",
-            "text": "The model sees stock-outs and overstock coming. It suggests order quantities. Your buyer decides."
+            "title": "Fewer stock-outs, less overstock",
+            "text": "AI sees stock-outs and overstock coming and suggests order quantities. Your buyer decides."
           },
           {
-            "title": "Customers drifting away",
+            "title": "Keep customers before they leave",
             "text": "Customers whose activity is slowing down are spotted early, along with the signals that triggered the alert. Your sales team knows who to call first."
           },
           {
-            "title": "Cash flow outlook",
-            "text": "Likely incoming payments, the usual late payers, recurring costs: you see the tight weeks before they arrive."
+            "title": "See tight weeks coming",
+            "text": "Likely incoming payments, the usual late payers, recurring costs: you plan for cash dips instead of suffering them."
           },
           {
-            "title": "Predictive maintenance",
-            "text": "Using breakdown history and readings from your machines or vehicles, the model flags which equipment to inspect before it fails."
+            "title": "Avoid the breakdown that stops everything",
+            "text": "Using breakdown history and readings from your machines or vehicles, AI flags which equipment to inspect before it fails."
           },
           {
-            "title": "Customer risk and bad debt",
+            "title": "Fewer unpaid invoices",
             "text": "Each new customer or large order gets a risk score with its reasons. You decide on a deposit or payment terms knowing what is behind it."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from the first question put to your data to forecasts your team uses every week.",
+        "intro": "A first useful forecast in production within a month, then more decisions covered step by step.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "We pick with you the decision a forecast should support, then look at your data: history, volume, quality. Not enough? We say so, and tell you what to start collecting."
+            "title": "Pick the decision that matters most",
+            "text": "We pick with you the decision that costs the most when it goes wrong, then look at your data: history, volume, quality. Not enough? We say so, and tell you what to start collecting."
           },
           {
-            "title": "Process redesign",
-            "text": "We prepare and clean your data, then decide who receives each forecast, when, and what they do with it."
+            "title": "Build the forecast into how you decide",
+            "text": "We gather and clean your data, then decide who receives each forecast, when, and what they do with it."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "The model is first tested on past periods and compared with the way you forecast today. If it does better, its forecasts go into your dashboards and arrive as alerts in your tools."
+            "title": "A first forecast live within a month",
+            "text": "The forecast is first tested on past periods and compared with the way you forecast today. If it does better, it goes into your dashboards and arrives as alerts in your tools. Then we move on to the next decisions."
           },
           {
-            "title": "Training and governance",
-            "text": "We show your team how to read a forecast and its margin of error, and we watch the model as your business changes. When its forecasts start to drift from reality, we retrain it."
+            "title": "Train your team, keep forecasts accurate",
+            "text": "We show your team how to read a forecast and its margin of error. We watch its accuracy as your business changes, and recalibrate it when it drifts from reality."
           }
         ]
       },
       "faq": {
-        "title": "Questions about predictive systems",
+        "title": "Questions about AI forecasting",
         "items": [
-          {
-            "question": "Where should we start?",
-            "answer": "With a decision you make often and that costs you when it goes wrong: a supplier order, seasonal staffing, which customer to call. On a first 30-minute call, we look with you at whether your data can predict it."
-          },
           {
             "question": "Do we have enough data?",
             "answer": "Often more than you think: sales, invoices, CRM, spreadsheets. You usually need a history that covers several cycles of your business, for example at least two full seasons if your activity is seasonal. If you do not have that yet, we tell you before anything starts."
           },
           {
             "question": "How reliable will the forecasts be?",
-            "answer": "A forecast is never a certainty. We deliver it with a range and the factors that explain it, then measure the gap with reality on a regular basis. If the model does not beat your current method, we do not roll it out."
+            "answer": "A forecast is never a certainty. We deliver it with a range and the factors that explain it, then measure the gap with reality on a regular basis. If it does not beat your current method, we do not put it into production."
           },
           {
             "question": "Do we need new software?",
             "answer": "No. Forecasts show up in your ERP, your CRM, your spreadsheets or a simple dashboard, and alerts come by email or in your team chat."
           },
           {
-            "question": "Where does our data go?",
-            "answer": "We favour hosting in Europe and use only the data the model actually needs. When customer data is involved, we check the GDPR side with you before we start."
+            "question": "How much does it cost?",
+            "answer": "It mostly depends on the state of your data, scattered or already clean, and on how many tools should display the forecasts. Scope and price are agreed with you before we start."
           },
           {
-            "question": "What drives the cost and the timeline?",
-            "answer": "Mostly the state of your data: spread across several files, incomplete, or already clean. The number of sources to connect and of tools where forecasts should appear matters too. After the first call, we give you a clear estimate."
+            "question": "Where does our data go?",
+            "answer": "We favour hosting in Europe and use only the data that is needed. When customer data is involved, we check the GDPR side with you before we start."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "Seasoned data engineers, led by a senior project lead who stays your contact from start to finish. You get senior-level expertise for a fraction of the cost of a senior engineer in Europe. We work in Nice and across the PACA region, and remotely anywhere in France."
           }
         ]
       }
     },
     "computer-vision": {
-      "title": "Computer vision",
-      "metaTitle": "Computer vision for small and mid-sized businesses",
-      "summary": "Your photos and video become data: defects spotted, plates and meters read, stock counted. Your team stays in charge of the decisions.",
-      "intro": "Computer vision teaches software to recognise what it sees in a photo or a video. We use it to pull one precise fact out of your images, such as a defect, a reading or a count, which then triggers an action in your tools.",
+      "title": "Automatic visual checks",
+      "metaTitle": "AI visual inspection and quality control for SMEs",
+      "summary": "Defects spotted, labels read, stock counted, photos checked: AI inspects from your photos or cameras, and you make the call.",
+      "intro": "Fewer errors slipping through, fewer hours spent looking at images. AI checks what a person verifies by eye today: a defect, a label, a count, a compliant photo. It works from your photos, a smartphone or your cameras, and your team stays in charge of the decisions.",
       "included": {
         "title": "What we do for you",
-        "intro": "Concrete examples of tasks where images save time, while your team keeps the decisions.",
+        "intro": "Everyday checks AI handles faster, while your team keeps the decisions.",
         "items": [
           {
-            "title": "Quality inspection",
+            "title": "Catch defects before shipping",
             "text": "A camera on the line spots scratches, badly fitted parts or crooked labels. A doubtful part is set aside and photographed for your quality manager."
           },
           {
-            "title": "Meter readings",
+            "title": "Read meters without retyping",
             "text": "Your technicians take a photo of the water, gas or electricity meter. The reading goes straight into your tracking tool, with no copying by hand."
           },
           {
-            "title": "Plates and labels",
-            "text": "Number plates are read at the entrance to a car park or a loading bay. On parcels, the product code and batch number are picked up automatically."
+            "title": "Read plates and labels automatically",
+            "text": "Number plates are read at the entrance to a car park or a loading bay. On parcels, the product code and batch number are picked up with no typing."
           },
           {
-            "title": "Photo checks",
-            "text": "Move-in inspections, site photos, claim photos, ID documents: AI checks that each image is sharp, complete and consistent with the file before a person signs it off."
+            "title": "Complete files the first time",
+            "text": "Move-in inspections, site photos, claim photos, supporting documents: AI checks that each image is sharp, complete and consistent with the file before a person signs it off."
           },
           {
-            "title": "Site safety",
+            "title": "Safer sites",
             "text": "Missing helmet or hi-vis vest, restricted area entered, blocked aisle: an alert goes to the site manager. We set it up with you so it respects GDPR and your staff."
           },
           {
-            "title": "Stock counts",
+            "title": "Shorter stock counts",
             "text": "A photo of a shelf, a pallet or a storage bay is enough to count items and spot gaps. You can run stock checks more often and spend fewer hours on them."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "Four steps, from the first image analysed to everyday use on the ground.",
+        "intro": "A first check in production within a month, on your own images, then more as your priorities dictate.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "We start from a concrete problem, such as a defect that slips through or a stock count that takes too long, and check with you that images can answer it."
+            "title": "Pick the check that costs you most",
+            "text": "We start from a concrete problem, a defect that slips through or a stock count that takes too long, and check with you that an image can answer it. If a sensor or a simple rule would do better, we tell you."
           },
           {
-            "title": "Process redesign",
-            "text": "We decide who gets the alert, what the system does on its own and what a person confirms. We also work with real conditions: lighting, camera angles, the cameras you already have."
+            "title": "Organise the check on the ground",
+            "text": "We decide who gets the alert, what AI does on its own and what a person confirms. We work with real conditions: lighting, camera angles, the cameras you already have."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "A pilot runs on your own photos and video, and we measure what is recognised well and what is not. If the results hold up, we roll it out across your sites and tools."
+            "title": "A first check live within a month",
+            "text": "A first test runs on your own photos and video, and we measure what is recognised well and what is not. If the results hold up, the check goes into production, then extends to other sites or uses."
           },
           {
-            "title": "Training and governance",
-            "text": "We train the people who handle alerts, track accuracy over time and retrain the model when your products or premises change. GDPR and the EU AI Act are covered, especially whenever people appear on camera."
+            "title": "Train your team, keep checks reliable",
+            "text": "We train the people who handle alerts, track reliability over time and teach AI your new products or premises when they change. GDPR is covered from day one, especially whenever people appear on camera."
           }
         ]
       },
       "faq": {
-        "title": "Questions about computer vision",
+        "title": "Questions about automatic visual checks",
         "items": [
           {
-            "question": "Where should we start?",
-            "answer": "With a task where someone looks at images or objects today to make a call: inspecting, counting, reading. On a first 30-minute call, we tell you honestly whether computer vision is the right answer, or whether a sensor or a simple rule would do."
-          },
-          {
             "question": "Do we need new cameras?",
-            "answer": "Not necessarily. A smartphone or the cameras you already have are often enough to start. We check image quality during the pilot and only recommend hardware if the results call for it."
+            "answer": "Not necessarily. A smartphone or the cameras you already have are often enough to start. We check image quality during the test and only recommend hardware if the results call for it."
           },
           {
-            "question": "Do you train a custom model?",
-            "answer": "Not always. To read text or recognise common objects, existing models often do the job. For a defect specific to your products, we train a model on your own images, including examples of faulty parts."
+            "question": "What happens when AI gets it wrong?",
+            "answer": "It will happen, as it does to any person doing inspections. We measure the error rate before launch, set a threshold below which a person checks, and keep tracking results over time. If the test is not conclusive, we do not go live."
           },
           {
-            "question": "What happens when the system gets it wrong?",
-            "answer": "It will happen, as it does to any person doing inspections. We measure the error rate before launch, set a confidence threshold below which a person checks, and keep tracking results over time."
+            "question": "Will AI recognise our own defects?",
+            "answer": "To read text or recognise common objects, existing tools often do the job. For a defect specific to your products, we teach AI to recognise it from your own images, including examples of faulty parts."
           },
           {
-            "question": "What drives the cost and the timeline?",
-            "answer": "Mostly the image work: how many images are needed, and whether they have to be labelled by hand, which means marking what each one shows. Then the number of sites, the hardware and the tools to connect. A narrow use case with photos you already have moves much faster than equipping a production line."
+            "question": "How much does it cost?",
+            "answer": "It mostly depends on how many images need preparing, the number of sites, the hardware and the tools to connect. A narrow use case with photos you already have moves much faster than equipping a production line. Scope and price are agreed with you before we start."
           },
           {
             "question": "What about images that show people?",
             "answer": "We favour hosting in Europe, or processing on site when possible. As soon as a person or a number plate is in the picture, we keep only what is needed, can blur faces and plates, and agree the rules of use with you under GDPR and the EU AI Act."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "Seasoned engineers, led by a senior project lead who stays your contact from the first call to go-live. You get senior-level expertise for a fraction of the cost of a senior engineer in Europe."
           }
         ]
       }
     },
     "ai-sprint": {
-      "title": "AI Sprint",
-      "metaTitle": "AI Sprint for SMEs: AI use cases and a clear roadmap",
-      "summary": "One day with your team to find the tasks where AI saves time, put a cost on them, rank them and leave with a roadmap you can act on.",
-      "intro": "In one day, on site or remote, we go through your operations with the people who run them. You leave with costed AI use cases, ranked by priority, and a clear plan for what comes next.",
+      "title": "Your most profitable AI use cases",
+      "metaTitle": "AI workshop for SMEs: find your most profitable use cases",
+      "summary": "A workshop with your teams to find where AI pays off most, then a first use case in production within a month.",
+      "intro": "In one day, you know where AI will save you the most time and money. We review your operations with the people who run them, on site in Nice and the PACA region, or remotely anywhere in France. You leave with your use cases ranked by what they bring in, and the first one can be in production within the following month.",
       "included": {
         "title": "What we do for you",
-        "intro": "The key moments of the day, and what you keep once it is over.",
+        "intro": "A day of hands-on work, and a plan you can start on right away.",
         "items": [
           {
-            "title": "Workshops with your team",
-            "text": "Management, operational teams and IT depending on the topic: we listen to the people who do the work every day, at your offices or on a video call."
+            "title": "Your teams heard",
+            "text": "The best ideas come from the people doing the work. Management, business teams and IT: we listen to those who run things every day, at your premises or by video call."
           },
           {
-            "title": "Finding the heavy tasks",
-            "text": "Data typed in twice, piles of documents, the same errors again and again, manual reminders: we note what costs your team the most time."
+            "title": "Lost time spotted",
+            "text": "Double data entry, piles of documents, recurring errors, chasing by hand: we note what costs your teams the most hours."
           },
           {
-            "title": "Costed use cases",
-            "text": "For each idea, we estimate the expected gain, how feasible it is, the risks to quality and data, and a rough cost."
+            "title": "Every idea costed",
+            "text": "For each idea, you know the expected gain, how hard it is, the risks to quality and data, and a ballpark cost."
           },
           {
-            "title": "Clear priorities",
-            "text": "Ideas are ranked by gain and effort. Some go to the top, some wait, and a few are dropped, with the reason why."
+            "title": "A clear place to start",
+            "text": "Ideas are ranked by what they bring in and what they take. Some go to the top, some wait, a few are dropped, with the reason."
           },
           {
             "title": "A written roadmap",
-            "text": "A summary document sets out the use cases you keep, their order, the data they need and the first practical steps."
+            "text": "A clear document sets out the chosen use cases, their order, the data they need and the first steps. You know what to start with."
           },
           {
-            "title": "Debrief with management",
-            "text": "We present the findings to the decision makers and answer their questions. The roadmap is yours: run it in-house, with another provider or with us."
+            "title": "An easy decision for management",
+            "text": "We present the findings to decision-makers and answer their questions. The roadmap is yours: run it in-house, with another provider or with us."
           }
         ]
       },
       "explainer": {
         "title": "How we work",
-        "intro": "The AI Sprint covers the first step. The other three only follow if you decide to go further.",
+        "intro": "The workshop covers the first step. The next ones only come if you decide to go further.",
         "points": [
           {
-            "title": "AI assessment",
-            "text": "This is the day itself: we look at your operations with your team and find the tasks where AI can bring a measurable gain."
+            "title": "Find the priority",
+            "text": "This is the workshop itself: with your teams, we spot the tasks where AI brings a measurable gain, and we pick the one that pays off most."
           },
           {
-            "title": "Process redesign",
-            "text": "For the use cases you keep, we map out how the work will flow: what AI takes on, and what a person approves."
+            "title": "Rethink the work",
+            "text": "For the chosen use case, we describe the new way of working: what AI takes on, and what a person approves."
           },
           {
-            "title": "From pilot to rollout",
-            "text": "If you want, we test the first use case on your real data with a small pilot. We only roll it out when the results justify it."
+            "title": "A first use case live in a month",
+            "text": "Our engineers build the solution on your real data and put the first use case into production within a month. Once the results are there, we move on to the next one."
           },
           {
-            "title": "Training and governance",
-            "text": "We train your team and set the rules for use from the start: which data is allowed, GDPR, the EU AI Act, human approval."
+            "title": "Train and set the rules",
+            "text": "We train your teams and set the rules from day one: which data is allowed, GDPR, human approval on what matters. You stay in control of your tools."
           }
         ]
       },
       "faq": {
-        "title": "Questions about the AI Sprint",
+        "title": "Questions about the AI use case workshop",
         "items": [
           {
-            "question": "How much does an AI Sprint cost?",
-            "answer": "It depends on the scope: how many teams and topics, on site or remote, travel. We agree the price with you before the day."
+            "question": "How much does the workshop cost?",
+            "answer": "The price depends on scope: number of teams and topics, on site or remote, travel. We agree it with you before we start."
+          },
+          {
+            "question": "Do we need to know already what we want to do with AI?",
+            "answer": "No. A hunch is enough, even no clear idea at all. The day starts from your real tasks, not from the technology."
           },
           {
             "question": "On site or remote?",
-            "answer": "Both work. On site, we see your tools and the way people work up close. Remote, the day runs on a video call, with screen sharing so we can look at your tools together."
+            "answer": "Both. We come to your premises in Nice and the PACA region, and we work remotely anywhere in France, by video call with screen sharing so we can look at your tools together."
           },
           {
             "question": "Who should take part?",
-            "answer": "Someone from management to make the calls, people who live the processes day to day, and your IT lead or IT provider when data and tools are involved."
+            "answer": "Someone from management to make the calls, people who live the processes every day, and your IT lead or IT provider when data and tools are involved."
           },
           {
-            "question": "Do we need to know what we want from AI already?",
-            "answer": "No. A hunch is enough, and so is no idea at all. The day starts from your real tasks, not from the technology."
+            "question": "What if AI is not the right answer?",
+            "answer": "We tell you. When a simple rule or a tool you already have will do, the roadmap says so. Better to know before you invest."
           },
           {
-            "question": "What do we get at the end?",
-            "answer": "A list of costed, ranked AI use cases, each with its expected gain, effort and risks, and a written roadmap."
-          },
-          {
-            "question": "What happens after the day?",
-            "answer": "That is up to you. You can run the roadmap in-house or with another provider. If you want, we move on to a first prototype, with a Qartmina project lead and specialists picked for the job."
+            "question": "What happens after the workshop?",
+            "answer": "You decide. You can run the roadmap in-house or with another provider. If you continue with us, a senior project lead runs a team of seasoned engineers, for a fraction of the cost of a senior European team, and the first use case can be in production within a month."
           }
         ]
       }
@@ -2246,10 +2315,10 @@
       }
     },
     "video-motion": {
-      "title": "Video and motion design",
-      "metaTitle": "Explainer videos and motion design",
-      "summary": "Motion graphics and videos for ads, product launches and social media: content that catches the eye, explains in seconds and looks like your brand.",
-      "intro": "Motion design is graphic design that moves. It is perfect for ads and social content: it captivates the eye and keeps your viewers watching for longer.",
+      "title": "Launch videos and motion design",
+      "metaTitle": "AI launch videos and motion design for SMEs",
+      "summary": "Short videos in your brand colours for launches, ads and social media, produced fast with AI tools.",
+      "intro": "A video that moves gets watched, a still image gets scrolled past. We produce your launch films, ads and animations with AI tools fed with your logo, colours and tone of voice. A person checks every video before it reaches you.",
       "compare": {
         "title": "Still or in motion",
         "intro": "Motion design is graphic design that moves. Drag the handle: on one side a business card as a still image, on the other the same card building itself, element by element.",
@@ -2387,6 +2456,528 @@
         "launchTitle": "Launching a product?",
         "launchText": "We prepare the launch film, the teaser clips and the posting plan for launch week, so your launch arrives with momentum.",
         "launchCta": "Book a call"
+      }
+    },
+    "ai-advisor": {
+      "title": "An AI advisor for your product",
+      "metaTitle": "AI advisor: add AI to your software product",
+      "summary": "An AI advisor works with your team for a few days to add AI to your product, from the right choice to production.",
+      "intro": "Your customers expect AI in your product, and your team is not sure where to start? An advisor from Qartmina, an AI studio and OpenAI Select Partner, works alongside it for a few days: they choose the right approach together, build the feature together and put it in production. Your team walks away with the know-how, not just the code.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "An AI feature that truly serves your customers, built by your team with an advisor at its side.",
+        "items": [
+          {
+            "title": "Pick the feature that matters",
+            "text": "An assistant, search across your content, summaries, automatic sorting: we work out with you what your customers will really use, and what can wait."
+          },
+          {
+            "title": "Decide on facts, not on hype",
+            "text": "Which model, which provider, what cost per use: you choose after a trial on your own data, with numbers in hand."
+          },
+          {
+            "title": "Build it with your team",
+            "text": "The advisor codes with your developers, in your code and your tools. They learn by doing, not by watching slides."
+          },
+          {
+            "title": "Answers you can trust",
+            "text": "The AI answers from your own data and documents, and tests catch wrong answers before your customers see them."
+          },
+          {
+            "title": "Holds up in production, not just in a demo",
+            "text": "Costs, response times and quality are tracked from day one. The feature holds up when your customers use it every day."
+          },
+          {
+            "title": "Protect your customers' data",
+            "text": "Sensitive information is anonymised before it reaches the AI, and we favour business plans that do not train on your data. GDPR is built in from the start."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the idea to a team that can add the next feature on its own.",
+        "points": [
+          {
+            "title": "Understand the product and the team",
+            "text": "We look at the problem the feature must solve for your customers, and at what your team already knows how to do."
+          },
+          {
+            "title": "The right profile, the right approach",
+            "text": "We suggest the advisor who fits your technology, then compare the options with you on your data, and keep the simplest one that works."
+          },
+          {
+            "title": "Build and go live",
+            "text": "The advisor builds the feature with your developers, tests it on your data and puts it live with them. First results come within weeks."
+          },
+          {
+            "title": "Pass on the know-how",
+            "text": "Rules, documentation, good practice on validation and data: your team can evolve the feature and build the next one on its own."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about the AI advisor",
+        "items": [
+          {
+            "question": "Is a few days really enough?",
+            "answer": "To choose the approach and build the feature with your team, often yes. We saw it with a startup that makes a CRM: we helped it put into production, in one week, an MVP that reads documents and produces new ones. The number of days is agreed with you, and you can add more."
+          },
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of days and the feature you have in mind. The price is set with you before starting, and it stays a fraction of the cost of a senior AI expert in Europe."
+          },
+          {
+            "question": "What does OpenAI Select Partner mean?",
+            "answer": "Qartmina is part of OpenAI's partner network, with OpenAI Select Partner status. It does not tie you to one provider: we pick the model that suits your product, from OpenAI or elsewhere."
+          },
+          {
+            "question": "Our team has never worked with AI. Is that a problem?",
+            "answer": "No, it is the most common case. The advisor works with your developers, explains every choice in plain words and leaves behind rules they can follow on their own."
+          },
+          {
+            "question": "Where do our data and our customers' data go?",
+            "answer": "We check with you where each piece of information travels before going live. Sensitive data is anonymised before it reaches the AI, and we favour hosting in Europe where possible."
+          },
+          {
+            "question": "What if the AI does not give good results?",
+            "answer": "We test on your data before building, so you find out early. If AI is not the right answer to your need, we tell you, and suggest something simpler."
+          }
+        ]
+      }
+    },
+    "ai-visuals": {
+      "title": "AI-made 2D and 3D visuals",
+      "metaTitle": "AI product visuals, packshots and ads for SMEs",
+      "summary": "Product images, ads and mockups in your colours and fonts, without organising a photo shoot for every new release.",
+      "intro": "Show your products and offers at their best, on every channel, without waiting for a photo shoot or an agency each time something new comes out. We produce your 2D and 3D visuals with AI tools fed with your brand guidelines: logo, colours, fonts and wording. A person checks every image before it reaches you.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "The images your marketing needs, in the right format and always on brand.",
+        "items": [
+          {
+            "title": "Packshots without a studio",
+            "text": "Your products on a plain background or in a setting, from several angles, starting from a few basic photos. Shape, label and colours stay true to the real product."
+          },
+          {
+            "title": "Ads ready to run",
+            "text": "Several versions of the same visual for Instagram, Facebook or LinkedIn, so you can test what gets the click without starting over."
+          },
+          {
+            "title": "Mockups to decide sooner",
+            "text": "Packaging, a flyer, a shop window or an app screen shown in context, to test an idea or present an offer before you make it."
+          },
+          {
+            "title": "Illustrations in your style",
+            "text": "For your website, articles or presentations: a style defined once, then reused everywhere so everything looks related."
+          },
+          {
+            "title": "3D renders of your products",
+            "text": "A product seen from every angle, as an exploded view or in a setting, even before it has been photographed."
+          },
+          {
+            "title": "One look across every channel",
+            "text": "Every visual follows your colours, fonts and words, resized for your website, social media, emails and print."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Your brand guidelines first, the images second, and a human check on every batch.",
+        "points": [
+          {
+            "title": "Target the visuals that matter",
+            "text": "Which visuals you are missing, for which products and channels: we pick with you the ones that will make the biggest difference, first."
+          },
+          {
+            "title": "Translate your brand for the AI",
+            "text": "We gather your colours, fonts, logos, reference photos and wording into a guide that the AI tools follow for every image."
+          },
+          {
+            "title": "A first batch in under a month",
+            "text": "A first batch, checked and retouched, is delivered in under a month. Then we extend it to other products, formats or campaigns."
+          },
+          {
+            "title": "Stay consistent over time",
+            "text": "We train your team to order or produce new visuals, and set the rules: who approves, what may be generated, what stays a real photo."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about AI-made visuals",
+        "items": [
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of visuals, formats and products. We agree the scope and the price with you before we start."
+          },
+          {
+            "question": "Is it a problem to use AI-made images?",
+            "answer": "Not if they are used honestly. Your product stays true to reality, we never fake reviews or results, and we tell you when a platform or the law requires you to label an image as AI-made."
+          },
+          {
+            "question": "Can we use the images freely?",
+            "answer": "Yes, for your marketing, ads included. We work with tools whose terms allow commercial use, and we avoid any likeness to real people, other brands or protected works."
+          },
+          {
+            "question": "What do you need to get started?",
+            "answer": "Your brand guidelines if you have them, your logo, a few photos of your products and examples of visuals you like. No guidelines yet? We lay the groundwork with you."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "An experienced team, mainly based in North Africa, led by a senior project lead who stays your point of contact. You get real expertise for a fraction of the cost of a senior team in Europe."
+          },
+          {
+            "question": "What if we do not like the result?",
+            "answer": "Every batch goes through review rounds: you comment, we correct. If the AI cannot get a product accurate enough, we tell you and suggest a real photo or classic retouching instead."
+          }
+        ]
+      }
+    },
+    "content-plan": {
+      "title": "AI content plans and posts",
+      "metaTitle": "AI content plans and LinkedIn posts for SMEs",
+      "summary": "An editorial calendar and ready-to-post content every month, in your tone, without starting from a blank page.",
+      "intro": "Your social accounts stay active without eating up your team's weeks. Every month you get an editorial calendar and posts ready for LinkedIn, Instagram or Facebook, written in your tone and built around your offers. AI tools draft them from your brand, our team reviews them, you approve.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "From the month's ideas to the published post, with no blank page and nothing lost of what makes you different.",
+        "items": [
+          {
+            "title": "A clear editorial calendar",
+            "text": "Topics, formats and dates for the month, planned around your offers, key dates and seasons. You know what to post, where and when."
+          },
+          {
+            "title": "Posts ready to publish",
+            "text": "Copy written for each network: a LinkedIn post is not shaped like an Instagram caption. You approve, then we schedule it or you post it yourself."
+          },
+          {
+            "title": "Your tone, in every post",
+            "text": "We build a brand file once: your offers, your customers, your words, your best posts. The AI writes from it, not from a generic template."
+          },
+          {
+            "title": "One idea, many formats",
+            "text": "A launch, a testimonial or an article becomes a post, a carousel, a story and a short email. More content, no extra effort."
+          },
+          {
+            "title": "In your customers' languages",
+            "text": "French, English or other languages, adapted rather than translated word for word, for customers in Nice, across France or abroad."
+          },
+          {
+            "title": "A monthly review without jargon",
+            "text": "What went out, what got a reaction and what we adjust next month. You can see where your effort goes."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "A simple method, so the AI writes like your company and not like everyone else.",
+        "points": [
+          {
+            "title": "Understand your brand",
+            "text": "A workshop to pin down your offers, your customers and the way you speak, then pick the two or three networks that really matter to you."
+          },
+          {
+            "title": "Build your method",
+            "text": "We write your brand file and the instructions given to the AI tools: tone, topics, formats, words to avoid. That is what keeps the copy true to your company."
+          },
+          {
+            "title": "Publish from the first month",
+            "text": "Your first calendar and its posts are ready in under a month. Then we add formats, networks or languages, at your pace."
+          },
+          {
+            "title": "Make your team self-sufficient",
+            "text": "We train your team to use the method, agree who approves what, and your brand file stays in your own accounts."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about AI content plans",
+        "items": [
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the number of networks, posts and languages. We agree the scope and the price with you before we start, and they do not change without your approval."
+          },
+          {
+            "question": "Will the posts sound like AI?",
+            "answer": "That is exactly what we work to avoid. Drafts start from your brand file, with your phrases and your examples, then a person reviews and edits them. Nothing goes out without your approval."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "An experienced team, mainly based in North Africa, led by a senior project lead who stays your point of contact. You get real expertise for a fraction of the cost of a senior team in Europe."
+          },
+          {
+            "question": "What happens to our information?",
+            "answer": "We only use what is needed to write your posts: your offers, your tone, your public content. No personal data about your customers is needed. We pick business-grade AI tools, set their privacy options and work in line with the GDPR."
+          },
+          {
+            "question": "Do you guarantee followers or sales?",
+            "answer": "No, and be wary of anyone who does. We agree goals with you that we can actually meet, such as posting regularly, and tell you honestly every month what is working."
+          },
+          {
+            "question": "What if the tone is not right?",
+            "answer": "The first month is partly for getting it right. You correct, we adjust the brand file, and the next posts take it into account. If an approach does not work, we change it."
+          }
+        ]
+      }
+    },
+    "expert-mission": {
+      "title": "One-off expert mission",
+      "metaTitle": "Freelance tech expert: cloud, performance, CI/CD",
+      "summary": "A precise technical problem, a senior engineer to fix it: a feature shipped, a move to the cloud, a product you can rely on.",
+      "intro": "A feature that never ships, servers that keep filling up, releases that make everyone nervous: a senior engineer takes care of it, for as long as it takes and no longer. You pay for a mission with a clear goal, not a seat, for a fraction of the cost of a senior European expert. A senior Qartmina project lead scopes the mission and checks the result before handing it to you.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Short missions with a precise goal and a result you can check.",
+        "items": [
+          {
+            "title": "Ship a long-awaited feature",
+            "text": "The feature your customers keep asking for finally ships, built in your code and with its tests. Your team stays on its priorities."
+          },
+          {
+            "title": "Move to the cloud without downtime",
+            "text": "Your application leaves fragile servers for hosting that grows with you. The migration moves in stages, with a backup at every stage."
+          },
+          {
+            "title": "Make your product fast again",
+            "text": "Slow pages, sluggish queries, hosting bills that keep rising: the expert finds the cause, fixes it and measures the difference before and after."
+          },
+          {
+            "title": "Stop the repeat outages",
+            "text": "Full disks, errors nobody can explain, a service that goes down: the expert traces the source and sets up alerts that warn you before your customers notice."
+          },
+          {
+            "title": "Release without breaking things",
+            "text": "On every change, all your tests run automatically, and only what passes goes live. Fewer bugs reach your customers. This is what a delivery pipeline (CI/CD) does."
+          },
+          {
+            "title": "Stop testing on real customers",
+            "text": "Development, staging, production: each environment gets its own data. Customer records stay where they belong, and tests no longer touch production."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the problem on the table to a team that can run the fix on its own.",
+        "points": [
+          {
+            "title": "Understand the problem and the team",
+            "text": "We look at your setup with your team and agree on a clear goal: what must work when the mission ends."
+          },
+          {
+            "title": "Pick the expert",
+            "text": "We suggest a senior engineer who has solved this kind of problem before, and we estimate the length of the mission with you."
+          },
+          {
+            "title": "Start fast and deliver",
+            "text": "The expert works in your environment, in stages, without stopping your product. First results come within weeks, checked by our project lead."
+          },
+          {
+            "title": "Keep your team autonomous",
+            "text": "Documentation, handover, walkthroughs: your team can run the solution and evolve it after the expert leaves."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about expert missions",
+        "items": [
+          {
+            "question": "How much does a mission cost?",
+            "answer": "It depends on the scope. We set it with you before starting, around a clear goal, so you know exactly what you are buying."
+          },
+          {
+            "question": "How long does a mission last?",
+            "answer": "From a few days to a few weeks, depending on the problem. We estimate the length when we scope it, and first results come within weeks."
+          },
+          {
+            "question": "Do we have to stop our product during the mission?",
+            "answer": "In most cases, no. We work in stages, with backups, while your customers keep using the product. If a cut is unavoidable, it is short and planned with you."
+          },
+          {
+            "question": "Have you done this kind of mission before?",
+            "answer": "Yes. For a startup that makes a CRM, our engineers moved the product from fragile servers to a production-ready cloud, with a pipeline that stops bugs before they reach customers. The case study is in our portfolio."
+          },
+          {
+            "question": "Who gets access to our servers and data?",
+            "answer": "Only the expert on the mission, with the access they need. It is removed at the end, confidentiality is in the contract, and personal data is handled under GDPR."
+          },
+          {
+            "question": "What if the problem is bigger than expected?",
+            "answer": "We tell you as soon as we see it, with the options and what each one costs. Nothing is added to the mission without your agreement."
+          }
+        ]
+      }
+    },
+    "product-launch": {
+      "title": "Launch a product with AI",
+      "metaTitle": "AI product launch: launch site, online shop, content",
+      "summary": "Your launch page or online shop and the full content kit, on brand and ready fast for release day.",
+      "intro": "Hit the market on the planned date, with everything you need to sell from day one. We prepare your launch page or online shop and the content kit that goes with it: visuals, videos, posts and emails, all on brand. AI tools let us move fast, and our team checks every piece.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Everything a launch needs, prepared together and built around a single message.",
+        "items": [
+          {
+            "title": "A launch page that sells",
+            "text": "A clear page that presents the product, answers questions and takes orders or sign-ups, on your website or built for the occasion."
+          },
+          {
+            "title": "An online shop ready to sell",
+            "text": "Product pages, photos, payment and shipping set up on a proven platform such as Shopify or WooCommerce. No custom software to maintain."
+          },
+          {
+            "title": "The launch visuals",
+            "text": "Packshots, lifestyle shots, banners and ads in your colours, resized for your website, social media and emails."
+          },
+          {
+            "title": "A launch video and teasers",
+            "text": "A short film that shows what is new and why it is useful, with short cuts for each social network."
+          },
+          {
+            "title": "Posts and emails",
+            "text": "Announcements before, during and after release, written in your tone, with an email sequence for your customers and prospects."
+          },
+          {
+            "title": "A launch calendar",
+            "text": "What to post, where and when, from announcement to follow-ups, so interest builds instead of fading the next day."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "One date, one message, and a team that works fast with AI without letting anything slip.",
+        "points": [
+          {
+            "title": "Clarify the launch",
+            "text": "What you are launching, for whom, on what date and with what message: we pin down the essentials and what must be ready first."
+          },
+          {
+            "title": "Design the kit",
+            "text": "Page or shop, visuals, video, posts, emails: we plan the whole set around one message and your brand guidelines."
+          },
+          {
+            "title": "Be ready for the date",
+            "text": "The first key piece, often the launch page, goes live in under a month. The rest of the kit follows the launch calendar."
+          },
+          {
+            "title": "Hand over to your team",
+            "text": "We train your team to update the page, post and follow up. You keep the files, the access and the approval rules."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about product launches",
+        "items": [
+          {
+            "question": "Do you build software for our launch?",
+            "answer": "No. We work with your current website or proven platforms that are quick to set up and easy to run. If your product is itself software, our engineers can reinforce your team through our Engineers on demand offer."
+          },
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on what your launch includes: page or shop, number of visuals, videos and languages. We agree the scope and the price with you before we start."
+          },
+          {
+            "question": "How soon can we be ready?",
+            "answer": "It depends on the size of the launch and how quickly you approve things. We agree together what must go out first, and that first piece goes live in under a month. The earlier you tell us, the calmer the launch."
+          },
+          {
+            "question": "Who does the work?",
+            "answer": "An experienced team, mainly based in North Africa, led by a senior project lead who stays your point of contact. You get real expertise for a fraction of the cost of a senior team in Europe."
+          },
+          {
+            "question": "Do you guarantee sales?",
+            "answer": "No, nobody honestly can. What we commit to is a launch ready on the agreed date, consistent across every channel, and a clear review of what worked so you can adjust what comes next."
+          },
+          {
+            "question": "Who owns the shop and the content?",
+            "answer": "You do. The shop and accounts are in your name, and you receive every visual, video and text. We work through access you can withdraw at any time."
+          }
+        ]
+      }
+    },
+    "team-reinforcement": {
+      "title": "Extra engineers for your team",
+      "metaTitle": "Staff augmentation: engineers for SMEs and startups",
+      "summary": "Ship more without hiring: seasoned engineers join your team for a few weeks or a few months.",
+      "intro": "Is your roadmap moving faster than your team? One or more seasoned engineers join it for a few weeks or a few months, for a fraction of the cost of a senior European engineer. Most are based in North Africa, speak French, work in your time zone or close to it, and a senior Qartmina project lead checks their work.",
+      "included": {
+        "title": "What we do for you",
+        "intro": "Real extra hands who deliver in your tools and by your rules, while you keep control of the priorities.",
+        "items": [
+          {
+            "title": "Catch up on the roadmap",
+            "text": "Features that have waited for months finally move. The engineer picks tickets from your backlog and ships them by your coding rules."
+          },
+          {
+            "title": "Handle a peak in workload",
+            "text": "A launch, a big client, a tight deadline: you grow the team for the rush, then go back to your normal size. No hiring, no probation period."
+          },
+          {
+            "title": "Cover an absence",
+            "text": "Someone leaves, goes on long leave, or a seat stays empty: work carries on while you recruit. Your team does not carry the load alone."
+          },
+          {
+            "title": "Add the skill you lack",
+            "text": "Cloud, data, mobile, AI: an engineer who knows the subject joins the team and shares what they know by working alongside it."
+          },
+          {
+            "title": "Pay down technical debt",
+            "text": "Missing tests, fragile code, postponed upgrades: an engineer takes care of them while your team keeps shipping new features."
+          },
+          {
+            "title": "Work that is checked, not just supplied",
+            "text": "A senior Qartmina project lead reviews the work, tracks progress with you and steps in when something gets stuck. You are never alone with a contractor."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "How we work",
+        "intro": "Four steps, from the first call to a team that moves on its own.",
+        "points": [
+          {
+            "title": "Understand the need and the team",
+            "text": "We look with you at what is blocking, how your team works and what it must ship first."
+          },
+          {
+            "title": "Pick the right profile",
+            "text": "We suggest one or more engineers who fit your technology and the way you work. You meet them before anything starts."
+          },
+          {
+            "title": "Start fast and deliver",
+            "text": "The engineer joins your tools and your meetings in the first days. First deliveries come within weeks, checked by our project lead."
+          },
+          {
+            "title": "Hand over",
+            "text": "The code is documented and your team knows how to take it over. You extend, scale down or stop the support as you need."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions about team reinforcement",
+        "items": [
+          {
+            "question": "How much does it cost?",
+            "answer": "It depends on the profile and the duration. The rate is agreed with you before anything starts, and it stays a fraction of the cost of a senior engineer hired in Europe."
+          },
+          {
+            "question": "Who are the engineers?",
+            "answer": "Seasoned engineers, most of them based in North Africa. They speak French and work in the same time zone as France, or close to it. We select them, and a senior Qartmina project lead follows their work from start to finish."
+          },
+          {
+            "question": "What does day-to-day work look like?",
+            "answer": "Like working with a member of your team. The engineer works in your tools (chat, tickets, code repository), joins your meetings and is reachable during your hours."
+          },
+          {
+            "question": "How soon can someone start?",
+            "answer": "It depends on the profile you need. We give you a timeline in the first call, and first deliveries come within weeks of the start."
+          },
+          {
+            "question": "What about our code and our data?",
+            "answer": "Access is limited to what the engineer needs and removed when the mission ends. Confidentiality is in the contract, and we apply GDPR rules to all personal data."
+          },
+          {
+            "question": "What if the profile is not a fit?",
+            "answer": "Tell your project lead. We adjust the mission or replace the engineer, and you do not have to manage the problem on your own."
+          }
+        ]
       }
     }
   },
@@ -2695,7 +3286,7 @@
   },
   "portfolio": {
     "metaTitle": "Portfolio",
-    "metaDescription": "Case studies of AI agents, automations and data platforms built by Qartmina, with the problem, the approach and the measured result.",
+    "metaDescription": "Our work: what AI and our engineers changed for our clients, with the problem, the approach and the result.",
     "title": "Our work",
     "intro": "Each case study shows the problem, what we built and what changed. Demos are labelled as demos.",
     "sector": "Sector",
@@ -2709,7 +3300,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Practical articles on putting AI agents, automation and data to work in real businesses.",
+    "metaDescription": "Practical articles on putting AI to work in your business: automation, documents, marketing, data.",
     "title": "Blog",
     "intro": "Practical notes on putting AI and data to work. No hype, real examples.",
     "empty": "The first articles are on their way. Subscribe to the newsletter to receive them.",
@@ -2727,9 +3318,9 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Qartmina is an AI and data consulting company working with SMEs across France. Learn about our name, our founder and how we work.",
+    "metaDescription": "Qartmina is an AI studio based in Nice, France. We put AI into production for SMEs, agencies and startups across the PACA region and France.",
     "title": "About Qartmina",
-    "intro": "We help businesses digitalise and put AI to work, from strategy to execution, and back every recommendation with evidence.",
+    "intro": "We help SMEs put AI to work: we find the use cases that pay off most, build them and put them into production, starting with a first use case within a month.",
     "nameTitle": "The name",
     "nameText": "Qartmina means \"the new mine\". Data is the raw material of this era, and like any mine, it is only worth something once you dig, refine and put what you find to use. That is the work we do.",
     "founderTitle": "The founder",
@@ -2751,23 +3342,24 @@
     ],
     "rhythm": [
       {
-        "value": "< 1 month",
-        "label": "to a working first version"
+        "value": "1 month",
+        "label": "for a first use case in production"
       },
       {
-        "value": "3 months",
-        "label": "to production"
+        "value": "1 project lead",
+        "label": "senior, from the first call to go-live"
       },
       {
-        "value": "6 months",
-        "label": "to a growing product"
+        "value": "Then",
+        "label": "one use case after another"
       }
     ],
     "partnersTitle": "Partners",
     "locationsTitle": "Where we work",
-    "locationsText": "Remote-first across France, delivered to international standards. Based in France.",
+    "locationsText": "Based in Nice. On site across the PACA region when it helps, remote anywhere in France.",
     "coreMarketsLabel": "Core markets",
     "coreMarkets": [
+      "Nice and the PACA region",
       "France"
     ],
     "reachLabel": "Also active in",
@@ -2779,7 +3371,7 @@
   },
   "book": {
     "metaTitle": "Book a call",
-    "metaDescription": "Book a free 30-minute call with Qartmina to look at one process and whether an AI agent is worth building for it.",
+    "metaDescription": "Book a free 30-minute call with Qartmina: we look at a task that costs you time and tell you whether AI is worth it, and where to start.",
     "title": "Book a free 30-minute call",
     "intro": "We look at one process together and whether an agent is worth building for it. No preparation needed.",
     "calendarTitle": "Booking calendar",

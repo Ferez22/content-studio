@@ -2,15 +2,16 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import {
   IconArrowRight,
+  IconBriefcase,
+  IconChartLine,
+  IconCode,
   IconFileDescription,
+  IconHeadset,
+  IconReceipt2,
+  IconSpeakerphone,
   IconFileInvoice,
-  IconMessageChatbot,
-  IconMessageSearch,
-  IconPlugConnected,
   IconReportAnalytics,
-  IconScan,
   IconShieldCheck,
-  IconUsersGroup,
 } from "@tabler/icons-react";
 import { Container } from "./container";
 import { Heading } from "./heading";
@@ -25,7 +26,9 @@ type Item = { title: string; text: string };
 
 // Icons follow the order of home.automation.processes and home.automation.cases in messages.
 const processIcons = [IconFileInvoice, IconReportAnalytics, IconShieldCheck];
-const caseIcons = [IconMessageSearch, IconScan, IconUsersGroup, IconFileDescription, IconMessageChatbot, IconPlugConnected];
+// Cases are by team (2026-11-21): admin and finance, sales, marketing, customer service,
+// management, tech teams.
+const caseIcons = [IconReceipt2, IconBriefcase, IconSpeakerphone, IconHeadset, IconChartLine, IconCode];
 
 // Home: the processes we automate and the business cases we handle, in one rounded panel
 // over the ambient texture.
@@ -91,7 +94,7 @@ export const AutomationOffer = () => {
               <Link href="/book">{t("cta")}</Link>
             </Button>
             <Link
-              href={categoryPath("data-ai")}
+              href={categoryPath("ai-operations")}
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
             >
               {t("secondary")}

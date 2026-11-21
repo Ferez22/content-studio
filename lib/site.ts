@@ -20,33 +20,38 @@ export const site = {
 // lives in messages under serviceCategories.<category> and servicePages.<service>. Only
 // the services switched on in serviceToggles are published. Restructured 2026-11-11 (Fares):
 // Data & AI, Software development, Brand and online presence. Old URLs: next.config.ts.
+// Three offers, named by what the client gains (Fares 2026-11-21). Services that are off stay
+// listed (toggles below) so their copy and old URLs keep a home.
 const allServiceCategories = [
   {
-    slug: "data-ai",
+    slug: "ai-operations",
     services: [
+      "ai-sprint",
+      "document-extraction",
       "ai-automation",
       "generative-ai",
-      "document-extraction",
       "mcp",
       "predictive-systems",
       "computer-vision",
-      "ai-sprint",
     ],
   },
   {
-    slug: "software-development",
-    services: ["custom-software", "saas"],
-  },
-  {
-    slug: "brand",
+    slug: "ai-marketing",
     services: [
+      "content-plan",
+      "ai-visuals",
+      "product-launch",
+      "video-motion",
       "brand-identity",
       "graphic-design",
       "ui-ux-design",
       "personal-branding",
       "social-media",
-      "video-motion",
     ],
+  },
+  {
+    slug: "engineers",
+    services: ["team-reinforcement", "expert-mission", "ai-advisor", "custom-software", "saas"],
   },
 ] as const;
 
@@ -59,21 +64,29 @@ export type ServiceSlug =
 // portfolio, blog links). A category with no service switched on is hidden the same way.
 // Set at build time, so a change needs a redeploy.
 export const serviceToggles: Record<ServiceSlug, boolean> = {
+  "ai-sprint": true,
+  "document-extraction": true,
   "ai-automation": true,
   "generative-ai": true,
-  "document-extraction": true,
   mcp: true,
   "predictive-systems": true,
   "computer-vision": true,
-  "ai-sprint": true,
-  "custom-software": true,
-  saas: true,
+  "content-plan": true,
+  "ai-visuals": true,
+  "product-launch": true,
+  "video-motion": true,
+  "team-reinforcement": true,
+  "expert-mission": true,
+  "ai-advisor": true,
+  // Off since 2026-11-21: we no longer build software in-house (we reinforce client teams),
+  // and brand services gave way to AI marketing.
+  "custom-software": false,
+  saas: false,
   "brand-identity": false,
   "graphic-design": false,
-  "ui-ux-design": true,
-  "personal-branding": true,
-  "social-media": true,
-  "video-motion": true,
+  "ui-ux-design": false,
+  "personal-branding": false,
+  "social-media": false,
 };
 
 // The published services and categories. Everything on the site reads these.

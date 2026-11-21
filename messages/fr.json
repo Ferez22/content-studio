@@ -3,7 +3,7 @@
     "bookCall": "Prendre rendez-vous",
     "startProject": "Lancer votre projet",
     "readyTitle": "Prêt à vous lancer ?",
-    "readyText": "Parlez-nous d'un processus qui prend trop de temps à votre équipe. Nous vous dirons franchement si un agent vaut la peine d'être construit.",
+    "readyText": "Parlez-nous d'une tâche qui prend trop de temps à votre équipe. Nous vous dirons franchement si l'IA vaut la peine, et par où commencer.",
     "learnMore": "En savoir plus",
     "source": "Source",
     "demo": "Démo",
@@ -26,11 +26,11 @@
     "categoryOverview": "Vue d'ensemble"
   },
   "footer": {
-    "positioning": "Stratégie, données et IA, conçues pour fonctionner au cœur de votre entreprise.",
+    "positioning": "Le studio IA des PME : une IA intégrée et robuste, en production en un mois.",
     "services": "Expertises",
     "company": "Entreprise",
     "contact": "Contact",
-    "location": "Basés en France. Avec des PME partout en France.",
+    "location": "Basés à Nice. Avec des PME de la région PACA et de toute la France.",
     "rights": "© {year} Qartmina. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions d'utilisation",
@@ -39,27 +39,37 @@
     "newsletterText": "Des conseils concrets pour mettre l'IA et les données au service de vraies entreprises. Désinscription possible à tout moment."
   },
   "metadata": {
-    "siteTitle": "Qartmina | Agents IA et conseil en données",
-    "siteDescription": "Qartmina conçoit des agents IA, des automatisations et des plateformes de données qui libèrent vos équipes des tâches répétitives, avec une personne qui valide ce qui compte."
+    "siteTitle": "Qartmina | Studio IA à Nice pour les PME",
+    "siteDescription": "Studio IA à Nice : nous mettons en production en un mois des IA intégrées à vos outils, pour PME, agences et startups. Opérations, marketing, ingénieurs.",
+    "knowsAbout": [
+      "Intelligence artificielle pour les PME",
+      "Automatisation des processus",
+      "Traitement automatique des factures et documents",
+      "Agents et assistants IA",
+      "Marketing et contenus produits par l'IA",
+      "Ingénieurs à la demande",
+      "OpenAI"
+    ],
+    "offerCatalog": "Les offres Qartmina"
   },
   "home": {
     "hero": {
-      "title": "Mettez des agents IA au service de votre entreprise",
-      "subtitle": "Des agents qui libèrent vos équipes des tâches répétitives, dans les outils que vous utilisez déjà, avec une personne qui valide ce qui compte.",
+      "title": "Une IA intégrée et robuste, en production.",
+      "subtitle": "Nous trouvons les usages de l'IA qui rapportent le plus à votre entreprise et mettons le premier en production en un mois.",
       "primary": "Réserver un appel gratuit de 30 minutes",
       "secondary": "Voir nos réalisations",
       "kpis": [
         {
-          "value": "1",
-          "label": "Chef de projet"
+          "value": "1 mois",
+          "label": "Premier cas d'usage en production"
+        },
+        {
+          "value": "Seniors",
+          "label": "Ingénieurs et chefs de projet"
         },
         {
           "value": "100 %",
           "label": "Vérifié avant remise"
-        },
-        {
-          "value": "30 j",
-          "label": "Livraison"
         }
       ]
     },
@@ -80,36 +90,36 @@
           "text": "Écarts, doublons, pièces manquantes, règles de conformité : l'IA signale ce qui cloche, votre équipe décide de la suite."
         }
       ],
-      "casesTitle": "Les cas métier que nous traitons",
-      "casesIntro": "Pour chaque processus, nous choisissons la technique la plus simple qui fonctionne. La décision reste toujours à une personne de votre équipe.",
+      "casesTitle": "Ce que l'IA change, service par service",
+      "casesIntro": "Administratif, commercial, marketing, service client : nous partons de ce qui coûte le plus de temps ou d'argent à chaque équipe, et nous commençons par ce qui rapporte le plus.",
       "cases": [
         {
-          "title": "Assistant sur vos documents (RAG)",
-          "text": "Un assistant qui répond à partir de vos procédures, contrats et fiches techniques, en citant le passage d'où vient chaque réponse. Vous vérifiez en un clic."
+          "title": "Administratif et finance",
+          "text": "Factures, devis et notes de frais saisis, rapprochés et classés sans ressaisie. Vos équipes ne vérifient plus que les exceptions."
         },
         {
-          "title": "Extraction de données et OCR",
-          "text": "Factures, courriers ou formulaires, même scannés : les bonnes informations sont extraites et envoyées dans vos outils, sans ressaisie."
+          "title": "Commercial et CRM",
+          "text": "Demandes entrantes triées, fiches CRM à jour, relances et propositions préparées. Vos commerciaux passent leur temps à vendre."
         },
         {
-          "title": "Équipes d'agents IA",
-          "text": "Plusieurs agents spécialisés se partagent un processus : l'un collecte, l'autre vérifie, un troisième rédige. Une personne valide les étapes sensibles."
+          "title": "Marketing et lancements",
+          "text": "Plans de contenu, visuels, vidéos et pages de lancement produits à votre image, en quelques jours au lieu de plusieurs semaines."
         },
         {
-          "title": "Génération de documents",
-          "text": "Rapports, synthèses, fiches produit ou réponses types, produits à partir de vos données et de vos modèles et relus par votre équipe avant envoi."
+          "title": "Service client",
+          "text": "Un assistant répond aux questions courantes à toute heure, à partir de vos propres documents, et passe la main à une personne quand il le faut."
         },
         {
-          "title": "Assistants conversationnels",
-          "text": "Sur votre site ou dans vos outils internes, un assistant répond aux questions de vos clients ou de vos équipes, et passe la main à une personne quand il le faut."
+          "title": "Direction et pilotage",
+          "text": "Rapports mensuels rédigés seuls, ventes et stocks anticipés, alertes quand un chiffre dérape. Vous décidez plus tôt, sur des chiffres fiables."
         },
         {
-          "title": "Automatisation entre vos logiciels",
-          "text": "Les tâches répétitives s'enchaînent seules entre votre CRM, votre ERP et votre messagerie. L'IA prend les étapes qui demandent du jugement."
+          "title": "Vos équipes tech",
+          "text": "Des ingénieurs chevronnés rejoignent votre équipe pour livrer plus vite, ou un conseiller vous aide à intégrer l'IA dans votre produit."
         }
       ],
       "cta": "Parlez-nous d'un processus",
-      "secondary": "Voir nos expertises en IA"
+      "secondary": "Voir l'IA pour vos opérations"
     },
     "trusted": {
       "title": "Ils nous font confiance"
@@ -138,7 +148,7 @@
     },
     "team": {
       "title": "L'équipe",
-      "intro": "Une petite équipe senior qui travaille avec la vôtre, pas à côté.",
+      "intro": "Une petite équipe senior basée à Nice, qui travaille avec la vôtre, pas à côté.",
       "founder": {
         "name": "Fares",
         "role": "Fondateur et ingénieur principal",
@@ -164,38 +174,42 @@
       "title": "Questions fréquentes",
       "items": [
         {
-          "question": "Combien de temps faut-il pour construire un agent ?",
-          "answer": "Une première version opérationnelle prend généralement moins d'un mois. La mise en production avec vos données, vos droits d'accès et vos circuits de validation prend environ trois mois. Ensuite, l'agent évolue avec vos besoins."
+          "question": "Combien de temps faut-il pour voir un résultat ?",
+          "answer": "Un mois pour mettre un premier cas d'usage en production, dans vos outils. Nous commençons par celui qui rapporte le plus, puis nous ajoutons les suivants un par un."
         },
         {
-          "question": "Quel retour sur investissement attendre, et comment le mesurez-vous ?",
-          "answer": "Avant de construire quoi que ce soit, nous mesurons le temps que prend la tâche aujourd'hui et sa fréquence. Après le lancement, nous mesurons à nouveau. Le retour correspond au temps gagné multiplié par le coût de ce temps, moins le coût de fonctionnement de l'agent. Si les chiffres ne justifient pas un agent, nous vous le disons."
+          "question": "Combien cela coûte-t-il ?",
+          "answer": "Le prix dépend du périmètre, et nous le fixons avec vous avant de commencer. Nos ingénieurs étant principalement basés en Afrique du Nord, vous obtenez le niveau d'un ingénieur senior européen pour une fraction du coût."
         },
         {
-          "question": "Construisez-vous des agents sur mesure ou utilisez-vous des solutions existantes ?",
-          "answer": "Les deux. Quand un outil existant fait l'affaire, nous le configurons et le connectons. Quand votre processus est spécifique, nous construisons un agent sur mesure. Le choix dépend de ce qui vous mène au résultat le plus vite et au meilleur coût."
+          "question": "Qui réalise le travail ?",
+          "answer": "Un chef de projet senior Qartmina pilote votre projet et en répond. Le travail est réalisé par des ingénieurs chevronnés, principalement nord-africains et francophones, que nous sélectionnons et contrôlons. Chaque livrable est vérifié avant la remise."
+        },
+        {
+          "question": "Quel retour sur investissement attendre ?",
+          "answer": "Avant de commencer, nous mesurons le temps et le coût de la tâche aujourd'hui. Après la mise en production, nous mesurons à nouveau. Si les chiffres ne justifient pas le projet, nous vous le disons avant que vous ne dépensiez."
         },
         {
           "question": "Où nos données sont-elles traitées, et servent-elles à entraîner des modèles ?",
           "answer": "Nous utilisons des offres d'IA entreprise dont les conditions excluent l'entraînement sur vos données. Si vos règles l'exigent, nous hébergeons les modèles et les données sur une infrastructure que vous contrôlez. Le traitement respecte le RGPD et nous documentons la destination de chaque donnée."
         },
         {
-          "question": "Que se passe-t-il après le lancement ?",
-          "answer": "Nous surveillons l'agent, corrigeons ce qui ne fonctionne plus et l'améliorons à mesure que votre processus évolue. Vous pouvez conserver un contrat de support avec nous ou reprendre la main entièrement."
+          "question": "Travaillez-vous à Nice et dans la région PACA ?",
+          "answer": "Oui. Nous sommes basés à Nice et accompagnons des PME, des agences et des startups de la région PACA, sur place quand c'est utile. Nous travaillons aussi à distance partout en France."
         },
         {
-          "question": "Notre équipe peut-elle maintenir les agents elle-même ?",
-          "answer": "Oui. Nous travaillons avec votre équipe, documentons tout et formons les personnes qui seront responsables de l'agent. Vous n'êtes jamais captif."
+          "question": "Notre équipe peut-elle reprendre la main ?",
+          "answer": "Oui. Nous travaillons avec votre équipe, documentons tout et formons les personnes qui feront tourner la solution. Vous n'êtes jamais captif."
         }
       ]
     },
     "contact": {
-      "title": "Trouvons votre premier agent",
-      "text": "Dites-nous quelle tâche prend trop de temps à votre équipe. Nous répondons sous deux jours ouvrés.",
+      "title": "Trouvons votre premier cas d'usage rentable",
+      "text": "Dites-nous ce qui prend trop de temps à votre équipe. Nous répondons sous deux jours ouvrés.",
       "emailLabel": "E-mail",
       "linkedinLabel": "LinkedIn",
       "locationLabel": "Adresse",
-      "location": "Basés en France. Avec des PME partout en France.",
+      "location": "Basés à Nice. Avec des PME de la région PACA et de toute la France.",
       "tabs": {
         "call": "Réserver un appel gratuit de 30 min",
         "message": "Nous contacter"
@@ -204,20 +218,20 @@
     },
     "figures": [
       {
-        "value": "< 1 mois",
-        "label": "pour une première version opérationnelle"
-      },
-      {
-        "value": "3 mois",
-        "label": "pour la mise en production"
+        "value": "1 mois",
+        "label": "pour mettre un premier cas d'usage en production"
       },
       {
         "value": "{services}",
-        "label": "expertises, un seul chef de projet"
+        "label": "services, un seul chef de projet"
       },
       {
-        "value": "100%",
+        "value": "100 %",
         "label": "des livrables vérifiés avant la remise"
+      },
+      {
+        "value": "OpenAI",
+        "label": "Select Partner, formés et accompagnés par OpenAI"
       }
     ],
     "partner": {
@@ -251,9 +265,9 @@
     "workflow": {
       "robotAlt": "Le robot de Qartmina, l'agent au centre de vos flux de travail",
       "tabs": {
-        "integration": "Intégration",
-        "agent": "Agent IA",
-        "automation": "Automatisation"
+        "integration": "Vos outils connectés",
+        "agent": "Le travail fait",
+        "automation": "Tourne tout seul"
       },
       "captions": {
         "integration": "Connecté aux outils que vous utilisez déjà.",
@@ -277,8 +291,63 @@
       "loop": "Boucle continue"
     },
     "services": {
-      "title": "Expertise",
-      "intro": "{areas} domaines, un seul partenaire. Chaque projet a un chef de projet Qartmina et il est réalisé par des spécialistes que nous choisissons et contrôlons nous-mêmes."
+      "title": "Trois façons de mettre l'IA au travail",
+      "intro": "{areas} offres, un seul partenaire. Chaque projet est piloté par un chef de projet senior Qartmina et réalisé par des ingénieurs chevronnés que nous choisissons et contrôlons."
+    },
+    "method": {
+      "title": "Votre premier cas d'usage en production en un mois",
+      "intro": "Pas une démo qui dort dans un tiroir : un premier usage qui tourne chez vous, dans vos outils, au bout de quatre semaines. Les suivants s'ajoutent ensuite, un par un.",
+      "steps": [
+        {
+          "when": "Semaine 1",
+          "title": "Comprendre et choisir",
+          "text": "Nous regardons vos tâches avec vos équipes, chiffrons chaque piste et retenons avec vous le cas d'usage qui rapporte le plus."
+        },
+        {
+          "when": "Semaine 2",
+          "title": "Concevoir la solution",
+          "text": "Nous dessinons le nouveau déroulé : ce que l'IA prend en charge, ce qu'une personne valide, les outils à connecter."
+        },
+        {
+          "when": "Semaines 3 et 4",
+          "title": "Construire et mettre en service",
+          "text": "Nos ingénieurs construisent, testent sur vos données réelles et mettent en production dans vos outils. Un système qui tourne, pas une maquette."
+        },
+        {
+          "when": "Ensuite",
+          "title": "Former et étendre",
+          "text": "Vos équipes prennent la main, nous mesurons le gain obtenu, puis nous ajoutons les cas d'usage suivants."
+        }
+      ]
+    },
+    "model": {
+      "title": "Des ingénieurs chevronnés, pour une fraction du coût",
+      "intro": "Nos chefs de projet seniors pilotent chaque mission. Le travail est réalisé par des ingénieurs expérimentés, principalement nord-africains : le niveau d'un ingénieur senior européen, à un coût bien plus accessible.",
+      "points": [
+        {
+          "title": "Un chef de projet senior qui répond de tout",
+          "text": "Un seul interlocuteur, du premier appel à la mise en production. Il cadre, planifie, contrôle et vous rend compte."
+        },
+        {
+          "title": "Des ingénieurs expérimentés et sélectionnés",
+          "text": "Nous choisissons chaque ingénieur pour votre sujet, sur la base de projets réels, et nous ne gardons que ceux dont le travail tient la route."
+        },
+        {
+          "title": "Francophones, sur votre fuseau horaire",
+          "text": "Nos ingénieurs parlent français et travaillent à vos horaires, à une heure près. Les échanges restent simples et rapides."
+        },
+        {
+          "title": "Vérifié avant de vous être remis",
+          "text": "Chaque livrable est relu et testé par un chef de projet Qartmina avant la remise. Vous payez un travail qui fonctionne."
+        }
+      ],
+      "formulasTitle": "Des ingénieurs à la demande",
+      "formulasIntro": "Besoin de renfort ou d'expertise dans votre équipe tech ? Trois formules, selon votre besoin."
+    },
+    "caseStudies": {
+      "title": "Nos réalisations",
+      "intro": "Pour Docutrad, éditeur d'un CRM, nos ingénieurs ont remis l'infrastructure d'aplomb, puis aidé à mettre un nouveau produit en production en une semaine.",
+      "all": "Voir toutes nos réalisations"
     }
   },
   "contactForm": {
@@ -299,9 +368,9 @@
   "services": {
     "overview": {
       "title": "Expertises",
-      "intro": "Tout ce qu'il faut à une entreprise pour mettre la data et l'IA au travail, construire ses logiciels et soigner son image en ligne. Un chef de projet, des spécialistes choisis dans notre réseau et un contrôle qualité avant chaque livraison.",
-      "metaTitle": "Nos expertises : data et IA, logiciel, marque",
-      "metaDescription": "Data et IA, logiciels sur mesure et SaaS, marque et présence en ligne chez un seul partenaire digital, avec un chef de projet et des spécialistes vérifiés sur chaque projet."
+      "intro": "Trois offres pour mettre l'IA au travail dans votre entreprise : vos opérations, votre marketing et vos lancements, et des ingénieurs pour renforcer votre équipe. Un chef de projet senior pilote chaque projet, et un premier cas d'usage passe en production en un mois.",
+      "metaTitle": "Nos offres IA pour les PME : opérations, marketing, ingénieurs",
+      "metaDescription": "L'IA pour vos opérations, l'IA pour votre marketing et vos lancements, des ingénieurs à la demande : un studio IA à Nice, un chef de projet senior, un premier cas d'usage en production en un mois."
     },
     "breadcrumb": "Fil d'Ariane",
     "categoryServicesTitle": "Ce que nous proposons",
@@ -342,23 +411,23 @@
     "platformsTitle": "Les plateformes que nous installons et maintenons"
   },
   "serviceCategories": {
-    "data-ai": {
-      "title": "Data & IA",
-      "metaTitle": "Data et IA pour les PME : automatisation, agents, MCP",
-      "summary": "Automatisation, IA générative, extraction de documents, MCP, prédiction et vision : l'IA appliquée à vos processus, avec une personne qui valide.",
-      "intro": "L'IA vaut la peine quand elle enlève du vrai travail à vos équipes. Nous partons de vos processus et de vos données, choisissons la technique la plus simple qui fonctionne et la branchons sur vos outils. Vos équipes apprennent à la faire tourner, et une personne garde la main sur ce qui compte."
+    "ai-operations": {
+      "title": "L'IA pour vos opérations",
+      "metaTitle": "IA pour les PME : factures, documents, CRM et rapports",
+      "summary": "Factures, devis, documents et e-mails traités seuls, rapports rédigés, contrôles faits : vos équipes gagnent des heures chaque semaine.",
+      "intro": "L'IA vaut la peine quand elle enlève du vrai travail à vos équipes. Nous partons de vos tâches qui reviennent chaque semaine, trouvons celles où l'IA rapporte le plus et mettons la première en production en un mois, dans les outils que vous utilisez déjà. Une personne de votre équipe garde toujours la main sur ce qui compte."
     },
-    "software-development": {
-      "title": "Développement logiciel",
-      "metaTitle": "Logiciel sur mesure et plateformes SaaS pour les entreprises",
-      "summary": "Des logiciels sur mesure et des plateformes SaaS construits autour de votre façon de travailler.",
-      "intro": "Un logiciel du marché colle rarement à votre façon de travailler, et les tableurs atteignent leurs limites bien avant qu'on s'en rende compte. Nous construisons les outils internes de vos équipes et les produits SaaS que vous vendez à vos clients. Chaque projet a un chef de projet Qartmina qui en répond, du premier atelier à la livraison."
+    "ai-marketing": {
+      "title": "L'IA pour votre marketing et vos lancements",
+      "metaTitle": "IA pour le marketing des PME : contenus, visuels, vidéos",
+      "summary": "Plans de contenu, visuels, vidéos et pages de lancement produits par l'IA à votre image : lancez plus vite, plus souvent.",
+      "intro": "Lancer un produit ou tenir un rythme de publication demande des semaines de travail. Nous branchons des outils d'IA sur votre charte, votre ton et vos offres, pour produire vos contenus, vos visuels en 2D et en 3D, vos vidéos et vos pages de lancement en quelques jours. Votre équipe relit et valide tout avant publication."
     },
-    "brand": {
-      "title": "Marque et présence en ligne",
-      "metaTitle": "Identité de marque, design et réseaux sociaux",
-      "summary": "Logo, design, écrans simples à utiliser et réseaux sociaux pour rester présent à l'esprit de vos clients.",
-      "intro": "On juge une entreprise sur ce qu'on voit d'elle avant même de lui parler. Nous concevons votre identité, vos supports et les écrans qu'utilisent vos clients, puis nous vous aidons à rester visible sur les réseaux sociaux. Tout suit la même marque : votre entreprise a la même allure sur une enseigne, une présentation ou un téléphone."
+    "engineers": {
+      "title": "Des ingénieurs à la demande",
+      "metaTitle": "Ingénieurs à la demande : renfort tech et conseil en IA",
+      "summary": "Des ingénieurs chevronnés rejoignent votre équipe pour livrer plus vite, pour une fraction du coût d'un senior européen.",
+      "intro": "Votre équipe tech manque de bras, ou d'une expertise précise pour lancer une fonctionnalité, passer sur le cloud ou ajouter l'IA à votre produit. Nos ingénieurs chevronnés, principalement nord-africains et francophones, la rejoignent pour quelques jours ou plusieurs mois, pilotés par un chef de projet senior Qartmina qui contrôle chaque livraison."
     }
   },
   "visuals": {
@@ -666,7 +735,7 @@
   },
   "portfolio": {
     "metaTitle": "Réalisations",
-    "metaDescription": "Études de cas d'agents IA, d'automatisations et de plateformes de données conçus par Qartmina, avec le problème, l'approche et le résultat mesuré.",
+    "metaDescription": "Nos réalisations : ce que l'IA et nos ingénieurs ont changé chez nos clients, avec le problème, l'approche et le résultat.",
     "title": "Nos réalisations",
     "intro": "Chaque étude de cas présente le problème, ce que nous avons construit et ce qui a changé. Les démos sont signalées comme telles.",
     "sector": "Secteur",
@@ -680,7 +749,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Des articles concrets pour mettre les agents IA, l'automatisation et les données au service de vraies entreprises.",
+    "metaDescription": "Des articles concrets pour mettre l'IA au travail dans votre entreprise : automatisation, documents, marketing, données.",
     "title": "Blog",
     "intro": "Des conseils concrets pour mettre l'IA et les données au travail. Pas d'effet de mode, des exemples réels.",
     "empty": "Les premiers articles arrivent bientôt. Abonnez-vous à la newsletter pour les recevoir.",
@@ -698,9 +767,9 @@
   },
   "about": {
     "metaTitle": "À propos",
-    "metaDescription": "Qartmina est une société de conseil en IA et en données au service des PME partout en France. Découvrez notre nom, notre fondateur et notre façon de travailler.",
+    "metaDescription": "Qartmina est un studio IA basé à Nice. Nous mettons l'IA en production pour les PME, agences et startups de la région PACA et de toute la France.",
     "title": "À propos de Qartmina",
-    "intro": "Nous aidons les entreprises à se digitaliser et à mettre l'IA au travail, de la stratégie à l'exécution, en appuyant chaque recommandation sur des preuves.",
+    "intro": "Nous aidons les PME à mettre l'IA au travail : nous trouvons les usages qui rapportent le plus, nous les construisons et nous les mettons en production, en commençant par un premier cas d'usage en un mois.",
     "nameTitle": "Le nom",
     "nameText": "Qartmina signifie « la nouvelle mine ». Les données sont la matière première de notre époque et, comme toute mine, elles ne valent quelque chose qu'une fois creusées, raffinées et mises à profit. C'est notre métier.",
     "founderTitle": "Le fondateur",
@@ -722,23 +791,24 @@
     ],
     "rhythm": [
       {
-        "value": "< 1 mois",
-        "label": "pour une première version opérationnelle"
+        "value": "1 mois",
+        "label": "pour un premier cas d'usage en production"
       },
       {
-        "value": "3 mois",
-        "label": "pour la mise en production"
+        "value": "1 chef de projet",
+        "label": "senior, du premier appel à la mise en service"
       },
       {
-        "value": "6 mois",
-        "label": "pour un produit qui grandit"
+        "value": "Ensuite",
+        "label": "un cas d'usage après l'autre"
       }
     ],
     "partnersTitle": "Partenaires",
     "locationsTitle": "Où nous travaillons",
-    "locationsText": "À distance partout en France, selon des standards internationaux. Basés en France.",
+    "locationsText": "Basés à Nice. Sur place dans la région PACA quand c'est utile, à distance partout en France.",
     "coreMarketsLabel": "Marchés principaux",
     "coreMarkets": [
+      "Nice et région PACA",
       "France"
     ],
     "reachLabel": "Également présents en",
@@ -750,7 +820,7 @@
   },
   "book": {
     "metaTitle": "Prendre rendez-vous",
-    "metaDescription": "Réservez un appel gratuit de 30 minutes avec Qartmina pour examiner un processus et voir si un agent IA vaut la peine d'être construit.",
+    "metaDescription": "Réservez un appel gratuit de 30 minutes avec Qartmina : nous regardons une tâche qui vous coûte du temps et vous disons si l'IA vaut la peine, et par où commencer.",
     "title": "Réserver un appel gratuit de 30 minutes",
     "intro": "Nous examinons ensemble un processus et voyons si un agent vaut la peine d'être construit. Aucune préparation nécessaire.",
     "calendarTitle": "Calendrier de réservation",
@@ -1158,59 +1228,59 @@
   },
   "servicePages": {
     "ai-automation": {
-      "title": "Automatisation par l'IA",
-      "metaTitle": "Automatisation des processus par l'IA pour les PME",
-      "summary": "Moins de saisie, de tri et de relances : l'IA prend en charge les tâches répétitives de vos équipes, et une personne valide ce qui compte.",
-      "intro": "Nous automatisons les processus qui reviennent chaque jour et coûtent le plus en temps et en erreurs. L'IA lit, trie et prépare le travail dans vos outils actuels, et votre équipe garde la main sur les décisions.",
+      "title": "Les tâches répétitives tournent seules",
+      "metaTitle": "Automatisation des tâches par l'IA pour PME à Nice",
+      "summary": "Vos logiciels se passent le travail tout seuls, l'IA gère les étapes qui demandent du jugement, une personne valide ce qui compte.",
+      "intro": "Vos équipes récupèrent les heures passées à copier, trier et relancer. Les tâches qui reviennent chaque jour entre votre CRM, votre logiciel de gestion et votre messagerie s'enchaînent seules, et l'IA prend en charge les étapes où il faut lire, comprendre ou choisir. Une personne garde la main sur les décisions qui comptent.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de tâches que l'IA prend en charge, pendant que votre équipe garde la main sur les décisions.",
+        "intro": "Des exemples concrets de tâches qui tournent seules, pendant que votre équipe garde la main sur les décisions.",
         "items": [
           {
-            "title": "Commandes par e-mail",
-            "text": "Les bons de commande arrivés dans votre boîte mail sont lus et saisis dans votre ERP. Votre équipe ne traite que les cas inhabituels."
+            "title": "Commandes saisies sans vous",
+            "text": "Les bons de commande reçus par e-mail sont lus et saisis dans votre logiciel de gestion. Votre équipe ne traite que les cas inhabituels."
           },
           {
-            "title": "Factures fournisseurs",
-            "text": "Chaque facture est lue, vérifiée et rapprochée de son bon de commande. Les écarts vous sont signalés avant le paiement."
+            "title": "Factures vérifiées avant paiement",
+            "text": "Chaque facture est vérifiée et rapprochée de son bon de commande. Les écarts vous sont signalés avant de payer, pas après."
           },
           {
-            "title": "Demandes clients",
-            "text": "Les e-mails et formulaires entrants sont triés par sujet et par urgence, puis transmis à la bonne personne avec un brouillon de réponse."
+            "title": "Demandes clients triées",
+            "text": "E-mails et formulaires entrants sont classés par sujet et par urgence, puis transmis à la bonne personne avec un brouillon de réponse. Vos clients attendent moins."
           },
           {
-            "title": "Devis et chiffrages",
-            "text": "Un premier chiffrage est préparé à partir de la demande et de vos grilles de prix. Votre expert le relit et l'ajuste avant envoi."
+            "title": "Des devis prêts plus vite",
+            "text": "Un premier chiffrage est préparé à partir de la demande et de vos grilles de prix. Votre expert le relit et l'ajuste, et le devis part plus tôt."
           },
           {
-            "title": "Rapports et comptes rendus",
-            "text": "Le rapport hebdomadaire des ventes ou le compte rendu de réunion est rédigé à partir de vos données, prêt à être relu."
+            "title": "Rapports et contrôles réguliers",
+            "text": "Le point hebdomadaire des ventes ou le contrôle de fin de mois est préparé à partir de vos données, prêt à être relu."
           },
           {
-            "title": "Relances et suivi",
+            "title": "Relances au bon moment",
             "text": "Pièces manquantes, devis sans réponse, factures en retard : les relances partent au bon moment, sans que personne ait à y penser."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, du premier diagnostic jusqu'à l'usage au quotidien par vos équipes.",
+        "intro": "Quatre étapes, du choix de la première tâche jusqu'à l'usage au quotidien par vos équipes.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous passons en revue vos processus avec vos équipes, choisissons les tâches à automatiser en premier et fixons ensemble le gain attendu."
+            "title": "Choisir la tâche qui rapporte le plus",
+            "text": "Nous passons vos processus en revue avec vos équipes, choisissons la tâche à automatiser en premier et fixons ensemble le gain attendu : heures gagnées, erreurs évitées."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Avec vos équipes, nous redéfinissons le déroulé du travail : ce que l'IA fait seule, et ce qu'une personne valide avant d'agir."
+            "title": "Redessiner le circuit",
+            "text": "Avec vos équipes, nous décrivons le nouveau déroulé : ce qui s'enchaîne seul, ce que l'IA traite, et ce qu'une personne valide avant d'agir."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Nous testons d'abord sur vos données réelles et mesurons la fiabilité. Quand les chiffres sont bons, nous déployons dans vos outils existants."
+            "title": "En production en un mois",
+            "text": "Nous testons sur vos données réelles et mesurons la fiabilité, puis nous mettons la première automatisation en service dans vos outils en un mois. Les suivantes s'ajoutent ensuite, une par une."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons vos équipes, suivons les coûts et la qualité, et encadrons les usages : RGPD, AI Act, validation humaine."
+            "title": "Former et encadrer",
+            "text": "Nous formons vos équipes, suivons les coûts et la qualité, et posons les règles : RGPD, droits d'accès, validation humaine sur les étapes sensibles."
           }
         ]
       },
@@ -1219,95 +1289,91 @@
         "items": [
           {
             "question": "Par où commencer ?",
-            "answer": "Par une tâche qui revient souvent, prend du temps et génère des erreurs. Lors d'un premier appel de 30 minutes, nous regardons vos processus avec vous et vous disons franchement lesquels valent la peine d'être automatisés."
+            "answer": "Par une tâche qui revient souvent, prend du temps et génère des erreurs. Lors d'un premier appel gratuit de 30 minutes, nous regardons vos processus avec vous et vous disons franchement lesquels valent la peine d'être automatisés."
           },
           {
             "question": "Faut-il toujours de l'IA pour automatiser ?",
             "answer": "Non, et souvent ce n'est pas nécessaire. Quand une règle simple suffit, elle est plus fiable et moins chère. Nous réservons l'IA aux étapes où il faut lire, comprendre ou classer des contenus qui varient."
           },
           {
-            "question": "Est-ce que ça fonctionne avec nos outils actuels ?",
-            "answer": "Oui. Nous connectons l'automatisation à votre CRM, votre ERP, votre messagerie ou vos tableurs. Vous n'avez pas besoin de changer de logiciel."
-          },
-          {
-            "question": "Comment évitez-vous les erreurs de l'IA ?",
-            "answer": "Nous testons sur vos données avant la mise en service, nous fixons un seuil de confiance en dessous duquel une personne vérifie, et nous gardons une validation humaine sur les étapes sensibles."
+            "question": "Et si l'IA se trompe ?",
+            "answer": "Nous testons sur vos données avant la mise en service. Quand l'IA n'est pas assez sûre d'elle, le cas part chez une personne, et les étapes sensibles gardent toujours une validation humaine. Vous gardez vos logiciels actuels, rien n'est remplacé."
           },
           {
             "question": "Où vont nos données ?",
             "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. Avant la mise en service, nous vérifions par où passe chaque information."
           },
           {
-            "question": "Comment mesurer le retour sur investissement ?",
-            "answer": "Nous mesurons le temps passé, les erreurs et les volumes avant de commencer, puis les mêmes chiffres après la mise en service. Le résultat est un chiffre, pas une impression."
+            "question": "Combien ça coûte, et comment mesurer le gain ?",
+            "answer": "Le prix dépend du périmètre : nombre de tâches, outils à connecter, volumes. Nous le fixons avec vous avant de commencer. Pour le gain, nous mesurons le temps passé, les erreurs et les volumes avant, puis les mêmes chiffres après la mise en service."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Des ingénieurs expérimentés, principalement basés en Afrique du Nord, pilotés par un chef de projet senior qui reste votre interlocuteur du premier appel à la mise en service. Vous avez des ingénieurs aguerris pour une fraction du coût d'un ingénieur senior européen."
           }
         ]
       }
     },
     "generative-ai": {
-      "title": "IA générative",
-      "metaTitle": "IA générative pour les PME : assistants et agents IA",
-      "summary": "Assistants et agents IA branchés sur vos documents et vos outils : vos équipes trouvent, rédigent et analysent plus vite, et gardent la décision.",
-      "intro": "Nous concevons des assistants et des agents IA qui travaillent avec vos documents, vos données et vos logiciels. Chaque usage part d'un besoin réel de vos équipes, et une personne valide ce qui engage l'entreprise.",
+      "title": "Des assistants IA pour vos équipes",
+      "metaTitle": "Assistants et agents IA pour PME, sur vos documents",
+      "summary": "Des assistants IA qui répondent à partir de vos documents, source à l'appui, et rédigent rapports et réponses pour vos équipes.",
+      "intro": "Vos équipes trouvent la bonne information en quelques secondes au lieu de fouiller dans les dossiers, et vos clients ont une réponse plus vite. Nos assistants et agents IA travaillent avec vos documents, vos données et vos logiciels, et citent leur source. Une personne valide tout ce qui engage l'entreprise.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de ce que l'IA générative fait dans une entreprise, avec vos équipes aux commandes.",
+        "intro": "Des exemples concrets de ce que l'IA fait pour vos équipes et vos clients, avec vous aux commandes.",
         "items": [
           {
-            "title": "Assistant sur vos documents",
-            "text": "Vos équipes posent une question avec leurs mots et obtiennent une réponse tirée de vos procédures, contrats ou fiches produits, source à l'appui. C'est le principe du RAG : l'IA cherche d'abord dans vos documents, puis répond."
+            "title": "Des réponses tirées de vos documents",
+            "text": "Vos équipes posent une question avec leurs mots et obtiennent une réponse tirée de vos procédures, contrats ou fiches produits, avec la source pour vérifier. L'IA cherche d'abord dans vos documents, puis répond."
+          },
+          {
+            "title": "Un assistant pour vos clients",
+            "text": "Vos clients obtiennent une réponse précise à partir de votre documentation, à toute heure. Les demandes délicates passent à une personne de votre équipe."
+          },
+          {
+            "title": "Rapports et réponses rédigés",
+            "text": "Comptes rendus, réponses aux appels d'offres, fiches produits : un premier jet dans le style de votre entreprise, à partir de vos contenus, que votre équipe relit et corrige."
           },
           {
             "title": "Une équipe d'agents IA",
-            "text": "Un agent lit le dossier, un deuxième vérifie les pièces, un troisième rédige la synthèse et un quatrième analyse les chiffres. Ils se passent le travail, et une personne de votre équipe approuve avant tout envoi."
+            "text": "Un agent lit le dossier, un deuxième vérifie les pièces, un troisième rédige la synthèse, un quatrième analyse les chiffres. Ils se passent le travail sur un même processus, et une personne approuve avant tout envoi."
           },
           {
-            "title": "Analyse de dossiers",
-            "text": "Contrats, appels d'offres, dossiers de due diligence : l'IA relève les points clés et signale ce qui mérite une lecture attentive. Nous avons par exemple conçu un agent IA dédié à la due diligence."
+            "title": "Des dossiers analysés plus vite",
+            "text": "Contrats, appels d'offres, audits avant un rachat (due diligence) : l'IA relève les points clés et signale ce qui mérite une lecture attentive. Nous avons par exemple conçu un agent IA dédié à la due diligence."
           },
           {
-            "title": "Copilote pour vos équipes",
+            "title": "Un copilote dans vos outils",
             "text": "Au support, au commercial ou en comptabilité, un assistant intégré à l'outil de tous les jours résume les échanges, prépare les réponses et propose l'étape suivante."
-          },
-          {
-            "title": "Rédaction et synthèse",
-            "text": "Comptes rendus, réponses aux appels d'offres, fiches produits : un premier jet rédigé dans le style de votre entreprise à partir de vos contenus, que votre équipe relit et corrige."
-          },
-          {
-            "title": "L'IA dans votre produit",
-            "text": "Vous éditez un logiciel ? Nous y ajoutons des fonctions d'IA générative, comme une recherche en langage courant ou un agent qui traite les documents. Pour une startup du CRM, nous avons construit ce type d'agent en une semaine."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, du choix des premiers usages jusqu'à l'utilisation au quotidien par vos équipes.",
+        "intro": "Quatre étapes, du choix du premier assistant jusqu'à son usage au quotidien.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous partons de vos tâches et de vos documents, pas de la technologie. Ensemble, nous retenons les usages où l'IA générative apporte un vrai gain, et nous écartons ceux où une solution plus simple suffit."
+            "title": "Choisir l'usage qui rapporte le plus",
+            "text": "Nous partons de vos tâches et de vos documents, pas de la technologie. Ensemble, nous retenons l'usage où l'IA fait gagner le plus de temps, et écartons ceux où une solution plus simple suffit."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Nous fixons le rôle de chaque assistant ou agent, les documents et outils auxquels il a accès, et les étapes où une personne valide avant d'agir."
+            "title": "Définir le rôle de chaque assistant",
+            "text": "Nous fixons ce que fait chaque assistant ou agent, les documents et outils auxquels il a accès, et les étapes où une personne valide avant d'agir."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Nous commençons par un POC, une première version testée sur vos vrais documents, et nous mesurons la qualité des réponses. Quand elle tient, nous l'intégrons à vos outils et l'ouvrons à toute l'équipe."
+            "title": "En production en un mois",
+            "text": "Nous testons l'assistant sur vos vrais documents et mesurons la qualité des réponses. Le premier usage est en production en un mois, dans vos outils, puis nous l'ouvrons à toute l'équipe et passons au suivant."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons vos équipes, suivons la qualité et les coûts, et posons les règles : données autorisées, droits d'accès, RGPD, AI Act."
+            "title": "Former et fixer les règles",
+            "text": "Nous formons vos équipes, suivons la qualité et les coûts, et posons les règles : documents autorisés, droits d'accès, RGPD, validation humaine."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur l'IA générative",
+        "title": "Questions sur les assistants IA",
         "items": [
-          {
-            "question": "Par où commencer ?",
-            "answer": "Par une tâche précise où vos équipes passent beaucoup de temps à chercher, lire ou rédiger. Lors d'un premier appel gratuit de 30 minutes, nous en parlons avec vous et vous disons franchement si l'IA générative est la bonne réponse."
-          },
           {
             "question": "Nos données servent-elles à entraîner les modèles ?",
             "answer": "Pas avec les offres que nous retenons. Nous choisissons des offres d'IA entreprise qui ne s'entraînent pas sur vos données et privilégions un hébergement en Europe. Chaque assistant n'accède qu'aux documents dont il a besoin."
@@ -1317,16 +1383,20 @@
             "answer": "Oui, le risque existe. Nous le réduisons en obligeant l'assistant à s'appuyer sur vos documents et à citer ses sources, en le testant sur des questions dont la réponse est connue, et en gardant une validation humaine sur tout ce qui part à l'extérieur."
           },
           {
-            "question": "Peut-on l'intégrer à nos outils ou à notre logiciel ?",
-            "answer": "Oui. Nous connectons l'IA à votre CRM, votre messagerie, vos espaces de documents ou votre propre produit. Quand c'est utile, nous passons par MCP, un standard qui donne à un modèle d'IA un accès contrôlé à vos outils."
+            "question": "Peut-on le brancher sur nos outils ?",
+            "answer": "Oui. Nous connectons l'assistant à votre CRM, votre messagerie ou vos espaces de documents, avec des accès contrôlés : il ne voit et ne fait que ce que vous avez autorisé."
           },
           {
             "question": "Combien de temps faut-il ?",
-            "answer": "Cela dépend du périmètre. Sur un cas bien délimité, un premier prototype se compte en semaines, pas en mois. L'intégration dans vos outils et l'ouverture à toute l'équipe prennent ensuite plus de temps."
+            "answer": "Le premier usage est en production en un mois. L'ouverture à d'autres équipes et les usages suivants viennent ensuite, étape par étape."
           },
           {
-            "question": "Qu'est-ce qui fait varier le coût ?",
-            "answer": "Le nombre d'usages, le volume et l'état de vos documents, les outils à connecter et le niveau de contrôle attendu. Le coût d'utilisation des modèles s'y ajoute : nous l'estimons avant de commencer, puis nous le suivons."
+            "question": "Combien ça coûte ?",
+            "answer": "Le prix dépend du nombre d'usages, du volume et de l'état de vos documents, et des outils à connecter. Nous le fixons avec vous avant de commencer. Le coût d'utilisation des modèles d'IA s'y ajoute : nous l'estimons au départ, puis nous le suivons."
+          },
+          {
+            "question": "Pourquoi Qartmina ?",
+            "answer": "Nous sommes OpenAI Select Partner. Un chef de projet senior pilote des ingénieurs expérimentés, principalement basés en Afrique du Nord : vous avez une équipe aguerrie pour une fraction du coût d'un ingénieur senior européen."
           }
         ]
       },
@@ -1468,84 +1538,84 @@
       }
     },
     "document-extraction": {
-      "title": "Extraction de documents",
-      "metaTitle": "Extraction de documents par l'IA pour les PME",
-      "summary": "Vos équipes ne ressaisissent plus factures, contrats et formulaires : l'IA lit chaque document, en tire les données, et une personne vérifie les cas douteux.",
-      "intro": "Nous lisons vos documents à la place de vos équipes : l'OCR (la reconnaissance du texte dans un scan ou une photo) et des modèles d'IA en tirent les données utiles, puis les envoient dans vos outils. Avant de construire quoi que ce soit, nous mesurons la fiabilité sur vos propres documents.",
+      "title": "Fini la ressaisie de documents",
+      "metaTitle": "Traitement automatique des factures et documents pour PME",
+      "summary": "Factures, devis, bons de commande et contrats sont lus, vérifiés et rangés dans vos outils, sans que personne ne les ressaisisse.",
+      "intro": "Vos équipes arrêtent de recopier des documents et retrouvent du temps pour un travail qui compte. Factures, devis, bons de commande, contrats, formulaires, même scannés ou photographiés : l'IA les lit, vérifie les informations et les range au bon endroit dans vos outils. Les cas douteux passent par une personne, et nous mesurons la fiabilité sur vos propres documents avant tout déploiement.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de documents que l'IA lit pour vous, de la facture imprimée à la fiche remplie au stylo.",
+        "intro": "Des documents de tous les jours, lus pour vous, du PDF bien propre au bon de livraison signé au stylo.",
         "items": [
           {
-            "title": "Factures fournisseurs",
-            "text": "Nom du fournisseur, montants HT et TTC, TVA, échéance : chaque facture est lue et saisie dans votre logiciel comptable, prête à être validée."
+            "title": "Factures saisies sans vous",
+            "text": "Fournisseur, montants HT et TTC, TVA, échéance : chaque facture est lue et saisie dans votre logiciel comptable, prête à être validée. Les doublons sont repérés avant le paiement."
           },
           {
-            "title": "Notes de frais",
-            "text": "Vos salariés prennent leur ticket en photo. Le montant, la date et la catégorie se remplissent seuls, et les tickets illisibles sont mis de côté pour une personne."
+            "title": "Devis et bons de commande",
+            "text": "Les devis et commandes reçus sont lus, rapprochés entre eux et saisis dans votre logiciel de gestion. Un écart de prix ou de quantité vous est signalé tout de suite."
           },
           {
-            "title": "Contrats et avenants",
-            "text": "Pour chaque contrat, nous relevons qui s'engage, pour combien et jusqu'à quand. Les dates de préavis peuvent ensuite déclencher un rappel."
+            "title": "Pièces triées dès leur arrivée",
+            "text": "Les documents qui arrivent par e-mail, dans votre CRM (votre fichier clients) ou dans un dossier partagé sont reconnus, classés et rangés au bon endroit. Plus de pièce jointe perdue au fond d'une boîte mail."
           },
           {
-            "title": "Dossiers clients",
-            "text": "Formulaires d'inscription, demandes de financement, déclarations de sinistre : chaque champ est lu, et une pièce manquante est repérée avant que le dossier avance."
+            "title": "Contrats et échéances suivis",
+            "text": "Pour chaque contrat, vous savez qui s'engage, pour combien et jusqu'à quand. Les dates de préavis déclenchent un rappel avant qu'il soit trop tard."
           },
           {
-            "title": "Fiches écrites à la main",
-            "text": "Bons de livraison signés, fiches d'intervention, formulaires remplis au stylo puis photographiés : l'IA les déchiffre, et une personne reprend ce qui reste incertain."
+            "title": "Formulaires, même scannés",
+            "text": "Dossiers clients, demandes de financement, fiches remplies au stylo puis photographiées : chaque champ est lu, et une pièce manquante est repérée avant que le dossier avance."
           },
           {
-            "title": "Justificatifs à contrôler",
-            "text": "Avis d'imposition, justificatifs de domicile, extraits Kbis : les informations sont lues puis comparées entre elles. Une incohérence part chez une personne pour vérification."
+            "title": "Contrôler sans tout relire",
+            "text": "Justificatifs de domicile, extraits Kbis, avis d'imposition : les informations sont comparées entre elles. L'IA signale ce qui cloche, votre équipe décide de la suite."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, d'un échantillon de vos documents jusqu'à la saisie automatique au quotidien.",
+        "intro": "Quatre étapes, d'un échantillon de vos documents jusqu'au classement automatique au quotidien.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous recensons avec vos équipes les documents que vous recevez, leurs volumes et le temps passé à les saisir, puis nous choisissons ceux à traiter en premier."
+            "title": "Cibler les documents qui coûtent le plus",
+            "text": "Avec vos équipes, nous recensons les documents que vous recevez, leurs volumes et le temps passé à les saisir, puis nous choisissons ceux à traiter en premier."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Nous décidons ensemble de ce qui part directement dans vos outils et de ce qui passe d'abord par une personne. Chaque donnée lue porte un niveau de confiance : en dessous du seuil fixé, quelqu'un vérifie."
+            "title": "Décider qui valide quoi",
+            "text": "Nous fixons ensemble ce qui part directement dans vos outils et ce qui passe d'abord par une personne. Quand l'IA n'est pas assez sûre d'une lecture, quelqu'un vérifie."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Le POC, une première version testée en conditions réelles, tourne sur un échantillon de vos vrais documents : vous connaissez la fiabilité avant d'aller plus loin. Ensuite, nous branchons l'extraction sur votre ERP, votre CRM ou votre logiciel comptable."
+            "title": "En production en un mois",
+            "text": "Nous testons d'abord sur un échantillon de vos vrais documents : vous connaissez la fiabilité avant d'aller plus loin. Le premier type de document est traité en production en un mois, puis nous ajoutons les suivants."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons les personnes qui valident les cas douteux, suivons la fiabilité dans la durée et ajustons quand vos documents changent de présentation. Le RGPD et l'AI Act sont cadrés dès le départ."
+            "title": "Former et suivre dans la durée",
+            "text": "Nous formons les personnes qui valident les cas douteux, suivons la fiabilité et ajustons quand vos fournisseurs changent la présentation de leurs documents. Le RGPD est cadré dès le départ."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur l'extraction de documents",
+        "title": "Questions sur le traitement de documents",
         "items": [
           {
             "question": "Par où commencer ?",
-            "answer": "Par le type de document que vos équipes ressaisissent le plus. Lors d'un premier appel de 30 minutes, nous regardons vos volumes avec vous et vous disons franchement si l'extraction automatique vaut la peine."
+            "answer": "Par le type de document que vos équipes ressaisissent le plus. Lors d'un premier appel gratuit de 30 minutes, nous regardons vos volumes avec vous et vous disons franchement si le traitement automatique vaut la peine."
           },
           {
             "question": "Comment connaître la fiabilité avant de se lancer ?",
-            "answer": "Avant de développer quoi que ce soit, nous faisons lire un échantillon de vos documents réels et comparons chaque donnée extraite à la bonne réponse. Vous savez à quoi vous attendre, type de document par type de document, avant de décider de la suite."
+            "answer": "Avant de développer quoi que ce soit, nous faisons lire un échantillon de vos documents réels et comparons chaque donnée lue à la bonne réponse. Vous savez à quoi vous attendre, type de document par type de document, avant de décider de la suite."
           },
           {
-            "question": "L'IA sait-elle lire l'écriture manuscrite ?",
-            "answer": "Souvent, oui. L'OCR seul a du mal avec l'écriture à la main, les modèles d'IA récents s'en sortent bien mieux, surtout sur une photo nette. Le résultat varie d'un document à l'autre : c'est pourquoi nous testons sur les vôtres et qu'une personne reprend chaque lecture incertaine."
+            "question": "L'IA sait-elle lire un scan ou une écriture manuscrite ?",
+            "answer": "Souvent, oui. Les modèles d'IA récents lisent bien un scan ou une photo nette, et se débrouillent de mieux en mieux avec l'écriture à la main. Le résultat varie d'un document à l'autre : c'est pourquoi nous testons sur les vôtres et qu'une personne reprend chaque lecture incertaine."
           },
           {
-            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
-            "answer": "Le nombre de types de documents, leur difficulté de lecture, les volumes et les outils à connecter. Une facture imprimée coûte moins cher à traiter qu'un formulaire manuscrit. Une première version peut aller vite : pour une start-up qui édite un CRM, nous avons construit un agent de lecture de documents en une semaine, en partant de zéro."
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du nombre de types de documents, de leur difficulté de lecture, des volumes et des outils à connecter. Nous fixons le prix avec vous avant de commencer. Une première version peut aller vite : pour une start-up qui édite un CRM, nous avons construit un agent de lecture de documents en une semaine."
           },
           {
-            "question": "Est-ce que ça fonctionne avec nos outils actuels ?",
-            "answer": "Oui. Nous envoyons les données là où vos équipes travaillent déjà : logiciel comptable, ERP, CRM ou simple tableur partagé. Vous gardez vos logiciels."
+            "question": "Faut-il changer de logiciel ?",
+            "answer": "Non. Nous envoyons les données là où vos équipes travaillent déjà : logiciel comptable, logiciel de gestion, CRM ou simple tableur partagé. Vous gardez vos outils."
           },
           {
             "question": "Où vont nos documents ?",
@@ -1555,349 +1625,349 @@
       }
     },
     "mcp": {
-      "title": "Model Context Protocol (MCP)",
-      "metaTitle": "Model Context Protocol (MCP) pour les PME",
-      "summary": "Reliez votre CRM, votre ERP et vos documents à l'IA avec des accès contrôlés : elle répond à partir de vos vraies données, pas de suppositions.",
-      "intro": "Le MCP est une norme ouverte qui sert de prise commune entre un assistant IA et vos logiciels : CRM, ERP, bases de données, documents. Nous construisons ces connexions pour que l'IA travaille sur vos vraies données, avec uniquement les droits que vous lui donnez.",
+      "title": "L'IA branchée sur vos logiciels",
+      "metaTitle": "Connecter l'IA à votre CRM, ERP et fichiers pour PME",
+      "summary": "Fini le copier-coller : l'IA travaille directement dans votre CRM, votre ERP et vos fichiers, avec les accès que vous lui donnez.",
+      "intro": "Vos équipes obtiennent une réponse fiable en quelques secondes, sans fouiller trois logiciels ni copier-coller dans un chat. Nous branchons l'IA sur vos outils, CRM, ERP, fichiers, logiciels métier, pour qu'elle réponde à partir de vos vraies données. Elle ne voit et ne fait que ce que vous autorisez.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de ce que l'IA peut faire une fois reliée à vos outils, dans les limites que vous fixez.",
+        "intro": "Des tâches du quotidien que l'IA fait à votre place une fois reliée à vos outils, dans les limites que vous fixez.",
         "items": [
           {
-            "title": "Historique d'un client",
-            "text": "Un commercial demande où en est un client. L'assistant consulte le CRM et résume les derniers échanges, devis et commandes en quelques lignes."
+            "title": "Préparer un rendez-vous client en une minute",
+            "text": "Un commercial demande où en est un client. L'IA consulte le CRM et résume les derniers échanges, devis et commandes en quelques lignes."
           },
           {
-            "title": "Stocks et délais",
-            "text": "L'assistant lit votre ERP pour répondre sur un stock, un délai de livraison ou l'état d'une commande. Il consulte, il ne modifie rien."
+            "title": "Répondre sur un stock ou un délai",
+            "text": "Un client appelle pour sa commande : l'IA lit votre ERP et donne le stock, le délai de livraison ou l'état de la commande. Elle consulte, elle ne modifie rien."
           },
           {
-            "title": "Recherche dans vos documents",
-            "text": "Contrats, procédures, fiches produits : l'IA retrouve le bon passage et cite sa source. Le MCP se combine ici avec le RAG, une méthode qui va chercher les extraits utiles avant de répondre."
+            "title": "Retrouver la bonne information dans vos documents",
+            "text": "Contrats, procédures, fiches produits : l'IA retrouve le bon passage et indique d'où il vient. Plus besoin de demander au collègue qui sait."
           },
           {
-            "title": "Mises à jour encadrées",
+            "title": "Mettre à jour vos outils sans ressaisie",
             "text": "Créer une tâche, compléter une fiche, préparer un brouillon d'e-mail : l'IA écrit dans vos outils seulement là où vous l'autorisez, avec votre validation pour les actions sensibles."
           },
           {
-            "title": "Vos outils maison connectés",
-            "text": "Votre logiciel interne ou votre API maison devient accessible à l'IA grâce à un serveur MCP dédié, sans réécrire le logiciel."
+            "title": "Ouvrir votre logiciel maison à l'IA",
+            "text": "Votre outil interne devient utilisable par l'IA grâce à un connecteur dédié, sans réécrire le logiciel ni changer vos habitudes."
           },
           {
-            "title": "Chiffres à la demande",
-            "text": "Le dirigeant demande le chiffre d'affaires du mois par agence. L'assistant interroge la base en lecture seule et répond avec les chiffres et leur provenance."
+            "title": "Vos chiffres, sans attendre un rapport",
+            "text": "Le dirigeant demande le chiffre d'affaires du mois par agence. L'IA interroge vos données en lecture seule et répond avec les chiffres et leur provenance."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, du choix des outils à connecter jusqu'à l'usage quotidien par vos équipes.",
+        "intro": "Un premier usage en production en un mois, puis d'autres outils branchés au rythme de vos priorités.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous listons avec vous les questions et les tâches à confier à l'IA, les outils qu'elle doit consulter et les données qui doivent rester hors de sa portée."
+            "title": "Trouver la question qui fait gagner le plus de temps",
+            "text": "Nous listons avec vous les questions et les tâches qui reviennent sans cesse, les outils où se trouvent les réponses et les données qui doivent rester hors de portée de l'IA. Nous choisissons la priorité qui rapporte le plus."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Nous décrivons le contexte métier utile à l'IA : votre vocabulaire, vos règles, qui a le droit de voir quoi. Pour chaque outil, nous fixons la lecture seule, l'écriture ou une validation humaine avant d'agir."
+            "title": "Fixer qui a le droit de faire quoi",
+            "text": "Nous décrivons ce que l'IA doit savoir de votre métier : votre vocabulaire, vos règles, qui peut voir quoi. Pour chaque outil, nous décidons : lecture seule, écriture, ou validation humaine avant d'agir."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Nous branchons d'abord une ou deux sources et vérifions les réponses sur des cas réels. Chaque nouvel outil s'ajoute ensuite comme un module, sans tout reconstruire."
+            "title": "Un premier usage en production en un mois",
+            "text": "Nous branchons d'abord un ou deux outils et vérifions les réponses sur des cas réels. Une fois ce premier usage en place, chaque nouvel outil s'ajoute sans tout reconstruire. Techniquement, nous nous appuyons sur le MCP, une norme ouverte qui sert de prise commune entre l'IA et vos logiciels : vos connexions restent valables si vous changez de modèle d'IA."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons vos équipes, enregistrons chaque accès de l'IA à vos données et suivons l'usage, les coûts et la qualité : RGPD, AI Act, droits revus régulièrement."
+            "title": "Former vos équipes, garder le contrôle",
+            "text": "Nous formons vos équipes, enregistrons chaque accès de l'IA à vos données et suivons l'usage, les coûts et la qualité. Les droits sont revus régulièrement, dans le respect du RGPD."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur le Model Context Protocol",
+        "title": "Questions sur l'IA branchée sur vos logiciels",
         "items": [
           {
-            "question": "Par où commencer ?",
-            "answer": "Par une question que vos équipes posent souvent et dont la réponse se trouve dans un ou deux outils. Lors d'un premier appel de 30 minutes, nous regardons avec vous quelles sources connecter en premier et lesquelles peuvent attendre."
+            "question": "Est-ce que ça fonctionne avec nos logiciels ?",
+            "answer": "Avec la plupart, dès qu'ils permettent un accès à leurs données, ce qui est le cas de beaucoup de CRM, ERP et outils en ligne. Certains éditeurs proposent déjà un connecteur prêt pour l'IA, sinon nous en créons un. Un vieux logiciel fermé demande plus de travail : nous vous le disons dès le premier appel."
           },
           {
-            "question": "Est-ce que ça fonctionne avec nos outils ?",
-            "answer": "Avec la plupart, dès qu'ils disposent d'une API ou d'une base de données accessible. Certains éditeurs proposent déjà un serveur MCP, sinon nous en développons un. Le MCP étant une norme ouverte, vos connexions restent valables si vous changez de modèle d'IA."
-          },
-          {
-            "question": "L'IA peut-elle modifier nos données ?",
-            "answer": "Seulement si vous le décidez. Par défaut, nous ouvrons les accès en lecture seule. L'écriture s'ouvre outil par outil, sur un périmètre précis, avec une validation humaine pour les actions sensibles."
+            "question": "L'IA peut-elle modifier ou effacer nos données ?",
+            "answer": "Seulement si vous le décidez. Par défaut, les accès sont en lecture seule. L'écriture s'ouvre outil par outil, sur un périmètre précis, avec une validation humaine pour les actions sensibles."
           },
           {
             "question": "Où vont nos données ?",
-            "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. L'IA ne voit que ce que le serveur MCP lui transmet, et chaque accès est enregistré."
+            "answer": "Nous privilégions un hébergement en Europe et des offres d'IA entreprise qui ne s'entraînent pas sur vos données. L'IA ne voit que ce que le connecteur lui transmet, et chaque accès est enregistré. Nous vérifions le cadre RGPD avec vous avant de commencer."
           },
           {
-            "question": "Est-ce que l'IA se trompera moins ?",
-            "answer": "Moins souvent, parce qu'elle répond à partir de vos données au lieu de deviner. Le risque ne disparaît pas pour autant : nous testons sur des cas réels, demandons à l'IA de citer ses sources et gardons une vérification humaine là où une erreur coûte cher."
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du nombre d'outils à relier et de la facilité d'accès à leurs données. Le périmètre et le prix sont fixés avec vous avant de commencer, sans surprise en cours de route."
           },
           {
-            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
-            "answer": "Surtout le nombre d'outils à relier et l'état de leurs accès. Un outil avec une API documentée se connecte vite, un vieux logiciel sans API demande plus de travail. Nous suivons de près l'évolution du protocole, ce qui nous permet de vous dire tôt ce qui sera simple et ce qui ne le sera pas."
+            "question": "Qui fait le travail ?",
+            "answer": "Des ingénieurs expérimentés, pilotés par un chef de projet senior qui reste votre interlocuteur du premier appel à la mise en production. Ce modèle vous donne un niveau d'expertise senior pour une fraction du coût d'un ingénieur senior en Europe. Qartmina est OpenAI Select Partner."
+          },
+          {
+            "question": "Et si l'IA se trompe ?",
+            "answer": "Elle se trompe moins, parce qu'elle répond à partir de vos données au lieu de deviner, mais le risque ne disparaît pas. Nous testons sur vos cas réels, l'IA indique ses sources, et une personne valide là où une erreur coûte cher. Si les réponses ne sont pas assez fiables pendant le test, nous ne mettons pas en production."
           }
         ]
       }
     },
     "predictive-systems": {
-      "title": "Systèmes prédictifs",
-      "metaTitle": "Systèmes prédictifs et prévisions sur mesure pour PME",
-      "summary": "Anticipez vos ventes, vos stocks ou votre trésorerie à partir de votre historique, avec des prévisions expliquées et livrées dans vos outils.",
-      "intro": "Nous construisons des modèles qui apprennent de votre historique pour anticiper la demande, les départs de clients, les besoins de stock ou les tensions de trésorerie. Chaque prévision arrive dans vos outils avec ses raisons, et nous vous disons franchement quand vos données ne suffisent pas encore.",
+      "title": "Prévoir ventes, stocks et besoins",
+      "metaTitle": "Prévision des ventes et des stocks par l'IA pour PME",
+      "summary": "Voyez venir ventes, ruptures, trésorerie tendue et clients sur le départ, à partir de vos propres données, pour décider plus tôt.",
+      "intro": "Décidez avant d'être pris de court. À partir de votre historique, l'IA anticipe vos ventes, vos besoins de stock, vos semaines de trésorerie tendue ou les clients prêts à partir. Chaque prévision arrive dans vos outils avec ses raisons, et nous vous disons franchement quand vos données ne suffisent pas encore.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de décisions que vos données peuvent éclairer à l'avance.",
+        "intro": "Des décisions de tous les jours que vos propres données peuvent éclairer à l'avance.",
         "items": [
           {
-            "title": "Prévision des ventes",
-            "text": "Les ventes des prochaines semaines sont estimées par produit ou par agence, en tenant compte des saisons et de vos promotions. Vos achats et vos plannings partent d'une estimation chiffrée."
+            "title": "Acheter et planifier sur un chiffre",
+            "text": "Les ventes des prochaines semaines sont estimées par produit ou par agence, en tenant compte des saisons et de vos promotions. Vos achats et vos plannings partent d'une estimation, plus d'une intuition."
           },
           {
-            "title": "Stocks au bon niveau",
-            "text": "Le modèle anticipe les ruptures et les surstocks. Il propose des quantités à commander, et votre acheteur tranche."
+            "title": "Moins de ruptures, moins de surstock",
+            "text": "L'IA voit venir les ruptures et les surstocks, et propose des quantités à commander. Votre acheteur tranche."
           },
           {
-            "title": "Clients sur le départ",
-            "text": "Les clients dont l'activité ralentit sont repérés tôt, avec les signaux qui ont pesé dans l'alerte. Votre équipe commerciale sait qui appeler en premier."
+            "title": "Retenir les clients avant qu'ils partent",
+            "text": "Les clients dont l'activité ralentit sont repérés tôt, avec les signaux qui ont déclenché l'alerte. Votre équipe commerciale sait qui appeler en premier."
           },
           {
-            "title": "Trésorerie prévisionnelle",
-            "text": "Encaissements probables, retards de paiement habituels, dépenses récurrentes : vous voyez venir les semaines tendues avant qu'elles arrivent."
+            "title": "Voir venir les semaines tendues",
+            "text": "Encaissements probables, retards de paiement habituels, dépenses récurrentes : vous anticipez les creux de trésorerie au lieu de les subir."
           },
           {
-            "title": "Maintenance anticipée",
-            "text": "À partir de l'historique des pannes et des relevés de vos machines ou véhicules, le modèle signale les équipements à contrôler avant l'arrêt."
+            "title": "Éviter la panne qui arrête tout",
+            "text": "À partir de l'historique des pannes et des relevés de vos machines ou véhicules, l'IA signale les équipements à contrôler avant l'arrêt."
           },
           {
-            "title": "Risque client et impayés",
+            "title": "Limiter les impayés",
             "text": "Chaque nouveau client ou grosse commande reçoit une note de risque expliquée. Vous décidez d'un acompte ou d'un délai de paiement en connaissance de cause."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, de la première question posée à vos données jusqu'aux prévisions utilisées chaque semaine.",
+        "intro": "Une première prévision utile en production en un mois, puis d'autres décisions éclairées au fil de l'eau.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous choisissons avec vous la décision à éclairer, puis nous examinons vos données : historique, volume, qualité. Pas assez de données ? Nous vous le disons, et vous indiquons quoi collecter d'abord."
+            "title": "Choisir la décision qui compte le plus",
+            "text": "Nous choisissons avec vous la décision qui coûte le plus cher quand elle est mauvaise, puis nous regardons vos données : historique, volume, qualité. Pas assez de données ? Nous vous le disons, et vous indiquons quoi collecter d'abord."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Nous préparons et nettoyons vos données, puis définissons qui reçoit chaque prévision, à quel moment, et ce qu'il en fait."
+            "title": "Intégrer la prévision à votre façon de décider",
+            "text": "Nous rassemblons et nettoyons vos données, puis définissons qui reçoit chaque prévision, à quel moment, et ce qu'il en fait."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Le modèle est d'abord testé sur des périodes passées et comparé à votre méthode actuelle. S'il fait mieux, ses prévisions arrivent dans vos tableaux de bord et sous forme d'alertes dans vos outils."
+            "title": "Une première prévision en production en un mois",
+            "text": "La prévision est d'abord testée sur des périodes passées et comparée à votre méthode actuelle. Si elle fait mieux, elle arrive dans vos tableaux de bord et sous forme d'alertes dans vos outils. Nous passons ensuite aux décisions suivantes."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous apprenons à vos équipes à lire une prévision et sa marge d'erreur, et nous surveillons le modèle quand votre activité change. Il est réentraîné quand ses prévisions s'écartent de la réalité."
+            "title": "Former vos équipes, garder la prévision juste",
+            "text": "Nous apprenons à vos équipes à lire une prévision et sa marge d'erreur. Nous surveillons sa justesse quand votre activité change, et la recalons quand elle s'écarte de la réalité."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur les systèmes prédictifs",
+        "title": "Questions sur la prévision par l'IA",
         "items": [
-          {
-            "question": "Par où commencer ?",
-            "answer": "Par une décision que vous prenez souvent et qui coûte cher quand elle est mauvaise : une commande fournisseur, des renforts saisonniers, un client à relancer. Lors d'un premier appel de 30 minutes, nous regardons avec vous si vos données permettent de la prévoir."
-          },
           {
             "question": "Avons-nous assez de données ?",
             "answer": "Souvent plus que vous ne le pensez : ventes, factures, CRM, tableurs. Il faut en général un historique qui couvre plusieurs cycles de votre activité, par exemple au moins deux saisons complètes si elle est saisonnière. Sinon, nous vous le disons avant de lancer quoi que ce soit."
           },
           {
             "question": "Quelle fiabilité attendre ?",
-            "answer": "Une prévision n'est jamais une certitude. Nous la livrons avec une fourchette et les facteurs qui l'expliquent, puis nous mesurons régulièrement l'écart avec la réalité. Si le modèle ne fait pas mieux que votre méthode actuelle, nous ne le déployons pas."
+            "answer": "Une prévision n'est jamais une certitude. Nous la livrons avec une fourchette et les facteurs qui l'expliquent, puis nous mesurons régulièrement l'écart avec la réalité. Si elle ne fait pas mieux que votre méthode actuelle, nous ne la mettons pas en production."
           },
           {
             "question": "Faut-il changer d'outils ?",
             "answer": "Non. Les prévisions arrivent dans votre ERP, votre CRM, vos tableurs ou un tableau de bord simple, et les alertes par e-mail ou sur votre messagerie d'équipe."
           },
           {
-            "question": "Où vont nos données ?",
-            "answer": "Nous privilégions un hébergement en Europe et limitons les données au strict nécessaire. Quand des données clients sont en jeu, nous vérifions avec vous le cadre RGPD avant de commencer."
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend surtout de l'état de vos données, dispersées ou déjà propres, et du nombre d'outils où afficher les prévisions. Le périmètre et le prix sont fixés avec vous avant de commencer."
           },
           {
-            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
-            "answer": "Surtout l'état de vos données : dispersées dans plusieurs fichiers, incomplètes ou déjà propres. Le nombre de sources à relier et d'outils où afficher les prévisions compte aussi. Après le premier appel, nous vous donnons une estimation précise."
+            "question": "Où vont nos données ?",
+            "answer": "Nous privilégions un hébergement en Europe et n'utilisons que les données nécessaires. Quand des données clients sont en jeu, nous vérifions avec vous le cadre RGPD avant de commencer."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Des ingénieurs expérimentés en données, pilotés par un chef de projet senior qui reste votre interlocuteur du début à la fin. Vous accédez à une expertise senior pour une fraction du coût d'un ingénieur senior en Europe. Nous intervenons à Nice et en région PACA, et à distance partout en France."
           }
         ]
       }
     },
     "computer-vision": {
-      "title": "Computer vision",
-      "metaTitle": "Computer vision et analyse d'images par l'IA pour les PME",
-      "summary": "Vos photos et vidéos deviennent des données : défauts repérés, plaques et compteurs lus, stocks comptés. Votre équipe garde la main sur les décisions.",
-      "intro": "La computer vision, ou vision par ordinateur, apprend à un logiciel à reconnaître ce qu'il voit sur une photo ou une vidéo. Nous nous en servons pour tirer de vos images une information précise, un défaut, un chiffre, un comptage, qui déclenche ensuite une action dans vos outils.",
+      "title": "Contrôle visuel automatique",
+      "metaTitle": "Contrôle qualité et inspection visuelle par l'IA pour PME",
+      "summary": "Défauts repérés, étiquettes lues, stocks comptés, photos vérifiées : l'IA contrôle à partir de vos photos ou caméras, vous décidez.",
+      "intro": "Moins d'erreurs qui passent, moins d'heures passées à regarder des images. L'IA contrôle à votre place ce qu'une personne vérifie aujourd'hui à l'œil : un défaut, une étiquette, un comptage, une photo conforme. Elle s'appuie sur vos photos, un smartphone ou vos caméras, et votre équipe garde la main sur les décisions.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Des exemples concrets de tâches où l'image fait gagner du temps, pendant que votre équipe garde la main sur les décisions.",
+        "intro": "Des contrôles du quotidien que l'IA fait plus vite, pendant que votre équipe garde la main sur les décisions.",
         "items": [
           {
-            "title": "Contrôle qualité",
+            "title": "Repérer les défauts avant l'expédition",
             "text": "Une caméra sur la ligne repère les rayures, les pièces mal montées ou les étiquettes de travers. La pièce douteuse est écartée et photographiée pour votre responsable qualité."
           },
           {
-            "title": "Relevé de compteurs",
-            "text": "Vos techniciens prennent le compteur d'eau, de gaz ou d'électricité en photo. L'index part directement dans votre outil de suivi, sans recopie à la main."
+            "title": "Relever les compteurs sans recopier",
+            "text": "Vos techniciens prennent le compteur d'eau, de gaz ou d'électricité en photo. L'index part directement dans votre outil de suivi, sans ressaisie à la main."
           },
           {
-            "title": "Plaques et étiquettes",
-            "text": "À l'entrée d'un parking ou d'un quai de chargement, les plaques d'immatriculation sont lues. Sur un colis, la référence et le numéro de lot sont relevés automatiquement."
+            "title": "Lire plaques et étiquettes automatiquement",
+            "text": "À l'entrée d'un parking ou d'un quai de chargement, les plaques d'immatriculation sont lues. Sur un colis, la référence et le numéro de lot sont relevés sans saisie."
           },
           {
-            "title": "Vérification de photos",
-            "text": "Photos d'état des lieux, de chantier ou de sinistre, pièces d'identité : l'IA vérifie que l'image est nette, complète et cohérente avec le dossier avant qu'une personne la valide."
+            "title": "Des dossiers complets du premier coup",
+            "text": "Photos d'état des lieux, de chantier ou de sinistre, pièces justificatives : l'IA vérifie que chaque image est nette, complète et cohérente avec le dossier avant qu'une personne la valide."
           },
           {
-            "title": "Sécurité sur site",
+            "title": "Plus de sécurité sur vos sites",
             "text": "Casque ou gilet oublié, zone interdite franchie, allée encombrée : une alerte part vers le responsable du site. Nous cadrons ce dispositif avec vous pour respecter le RGPD et vos salariés."
           },
           {
-            "title": "Comptage des stocks",
+            "title": "Des inventaires plus courts",
             "text": "Une photo d'un rayon, d'une palette ou d'une travée suffit pour compter les articles et repérer les ruptures. Vous faites l'inventaire plus souvent, en y passant moins d'heures."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "Quatre étapes, de la première image analysée jusqu'à l'usage au quotidien sur le terrain.",
+        "intro": "Un premier contrôle en production en un mois, sur vos propres images, puis d'autres au fil de vos priorités.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "Nous partons d'un problème concret, comme un défaut qui échappe au contrôle ou un inventaire trop long, et vérifions avec vous que l'image suffit pour y répondre."
+            "title": "Choisir le contrôle qui coûte le plus",
+            "text": "Nous partons d'un problème concret, un défaut qui échappe au contrôle ou un inventaire trop long, et vérifions avec vous qu'une image suffit pour y répondre. Si un capteur ou une règle simple fait mieux, nous vous le disons."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Nous définissons qui reçoit l'alerte, ce que le système fait seul et ce qu'une personne confirme. Nous tenons compte des conditions réelles : éclairage, angle de prise de vue, caméras déjà en place."
+            "title": "Organiser le contrôle sur le terrain",
+            "text": "Nous définissons qui reçoit l'alerte, ce que l'IA fait seule et ce qu'une personne confirme. Nous tenons compte des conditions réelles : éclairage, angle de prise de vue, caméras déjà en place."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Un POC, c'est-à-dire un premier test en conditions réelles, tourne sur vos propres photos et vidéos : nous mesurons ce qui est bien reconnu et ce qui ne l'est pas. Si les résultats tiennent, nous déployons sur vos sites et dans vos outils."
+            "title": "Un premier contrôle en production en un mois",
+            "text": "Un premier test tourne sur vos propres photos et vidéos : nous mesurons ce qui est bien reconnu et ce qui ne l'est pas. Si les résultats tiennent, le contrôle passe en production, puis s'étend à d'autres sites ou d'autres usages."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons les équipes qui traitent les alertes, suivons la fiabilité dans le temps et réentraînons le modèle quand vos produits ou vos locaux changent. Le RGPD et l'AI Act sont cadrés, surtout dès que des personnes apparaissent à l'image."
+            "title": "Former vos équipes, garder un contrôle fiable",
+            "text": "Nous formons les personnes qui traitent les alertes, suivons la fiabilité dans le temps et réapprenons à l'IA vos nouveaux produits ou locaux quand ils changent. Le RGPD est cadré dès le départ, surtout quand des personnes apparaissent à l'image."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur la computer vision",
+        "title": "Questions sur le contrôle visuel automatique",
         "items": [
-          {
-            "question": "Par où commencer ?",
-            "answer": "Par une tâche où quelqu'un regarde aujourd'hui des images ou des objets pour décider : contrôler, compter, lire. Lors d'un premier appel de 30 minutes, nous vous disons franchement si la vision par ordinateur est la bonne réponse, ou si un capteur ou une règle simple suffit."
-          },
           {
             "question": "Faut-il acheter de nouvelles caméras ?",
             "answer": "Pas forcément. Un smartphone ou vos caméras actuelles suffisent souvent pour commencer. Nous vérifions la qualité de vos images pendant le test et ne recommandons du matériel que si les résultats l'exigent."
           },
           {
-            "question": "Faut-il entraîner un modèle sur mesure ?",
-            "answer": "Pas toujours. Pour lire un texte ou reconnaître des objets courants, des modèles existants font souvent l'affaire. Pour un défaut propre à vos produits, nous entraînons un modèle avec vos propres images, y compris des exemples de pièces défectueuses."
+            "question": "Que se passe-t-il quand l'IA se trompe ?",
+            "answer": "Cela arrivera, comme à toute personne qui inspecte. Nous mesurons le taux d'erreur avant la mise en service, fixons un seuil en dessous duquel une personne vérifie, et suivons les résultats dans la durée. Si le test n'est pas concluant, nous ne passons pas en production."
           },
           {
-            "question": "Que se passe-t-il quand le système se trompe ?",
-            "answer": "Cela arrivera, comme à toute personne qui inspecte. Nous mesurons le taux d'erreur avant la mise en service, fixons un seuil de confiance en dessous duquel une personne vérifie, et suivons les résultats dans la durée."
+            "question": "L'IA reconnaîtra-t-elle nos défauts à nous ?",
+            "answer": "Pour lire un texte ou reconnaître des objets courants, des outils existants font souvent l'affaire. Pour un défaut propre à vos produits, nous apprenons à l'IA à le reconnaître à partir de vos propres images, y compris des exemples de pièces défectueuses."
           },
           {
-            "question": "Qu'est-ce qui fait varier le coût et le délai ?",
-            "answer": "Surtout la préparation des images : combien il en faut, et s'il faut les annoter, c'est-à-dire indiquer à la main ce que chacune contient. Viennent ensuite le nombre de sites, le matériel et les outils à connecter. Un cas bien délimité, sur des photos que vous avez déjà, avance bien plus vite qu'une ligne de production à équiper."
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend surtout du nombre d'images à préparer, du nombre de sites, du matériel et des outils à connecter. Un cas bien délimité, sur des photos que vous avez déjà, va bien plus vite qu'une ligne de production à équiper. Le périmètre et le prix sont fixés avec vous avant de commencer."
           },
           {
             "question": "Et les images où apparaissent des personnes ?",
-            "answer": "Nous privilégions un hébergement en Europe, ou un traitement directement sur place quand c'est possible. Dès qu'une personne ou une plaque est à l'image, nous ne gardons que le nécessaire, pouvons flouter visages et plaques, et cadrons l'usage avec vous selon le RGPD et l'AI Act."
+            "answer": "Nous privilégions un hébergement en Europe, ou un traitement directement sur place quand c'est possible. Dès qu'une personne ou une plaque est à l'image, nous ne gardons que le nécessaire, pouvons flouter visages et plaques, et cadrons l'usage avec vous selon le RGPD et le règlement européen sur l'IA."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Des ingénieurs expérimentés, pilotés par un chef de projet senior qui reste votre interlocuteur du premier appel à la mise en production. Vous accédez à une expertise senior pour une fraction du coût d'un ingénieur senior en Europe."
           }
         ]
       }
     },
     "ai-sprint": {
-      "title": "IA Sprint",
-      "metaTitle": "IA Sprint pour PME : cas d'usage IA et feuille de route",
-      "summary": "Une journée avec vos équipes pour repérer les tâches où l'IA fait gagner du temps, les chiffrer, les classer, et repartir avec une feuille de route.",
-      "intro": "En une journée, sur place ou à distance, nous passons vos opérations en revue avec les personnes qui les font tourner. Vous repartez avec des cas d'usage IA chiffrés, classés par priorité, et un plan clair pour la suite.",
+      "title": "Vos cas d'usage IA les plus rentables",
+      "metaTitle": "Atelier IA pour PME : trouver vos cas d'usage rentables",
+      "summary": "Un atelier avec vos équipes pour repérer où l'IA vous fait gagner le plus, puis un premier cas en production en un mois.",
+      "intro": "En une journée, vous savez où l'IA vous fera gagner le plus de temps et d'argent. Nous passons vos opérations en revue avec les personnes qui les font tourner, sur place à Nice et en région PACA, ou à distance partout en France. Vous repartez avec vos cas d'usage classés par ce qu'ils rapportent, et le premier peut être en production dans le mois qui suit.",
       "included": {
         "title": "Ce que nous faisons pour vous",
-        "intro": "Les temps forts de la journée, et ce qui vous reste entre les mains une fois qu'elle est finie.",
+        "intro": "Une journée de travail concrète, et un plan que vous pouvez lancer tout de suite.",
         "items": [
           {
-            "title": "Ateliers avec vos équipes",
-            "text": "Direction, équipes métiers et informatique selon le sujet : nous écoutons celles et ceux qui font le travail chaque jour, dans vos locaux ou en visio."
+            "title": "Vos équipes écoutées",
+            "text": "Les meilleures idées viennent du terrain. Direction, équipes métiers et informatique : nous écoutons celles et ceux qui font le travail chaque jour, dans vos locaux ou en visio."
           },
           {
-            "title": "Repérage des tâches lourdes",
-            "text": "Saisies en double, gros volumes de documents, erreurs qui reviennent, relances à la main : nous notons ce qui coûte le plus de temps à vos équipes."
+            "title": "Le temps perdu repéré",
+            "text": "Saisies en double, piles de documents, erreurs qui reviennent, relances à la main : nous relevons ce qui coûte le plus d'heures à vos équipes."
           },
           {
-            "title": "Cas d'usage chiffrés",
-            "text": "Pour chaque piste, nous estimons le gain attendu, la faisabilité, les risques sur la qualité et les données, et un ordre de grandeur du coût."
+            "title": "Chaque piste chiffrée",
+            "text": "Pour chaque idée, vous connaissez le gain attendu, la difficulté, les risques sur la qualité et les données, et un ordre de grandeur du coût."
           },
           {
-            "title": "Priorités claires",
-            "text": "Les pistes sont classées selon le gain et l'effort. Certaines passent en tête, d'autres attendent, et quelques-unes sont écartées, avec la raison."
+            "title": "Par où commencer, clairement",
+            "text": "Les pistes sont classées selon ce qu'elles rapportent et ce qu'elles demandent. Certaines passent en tête, d'autres attendent, quelques-unes sont écartées, avec la raison."
           },
           {
-            "title": "Feuille de route écrite",
-            "text": "Un document de synthèse reprend les cas retenus, leur ordre, les données nécessaires et les premières étapes concrètes."
+            "title": "Une feuille de route écrite",
+            "text": "Un document clair reprend les cas retenus, leur ordre, les données nécessaires et les premières étapes. Vous savez quoi lancer en premier."
           },
           {
-            "title": "Restitution à la direction",
+            "title": "Une décision simple pour la direction",
             "text": "Nous présentons les conclusions aux décideurs et répondons à leurs questions. La feuille de route vous appartient : vous la menez en interne, avec un autre prestataire ou avec nous."
           }
         ]
       },
       "explainer": {
         "title": "Comment nous travaillons",
-        "intro": "L'IA Sprint couvre la première étape. Les trois suivantes viennent seulement si vous décidez d'aller plus loin.",
+        "intro": "L'atelier couvre la première étape. Les suivantes viennent seulement si vous décidez d'aller plus loin.",
         "points": [
           {
-            "title": "Diagnostic IA",
-            "text": "C'est la journée elle-même : nous regardons vos opérations avec vos équipes et repérons les tâches où l'IA peut apporter un gain mesurable."
+            "title": "Trouver la priorité",
+            "text": "C'est l'atelier lui-même : avec vos équipes, nous repérons les tâches où l'IA apporte un gain mesurable, et nous choisissons celle qui rapporte le plus."
           },
           {
-            "title": "Transformation du processus",
-            "text": "Pour les cas retenus, nous décrivons le futur déroulé du travail : ce que l'IA prend en charge, et ce qu'une personne valide."
+            "title": "Repenser le travail",
+            "text": "Pour le cas retenu, nous décrivons la nouvelle façon de travailler : ce que l'IA prend en charge, et ce qu'une personne valide."
           },
           {
-            "title": "Du POC à l'échelle",
-            "text": "Si vous le souhaitez, nous testons le premier cas d'usage sur vos données réelles avec un POC, une version d'essai limitée. Nous déployons seulement quand les résultats le justifient."
+            "title": "Un premier cas en production en un mois",
+            "text": "Nos ingénieurs construisent la solution sur vos données réelles et mettent le premier cas d'usage en production en un mois. Quand les résultats sont là, nous passons au suivant."
           },
           {
-            "title": "Formation et gouvernance",
-            "text": "Nous formons vos équipes et posons les règles d'usage dès le départ : données autorisées, RGPD, AI Act, validation humaine."
+            "title": "Former et fixer les règles",
+            "text": "Nous formons vos équipes et posons les règles dès le départ : données autorisées, RGPD, validation humaine sur ce qui compte. Vous restez maîtres de vos outils."
           }
         ]
       },
       "faq": {
-        "title": "Questions sur l'IA Sprint",
+        "title": "Questions sur l'atelier cas d'usage IA",
         "items": [
           {
-            "question": "Combien coûte un IA Sprint ?",
-            "answer": "Le prix dépend du périmètre : nombre d'équipes et de sujets, journée sur place ou à distance, déplacement. Nous le fixons avec vous avant la journée."
-          },
-          {
-            "question": "Sur place ou à distance ?",
-            "answer": "Les deux sont possibles. Sur place, nous voyons vos outils et vos habitudes de travail de près. À distance, la journée se déroule en visio, avec partage d'écran pour regarder vos outils ensemble."
-          },
-          {
-            "question": "Qui doit participer ?",
-            "answer": "Une personne de la direction pour arbitrer, des personnes qui vivent les processus au quotidien, et votre responsable informatique ou votre prestataire quand les données et les outils sont concernés."
+            "question": "Combien coûte l'atelier ?",
+            "answer": "Le prix dépend du périmètre : nombre d'équipes et de sujets, sur place ou à distance, déplacement. Nous le fixons avec vous avant de commencer."
           },
           {
             "question": "Faut-il déjà savoir ce qu'on veut faire avec l'IA ?",
             "answer": "Non. Une intuition suffit, et même aucune idée précise. La journée part de vos tâches réelles, pas de la technologie."
           },
           {
-            "question": "Que reçoit-on à la fin ?",
-            "answer": "Une liste de cas d'usage IA chiffrés et classés, avec pour chacun le gain attendu, l'effort et les risques, et une feuille de route écrite."
+            "question": "Sur place ou à distance ?",
+            "answer": "Les deux. Nous venons dans vos locaux à Nice et dans la région PACA, et nous travaillons à distance partout en France, en visio avec partage d'écran pour regarder vos outils ensemble."
           },
           {
-            "question": "Et après la journée ?",
-            "answer": "Vous décidez. Vous pouvez mener la feuille de route en interne ou avec un autre prestataire. Si vous le souhaitez, nous enchaînons sur un premier prototype, avec un chef de projet Qartmina et des spécialistes choisis pour le sujet."
+            "question": "Qui doit participer ?",
+            "answer": "Une personne de la direction pour arbitrer, des personnes qui vivent les processus au quotidien, et votre responsable informatique ou votre prestataire quand les données et les outils sont concernés."
+          },
+          {
+            "question": "Et si l'IA n'est pas la bonne réponse ?",
+            "answer": "Nous vous le disons. Quand une règle simple ou un outil que vous avez déjà suffit, c'est écrit dans la feuille de route. Mieux vaut le savoir avant d'investir."
+          },
+          {
+            "question": "Que se passe-t-il après l'atelier ?",
+            "answer": "Vous décidez. Vous pouvez mener la feuille de route en interne ou avec un autre prestataire. Si vous continuez avec nous, un chef de projet senior pilote des ingénieurs expérimentés, pour une fraction du coût d'une équipe senior européenne, et le premier cas d'usage peut être en production en un mois."
           }
         ]
       }
@@ -2947,10 +3017,10 @@
       }
     },
     "video-motion": {
-      "title": "Vidéo et motion design",
-      "metaTitle": "Vidéos explicatives et motion design",
-      "summary": "Motion design et vidéos pour vos publicités, vos lancements de produit et vos réseaux sociaux : des contenus qui attirent l'œil, expliquent en quelques secondes et ressemblent à votre marque.",
-      "intro": "Le motion design, c'est du graphisme en mouvement. Il est idéal pour la publicité et les réseaux sociaux : il capte le regard et vos spectateurs restent plus longtemps.",
+      "title": "Vidéos de lancement et motion design",
+      "metaTitle": "Vidéo de lancement et motion design par IA pour PME",
+      "summary": "Des vidéos courtes à vos couleurs pour vos lancements, vos publicités et vos réseaux, produites vite avec des outils d'IA.",
+      "intro": "Une vidéo qui bouge se regarde, une image fixe se fait dépasser. Nous produisons vos films de lancement, vos publicités et vos animations avec des outils d'IA nourris de votre logo, de vos couleurs et de votre ton. Une personne vérifie chaque vidéo avant de vous la livrer.",
       "compare": {
         "title": "Fixe ou animé",
         "intro": "Le motion design, c'est du graphisme en mouvement. Faites glisser la poignée : d'un côté une carte de visite en image fixe, de l'autre la même carte qui se construit, élément par élément.",
@@ -3088,6 +3158,528 @@
         "launchTitle": "Vous lancez un produit ?",
         "launchText": "Nous préparons le film de lancement, les teasers et le calendrier de publication de la semaine de sortie, pour que votre produit arrive avec de l'élan.",
         "launchCta": "Prendre rendez-vous"
+      }
+    },
+    "ai-advisor": {
+      "title": "Un conseiller IA pour votre produit",
+      "metaTitle": "Conseiller IA : intégrer l'IA à votre logiciel",
+      "summary": "Un conseiller IA travaille quelques jours avec votre équipe pour ajouter l'IA à votre produit, du bon choix jusqu'à la production.",
+      "intro": "Vos clients attendent de l'IA dans votre produit, et votre équipe ne sait pas par où commencer ? Un conseiller de Qartmina, studio IA et OpenAI Select Partner, travaille quelques jours à ses côtés : il choisit avec elle la bonne approche, construit la fonctionnalité avec elle et la met en production. Votre équipe repart avec le savoir-faire, pas seulement avec le code.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Une fonctionnalité IA qui sert vraiment vos clients, construite par votre équipe avec un conseiller à ses côtés.",
+        "items": [
+          {
+            "title": "Choisir la fonctionnalité qui compte",
+            "text": "Assistant, recherche dans vos contenus, résumé, tri automatique : nous identifions avec vous ce que vos clients utiliseront vraiment, et ce qui peut attendre."
+          },
+          {
+            "title": "Décider sur des faits, pas sur une mode",
+            "text": "Quel modèle, quel fournisseur, quel coût par utilisation : vous choisissez après un essai sur vos propres données, avec des chiffres en main."
+          },
+          {
+            "title": "Construire avec votre équipe",
+            "text": "Le conseiller code avec vos développeurs, dans votre code et vos outils. Ils apprennent en faisant, pas en regardant une présentation."
+          },
+          {
+            "title": "Des réponses fiables",
+            "text": "L'IA s'appuie sur vos données et vos documents pour répondre, et des tests repèrent les mauvaises réponses avant vos clients."
+          },
+          {
+            "title": "Tenir en production, pas seulement en démo",
+            "text": "Coûts, temps de réponse et qualité sont suivis dès la mise en ligne. La fonctionnalité tient quand vos clients s'en servent tous les jours."
+          },
+          {
+            "title": "Protéger les données de vos clients",
+            "text": "Les informations sensibles sont anonymisées avant d'être envoyées à l'IA, et nous privilégions des offres entreprise qui ne s'entraînent pas sur vos données. Le RGPD est pris en compte dès le départ."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, de l'idée jusqu'à une équipe capable d'ajouter seule la fonctionnalité suivante.",
+        "points": [
+          {
+            "title": "Comprendre le produit et l'équipe",
+            "text": "Nous regardons quel problème la fonctionnalité doit régler pour vos clients, et ce que votre équipe sait déjà faire."
+          },
+          {
+            "title": "Le bon profil, la bonne approche",
+            "text": "Nous vous proposons le conseiller adapté à votre technologie, puis nous comparons avec vous les options sur vos données, en gardant la plus simple qui fonctionne."
+          },
+          {
+            "title": "Construire et mettre en production",
+            "text": "Le conseiller construit la fonctionnalité avec vos développeurs, la teste sur vos données et la met en ligne avec eux. Les premiers résultats arrivent en quelques semaines."
+          },
+          {
+            "title": "Transmettre le savoir-faire",
+            "text": "Règles, documentation, bonnes pratiques de validation et de données : votre équipe sait faire évoluer la fonctionnalité et construire la suivante seule."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur le conseiller IA",
+        "items": [
+          {
+            "question": "Quelques jours, est-ce vraiment suffisant ?",
+            "answer": "Pour choisir l'approche et construire la fonctionnalité avec votre équipe, souvent oui. Nous l'avons vu chez une startup éditrice d'un CRM : nous l'avons aidée à mettre en production en une semaine un MVP qui lit des documents et en produit de nouveaux. Le nombre de jours est fixé avec vous, et vous pouvez en ajouter."
+          },
+          {
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du nombre de jours et de la fonctionnalité visée. Le prix est fixé avec vous avant de commencer, et il reste une fraction du coût d'un expert IA senior en Europe."
+          },
+          {
+            "question": "Que veut dire OpenAI Select Partner ?",
+            "answer": "Qartmina fait partie du réseau de partenaires d'OpenAI, avec le statut OpenAI Select Partner. Cela ne vous lie pas à un fournisseur : nous choisissons le modèle qui convient à votre produit, chez OpenAI ou ailleurs."
+          },
+          {
+            "question": "Notre équipe n'a jamais travaillé avec l'IA. Est-ce un problème ?",
+            "answer": "Non, c'est justement le cas le plus courant. Le conseiller travaille avec vos développeurs, explique chaque choix en termes simples et laisse derrière lui des règles qu'ils peuvent suivre seuls."
+          },
+          {
+            "question": "Où vont nos données et celles de nos clients ?",
+            "answer": "Nous vérifions avec vous par où passe chaque information avant la mise en ligne. Les données sensibles sont anonymisées avant l'appel à l'IA, et nous privilégions un hébergement en Europe quand c'est possible."
+          },
+          {
+            "question": "Et si l'IA ne donne pas de bons résultats ?",
+            "answer": "Nous testons sur vos données avant de construire, donc vous le savez tôt. Si l'IA n'est pas la bonne réponse à votre besoin, nous vous le disons, et nous vous proposons plus simple."
+          }
+        ]
+      }
+    },
+    "ai-visuals": {
+      "title": "Visuels 2D et 3D créés par IA",
+      "metaTitle": "Visuels produit, packshots et pubs par IA pour PME",
+      "summary": "Images produit, publicités et maquettes à vos couleurs et à vos polices, sans organiser un shooting à chaque nouveauté.",
+      "intro": "Montrez vos produits et vos offres sous leur meilleur jour, sur tous vos canaux, sans attendre un shooting ou une agence à chaque nouveauté. Nous produisons vos visuels 2D et 3D avec des outils d'IA nourris de votre charte : logo, couleurs, polices et formulations. Une personne vérifie chaque image avant de vous la livrer.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Les images dont votre marketing a besoin, au bon format et toujours à votre image.",
+        "items": [
+          {
+            "title": "Des packshots sans studio",
+            "text": "Vos produits sur fond neutre ou mis en scène, sous plusieurs angles, à partir de quelques photos de base. Forme, étiquette et couleurs restent fidèles au vrai produit."
+          },
+          {
+            "title": "Des publicités prêtes à diffuser",
+            "text": "Plusieurs variantes d'un même visuel pour Instagram, Facebook ou LinkedIn, pour tester ce qui fait cliquer sans tout refaire."
+          },
+          {
+            "title": "Des maquettes pour décider plus tôt",
+            "text": "Un emballage, un flyer, une vitrine ou un écran d'application mis en situation, pour valider une idée ou présenter une offre avant de la fabriquer."
+          },
+          {
+            "title": "Des illustrations à votre style",
+            "text": "Pour votre site, vos articles ou vos présentations : un style défini une fois, puis réutilisé partout pour que tout se ressemble."
+          },
+          {
+            "title": "Des rendus 3D de vos produits",
+            "text": "Un produit vu sous tous les angles, en vue éclatée ou dans un décor, même quand il n'a pas encore été photographié."
+          },
+          {
+            "title": "La même image sur tous vos canaux",
+            "text": "Chaque visuel respecte vos couleurs, vos polices et vos mots, décliné aux bons formats pour le site, les réseaux, les e-mails et l'impression."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Votre charte d'abord, les images ensuite, et une vérification humaine à chaque série.",
+        "points": [
+          {
+            "title": "Cibler les visuels qui comptent",
+            "text": "Quels visuels vous manquent, pour quels produits et quels canaux : nous choisissons avec vous ceux qui feront le plus de différence, en premier."
+          },
+          {
+            "title": "Traduire votre charte pour l'IA",
+            "text": "Nous rassemblons vos couleurs, polices, logos, photos de référence et formulations dans un guide que les outils d'IA suivent pour chaque image."
+          },
+          {
+            "title": "Une première série en moins d'un mois",
+            "text": "Une première série vérifiée et retouchée vous est livrée en moins d'un mois. Ensuite, nous l'étendons à d'autres produits, formats ou campagnes."
+          },
+          {
+            "title": "Garder la cohérence dans le temps",
+            "text": "Nous formons votre équipe à commander ou à produire de nouveaux visuels, et nous fixons les règles : qui valide, ce qui peut être généré, ce qui reste une vraie photo."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur les visuels créés par IA",
+        "items": [
+          {
+            "question": "Combien cela coûte-t-il ?",
+            "answer": "Cela dépend du nombre de visuels, de formats et de produits. Nous fixons le périmètre et le prix avec vous avant de commencer."
+          },
+          {
+            "question": "Est-ce un problème d'utiliser des images créées par IA ?",
+            "answer": "Pas si elles sont utilisées honnêtement. Votre produit reste fidèle à la réalité, nous ne fabriquons ni faux avis ni faux résultats, et nous vous prévenons quand une plateforme ou la loi demande d'indiquer qu'une image a été créée par IA."
+          },
+          {
+            "question": "Pouvons-nous utiliser les images librement ?",
+            "answer": "Oui, pour votre communication, publicité comprise. Nous travaillons avec des outils dont les conditions autorisent un usage commercial, et nous évitons toute ressemblance avec des personnes réelles, d'autres marques ou des œuvres protégées."
+          },
+          {
+            "question": "De quoi avez-vous besoin pour démarrer ?",
+            "answer": "Votre charte graphique si vous en avez une, votre logo, quelques photos de vos produits et des exemples de visuels que vous aimez. Pas encore de charte ? Nous en posons les bases avec vous."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Une équipe expérimentée, principalement basée en Afrique du Nord, pilotée par un chef de projet senior qui reste votre interlocuteur. Vous profitez d'un vrai savoir-faire pour une fraction du coût d'une équipe senior en Europe."
+          },
+          {
+            "question": "Et si le rendu ne nous convient pas ?",
+            "answer": "Chaque série passe par des allers-retours : vous commentez, nous corrigeons. Si l'IA ne donne pas un résultat assez fidèle pour un produit, nous vous le disons et proposons une vraie photo ou une retouche classique."
+          }
+        ]
+      }
+    },
+    "content-plan": {
+      "title": "Plan de contenu et publications IA",
+      "metaTitle": "Plan de contenu et posts LinkedIn par IA pour PME",
+      "summary": "Un calendrier éditorial et des publications prêtes chaque mois, dans votre ton, sans repartir d'une page blanche.",
+      "intro": "Vos réseaux restent actifs sans que votre équipe y passe ses semaines. Chaque mois, vous recevez un calendrier éditorial et des publications prêtes pour LinkedIn, Instagram ou Facebook, écrites dans votre ton et autour de vos offres. Les outils d'IA préparent les brouillons à partir de votre marque, notre équipe les relit, vous validez.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "De l'idée du mois à la publication en ligne, sans page blanche et sans perdre ce qui vous distingue.",
+        "items": [
+          {
+            "title": "Un calendrier éditorial clair",
+            "text": "Sujets, formats et dates du mois, calés sur vos offres, vos temps forts et vos saisons. Vous savez quoi publier, où et quand."
+          },
+          {
+            "title": "Des publications prêtes à poster",
+            "text": "Des textes écrits pour chaque réseau : un post LinkedIn n'a pas la forme d'une légende Instagram. Vous validez, nous programmons ou vous publiez vous-même."
+          },
+          {
+            "title": "Votre ton, à chaque publication",
+            "text": "Nous préparons une fois un dossier de marque : vos offres, vos clients, vos mots, vos meilleures publications. L'IA écrit à partir de lui, pas d'un modèle générique."
+          },
+          {
+            "title": "Une idée, plusieurs formats",
+            "text": "Une nouveauté, un témoignage ou un article devient un post, un carrousel, une story et un court e-mail. Plus de contenu, sans plus d'effort."
+          },
+          {
+            "title": "Dans les langues de vos clients",
+            "text": "Français, anglais ou d'autres langues, adaptés plutôt que traduits mot à mot, pour vos clients à Nice, en France ou à l'étranger."
+          },
+          {
+            "title": "Un point mensuel sans jargon",
+            "text": "Ce qui a été publié, ce qui a fait réagir et ce que nous ajustons le mois suivant. Vous voyez où va votre effort."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Une méthode simple, pour que l'IA écrive comme votre entreprise et pas comme tout le monde.",
+        "points": [
+          {
+            "title": "Comprendre votre marque",
+            "text": "Un atelier pour cerner vos offres, vos clients et votre façon de parler, puis choisir les deux ou trois réseaux qui comptent vraiment pour vous."
+          },
+          {
+            "title": "Construire votre méthode",
+            "text": "Nous rédigeons votre dossier de marque et les consignes données aux outils d'IA : ton, sujets, formats, mots à éviter. C'est ce qui rend les textes fidèles à votre entreprise."
+          },
+          {
+            "title": "Publier dès le premier mois",
+            "text": "Votre premier calendrier et ses publications sont prêts en moins d'un mois. Ensuite, nous ajoutons des formats, des réseaux ou des langues, à votre rythme."
+          },
+          {
+            "title": "Vous rendre autonomes",
+            "text": "Nous formons votre équipe à utiliser la méthode, nous fixons qui valide quoi, et votre dossier de marque reste dans vos comptes."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur les plans de contenu par IA",
+        "items": [
+          {
+            "question": "Combien cela coûte-t-il ?",
+            "answer": "Cela dépend du nombre de réseaux, de publications et de langues. Nous fixons le périmètre et le prix avec vous avant de commencer, et ils ne changent pas sans votre accord."
+          },
+          {
+            "question": "Les textes vont-ils sonner comme de l'IA ?",
+            "answer": "C'est justement ce que nous évitons. Les brouillons partent de votre dossier de marque, avec vos expressions et vos exemples, puis une personne les relit et les retouche. Rien n'est publié sans votre accord."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Une équipe expérimentée, principalement basée en Afrique du Nord, pilotée par un chef de projet senior qui reste votre interlocuteur. Vous profitez d'un vrai savoir-faire pour une fraction du coût d'une équipe senior en Europe."
+          },
+          {
+            "question": "Que deviennent nos informations ?",
+            "answer": "Nous n'utilisons que ce qui sert à écrire vos publications : vos offres, votre ton, vos contenus publics. Aucune donnée personnelle de vos clients n'est nécessaire. Nous choisissons des outils d'IA professionnels, réglons leurs paramètres de confidentialité et travaillons dans le respect du RGPD."
+          },
+          {
+            "question": "Garantissez-vous des abonnés ou des ventes ?",
+            "answer": "Non, et méfiez-vous de ceux qui le promettent. Nous fixons avec vous des objectifs que nous pouvons tenir, comme la régularité des publications, et nous vous disons chaque mois honnêtement ce qui marche."
+          },
+          {
+            "question": "Et si le ton ne nous convient pas ?",
+            "answer": "Le premier mois sert aussi à le caler. Vous corrigez, nous ajustons le dossier de marque, et les publications suivantes en tiennent compte. Si une approche ne marche pas, nous en changeons."
+          }
+        ]
+      }
+    },
+    "expert-mission": {
+      "title": "Mission d'expert ponctuelle",
+      "metaTitle": "Expert technique ponctuel : cloud, performance, mise en prod",
+      "summary": "Un problème technique précis, un ingénieur senior pour le régler : une fonctionnalité livrée, un passage au cloud, un produit fiable.",
+      "intro": "Une fonctionnalité qui n'avance pas, des serveurs qui saturent, des mises en production qui font peur : un ingénieur senior s'en occupe, le temps qu'il faut et pas plus. Vous financez une mission avec un objectif clair, pas un poste, pour une fraction du coût d'un expert senior en Europe. Un chef de projet senior de Qartmina cadre la mission et vérifie le résultat avant de vous le remettre.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des missions courtes, avec un objectif précis et un résultat que vous pouvez vérifier.",
+        "items": [
+          {
+            "title": "Livrer une fonctionnalité attendue",
+            "text": "La fonctionnalité que vos clients réclament sort enfin, construite dans votre code et avec ses tests. Votre équipe reste sur ses priorités."
+          },
+          {
+            "title": "Passer au cloud sans arrêter le produit",
+            "text": "Votre application quitte des serveurs fragiles pour un hébergement qui suit votre croissance. La migration avance par étapes, avec une sauvegarde à chaque étape."
+          },
+          {
+            "title": "Retrouver un produit rapide",
+            "text": "Pages lentes, requêtes qui traînent, factures d'hébergement qui grimpent : l'expert trouve la cause, la corrige et mesure la différence avant et après."
+          },
+          {
+            "title": "Arrêter les pannes à répétition",
+            "text": "Disque plein, erreurs que personne n'explique, service qui tombe : l'expert remonte à la source et met en place des alertes qui vous préviennent avant vos clients."
+          },
+          {
+            "title": "Livrer sans casser",
+            "text": "À chaque modification, tous vos tests tournent automatiquement, et seul ce qui passe est mis en ligne. Moins de bugs chez vos clients. C'est ce qu'on appelle un pipeline de mise en production."
+          },
+          {
+            "title": "Ne plus tester sur les vrais clients",
+            "text": "Développement, préproduction, production : chaque environnement a ses propres données. Vos fiches clients restent à leur place, et les essais ne touchent plus la production."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du problème posé jusqu'à une équipe qui sait faire tourner la solution seule.",
+        "points": [
+          {
+            "title": "Comprendre le problème et l'équipe",
+            "text": "Nous regardons votre installation avec votre équipe et fixons un objectif clair : ce qui doit fonctionner à la fin de la mission."
+          },
+          {
+            "title": "Choisir l'expert",
+            "text": "Nous vous proposons un ingénieur senior qui a déjà réglé ce type de problème, et nous estimons avec vous la durée de la mission."
+          },
+          {
+            "title": "Démarrer vite et livrer",
+            "text": "L'expert intervient dans votre environnement, par étapes, sans arrêter votre produit. Les premiers résultats arrivent en quelques semaines, vérifiés par notre chef de projet."
+          },
+          {
+            "title": "Laisser votre équipe autonome",
+            "text": "Documentation, passation, explications : votre équipe sait faire tourner la solution et la faire évoluer après le départ de l'expert."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur les missions d'expert",
+        "items": [
+          {
+            "question": "Combien coûte une mission ?",
+            "answer": "Cela dépend du périmètre. Nous le fixons avec vous avant de commencer, autour d'un objectif clair, pour que vous sachiez ce que vous achetez."
+          },
+          {
+            "question": "Combien de temps dure une mission ?",
+            "answer": "De quelques jours à quelques semaines, selon le problème. Nous estimons la durée au cadrage, et les premiers résultats arrivent en quelques semaines."
+          },
+          {
+            "question": "Faut-il arrêter notre produit pendant la mission ?",
+            "answer": "Dans la plupart des cas, non. Nous travaillons par étapes, avec des sauvegardes, pendant que vos clients continuent d'utiliser le produit. Si une coupure est inévitable, elle est courte et planifiée avec vous."
+          },
+          {
+            "question": "Avez-vous déjà mené ce type de mission ?",
+            "answer": "Oui. Pour une startup éditrice d'un CRM, nos ingénieurs ont fait passer le produit de serveurs fragiles à un cloud prêt pour la production, avec un pipeline qui arrête les bugs avant qu'ils n'arrivent aux clients. L'étude de cas est dans notre portfolio."
+          },
+          {
+            "question": "Qui accède à nos serveurs et à nos données ?",
+            "answer": "Uniquement l'expert affecté à la mission, avec les accès dont il a besoin. Ils sont retirés à la fin, la confidentialité est prévue au contrat, et les données personnelles sont traitées selon le RGPD."
+          },
+          {
+            "question": "Et si le problème est plus gros que prévu ?",
+            "answer": "Nous vous le disons dès que nous le voyons, avec les options possibles et leur coût. Rien n'est ajouté à la mission sans votre accord."
+          }
+        ]
+      }
+    },
+    "product-launch": {
+      "title": "Lancer un produit avec l'IA",
+      "metaTitle": "Lancement de produit avec l'IA : site, e-shop, contenus",
+      "summary": "Votre page de lancement ou votre boutique en ligne et tout le kit de contenus à votre image, prêts vite pour la sortie.",
+      "intro": "Arrivez sur le marché à la date prévue, avec tout ce qu'il faut pour vendre dès le premier jour. Nous préparons votre page de lancement ou votre boutique en ligne et le kit de contenus qui l'accompagne : visuels, vidéos, publications et e-mails, tous à l'image de votre marque. Les outils d'IA nous permettent d'aller vite, notre équipe vérifie chaque élément.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Tout ce qu'un lancement demande, préparé ensemble et autour d'un seul message.",
+        "items": [
+          {
+            "title": "Une page de lancement qui vend",
+            "text": "Une page claire qui présente le produit, répond aux questions et recueille les commandes ou les inscriptions, sur votre site ou créée pour l'occasion."
+          },
+          {
+            "title": "Une boutique en ligne prête à vendre",
+            "text": "Fiches produit, photos, paiement et livraison configurés sur une plateforme éprouvée comme Shopify ou WooCommerce. Pas de logiciel sur mesure à entretenir."
+          },
+          {
+            "title": "Les visuels du lancement",
+            "text": "Packshots, mises en scène, bannières et publicités à vos couleurs, déclinés pour le site, les réseaux et les e-mails."
+          },
+          {
+            "title": "Une vidéo de lancement et des teasers",
+            "text": "Un film court qui montre ce qui est nouveau et pourquoi c'est utile, avec des versions courtes pour chaque réseau."
+          },
+          {
+            "title": "Les publications et les e-mails",
+            "text": "Les annonces avant, pendant et après la sortie, écrites dans votre ton, avec une série d'e-mails pour vos clients et vos prospects."
+          },
+          {
+            "title": "Un calendrier de lancement",
+            "text": "Quoi publier, où et quand, de l'annonce aux relances, pour que l'intérêt monte au lieu de retomber le lendemain."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Une date, un message, et une équipe qui produit vite grâce à l'IA sans rien laisser passer.",
+        "points": [
+          {
+            "title": "Clarifier le lancement",
+            "text": "Ce que vous lancez, pour qui, à quelle date et avec quel message : nous fixons l'essentiel et ce qui doit être prêt en premier."
+          },
+          {
+            "title": "Concevoir le kit",
+            "text": "Page ou boutique, visuels, vidéo, publications, e-mails : nous dessinons l'ensemble autour d'un seul message et de votre charte."
+          },
+          {
+            "title": "Être prêt pour la date",
+            "text": "La première pièce clé, souvent la page de lancement, est en ligne en moins d'un mois. Le reste du kit suit au rythme du calendrier."
+          },
+          {
+            "title": "Vous passer la main",
+            "text": "Nous formons votre équipe à mettre la page à jour, à publier et à relancer. Vous gardez les fichiers, les accès et les règles de validation."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur le lancement de produit",
+        "items": [
+          {
+            "question": "Développez-vous un logiciel pour notre lancement ?",
+            "answer": "Non. Nous nous appuyons sur votre site actuel ou sur des plateformes éprouvées, rapides à mettre en place et simples à gérer. Si votre produit est lui-même un logiciel, nos ingénieurs peuvent renforcer votre équipe avec notre offre Ingénieurs à la demande."
+          },
+          {
+            "question": "Combien cela coûte-t-il ?",
+            "answer": "Cela dépend de ce que comprend votre lancement : page ou boutique, nombre de visuels, de vidéos et de langues. Nous fixons le périmètre et le prix avec vous avant de commencer."
+          },
+          {
+            "question": "En combien de temps pouvons-nous être prêts ?",
+            "answer": "Cela dépend de l'ampleur du lancement et de la vitesse de vos validations. Nous fixons ensemble ce qui doit sortir en premier, et cette première pièce est en ligne en moins d'un mois. Plus vous nous prévenez tôt, plus le lancement est serein."
+          },
+          {
+            "question": "Qui fait le travail ?",
+            "answer": "Une équipe expérimentée, principalement basée en Afrique du Nord, pilotée par un chef de projet senior qui reste votre interlocuteur. Vous profitez d'un vrai savoir-faire pour une fraction du coût d'une équipe senior en Europe."
+          },
+          {
+            "question": "Garantissez-vous les ventes ?",
+            "answer": "Non, personne ne le peut honnêtement. Nous vous garantissons un lancement prêt à la date fixée, cohérent sur tous vos canaux, et un point clair sur ce qui a marché pour ajuster la suite."
+          },
+          {
+            "question": "À qui appartiennent le site et les contenus ?",
+            "answer": "À vous. La boutique et les comptes sont à votre nom, et vous recevez tous les visuels, vidéos et textes. Nous travaillons grâce à des accès que vous pouvez retirer à tout moment."
+          }
+        ]
+      }
+    },
+    "team-reinforcement": {
+      "title": "Renfort pour votre équipe tech",
+      "metaTitle": "Renfort d'ingénieurs en régie pour PME et startups",
+      "summary": "Livrez plus sans recruter : des ingénieurs expérimentés rejoignent votre équipe pour quelques semaines ou quelques mois.",
+      "intro": "Votre feuille de route avance plus vite que votre équipe ? Un ou plusieurs ingénieurs expérimentés la rejoignent pour quelques semaines ou quelques mois, pour une fraction du coût d'un ingénieur senior en Europe. Ils sont pour la plupart basés en Afrique du Nord, parlent français, travaillent sur votre fuseau horaire ou presque, et un chef de projet senior de Qartmina vérifie leur travail.",
+      "included": {
+        "title": "Ce que nous faisons pour vous",
+        "intro": "Des renforts concrets, qui livrent dans vos outils et selon vos règles, pendant que vous gardez la main sur les priorités.",
+        "items": [
+          {
+            "title": "Livrer la feuille de route en retard",
+            "text": "Les fonctionnalités qui attendent depuis des mois avancent enfin. L'ingénieur prend ses tickets dans votre backlog et les livre avec vos règles de code."
+          },
+          {
+            "title": "Absorber un pic de charge",
+            "text": "Lancement, gros client, échéance serrée : vous renforcez l'équipe le temps du rush, puis vous revenez à votre taille normale. Sans recrutement ni période d'essai."
+          },
+          {
+            "title": "Tenir pendant une absence",
+            "text": "Départ, congé long, poste vacant : le travail continue pendant que vous recrutez. Votre équipe n'a pas à porter la charge seule."
+          },
+          {
+            "title": "Ajouter la compétence qui manque",
+            "text": "Cloud, données, mobile, IA : un ingénieur qui connaît le sujet rejoint l'équipe et partage ce qu'il sait en travaillant avec elle."
+          },
+          {
+            "title": "Rembourser la dette technique",
+            "text": "Tests manquants, code fragile, mises à jour repoussées : un ingénieur s'en charge pendant que votre équipe continue de livrer les nouveautés."
+          },
+          {
+            "title": "Un travail vérifié, pas seulement fourni",
+            "text": "Un chef de projet senior de Qartmina relit le travail, suit l'avancement avec vous et intervient si quelque chose coince. Vous n'êtes jamais seul face à un prestataire."
+          }
+        ]
+      },
+      "explainer": {
+        "title": "Comment nous travaillons",
+        "intro": "Quatre étapes, du premier échange jusqu'à une équipe qui avance seule.",
+        "points": [
+          {
+            "title": "Comprendre le besoin et l'équipe",
+            "text": "Nous regardons avec vous ce qui bloque, comment votre équipe travaille et ce qu'elle doit livrer en priorité."
+          },
+          {
+            "title": "Choisir le bon profil",
+            "text": "Nous vous proposons un ou plusieurs ingénieurs adaptés à votre technologie et à votre façon de travailler. Vous les rencontrez avant de démarrer."
+          },
+          {
+            "title": "Démarrer vite et livrer",
+            "text": "L'ingénieur rejoint vos outils et vos réunions dès les premiers jours. Les premières livraisons arrivent en quelques semaines, vérifiées par notre chef de projet."
+          },
+          {
+            "title": "Passer le relais",
+            "text": "Le code est documenté et votre équipe sait le reprendre. Vous prolongez, réduisez ou arrêtez le renfort selon vos besoins."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions sur le renfort d'équipe",
+        "items": [
+          {
+            "question": "Combien ça coûte ?",
+            "answer": "Cela dépend du profil et de la durée. Le tarif est fixé avec vous avant le démarrage, et il reste une fraction du coût d'un ingénieur senior recruté en Europe."
+          },
+          {
+            "question": "Qui sont les ingénieurs ?",
+            "answer": "Des ingénieurs expérimentés, pour la plupart basés en Afrique du Nord. Ils parlent français et travaillent sur le même fuseau horaire que la France, ou presque. Nous les sélectionnons, et un chef de projet senior de Qartmina suit leur travail du début à la fin."
+          },
+          {
+            "question": "Comment se passe le travail au quotidien ?",
+            "answer": "Comme avec un membre de votre équipe. L'ingénieur travaille dans vos outils (messagerie, tickets, dépôt de code), participe à vos réunions et reste joignable à vos horaires."
+          },
+          {
+            "question": "Combien de temps pour démarrer ?",
+            "answer": "Cela dépend du profil recherché. Nous vous donnons un délai dès le premier échange, et les premières livraisons arrivent en quelques semaines après le démarrage."
+          },
+          {
+            "question": "Qu'en est-il de notre code et de nos données ?",
+            "answer": "Les accès sont limités à ce dont l'ingénieur a besoin et retirés en fin de mission. La confidentialité est prévue au contrat, et nous appliquons les règles du RGPD sur toutes les données personnelles."
+          },
+          {
+            "question": "Et si le profil ne convient pas ?",
+            "answer": "Dites-le à votre chef de projet. Nous ajustons la mission ou nous remplaçons l'ingénieur, sans vous laisser gérer le problème seul."
+          }
+        ]
       }
     }
   }

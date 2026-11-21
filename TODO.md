@@ -28,6 +28,14 @@ Open work. When an item is done, remove it here and add it to `DONE.md` with the
 - [ ] France first for now (Fares 2026-11-05). Next markets when ready: French-speaking Europe (Belgium, Switzerland, Luxembourg), then DACH: add them to `about.coreMarkets` / `about.reach` in all three message files
 - [ ] `how-to-choose-a-crm` still frames hosting for the Gulf and Egypt: refresh for European SMEs when the post is next updated
 
+## Positioning (AI studio, 2026-11-21)
+
+- [ ] Nice address: Fares gives it later. Then add `address` to the home JSON-LD (`app/[locale]/page.tsx`), the contact and about copy, and create the Google Business Profile
+- [ ] Rewrite the case studies in commercial wording; `document-agent-mvp-one-week` says "construit de zéro", which no longer matches the offer (we reinforce client teams)
+- [ ] Check the claims the new pages make on contracts (confidentiality clause, access removed at the end of a mission, replacing an engineer who is not a fit) against real contracts
+- [ ] Update `brand.md` / `design.md` in Content Studio with the new positioning, then copy here
+- [ ] About page: rewrite the remaining copy (name, method layers) in the new commercial tone
+
 ## Services
 
 - [ ] Translate the services copy to fr and de (`services`, `serviceCategories`, `servicePages`, `home.services`, `home.hero` title and subtitle, `metadata`, `header.allServices`/`categoryOverview`, `footer.positioning`, `common.readyText`). The pre-category fr/de copy for the first 6 services is in git history (commit 21cef84) if useful

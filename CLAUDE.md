@@ -10,7 +10,7 @@ Guidelines for anyone (human or AI agent) working on the Qartmina website. Read 
 
 ## What this is
 
-Marketing site for **Qartmina**, a **digital partner** for businesses: AI, data and automation, websites and e-commerce, software, brand and online presence, cybersecurity and IT. Clients buy project management, quality assurance and trust: one Qartmina project lead, specialists cherry-picked from a vetted freelancer network, quality control before delivery. Positioned as an **OpenAI Select Partner**. Audience: decision-makers at SMEs in France (France first, Europe later), often non-technical. Clear for the board, precise for engineers. No prices on service pages.
+Marketing site for **Qartmina**, an **AI studio** (Fares 2026-11-21): we put integrated, robust AI into production for SMEs, agencies and startups. We find the use cases that pay off most, build them and put the **first one in production within a month**. Three offers, named by what the client gains: **AI for your operations** (flagship: invoices, quotes, documents, CRM, reports), **AI for your marketing and launches** (content plans, 2D/3D visuals, launch videos and pages, made with AI tools fed with the client's brand), **engineers on demand** (team reinforcement, one-off missions, an AI advisor for a few days). The work is done by seasoned, affordable engineers, mainly North African and French-speaking, led by senior project leads: say so openly, never with a savings percentage. We do **not** build software in-house anymore (we reinforce client teams). Positioned as an **OpenAI Select Partner**. Audience: SME decision-makers, often non-technical: **commercial wording, gains first, jargon last** (model: home section "Les processus que nous automatisons"). SEO: Nice and PACA first, then France. No prices on service pages.
 
 Live at https://www.qartmina.com (canonical; the bare domain redirects), deployed on Vercel from `main`, server functions in Frankfurt (`vercel.json`, `fra1`). DNS on Hostinger. Work on a branch, never commit to `main` directly.
 
@@ -40,9 +40,9 @@ All pages live under `app/[locale]/` (`fr`, `en`, always prefixed).
 
 | Route | What |
 |---|---|
-| `/` | Home: Hero → LogoCloud → Expertise (3 category cards that flip to their services) → OpenAIPartner → Team → Testimonials → FAQs → Contact |
+| `/` | Home: Hero (+ LogoCloud) → the 3 offers (cards that flip to their services) → What AI changes (`AutomationOffer`) → One-month method (`Method`) → Our model and engineer formulas (`DeliveryModel`) → Docutrad case studies (`CaseStudies`) → Testimonials → OpenAIPartner → Team → FAQs → Contact |
 | `/expertises` | Overview with a sticky category list (`TableOfContents`) |
-| `/expertises/<category>` | Category hub (`data-ai`, `software-development`, `brand`) |
+| `/expertises/<category>` | Offer hub (`ai-operations`, `ai-marketing`, `engineers`) |
 | `/expertises/<category>/<service>` | Expertise page; `video-motion` has its own layout |
 | `/portfolio`, `/portfolio/<slug>` | Case studies (MDX in `content/portfolio/<locale>/`) |
 | `/blog`, `/blog/<slug>` | Articles (MDX in `content/blog/<locale>/`) |
@@ -58,6 +58,8 @@ Every old `/services/...` URL (categories, services and the flat ones from befor
 ```
 app/[locale]/…                 pages (see Routes); opengraph-image.tsx per locale
 app/sitemap.ts, robots.ts
+app/icon.png, apple-icon.png, favicon.ico   the "Q." tile (EB Garamond, royal-blue dot), rendered from the logo font
+public/llms.txt                what AI assistants read about Qartmina: keep it in line with the offers
 components/                    sections and shared UI, one component per file
 components/ui/                 primitives: button, flip-card, before-after, letter-reveal
 components/services/           service cards, card visuals, motion design page, business card
@@ -78,7 +80,7 @@ brand.md, design.md            brand facts and visual style reference (copies fr
 
 ## Services
 
-- Three categories (Fares 2026-11-11): Data & AI (ai-automation, generative-ai, document-extraction, mcp, predictive-systems, computer-vision, ai-sprint), Software development (custom-software, saas), Brand and online presence. Defined once in `lib/site.ts`; UI label "Expertises" / "Expertise". Build links with `categoryPath()` / `servicePath()`, never by hand.
+- Three offers (Fares 2026-11-21): AI for your operations `ai-operations` (ai-sprint, document-extraction, ai-automation, generative-ai, mcp, predictive-systems, computer-vision), AI for your marketing and launches `ai-marketing` (content-plan, ai-visuals, product-launch, video-motion), engineers on demand `engineers` (team-reinforcement, expert-mission, ai-advisor). Custom software, SaaS and the brand services are off (kept in `lib/site.ts` for their copy and redirects). The expertise URLs of 2026-11-11 (`data-ai`, `software-development`, `brand`) redirect (308) via `oldExpertiseUrls` in `next.config.ts`. Defined once in `lib/site.ts`; UI label "Expertises" / "Expertise". Build links with `categoryPath()` / `servicePath()`, never by hand.
 - **Feature toggles:** `serviceToggles` (`lib/site.ts`) switches each service on or off. Off means no page (404), no sitemap entry, no link in menus, footer, home, overview, hubs or "More in"; blog and case-study links to it render as plain text; a category with nothing on disappears too. `serviceCategories`, `categorySlugs`, `serviceSlugs` and `isServiceSlug` only contain what is on, so new code gets this for free.
 - Copy: `serviceCategories.<category>` (title, metaTitle, summary, intro) and `servicePages.<service>` (title, metaTitle, summary, intro, 4 features, 4 use cases, `faq` with 3 items as FAQPage JSON-LD). Optional sections render when their copy exists: `explainer`, `examples`, `included`.
 - **Home panel tiles:** the Expertise flip card's back face uses `ServiceTiles` / `ServiceTile` (same file), styled like the category cards and sized so a category fits on one screen.

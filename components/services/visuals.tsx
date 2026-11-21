@@ -14,9 +14,9 @@ const centred = "flex flex-col justify-center";
 
 // One animated mockup per category, used on its home card and hub page.
 const categoryVisuals: Record<CategorySlug, VisualEntry> = {
-  "data-ai": { Visual: AgentRunVisual },
-  "software-development": { Visual: SoftwareVisual, className: centred },
-  brand: { Visual: BrandVisual, className: centred },
+  "ai-operations": { Visual: AgentRunVisual },
+  "ai-marketing": { Visual: BrandVisual, className: centred },
+  engineers: { Visual: SoftwareVisual, className: centred },
 };
 
 // Services with a mockup of their own; the others show their category's.

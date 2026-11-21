@@ -38,11 +38,11 @@ const toCategory = (slug: CategorySlug) => categoryPath(slug);
 const oldServiceUrls: Record<string, string> = {
   "": expertisesPath,
   // Old categories
-  ai: toCategory("data-ai"),
-  "data-automation": toCategory("data-ai"),
-  "websites-ecommerce": expertisesPath,
-  "software-development": toCategory("software-development"),
-  brand: toCategory("brand"),
+  ai: toCategory("ai-operations"),
+  "data-automation": toCategory("ai-operations"),
+  "websites-ecommerce": toCategory("ai-marketing"),
+  "software-development": toCategory("engineers"),
+  brand: toCategory("ai-marketing"),
   "cybersecurity-it": expertisesPath,
   // AI
   "ai/ai-automation": toService("ai-automation"),
@@ -56,24 +56,24 @@ const oldServiceUrls: Record<string, string> = {
   "data-automation/api-integration": toService("mcp"),
   "data-automation/data-platforms": toService("predictive-systems"),
   // Websites and e-commerce (no longer offered as such)
-  "websites-ecommerce/web-platforms": toService("saas"),
-  "websites-ecommerce/business-websites": expertisesPath,
-  "websites-ecommerce/ecommerce": expertisesPath,
-  "websites-ecommerce/shopify": expertisesPath,
+  "websites-ecommerce/web-platforms": toCategory("engineers"),
+  "websites-ecommerce/business-websites": toService("product-launch"),
+  "websites-ecommerce/ecommerce": toService("product-launch"),
+  "websites-ecommerce/shopify": toService("product-launch"),
   "websites-ecommerce/website-care": expertisesPath,
   // Software development
-  "software-development/crm-development": toService("custom-software"),
-  "software-development/erp-crm-setup": toService("custom-software"),
-  "software-development/erp-development": toService("custom-software"),
-  "software-development/business-apps": toService("custom-software"),
-  "software-development/mobile-apps": toService("custom-software"),
-  "software-development/cloud-migration": toService("custom-software"),
+  "software-development/crm-development": toService("team-reinforcement"),
+  "software-development/erp-crm-setup": toService("team-reinforcement"),
+  "software-development/erp-development": toService("team-reinforcement"),
+  "software-development/business-apps": toService("team-reinforcement"),
+  "software-development/mobile-apps": toService("team-reinforcement"),
+  "software-development/cloud-migration": toService("expert-mission"),
   // Brand and online presence (same services, new base path)
-  "brand/brand-identity": toCategory("brand"),
-  "brand/graphic-design": toCategory("brand"),
-  "brand/ui-ux-design": toService("ui-ux-design"),
-  "brand/personal-branding": toService("personal-branding"),
-  "brand/social-media": toService("social-media"),
+  "brand/brand-identity": toService("ai-visuals"),
+  "brand/graphic-design": toService("ai-visuals"),
+  "brand/ui-ux-design": toService("product-launch"),
+  "brand/personal-branding": toService("content-plan"),
+  "brand/social-media": toService("content-plan"),
   "brand/video-motion": toService("video-motion"),
   // Cybersecurity and IT (no longer offered as such)
   "cybersecurity-it/security-audits": expertisesPath,
@@ -88,6 +88,28 @@ const oldServiceUrls: Record<string, string> = {
   integration: toService("mcp"),
   consulting: toService("ai-sprint"),
   training: toService("ai-sprint"),
+};
+
+// Expertise URLs from 2026-11-11 to 2026-11-21 (three technical categories), mapped to the
+// three offers that replaced them. Services that stayed keep their slug under a new category;
+// the ones switched off go to their closest page today.
+const oldExpertiseUrls: Record<string, string> = {
+  "data-ai": toCategory("ai-operations"),
+  ...Object.fromEntries(
+    ["ai-automation", "generative-ai", "document-extraction", "mcp", "predictive-systems", "computer-vision", "ai-sprint"].map(
+      (slug) => [`data-ai/${slug}`, toService(slug as ServiceSlug)]
+    )
+  ),
+  "software-development": toCategory("engineers"),
+  "software-development/custom-software": toService("team-reinforcement"),
+  "software-development/saas": toService("team-reinforcement"),
+  brand: toCategory("ai-marketing"),
+  "brand/video-motion": toService("video-motion"),
+  "brand/brand-identity": toService("ai-visuals"),
+  "brand/graphic-design": toService("ai-visuals"),
+  "brand/ui-ux-design": toService("product-launch"),
+  "brand/personal-branding": toService("content-plan"),
+  "brand/social-media": toService("content-plan"),
 };
 
 const slugsOf = (collection: string, locale: string) => {
@@ -148,6 +170,11 @@ const nextConfig: NextConfig = {
       })),
       { source: "/de/services/:path*", destination: `/en${expertisesPath}`, permanent: true },
     ];
+    const expertises = Object.entries(oldExpertiseUrls).map(([from, to]) => ({
+      source: `/:locale(en|fr)${expertisesPath}/${from}`,
+      destination: `/:locale${to}`,
+      permanent: true,
+    }));
     const posts = Object.entries(legacyPosts).map(([legacy, slug]) => ({
       source: `/blog/${legacy}`,
       destination: `/en/blog/${slug}`,
@@ -155,7 +182,7 @@ const nextConfig: NextConfig = {
     }));
     // A post or case study missing in one content locale goes to the locale that has it
     // (temporary: the translation may come later). Unprefixed URLs are detected in proxy.ts.
-    return [...services, ...posts, ...germanContent(), ...missingTranslations()];
+    return [...services, ...expertises, ...posts, ...germanContent(), ...missingTranslations()];
   },
   images: {
     remotePatterns: [

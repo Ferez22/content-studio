@@ -81,8 +81,9 @@ const extras: Partial<Record<ServiceSlug, Extras>> = {
 const stepArt = [DiagnoseArt, TransformArt, ScaleArt, TrainArt];
 
 // Expertise pages built on the new model (2026-11-11): illustrated "How we work" steps and
-// no general "How we deliver" section. Brand pages keep their own layout.
-const newModel = (slug: ServiceSlug) => categoryOf(slug) !== "brand";
+// no general "How we deliver" section. Every published page follows it since 2026-11-21
+// (video-motion has its own layout).
+const newModel = (_slug: ServiceSlug) => true;
 
 export const dynamicParams = false;
 

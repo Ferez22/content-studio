@@ -19,6 +19,12 @@ const media: Partial<Record<ServiceSlug, { visual?: CardVisualKind; tools?: Tool
   "custom-software": { visual: "crm" },
   saas: { visual: "cloud" },
   "graphic-design": { tools: ["canva", "figma"] },
+  "content-plan": { visual: "mobile", tools: ["linkedin", "instagram"] },
+  "ai-visuals": { tools: ["canva", "figma"] },
+  "product-launch": { visual: "shop" },
+  "team-reinforcement": { visual: "crm" },
+  "expert-mission": { visual: "cloud" },
+  "ai-advisor": { visual: "chat" },
   "ui-ux-design": { tools: ["figma"] },
   "personal-branding": { tools: ["linkedin"] },
   "social-media": { tools: ["instagram", "tiktok", "linkedin"] },
@@ -42,7 +48,7 @@ export const ServiceCardMedia = ({
         <CardVisual kind={visual} />
       ) : (
         <Image
-          src={servicePhotos[slug]}
+          src={servicePhotos[slug] ?? servicePhotos["ai-automation"]!}
           alt=""
           fill
           sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 92vw"

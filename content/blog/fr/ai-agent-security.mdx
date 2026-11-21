@@ -75,7 +75,7 @@ Aucun de ces contrôles n'est exotique. La plupart sont des pratiques de sécuri
 
 ### 1. Le moindre privilège pour chaque outil
 
-Donnez à chaque agent le plus petit ensemble de [permissions d'agent IA](/fr/expertises/data-ai/generative-ai) qui lui permet de faire son travail. Pour notre exemple :
+Donnez à chaque agent le plus petit ensemble de [permissions d'agent IA](/fr/expertises/ai-operations/generative-ai) qui lui permet de faire son travail. Pour notre exemple :
 
 | Accès | Ce que reçoit l'agent de facturation |
 | --- | --- |
@@ -95,7 +95,7 @@ Répartissez le travail risqué entre plusieurs agents. Un agent lit les e-mails
 
 ### 4. Maîtriser les connexions
 
-Chaque système auquel un agent se connecte est une porte, qu'il s'agisse de SAP, d'Odoo, de Salesforce ou d'une base de données interne vieille de 15 ans. Quand vous [connectez des agents à votre ERP ou à votre CRM](/fr/blog/connect-ai-agent-erp-crm), utilisez des comptes de service dédiés aux droits restreints, pas l'identifiant d'un administrateur. Notre [travail d'intégration](/fr/expertises/data-ai/mcp) part de ce principe. Soyez particulièrement prudent avec les connecteurs de tiers : chacun ajoute une nouvelle source de contenu et une nouvelle voie de sortie pour les données.
+Chaque système auquel un agent se connecte est une porte, qu'il s'agisse de SAP, d'Odoo, de Salesforce ou d'une base de données interne vieille de 15 ans. Quand vous [connectez des agents à votre ERP ou à votre CRM](/fr/blog/connect-ai-agent-erp-crm), utilisez des comptes de service dédiés aux droits restreints, pas l'identifiant d'un administrateur. Notre [travail d'intégration](/fr/expertises/ai-operations/mcp) part de ce principe. Soyez particulièrement prudent avec les connecteurs de tiers : chacun ajoute une nouvelle source de contenu et une nouvelle voie de sortie pour les données.
 
 ### 5. Tout journaliser et examiner les exceptions
 
@@ -116,7 +116,7 @@ Si c'est vous qui signez, vous n'avez pas besoin de lire le code. Posez ces ques
 - Où sont les journaux, et qui les examine ?
 - Que s'est-il passé quand vous avez essayé de le piéger ?
 
-Si les réponses sont vagues, l'agent n'est pas prêt. Un bon partenaire accueillera ces questions volontiers. Ce sont les mêmes que nous posons lors de nos revues de [conseil en IA](/fr/expertises/data-ai/ai-sprint).
+Si les réponses sont vagues, l'agent n'est pas prêt. Un bon partenaire accueillera ces questions volontiers. Ce sont les mêmes que nous posons lors de nos revues de [conseil en IA](/fr/expertises/ai-operations/ai-sprint).
 
 La sécurité rejoint aussi le droit de la protection des données. Si l'agent traite des données personnelles, les mêmes permissions et les mêmes journaux vous aident à respecter vos obligations, ce que nous détaillons dans [Agents IA, RGPD et AI Act](/fr/blog/ai-agents-gdpr-eu-ai-act). Et les documents que votre agent peut consulter méritent le même soin, comme l'explique notre guide sur la [base de connaissances d'un agent IA](/fr/blog/ai-agent-knowledge-base).
 
